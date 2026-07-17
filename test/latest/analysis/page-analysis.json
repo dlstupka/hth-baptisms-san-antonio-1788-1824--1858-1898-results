@@ -13,7 +13,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1382,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -51,9 +51,151 @@
       "quality_status": "pass",
       "review_reasons": "",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            110,
+            60,
+            1280,
+            957
+          ],
+          "corners": [
+            [
+              113.0,
+              121.0
+            ],
+            [
+              264.0,
+              895.0
+            ],
+            [
+              1273.0,
+              921.0
+            ],
+            [
+              1271.0,
+              77.0
+            ]
+          ],
+          "confidence": 0.933243,
+          "score": 0.933243,
+          "diagnostics": {
+            "contour_area": 944496.5,
+            "polygon_vertices": 4,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.686995
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            128,
+            68,
+            1277,
+            960
+          ],
+          "corners": [
+            [
+              128.463,
+              73.82
+            ],
+            [
+              1275.296,
+              68.998
+            ],
+            [
+              1276.329,
+              942.84
+            ],
+            [
+              150.451,
+              959.826
+            ]
+          ],
+          "confidence": 0.844197,
+          "score": 0.844197,
+          "diagnostics": {
+            "residual_threshold_px": 7.888,
+            "mean_inlier_ratio": 0.643671,
+            "sample_counts": {
+              "left": 233,
+              "right": 233,
+              "top": 202,
+              "bottom": 202
+            },
+            "inlier_counts": {
+              "left": 89,
+              "right": 211,
+              "top": 148,
+              "bottom": 112
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.686995
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            238,
+            176,
+            752,
+            840
+          ],
+          "corners": [
+            [
+              238.0,
+              176.0
+            ],
+            [
+              752.0,
+              176.0
+            ],
+            [
+              752.0,
+              840.0
+            ],
+            [
+              238.0,
+              840.0
+            ]
+          ],
+          "confidence": 0.781711,
+          "score": 0.781711,
+          "diagnostics": {
+            "vertical_lines": 6,
+            "horizontal_lines": 1136,
+            "support_score": 1.0,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.686995
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     },
     {
       "global_ordinal": 2,
@@ -64,7 +206,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1400,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -102,9 +244,151 @@
       "quality_status": "review",
       "review_reasons": "very_small_content_region",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            761,
+            39,
+            1184,
+            863
+          ],
+          "corners": [
+            [
+              1128.526,
+              879.321
+            ],
+            [
+              712.243,
+              843.893
+            ],
+            [
+              781.135,
+              34.416
+            ],
+            [
+              1197.418,
+              69.844
+            ]
+          ],
+          "confidence": 0.566631,
+          "score": 0.566631,
+          "diagnostics": {
+            "contour_area": 190445.0,
+            "polygon_vertices": 5,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 211.0,
+              "foreground_fraction": 0.2044
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            480,
+            17,
+            1291,
+            842
+          ],
+          "corners": [
+            [
+              480.45,
+              17.063
+            ],
+            [
+              1290.247,
+              105.305
+            ],
+            [
+              952.596,
+              818.765
+            ],
+            [
+              518.065,
+              841.703
+            ]
+          ],
+          "confidence": 0.508268,
+          "score": 0.508268,
+          "diagnostics": {
+            "residual_threshold_px": 7.896,
+            "mean_inlier_ratio": 0.219863,
+            "sample_counts": {
+              "left": 220,
+              "right": 220,
+              "top": 146,
+              "bottom": 146
+            },
+            "inlier_counts": {
+              "left": 46,
+              "right": 42,
+              "top": 44,
+              "bottom": 26
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 211.0,
+              "foreground_fraction": 0.2044
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            519,
+            118,
+            965,
+            652
+          ],
+          "corners": [
+            [
+              519.0,
+              118.0
+            ],
+            [
+              965.0,
+              118.0
+            ],
+            [
+              965.0,
+              652.0
+            ],
+            [
+              519.0,
+              652.0
+            ]
+          ],
+          "confidence": 0.68044,
+          "score": 0.68044,
+          "diagnostics": {
+            "vertical_lines": 220,
+            "horizontal_lines": 131,
+            "support_score": 1.0,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 211.0,
+              "foreground_fraction": 0.2044
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     },
     {
       "global_ordinal": 3,
@@ -115,7 +399,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1365,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -153,9 +437,151 @@
       "quality_status": "pass",
       "review_reasons": "",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            103,
+            63,
+            1269,
+            957
+          ],
+          "corners": [
+            [
+              112.012,
+              961.578
+            ],
+            [
+              102.36,
+              68.801
+            ],
+            [
+              1266.294,
+              56.218
+            ],
+            [
+              1275.946,
+              948.995
+            ]
+          ],
+          "confidence": 0.93353,
+          "score": 0.93353,
+          "diagnostics": {
+            "contour_area": 932615.5,
+            "polygon_vertices": 10,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.694458
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            96,
+            73,
+            1266,
+            957
+          ],
+          "corners": [
+            [
+              96.441,
+              73.808
+            ],
+            [
+              1265.841,
+              77.636
+            ],
+            [
+              1259.951,
+              941.412
+            ],
+            [
+              213.942,
+              956.824
+            ]
+          ],
+          "confidence": 0.833924,
+          "score": 0.833924,
+          "diagnostics": {
+            "residual_threshold_px": 7.88,
+            "mean_inlier_ratio": 0.621502,
+            "sample_counts": {
+              "left": 233,
+              "right": 233,
+              "top": 200,
+              "bottom": 200
+            },
+            "inlier_counts": {
+              "left": 93,
+              "right": 188,
+              "top": 138,
+              "bottom": 118
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.694458
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            1058,
+            158,
+            1235,
+            835
+          ],
+          "corners": [
+            [
+              1058.0,
+              158.0
+            ],
+            [
+              1235.0,
+              158.0
+            ],
+            [
+              1235.0,
+              835.0
+            ],
+            [
+              1058.0,
+              835.0
+            ]
+          ],
+          "confidence": 0.722134,
+          "score": 0.722134,
+          "diagnostics": {
+            "vertical_lines": 18,
+            "horizontal_lines": 983,
+            "support_score": 1.0,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.694458
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     },
     {
       "global_ordinal": 4,
@@ -166,7 +592,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1408,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -284,7 +710,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1316,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -322,9 +748,151 @@
       "quality_status": "review",
       "review_reasons": "very_small_content_region",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            176,
+            21,
+            751,
+            961
+          ],
+          "corners": [
+            [
+              177.808,
+              960.743
+            ],
+            [
+              175.319,
+              22.36
+            ],
+            [
+              748.888,
+              20.839
+            ],
+            [
+              751.377,
+              959.222
+            ]
+          ],
+          "confidence": 0.835126,
+          "score": 0.835126,
+          "diagnostics": {
+            "contour_area": 446090.5,
+            "polygon_vertices": 6,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 186.0,
+              "foreground_fraction": 0.348275
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            112,
+            15,
+            747,
+            958
+          ],
+          "corners": [
+            [
+              112.186,
+              82.696
+            ],
+            [
+              746.752,
+              15.982
+            ],
+            [
+              744.563,
+              957.604
+            ],
+            [
+              338.525,
+              950.846
+            ]
+          ],
+          "confidence": 0.724536,
+          "score": 0.724536,
+          "diagnostics": {
+            "residual_threshold_px": 7.896,
+            "mean_inlier_ratio": 0.532967,
+            "sample_counts": {
+              "left": 234,
+              "right": 234,
+              "top": 126,
+              "bottom": 126
+            },
+            "inlier_counts": {
+              "left": 64,
+              "right": 225,
+              "top": 56,
+              "bottom": 57
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 186.0,
+              "foreground_fraction": 0.348275
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            292,
+            88,
+            649,
+            204
+          ],
+          "corners": [
+            [
+              292.0,
+              88.0
+            ],
+            [
+              649.0,
+              88.0
+            ],
+            [
+              649.0,
+              204.0
+            ],
+            [
+              292.0,
+              204.0
+            ]
+          ],
+          "confidence": 0.74946,
+          "score": 0.74946,
+          "diagnostics": {
+            "vertical_lines": 531,
+            "horizontal_lines": 11,
+            "support_score": 1.0,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 186.0,
+              "foreground_fraction": 0.348275
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     },
     {
       "global_ordinal": 6,
@@ -335,7 +903,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1088,
       "height_px": 983,
       "analysis_scale": 1.0,
@@ -481,7 +1049,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 915,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -519,9 +1087,151 @@
       "quality_status": "review",
       "review_reasons": "very_small_content_region",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            163,
+            67,
+            892,
+            955
+          ],
+          "corners": [
+            [
+              891.0,
+              954.0
+            ],
+            [
+              163.0,
+              954.0
+            ],
+            [
+              163.0,
+              67.0
+            ],
+            [
+              891.0,
+              67.0
+            ]
+          ],
+          "confidence": 0.821657,
+          "score": 0.821657,
+          "diagnostics": {
+            "contour_area": 512376.5,
+            "polygon_vertices": 10,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 193.0,
+              "foreground_fraction": 0.485229
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            223,
+            86,
+            886,
+            950
+          ],
+          "corners": [
+            [
+              254.247,
+              91.549
+            ],
+            [
+              877.656,
+              86.62
+            ],
+            [
+              885.045,
+              949.747
+            ],
+            [
+              223.296,
+              949.907
+            ]
+          ],
+          "confidence": 0.792494,
+          "score": 0.792494,
+          "diagnostics": {
+            "residual_threshold_px": 7.32,
+            "mean_inlier_ratio": 0.661199,
+            "sample_counts": {
+              "left": 221,
+              "right": 221,
+              "top": 202,
+              "bottom": 202
+            },
+            "inlier_counts": {
+              "left": 42,
+              "right": 211,
+              "top": 143,
+              "bottom": 160
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 193.0,
+              "foreground_fraction": 0.485229
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            551,
+            188,
+            611,
+            695
+          ],
+          "corners": [
+            [
+              551.0,
+              188.0
+            ],
+            [
+              611.0,
+              188.0
+            ],
+            [
+              611.0,
+              695.0
+            ],
+            [
+              551.0,
+              695.0
+            ]
+          ],
+          "confidence": 0.459688,
+          "score": 0.459688,
+          "diagnostics": {
+            "vertical_lines": 2,
+            "horizontal_lines": 6,
+            "support_score": 0.333333,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 193.0,
+              "foreground_fraction": 0.485229
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     },
     {
       "global_ordinal": 8,
@@ -532,7 +1242,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1228,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -570,9 +1280,151 @@
       "quality_status": "pass",
       "review_reasons": "",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            49,
+            26,
+            1160,
+            960
+          ],
+          "corners": [
+            [
+              65.0,
+              41.0
+            ],
+            [
+              54.0,
+              940.0
+            ],
+            [
+              1143.0,
+              950.0
+            ],
+            [
+              1152.0,
+              55.0
+            ]
+          ],
+          "confidence": 0.959629,
+          "score": 0.959629,
+          "diagnostics": {
+            "contour_area": 972402.0,
+            "polygon_vertices": 4,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 18.0,
+              "foreground_fraction": 0.805705
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            67,
+            40,
+            1156,
+            955
+          ],
+          "corners": [
+            [
+              76.274,
+              40.19
+            ],
+            [
+              1155.117,
+              46.556
+            ],
+            [
+              1140.337,
+              954.892
+            ],
+            [
+              67.85,
+              937.701
+            ]
+          ],
+          "confidence": 0.941952,
+          "score": 0.941952,
+          "diagnostics": {
+            "residual_threshold_px": 7.896,
+            "mean_inlier_ratio": 0.861257,
+            "sample_counts": {
+              "left": 234,
+              "right": 234,
+              "top": 227,
+              "bottom": 227
+            },
+            "inlier_counts": {
+              "left": 156,
+              "right": 211,
+              "top": 211,
+              "bottom": 215
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 18.0,
+              "foreground_fraction": 0.805705
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            123,
+            190,
+            1119,
+            791
+          ],
+          "corners": [
+            [
+              123.0,
+              190.0
+            ],
+            [
+              1119.0,
+              190.0
+            ],
+            [
+              1119.0,
+              791.0
+            ],
+            [
+              123.0,
+              791.0
+            ]
+          ],
+          "confidence": 0.889239,
+          "score": 0.889239,
+          "diagnostics": {
+            "vertical_lines": 188,
+            "horizontal_lines": 413,
+            "support_score": 1.0,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 18.0,
+              "foreground_fraction": 0.805705
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     },
     {
       "global_ordinal": 9,
@@ -583,7 +1435,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1288,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -621,9 +1473,151 @@
       "quality_status": "pass",
       "review_reasons": "",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            73,
+            51,
+            1134,
+            941
+          ],
+          "corners": [
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              77.0,
+              56.0
+            ],
+            [
+              73.0,
+              932.0
+            ],
+            [
+              1118.0,
+              937.0
+            ]
+          ],
+          "confidence": 0.988269,
+          "score": 0.988269,
+          "diagnostics": {
+            "contour_area": 925396.0,
+            "polygon_vertices": 4,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 119.848,
+              "foreground_fraction": 0.730954
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            74,
+            53,
+            1132,
+            937
+          ],
+          "corners": [
+            [
+              78.0,
+              56.47
+            ],
+            [
+              1131.352,
+              53.274
+            ],
+            [
+              1122.19,
+              936.779
+            ],
+            [
+              74.568,
+              935.197
+            ]
+          ],
+          "confidence": 0.990317,
+          "score": 0.990317,
+          "diagnostics": {
+            "residual_threshold_px": 7.88,
+            "mean_inlier_ratio": 0.982893,
+            "sample_counts": {
+              "left": 223,
+              "right": 223,
+              "top": 212,
+              "bottom": 212
+            },
+            "inlier_counts": {
+              "left": 220,
+              "right": 216,
+              "top": 208,
+              "bottom": 211
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 119.848,
+              "foreground_fraction": 0.730954
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            80,
+            194,
+            1120,
+            823
+          ],
+          "corners": [
+            [
+              80.0,
+              194.0
+            ],
+            [
+              1120.0,
+              194.0
+            ],
+            [
+              1120.0,
+              823.0
+            ],
+            [
+              80.0,
+              823.0
+            ]
+          ],
+          "confidence": 0.922483,
+          "score": 0.922483,
+          "diagnostics": {
+            "vertical_lines": 43,
+            "horizontal_lines": 932,
+            "support_score": 1.0,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 119.848,
+              "foreground_fraction": 0.730954
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     },
     {
       "global_ordinal": 10,
@@ -634,7 +1628,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "97eec63c8b2d84cee63f589af111814762e7aea7",
+      "pipeline_commit": "627fbbe29cc444d474bb186c1f2e19ecd65bd0c5",
       "width_px": 1268,
       "height_px": 990,
       "analysis_scale": 1.0,
@@ -672,14 +1666,156 @@
       "quality_status": "pass",
       "review_reasons": "",
       "analysis_error": "",
-      "geometry_candidates": [],
-      "geometry_candidate_status": "error",
-      "geometry_candidate_error": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 486, in main\n    record[\"geometry_candidates\"] = run_detectors(\n                                    ^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 417, in run_detectors\n    detect_hough(image, mask),\n    ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/detect_geometry_candidates.py\", line 343, in detect_hough\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n"
+      "geometry_candidates": [
+        {
+          "method": "contour",
+          "bbox": [
+            81,
+            34,
+            1183,
+            961
+          ],
+          "corners": [
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              84.0,
+              44.0
+            ],
+            [
+              81.0,
+              945.0
+            ],
+            [
+              1171.0,
+              947.0
+            ]
+          ],
+          "confidence": 0.976086,
+          "score": 0.976086,
+          "diagnostics": {
+            "contour_area": 981375.0,
+            "polygon_vertices": 4,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 162.0,
+              "foreground_fraction": 0.783818
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "ransac",
+          "bbox": [
+            82,
+            32,
+            1176,
+            960
+          ],
+          "corners": [
+            [
+              82.347,
+              43.591
+            ],
+            [
+              1147.469,
+              32.583
+            ],
+            [
+              1175.015,
+              959.68
+            ],
+            [
+              100.409,
+              953.783
+            ]
+          ],
+          "confidence": 0.921443,
+          "score": 0.921443,
+          "diagnostics": {
+            "residual_threshold_px": 7.92,
+            "mean_inlier_ratio": 0.805784,
+            "sample_counts": {
+              "left": 233,
+              "right": 233,
+              "top": 220,
+              "bottom": 220
+            },
+            "inlier_counts": {
+              "left": 166,
+              "right": 155,
+              "top": 211,
+              "bottom": 195
+            },
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 162.0,
+              "foreground_fraction": 0.783818
+            },
+            "analysis_scale": 1.0
+          }
+        },
+        {
+          "method": "hough",
+          "bbox": [
+            128,
+            163,
+            1162,
+            855
+          ],
+          "corners": [
+            [
+              128.0,
+              163.0
+            ],
+            [
+              1162.0,
+              163.0
+            ],
+            [
+              1162.0,
+              855.0
+            ],
+            [
+              128.0,
+              855.0
+            ]
+          ],
+          "confidence": 0.927518,
+          "score": 0.927518,
+          "diagnostics": {
+            "vertical_lines": 15,
+            "horizontal_lines": 1057,
+            "support_score": 1.0,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 162.0,
+              "foreground_fraction": 0.783818
+            },
+            "analysis_scale": 1.0
+          }
+        }
+      ],
+      "geometry_candidate_status": "complete"
     }
   ],
   "geometry_candidate_summary": {
-    "processed": 2,
-    "errors": 8,
+    "processed": 10,
+    "errors": 0,
     "methods": [
       "contour",
       "ransac",
