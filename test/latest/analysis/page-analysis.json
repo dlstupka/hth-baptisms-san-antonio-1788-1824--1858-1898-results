@@ -13,7 +13,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1382,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -83,7 +83,7 @@
           "diagnostics": {
             "contour_area": 944496.5,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.551,
+            "elapsed_ms": 1.912,
             "mask": {
               "background_lab": [
                 0.0,
@@ -97,7 +97,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -145,7 +151,7 @@
             "mask_score": 0.944338,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 5.081,
+            "elapsed_ms": 5.585,
             "mask": {
               "background_lab": [
                 0.0,
@@ -160,6 +166,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -206,7 +218,7 @@
               "top": 148,
               "bottom": 112
             },
-            "elapsed_ms": 8.446,
+            "elapsed_ms": 12.956,
             "mask": {
               "background_lab": [
                 0.0,
@@ -220,7 +232,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -234,8 +253,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 788.584,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 925.912,
             "mask": {
               "background_lab": [
                 0.0,
@@ -250,6 +269,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -276,7 +302,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1400,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -346,7 +372,7 @@
           "diagnostics": {
             "contour_area": 190445.0,
             "polygon_vertices": 5,
-            "elapsed_ms": 2.18,
+            "elapsed_ms": 2.573,
             "mask": {
               "background_lab": [
                 0.0,
@@ -360,7 +386,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -408,7 +440,7 @@
             "mask_score": 0.573379,
             "fill_score": 0.90292,
             "area_score": 0.420408,
-            "elapsed_ms": 4.705,
+            "elapsed_ms": 5.915,
             "mask": {
               "background_lab": [
                 0.0,
@@ -423,6 +455,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -469,7 +507,7 @@
               "top": 44,
               "bottom": 26
             },
-            "elapsed_ms": 32.393,
+            "elapsed_ms": 59.779,
             "mask": {
               "background_lab": [
                 0.0,
@@ -483,7 +521,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -497,8 +542,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 230.985,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 270.831,
             "mask": {
               "background_lab": [
                 0.0,
@@ -513,6 +558,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -539,7 +591,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1365,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -609,7 +661,7 @@
           "diagnostics": {
             "contour_area": 932615.5,
             "polygon_vertices": 10,
-            "elapsed_ms": 1.605,
+            "elapsed_ms": 1.997,
             "mask": {
               "background_lab": [
                 0.0,
@@ -623,7 +675,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -671,7 +729,7 @@
             "mask_score": 0.946481,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 5.104,
+            "elapsed_ms": 6.03,
             "mask": {
               "background_lab": [
                 0.0,
@@ -686,6 +744,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -732,7 +796,7 @@
               "top": 138,
               "bottom": 118
             },
-            "elapsed_ms": 8.082,
+            "elapsed_ms": 12.873,
             "mask": {
               "background_lab": [
                 0.0,
@@ -746,7 +810,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -760,8 +831,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 599.198,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 714.79,
             "mask": {
               "background_lab": [
                 0.0,
@@ -776,6 +847,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -802,7 +880,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1408,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -849,7 +927,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_plausible_contour",
-            "elapsed_ms": 0.198,
+            "elapsed_ms": 0.288,
             "mask": {
               "background_lab": [
                 0.0,
@@ -863,7 +941,13 @@
           },
           "status": "no_candidate",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -877,7 +961,7 @@
             "reason": "no_significant_components",
             "component_count": 0,
             "minimum_component_area": 2082,
-            "elapsed_ms": 3.162,
+            "elapsed_ms": 4.42,
             "mask": {
               "background_lab": [
                 0.0,
@@ -892,6 +976,12 @@
           "status": "no_candidate",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -910,7 +1000,7 @@
               "top": 0,
               "bottom": 0
             },
-            "elapsed_ms": 1.777,
+            "elapsed_ms": 2.298,
             "mask": {
               "background_lab": [
                 0.0,
@@ -924,7 +1014,14 @@
           },
           "status": "no_candidate",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -936,7 +1033,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_hough_lines",
-            "elapsed_ms": 8.27,
+            "elapsed_ms": 9.288,
             "mask": {
               "background_lab": [
                 0.0,
@@ -951,6 +1048,13 @@
           "status": "no_candidate",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -980,7 +1084,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1316,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -1050,7 +1154,7 @@
           "diagnostics": {
             "contour_area": 446090.5,
             "polygon_vertices": 6,
-            "elapsed_ms": 1.665,
+            "elapsed_ms": 1.938,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1064,7 +1168,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1112,7 +1222,7 @@
             "mask_score": 0.838391,
             "fill_score": 1.0,
             "area_score": 0.69354,
-            "elapsed_ms": 4.827,
+            "elapsed_ms": 5.992,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1127,6 +1237,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -1173,7 +1289,7 @@
               "top": 56,
               "bottom": 57
             },
-            "elapsed_ms": 11.263,
+            "elapsed_ms": 18.975,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1187,7 +1303,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1201,8 +1324,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 403.474,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 471.04,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1217,6 +1340,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -1243,7 +1373,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1088,
       "height_px": 983,
       "analysis_scale": 1.0,
@@ -1290,7 +1420,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_plausible_contour",
-            "elapsed_ms": 0.712,
+            "elapsed_ms": 0.975,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1304,7 +1434,13 @@
           },
           "status": "no_candidate",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1321,7 +1457,7 @@
             "merged_components": 1,
             "bbox_area_fraction": 0.029846,
             "component_area_fraction": 0.014589,
-            "elapsed_ms": 2.774,
+            "elapsed_ms": 3.702,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1336,6 +1472,12 @@
           "status": "no_candidate",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -1382,7 +1524,7 @@
               "top": 32,
               "bottom": 25
             },
-            "elapsed_ms": 43.728,
+            "elapsed_ms": 81.977,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1396,7 +1538,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1408,7 +1557,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_hough_lines",
-            "elapsed_ms": 6.335,
+            "elapsed_ms": 7.995,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1423,6 +1572,13 @@
           "status": "no_candidate",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -1451,7 +1607,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 915,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -1521,7 +1677,7 @@
           "diagnostics": {
             "contour_area": 512376.5,
             "polygon_vertices": 10,
-            "elapsed_ms": 1.418,
+            "elapsed_ms": 1.648,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1535,7 +1691,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1583,7 +1745,7 @@
             "mask_score": 0.83171,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 3.134,
+            "elapsed_ms": 3.886,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1598,6 +1760,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -1644,7 +1812,7 @@
               "top": 143,
               "bottom": 160
             },
-            "elapsed_ms": 13.596,
+            "elapsed_ms": 23.192,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1658,7 +1826,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1672,8 +1847,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 35.086,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 39.546,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1688,6 +1863,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -1714,7 +1896,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1228,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -1784,7 +1966,7 @@
           "diagnostics": {
             "contour_area": 972402.0,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.337,
+            "elapsed_ms": 1.627,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1798,7 +1980,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1846,7 +2034,7 @@
             "mask_score": 0.96714,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 4.076,
+            "elapsed_ms": 4.666,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1861,6 +2049,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -1907,7 +2101,7 @@
               "top": 211,
               "bottom": 215
             },
-            "elapsed_ms": 5.448,
+            "elapsed_ms": 7.327,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1921,7 +2115,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -1935,8 +2136,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 476.54,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 537.665,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1951,6 +2152,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -1977,7 +2185,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1288,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -2047,7 +2255,7 @@
           "diagnostics": {
             "contour_area": 925396.0,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.354,
+            "elapsed_ms": 1.692,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2061,7 +2269,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -2109,7 +2323,7 @@
             "mask_score": 0.991029,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 4.275,
+            "elapsed_ms": 4.901,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2124,6 +2338,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -2170,7 +2390,7 @@
               "top": 208,
               "bottom": 211
             },
-            "elapsed_ms": 4.617,
+            "elapsed_ms": 6.022,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2184,7 +2404,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -2198,8 +2425,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 615.774,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 703.854,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2214,6 +2441,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -2240,7 +2474,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "92f93787a79bdd7f580a1687292a9e825aa882a2",
+      "pipeline_commit": "7e634e7eeffe9c646f7d8f9dcf22a37a029e25f2",
       "width_px": 1268,
       "height_px": 990,
       "analysis_scale": 1.0,
@@ -2310,7 +2544,7 @@
           "diagnostics": {
             "contour_area": 981375.0,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.426,
+            "elapsed_ms": 1.668,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2324,7 +2558,13 @@
           },
           "status": "ok",
           "detector_name": "Contour",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -2372,7 +2612,7 @@
             "mask_score": 0.981225,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 4.324,
+            "elapsed_ms": 5.191,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2387,6 +2627,12 @@
           "status": "ok",
           "detector_name": "Connected Components",
           "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         },
@@ -2433,7 +2679,7 @@
               "top": 211,
               "bottom": 195
             },
-            "elapsed_ms": 5.916,
+            "elapsed_ms": 8.003,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2447,7 +2693,14 @@
           },
           "status": "ok",
           "detector_name": "RANSAC",
-          "origin": "HTH / ChatGPT",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
           "version": "",
           "repository": ""
         },
@@ -2461,8 +2714,8 @@
             "reason": "detector_exception",
             "exception_type": "IndexError",
             "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 166, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 689.983,
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 180, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
+            "elapsed_ms": 751.13,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2477,6 +2730,13 @@
           "status": "error",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
         }
@@ -2514,8 +2774,14 @@
       {
         "method": "contour",
         "name": "Contour",
-        "display_name": "Contour (HTH / ChatGPT)",
-        "origin": "HTH / ChatGPT",
+        "display_name": "Contour (HTH)",
+        "origin": "HTH",
+        "foundation": [
+          "OpenCV"
+        ],
+        "authors": [
+          "OpenAI ChatGPT"
+        ],
         "version": "",
         "repository": ""
       },
@@ -2524,14 +2790,27 @@
         "name": "Connected Components",
         "display_name": "Connected Components (OpenCV)",
         "origin": "OpenCV",
+        "foundation": [
+          "OpenCV"
+        ],
+        "authors": [
+          "OpenCV contributors"
+        ],
         "version": "5.0.0",
         "repository": "https://github.com/opencv/opencv"
       },
       {
         "method": "ransac",
         "name": "RANSAC",
-        "display_name": "RANSAC (HTH / ChatGPT)",
-        "origin": "HTH / ChatGPT",
+        "display_name": "RANSAC (HTH)",
+        "origin": "HTH",
+        "foundation": [
+          "RANSAC",
+          "OpenCV"
+        ],
+        "authors": [
+          "OpenAI ChatGPT"
+        ],
         "version": "",
         "repository": ""
       },
@@ -2540,6 +2819,13 @@
         "name": "Hough Lines",
         "display_name": "Hough Lines (OpenCV)",
         "origin": "OpenCV",
+        "foundation": [
+          "Hough transform",
+          "OpenCV"
+        ],
+        "authors": [
+          "OpenCV contributors"
+        ],
         "version": "5.0.0",
         "repository": "https://github.com/opencv/opencv"
       }
@@ -2569,26 +2855,26 @@
     "detector_performance": {
       "contour": {
         "runs": 10,
-        "elapsed_ms_total": 13.446,
-        "elapsed_ms_average": 1.345,
+        "elapsed_ms_total": 16.318,
+        "elapsed_ms_average": 1.632,
         "confidence_average": 0.876771
       },
       "components": {
         "runs": 10,
-        "elapsed_ms_total": 41.462,
-        "elapsed_ms_average": 4.146,
+        "elapsed_ms_total": 50.288,
+        "elapsed_ms_average": 5.029,
         "confidence_average": 0.905697
       },
       "ransac": {
         "runs": 10,
-        "elapsed_ms_total": 135.266,
-        "elapsed_ms_average": 13.527,
+        "elapsed_ms_total": 233.402,
+        "elapsed_ms_average": 23.34,
         "confidence_average": 0.76797
       },
       "hough": {
         "runs": 10,
-        "elapsed_ms_total": 3854.229,
-        "elapsed_ms_average": 385.423,
+        "elapsed_ms_total": 4432.051,
+        "elapsed_ms_average": 443.205,
         "confidence_average": null
       }
     },
