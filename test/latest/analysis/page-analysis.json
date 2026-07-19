@@ -13,7 +13,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1382,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -83,7 +83,7 @@
           "diagnostics": {
             "contour_area": 944496.5,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.832,
+            "elapsed_ms": 1.986,
             "mask": {
               "background_lab": [
                 0.0,
@@ -104,7 +104,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -151,7 +151,7 @@
             "mask_score": 0.944338,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 6.047,
+            "elapsed_ms": 5.787,
             "mask": {
               "background_lab": [
                 0.0,
@@ -218,7 +218,7 @@
               "top": 148,
               "bottom": 112
             },
-            "elapsed_ms": 12.925,
+            "elapsed_ms": 13.664,
             "mask": {
               "background_lab": [
                 0.0,
@@ -240,21 +240,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            238,
+            176,
+            752,
+            840
+          ],
+          "corners": [
+            [
+              238.0,
+              176.0
+            ],
+            [
+              752.0,
+              176.0
+            ],
+            [
+              752.0,
+              840.0
+            ],
+            [
+              238.0,
+              840.0
+            ]
+          ],
+          "confidence": 0.781711,
+          "score": 0.781711,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 909.057,
+            "vertical_lines": 6,
+            "horizontal_lines": 1136,
+            "support_score": 1.0,
+            "elapsed_ms": 972.817,
             "mask": {
               "background_lab": [
                 0.0,
@@ -266,7 +287,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -278,18 +299,140 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": [
+            20,
+            64,
+            1280,
+            959
+          ],
+          "corners": [
+            [
+              20.0,
+              64.0
+            ],
+            [
+              1280.0,
+              64.0
+            ],
+            [
+              1280.0,
+              959.0
+            ],
+            [
+              20.0,
+              959.0
+            ]
+          ],
+          "confidence": 0.878966,
+          "score": 0.878966,
+          "diagnostics": {
+            "line_segments": 5148,
+            "vertical_segments": 12,
+            "horizontal_segments": 2,
+            "minimum_length_px": 138.04,
+            "bbox_area_fraction": 0.827577,
+            "mask_score": 0.912809,
+            "support_score": 0.7,
+            "area_score": 1.0,
+            "elapsed_ms": 124.124,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.686995
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            76,
+            55,
+            1290,
+            966
+          ],
+          "corners": [
+            [
+              89.0,
+              62.0
+            ],
+            [
+              100.0,
+              953.0
+            ],
+            [
+              1283.0,
+              950.0
+            ],
+            [
+              1272.0,
+              60.0
+            ]
+          ],
+          "confidence": 0.962022,
+          "score": 0.962022,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.686995,
+            "refined_foreground_fraction": 0.793406,
+            "contour_area_fraction": 0.79132,
+            "bbox_area_fraction": 0.811619,
+            "rectangularity": 0.974989,
+            "refined_mask_score": 0.987858,
+            "shared_mask_score": 0.921396,
+            "elapsed_ms": 2714.815,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.686995
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
+          "ok": 6,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -302,7 +445,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1400,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -372,7 +515,7 @@
           "diagnostics": {
             "contour_area": 190445.0,
             "polygon_vertices": 5,
-            "elapsed_ms": 2.534,
+            "elapsed_ms": 2.65,
             "mask": {
               "background_lab": [
                 0.0,
@@ -393,7 +536,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -440,7 +583,7 @@
             "mask_score": 0.573379,
             "fill_score": 0.90292,
             "area_score": 0.420408,
-            "elapsed_ms": 5.933,
+            "elapsed_ms": 6.032,
             "mask": {
               "background_lab": [
                 0.0,
@@ -507,7 +650,7 @@
               "top": 44,
               "bottom": 26
             },
-            "elapsed_ms": 57.691,
+            "elapsed_ms": 59.44,
             "mask": {
               "background_lab": [
                 0.0,
@@ -529,21 +672,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            519,
+            118,
+            965,
+            652
+          ],
+          "corners": [
+            [
+              519.0,
+              118.0
+            ],
+            [
+              965.0,
+              118.0
+            ],
+            [
+              965.0,
+              652.0
+            ],
+            [
+              519.0,
+              652.0
+            ]
+          ],
+          "confidence": 0.68044,
+          "score": 0.68044,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 267.924,
+            "vertical_lines": 220,
+            "horizontal_lines": 131,
+            "support_score": 1.0,
+            "elapsed_ms": 274.283,
             "mask": {
               "background_lab": [
                 0.0,
@@ -555,7 +719,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -567,19 +731,118 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "insufficient_axis_segments",
+            "line_segments": 3935,
+            "vertical_segments": 13,
+            "horizontal_segments": 1,
+            "minimum_length_px": 138.18,
+            "elapsed_ms": 118.026,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 211.0,
+              "foreground_fraction": 0.2044
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "no_candidate",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            92,
+            20,
+            1309,
+            939
+          ],
+          "corners": [
+            [
+              100.0,
+              39.0
+            ],
+            [
+              130.0,
+              912.0
+            ],
+            [
+              1302.0,
+              924.0
+            ],
+            [
+              1298.0,
+              24.0
+            ]
+          ],
+          "confidence": 0.858421,
+          "score": 0.858421,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.2044,
+            "refined_foreground_fraction": 0.79239,
+            "contour_area_fraction": 0.790177,
+            "bbox_area_fraction": 0.809396,
+            "rectangularity": 0.976255,
+            "refined_mask_score": 0.988327,
+            "shared_mask_score": 0.624064,
+            "elapsed_ms": 15707.362,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 211.0,
+              "foreground_fraction": 0.2044
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
-          "no_candidate": 0,
-          "error": 1
+          "ok": 5,
+          "no_candidate": 1,
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
-        "no_candidate_methods": []
+        "failed_methods": [],
+        "no_candidate_methods": [
+          "lsd"
+        ]
       }
     },
     {
@@ -591,7 +854,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1365,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -661,7 +924,7 @@
           "diagnostics": {
             "contour_area": 932615.5,
             "polygon_vertices": 10,
-            "elapsed_ms": 1.871,
+            "elapsed_ms": 1.978,
             "mask": {
               "background_lab": [
                 0.0,
@@ -682,7 +945,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -729,7 +992,7 @@
             "mask_score": 0.946481,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 5.678,
+            "elapsed_ms": 5.958,
             "mask": {
               "background_lab": [
                 0.0,
@@ -796,7 +1059,7 @@
               "top": 138,
               "bottom": 118
             },
-            "elapsed_ms": 12.246,
+            "elapsed_ms": 12.617,
             "mask": {
               "background_lab": [
                 0.0,
@@ -818,21 +1081,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            1058,
+            158,
+            1235,
+            835
+          ],
+          "corners": [
+            [
+              1058.0,
+              158.0
+            ],
+            [
+              1235.0,
+              158.0
+            ],
+            [
+              1235.0,
+              835.0
+            ],
+            [
+              1058.0,
+              835.0
+            ]
+          ],
+          "confidence": 0.722134,
+          "score": 0.722134,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 673.853,
+            "vertical_lines": 18,
+            "horizontal_lines": 983,
+            "support_score": 1.0,
+            "elapsed_ms": 689.845,
             "mask": {
               "background_lab": [
                 0.0,
@@ -844,7 +1128,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -856,19 +1140,117 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "lsd_envelope_too_small",
+            "bbox_area_fraction": 0.006232,
+            "vertical_segments": 11,
+            "horizontal_segments": 4,
+            "elapsed_ms": 102.963,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.694458
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "no_candidate",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            78,
+            60,
+            1276,
+            964
+          ],
+          "corners": [
+            [
+              98.0,
+              70.0
+            ],
+            [
+              97.0,
+              955.0
+            ],
+            [
+              1269.0,
+              949.0
+            ],
+            [
+              1263.0,
+              70.0
+            ]
+          ],
+          "confidence": 0.965351,
+          "score": 0.965351,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.694458,
+            "refined_foreground_fraction": 0.788083,
+            "contour_area_fraction": 0.786093,
+            "bbox_area_fraction": 0.805483,
+            "rectangularity": 0.975928,
+            "refined_mask_score": 0.988462,
+            "shared_mask_score": 0.929593,
+            "elapsed_ms": 2170.818,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 189.0,
+              "foreground_fraction": 0.694458
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
-          "no_candidate": 0,
-          "error": 1
+          "ok": 5,
+          "no_candidate": 1,
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
-        "no_candidate_methods": []
+        "failed_methods": [],
+        "no_candidate_methods": [
+          "lsd"
+        ]
       }
     },
     {
@@ -880,7 +1262,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1408,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -927,7 +1309,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_plausible_contour",
-            "elapsed_ms": 0.291,
+            "elapsed_ms": 0.359,
             "mask": {
               "background_lab": [
                 0.0,
@@ -948,7 +1330,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -961,7 +1343,7 @@
             "reason": "no_significant_components",
             "component_count": 0,
             "minimum_component_area": 2082,
-            "elapsed_ms": 4.332,
+            "elapsed_ms": 4.381,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1000,7 +1382,7 @@
               "top": 0,
               "bottom": 0
             },
-            "elapsed_ms": 2.292,
+            "elapsed_ms": 2.239,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1022,7 +1404,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -1033,7 +1415,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_hough_lines",
-            "elapsed_ms": 9.441,
+            "elapsed_ms": 9.732,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1057,13 +1439,109 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": [
+            72,
+            37,
+            1313,
+            952
+          ],
+          "corners": [
+            [
+              72.0,
+              37.0
+            ],
+            [
+              1313.0,
+              37.0
+            ],
+            [
+              1313.0,
+              952.0
+            ],
+            [
+              72.0,
+              952.0
+            ]
+          ],
+          "confidence": 0.56,
+          "score": 0.56,
+          "diagnostics": {
+            "line_segments": 3992,
+            "vertical_segments": 9,
+            "horizontal_segments": 2,
+            "minimum_length_px": 138.04,
+            "bbox_area_fraction": 0.817925,
+            "mask_score": 0.5,
+            "support_score": 0.55,
+            "area_score": 1.0,
+            "elapsed_ms": 111.956,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 259.0,
+              "foreground_fraction": 0.0
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "insufficient_initial_foreground",
+            "initial_foreground_fraction": 0.0,
+            "elapsed_ms": 0.692,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 259.0,
+              "foreground_fraction": 0.0
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "no_candidate",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
       "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
-          "no_candidate": 4,
+          "ok": 1,
+          "no_candidate": 5,
           "error": 0
         },
         "failed_methods": [],
@@ -1071,7 +1549,8 @@
           "contour",
           "components",
           "ransac",
-          "hough"
+          "hough",
+          "grabcut"
         ]
       }
     },
@@ -1084,7 +1563,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1316,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -1154,7 +1633,7 @@
           "diagnostics": {
             "contour_area": 446090.5,
             "polygon_vertices": 6,
-            "elapsed_ms": 1.902,
+            "elapsed_ms": 1.908,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1175,7 +1654,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -1222,7 +1701,7 @@
             "mask_score": 0.838391,
             "fill_score": 1.0,
             "area_score": 0.69354,
-            "elapsed_ms": 5.749,
+            "elapsed_ms": 5.73,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1289,7 +1768,7 @@
               "top": 56,
               "bottom": 57
             },
-            "elapsed_ms": 18.588,
+            "elapsed_ms": 18.815,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1311,21 +1790,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            292,
+            88,
+            649,
+            204
+          ],
+          "corners": [
+            [
+              292.0,
+              88.0
+            ],
+            [
+              649.0,
+              88.0
+            ],
+            [
+              649.0,
+              204.0
+            ],
+            [
+              292.0,
+              204.0
+            ]
+          ],
+          "confidence": 0.74946,
+          "score": 0.74946,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 455.51,
+            "vertical_lines": 531,
+            "horizontal_lines": 11,
+            "support_score": 1.0,
+            "elapsed_ms": 481.037,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1337,7 +1837,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -1349,19 +1849,117 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "lsd_envelope_too_small",
+            "bbox_area_fraction": 0.002587,
+            "vertical_segments": 9,
+            "horizontal_segments": 2,
+            "elapsed_ms": 103.059,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 186.0,
+              "foreground_fraction": 0.348275
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "no_candidate",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            86,
+            20,
+            765,
+            967
+          ],
+          "corners": [
+            [
+              764.0,
+              966.0
+            ],
+            [
+              86.0,
+              966.0
+            ],
+            [
+              86.0,
+              20.0
+            ],
+            [
+              764.0,
+              20.0
+            ]
+          ],
+          "confidence": 0.894841,
+          "score": 0.894841,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.348275,
+            "refined_foreground_fraction": 0.461772,
+            "contour_area_fraction": 0.460384,
+            "bbox_area_fraction": 0.495047,
+            "rectangularity": 0.92998,
+            "refined_mask_score": 0.93634,
+            "shared_mask_score": 0.821406,
+            "elapsed_ms": 2623.379,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 186.0,
+              "foreground_fraction": 0.348275
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
-          "no_candidate": 0,
-          "error": 1
+          "ok": 5,
+          "no_candidate": 1,
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
-        "no_candidate_methods": []
+        "failed_methods": [],
+        "no_candidate_methods": [
+          "lsd"
+        ]
       }
     },
     {
@@ -1373,7 +1971,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1088,
       "height_px": 983,
       "analysis_scale": 1.0,
@@ -1420,7 +2018,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_plausible_contour",
-            "elapsed_ms": 0.893,
+            "elapsed_ms": 1.02,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1441,7 +2039,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -1457,7 +2055,7 @@
             "merged_components": 1,
             "bbox_area_fraction": 0.029846,
             "component_area_fraction": 0.014589,
-            "elapsed_ms": 3.748,
+            "elapsed_ms": 4.26,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1524,7 +2122,7 @@
               "top": 32,
               "bottom": 25
             },
-            "elapsed_ms": 80.681,
+            "elapsed_ms": 82.371,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1546,7 +2144,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -1557,7 +2155,7 @@
           "score": 0.0,
           "diagnostics": {
             "reason": "no_hough_lines",
-            "elapsed_ms": 7.192,
+            "elapsed_ms": 10.055,
             "mask": {
               "background_lab": [
                 1.0,
@@ -1581,20 +2179,119 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "lsd_envelope_too_small",
+            "bbox_area_fraction": 0.002959,
+            "vertical_segments": 2,
+            "horizontal_segments": 2,
+            "elapsed_ms": 47.251,
+            "mask": {
+              "background_lab": [
+                1.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 199.0,
+              "foreground_fraction": 0.049119
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "no_candidate",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            230,
+            131,
+            1061,
+            963
+          ],
+          "corners": [
+            [
+              1060.0,
+              962.0
+            ],
+            [
+              230.0,
+              962.0
+            ],
+            [
+              230.0,
+              131.0
+            ],
+            [
+              1060.0,
+              131.0
+            ]
+          ],
+          "confidence": 0.697653,
+          "score": 0.697653,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.049119,
+            "refined_foreground_fraction": 0.419724,
+            "contour_area_fraction": 0.447426,
+            "bbox_area_fraction": 0.64646,
+            "rectangularity": 0.692117,
+            "refined_mask_score": 0.824473,
+            "shared_mask_score": 0.537763,
+            "elapsed_ms": 34268.417,
+            "mask": {
+              "background_lab": [
+                1.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 199.0,
+              "foreground_fraction": 0.049119
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
       "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 1,
-          "no_candidate": 3,
+          "ok": 2,
+          "no_candidate": 4,
           "error": 0
         },
         "failed_methods": [],
         "no_candidate_methods": [
           "contour",
           "components",
-          "hough"
+          "hough",
+          "lsd"
         ]
       }
     },
@@ -1607,7 +2304,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 915,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -1677,7 +2374,7 @@
           "diagnostics": {
             "contour_area": 512376.5,
             "polygon_vertices": 10,
-            "elapsed_ms": 1.697,
+            "elapsed_ms": 1.706,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1698,7 +2395,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -1745,7 +2442,7 @@
             "mask_score": 0.83171,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 3.906,
+            "elapsed_ms": 4.039,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1812,7 +2509,7 @@
               "top": 143,
               "bottom": 160
             },
-            "elapsed_ms": 22.816,
+            "elapsed_ms": 23.698,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1834,21 +2531,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            551,
+            188,
+            611,
+            695
+          ],
+          "corners": [
+            [
+              551.0,
+              188.0
+            ],
+            [
+              611.0,
+              188.0
+            ],
+            [
+              611.0,
+              695.0
+            ],
+            [
+              551.0,
+              695.0
+            ]
+          ],
+          "confidence": 0.459688,
+          "score": 0.459688,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 38.754,
+            "vertical_lines": 2,
+            "horizontal_lines": 6,
+            "support_score": 0.333333,
+            "elapsed_ms": 46.413,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1860,7 +2578,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -1872,19 +2590,117 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "lsd_envelope_too_small",
+            "bbox_area_fraction": 0.004866,
+            "vertical_segments": 5,
+            "horizontal_segments": 2,
+            "elapsed_ms": 42.703,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 193.0,
+              "foreground_fraction": 0.485229
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "no_candidate",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            114,
+            62,
+            893,
+            968
+          ],
+          "corners": [
+            [
+              114.851,
+              968.514
+            ],
+            [
+              110.003,
+              65.279
+            ],
+            [
+              887.782,
+              61.105
+            ],
+            [
+              892.63,
+              964.34
+            ]
+          ],
+          "confidence": 0.875321,
+          "score": 0.875321,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.485229,
+            "refined_foreground_fraction": 0.662252,
+            "contour_area_fraction": 0.691988,
+            "bbox_area_fraction": 0.78229,
+            "rectangularity": 0.884568,
+            "refined_mask_score": 0.923264,
+            "shared_mask_score": 0.808397,
+            "elapsed_ms": 9040.724,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 193.0,
+              "foreground_fraction": 0.485229
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
-          "no_candidate": 0,
-          "error": 1
+          "ok": 5,
+          "no_candidate": 1,
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
-        "no_candidate_methods": []
+        "failed_methods": [],
+        "no_candidate_methods": [
+          "lsd"
+        ]
       }
     },
     {
@@ -1896,7 +2712,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1228,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -1966,7 +2782,7 @@
           "diagnostics": {
             "contour_area": 972402.0,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.61,
+            "elapsed_ms": 1.628,
             "mask": {
               "background_lab": [
                 0.0,
@@ -1987,7 +2803,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -2034,7 +2850,7 @@
             "mask_score": 0.96714,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 4.666,
+            "elapsed_ms": 4.655,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2101,7 +2917,7 @@
               "top": 211,
               "bottom": 215
             },
-            "elapsed_ms": 7.263,
+            "elapsed_ms": 7.427,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2123,21 +2939,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            123,
+            190,
+            1119,
+            791
+          ],
+          "corners": [
+            [
+              123.0,
+              190.0
+            ],
+            [
+              1119.0,
+              190.0
+            ],
+            [
+              1119.0,
+              791.0
+            ],
+            [
+              123.0,
+              791.0
+            ]
+          ],
+          "confidence": 0.889239,
+          "score": 0.889239,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 535.485,
+            "vertical_lines": 188,
+            "horizontal_lines": 413,
+            "support_score": 1.0,
+            "elapsed_ms": 553.475,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2149,7 +2986,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -2161,18 +2998,140 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": [
+            77,
+            43,
+            1147,
+            947
+          ],
+          "corners": [
+            [
+              77.0,
+              43.0
+            ],
+            [
+              1147.0,
+              43.0
+            ],
+            [
+              1147.0,
+              947.0
+            ],
+            [
+              77.0,
+              947.0
+            ]
+          ],
+          "confidence": 0.940445,
+          "score": 0.940445,
+          "diagnostics": {
+            "line_segments": 1933,
+            "vertical_segments": 8,
+            "horizontal_segments": 7,
+            "minimum_length_px": 138.18,
+            "bbox_area_fraction": 0.798062,
+            "mask_score": 0.98635,
+            "support_score": 0.75,
+            "area_score": 1.0,
+            "elapsed_ms": 72.277,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 18.0,
+              "foreground_fraction": 0.805705
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            57,
+            24,
+            1157,
+            961
+          ],
+          "corners": [
+            [
+              72.0,
+              48.0
+            ],
+            [
+              87.0,
+              956.0
+            ],
+            [
+              1138.0,
+              948.0
+            ],
+            [
+              1137.0,
+              50.0
+            ]
+          ],
+          "confidence": 0.964266,
+          "score": 0.964266,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.805705,
+            "refined_foreground_fraction": 0.800881,
+            "contour_area_fraction": 0.799098,
+            "bbox_area_fraction": 0.850387,
+            "rectangularity": 0.939688,
+            "refined_mask_score": 0.970733,
+            "shared_mask_score": 0.969996,
+            "elapsed_ms": 1014.83,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 18.0,
+              "foreground_fraction": 0.805705
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
+          "ok": 6,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -2185,7 +3144,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1288,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -2255,7 +3214,7 @@
           "diagnostics": {
             "contour_area": 925396.0,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.681,
+            "elapsed_ms": 1.692,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2276,7 +3235,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -2323,7 +3282,7 @@
             "mask_score": 0.991029,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 4.904,
+            "elapsed_ms": 4.921,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2390,7 +3349,7 @@
               "top": 208,
               "bottom": 211
             },
-            "elapsed_ms": 5.957,
+            "elapsed_ms": 6.099,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2412,21 +3371,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            80,
+            194,
+            1120,
+            823
+          ],
+          "corners": [
+            [
+              80.0,
+              194.0
+            ],
+            [
+              1120.0,
+              194.0
+            ],
+            [
+              1120.0,
+              823.0
+            ],
+            [
+              80.0,
+              823.0
+            ]
+          ],
+          "confidence": 0.922483,
+          "score": 0.922483,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 707.703,
+            "vertical_lines": 43,
+            "horizontal_lines": 932,
+            "support_score": 1.0,
+            "elapsed_ms": 744.97,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2438,7 +3418,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -2450,18 +3430,140 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": [
+            77,
+            54,
+            1269,
+            937
+          ],
+          "corners": [
+            [
+              77.0,
+              54.0
+            ],
+            [
+              1269.0,
+              54.0
+            ],
+            [
+              1269.0,
+              937.0
+            ],
+            [
+              77.0,
+              937.0
+            ]
+          ],
+          "confidence": 0.936445,
+          "score": 0.936445,
+          "diagnostics": {
+            "line_segments": 3591,
+            "vertical_segments": 12,
+            "horizontal_segments": 6,
+            "minimum_length_px": 137.9,
+            "bbox_area_fraction": 0.829631,
+            "mask_score": 0.937778,
+            "support_score": 0.9,
+            "area_score": 1.0,
+            "elapsed_ms": 96.524,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 119.848,
+              "foreground_fraction": 0.730954
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            71,
+            50,
+            1136,
+            952
+          ],
+          "corners": [
+            [
+              1117.0,
+              58.0
+            ],
+            [
+              77.0,
+              55.0
+            ],
+            [
+              72.0,
+              933.0
+            ],
+            [
+              1119.0,
+              937.0
+            ]
+          ],
+          "confidence": 0.980648,
+          "score": 0.980648,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.730954,
+            "refined_foreground_fraction": 0.73517,
+            "contour_area_fraction": 0.733061,
+            "bbox_area_fraction": 0.757189,
+            "rectangularity": 0.968135,
+            "refined_mask_score": 0.984632,
+            "shared_mask_score": 0.982676,
+            "elapsed_ms": 1137.341,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 119.848,
+              "foreground_fraction": 0.730954
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
+          "ok": 6,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -2474,7 +3576,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "80b701f7172b8d0aedc42d0e6d62e04620819c1b",
+      "pipeline_commit": "ea9087574e66910339b64d1c9c869888e2d6cd2d",
       "width_px": 1268,
       "height_px": 990,
       "analysis_scale": 1.0,
@@ -2544,7 +3646,7 @@
           "diagnostics": {
             "contour_area": 981375.0,
             "polygon_vertices": 4,
-            "elapsed_ms": 1.615,
+            "elapsed_ms": 1.667,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2565,7 +3667,7 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
@@ -2612,7 +3714,7 @@
             "mask_score": 0.981225,
             "fill_score": 1.0,
             "area_score": 1.0,
-            "elapsed_ms": 5.16,
+            "elapsed_ms": 5.299,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2679,7 +3781,7 @@
               "top": 211,
               "bottom": 195
             },
-            "elapsed_ms": 7.842,
+            "elapsed_ms": 8.081,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2701,21 +3803,42 @@
           "authors": [
             "OpenAI ChatGPT"
           ],
-          "version": "0.6",
+          "version": "0.6.1",
           "repository": "https://github.com/dlstupka/hth"
         },
         {
           "method": "hough",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            128,
+            163,
+            1162,
+            855
+          ],
+          "corners": [
+            [
+              128.0,
+              163.0
+            ],
+            [
+              1162.0,
+              163.0
+            ],
+            [
+              1162.0,
+              855.0
+            ],
+            [
+              128.0,
+              855.0
+            ]
+          ],
+          "confidence": 0.927518,
+          "score": 0.927518,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "IndexError",
-            "exception_message": "too many indices for array: array is 2-dimensional, but 3 were indexed",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 194, in run_registered_detectors\n    candidate = spec.entrypoint(image_bgr=image_bgr, mask=mask)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_hough.py\", line 32, in detect\n    for item in lines[:, 0, :]:\n                ~~~~~^^^^^^^^^\nIndexError: too many indices for array: array is 2-dimensional, but 3 were indexed\n",
-            "elapsed_ms": 778.261,
+            "vertical_lines": 15,
+            "horizontal_lines": 1057,
+            "support_score": 1.0,
+            "elapsed_ms": 824.044,
             "mask": {
               "background_lab": [
                 0.0,
@@ -2727,7 +3850,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Hough Lines",
           "origin": "OpenCV",
           "foundation": [
@@ -2739,18 +3862,140 @@
           ],
           "version": "5.0.0",
           "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "lsd",
+          "bbox": [
+            78,
+            34,
+            1178,
+            964
+          ],
+          "corners": [
+            [
+              78.0,
+              34.0
+            ],
+            [
+              1178.0,
+              34.0
+            ],
+            [
+              1178.0,
+              964.0
+            ],
+            [
+              78.0,
+              964.0
+            ]
+          ],
+          "confidence": 0.986156,
+          "score": 0.986156,
+          "diagnostics": {
+            "line_segments": 3719,
+            "vertical_segments": 14,
+            "horizontal_segments": 7,
+            "minimum_length_px": 138.6,
+            "bbox_area_fraction": 0.814932,
+            "mask_score": 0.980223,
+            "support_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 101.88,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 162.0,
+              "foreground_fraction": 0.783818
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "Line Segment Detector",
+          "origin": "OpenCV",
+          "foundation": [
+            "LSD",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        {
+          "method": "grabcut",
+          "bbox": [
+            63,
+            34,
+            1188,
+            966
+          ],
+          "corners": [
+            [
+              77.0,
+              38.0
+            ],
+            [
+              78.0,
+              959.0
+            ],
+            [
+              1176.0,
+              956.0
+            ],
+            [
+              1166.0,
+              35.0
+            ]
+          ],
+          "confidence": 0.978592,
+          "score": 0.978592,
+          "diagnostics": {
+            "iterations": 3,
+            "initial_foreground_fraction": 0.783818,
+            "refined_foreground_fraction": 0.815342,
+            "contour_area_fraction": 0.813717,
+            "bbox_area_fraction": 0.835245,
+            "rectangularity": 0.974225,
+            "refined_mask_score": 0.988085,
+            "shared_mask_score": 0.968881,
+            "elapsed_ms": 1222.696,
+            "mask": {
+              "background_lab": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "color_distance_threshold": 162.0,
+              "foreground_fraction": 0.783818
+            },
+            "analysis_scale": 1.0
+          },
+          "status": "ok",
+          "detector_name": "GrabCut",
+          "origin": "OpenCV",
+          "foundation": [
+            "GrabCut",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
         }
       ],
-      "geometry_candidate_status": "partial",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 3,
+          "ok": 6,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "hough"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     }
@@ -2762,14 +4007,16 @@
       "contour",
       "components",
       "ransac",
-      "hough"
+      "hough",
+      "lsd",
+      "grabcut"
     ],
     "page_status_counts": {
-      "complete": 2,
-      "partial": 8,
+      "complete": 10,
+      "partial": 0,
       "error": 0
     },
-    "detector_error_count": 8,
+    "detector_error_count": 0,
     "detectors": [
       {
         "method": "contour",
@@ -2782,7 +4029,7 @@
         "authors": [
           "OpenAI ChatGPT"
         ],
-        "version": "0.6",
+        "version": "0.6.1",
         "repository": "https://github.com/dlstupka/hth"
       },
       {
@@ -2811,7 +4058,7 @@
         "authors": [
           "OpenAI ChatGPT"
         ],
-        "version": "0.6",
+        "version": "0.6.1",
         "repository": "https://github.com/dlstupka/hth"
       },
       {
@@ -2821,6 +4068,36 @@
         "origin": "OpenCV",
         "foundation": [
           "Hough transform",
+          "OpenCV"
+        ],
+        "authors": [
+          "OpenCV contributors"
+        ],
+        "version": "5.0.0",
+        "repository": "https://github.com/opencv/opencv"
+      },
+      {
+        "method": "lsd",
+        "name": "Line Segment Detector",
+        "display_name": "Line Segment Detector (OpenCV)",
+        "origin": "OpenCV",
+        "foundation": [
+          "LSD",
+          "OpenCV"
+        ],
+        "authors": [
+          "OpenCV contributors"
+        ],
+        "version": "5.0.0",
+        "repository": "https://github.com/opencv/opencv"
+      },
+      {
+        "method": "grabcut",
+        "name": "GrabCut",
+        "display_name": "GrabCut (OpenCV)",
+        "origin": "OpenCV",
+        "foundation": [
+          "GrabCut",
           "OpenCV"
         ],
         "authors": [
@@ -2847,35 +4124,57 @@
         "error": 0
       },
       "hough": {
-        "ok": 0,
+        "ok": 8,
         "no_candidate": 2,
-        "error": 8
+        "error": 0
+      },
+      "lsd": {
+        "ok": 5,
+        "no_candidate": 5,
+        "error": 0
+      },
+      "grabcut": {
+        "ok": 9,
+        "no_candidate": 1,
+        "error": 0
       }
     },
     "detector_performance": {
       "contour": {
         "runs": 10,
-        "elapsed_ms_total": 15.926,
-        "elapsed_ms_average": 1.593,
+        "elapsed_ms_total": 16.594,
+        "elapsed_ms_average": 1.659,
         "confidence_average": 0.876771
       },
       "components": {
         "runs": 10,
-        "elapsed_ms_total": 50.123,
-        "elapsed_ms_average": 5.012,
+        "elapsed_ms_total": 51.062,
+        "elapsed_ms_average": 5.106,
         "confidence_average": 0.905697
       },
       "ransac": {
         "runs": 10,
-        "elapsed_ms_total": 228.301,
-        "elapsed_ms_average": 22.83,
+        "elapsed_ms_total": 234.451,
+        "elapsed_ms_average": 23.445,
         "confidence_average": 0.76797
       },
       "hough": {
         "runs": 10,
-        "elapsed_ms_total": 4383.18,
-        "elapsed_ms_average": 438.318,
-        "confidence_average": null
+        "elapsed_ms_total": 4606.671,
+        "elapsed_ms_average": 460.667,
+        "confidence_average": 0.766584
+      },
+      "lsd": {
+        "runs": 10,
+        "elapsed_ms_total": 920.763,
+        "elapsed_ms_average": 92.076,
+        "confidence_average": 0.860402
+      },
+      "grabcut": {
+        "runs": 10,
+        "elapsed_ms_total": 69901.074,
+        "elapsed_ms_average": 6990.107,
+        "confidence_average": 0.908568
       }
     },
     "fail_on": "never"
