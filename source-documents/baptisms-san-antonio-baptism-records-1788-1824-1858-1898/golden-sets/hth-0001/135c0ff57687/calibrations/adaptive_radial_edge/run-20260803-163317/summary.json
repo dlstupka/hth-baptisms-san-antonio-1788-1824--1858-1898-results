@@ -1,0 +1,4516 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260803-163317",
+  "detector": "adaptive_radial_edge",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 1,
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "no-history",
+    "queue_position": "4",
+    "ranked_quality": "unknown"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 6562,
+    "planned_parameter_sets": 11,
+    "actual_parameter_sets": 11,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 55,
+    "actual_page_evaluations": 55
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 11,
+  "page_evaluation_count": 55,
+  "successful_page_evaluation_count": 55,
+  "fully_successful_parameter_set_count": 11,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "winner": {
+    "parameter_set_id": "a132c2ac5e87",
+    "parameters": {
+      "gaussian_sigma": 1.2,
+      "ray_count": 120,
+      "minimum_radius_fraction": 0.18,
+      "maximum_radius_fraction": 0.72,
+      "gradient_percentile": 82.0,
+      "minimum_ray_support": 0.45,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "area_weight": 0.35,
+      "support_weight": 0.45,
+      "rectangularity_weight": 0.2,
+      "coarse_angle_step_degrees": 3.0,
+      "refined_angle_step_degrees": 1.0,
+      "weak_side_support_fraction": 0.55,
+      "side_assignment_tolerance_fraction": 0.025,
+      "maximum_refined_sides": 2
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.92768185,
+      "minimum_iou": 0.85572548,
+      "stddev_iou": 0.04271009,
+      "mean_edge_error_px": 20.0,
+      "elapsed_ms_total": 448.881,
+      "wall_ms": 449.672
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          225,
+          52,
+          1259,
+          937
+        ],
+        "iou": 0.85572548,
+        "edge_errors": {
+          "left": 100,
+          "top": 4,
+          "right": 30,
+          "bottom": 30,
+          "mean": 41.0,
+          "maximum": 100
+        },
+        "edge_error_mean_px": 41.0,
+        "edge_error_maximum_px": 100,
+        "elapsed_ms": 95.464,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            225,
+            52,
+            1259,
+            937
+          ],
+          "corners": [
+            [
+              225.08984375,
+              59.8324089050293
+            ],
+            [
+              1251.123291015625,
+              51.65971755981445
+            ],
+            [
+              1258.103515625,
+              927.9821166992188
+            ],
+            [
+              232.070068359375,
+              936.1548461914062
+            ]
+          ],
+          "confidence": 0.8763369211365953,
+          "score": 0.8763369211365953,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 64,
+            "total_supported_rays": 184,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.9948962926864624,
+            "side_support_counts": [
+              3,
+              3,
+              4,
+              2
+            ],
+            "side_support_fractions": [
+              0.75,
+              0.75,
+              1.0,
+              0.5
+            ],
+            "weak_sides": [
+              3
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.659884665365413,
+            "rectangularity": 0.9826281120212338,
+            "elapsed_ms": 95.43
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          89,
+          13,
+          1232,
+          977
+        ],
+        "iou": 0.97521627,
+        "edge_errors": {
+          "left": 22,
+          "top": 5,
+          "right": 1,
+          "bottom": 0,
+          "mean": 7.0,
+          "maximum": 22
+        },
+        "edge_error_mean_px": 7.0,
+        "edge_error_maximum_px": 22,
+        "elapsed_ms": 84.43,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            89,
+            13,
+            1232,
+            977
+          ],
+          "corners": [
+            [
+              89.328369140625,
+              19.01883888244629
+            ],
+            [
+              1225.870361328125,
+              12.880086898803711
+            ],
+            [
+              1231.0367431640625,
+              969.3903198242188
+            ],
+            [
+              94.4947509765625,
+              975.5291137695312
+            ]
+          ],
+          "confidence": 0.9392219440327951,
+          "score": 0.9392219440327951,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 56,
+            "total_supported_rays": 176,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.995326817035675,
+            "side_support_counts": [
+              9,
+              4,
+              16,
+              11
+            ],
+            "side_support_fractions": [
+              0.5625,
+              0.25,
+              1.0,
+              0.6875
+            ],
+            "weak_sides": [
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.8369793522229095,
+            "rectangularity": 0.9866531846087492,
+            "elapsed_ms": 84.398
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          63,
+          0,
+          1088,
+          983
+        ],
+        "iou": 0.9046069,
+        "edge_errors": {
+          "left": 48,
+          "top": 28,
+          "right": 14,
+          "bottom": 13,
+          "mean": 25.75,
+          "maximum": 48
+        },
+        "edge_error_mean_px": 25.75,
+        "edge_error_maximum_px": 48,
+        "elapsed_ms": 91.437,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            63,
+            -89,
+            1190,
+            1050
+          ],
+          "corners": [
+            [
+              63.247222900390625,
+              296.71173095703125
+            ],
+            [
+              790.9776611328125,
+              -88.54890441894531
+            ],
+            [
+              1189.0167236328125,
+              663.3190307617188
+            ],
+            [
+              461.2862548828125,
+              1048.5797119140625
+            ]
+          ],
+          "confidence": 0.7733863205033603,
+          "score": 0.7733863205033603,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 112,
+            "refined_supported_rays": 126,
+            "total_supported_rays": 238,
+            "ray_support": 0.9333333333333333,
+            "mean_edge_strength": 1.0,
+            "side_support_counts": [
+              5,
+              3,
+              1,
+              2
+            ],
+            "side_support_fractions": [
+              1.0,
+              0.6,
+              0.2,
+              0.4
+            ],
+            "weak_sides": [
+              2,
+              3
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.6549821182959029,
+            "rectangularity": 0.5457128954989715,
+            "elapsed_ms": 91.408
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          71,
+          48,
+          1139,
+          940
+        ],
+        "iou": 0.9480325,
+        "edge_errors": {
+          "left": 13,
+          "top": 3,
+          "right": 38,
+          "bottom": 1,
+          "mean": 13.75,
+          "maximum": 38
+        },
+        "edge_error_mean_px": 13.75,
+        "edge_error_maximum_px": 38,
+        "elapsed_ms": 89.315,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            71,
+            48,
+            1139,
+            940
+          ],
+          "corners": [
+            [
+              70.85528564453125,
+              53.49258041381836
+            ],
+            [
+              1133.617431640625,
+              47.83414077758789
+            ],
+            [
+              1138.330810546875,
+              933.1031494140625
+            ],
+            [
+              75.56866455078125,
+              938.7615966796875
+            ]
+          ],
+          "confidence": 0.9070087738144829,
+          "score": 0.9070087738144829,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 113,
+            "total_supported_rays": 233,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.9996654987335205,
+            "side_support_counts": [
+              21,
+              9,
+              12,
+              3
+            ],
+            "side_support_fractions": [
+              1.0,
+              0.42857142857142855,
+              0.5714285714285714,
+              0.14285714285714285
+            ],
+            "weak_sides": [
+              3,
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.7416031354198489,
+            "rectangularity": 0.9876146960124682,
+            "elapsed_ms": 89.286
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          75,
+          33,
+          1188,
+          965
+        ],
+        "iou": 0.95482809,
+        "edge_errors": {
+          "left": 13,
+          "top": 0,
+          "right": 34,
+          "bottom": 3,
+          "mean": 12.5,
+          "maximum": 34
+        },
+        "edge_error_mean_px": 12.5,
+        "edge_error_maximum_px": 34,
+        "elapsed_ms": 88.235,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            75,
+            33,
+            1188,
+            965
+          ],
+          "corners": [
+            [
+              75.34375,
+              34.434974670410156
+            ],
+            [
+              1185.5631103515625,
+              32.639060974121094
+            ],
+            [
+              1187.066650390625,
+              962.1077880859375
+            ],
+            [
+              76.8472900390625,
+              963.9036865234375
+            ]
+          ],
+          "confidence": 0.9361074783129731,
+          "score": 0.9361074783129731,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 112,
+            "total_supported_rays": 232,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.9974943995475769,
+            "side_support_counts": [
+              20,
+              3,
+              15,
+              2
+            ],
+            "side_support_fractions": [
+              1.0,
+              0.15,
+              0.75,
+              0.1
+            ],
+            "weak_sides": [
+              3,
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.8220349133505706,
+            "rectangularity": 0.9947950937103431,
+            "elapsed_ms": 88.201
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260803-163317",
+    "rank": 1
+  },
+  "baseline": {
+    "parameter_set_id": "a132c2ac5e87",
+    "parameters": {
+      "gaussian_sigma": 1.2,
+      "ray_count": 120,
+      "minimum_radius_fraction": 0.18,
+      "maximum_radius_fraction": 0.72,
+      "gradient_percentile": 82.0,
+      "minimum_ray_support": 0.45,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "area_weight": 0.35,
+      "support_weight": 0.45,
+      "rectangularity_weight": 0.2,
+      "coarse_angle_step_degrees": 3.0,
+      "refined_angle_step_degrees": 1.0,
+      "weak_side_support_fraction": 0.55,
+      "side_assignment_tolerance_fraction": 0.025,
+      "maximum_refined_sides": 2
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.92768185,
+      "minimum_iou": 0.85572548,
+      "stddev_iou": 0.04271009,
+      "mean_edge_error_px": 20.0,
+      "elapsed_ms_total": 448.881,
+      "wall_ms": 449.672
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          225,
+          52,
+          1259,
+          937
+        ],
+        "iou": 0.85572548,
+        "edge_errors": {
+          "left": 100,
+          "top": 4,
+          "right": 30,
+          "bottom": 30,
+          "mean": 41.0,
+          "maximum": 100
+        },
+        "edge_error_mean_px": 41.0,
+        "edge_error_maximum_px": 100,
+        "elapsed_ms": 95.464,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            225,
+            52,
+            1259,
+            937
+          ],
+          "corners": [
+            [
+              225.08984375,
+              59.8324089050293
+            ],
+            [
+              1251.123291015625,
+              51.65971755981445
+            ],
+            [
+              1258.103515625,
+              927.9821166992188
+            ],
+            [
+              232.070068359375,
+              936.1548461914062
+            ]
+          ],
+          "confidence": 0.8763369211365953,
+          "score": 0.8763369211365953,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 64,
+            "total_supported_rays": 184,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.9948962926864624,
+            "side_support_counts": [
+              3,
+              3,
+              4,
+              2
+            ],
+            "side_support_fractions": [
+              0.75,
+              0.75,
+              1.0,
+              0.5
+            ],
+            "weak_sides": [
+              3
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.659884665365413,
+            "rectangularity": 0.9826281120212338,
+            "elapsed_ms": 95.43
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          89,
+          13,
+          1232,
+          977
+        ],
+        "iou": 0.97521627,
+        "edge_errors": {
+          "left": 22,
+          "top": 5,
+          "right": 1,
+          "bottom": 0,
+          "mean": 7.0,
+          "maximum": 22
+        },
+        "edge_error_mean_px": 7.0,
+        "edge_error_maximum_px": 22,
+        "elapsed_ms": 84.43,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            89,
+            13,
+            1232,
+            977
+          ],
+          "corners": [
+            [
+              89.328369140625,
+              19.01883888244629
+            ],
+            [
+              1225.870361328125,
+              12.880086898803711
+            ],
+            [
+              1231.0367431640625,
+              969.3903198242188
+            ],
+            [
+              94.4947509765625,
+              975.5291137695312
+            ]
+          ],
+          "confidence": 0.9392219440327951,
+          "score": 0.9392219440327951,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 56,
+            "total_supported_rays": 176,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.995326817035675,
+            "side_support_counts": [
+              9,
+              4,
+              16,
+              11
+            ],
+            "side_support_fractions": [
+              0.5625,
+              0.25,
+              1.0,
+              0.6875
+            ],
+            "weak_sides": [
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.8369793522229095,
+            "rectangularity": 0.9866531846087492,
+            "elapsed_ms": 84.398
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          63,
+          0,
+          1088,
+          983
+        ],
+        "iou": 0.9046069,
+        "edge_errors": {
+          "left": 48,
+          "top": 28,
+          "right": 14,
+          "bottom": 13,
+          "mean": 25.75,
+          "maximum": 48
+        },
+        "edge_error_mean_px": 25.75,
+        "edge_error_maximum_px": 48,
+        "elapsed_ms": 91.437,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            63,
+            -89,
+            1190,
+            1050
+          ],
+          "corners": [
+            [
+              63.247222900390625,
+              296.71173095703125
+            ],
+            [
+              790.9776611328125,
+              -88.54890441894531
+            ],
+            [
+              1189.0167236328125,
+              663.3190307617188
+            ],
+            [
+              461.2862548828125,
+              1048.5797119140625
+            ]
+          ],
+          "confidence": 0.7733863205033603,
+          "score": 0.7733863205033603,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 112,
+            "refined_supported_rays": 126,
+            "total_supported_rays": 238,
+            "ray_support": 0.9333333333333333,
+            "mean_edge_strength": 1.0,
+            "side_support_counts": [
+              5,
+              3,
+              1,
+              2
+            ],
+            "side_support_fractions": [
+              1.0,
+              0.6,
+              0.2,
+              0.4
+            ],
+            "weak_sides": [
+              2,
+              3
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.6549821182959029,
+            "rectangularity": 0.5457128954989715,
+            "elapsed_ms": 91.408
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          71,
+          48,
+          1139,
+          940
+        ],
+        "iou": 0.9480325,
+        "edge_errors": {
+          "left": 13,
+          "top": 3,
+          "right": 38,
+          "bottom": 1,
+          "mean": 13.75,
+          "maximum": 38
+        },
+        "edge_error_mean_px": 13.75,
+        "edge_error_maximum_px": 38,
+        "elapsed_ms": 89.315,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            71,
+            48,
+            1139,
+            940
+          ],
+          "corners": [
+            [
+              70.85528564453125,
+              53.49258041381836
+            ],
+            [
+              1133.617431640625,
+              47.83414077758789
+            ],
+            [
+              1138.330810546875,
+              933.1031494140625
+            ],
+            [
+              75.56866455078125,
+              938.7615966796875
+            ]
+          ],
+          "confidence": 0.9070087738144829,
+          "score": 0.9070087738144829,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 113,
+            "total_supported_rays": 233,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.9996654987335205,
+            "side_support_counts": [
+              21,
+              9,
+              12,
+              3
+            ],
+            "side_support_fractions": [
+              1.0,
+              0.42857142857142855,
+              0.5714285714285714,
+              0.14285714285714285
+            ],
+            "weak_sides": [
+              3,
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.7416031354198489,
+            "rectangularity": 0.9876146960124682,
+            "elapsed_ms": 89.286
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          75,
+          33,
+          1188,
+          965
+        ],
+        "iou": 0.95482809,
+        "edge_errors": {
+          "left": 13,
+          "top": 0,
+          "right": 34,
+          "bottom": 3,
+          "mean": 12.5,
+          "maximum": 34
+        },
+        "edge_error_mean_px": 12.5,
+        "edge_error_maximum_px": 34,
+        "elapsed_ms": 88.235,
+        "candidate": {
+          "method": "adaptive_radial_edge",
+          "bbox": [
+            75,
+            33,
+            1188,
+            965
+          ],
+          "corners": [
+            [
+              75.34375,
+              34.434974670410156
+            ],
+            [
+              1185.5631103515625,
+              32.639060974121094
+            ],
+            [
+              1187.066650390625,
+              962.1077880859375
+            ],
+            [
+              76.8472900390625,
+              963.9036865234375
+            ]
+          ],
+          "confidence": 0.9361074783129731,
+          "score": 0.9361074783129731,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "ray_count": 120,
+              "minimum_radius_fraction": 0.18,
+              "maximum_radius_fraction": 0.72,
+              "gradient_percentile": 82.0,
+              "minimum_ray_support": 0.45,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "area_weight": 0.35,
+              "support_weight": 0.45,
+              "rectangularity_weight": 0.2,
+              "coarse_angle_step_degrees": 3.0,
+              "refined_angle_step_degrees": 1.0,
+              "weak_side_support_fraction": 0.55,
+              "side_assignment_tolerance_fraction": 0.025,
+              "maximum_refined_sides": 2
+            },
+            "coarse_supported_rays": 120,
+            "refined_supported_rays": 112,
+            "total_supported_rays": 232,
+            "ray_support": 1.0,
+            "mean_edge_strength": 0.9974943995475769,
+            "side_support_counts": [
+              20,
+              3,
+              15,
+              2
+            ],
+            "side_support_fractions": [
+              1.0,
+              0.15,
+              0.75,
+              0.1
+            ],
+            "weak_sides": [
+              3,
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_two_pass_radial_gradient_search",
+            "area_fraction": 0.8220349133505706,
+            "rectangularity": 0.9947950937103431,
+            "elapsed_ms": 88.201
+          },
+          "status": "ok",
+          "detector_name": "Adaptive Radial Edge Search",
+          "origin": "HTH",
+          "foundation": [
+            "Two-pass radial gradient search",
+            "Adaptive angular refinement",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260803-163317",
+    "rank": 1
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "a132c2ac5e87",
+      "parameters": {
+        "gaussian_sigma": 1.2,
+        "ray_count": 120,
+        "minimum_radius_fraction": 0.18,
+        "maximum_radius_fraction": 0.72,
+        "gradient_percentile": 82.0,
+        "minimum_ray_support": 0.45,
+        "minimum_area_fraction": 0.18,
+        "maximum_area_fraction": 0.98,
+        "area_weight": 0.35,
+        "support_weight": 0.45,
+        "rectangularity_weight": 0.2,
+        "coarse_angle_step_degrees": 3.0,
+        "refined_angle_step_degrees": 1.0,
+        "weak_side_support_fraction": 0.55,
+        "side_assignment_tolerance_fraction": 0.025,
+        "maximum_refined_sides": 2
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.92768185,
+        "minimum_iou": 0.85572548,
+        "stddev_iou": 0.04271009,
+        "mean_edge_error_px": 20.0,
+        "elapsed_ms_total": 448.881,
+        "wall_ms": 449.672
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            225,
+            52,
+            1259,
+            937
+          ],
+          "iou": 0.85572548,
+          "edge_errors": {
+            "left": 100,
+            "top": 4,
+            "right": 30,
+            "bottom": 30,
+            "mean": 41.0,
+            "maximum": 100
+          },
+          "edge_error_mean_px": 41.0,
+          "edge_error_maximum_px": 100,
+          "elapsed_ms": 95.464,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              225,
+              52,
+              1259,
+              937
+            ],
+            "corners": [
+              [
+                225.08984375,
+                59.8324089050293
+              ],
+              [
+                1251.123291015625,
+                51.65971755981445
+              ],
+              [
+                1258.103515625,
+                927.9821166992188
+              ],
+              [
+                232.070068359375,
+                936.1548461914062
+              ]
+            ],
+            "confidence": 0.8763369211365953,
+            "score": 0.8763369211365953,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.2,
+                "ray_count": 120,
+                "minimum_radius_fraction": 0.18,
+                "maximum_radius_fraction": 0.72,
+                "gradient_percentile": 82.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 1.0,
+                "weak_side_support_fraction": 0.55,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 64,
+              "total_supported_rays": 184,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9948962926864624,
+              "side_support_counts": [
+                3,
+                3,
+                4,
+                2
+              ],
+              "side_support_fractions": [
+                0.75,
+                0.75,
+                1.0,
+                0.5
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.659884665365413,
+              "rectangularity": 0.9826281120212338,
+              "elapsed_ms": 95.43
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            89,
+            13,
+            1232,
+            977
+          ],
+          "iou": 0.97521627,
+          "edge_errors": {
+            "left": 22,
+            "top": 5,
+            "right": 1,
+            "bottom": 0,
+            "mean": 7.0,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 7.0,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 84.43,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              89,
+              13,
+              1232,
+              977
+            ],
+            "corners": [
+              [
+                89.328369140625,
+                19.01883888244629
+              ],
+              [
+                1225.870361328125,
+                12.880086898803711
+              ],
+              [
+                1231.0367431640625,
+                969.3903198242188
+              ],
+              [
+                94.4947509765625,
+                975.5291137695312
+              ]
+            ],
+            "confidence": 0.9392219440327951,
+            "score": 0.9392219440327951,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.2,
+                "ray_count": 120,
+                "minimum_radius_fraction": 0.18,
+                "maximum_radius_fraction": 0.72,
+                "gradient_percentile": 82.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 1.0,
+                "weak_side_support_fraction": 0.55,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 56,
+              "total_supported_rays": 176,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.995326817035675,
+              "side_support_counts": [
+                9,
+                4,
+                16,
+                11
+              ],
+              "side_support_fractions": [
+                0.5625,
+                0.25,
+                1.0,
+                0.6875
+              ],
+              "weak_sides": [
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.8369793522229095,
+              "rectangularity": 0.9866531846087492,
+              "elapsed_ms": 84.398
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            63,
+            0,
+            1088,
+            983
+          ],
+          "iou": 0.9046069,
+          "edge_errors": {
+            "left": 48,
+            "top": 28,
+            "right": 14,
+            "bottom": 13,
+            "mean": 25.75,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 25.75,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 91.437,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              63,
+              -89,
+              1190,
+              1050
+            ],
+            "corners": [
+              [
+                63.247222900390625,
+                296.71173095703125
+              ],
+              [
+                790.9776611328125,
+                -88.54890441894531
+              ],
+              [
+                1189.0167236328125,
+                663.3190307617188
+              ],
+              [
+                461.2862548828125,
+                1048.5797119140625
+              ]
+            ],
+            "confidence": 0.7733863205033603,
+            "score": 0.7733863205033603,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.2,
+                "ray_count": 120,
+                "minimum_radius_fraction": 0.18,
+                "maximum_radius_fraction": 0.72,
+                "gradient_percentile": 82.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 1.0,
+                "weak_side_support_fraction": 0.55,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 112,
+              "refined_supported_rays": 126,
+              "total_supported_rays": 238,
+              "ray_support": 0.9333333333333333,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                5,
+                3,
+                1,
+                2
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.6,
+                0.2,
+                0.4
+              ],
+              "weak_sides": [
+                2,
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6549821182959029,
+              "rectangularity": 0.5457128954989715,
+              "elapsed_ms": 91.408
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            71,
+            48,
+            1139,
+            940
+          ],
+          "iou": 0.9480325,
+          "edge_errors": {
+            "left": 13,
+            "top": 3,
+            "right": 38,
+            "bottom": 1,
+            "mean": 13.75,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 13.75,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 89.315,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              71,
+              48,
+              1139,
+              940
+            ],
+            "corners": [
+              [
+                70.85528564453125,
+                53.49258041381836
+              ],
+              [
+                1133.617431640625,
+                47.83414077758789
+              ],
+              [
+                1138.330810546875,
+                933.1031494140625
+              ],
+              [
+                75.56866455078125,
+                938.7615966796875
+              ]
+            ],
+            "confidence": 0.9070087738144829,
+            "score": 0.9070087738144829,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.2,
+                "ray_count": 120,
+                "minimum_radius_fraction": 0.18,
+                "maximum_radius_fraction": 0.72,
+                "gradient_percentile": 82.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 1.0,
+                "weak_side_support_fraction": 0.55,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 113,
+              "total_supported_rays": 233,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9996654987335205,
+              "side_support_counts": [
+                21,
+                9,
+                12,
+                3
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.42857142857142855,
+                0.5714285714285714,
+                0.14285714285714285
+              ],
+              "weak_sides": [
+                3,
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.7416031354198489,
+              "rectangularity": 0.9876146960124682,
+              "elapsed_ms": 89.286
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            33,
+            1188,
+            965
+          ],
+          "iou": 0.95482809,
+          "edge_errors": {
+            "left": 13,
+            "top": 0,
+            "right": 34,
+            "bottom": 3,
+            "mean": 12.5,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.5,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 88.235,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              75,
+              33,
+              1188,
+              965
+            ],
+            "corners": [
+              [
+                75.34375,
+                34.434974670410156
+              ],
+              [
+                1185.5631103515625,
+                32.639060974121094
+              ],
+              [
+                1187.066650390625,
+                962.1077880859375
+              ],
+              [
+                76.8472900390625,
+                963.9036865234375
+              ]
+            ],
+            "confidence": 0.9361074783129731,
+            "score": 0.9361074783129731,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.2,
+                "ray_count": 120,
+                "minimum_radius_fraction": 0.18,
+                "maximum_radius_fraction": 0.72,
+                "gradient_percentile": 82.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 1.0,
+                "weak_side_support_fraction": 0.55,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 112,
+              "total_supported_rays": 232,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9974943995475769,
+              "side_support_counts": [
+                20,
+                3,
+                15,
+                2
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.15,
+                0.75,
+                0.1
+              ],
+              "weak_sides": [
+                3,
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.8220349133505706,
+              "rectangularity": 0.9947950937103431,
+              "elapsed_ms": 88.201
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260803-163317",
+      "rank": 1
+    },
+    {
+      "parameter_set_id": "f2884d93d590",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "minimum_radius_fraction": 0.12,
+        "maximum_radius_fraction": 0.62,
+        "gradient_percentile": 70.0,
+        "refined_angle_step_degrees": 0.5,
+        "weak_side_support_fraction": 0.4,
+        "side_assignment_tolerance_fraction": 0.025,
+        "maximum_refined_sides": 2
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87897961,
+        "minimum_iou": 0.83758551,
+        "stddev_iou": 0.02402603,
+        "mean_edge_error_px": 34.75,
+        "elapsed_ms_total": 570.485,
+        "wall_ms": 571.203
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            147,
+            0,
+            1319,
+            986
+          ],
+          "iou": 0.88493698,
+          "edge_errors": {
+            "left": 22,
+            "top": 56,
+            "right": 30,
+            "bottom": 19,
+            "mean": 31.75,
+            "maximum": 56
+          },
+          "edge_error_mean_px": 31.75,
+          "edge_error_maximum_px": 56,
+          "elapsed_ms": 120.313,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              147,
+              -78,
+              1319,
+              1114
+            ],
+            "corners": [
+              [
+                146.99249267578125,
+                305.47955322265625
+              ],
+              [
+                914.9800415039062,
+                -77.96195983886719
+              ],
+              [
+                1317.928466796875,
+                729.0955200195312
+              ],
+              [
+                549.9408569335938,
+                1112.5369873046875
+              ]
+            ],
+            "confidence": 0.7597373807498295,
+            "score": 0.7597373807498295,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 140,
+              "total_supported_rays": 260,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                4,
+                4,
+                1,
+                4
+              ],
+              "side_support_fractions": [
+                1.0,
+                1.0,
+                0.25,
+                1.0
+              ],
+              "weak_sides": [
+                2
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5682428350944226,
+              "rectangularity": 0.5542619423339078,
+              "elapsed_ms": 120.288
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1310,
+            987
+          ],
+          "iou": 0.87384394,
+          "edge_errors": {
+            "left": 67,
+            "top": 8,
+            "right": 77,
+            "bottom": 10,
+            "mean": 40.5,
+            "maximum": 77
+          },
+          "edge_error_mean_px": 40.5,
+          "edge_error_maximum_px": 77,
+          "elapsed_ms": 47.264,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              -12,
+              -121,
+              1310,
+              1193
+            ],
+            "corners": [
+              [
+                564.2979736328125,
+                -121.32443237304688
+              ],
+              [
+                1308.919921875,
+                490.7616271972656
+              ],
+              [
+                732.4259033203125,
+                1192.084716796875
+              ],
+              [
+                -12.196014404296875,
+                579.9986572265625
+              ]
+            ],
+            "confidence": 0.78654279225334,
+            "score": 0.78654279225334,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 120,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9999567270278931,
+              "side_support_counts": [
+                4,
+                3,
+                3,
+                7
+              ],
+              "side_support_fractions": [
+                0.5714285714285714,
+                0.42857142857142855,
+                0.42857142857142855,
+                1.0
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6737161345722751,
+              "rectangularity": 0.5037594078588387,
+              "elapsed_ms": 47.231
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            90,
+            0,
+            1088,
+            976
+          ],
+          "iou": 0.88726886,
+          "edge_errors": {
+            "left": 75,
+            "top": 28,
+            "right": 14,
+            "bottom": 6,
+            "mean": 30.75,
+            "maximum": 75
+          },
+          "edge_error_mean_px": 30.75,
+          "edge_error_maximum_px": 75,
+          "elapsed_ms": 125.918,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              90,
+              -22,
+              1091,
+              976
+            ],
+            "corners": [
+              [
+                89.58169555664062,
+                293.90753173828125
+              ],
+              [
+                776.7593994140625,
+                -21.933792114257812
+              ],
+              [
+                1089.8826904296875,
+                659.330078125
+              ],
+              [
+                402.7049560546875,
+                975.17138671875
+              ]
+            ],
+            "confidence": 0.7405660152546137,
+            "score": 0.7405660152546137,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 147,
+              "total_supported_rays": 267,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9621083736419678,
+              "side_support_counts": [
+                5,
+                2,
+                6,
+                3
+              ],
+              "side_support_fractions": [
+                0.8333333333333334,
+                0.3333333333333333,
+                1.0,
+                0.5
+              ],
+              "weak_sides": [
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5301958803143207,
+              "rectangularity": 0.5676153653757938,
+              "elapsed_ms": 125.861
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            149,
+            45,
+            1121,
+            940
+          ],
+          "iou": 0.91126276,
+          "edge_errors": {
+            "left": 65,
+            "top": 6,
+            "right": 20,
+            "bottom": 1,
+            "mean": 23.0,
+            "maximum": 65
+          },
+          "edge_error_mean_px": 23.0,
+          "edge_error_maximum_px": 65,
+          "elapsed_ms": 145.612,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              149,
+              45,
+              1121,
+              940
+            ],
+            "corners": [
+              [
+                149.38278198242188,
+                57.87480163574219
+              ],
+              [
+                1108.6634521484375,
+                45.07881164550781
+              ],
+              [
+                1120.422119140625,
+                926.5986938476562
+              ],
+              [
+                161.14144897460938,
+                939.3947143554688
+              ]
+            ],
+            "confidence": 0.8777747928615072,
+            "score": 0.8777747928615072,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 307,
+              "total_supported_rays": 427,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                9,
+                1,
+                5,
+                2
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.1111111111111111,
+                0.5555555555555556,
+                0.2222222222222222
+              ],
+              "weak_sides": [
+                1,
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6666578348878828,
+              "rectangularity": 0.9722227532537405,
+              "elapsed_ms": 145.58
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            0,
+            1268,
+            990
+          ],
+          "iou": 0.83758551,
+          "edge_errors": {
+            "left": 22,
+            "top": 33,
+            "right": 114,
+            "bottom": 22,
+            "mean": 47.75,
+            "maximum": 114
+          },
+          "edge_error_mean_px": 47.75,
+          "edge_error_maximum_px": 114,
+          "elapsed_ms": 131.378,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              66,
+              -112,
+              1297,
+              1159
+            ],
+            "corners": [
+              [
+                609.3426513671875,
+                -112.12954711914062
+              ],
+              [
+                1296.0400390625,
+                349.0025634765625
+              ],
+              [
+                752.95751953125,
+                1157.7366943359375
+              ],
+              [
+                66.26022338867188,
+                696.6046142578125
+              ]
+            ],
+            "confidence": 0.7776669722436075,
+            "score": 0.7776669722436075,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 139,
+              "total_supported_rays": 259,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                4,
+                4,
+                2,
+                7
+              ],
+              "side_support_fractions": [
+                0.5714285714285714,
+                0.5714285714285714,
+                0.2857142857142857,
+                1.0
+              ],
+              "weak_sides": [
+                2
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6418987569080195,
+              "rectangularity": 0.5150120366290032,
+              "elapsed_ms": 131.347
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 5,
+        "elapsed_seconds": 3.5606470439999995,
+        "search_fraction": 0.5
+      },
+      "profile": null,
+      "run_id": "run-20260803-163317",
+      "rank": 2
+    },
+    {
+      "parameter_set_id": "baba8f99461d",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "minimum_radius_fraction": 0.12,
+        "maximum_radius_fraction": 0.62,
+        "gradient_percentile": 70.0,
+        "refined_angle_step_degrees": 0.5,
+        "weak_side_support_fraction": 0.4,
+        "side_assignment_tolerance_fraction": 0.025,
+        "maximum_refined_sides": 4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87897961,
+        "minimum_iou": 0.83758551,
+        "stddev_iou": 0.02402603,
+        "mean_edge_error_px": 34.75,
+        "elapsed_ms_total": 526.511,
+        "wall_ms": 527.174
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            147,
+            0,
+            1319,
+            986
+          ],
+          "iou": 0.88493698,
+          "edge_errors": {
+            "left": 22,
+            "top": 56,
+            "right": 30,
+            "bottom": 19,
+            "mean": 31.75,
+            "maximum": 56
+          },
+          "edge_error_mean_px": 31.75,
+          "edge_error_maximum_px": 56,
+          "elapsed_ms": 121.706,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              147,
+              -78,
+              1319,
+              1114
+            ],
+            "corners": [
+              [
+                146.99249267578125,
+                305.47955322265625
+              ],
+              [
+                914.9800415039062,
+                -77.96195983886719
+              ],
+              [
+                1317.928466796875,
+                729.0955200195312
+              ],
+              [
+                549.9408569335938,
+                1112.5369873046875
+              ]
+            ],
+            "confidence": 0.7597373807498295,
+            "score": 0.7597373807498295,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 140,
+              "total_supported_rays": 260,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                4,
+                4,
+                1,
+                4
+              ],
+              "side_support_fractions": [
+                1.0,
+                1.0,
+                0.25,
+                1.0
+              ],
+              "weak_sides": [
+                2
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5682428350944226,
+              "rectangularity": 0.5542619423339078,
+              "elapsed_ms": 121.68
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1310,
+            987
+          ],
+          "iou": 0.87384394,
+          "edge_errors": {
+            "left": 67,
+            "top": 8,
+            "right": 77,
+            "bottom": 10,
+            "mean": 40.5,
+            "maximum": 77
+          },
+          "edge_error_mean_px": 40.5,
+          "edge_error_maximum_px": 77,
+          "elapsed_ms": 47.974,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              -12,
+              -121,
+              1310,
+              1193
+            ],
+            "corners": [
+              [
+                564.2979736328125,
+                -121.32443237304688
+              ],
+              [
+                1308.919921875,
+                490.7616271972656
+              ],
+              [
+                732.4259033203125,
+                1192.084716796875
+              ],
+              [
+                -12.196014404296875,
+                579.9986572265625
+              ]
+            ],
+            "confidence": 0.78654279225334,
+            "score": 0.78654279225334,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 120,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9999567270278931,
+              "side_support_counts": [
+                4,
+                3,
+                3,
+                7
+              ],
+              "side_support_fractions": [
+                0.5714285714285714,
+                0.42857142857142855,
+                0.42857142857142855,
+                1.0
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6737161345722751,
+              "rectangularity": 0.5037594078588387,
+              "elapsed_ms": 47.944
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            90,
+            0,
+            1088,
+            976
+          ],
+          "iou": 0.88726886,
+          "edge_errors": {
+            "left": 75,
+            "top": 28,
+            "right": 14,
+            "bottom": 6,
+            "mean": 30.75,
+            "maximum": 75
+          },
+          "edge_error_mean_px": 30.75,
+          "edge_error_maximum_px": 75,
+          "elapsed_ms": 114.197,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              90,
+              -22,
+              1091,
+              976
+            ],
+            "corners": [
+              [
+                89.58169555664062,
+                293.90753173828125
+              ],
+              [
+                776.7593994140625,
+                -21.933792114257812
+              ],
+              [
+                1089.8826904296875,
+                659.330078125
+              ],
+              [
+                402.7049560546875,
+                975.17138671875
+              ]
+            ],
+            "confidence": 0.7405660152546137,
+            "score": 0.7405660152546137,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 147,
+              "total_supported_rays": 267,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9621083736419678,
+              "side_support_counts": [
+                5,
+                2,
+                6,
+                3
+              ],
+              "side_support_fractions": [
+                0.8333333333333334,
+                0.3333333333333333,
+                1.0,
+                0.5
+              ],
+              "weak_sides": [
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5301958803143207,
+              "rectangularity": 0.5676153653757938,
+              "elapsed_ms": 114.168
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            149,
+            45,
+            1121,
+            940
+          ],
+          "iou": 0.91126276,
+          "edge_errors": {
+            "left": 65,
+            "top": 6,
+            "right": 20,
+            "bottom": 1,
+            "mean": 23.0,
+            "maximum": 65
+          },
+          "edge_error_mean_px": 23.0,
+          "edge_error_maximum_px": 65,
+          "elapsed_ms": 128.733,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              149,
+              45,
+              1121,
+              940
+            ],
+            "corners": [
+              [
+                149.38278198242188,
+                57.87480163574219
+              ],
+              [
+                1108.6634521484375,
+                45.07881164550781
+              ],
+              [
+                1120.422119140625,
+                926.5986938476562
+              ],
+              [
+                161.14144897460938,
+                939.3947143554688
+              ]
+            ],
+            "confidence": 0.8777747928615072,
+            "score": 0.8777747928615072,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 307,
+              "total_supported_rays": 427,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                9,
+                1,
+                5,
+                2
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.1111111111111111,
+                0.5555555555555556,
+                0.2222222222222222
+              ],
+              "weak_sides": [
+                1,
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6666578348878828,
+              "rectangularity": 0.9722227532537405,
+              "elapsed_ms": 128.702
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            0,
+            1268,
+            990
+          ],
+          "iou": 0.83758551,
+          "edge_errors": {
+            "left": 22,
+            "top": 33,
+            "right": 114,
+            "bottom": 22,
+            "mean": 47.75,
+            "maximum": 114
+          },
+          "edge_error_mean_px": 47.75,
+          "edge_error_maximum_px": 114,
+          "elapsed_ms": 113.901,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              66,
+              -112,
+              1297,
+              1159
+            ],
+            "corners": [
+              [
+                609.3426513671875,
+                -112.12954711914062
+              ],
+              [
+                1296.0400390625,
+                349.0025634765625
+              ],
+              [
+                752.95751953125,
+                1157.7366943359375
+              ],
+              [
+                66.26022338867188,
+                696.6046142578125
+              ]
+            ],
+            "confidence": 0.7776669722436075,
+            "score": 0.7776669722436075,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.025,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 139,
+              "total_supported_rays": 259,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                4,
+                4,
+                2,
+                7
+              ],
+              "side_support_fractions": [
+                0.5714285714285714,
+                0.5714285714285714,
+                0.2857142857142857,
+                1.0
+              ],
+              "weak_sides": [
+                2
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6418987569080195,
+              "rectangularity": 0.5150120366290032,
+              "elapsed_ms": 113.868
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 6,
+        "elapsed_seconds": 4.087914871000002,
+        "search_fraction": 0.6
+      },
+      "profile": null,
+      "run_id": "run-20260803-163317",
+      "rank": 3
+    },
+    {
+      "parameter_set_id": "37d10a2afe03",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "minimum_radius_fraction": 0.12,
+        "maximum_radius_fraction": 0.62,
+        "gradient_percentile": 70.0,
+        "refined_angle_step_degrees": 0.5,
+        "weak_side_support_fraction": 0.4,
+        "side_assignment_tolerance_fraction": 0.04,
+        "maximum_refined_sides": 2
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.86755924,
+        "minimum_iou": 0.76760313,
+        "stddev_iou": 0.05731516,
+        "mean_edge_error_px": 36.55,
+        "elapsed_ms_total": 496.445,
+        "wall_ms": 497.12
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            147,
+            0,
+            1313,
+            986
+          ],
+          "iou": 0.88941266,
+          "edge_errors": {
+            "left": 22,
+            "top": 56,
+            "right": 24,
+            "bottom": 19,
+            "mean": 30.25,
+            "maximum": 56
+          },
+          "edge_error_mean_px": 30.25,
+          "edge_error_maximum_px": 56,
+          "elapsed_ms": 42.259,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              147,
+              -78,
+              1313,
+              1101
+            ],
+            "corners": [
+              [
+                146.9925537109375,
+                305.4794921875
+              ],
+              [
+                914.9801025390625,
+                -77.96199035644531
+              ],
+              [
+                1311.8348388671875,
+                716.8906860351562
+              ],
+              [
+                543.8472900390625,
+                1100.3321533203125
+              ]
+            ],
+            "confidence": 0.7568251340429423,
+            "score": 0.7568251340429423,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 120,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                6,
+                4,
+                3,
+                4
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.6666666666666666,
+                0.5,
+                0.6666666666666666
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5596495056600381,
+              "rectangularity": 0.5547390353096443,
+              "elapsed_ms": 42.231
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            79,
+            0,
+            1178,
+            987
+          ],
+          "iou": 0.92632016,
+          "edge_errors": {
+            "left": 12,
+            "top": 8,
+            "right": 55,
+            "bottom": 10,
+            "mean": 21.25,
+            "maximum": 55
+          },
+          "edge_error_mean_px": 21.25,
+          "edge_error_maximum_px": 55,
+          "elapsed_ms": 139.813,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              79,
+              -62,
+              1178,
+              1055
+            ],
+            "corners": [
+              [
+                229.65625,
+                -61.908905029296875
+              ],
+              [
+                1176.6566162109375,
+                85.13467407226562
+              ],
+              [
+                1026.1473388671875,
+                1054.455810546875
+              ],
+              [
+                79.14691162109375,
+                907.4122314453125
+              ]
+            ],
+            "confidence": 0.8564706920549872,
+            "score": 0.8564706920549872,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 310,
+              "total_supported_rays": 430,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9999879598617554,
+              "side_support_counts": [
+                4,
+                4,
+                5,
+                11
+              ],
+              "side_support_fractions": [
+                0.36363636363636365,
+                0.36363636363636365,
+                0.45454545454545453,
+                1.0
+              ],
+              "weak_sides": [
+                0,
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.7237544985378456,
+              "rectangularity": 0.7657966329892312,
+              "elapsed_ms": 139.783
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            79,
+            47,
+            982,
+            895
+          ],
+          "iou": 0.76760313,
+          "edge_errors": {
+            "left": 64,
+            "top": 19,
+            "right": 92,
+            "bottom": 75,
+            "mean": 62.5,
+            "maximum": 92
+          },
+          "edge_error_mean_px": 62.5,
+          "edge_error_maximum_px": 92,
+          "elapsed_ms": 147.068,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              79,
+              47,
+              982,
+              895
+            ],
+            "corners": [
+              [
+                78.74789428710938,
+                208.82847595214844
+              ],
+              [
+                833.7054443359375,
+                46.61073303222656
+              ],
+              [
+                980.9439697265625,
+                731.8554077148438
+              ],
+              [
+                225.98641967773438,
+                894.0731811523438
+              ]
+            ],
+            "confidence": 0.7671688660580234,
+            "score": 0.7671688660580234,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 146,
+              "total_supported_rays": 266,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9942087531089783,
+              "side_support_counts": [
+                5,
+                5,
+                8,
+                3
+              ],
+              "side_support_fractions": [
+                0.625,
+                0.625,
+                1.0,
+                0.375
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5060433208370789,
+              "rectangularity": 0.7067836715776282,
+              "elapsed_ms": 147.037
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            149,
+            45,
+            1121,
+            940
+          ],
+          "iou": 0.91126276,
+          "edge_errors": {
+            "left": 65,
+            "top": 6,
+            "right": 20,
+            "bottom": 1,
+            "mean": 23.0,
+            "maximum": 65
+          },
+          "edge_error_mean_px": 23.0,
+          "edge_error_maximum_px": 65,
+          "elapsed_ms": 129.216,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              149,
+              45,
+              1121,
+              940
+            ],
+            "corners": [
+              [
+                149.38278198242188,
+                57.87480163574219
+              ],
+              [
+                1108.6634521484375,
+                45.07881164550781
+              ],
+              [
+                1120.422119140625,
+                926.5986938476562
+              ],
+              [
+                161.14144897460938,
+                939.3947143554688
+              ]
+            ],
+            "confidence": 0.8777747928615072,
+            "score": 0.8777747928615072,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 307,
+              "total_supported_rays": 427,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                9,
+                1,
+                5,
+                3
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.1111111111111111,
+                0.5555555555555556,
+                0.3333333333333333
+              ],
+              "weak_sides": [
+                1,
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6666578348878828,
+              "rectangularity": 0.9722227532537405,
+              "elapsed_ms": 129.184
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            74,
+            0,
+            1268,
+            990
+          ],
+          "iou": 0.84319747,
+          "edge_errors": {
+            "left": 14,
+            "top": 33,
+            "right": 114,
+            "bottom": 22,
+            "mean": 45.75,
+            "maximum": 114
+          },
+          "edge_error_mean_px": 45.75,
+          "edge_error_maximum_px": 114,
+          "elapsed_ms": 38.089,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              74,
+              -112,
+              1297,
+              1148
+            ],
+            "corners": [
+              [
+                609.3426513671875,
+                -112.12954711914062
+              ],
+              [
+                1296.0400390625,
+                349.0025634765625
+              ],
+              [
+                760.30419921875,
+                1146.7965087890625
+              ],
+              [
+                73.6068115234375,
+                685.6644287109375
+              ]
+            ],
+            "confidence": 0.7747919664057438,
+            "score": 0.7747919664057438,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 2
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 120,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                5,
+                4,
+                5,
+                10
+              ],
+              "side_support_fractions": [
+                0.5,
+                0.4,
+                0.5,
+                1.0
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6332154502578077,
+              "rectangularity": 0.5158327940775553,
+              "elapsed_ms": 38.056
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 8,
+        "elapsed_seconds": 5.0321404680000015,
+        "search_fraction": 0.8
+      },
+      "profile": null,
+      "run_id": "run-20260803-163317",
+      "rank": 4
+    },
+    {
+      "parameter_set_id": "cb354fe211b1",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "minimum_radius_fraction": 0.12,
+        "maximum_radius_fraction": 0.62,
+        "gradient_percentile": 70.0,
+        "refined_angle_step_degrees": 0.5,
+        "weak_side_support_fraction": 0.4,
+        "side_assignment_tolerance_fraction": 0.04,
+        "maximum_refined_sides": 4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.86755924,
+        "minimum_iou": 0.76760313,
+        "stddev_iou": 0.05731516,
+        "mean_edge_error_px": 36.55,
+        "elapsed_ms_total": 474.353,
+        "wall_ms": 475.02
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            147,
+            0,
+            1313,
+            986
+          ],
+          "iou": 0.88941266,
+          "edge_errors": {
+            "left": 22,
+            "top": 56,
+            "right": 24,
+            "bottom": 19,
+            "mean": 30.25,
+            "maximum": 56
+          },
+          "edge_error_mean_px": 30.25,
+          "edge_error_maximum_px": 56,
+          "elapsed_ms": 42.816,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              147,
+              -78,
+              1313,
+              1101
+            ],
+            "corners": [
+              [
+                146.9925537109375,
+                305.4794921875
+              ],
+              [
+                914.9801025390625,
+                -77.96199035644531
+              ],
+              [
+                1311.8348388671875,
+                716.8906860351562
+              ],
+              [
+                543.8472900390625,
+                1100.3321533203125
+              ]
+            ],
+            "confidence": 0.7568251340429423,
+            "score": 0.7568251340429423,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 120,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                6,
+                4,
+                3,
+                4
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.6666666666666666,
+                0.5,
+                0.6666666666666666
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5596495056600381,
+              "rectangularity": 0.5547390353096443,
+              "elapsed_ms": 42.787
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            79,
+            0,
+            1178,
+            987
+          ],
+          "iou": 0.92632016,
+          "edge_errors": {
+            "left": 12,
+            "top": 8,
+            "right": 55,
+            "bottom": 10,
+            "mean": 21.25,
+            "maximum": 55
+          },
+          "edge_error_mean_px": 21.25,
+          "edge_error_maximum_px": 55,
+          "elapsed_ms": 149.34,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              79,
+              -62,
+              1178,
+              1055
+            ],
+            "corners": [
+              [
+                229.65625,
+                -61.908905029296875
+              ],
+              [
+                1176.6566162109375,
+                85.13467407226562
+              ],
+              [
+                1026.1473388671875,
+                1054.455810546875
+              ],
+              [
+                79.14691162109375,
+                907.4122314453125
+              ]
+            ],
+            "confidence": 0.8564706920549872,
+            "score": 0.8564706920549872,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 310,
+              "total_supported_rays": 430,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9999879598617554,
+              "side_support_counts": [
+                4,
+                4,
+                5,
+                11
+              ],
+              "side_support_fractions": [
+                0.36363636363636365,
+                0.36363636363636365,
+                0.45454545454545453,
+                1.0
+              ],
+              "weak_sides": [
+                0,
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.7237544985378456,
+              "rectangularity": 0.7657966329892312,
+              "elapsed_ms": 149.309
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            79,
+            47,
+            982,
+            895
+          ],
+          "iou": 0.76760313,
+          "edge_errors": {
+            "left": 64,
+            "top": 19,
+            "right": 92,
+            "bottom": 75,
+            "mean": 62.5,
+            "maximum": 92
+          },
+          "edge_error_mean_px": 62.5,
+          "edge_error_maximum_px": 92,
+          "elapsed_ms": 116.043,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              79,
+              47,
+              982,
+              895
+            ],
+            "corners": [
+              [
+                78.74789428710938,
+                208.82847595214844
+              ],
+              [
+                833.7054443359375,
+                46.61073303222656
+              ],
+              [
+                980.9439697265625,
+                731.8554077148438
+              ],
+              [
+                225.98641967773438,
+                894.0731811523438
+              ]
+            ],
+            "confidence": 0.7671688660580234,
+            "score": 0.7671688660580234,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 146,
+              "total_supported_rays": 266,
+              "ray_support": 1.0,
+              "mean_edge_strength": 0.9942087531089783,
+              "side_support_counts": [
+                5,
+                5,
+                8,
+                3
+              ],
+              "side_support_fractions": [
+                0.625,
+                0.625,
+                1.0,
+                0.375
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.5060433208370789,
+              "rectangularity": 0.7067836715776282,
+              "elapsed_ms": 116.013
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            149,
+            45,
+            1121,
+            940
+          ],
+          "iou": 0.91126276,
+          "edge_errors": {
+            "left": 65,
+            "top": 6,
+            "right": 20,
+            "bottom": 1,
+            "mean": 23.0,
+            "maximum": 65
+          },
+          "edge_error_mean_px": 23.0,
+          "edge_error_maximum_px": 65,
+          "elapsed_ms": 127.382,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              149,
+              45,
+              1121,
+              940
+            ],
+            "corners": [
+              [
+                149.38278198242188,
+                57.87480163574219
+              ],
+              [
+                1108.6634521484375,
+                45.07881164550781
+              ],
+              [
+                1120.422119140625,
+                926.5986938476562
+              ],
+              [
+                161.14144897460938,
+                939.3947143554688
+              ]
+            ],
+            "confidence": 0.8777747928615072,
+            "score": 0.8777747928615072,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 307,
+              "total_supported_rays": 427,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                9,
+                1,
+                5,
+                3
+              ],
+              "side_support_fractions": [
+                1.0,
+                0.1111111111111111,
+                0.5555555555555556,
+                0.3333333333333333
+              ],
+              "weak_sides": [
+                1,
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6666578348878828,
+              "rectangularity": 0.9722227532537405,
+              "elapsed_ms": 127.351
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            74,
+            0,
+            1268,
+            990
+          ],
+          "iou": 0.84319747,
+          "edge_errors": {
+            "left": 14,
+            "top": 33,
+            "right": 114,
+            "bottom": 22,
+            "mean": 45.75,
+            "maximum": 114
+          },
+          "edge_error_mean_px": 45.75,
+          "edge_error_maximum_px": 114,
+          "elapsed_ms": 38.772,
+          "candidate": {
+            "method": "adaptive_radial_edge",
+            "bbox": [
+              74,
+              -112,
+              1297,
+              1148
+            ],
+            "corners": [
+              [
+                609.3426513671875,
+                -112.12954711914062
+              ],
+              [
+                1296.0400390625,
+                349.0025634765625
+              ],
+              [
+                760.30419921875,
+                1146.7965087890625
+              ],
+              [
+                73.6068115234375,
+                685.6644287109375
+              ]
+            ],
+            "confidence": 0.7747919664057438,
+            "score": 0.7747919664057438,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "ray_count": 96,
+                "minimum_radius_fraction": 0.12,
+                "maximum_radius_fraction": 0.62,
+                "gradient_percentile": 70.0,
+                "minimum_ray_support": 0.45,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "area_weight": 0.35,
+                "support_weight": 0.45,
+                "rectangularity_weight": 0.2,
+                "coarse_angle_step_degrees": 3.0,
+                "refined_angle_step_degrees": 0.5,
+                "weak_side_support_fraction": 0.4,
+                "side_assignment_tolerance_fraction": 0.04,
+                "maximum_refined_sides": 4
+              },
+              "coarse_supported_rays": 120,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 120,
+              "ray_support": 1.0,
+              "mean_edge_strength": 1.0,
+              "side_support_counts": [
+                5,
+                4,
+                5,
+                10
+              ],
+              "side_support_fractions": [
+                0.5,
+                0.4,
+                0.5,
+                1.0
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_two_pass_radial_gradient_search",
+              "area_fraction": 0.6332154502578077,
+              "rectangularity": 0.5158327940775553,
+              "elapsed_ms": 38.726
+            },
+            "status": "ok",
+            "detector_name": "Adaptive Radial Edge Search",
+            "origin": "HTH",
+            "foundation": [
+              "Two-pass radial gradient search",
+              "Adaptive angular refinement",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 9,
+        "elapsed_seconds": 5.507262406000002,
+        "search_fraction": 0.9
+      },
+      "profile": null,
+      "run_id": "run-20260803-163317",
+      "rank": 5
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.97521627,
+        "winner_iou": 0.97521627,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "a132c2ac5e87",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.95482809,
+        "winner_iou": 0.95482809,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "a132c2ac5e87",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.9480325,
+        "winner_iou": 0.9480325,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "a132c2ac5e87",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.9046069,
+        "winner_iou": 0.9046069,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "a132c2ac5e87",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.85572548,
+        "winner_iou": 0.85572548,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "a132c2ac5e87",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000266",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmvrwv9",
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16769720320,
+    "memory_gib": 15.62,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.1",
+    "pipeline_commit": "48335dadeb2e21ce7b8354330a61367e3068fcd4",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "30832642220",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "b984efa3664bde8b0db8777daf7ea3a356a75aa8",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 1,
+    "peak_rss_bytes": 174796800,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 1.7684516319525863,
+    "failures": 0,
+    "best_mean_iou": 0.92768185,
+    "best_worst_page_iou": 0.85572548,
+    "best_stddev_iou": 0.02302839,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 2,
+    "total_metric_improvements": 2,
+    "parameter_sets_with_improvements": 2,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": 2.9893652430000017,
+    "time_since_last_improvement_seconds": 3.115363406
+  }
+}
