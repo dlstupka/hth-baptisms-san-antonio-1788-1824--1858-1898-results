@@ -1,0 +1,3491 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260804-142020",
+  "detector": "hough",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 32,
+  "detector_pipeline": {
+    "pipeline_count": 1,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "single-detector",
+    "queue_position": "1",
+    "ranked_quality": "unknown"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 2188,
+    "planned_parameter_sets": 2188,
+    "actual_parameter_sets": 2188,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 10940,
+    "actual_page_evaluations": 10940
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 2188,
+  "page_evaluation_count": 10940,
+  "successful_page_evaluation_count": 7493,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "winner": {
+    "parameter_set_id": "c2c117479e3f",
+    "parameters": {
+      "canny_low_threshold": 65,
+      "hough_threshold_fraction": 0.055,
+      "minimum_length_fraction": 0.12,
+      "maximum_gap_fraction": 0.055,
+      "axis_angle_tolerance_degrees": 12.0,
+      "outer_percentile": 5.0,
+      "bbox_padding_fraction": 0.015
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.60502449,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.32169383,
+      "mean_edge_error_px": 67.062,
+      "elapsed_ms_total": 2313.341,
+      "wall_ms": 2313.813
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          105,
+          113,
+          1297,
+          889
+        ],
+        "iou": 0.83470778,
+        "edge_errors": {
+          "left": 20,
+          "top": 57,
+          "right": 8,
+          "bottom": 78,
+          "mean": 40.75,
+          "maximum": 78
+        },
+        "edge_error_mean_px": 40.75,
+        "edge_error_maximum_px": 78,
+        "elapsed_ms": 751.988,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            105,
+            113,
+            1297,
+            889
+          ],
+          "corners": [
+            [
+              105.0,
+              113.0
+            ],
+            [
+              1297.0,
+              113.0
+            ],
+            [
+              1297.0,
+              889.0
+            ],
+            [
+              105.0,
+              889.0
+            ]
+          ],
+          "confidence": 0.935872,
+          "score": 0.935872,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1472,
+            "vertical_lines": 17,
+            "horizontal_lines": 1396,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.678817,
+            "mask_score": 0.908389,
+            "support_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 751.961
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          113,
+          19,
+          769,
+          957
+        ],
+        "iou": 0.54460842,
+        "edge_errors": {
+          "left": 46,
+          "top": 11,
+          "right": 464,
+          "bottom": 20,
+          "mean": 135.25,
+          "maximum": 464
+        },
+        "edge_error_mean_px": 135.25,
+        "edge_error_maximum_px": 464,
+        "elapsed_ms": 156.848,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            113,
+            19,
+            769,
+            957
+          ],
+          "corners": [
+            [
+              113.0,
+              19.0
+            ],
+            [
+              769.0,
+              19.0
+            ],
+            [
+              769.0,
+              957.0
+            ],
+            [
+              113.0,
+              957.0
+            ]
+          ],
+          "confidence": 0.856691,
+          "score": 0.856691,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 177,
+            "vertical_lines": 28,
+            "horizontal_lines": 103,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.473733,
+            "mask_score": 0.825336,
+            "support_score": 1.0,
+            "area_score": 0.789555,
+            "elapsed_ms": 156.82
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 17.139,
+        "candidate": {
+          "method": "hough",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "insufficient_axis_lines",
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1,
+            "vertical_lines": 0,
+            "horizontal_lines": 1,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "elapsed_ms": 17.115
+          },
+          "status": "no_candidate",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          61,
+          120,
+          1143,
+          889
+        ],
+        "iou": 0.81882601,
+        "edge_errors": {
+          "left": 23,
+          "top": 69,
+          "right": 42,
+          "bottom": 52,
+          "mean": 46.5,
+          "maximum": 69
+        },
+        "edge_error_mean_px": 46.5,
+        "edge_error_maximum_px": 69,
+        "elapsed_ms": 667.264,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            61,
+            120,
+            1143,
+            889
+          ],
+          "corners": [
+            [
+              61.0,
+              120.0
+            ],
+            [
+              1143.0,
+              120.0
+            ],
+            [
+              1143.0,
+              889.0
+            ],
+            [
+              61.0,
+              889.0
+            ]
+          ],
+          "confidence": 0.951842,
+          "score": 0.951842,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1276,
+            "vertical_lines": 36,
+            "horizontal_lines": 1239,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.655845,
+            "mask_score": 0.931203,
+            "support_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 667.238
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          66,
+          106,
+          1189,
+          915
+        ],
+        "iou": 0.82698023,
+        "edge_errors": {
+          "left": 22,
+          "top": 73,
+          "right": 35,
+          "bottom": 53,
+          "mean": 45.75,
+          "maximum": 73
+        },
+        "edge_error_mean_px": 45.75,
+        "edge_error_maximum_px": 73,
+        "elapsed_ms": 720.102,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            66,
+            106,
+            1189,
+            915
+          ],
+          "corners": [
+            [
+              66.0,
+              106.0
+            ],
+            [
+              1189.0,
+              106.0
+            ],
+            [
+              1189.0,
+              915.0
+            ],
+            [
+              66.0,
+              915.0
+            ]
+          ],
+          "confidence": 0.936916,
+          "score": 0.936916,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1439,
+            "vertical_lines": 22,
+            "horizontal_lines": 1413,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 119,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.723725,
+            "mask_score": 0.90988,
+            "support_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 720.071
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      }
+    ],
+    "search_observation": {
+      "parameter_set_number": 1732,
+      "elapsed_seconds": 130.81139589706436,
+      "search_fraction": 0.791952446273434
+    },
+    "profile": null,
+    "run_id": "run-20260804-142020",
+    "rank": 1
+  },
+  "baseline": {
+    "parameter_set_id": "7078053f309d",
+    "parameters": {
+      "canny_low_threshold": 40,
+      "hough_threshold_fraction": 0.055,
+      "minimum_length_fraction": 0.2,
+      "maximum_gap_fraction": 0.055,
+      "axis_angle_tolerance_degrees": 22.0,
+      "outer_percentile": 10.0,
+      "minimum_bbox_area_fraction": 0.1,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.4784465,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.28505266,
+      "mean_edge_error_px": 112.688,
+      "elapsed_ms_total": 1231.769,
+      "wall_ms": 1232.214
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          251,
+          182,
+          1282,
+          826
+        ],
+        "iou": 0.62614249,
+        "edge_errors": {
+          "left": 126,
+          "top": 126,
+          "right": 7,
+          "bottom": 141,
+          "mean": 100.0,
+          "maximum": 141
+        },
+        "edge_error_mean_px": 100.0,
+        "edge_error_maximum_px": 141,
+        "elapsed_ms": 401.824,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            251,
+            182,
+            1282,
+            826
+          ],
+          "corners": [
+            [
+              251.0,
+              182.0
+            ],
+            [
+              1282.0,
+              182.0
+            ],
+            [
+              1282.0,
+              826.0
+            ],
+            [
+              251.0,
+              826.0
+            ]
+          ],
+          "confidence": 0.891673,
+          "score": 0.891673,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 1191,
+            "vertical_lines": 14,
+            "horizontal_lines": 1153,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.487259,
+            "mask_score": 0.872091,
+            "support_score": 1.0,
+            "area_score": 0.812098,
+            "elapsed_ms": 401.785
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          252,
+          50,
+          670,
+          880
+        ],
+        "iou": 0.30706622,
+        "edge_errors": {
+          "left": 185,
+          "top": 42,
+          "right": 563,
+          "bottom": 97,
+          "mean": 221.75,
+          "maximum": 563
+        },
+        "edge_error_mean_px": 221.75,
+        "edge_error_maximum_px": 563,
+        "elapsed_ms": 150.175,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            252,
+            50,
+            670,
+            880
+          ],
+          "corners": [
+            [
+              252.0,
+              50.0
+            ],
+            [
+              670.0,
+              50.0
+            ],
+            [
+              670.0,
+              880.0
+            ],
+            [
+              252.0,
+              880.0
+            ]
+          ],
+          "confidence": 0.809516,
+          "score": 0.809516,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 449,
+            "vertical_lines": 218,
+            "horizontal_lines": 105,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.267105,
+            "mask_score": 0.807141,
+            "support_score": 1.0,
+            "area_score": 0.445174,
+            "elapsed_ms": 150.146
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 9.723,
+        "candidate": {
+          "method": "hough",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "insufficient_axis_lines",
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 1,
+            "vertical_lines": 0,
+            "horizontal_lines": 1,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54,
+            "elapsed_ms": 9.694
+          },
+          "status": "no_candidate",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          80,
+          166,
+          1122,
+          834
+        ],
+        "iou": 0.73696452,
+        "edge_errors": {
+          "left": 4,
+          "top": 115,
+          "right": 21,
+          "bottom": 107,
+          "mean": 61.75,
+          "maximum": 115
+        },
+        "edge_error_mean_px": 61.75,
+        "edge_error_maximum_px": 115,
+        "elapsed_ms": 317.705,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            80,
+            166,
+            1122,
+            834
+          ],
+          "corners": [
+            [
+              80.0,
+              166.0
+            ],
+            [
+              1122.0,
+              166.0
+            ],
+            [
+              1122.0,
+              834.0
+            ],
+            [
+              80.0,
+              834.0
+            ]
+          ],
+          "confidence": 0.934376,
+          "score": 0.934376,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 872,
+            "vertical_lines": 28,
+            "horizontal_lines": 843,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.548646,
+            "mask_score": 0.918479,
+            "support_score": 1.0,
+            "area_score": 0.91441,
+            "elapsed_ms": 317.683
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          91,
+          148,
+          1169,
+          832
+        ],
+        "iou": 0.72205925,
+        "edge_errors": {
+          "left": 3,
+          "top": 115,
+          "right": 15,
+          "bottom": 136,
+          "mean": 67.25,
+          "maximum": 136
+        },
+        "edge_error_mean_px": 67.25,
+        "edge_error_maximum_px": 136,
+        "elapsed_ms": 352.342,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            91,
+            148,
+            1169,
+            832
+          ],
+          "corners": [
+            [
+              91.0,
+              148.0
+            ],
+            [
+              1169.0,
+              148.0
+            ],
+            [
+              1169.0,
+              832.0
+            ],
+            [
+              91.0,
+              832.0
+            ]
+          ],
+          "confidence": 0.926447,
+          "score": 0.926447,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 988,
+            "vertical_lines": 21,
+            "horizontal_lines": 962,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 198,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.587382,
+            "mask_score": 0.897929,
+            "support_score": 1.0,
+            "area_score": 0.97897,
+            "elapsed_ms": 352.319
+          },
+          "status": "ok",
+          "detector_name": "Hough Lines",
+          "origin": "OpenCV",
+          "foundation": [
+            "Hough transform",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "5.0.0",
+          "repository": "https://github.com/opencv/opencv"
+        }
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260804-142020",
+    "rank": 868
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "c2c117479e3f",
+      "parameters": {
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.055,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.055,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.60502449,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32169383,
+        "mean_edge_error_px": 67.062,
+        "elapsed_ms_total": 2313.341,
+        "wall_ms": 2313.813
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            105,
+            113,
+            1297,
+            889
+          ],
+          "iou": 0.83470778,
+          "edge_errors": {
+            "left": 20,
+            "top": 57,
+            "right": 8,
+            "bottom": 78,
+            "mean": 40.75,
+            "maximum": 78
+          },
+          "edge_error_mean_px": 40.75,
+          "edge_error_maximum_px": 78,
+          "elapsed_ms": 751.988,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              105,
+              113,
+              1297,
+              889
+            ],
+            "corners": [
+              [
+                105.0,
+                113.0
+              ],
+              [
+                1297.0,
+                113.0
+              ],
+              [
+                1297.0,
+                889.0
+              ],
+              [
+                105.0,
+                889.0
+              ]
+            ],
+            "confidence": 0.935872,
+            "score": 0.935872,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1472,
+              "vertical_lines": 17,
+              "horizontal_lines": 1396,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.678817,
+              "mask_score": 0.908389,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 751.961
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            113,
+            19,
+            769,
+            957
+          ],
+          "iou": 0.54460842,
+          "edge_errors": {
+            "left": 46,
+            "top": 11,
+            "right": 464,
+            "bottom": 20,
+            "mean": 135.25,
+            "maximum": 464
+          },
+          "edge_error_mean_px": 135.25,
+          "edge_error_maximum_px": 464,
+          "elapsed_ms": 156.848,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              113,
+              19,
+              769,
+              957
+            ],
+            "corners": [
+              [
+                113.0,
+                19.0
+              ],
+              [
+                769.0,
+                19.0
+              ],
+              [
+                769.0,
+                957.0
+              ],
+              [
+                113.0,
+                957.0
+              ]
+            ],
+            "confidence": 0.856691,
+            "score": 0.856691,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 177,
+              "vertical_lines": 28,
+              "horizontal_lines": 103,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.473733,
+              "mask_score": 0.825336,
+              "support_score": 1.0,
+              "area_score": 0.789555,
+              "elapsed_ms": 156.82
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 17.139,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "insufficient_axis_lines",
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1,
+              "vertical_lines": 0,
+              "horizontal_lines": 1,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "elapsed_ms": 17.115
+            },
+            "status": "no_candidate",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            61,
+            120,
+            1143,
+            889
+          ],
+          "iou": 0.81882601,
+          "edge_errors": {
+            "left": 23,
+            "top": 69,
+            "right": 42,
+            "bottom": 52,
+            "mean": 46.5,
+            "maximum": 69
+          },
+          "edge_error_mean_px": 46.5,
+          "edge_error_maximum_px": 69,
+          "elapsed_ms": 667.264,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              61,
+              120,
+              1143,
+              889
+            ],
+            "corners": [
+              [
+                61.0,
+                120.0
+              ],
+              [
+                1143.0,
+                120.0
+              ],
+              [
+                1143.0,
+                889.0
+              ],
+              [
+                61.0,
+                889.0
+              ]
+            ],
+            "confidence": 0.951842,
+            "score": 0.951842,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1276,
+              "vertical_lines": 36,
+              "horizontal_lines": 1239,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.655845,
+              "mask_score": 0.931203,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 667.238
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            106,
+            1189,
+            915
+          ],
+          "iou": 0.82698023,
+          "edge_errors": {
+            "left": 22,
+            "top": 73,
+            "right": 35,
+            "bottom": 53,
+            "mean": 45.75,
+            "maximum": 73
+          },
+          "edge_error_mean_px": 45.75,
+          "edge_error_maximum_px": 73,
+          "elapsed_ms": 720.102,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              106,
+              1189,
+              915
+            ],
+            "corners": [
+              [
+                66.0,
+                106.0
+              ],
+              [
+                1189.0,
+                106.0
+              ],
+              [
+                1189.0,
+                915.0
+              ],
+              [
+                66.0,
+                915.0
+              ]
+            ],
+            "confidence": 0.936916,
+            "score": 0.936916,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1439,
+              "vertical_lines": 22,
+              "horizontal_lines": 1413,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.723725,
+              "mask_score": 0.90988,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 720.071
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1732,
+        "elapsed_seconds": 130.81139589706436,
+        "search_fraction": 0.791952446273434
+      },
+      "profile": null,
+      "run_id": "run-20260804-142020",
+      "rank": 1
+    },
+    {
+      "parameter_set_id": "d2207b5c0b61",
+      "parameters": {
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.055,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.60399341,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32102509,
+        "mean_edge_error_px": 67.312,
+        "elapsed_ms_total": 2154.528,
+        "wall_ms": 2155.016
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            109,
+            117,
+            1297,
+            888
+          ],
+          "iou": 0.83180772,
+          "edge_errors": {
+            "left": 16,
+            "top": 61,
+            "right": 8,
+            "bottom": 79,
+            "mean": 41.0,
+            "maximum": 79
+          },
+          "edge_error_mean_px": 41.0,
+          "edge_error_maximum_px": 79,
+          "elapsed_ms": 691.249,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              109,
+              117,
+              1297,
+              888
+            ],
+            "corners": [
+              [
+                109.0,
+                117.0
+              ],
+              [
+                1297.0,
+                117.0
+              ],
+              [
+                1297.0,
+                888.0
+              ],
+              [
+                109.0,
+                888.0
+              ]
+            ],
+            "confidence": 0.935827,
+            "score": 0.935827,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1673,
+              "vertical_lines": 29,
+              "horizontal_lines": 1573,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.67218,
+              "mask_score": 0.908325,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 691.197
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            113,
+            22,
+            770,
+            958
+          ],
+          "iou": 0.54427563,
+          "edge_errors": {
+            "left": 46,
+            "top": 14,
+            "right": 463,
+            "bottom": 19,
+            "mean": 135.5,
+            "maximum": 463
+          },
+          "edge_error_mean_px": 135.5,
+          "edge_error_maximum_px": 463,
+          "elapsed_ms": 131.696,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              113,
+              22,
+              770,
+              958
+            ],
+            "corners": [
+              [
+                113.0,
+                22.0
+              ],
+              [
+                770.0,
+                22.0
+              ],
+              [
+                770.0,
+                958.0
+              ],
+              [
+                113.0,
+                958.0
+              ]
+            ],
+            "confidence": 0.856781,
+            "score": 0.856781,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 233,
+              "vertical_lines": 37,
+              "horizontal_lines": 119,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.473444,
+              "mask_score": 0.825535,
+              "support_score": 1.0,
+              "area_score": 0.789073,
+              "elapsed_ms": 131.663
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 55.016,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "insufficient_axis_lines",
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 2,
+              "vertical_lines": 0,
+              "horizontal_lines": 2,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "elapsed_ms": 54.98
+            },
+            "status": "no_candidate",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            61,
+            121,
+            1143,
+            891
+          ],
+          "iou": 0.819835,
+          "edge_errors": {
+            "left": 23,
+            "top": 70,
+            "right": 42,
+            "bottom": 50,
+            "mean": 46.25,
+            "maximum": 70
+          },
+          "edge_error_mean_px": 46.25,
+          "edge_error_maximum_px": 70,
+          "elapsed_ms": 602.774,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              61,
+              121,
+              1143,
+              891
+            ],
+            "corners": [
+              [
+                61.0,
+                121.0
+              ],
+              [
+                1143.0,
+                121.0
+              ],
+              [
+                1143.0,
+                891.0
+              ],
+              [
+                61.0,
+                891.0
+              ]
+            ],
+            "confidence": 0.952084,
+            "score": 0.952084,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1346,
+              "vertical_lines": 42,
+              "horizontal_lines": 1301,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.656698,
+              "mask_score": 0.931548,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 602.745
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            105,
+            1189,
+            911
+          ],
+          "iou": 0.82404868,
+          "edge_errors": {
+            "left": 22,
+            "top": 72,
+            "right": 35,
+            "bottom": 57,
+            "mean": 46.5,
+            "maximum": 72
+          },
+          "edge_error_mean_px": 46.5,
+          "edge_error_maximum_px": 72,
+          "elapsed_ms": 673.793,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              105,
+              1189,
+              911
+            ],
+            "corners": [
+              [
+                66.0,
+                105.0
+              ],
+              [
+                1189.0,
+                105.0
+              ],
+              [
+                1189.0,
+                911.0
+              ],
+              [
+                66.0,
+                911.0
+              ]
+            ],
+            "confidence": 0.936083,
+            "score": 0.936083,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1497,
+              "vertical_lines": 30,
+              "horizontal_lines": 1461,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.721042,
+              "mask_score": 0.908689,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 673.763
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1490,
+        "elapsed_seconds": 117.22397538879886,
+        "search_fraction": 0.6812985825331505
+      },
+      "profile": null,
+      "run_id": "run-20260804-142020",
+      "rank": 2
+    },
+    {
+      "parameter_set_id": "16967597e3b6",
+      "parameters": {
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.055,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.055,
+        "axis_angle_tolerance_degrees": 22.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.60393869,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32152044,
+        "mean_edge_error_px": 67.438,
+        "elapsed_ms_total": 2353.083,
+        "wall_ms": 2353.532
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            105,
+            115,
+            1297,
+            889
+          ],
+          "iou": 0.83259956,
+          "edge_errors": {
+            "left": 20,
+            "top": 59,
+            "right": 8,
+            "bottom": 78,
+            "mean": 41.25,
+            "maximum": 78
+          },
+          "edge_error_mean_px": 41.25,
+          "edge_error_maximum_px": 78,
+          "elapsed_ms": 763.38,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              105,
+              115,
+              1297,
+              889
+            ],
+            "corners": [
+              [
+                105.0,
+                115.0
+              ],
+              [
+                1297.0,
+                115.0
+              ],
+              [
+                1297.0,
+                889.0
+              ],
+              [
+                105.0,
+                889.0
+              ]
+            ],
+            "confidence": 0.935289,
+            "score": 0.935289,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1472,
+              "vertical_lines": 17,
+              "horizontal_lines": 1419,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.677068,
+              "mask_score": 0.907556,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 763.351
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            117,
+            19,
+            769,
+            957
+          ],
+          "iou": 0.54128764,
+          "edge_errors": {
+            "left": 50,
+            "top": 11,
+            "right": 464,
+            "bottom": 20,
+            "mean": 136.25,
+            "maximum": 464
+          },
+          "edge_error_mean_px": 136.25,
+          "edge_error_maximum_px": 464,
+          "elapsed_ms": 187.963,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              117,
+              19,
+              769,
+              957
+            ],
+            "corners": [
+              [
+                117.0,
+                19.0
+              ],
+              [
+                769.0,
+                19.0
+              ],
+              [
+                769.0,
+                957.0
+              ],
+              [
+                117.0,
+                957.0
+              ]
+            ],
+            "confidence": 0.856501,
+            "score": 0.856501,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 177,
+              "vertical_lines": 36,
+              "horizontal_lines": 107,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.470844,
+              "mask_score": 0.825753,
+              "support_score": 1.0,
+              "area_score": 0.784741,
+              "elapsed_ms": 187.931
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 16.664,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "insufficient_axis_lines",
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1,
+              "vertical_lines": 0,
+              "horizontal_lines": 1,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "elapsed_ms": 16.639
+            },
+            "status": "no_candidate",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            61,
+            120,
+            1143,
+            889
+          ],
+          "iou": 0.81882601,
+          "edge_errors": {
+            "left": 23,
+            "top": 69,
+            "right": 42,
+            "bottom": 52,
+            "mean": 46.5,
+            "maximum": 69
+          },
+          "edge_error_mean_px": 46.5,
+          "edge_error_maximum_px": 69,
+          "elapsed_ms": 665.743,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              61,
+              120,
+              1143,
+              889
+            ],
+            "corners": [
+              [
+                61.0,
+                120.0
+              ],
+              [
+                1143.0,
+                120.0
+              ],
+              [
+                1143.0,
+                889.0
+              ],
+              [
+                61.0,
+                889.0
+              ]
+            ],
+            "confidence": 0.951842,
+            "score": 0.951842,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1276,
+              "vertical_lines": 36,
+              "horizontal_lines": 1239,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.655845,
+              "mask_score": 0.931203,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 665.726
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            106,
+            1189,
+            915
+          ],
+          "iou": 0.82698023,
+          "edge_errors": {
+            "left": 22,
+            "top": 73,
+            "right": 35,
+            "bottom": 53,
+            "mean": 45.75,
+            "maximum": 73
+          },
+          "edge_error_mean_px": 45.75,
+          "edge_error_maximum_px": 73,
+          "elapsed_ms": 719.333,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              106,
+              1189,
+              915
+            ],
+            "corners": [
+              [
+                66.0,
+                106.0
+              ],
+              [
+                1189.0,
+                106.0
+              ],
+              [
+                1189.0,
+                915.0
+              ],
+              [
+                66.0,
+                915.0
+              ]
+            ],
+            "confidence": 0.936916,
+            "score": 0.936916,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1439,
+              "vertical_lines": 22,
+              "horizontal_lines": 1413,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.723725,
+              "mask_score": 0.90988,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 719.307
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1739,
+        "elapsed_seconds": 131.56939943367615,
+        "search_fraction": 0.7951531778692272
+      },
+      "profile": null,
+      "run_id": "run-20260804-142020",
+      "rank": 3
+    },
+    {
+      "parameter_set_id": "bf183b1707fd",
+      "parameters": {
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.055,
+        "axis_angle_tolerance_degrees": 22.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.60378133,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32087483,
+        "mean_edge_error_px": 67.375,
+        "elapsed_ms_total": 2301.23,
+        "wall_ms": 2301.683
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            109,
+            118,
+            1297,
+            888
+          ],
+          "iou": 0.83074733,
+          "edge_errors": {
+            "left": 16,
+            "top": 62,
+            "right": 8,
+            "bottom": 79,
+            "mean": 41.25,
+            "maximum": 79
+          },
+          "edge_error_mean_px": 41.25,
+          "edge_error_maximum_px": 79,
+          "elapsed_ms": 797.879,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              109,
+              118,
+              1297,
+              888
+            ],
+            "corners": [
+              [
+                109.0,
+                118.0
+              ],
+              [
+                1297.0,
+                118.0
+              ],
+              [
+                1297.0,
+                888.0
+              ],
+              [
+                109.0,
+                888.0
+              ]
+            ],
+            "confidence": 0.935528,
+            "score": 0.935528,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1673,
+              "vertical_lines": 30,
+              "horizontal_lines": 1619,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.671309,
+              "mask_score": 0.907898,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 797.851
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            113,
+            22,
+            770,
+            958
+          ],
+          "iou": 0.54427563,
+          "edge_errors": {
+            "left": 46,
+            "top": 14,
+            "right": 463,
+            "bottom": 19,
+            "mean": 135.5,
+            "maximum": 463
+          },
+          "edge_error_mean_px": 135.5,
+          "edge_error_maximum_px": 463,
+          "elapsed_ms": 130.696,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              113,
+              22,
+              770,
+              958
+            ],
+            "corners": [
+              [
+                113.0,
+                22.0
+              ],
+              [
+                770.0,
+                22.0
+              ],
+              [
+                770.0,
+                958.0
+              ],
+              [
+                113.0,
+                958.0
+              ]
+            ],
+            "confidence": 0.856781,
+            "score": 0.856781,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 233,
+              "vertical_lines": 49,
+              "horizontal_lines": 126,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.473444,
+              "mask_score": 0.825535,
+              "support_score": 1.0,
+              "area_score": 0.789073,
+              "elapsed_ms": 130.673
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 19.782,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "insufficient_axis_lines",
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 2,
+              "vertical_lines": 0,
+              "horizontal_lines": 2,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "elapsed_ms": 19.758
+            },
+            "status": "no_candidate",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            61,
+            121,
+            1143,
+            891
+          ],
+          "iou": 0.819835,
+          "edge_errors": {
+            "left": 23,
+            "top": 70,
+            "right": 42,
+            "bottom": 50,
+            "mean": 46.25,
+            "maximum": 70
+          },
+          "edge_error_mean_px": 46.25,
+          "edge_error_maximum_px": 70,
+          "elapsed_ms": 666.415,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              61,
+              121,
+              1143,
+              891
+            ],
+            "corners": [
+              [
+                61.0,
+                121.0
+              ],
+              [
+                1143.0,
+                121.0
+              ],
+              [
+                1143.0,
+                891.0
+              ],
+              [
+                61.0,
+                891.0
+              ]
+            ],
+            "confidence": 0.952084,
+            "score": 0.952084,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1346,
+              "vertical_lines": 42,
+              "horizontal_lines": 1301,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.656698,
+              "mask_score": 0.931548,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 666.397
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            105,
+            1189,
+            911
+          ],
+          "iou": 0.82404868,
+          "edge_errors": {
+            "left": 22,
+            "top": 72,
+            "right": 35,
+            "bottom": 57,
+            "mean": 46.5,
+            "maximum": 72
+          },
+          "edge_error_mean_px": 46.5,
+          "edge_error_maximum_px": 72,
+          "elapsed_ms": 686.458,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              105,
+              1189,
+              911
+            ],
+            "corners": [
+              [
+                66.0,
+                105.0
+              ],
+              [
+                1189.0,
+                105.0
+              ],
+              [
+                1189.0,
+                911.0
+              ],
+              [
+                66.0,
+                911.0
+              ]
+            ],
+            "confidence": 0.936083,
+            "score": 0.936083,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 22.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1497,
+              "vertical_lines": 30,
+              "horizontal_lines": 1461,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.721042,
+              "mask_score": 0.908689,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 686.43
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1498,
+        "elapsed_seconds": 117.61539502767846,
+        "search_fraction": 0.6849565614997714
+      },
+      "profile": null,
+      "run_id": "run-20260804-142020",
+      "rank": 4
+    },
+    {
+      "parameter_set_id": "7a75b3e87104",
+      "parameters": {
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.055,
+        "axis_angle_tolerance_degrees": 32.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.6022012,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32060588,
+        "mean_edge_error_px": 67.938,
+        "elapsed_ms_total": 2327.994,
+        "wall_ms": 2328.47
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            109,
+            121,
+            1297,
+            888
+          ],
+          "iou": 0.82756588,
+          "edge_errors": {
+            "left": 16,
+            "top": 65,
+            "right": 8,
+            "bottom": 79,
+            "mean": 42.0,
+            "maximum": 79
+          },
+          "edge_error_mean_px": 42.0,
+          "edge_error_maximum_px": 79,
+          "elapsed_ms": 708.316,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              109,
+              121,
+              1297,
+              888
+            ],
+            "corners": [
+              [
+                109.0,
+                121.0
+              ],
+              [
+                1297.0,
+                121.0
+              ],
+              [
+                1297.0,
+                888.0
+              ],
+              [
+                109.0,
+                888.0
+              ]
+            ],
+            "confidence": 0.934648,
+            "score": 0.934648,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 32.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1673,
+              "vertical_lines": 32,
+              "horizontal_lines": 1631,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.668693,
+              "mask_score": 0.90664,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 708.291
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            117,
+            23,
+            769,
+            958
+          ],
+          "iou": 0.53955644,
+          "edge_errors": {
+            "left": 50,
+            "top": 15,
+            "right": 464,
+            "bottom": 19,
+            "mean": 137.0,
+            "maximum": 464
+          },
+          "edge_error_mean_px": 137.0,
+          "edge_error_maximum_px": 464,
+          "elapsed_ms": 127.348,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              117,
+              23,
+              769,
+              958
+            ],
+            "corners": [
+              [
+                117.0,
+                23.0
+              ],
+              [
+                769.0,
+                23.0
+              ],
+              [
+                769.0,
+                958.0
+              ],
+              [
+                117.0,
+                958.0
+              ]
+            ],
+            "confidence": 0.856561,
+            "score": 0.856561,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 32.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 233,
+              "vertical_lines": 72,
+              "horizontal_lines": 137,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.469338,
+              "mask_score": 0.826197,
+              "support_score": 1.0,
+              "area_score": 0.782231,
+              "elapsed_ms": 127.314
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 42.851,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "insufficient_axis_lines",
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 32.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 2,
+              "vertical_lines": 0,
+              "horizontal_lines": 2,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "elapsed_ms": 42.815
+            },
+            "status": "no_candidate",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            61,
+            121,
+            1143,
+            891
+          ],
+          "iou": 0.819835,
+          "edge_errors": {
+            "left": 23,
+            "top": 70,
+            "right": 42,
+            "bottom": 50,
+            "mean": 46.25,
+            "maximum": 70
+          },
+          "edge_error_mean_px": 46.25,
+          "edge_error_maximum_px": 70,
+          "elapsed_ms": 779.172,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              61,
+              121,
+              1143,
+              891
+            ],
+            "corners": [
+              [
+                61.0,
+                121.0
+              ],
+              [
+                1143.0,
+                121.0
+              ],
+              [
+                1143.0,
+                891.0
+              ],
+              [
+                61.0,
+                891.0
+              ]
+            ],
+            "confidence": 0.952084,
+            "score": 0.952084,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 32.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1346,
+              "vertical_lines": 42,
+              "horizontal_lines": 1302,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.656698,
+              "mask_score": 0.931548,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 779.146
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            105,
+            1189,
+            911
+          ],
+          "iou": 0.82404868,
+          "edge_errors": {
+            "left": 22,
+            "top": 72,
+            "right": 35,
+            "bottom": 57,
+            "mean": 46.5,
+            "maximum": 72
+          },
+          "edge_error_mean_px": 46.5,
+          "edge_error_maximum_px": 72,
+          "elapsed_ms": 670.307,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              105,
+              1189,
+              911
+            ],
+            "corners": [
+              [
+                66.0,
+                105.0
+              ],
+              [
+                1189.0,
+                105.0
+              ],
+              [
+                1189.0,
+                911.0
+              ],
+              [
+                66.0,
+                911.0
+              ]
+            ],
+            "confidence": 0.936083,
+            "score": 0.936083,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 32.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1497,
+              "vertical_lines": 30,
+              "horizontal_lines": 1464,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.721042,
+              "mask_score": 0.908689,
+              "support_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 670.276
+            },
+            "status": "ok",
+            "detector_name": "Hough Lines",
+            "origin": "OpenCV",
+            "foundation": [
+              "Hough transform",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "5.0.0",
+            "repository": "https://github.com/opencv/opencv"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1509,
+        "elapsed_seconds": 118.361171356868,
+        "search_fraction": 0.6899862825788752
+      },
+      "profile": null,
+      "run_id": "run-20260804-142020",
+      "rank": 5
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 1,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.62614249,
+        "winner_iou": 0.83470778,
+        "delta_iou": 0.20856529,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.72205925,
+        "winner_iou": 0.82698023,
+        "delta_iou": 0.10492098,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.73696452,
+        "winner_iou": 0.81882601,
+        "delta_iou": 0.08186149,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.30706622,
+        "winner_iou": 0.54460842,
+        "delta_iou": 0.2375422,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-s32",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "syco-lsf32",
+    "cpu_model": "AMD EPYC 9175F 16-Core Processor",
+    "physical_core_count": 16,
+    "logical_cpu_count": 32,
+    "available_cpu_count": 32,
+    "smt_enabled": true,
+    "memory_bytes": 1623047102464,
+    "memory_gib": 1511.58,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.64.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.1",
+    "pipeline_commit": "b17980c1cbec69e38e07aa4ca8ab7d418d43046b",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "30918387327",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "self-hosted",
+      "linux",
+      "x64",
+      "e9k"
+    ]
+  },
+  "source_commit": "378c80c6e9bf58f06c14920221d7914c37ef7a71",
+  "performance": {
+    "sample_count": 4,
+    "configured_threads": 32,
+    "peak_rss_bytes": 2111418368,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 2187,
+    "completed_parameter_sets": 2187,
+    "average_eval_rate": 13.662166843686002,
+    "failures": 3447,
+    "best_mean_iou": 0.60502449,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.13741164,
+    "mean_iou_improvements": 7,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 11,
+    "total_metric_improvements": 18,
+    "parameter_sets_with_improvements": 18,
+    "winner_changes": 7,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 3.362415647134185,
+    "winner_last_changed_elapsed_seconds": 130.81139589706436,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "d2ef0aec6694",
+        "parameter_short_name": "d2ef0aec",
+        "parameter_set_number": 2,
+        "elapsed_seconds": 3.362415647134185,
+        "search_fraction": 0.0009144947416552355
+      },
+      {
+        "change_number": 2,
+        "parameter_set_id": "a49d662ab15b",
+        "parameter_short_name": "a49d662a",
+        "parameter_set_number": 69,
+        "elapsed_seconds": 8.239494387060404,
+        "search_fraction": 0.03155006858710562
+      },
+      {
+        "change_number": 3,
+        "parameter_set_id": "64d795b2d059",
+        "parameter_short_name": "64d795b2",
+        "parameter_set_number": 316,
+        "elapsed_seconds": 27.182061549741775,
+        "search_fraction": 0.1444901691815272
+      },
+      {
+        "change_number": 4,
+        "parameter_set_id": "8e3697bd56db",
+        "parameter_short_name": "8e3697bd",
+        "parameter_set_number": 719,
+        "elapsed_seconds": 62.338092078920454,
+        "search_fraction": 0.32876085962505713
+      },
+      {
+        "change_number": 5,
+        "parameter_set_id": "3ff40e5c3ba0",
+        "parameter_short_name": "3ff40e5c",
+        "parameter_set_number": 1487,
+        "elapsed_seconds": 117.14047797210515,
+        "search_fraction": 0.6799268404206675
+      },
+      {
+        "change_number": 6,
+        "parameter_set_id": "d2207b5c0b61",
+        "parameter_short_name": "d2207b5c",
+        "parameter_set_number": 1490,
+        "elapsed_seconds": 117.22397538879886,
+        "search_fraction": 0.6812985825331505
+      },
+      {
+        "change_number": 7,
+        "parameter_set_id": "c2c117479e3f",
+        "parameter_short_name": "c2c11747",
+        "parameter_set_number": 1732,
+        "elapsed_seconds": 130.81139589706436,
+        "search_fraction": 0.791952446273434
+      }
+    ],
+    "last_improvement_elapsed_seconds": 130.81139589706436,
+    "time_since_last_improvement_seconds": 30.49826828762889
+  }
+}
