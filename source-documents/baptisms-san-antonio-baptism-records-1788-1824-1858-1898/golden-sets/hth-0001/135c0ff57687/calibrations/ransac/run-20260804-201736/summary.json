@@ -1,0 +1,4986 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260804-201736",
+  "detector": "ransac",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 32,
+  "detector_pipeline": {
+    "pipeline_count": 1,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "single-detector",
+    "queue_position": "1",
+    "ranked_quality": "unknown"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 1458,
+    "planned_parameter_sets": 1458,
+    "actual_parameter_sets": 1458,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 7290,
+    "actual_page_evaluations": 7290
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 1458,
+  "page_evaluation_count": 7290,
+  "successful_page_evaluation_count": 4938,
+  "fully_successful_parameter_set_count": 78,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "winner": {
+    "parameter_set_id": "9647b030702e",
+    "parameters": {
+      "scan_samples": 320,
+      "minimum_scan_foreground_fraction": 0.0125,
+      "residual_threshold_fraction": 0.014,
+      "max_trials": 200,
+      "minimum_mean_inlier_ratio": 0.25,
+      "minimum_bbox_area_fraction": 0.1,
+      "bbox_padding_fraction": 0.008
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.75409691,
+      "minimum_iou": 0.35575364,
+      "stddev_iou": 0.25406802,
+      "mean_edge_error_px": 74.2,
+      "elapsed_ms_total": 2667.063,
+      "wall_ms": 2667.391
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          113,
+          60,
+          1284,
+          960
+        ],
+        "iou": 0.9737641,
+        "edge_errors": {
+          "left": 12,
+          "top": 4,
+          "right": 5,
+          "bottom": 7,
+          "mean": 7.0,
+          "maximum": 12
+        },
+        "edge_error_mean_px": 7.0,
+        "edge_error_maximum_px": 12,
+        "elapsed_ms": 467.707,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            113,
+            60,
+            1284,
+            960
+          ],
+          "corners": [
+            [
+              121.92813531861401,
+              73.13577946707142
+            ],
+            [
+              1275.7310070158385,
+              68.27677463257203
+            ],
+            [
+              1275.3747348255501,
+              951.3549822761349
+            ],
+            [
+              158.6713987943609,
+              943.657665493259
+            ]
+          ],
+          "confidence": 0.868985,
+          "score": 0.868985,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 320,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.014,
+              "max_trials": 200,
+              "minimum_mean_inlier_ratio": 0.25,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.008
+            },
+            "residual_threshold_px": 13.804,
+            "sample_counts": {
+              "left": 311,
+              "right": 311,
+              "top": 303,
+              "bottom": 303
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 136,
+              "right": 287,
+              "top": 263,
+              "bottom": 193
+            },
+            "inlier_ratios": {
+              "left": 0.437299,
+              "right": 0.92283,
+              "top": 0.867987,
+              "bottom": 0.636964
+            },
+            "mean_inlier_ratio": 0.71627,
+            "bbox_area_fraction": 0.773418,
+            "corners": [
+              [
+                121.928,
+                73.136
+              ],
+              [
+                1275.731,
+                68.277
+              ],
+              [
+                1275.375,
+                951.355
+              ],
+              [
+                158.671,
+                943.658
+              ]
+            ],
+            "mask_score": 0.942347,
+            "area_score": 1.0,
+            "elapsed_ms": 467.696
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          104,
+          6,
+          755,
+          962
+        ],
+        "iou": 0.54904363,
+        "edge_errors": {
+          "left": 37,
+          "top": 2,
+          "right": 478,
+          "bottom": 15,
+          "mean": 133.0,
+          "maximum": 478
+        },
+        "edge_error_mean_px": 133.0,
+        "edge_error_maximum_px": 478,
+        "elapsed_ms": 542.088,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            104,
+            6,
+            755,
+            962
+          ],
+          "corners": [
+            [
+              112.30818576328393,
+              94.2252509142042
+            ],
+            [
+              746.7080472350998,
+              14.907608559427956
+            ],
+            [
+              744.6039640756408,
+              952.0201319312678
+            ],
+            [
+              383.3478972786301,
+              953.2562378816999
+            ]
+          ],
+          "confidence": 0.745982,
+          "score": 0.745982,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 320,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.014,
+              "max_trials": 200,
+              "minimum_mean_inlier_ratio": 0.25,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.008
+            },
+            "residual_threshold_px": 13.818,
+            "sample_counts": {
+              "left": 313,
+              "right": 313,
+              "top": 157,
+              "bottom": 157
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 122,
+              "right": 300,
+              "top": 95,
+              "bottom": 86
+            },
+            "inlier_ratios": {
+              "left": 0.389776,
+              "right": 0.958466,
+              "top": 0.605096,
+              "bottom": 0.547771
+            },
+            "mean_inlier_ratio": 0.625277,
+            "bbox_area_fraction": 0.479144,
+            "corners": [
+              [
+                112.308,
+                94.225
+              ],
+              [
+                746.708,
+                14.908
+              ],
+              [
+                744.604,
+                952.02
+              ],
+              [
+                383.348,
+                953.256
+              ]
+            ],
+            "mask_score": 0.824401,
+            "area_score": 0.737144,
+            "elapsed_ms": 542.071
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          434,
+          273,
+          1048,
+          851
+        ],
+        "iou": 0.35575364,
+        "edge_errors": {
+          "left": 419,
+          "top": 245,
+          "right": 26,
+          "bottom": 119,
+          "mean": 202.25,
+          "maximum": 419
+        },
+        "edge_error_mean_px": 202.25,
+        "edge_error_maximum_px": 419,
+        "elapsed_ms": 831.571,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            434,
+            273,
+            1048,
+            851
+          ],
+          "corners": [
+            [
+              637.2635490647183,
+              281.7213204860798
+            ],
+            [
+              1039.2621489633607,
+              286.7170184280317
+            ],
+            [
+              1033.675802896447,
+              778.3927629285306
+            ],
+            [
+              442.34695934425946,
+              842.5798420719296
+            ]
+          ],
+          "confidence": 0.384468,
+          "score": 0.384468,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 320,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.014,
+              "max_trials": 200,
+              "minimum_mean_inlier_ratio": 0.25,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.008
+            },
+            "residual_threshold_px": 13.762,
+            "sample_counts": {
+              "left": 194,
+              "right": 194,
+              "top": 230,
+              "bottom": 230
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 42,
+              "right": 68,
+              "top": 52,
+              "bottom": 48
+            },
+            "inlier_ratios": {
+              "left": 0.216495,
+              "right": 0.350515,
+              "top": 0.226087,
+              "bottom": 0.208696
+            },
+            "mean_inlier_ratio": 0.250448,
+            "bbox_area_fraction": 0.331829,
+            "corners": [
+              [
+                637.264,
+                281.721
+              ],
+              [
+                1039.262,
+                286.717
+              ],
+              [
+                1033.676,
+                778.393
+              ],
+              [
+                442.347,
+                842.58
+              ]
+            ],
+            "mask_score": 0.446838,
+            "area_score": 0.510506,
+            "elapsed_ms": 831.555
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          66,
+          45,
+          1139,
+          945
+        ],
+        "iou": 0.93727866,
+        "edge_errors": {
+          "left": 18,
+          "top": 6,
+          "right": 38,
+          "bottom": 4,
+          "mean": 16.5,
+          "maximum": 38
+        },
+        "edge_error_mean_px": 16.5,
+        "edge_error_maximum_px": 38,
+        "elapsed_ms": 449.294,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            66,
+            45,
+            1139,
+            945
+          ],
+          "corners": [
+            [
+              77.87034227980772,
+              56.38095775911597
+            ],
+            [
+              1130.4109835083,
+              53.31101818792558
+            ],
+            [
+              1122.5630643072539,
+              936.8332320088509
+            ],
+            [
+              74.87606453961564,
+              935.1779310489737
+            ]
+          ],
+          "confidence": 0.985624,
+          "score": 0.985624,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 320,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.014,
+              "max_trials": 200,
+              "minimum_mean_inlier_ratio": 0.25,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.008
+            },
+            "residual_threshold_px": 13.79,
+            "sample_counts": {
+              "left": 297,
+              "right": 297,
+              "top": 265,
+              "bottom": 265
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 294,
+              "right": 295,
+              "top": 261,
+              "bottom": 263
+            },
+            "inlier_ratios": {
+              "left": 0.989899,
+              "right": 0.993266,
+              "top": 0.984906,
+              "bottom": 0.992453
+            },
+            "mean_inlier_ratio": 0.990131,
+            "bbox_area_fraction": 0.761185,
+            "corners": [
+              [
+                77.87,
+                56.381
+              ],
+              [
+                1130.411,
+                53.311
+              ],
+              [
+                1122.563,
+                936.833
+              ],
+              [
+                74.876,
+                935.178
+              ]
+            ],
+            "mask_score": 0.980142,
+            "area_score": 1.0,
+            "elapsed_ms": 449.277
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          76,
+          24,
+          1182,
+          968
+        ],
+        "iou": 0.95464454,
+        "edge_errors": {
+          "left": 12,
+          "top": 9,
+          "right": 28,
+          "bottom": 0,
+          "mean": 12.25,
+          "maximum": 28
+        },
+        "edge_error_mean_px": 12.25,
+        "edge_error_maximum_px": 28,
+        "elapsed_ms": 376.403,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            76,
+            24,
+            1182,
+            968
+          ],
+          "corners": [
+            [
+              84.12223629651513,
+              43.384113264565315
+            ],
+            [
+              1154.3383992505617,
+              32.86646735434812
+            ],
+            [
+              1173.2282213740946,
+              959.5236625186964
+            ],
+            [
+              103.8408562378839,
+              952.9459045427086
+            ]
+          ],
+          "confidence": 0.959516,
+          "score": 0.959516,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 320,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.014,
+              "max_trials": 200,
+              "minimum_mean_inlier_ratio": 0.25,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.008
+            },
+            "residual_threshold_px": 13.86,
+            "sample_counts": {
+              "left": 310,
+              "right": 310,
+              "top": 275,
+              "bottom": 275
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 291,
+              "right": 273,
+              "top": 266,
+              "bottom": 257
+            },
+            "inlier_ratios": {
+              "left": 0.93871,
+              "right": 0.880645,
+              "top": 0.967273,
+              "bottom": 0.934545
+            },
+            "mean_inlier_ratio": 0.930293,
+            "bbox_area_fraction": 0.831711,
+            "corners": [
+              [
+                84.122,
+                43.384
+              ],
+              [
+                1154.338,
+                32.866
+              ],
+              [
+                1173.228,
+                959.524
+              ],
+              [
+                103.841,
+                952.946
+              ]
+            ],
+            "mask_score": 0.970752,
+            "area_score": 1.0,
+            "elapsed_ms": 376.386
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      }
+    ],
+    "search_observation": {
+      "parameter_set_number": 1235,
+      "elapsed_seconds": 94.43821633094922,
+      "search_fraction": 0.8476321207961565
+    },
+    "profile": null,
+    "run_id": "run-20260804-201736",
+    "rank": 1
+  },
+  "baseline": {
+    "parameter_set_id": "7e367fe3bfd5",
+    "parameters": {
+      "scan_samples": 220,
+      "minimum_scan_foreground_fraction": 0.0125,
+      "residual_threshold_fraction": 0.008,
+      "max_trials": 400,
+      "minimum_mean_inlier_ratio": 0.45,
+      "minimum_bbox_area_fraction": 0.18,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.68313318,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.38060142,
+      "mean_edge_error_px": 42.25,
+      "elapsed_ms_total": 36.472,
+      "wall_ms": 36.813
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          128,
+          68,
+          1277,
+          960
+        ],
+        "iou": 0.96652597,
+        "edge_errors": {
+          "left": 3,
+          "top": 12,
+          "right": 12,
+          "bottom": 7,
+          "mean": 8.5,
+          "maximum": 12
+        },
+        "edge_error_mean_px": 8.5,
+        "edge_error_maximum_px": 12,
+        "elapsed_ms": 5.267,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            128,
+            68,
+            1277,
+            960
+          ],
+          "corners": [
+            [
+              128.46250908845397,
+              73.8202166623293
+            ],
+            [
+              1275.2963598903114,
+              68.9976445327926
+            ],
+            [
+              1276.329003899513,
+              942.8404339248821
+            ],
+            [
+              150.45121662134932,
+              959.8260840800383
+            ]
+          ],
+          "confidence": 0.84898,
+          "score": 0.84898,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 220,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.008,
+              "max_trials": 400,
+              "minimum_mean_inlier_ratio": 0.45,
+              "minimum_bbox_area_fraction": 0.18,
+              "bbox_padding_fraction": 0.0
+            },
+            "residual_threshold_px": 7.888,
+            "sample_counts": {
+              "left": 233,
+              "right": 233,
+              "top": 202,
+              "bottom": 202
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 89,
+              "right": 211,
+              "top": 148,
+              "bottom": 112
+            },
+            "inlier_ratios": {
+              "left": 0.381974,
+              "right": 0.905579,
+              "top": 0.732673,
+              "bottom": 0.554455
+            },
+            "mean_inlier_ratio": 0.643671,
+            "bbox_area_fraction": 0.752142,
+            "corners": [
+              [
+                128.463,
+                73.82
+              ],
+              [
+                1275.296,
+                68.998
+              ],
+              [
+                1276.329,
+                942.84
+              ],
+              [
+                150.451,
+                959.826
+              ]
+            ],
+            "mask_score": 0.952172,
+            "area_score": 1.0,
+            "elapsed_ms": 5.237
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          114,
+          14,
+          747,
+          958
+        ],
+        "iou": 0.52887541,
+        "edge_errors": {
+          "left": 47,
+          "top": 6,
+          "right": 486,
+          "bottom": 19,
+          "mean": 139.5,
+          "maximum": 486
+        },
+        "edge_error_mean_px": 139.5,
+        "edge_error_maximum_px": 486,
+        "elapsed_ms": 6.176,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            114,
+            14,
+            747,
+            958
+          ],
+          "corners": [
+            [
+              114.26213384042006,
+              90.65803588451496
+            ],
+            [
+              746.7554889995282,
+              14.556800787420173
+            ],
+            [
+              744.5619627577952,
+              957.8694597815854
+            ],
+            [
+              338.2908384460515,
+              949.9478664533166
+            ]
+          ],
+          "confidence": 0.712616,
+          "score": 0.712616,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 220,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.008,
+              "max_trials": 400,
+              "minimum_mean_inlier_ratio": 0.45,
+              "minimum_bbox_area_fraction": 0.18,
+              "bbox_padding_fraction": 0.0
+            },
+            "residual_threshold_px": 7.896,
+            "sample_counts": {
+              "left": 234,
+              "right": 234,
+              "top": 106,
+              "bottom": 106
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 64,
+              "right": 225,
+              "top": 46,
+              "bottom": 49
+            },
+            "inlier_ratios": {
+              "left": 0.273504,
+              "right": 0.961538,
+              "top": 0.433962,
+              "bottom": 0.462264
+            },
+            "mean_inlier_ratio": 0.532817,
+            "bbox_area_fraction": 0.460047,
+            "corners": [
+              [
+                114.262,
+                90.658
+              ],
+              [
+                746.755,
+                14.557
+              ],
+              [
+                744.562,
+                957.869
+              ],
+              [
+                338.291,
+                949.948
+              ]
+            ],
+            "mask_score": 0.827916,
+            "area_score": 0.707765,
+            "elapsed_ms": 6.165
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 19.524,
+        "candidate": {
+          "method": "ransac",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 220,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.008,
+              "max_trials": 400,
+              "minimum_mean_inlier_ratio": 0.45,
+              "minimum_bbox_area_fraction": 0.18,
+              "bbox_padding_fraction": 0.0
+            },
+            "residual_threshold_px": 7.864,
+            "sample_counts": {
+              "left": 149,
+              "right": 149,
+              "top": 138,
+              "bottom": 138
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 23,
+              "right": 45,
+              "top": 28,
+              "bottom": 21
+            },
+            "inlier_ratios": {
+              "left": 0.154362,
+              "right": 0.302013,
+              "top": 0.202899,
+              "bottom": 0.152174
+            },
+            "mean_inlier_ratio": 0.202862,
+            "bbox_area_fraction": 0.321812,
+            "corners": [
+              [
+                485.222,
+                393.903
+              ],
+              [
+                1035.329,
+                548.146
+              ],
+              [
+                1031.691,
+                763.352
+              ],
+              [
+                299.642,
+                859.886
+              ]
+            ],
+            "reason": "insufficient_mean_inlier_ratio",
+            "elapsed_ms": 19.515
+          },
+          "status": "no_candidate",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          74,
+          53,
+          1132,
+          937
+        ],
+        "iou": 0.95501682,
+        "edge_errors": {
+          "left": 10,
+          "top": 2,
+          "right": 31,
+          "bottom": 4,
+          "mean": 11.75,
+          "maximum": 31
+        },
+        "edge_error_mean_px": 11.75,
+        "edge_error_maximum_px": 31,
+        "elapsed_ms": 2.61,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            74,
+            53,
+            1132,
+            937
+          ],
+          "corners": [
+            [
+              78.000439420227,
+              56.32622479883264
+            ],
+            [
+              1131.35138306496,
+              53.37793242485543
+            ],
+            [
+              1122.1889016628663,
+              936.8808687176092
+            ],
+            [
+              74.567808420748,
+              935.1480524372903
+            ]
+          ],
+          "confidence": 0.991458,
+          "score": 0.991458,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 220,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.008,
+              "max_trials": 400,
+              "minimum_mean_inlier_ratio": 0.45,
+              "minimum_bbox_area_fraction": 0.18,
+              "bbox_padding_fraction": 0.0
+            },
+            "residual_threshold_px": 7.88,
+            "sample_counts": {
+              "left": 223,
+              "right": 223,
+              "top": 176,
+              "bottom": 176
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 220,
+              "right": 216,
+              "top": 174,
+              "bottom": 175
+            },
+            "inlier_ratios": {
+              "left": 0.986547,
+              "right": 0.96861,
+              "top": 0.988636,
+              "bottom": 0.994318
+            },
+            "mean_inlier_ratio": 0.984528,
+            "bbox_area_fraction": 0.737201,
+            "corners": [
+              [
+                78.0,
+                56.326
+              ],
+              [
+                1131.351,
+                53.378
+              ],
+              [
+                1122.189,
+                936.881
+              ],
+              [
+                74.568,
+                935.148
+              ]
+            ],
+            "mask_score": 0.994315,
+            "area_score": 1.0,
+            "elapsed_ms": 2.603
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          82,
+          32,
+          1176,
+          960
+        ],
+        "iou": 0.96524771,
+        "edge_errors": {
+          "left": 6,
+          "top": 1,
+          "right": 22,
+          "bottom": 8,
+          "mean": 9.25,
+          "maximum": 22
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 22,
+        "elapsed_ms": 2.895,
+        "candidate": {
+          "method": "ransac",
+          "bbox": [
+            82,
+            32,
+            1176,
+            960
+          ],
+          "corners": [
+            [
+              82.34758808332101,
+              43.62941434518001
+            ],
+            [
+              1147.4675030875808,
+              32.5430622530252
+            ],
+            [
+              1175.0126529390443,
+              959.617364947459
+            ],
+            [
+              100.41014571799178,
+              953.8595218378582
+            ]
+          ],
+          "confidence": 0.921852,
+          "score": 0.921852,
+          "diagnostics": {
+            "parameters": {
+              "scan_samples": 220,
+              "minimum_scan_foreground_fraction": 0.0125,
+              "residual_threshold_fraction": 0.008,
+              "max_trials": 400,
+              "minimum_mean_inlier_ratio": 0.45,
+              "minimum_bbox_area_fraction": 0.18,
+              "bbox_padding_fraction": 0.0
+            },
+            "residual_threshold_px": 7.92,
+            "sample_counts": {
+              "left": 233,
+              "right": 233,
+              "top": 184,
+              "bottom": 184
+            },
+            "fitted_edges": [
+              "bottom",
+              "left",
+              "right",
+              "top"
+            ],
+            "inlier_counts": {
+              "left": 166,
+              "right": 155,
+              "top": 176,
+              "bottom": 161
+            },
+            "inlier_ratios": {
+              "left": 0.712446,
+              "right": 0.665236,
+              "top": 0.956522,
+              "bottom": 0.875
+            },
+            "mean_inlier_ratio": 0.802301,
+            "bbox_area_fraction": 0.808744,
+            "corners": [
+              [
+                82.348,
+                43.629
+              ],
+              [
+                1147.468,
+                32.543
+              ],
+              [
+                1175.013,
+                959.617
+              ],
+              [
+                100.41,
+                953.86
+              ]
+            ],
+            "mask_score": 0.983722,
+            "area_score": 1.0,
+            "elapsed_ms": 2.888
+          },
+          "status": "ok",
+          "detector_name": "RANSAC",
+          "origin": "HTH",
+          "foundation": [
+            "RANSAC",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        }
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260804-201736",
+    "rank": 325
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "9647b030702e",
+      "parameters": {
+        "scan_samples": 320,
+        "minimum_scan_foreground_fraction": 0.0125,
+        "residual_threshold_fraction": 0.014,
+        "max_trials": 200,
+        "minimum_mean_inlier_ratio": 0.25,
+        "minimum_bbox_area_fraction": 0.1,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.75409691,
+        "minimum_iou": 0.35575364,
+        "stddev_iou": 0.25406802,
+        "mean_edge_error_px": 74.2,
+        "elapsed_ms_total": 2667.063,
+        "wall_ms": 2667.391
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            113,
+            60,
+            1284,
+            960
+          ],
+          "iou": 0.9737641,
+          "edge_errors": {
+            "left": 12,
+            "top": 4,
+            "right": 5,
+            "bottom": 7,
+            "mean": 7.0,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 7.0,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 467.707,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              113,
+              60,
+              1284,
+              960
+            ],
+            "corners": [
+              [
+                121.92813531861401,
+                73.13577946707142
+              ],
+              [
+                1275.7310070158385,
+                68.27677463257203
+              ],
+              [
+                1275.3747348255501,
+                951.3549822761349
+              ],
+              [
+                158.6713987943609,
+                943.657665493259
+              ]
+            ],
+            "confidence": 0.868985,
+            "score": 0.868985,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.804,
+              "sample_counts": {
+                "left": 311,
+                "right": 311,
+                "top": 303,
+                "bottom": 303
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 136,
+                "right": 287,
+                "top": 263,
+                "bottom": 193
+              },
+              "inlier_ratios": {
+                "left": 0.437299,
+                "right": 0.92283,
+                "top": 0.867987,
+                "bottom": 0.636964
+              },
+              "mean_inlier_ratio": 0.71627,
+              "bbox_area_fraction": 0.773418,
+              "corners": [
+                [
+                  121.928,
+                  73.136
+                ],
+                [
+                  1275.731,
+                  68.277
+                ],
+                [
+                  1275.375,
+                  951.355
+                ],
+                [
+                  158.671,
+                  943.658
+                ]
+              ],
+              "mask_score": 0.942347,
+              "area_score": 1.0,
+              "elapsed_ms": 467.696
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            104,
+            6,
+            755,
+            962
+          ],
+          "iou": 0.54904363,
+          "edge_errors": {
+            "left": 37,
+            "top": 2,
+            "right": 478,
+            "bottom": 15,
+            "mean": 133.0,
+            "maximum": 478
+          },
+          "edge_error_mean_px": 133.0,
+          "edge_error_maximum_px": 478,
+          "elapsed_ms": 542.088,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              104,
+              6,
+              755,
+              962
+            ],
+            "corners": [
+              [
+                112.30818576328393,
+                94.2252509142042
+              ],
+              [
+                746.7080472350998,
+                14.907608559427956
+              ],
+              [
+                744.6039640756408,
+                952.0201319312678
+              ],
+              [
+                383.3478972786301,
+                953.2562378816999
+              ]
+            ],
+            "confidence": 0.745982,
+            "score": 0.745982,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.818,
+              "sample_counts": {
+                "left": 313,
+                "right": 313,
+                "top": 157,
+                "bottom": 157
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 122,
+                "right": 300,
+                "top": 95,
+                "bottom": 86
+              },
+              "inlier_ratios": {
+                "left": 0.389776,
+                "right": 0.958466,
+                "top": 0.605096,
+                "bottom": 0.547771
+              },
+              "mean_inlier_ratio": 0.625277,
+              "bbox_area_fraction": 0.479144,
+              "corners": [
+                [
+                  112.308,
+                  94.225
+                ],
+                [
+                  746.708,
+                  14.908
+                ],
+                [
+                  744.604,
+                  952.02
+                ],
+                [
+                  383.348,
+                  953.256
+                ]
+              ],
+              "mask_score": 0.824401,
+              "area_score": 0.737144,
+              "elapsed_ms": 542.071
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            434,
+            273,
+            1048,
+            851
+          ],
+          "iou": 0.35575364,
+          "edge_errors": {
+            "left": 419,
+            "top": 245,
+            "right": 26,
+            "bottom": 119,
+            "mean": 202.25,
+            "maximum": 419
+          },
+          "edge_error_mean_px": 202.25,
+          "edge_error_maximum_px": 419,
+          "elapsed_ms": 831.571,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              434,
+              273,
+              1048,
+              851
+            ],
+            "corners": [
+              [
+                637.2635490647183,
+                281.7213204860798
+              ],
+              [
+                1039.2621489633607,
+                286.7170184280317
+              ],
+              [
+                1033.675802896447,
+                778.3927629285306
+              ],
+              [
+                442.34695934425946,
+                842.5798420719296
+              ]
+            ],
+            "confidence": 0.384468,
+            "score": 0.384468,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.762,
+              "sample_counts": {
+                "left": 194,
+                "right": 194,
+                "top": 230,
+                "bottom": 230
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 42,
+                "right": 68,
+                "top": 52,
+                "bottom": 48
+              },
+              "inlier_ratios": {
+                "left": 0.216495,
+                "right": 0.350515,
+                "top": 0.226087,
+                "bottom": 0.208696
+              },
+              "mean_inlier_ratio": 0.250448,
+              "bbox_area_fraction": 0.331829,
+              "corners": [
+                [
+                  637.264,
+                  281.721
+                ],
+                [
+                  1039.262,
+                  286.717
+                ],
+                [
+                  1033.676,
+                  778.393
+                ],
+                [
+                  442.347,
+                  842.58
+                ]
+              ],
+              "mask_score": 0.446838,
+              "area_score": 0.510506,
+              "elapsed_ms": 831.555
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            45,
+            1139,
+            945
+          ],
+          "iou": 0.93727866,
+          "edge_errors": {
+            "left": 18,
+            "top": 6,
+            "right": 38,
+            "bottom": 4,
+            "mean": 16.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 16.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 449.294,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              66,
+              45,
+              1139,
+              945
+            ],
+            "corners": [
+              [
+                77.87034227980772,
+                56.38095775911597
+              ],
+              [
+                1130.4109835083,
+                53.31101818792558
+              ],
+              [
+                1122.5630643072539,
+                936.8332320088509
+              ],
+              [
+                74.87606453961564,
+                935.1779310489737
+              ]
+            ],
+            "confidence": 0.985624,
+            "score": 0.985624,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.79,
+              "sample_counts": {
+                "left": 297,
+                "right": 297,
+                "top": 265,
+                "bottom": 265
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 294,
+                "right": 295,
+                "top": 261,
+                "bottom": 263
+              },
+              "inlier_ratios": {
+                "left": 0.989899,
+                "right": 0.993266,
+                "top": 0.984906,
+                "bottom": 0.992453
+              },
+              "mean_inlier_ratio": 0.990131,
+              "bbox_area_fraction": 0.761185,
+              "corners": [
+                [
+                  77.87,
+                  56.381
+                ],
+                [
+                  1130.411,
+                  53.311
+                ],
+                [
+                  1122.563,
+                  936.833
+                ],
+                [
+                  74.876,
+                  935.178
+                ]
+              ],
+              "mask_score": 0.980142,
+              "area_score": 1.0,
+              "elapsed_ms": 449.277
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            76,
+            24,
+            1182,
+            968
+          ],
+          "iou": 0.95464454,
+          "edge_errors": {
+            "left": 12,
+            "top": 9,
+            "right": 28,
+            "bottom": 0,
+            "mean": 12.25,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 376.403,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              76,
+              24,
+              1182,
+              968
+            ],
+            "corners": [
+              [
+                84.12223629651513,
+                43.384113264565315
+              ],
+              [
+                1154.3383992505617,
+                32.86646735434812
+              ],
+              [
+                1173.2282213740946,
+                959.5236625186964
+              ],
+              [
+                103.8408562378839,
+                952.9459045427086
+              ]
+            ],
+            "confidence": 0.959516,
+            "score": 0.959516,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.86,
+              "sample_counts": {
+                "left": 310,
+                "right": 310,
+                "top": 275,
+                "bottom": 275
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 291,
+                "right": 273,
+                "top": 266,
+                "bottom": 257
+              },
+              "inlier_ratios": {
+                "left": 0.93871,
+                "right": 0.880645,
+                "top": 0.967273,
+                "bottom": 0.934545
+              },
+              "mean_inlier_ratio": 0.930293,
+              "bbox_area_fraction": 0.831711,
+              "corners": [
+                [
+                  84.122,
+                  43.384
+                ],
+                [
+                  1154.338,
+                  32.866
+                ],
+                [
+                  1173.228,
+                  959.524
+                ],
+                [
+                  103.841,
+                  952.946
+                ]
+              ],
+              "mask_score": 0.970752,
+              "area_score": 1.0,
+              "elapsed_ms": 376.386
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1235,
+        "elapsed_seconds": 94.43821633094922,
+        "search_fraction": 0.8476321207961565
+      },
+      "profile": null,
+      "run_id": "run-20260804-201736",
+      "rank": 1
+    },
+    {
+      "parameter_set_id": "d212abf22eb8",
+      "parameters": {
+        "scan_samples": 320,
+        "minimum_scan_foreground_fraction": 0.0125,
+        "residual_threshold_fraction": 0.014,
+        "max_trials": 200,
+        "minimum_mean_inlier_ratio": 0.25,
+        "minimum_bbox_area_fraction": 0.18,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.75409691,
+        "minimum_iou": 0.35575364,
+        "stddev_iou": 0.25406802,
+        "mean_edge_error_px": 74.2,
+        "elapsed_ms_total": 2599.839,
+        "wall_ms": 2600.178
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            113,
+            60,
+            1284,
+            960
+          ],
+          "iou": 0.9737641,
+          "edge_errors": {
+            "left": 12,
+            "top": 4,
+            "right": 5,
+            "bottom": 7,
+            "mean": 7.0,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 7.0,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 418.684,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              113,
+              60,
+              1284,
+              960
+            ],
+            "corners": [
+              [
+                121.92813531861401,
+                73.13577946707142
+              ],
+              [
+                1275.7310070158385,
+                68.27677463257203
+              ],
+              [
+                1275.3747348255501,
+                951.3549822761349
+              ],
+              [
+                158.6713987943609,
+                943.657665493259
+              ]
+            ],
+            "confidence": 0.868985,
+            "score": 0.868985,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.804,
+              "sample_counts": {
+                "left": 311,
+                "right": 311,
+                "top": 303,
+                "bottom": 303
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 136,
+                "right": 287,
+                "top": 263,
+                "bottom": 193
+              },
+              "inlier_ratios": {
+                "left": 0.437299,
+                "right": 0.92283,
+                "top": 0.867987,
+                "bottom": 0.636964
+              },
+              "mean_inlier_ratio": 0.71627,
+              "bbox_area_fraction": 0.773418,
+              "corners": [
+                [
+                  121.928,
+                  73.136
+                ],
+                [
+                  1275.731,
+                  68.277
+                ],
+                [
+                  1275.375,
+                  951.355
+                ],
+                [
+                  158.671,
+                  943.658
+                ]
+              ],
+              "mask_score": 0.942347,
+              "area_score": 1.0,
+              "elapsed_ms": 418.672
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            104,
+            6,
+            755,
+            962
+          ],
+          "iou": 0.54904363,
+          "edge_errors": {
+            "left": 37,
+            "top": 2,
+            "right": 478,
+            "bottom": 15,
+            "mean": 133.0,
+            "maximum": 478
+          },
+          "edge_error_mean_px": 133.0,
+          "edge_error_maximum_px": 478,
+          "elapsed_ms": 466.87,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              104,
+              6,
+              755,
+              962
+            ],
+            "corners": [
+              [
+                112.30818576328393,
+                94.2252509142042
+              ],
+              [
+                746.7080472350998,
+                14.907608559427956
+              ],
+              [
+                744.6039640756408,
+                952.0201319312678
+              ],
+              [
+                383.3478972786301,
+                953.2562378816999
+              ]
+            ],
+            "confidence": 0.745982,
+            "score": 0.745982,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.818,
+              "sample_counts": {
+                "left": 313,
+                "right": 313,
+                "top": 157,
+                "bottom": 157
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 122,
+                "right": 300,
+                "top": 95,
+                "bottom": 86
+              },
+              "inlier_ratios": {
+                "left": 0.389776,
+                "right": 0.958466,
+                "top": 0.605096,
+                "bottom": 0.547771
+              },
+              "mean_inlier_ratio": 0.625277,
+              "bbox_area_fraction": 0.479144,
+              "corners": [
+                [
+                  112.308,
+                  94.225
+                ],
+                [
+                  746.708,
+                  14.908
+                ],
+                [
+                  744.604,
+                  952.02
+                ],
+                [
+                  383.348,
+                  953.256
+                ]
+              ],
+              "mask_score": 0.824401,
+              "area_score": 0.737144,
+              "elapsed_ms": 466.853
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            434,
+            273,
+            1048,
+            851
+          ],
+          "iou": 0.35575364,
+          "edge_errors": {
+            "left": 419,
+            "top": 245,
+            "right": 26,
+            "bottom": 119,
+            "mean": 202.25,
+            "maximum": 419
+          },
+          "edge_error_mean_px": 202.25,
+          "edge_error_maximum_px": 419,
+          "elapsed_ms": 718.084,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              434,
+              273,
+              1048,
+              851
+            ],
+            "corners": [
+              [
+                637.2635490647183,
+                281.7213204860798
+              ],
+              [
+                1039.2621489633607,
+                286.7170184280317
+              ],
+              [
+                1033.675802896447,
+                778.3927629285306
+              ],
+              [
+                442.34695934425946,
+                842.5798420719296
+              ]
+            ],
+            "confidence": 0.384468,
+            "score": 0.384468,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.762,
+              "sample_counts": {
+                "left": 194,
+                "right": 194,
+                "top": 230,
+                "bottom": 230
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 42,
+                "right": 68,
+                "top": 52,
+                "bottom": 48
+              },
+              "inlier_ratios": {
+                "left": 0.216495,
+                "right": 0.350515,
+                "top": 0.226087,
+                "bottom": 0.208696
+              },
+              "mean_inlier_ratio": 0.250448,
+              "bbox_area_fraction": 0.331829,
+              "corners": [
+                [
+                  637.264,
+                  281.721
+                ],
+                [
+                  1039.262,
+                  286.717
+                ],
+                [
+                  1033.676,
+                  778.393
+                ],
+                [
+                  442.347,
+                  842.58
+                ]
+              ],
+              "mask_score": 0.446838,
+              "area_score": 0.510506,
+              "elapsed_ms": 718.068
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            45,
+            1139,
+            945
+          ],
+          "iou": 0.93727866,
+          "edge_errors": {
+            "left": 18,
+            "top": 6,
+            "right": 38,
+            "bottom": 4,
+            "mean": 16.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 16.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 611.311,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              66,
+              45,
+              1139,
+              945
+            ],
+            "corners": [
+              [
+                77.87034227980772,
+                56.38095775911597
+              ],
+              [
+                1130.4109835083,
+                53.31101818792558
+              ],
+              [
+                1122.5630643072539,
+                936.8332320088509
+              ],
+              [
+                74.87606453961564,
+                935.1779310489737
+              ]
+            ],
+            "confidence": 0.985624,
+            "score": 0.985624,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.79,
+              "sample_counts": {
+                "left": 297,
+                "right": 297,
+                "top": 265,
+                "bottom": 265
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 294,
+                "right": 295,
+                "top": 261,
+                "bottom": 263
+              },
+              "inlier_ratios": {
+                "left": 0.989899,
+                "right": 0.993266,
+                "top": 0.984906,
+                "bottom": 0.992453
+              },
+              "mean_inlier_ratio": 0.990131,
+              "bbox_area_fraction": 0.761185,
+              "corners": [
+                [
+                  77.87,
+                  56.381
+                ],
+                [
+                  1130.411,
+                  53.311
+                ],
+                [
+                  1122.563,
+                  936.833
+                ],
+                [
+                  74.876,
+                  935.178
+                ]
+              ],
+              "mask_score": 0.980142,
+              "area_score": 1.0,
+              "elapsed_ms": 611.295
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            76,
+            24,
+            1182,
+            968
+          ],
+          "iou": 0.95464454,
+          "edge_errors": {
+            "left": 12,
+            "top": 9,
+            "right": 28,
+            "bottom": 0,
+            "mean": 12.25,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 384.89,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              76,
+              24,
+              1182,
+              968
+            ],
+            "corners": [
+              [
+                84.12223629651513,
+                43.384113264565315
+              ],
+              [
+                1154.3383992505617,
+                32.86646735434812
+              ],
+              [
+                1173.2282213740946,
+                959.5236625186964
+              ],
+              [
+                103.8408562378839,
+                952.9459045427086
+              ]
+            ],
+            "confidence": 0.959516,
+            "score": 0.959516,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.86,
+              "sample_counts": {
+                "left": 310,
+                "right": 310,
+                "top": 275,
+                "bottom": 275
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 291,
+                "right": 273,
+                "top": 266,
+                "bottom": 257
+              },
+              "inlier_ratios": {
+                "left": 0.93871,
+                "right": 0.880645,
+                "top": 0.967273,
+                "bottom": 0.934545
+              },
+              "mean_inlier_ratio": 0.930293,
+              "bbox_area_fraction": 0.831711,
+              "corners": [
+                [
+                  84.122,
+                  43.384
+                ],
+                [
+                  1154.338,
+                  32.866
+                ],
+                [
+                  1173.228,
+                  959.524
+                ],
+                [
+                  103.841,
+                  952.946
+                ]
+              ],
+              "mask_score": 0.970752,
+              "area_score": 1.0,
+              "elapsed_ms": 384.875
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1233,
+        "elapsed_seconds": 94.39520358014852,
+        "search_fraction": 0.8462594371997255
+      },
+      "profile": null,
+      "run_id": "run-20260804-201736",
+      "rank": 2
+    },
+    {
+      "parameter_set_id": "90823a3ef18b",
+      "parameters": {
+        "scan_samples": 320,
+        "minimum_scan_foreground_fraction": 0.0125,
+        "residual_threshold_fraction": 0.014,
+        "max_trials": 200,
+        "minimum_mean_inlier_ratio": 0.25,
+        "minimum_bbox_area_fraction": 0.28,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.75409691,
+        "minimum_iou": 0.35575364,
+        "stddev_iou": 0.25406802,
+        "mean_edge_error_px": 74.2,
+        "elapsed_ms_total": 2694.964,
+        "wall_ms": 2695.293
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            113,
+            60,
+            1284,
+            960
+          ],
+          "iou": 0.9737641,
+          "edge_errors": {
+            "left": 12,
+            "top": 4,
+            "right": 5,
+            "bottom": 7,
+            "mean": 7.0,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 7.0,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 465.842,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              113,
+              60,
+              1284,
+              960
+            ],
+            "corners": [
+              [
+                121.92813531861401,
+                73.13577946707142
+              ],
+              [
+                1275.7310070158385,
+                68.27677463257203
+              ],
+              [
+                1275.3747348255501,
+                951.3549822761349
+              ],
+              [
+                158.6713987943609,
+                943.657665493259
+              ]
+            ],
+            "confidence": 0.868985,
+            "score": 0.868985,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.28,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.804,
+              "sample_counts": {
+                "left": 311,
+                "right": 311,
+                "top": 303,
+                "bottom": 303
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 136,
+                "right": 287,
+                "top": 263,
+                "bottom": 193
+              },
+              "inlier_ratios": {
+                "left": 0.437299,
+                "right": 0.92283,
+                "top": 0.867987,
+                "bottom": 0.636964
+              },
+              "mean_inlier_ratio": 0.71627,
+              "bbox_area_fraction": 0.773418,
+              "corners": [
+                [
+                  121.928,
+                  73.136
+                ],
+                [
+                  1275.731,
+                  68.277
+                ],
+                [
+                  1275.375,
+                  951.355
+                ],
+                [
+                  158.671,
+                  943.658
+                ]
+              ],
+              "mask_score": 0.942347,
+              "area_score": 1.0,
+              "elapsed_ms": 465.83
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            104,
+            6,
+            755,
+            962
+          ],
+          "iou": 0.54904363,
+          "edge_errors": {
+            "left": 37,
+            "top": 2,
+            "right": 478,
+            "bottom": 15,
+            "mean": 133.0,
+            "maximum": 478
+          },
+          "edge_error_mean_px": 133.0,
+          "edge_error_maximum_px": 478,
+          "elapsed_ms": 530.095,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              104,
+              6,
+              755,
+              962
+            ],
+            "corners": [
+              [
+                112.30818576328393,
+                94.2252509142042
+              ],
+              [
+                746.7080472350998,
+                14.907608559427956
+              ],
+              [
+                744.6039640756408,
+                952.0201319312678
+              ],
+              [
+                383.3478972786301,
+                953.2562378816999
+              ]
+            ],
+            "confidence": 0.745982,
+            "score": 0.745982,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.28,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.818,
+              "sample_counts": {
+                "left": 313,
+                "right": 313,
+                "top": 157,
+                "bottom": 157
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 122,
+                "right": 300,
+                "top": 95,
+                "bottom": 86
+              },
+              "inlier_ratios": {
+                "left": 0.389776,
+                "right": 0.958466,
+                "top": 0.605096,
+                "bottom": 0.547771
+              },
+              "mean_inlier_ratio": 0.625277,
+              "bbox_area_fraction": 0.479144,
+              "corners": [
+                [
+                  112.308,
+                  94.225
+                ],
+                [
+                  746.708,
+                  14.908
+                ],
+                [
+                  744.604,
+                  952.02
+                ],
+                [
+                  383.348,
+                  953.256
+                ]
+              ],
+              "mask_score": 0.824401,
+              "area_score": 0.737144,
+              "elapsed_ms": 530.078
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            434,
+            273,
+            1048,
+            851
+          ],
+          "iou": 0.35575364,
+          "edge_errors": {
+            "left": 419,
+            "top": 245,
+            "right": 26,
+            "bottom": 119,
+            "mean": 202.25,
+            "maximum": 419
+          },
+          "edge_error_mean_px": 202.25,
+          "edge_error_maximum_px": 419,
+          "elapsed_ms": 960.869,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              434,
+              273,
+              1048,
+              851
+            ],
+            "corners": [
+              [
+                637.2635490647183,
+                281.7213204860798
+              ],
+              [
+                1039.2621489633607,
+                286.7170184280317
+              ],
+              [
+                1033.675802896447,
+                778.3927629285306
+              ],
+              [
+                442.34695934425946,
+                842.5798420719296
+              ]
+            ],
+            "confidence": 0.384468,
+            "score": 0.384468,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.28,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.762,
+              "sample_counts": {
+                "left": 194,
+                "right": 194,
+                "top": 230,
+                "bottom": 230
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 42,
+                "right": 68,
+                "top": 52,
+                "bottom": 48
+              },
+              "inlier_ratios": {
+                "left": 0.216495,
+                "right": 0.350515,
+                "top": 0.226087,
+                "bottom": 0.208696
+              },
+              "mean_inlier_ratio": 0.250448,
+              "bbox_area_fraction": 0.331829,
+              "corners": [
+                [
+                  637.264,
+                  281.721
+                ],
+                [
+                  1039.262,
+                  286.717
+                ],
+                [
+                  1033.676,
+                  778.393
+                ],
+                [
+                  442.347,
+                  842.58
+                ]
+              ],
+              "mask_score": 0.446838,
+              "area_score": 0.510506,
+              "elapsed_ms": 960.854
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            45,
+            1139,
+            945
+          ],
+          "iou": 0.93727866,
+          "edge_errors": {
+            "left": 18,
+            "top": 6,
+            "right": 38,
+            "bottom": 4,
+            "mean": 16.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 16.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 384.179,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              66,
+              45,
+              1139,
+              945
+            ],
+            "corners": [
+              [
+                77.87034227980772,
+                56.38095775911597
+              ],
+              [
+                1130.4109835083,
+                53.31101818792558
+              ],
+              [
+                1122.5630643072539,
+                936.8332320088509
+              ],
+              [
+                74.87606453961564,
+                935.1779310489737
+              ]
+            ],
+            "confidence": 0.985624,
+            "score": 0.985624,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.28,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.79,
+              "sample_counts": {
+                "left": 297,
+                "right": 297,
+                "top": 265,
+                "bottom": 265
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 294,
+                "right": 295,
+                "top": 261,
+                "bottom": 263
+              },
+              "inlier_ratios": {
+                "left": 0.989899,
+                "right": 0.993266,
+                "top": 0.984906,
+                "bottom": 0.992453
+              },
+              "mean_inlier_ratio": 0.990131,
+              "bbox_area_fraction": 0.761185,
+              "corners": [
+                [
+                  77.87,
+                  56.381
+                ],
+                [
+                  1130.411,
+                  53.311
+                ],
+                [
+                  1122.563,
+                  936.833
+                ],
+                [
+                  74.876,
+                  935.178
+                ]
+              ],
+              "mask_score": 0.980142,
+              "area_score": 1.0,
+              "elapsed_ms": 384.164
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            76,
+            24,
+            1182,
+            968
+          ],
+          "iou": 0.95464454,
+          "edge_errors": {
+            "left": 12,
+            "top": 9,
+            "right": 28,
+            "bottom": 0,
+            "mean": 12.25,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 353.979,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              76,
+              24,
+              1182,
+              968
+            ],
+            "corners": [
+              [
+                84.12223629651513,
+                43.384113264565315
+              ],
+              [
+                1154.3383992505617,
+                32.86646735434812
+              ],
+              [
+                1173.2282213740946,
+                959.5236625186964
+              ],
+              [
+                103.8408562378839,
+                952.9459045427086
+              ]
+            ],
+            "confidence": 0.959516,
+            "score": 0.959516,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 200,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.28,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.86,
+              "sample_counts": {
+                "left": 310,
+                "right": 310,
+                "top": 275,
+                "bottom": 275
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 291,
+                "right": 273,
+                "top": 266,
+                "bottom": 257
+              },
+              "inlier_ratios": {
+                "left": 0.93871,
+                "right": 0.880645,
+                "top": 0.967273,
+                "bottom": 0.934545
+              },
+              "mean_inlier_ratio": 0.930293,
+              "bbox_area_fraction": 0.831711,
+              "corners": [
+                [
+                  84.122,
+                  43.384
+                ],
+                [
+                  1154.338,
+                  32.866
+                ],
+                [
+                  1173.228,
+                  959.524
+                ],
+                [
+                  103.841,
+                  952.946
+                ]
+              ],
+              "mask_score": 0.970752,
+              "area_score": 1.0,
+              "elapsed_ms": 353.962
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1251,
+        "elapsed_seconds": 94.55236490489915,
+        "search_fraction": 0.8586135895676047
+      },
+      "profile": null,
+      "run_id": "run-20260804-201736",
+      "rank": 3
+    },
+    {
+      "parameter_set_id": "4375bb0ee3a5",
+      "parameters": {
+        "scan_samples": 320,
+        "minimum_scan_foreground_fraction": 0.0125,
+        "residual_threshold_fraction": 0.014,
+        "max_trials": 400,
+        "minimum_mean_inlier_ratio": 0.25,
+        "minimum_bbox_area_fraction": 0.1,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.75409691,
+        "minimum_iou": 0.35575364,
+        "stddev_iou": 0.25406802,
+        "mean_edge_error_px": 74.2,
+        "elapsed_ms_total": 2487.069,
+        "wall_ms": 2487.382
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            113,
+            60,
+            1284,
+            960
+          ],
+          "iou": 0.9737641,
+          "edge_errors": {
+            "left": 12,
+            "top": 4,
+            "right": 5,
+            "bottom": 7,
+            "mean": 7.0,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 7.0,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 478.741,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              113,
+              60,
+              1284,
+              960
+            ],
+            "corners": [
+              [
+                121.92813531861401,
+                73.13577946707142
+              ],
+              [
+                1275.7310070158385,
+                68.27677463257203
+              ],
+              [
+                1275.3747348255501,
+                951.3549822761349
+              ],
+              [
+                158.6713987943609,
+                943.657665493259
+              ]
+            ],
+            "confidence": 0.868985,
+            "score": 0.868985,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.804,
+              "sample_counts": {
+                "left": 311,
+                "right": 311,
+                "top": 303,
+                "bottom": 303
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 136,
+                "right": 287,
+                "top": 263,
+                "bottom": 193
+              },
+              "inlier_ratios": {
+                "left": 0.437299,
+                "right": 0.92283,
+                "top": 0.867987,
+                "bottom": 0.636964
+              },
+              "mean_inlier_ratio": 0.71627,
+              "bbox_area_fraction": 0.773418,
+              "corners": [
+                [
+                  121.928,
+                  73.136
+                ],
+                [
+                  1275.731,
+                  68.277
+                ],
+                [
+                  1275.375,
+                  951.355
+                ],
+                [
+                  158.671,
+                  943.658
+                ]
+              ],
+              "mask_score": 0.942347,
+              "area_score": 1.0,
+              "elapsed_ms": 478.728
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            104,
+            6,
+            755,
+            962
+          ],
+          "iou": 0.54904363,
+          "edge_errors": {
+            "left": 37,
+            "top": 2,
+            "right": 478,
+            "bottom": 15,
+            "mean": 133.0,
+            "maximum": 478
+          },
+          "edge_error_mean_px": 133.0,
+          "edge_error_maximum_px": 478,
+          "elapsed_ms": 432.21,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              104,
+              6,
+              755,
+              962
+            ],
+            "corners": [
+              [
+                112.30818576328393,
+                94.2252509142042
+              ],
+              [
+                746.7080472350998,
+                14.907608559427956
+              ],
+              [
+                744.6039640756408,
+                952.0201319312678
+              ],
+              [
+                383.3478972786301,
+                953.2562378816999
+              ]
+            ],
+            "confidence": 0.745982,
+            "score": 0.745982,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.818,
+              "sample_counts": {
+                "left": 313,
+                "right": 313,
+                "top": 157,
+                "bottom": 157
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 122,
+                "right": 300,
+                "top": 95,
+                "bottom": 86
+              },
+              "inlier_ratios": {
+                "left": 0.389776,
+                "right": 0.958466,
+                "top": 0.605096,
+                "bottom": 0.547771
+              },
+              "mean_inlier_ratio": 0.625277,
+              "bbox_area_fraction": 0.479144,
+              "corners": [
+                [
+                  112.308,
+                  94.225
+                ],
+                [
+                  746.708,
+                  14.908
+                ],
+                [
+                  744.604,
+                  952.02
+                ],
+                [
+                  383.348,
+                  953.256
+                ]
+              ],
+              "mask_score": 0.824401,
+              "area_score": 0.737144,
+              "elapsed_ms": 432.194
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            434,
+            273,
+            1048,
+            851
+          ],
+          "iou": 0.35575364,
+          "edge_errors": {
+            "left": 419,
+            "top": 245,
+            "right": 26,
+            "bottom": 119,
+            "mean": 202.25,
+            "maximum": 419
+          },
+          "edge_error_mean_px": 202.25,
+          "edge_error_maximum_px": 419,
+          "elapsed_ms": 835.125,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              434,
+              273,
+              1048,
+              851
+            ],
+            "corners": [
+              [
+                637.2635490647183,
+                281.7213204860798
+              ],
+              [
+                1039.2621489633607,
+                286.7170184280317
+              ],
+              [
+                1033.675802896447,
+                778.3927629285306
+              ],
+              [
+                442.34695934425946,
+                842.5798420719296
+              ]
+            ],
+            "confidence": 0.384468,
+            "score": 0.384468,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.762,
+              "sample_counts": {
+                "left": 194,
+                "right": 194,
+                "top": 230,
+                "bottom": 230
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 42,
+                "right": 68,
+                "top": 52,
+                "bottom": 48
+              },
+              "inlier_ratios": {
+                "left": 0.216495,
+                "right": 0.350515,
+                "top": 0.226087,
+                "bottom": 0.208696
+              },
+              "mean_inlier_ratio": 0.250448,
+              "bbox_area_fraction": 0.331829,
+              "corners": [
+                [
+                  637.264,
+                  281.721
+                ],
+                [
+                  1039.262,
+                  286.717
+                ],
+                [
+                  1033.676,
+                  778.393
+                ],
+                [
+                  442.347,
+                  842.58
+                ]
+              ],
+              "mask_score": 0.446838,
+              "area_score": 0.510506,
+              "elapsed_ms": 835.109
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            45,
+            1139,
+            945
+          ],
+          "iou": 0.93727866,
+          "edge_errors": {
+            "left": 18,
+            "top": 6,
+            "right": 38,
+            "bottom": 4,
+            "mean": 16.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 16.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 385.441,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              66,
+              45,
+              1139,
+              945
+            ],
+            "corners": [
+              [
+                77.87034227980772,
+                56.38095775911597
+              ],
+              [
+                1130.4109835083,
+                53.31101818792558
+              ],
+              [
+                1122.5630643072539,
+                936.8332320088509
+              ],
+              [
+                74.87606453961564,
+                935.1779310489737
+              ]
+            ],
+            "confidence": 0.985624,
+            "score": 0.985624,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.79,
+              "sample_counts": {
+                "left": 297,
+                "right": 297,
+                "top": 265,
+                "bottom": 265
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 294,
+                "right": 295,
+                "top": 261,
+                "bottom": 263
+              },
+              "inlier_ratios": {
+                "left": 0.989899,
+                "right": 0.993266,
+                "top": 0.984906,
+                "bottom": 0.992453
+              },
+              "mean_inlier_ratio": 0.990131,
+              "bbox_area_fraction": 0.761185,
+              "corners": [
+                [
+                  77.87,
+                  56.381
+                ],
+                [
+                  1130.411,
+                  53.311
+                ],
+                [
+                  1122.563,
+                  936.833
+                ],
+                [
+                  74.876,
+                  935.178
+                ]
+              ],
+              "mask_score": 0.980142,
+              "area_score": 1.0,
+              "elapsed_ms": 385.426
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            76,
+            24,
+            1182,
+            968
+          ],
+          "iou": 0.95464454,
+          "edge_errors": {
+            "left": 12,
+            "top": 9,
+            "right": 28,
+            "bottom": 0,
+            "mean": 12.25,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 355.552,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              76,
+              24,
+              1182,
+              968
+            ],
+            "corners": [
+              [
+                84.12223629651513,
+                43.384113264565315
+              ],
+              [
+                1154.3383992505617,
+                32.86646735434812
+              ],
+              [
+                1173.2282213740946,
+                959.5236625186964
+              ],
+              [
+                103.8408562378839,
+                952.9459045427086
+              ]
+            ],
+            "confidence": 0.959516,
+            "score": 0.959516,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.86,
+              "sample_counts": {
+                "left": 310,
+                "right": 310,
+                "top": 275,
+                "bottom": 275
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 291,
+                "right": 273,
+                "top": 266,
+                "bottom": 257
+              },
+              "inlier_ratios": {
+                "left": 0.93871,
+                "right": 0.880645,
+                "top": 0.967273,
+                "bottom": 0.934545
+              },
+              "mean_inlier_ratio": 0.930293,
+              "bbox_area_fraction": 0.831711,
+              "corners": [
+                [
+                  84.122,
+                  43.384
+                ],
+                [
+                  1154.338,
+                  32.866
+                ],
+                [
+                  1173.228,
+                  959.524
+                ],
+                [
+                  103.841,
+                  952.946
+                ]
+              ],
+              "mask_score": 0.970752,
+              "area_score": 1.0,
+              "elapsed_ms": 355.536
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1281,
+        "elapsed_seconds": 96.93905004113913,
+        "search_fraction": 0.87920384351407
+      },
+      "profile": null,
+      "run_id": "run-20260804-201736",
+      "rank": 4
+    },
+    {
+      "parameter_set_id": "7352e2e44471",
+      "parameters": {
+        "scan_samples": 320,
+        "minimum_scan_foreground_fraction": 0.0125,
+        "residual_threshold_fraction": 0.014,
+        "max_trials": 400,
+        "minimum_mean_inlier_ratio": 0.25,
+        "minimum_bbox_area_fraction": 0.18,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.75409691,
+        "minimum_iou": 0.35575364,
+        "stddev_iou": 0.25406802,
+        "mean_edge_error_px": 74.2,
+        "elapsed_ms_total": 2402.266,
+        "wall_ms": 2402.591
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            113,
+            60,
+            1284,
+            960
+          ],
+          "iou": 0.9737641,
+          "edge_errors": {
+            "left": 12,
+            "top": 4,
+            "right": 5,
+            "bottom": 7,
+            "mean": 7.0,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 7.0,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 437.773,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              113,
+              60,
+              1284,
+              960
+            ],
+            "corners": [
+              [
+                121.92813531861401,
+                73.13577946707142
+              ],
+              [
+                1275.7310070158385,
+                68.27677463257203
+              ],
+              [
+                1275.3747348255501,
+                951.3549822761349
+              ],
+              [
+                158.6713987943609,
+                943.657665493259
+              ]
+            ],
+            "confidence": 0.868985,
+            "score": 0.868985,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.804,
+              "sample_counts": {
+                "left": 311,
+                "right": 311,
+                "top": 303,
+                "bottom": 303
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 136,
+                "right": 287,
+                "top": 263,
+                "bottom": 193
+              },
+              "inlier_ratios": {
+                "left": 0.437299,
+                "right": 0.92283,
+                "top": 0.867987,
+                "bottom": 0.636964
+              },
+              "mean_inlier_ratio": 0.71627,
+              "bbox_area_fraction": 0.773418,
+              "corners": [
+                [
+                  121.928,
+                  73.136
+                ],
+                [
+                  1275.731,
+                  68.277
+                ],
+                [
+                  1275.375,
+                  951.355
+                ],
+                [
+                  158.671,
+                  943.658
+                ]
+              ],
+              "mask_score": 0.942347,
+              "area_score": 1.0,
+              "elapsed_ms": 437.76
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            104,
+            6,
+            755,
+            962
+          ],
+          "iou": 0.54904363,
+          "edge_errors": {
+            "left": 37,
+            "top": 2,
+            "right": 478,
+            "bottom": 15,
+            "mean": 133.0,
+            "maximum": 478
+          },
+          "edge_error_mean_px": 133.0,
+          "edge_error_maximum_px": 478,
+          "elapsed_ms": 499.183,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              104,
+              6,
+              755,
+              962
+            ],
+            "corners": [
+              [
+                112.30818576328393,
+                94.2252509142042
+              ],
+              [
+                746.7080472350998,
+                14.907608559427956
+              ],
+              [
+                744.6039640756408,
+                952.0201319312678
+              ],
+              [
+                383.3478972786301,
+                953.2562378816999
+              ]
+            ],
+            "confidence": 0.745982,
+            "score": 0.745982,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.818,
+              "sample_counts": {
+                "left": 313,
+                "right": 313,
+                "top": 157,
+                "bottom": 157
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 122,
+                "right": 300,
+                "top": 95,
+                "bottom": 86
+              },
+              "inlier_ratios": {
+                "left": 0.389776,
+                "right": 0.958466,
+                "top": 0.605096,
+                "bottom": 0.547771
+              },
+              "mean_inlier_ratio": 0.625277,
+              "bbox_area_fraction": 0.479144,
+              "corners": [
+                [
+                  112.308,
+                  94.225
+                ],
+                [
+                  746.708,
+                  14.908
+                ],
+                [
+                  744.604,
+                  952.02
+                ],
+                [
+                  383.348,
+                  953.256
+                ]
+              ],
+              "mask_score": 0.824401,
+              "area_score": 0.737144,
+              "elapsed_ms": 499.167
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            434,
+            273,
+            1048,
+            851
+          ],
+          "iou": 0.35575364,
+          "edge_errors": {
+            "left": 419,
+            "top": 245,
+            "right": 26,
+            "bottom": 119,
+            "mean": 202.25,
+            "maximum": 419
+          },
+          "edge_error_mean_px": 202.25,
+          "edge_error_maximum_px": 419,
+          "elapsed_ms": 750.156,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              434,
+              273,
+              1048,
+              851
+            ],
+            "corners": [
+              [
+                637.2635490647183,
+                281.7213204860798
+              ],
+              [
+                1039.2621489633607,
+                286.7170184280317
+              ],
+              [
+                1033.675802896447,
+                778.3927629285306
+              ],
+              [
+                442.34695934425946,
+                842.5798420719296
+              ]
+            ],
+            "confidence": 0.384468,
+            "score": 0.384468,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.762,
+              "sample_counts": {
+                "left": 194,
+                "right": 194,
+                "top": 230,
+                "bottom": 230
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 42,
+                "right": 68,
+                "top": 52,
+                "bottom": 48
+              },
+              "inlier_ratios": {
+                "left": 0.216495,
+                "right": 0.350515,
+                "top": 0.226087,
+                "bottom": 0.208696
+              },
+              "mean_inlier_ratio": 0.250448,
+              "bbox_area_fraction": 0.331829,
+              "corners": [
+                [
+                  637.264,
+                  281.721
+                ],
+                [
+                  1039.262,
+                  286.717
+                ],
+                [
+                  1033.676,
+                  778.393
+                ],
+                [
+                  442.347,
+                  842.58
+                ]
+              ],
+              "mask_score": 0.446838,
+              "area_score": 0.510506,
+              "elapsed_ms": 750.141
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            45,
+            1139,
+            945
+          ],
+          "iou": 0.93727866,
+          "edge_errors": {
+            "left": 18,
+            "top": 6,
+            "right": 38,
+            "bottom": 4,
+            "mean": 16.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 16.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 377.72,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              66,
+              45,
+              1139,
+              945
+            ],
+            "corners": [
+              [
+                77.87034227980772,
+                56.38095775911597
+              ],
+              [
+                1130.4109835083,
+                53.31101818792558
+              ],
+              [
+                1122.5630643072539,
+                936.8332320088509
+              ],
+              [
+                74.87606453961564,
+                935.1779310489737
+              ]
+            ],
+            "confidence": 0.985624,
+            "score": 0.985624,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.79,
+              "sample_counts": {
+                "left": 297,
+                "right": 297,
+                "top": 265,
+                "bottom": 265
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 294,
+                "right": 295,
+                "top": 261,
+                "bottom": 263
+              },
+              "inlier_ratios": {
+                "left": 0.989899,
+                "right": 0.993266,
+                "top": 0.984906,
+                "bottom": 0.992453
+              },
+              "mean_inlier_ratio": 0.990131,
+              "bbox_area_fraction": 0.761185,
+              "corners": [
+                [
+                  77.87,
+                  56.381
+                ],
+                [
+                  1130.411,
+                  53.311
+                ],
+                [
+                  1122.563,
+                  936.833
+                ],
+                [
+                  74.876,
+                  935.178
+                ]
+              ],
+              "mask_score": 0.980142,
+              "area_score": 1.0,
+              "elapsed_ms": 377.704
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            76,
+            24,
+            1182,
+            968
+          ],
+          "iou": 0.95464454,
+          "edge_errors": {
+            "left": 12,
+            "top": 9,
+            "right": 28,
+            "bottom": 0,
+            "mean": 12.25,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 337.434,
+          "candidate": {
+            "method": "ransac",
+            "bbox": [
+              76,
+              24,
+              1182,
+              968
+            ],
+            "corners": [
+              [
+                84.12223629651513,
+                43.384113264565315
+              ],
+              [
+                1154.3383992505617,
+                32.86646735434812
+              ],
+              [
+                1173.2282213740946,
+                959.5236625186964
+              ],
+              [
+                103.8408562378839,
+                952.9459045427086
+              ]
+            ],
+            "confidence": 0.959516,
+            "score": 0.959516,
+            "diagnostics": {
+              "parameters": {
+                "scan_samples": 320,
+                "minimum_scan_foreground_fraction": 0.0125,
+                "residual_threshold_fraction": 0.014,
+                "max_trials": 400,
+                "minimum_mean_inlier_ratio": 0.25,
+                "minimum_bbox_area_fraction": 0.18,
+                "bbox_padding_fraction": 0.008
+              },
+              "residual_threshold_px": 13.86,
+              "sample_counts": {
+                "left": 310,
+                "right": 310,
+                "top": 275,
+                "bottom": 275
+              },
+              "fitted_edges": [
+                "bottom",
+                "left",
+                "right",
+                "top"
+              ],
+              "inlier_counts": {
+                "left": 291,
+                "right": 273,
+                "top": 266,
+                "bottom": 257
+              },
+              "inlier_ratios": {
+                "left": 0.93871,
+                "right": 0.880645,
+                "top": 0.967273,
+                "bottom": 0.934545
+              },
+              "mean_inlier_ratio": 0.930293,
+              "bbox_area_fraction": 0.831711,
+              "corners": [
+                [
+                  84.122,
+                  43.384
+                ],
+                [
+                  1154.338,
+                  32.866
+                ],
+                [
+                  1173.228,
+                  959.524
+                ],
+                [
+                  103.841,
+                  952.946
+                ]
+              ],
+              "mask_score": 0.970752,
+              "area_score": 1.0,
+              "elapsed_ms": 337.417
+            },
+            "status": "ok",
+            "detector_name": "RANSAC",
+            "origin": "HTH",
+            "foundation": [
+              "RANSAC",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          }
+        }
+      ],
+      "search_observation": {
+        "parameter_set_number": 1273,
+        "elapsed_seconds": 96.87658744724467,
+        "search_fraction": 0.8737131091283459
+      },
+      "profile": null,
+      "run_id": "run-20260804-201736",
+      "rank": 5
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 1,
+      "regressions": 2
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.96652597,
+        "winner_iou": 0.9737641,
+        "delta_iou": 0.00723813,
+        "status": "Improved",
+        "parameter_set": "9647b030702e",
+        "parameter_set_id": "9647b030702e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.96524771,
+        "winner_iou": 0.95464454,
+        "delta_iou": -0.01060317,
+        "status": "Regressed",
+        "parameter_set": "9647b030702e",
+        "parameter_set_id": "9647b030702e",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.95501682,
+        "winner_iou": 0.93727866,
+        "delta_iou": -0.01773816,
+        "status": "Regressed",
+        "parameter_set": "9647b030702e",
+        "parameter_set_id": "9647b030702e",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.52887541,
+        "winner_iou": 0.54904363,
+        "delta_iou": 0.02016822,
+        "status": "Improved",
+        "parameter_set": "9647b030702e",
+        "parameter_set_id": "9647b030702e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.35575364,
+        "delta_iou": 0.35575364,
+        "status": "Recovered",
+        "parameter_set": "9647b030702e",
+        "parameter_set_id": "9647b030702e",
+        "problem": true,
+        "problem_reasons": [
+          "Poor match"
+        ],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-s32",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "syco-lsf32",
+    "cpu_model": "AMD EPYC 9175F 16-Core Processor",
+    "physical_core_count": 16,
+    "logical_cpu_count": 32,
+    "available_cpu_count": 32,
+    "smt_enabled": true,
+    "memory_bytes": 1623047102464,
+    "memory_gib": 1511.58,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.64.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.1",
+    "pipeline_commit": "b17980c1cbec69e38e07aa4ca8ab7d418d43046b",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "30922196305",
+    "github_run_attempt": "2",
+    "github_runner_labels": [
+      "self-hosted",
+      "linux",
+      "x64",
+      "e9k"
+    ]
+  },
+  "source_commit": "f7b86e9b928211ee30c6bd5f0994e034f3d17f11",
+  "performance": {
+    "sample_count": 3,
+    "configured_threads": 32,
+    "peak_rss_bytes": 270868480,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 1457,
+    "completed_parameter_sets": 1457,
+    "average_eval_rate": 12.94369895170546,
+    "failures": 2352,
+    "best_mean_iou": 0.75409691,
+    "best_worst_page_iou": 0.37512856,
+    "best_stddev_iou": 0.23703397,
+    "mean_iou_improvements": 9,
+    "minimum_iou_improvements": 4,
+    "stddev_improvements": 8,
+    "total_metric_improvements": 21,
+    "parameter_sets_with_improvements": 14,
+    "winner_changes": 9,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 2.3302023028954864,
+    "winner_last_changed_elapsed_seconds": 94.39520358014852,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "2080a62a8e2c",
+        "parameter_short_name": "2080a62a",
+        "parameter_set_number": 2,
+        "elapsed_seconds": 2.3302023028954864,
+        "search_fraction": 0.0013726835964310226
+      },
+      {
+        "change_number": 2,
+        "parameter_set_id": "fabf10ea980a",
+        "parameter_short_name": "fabf10ea",
+        "parameter_set_number": 30,
+        "elapsed_seconds": 2.5416748048737645,
+        "search_fraction": 0.02059025394646534
+      },
+      {
+        "change_number": 3,
+        "parameter_set_id": "0ad2aba57b3f",
+        "parameter_short_name": "0ad2aba5",
+        "parameter_set_number": 329,
+        "elapsed_seconds": 22.248320908285677,
+        "search_fraction": 0.22580645161290322
+      },
+      {
+        "change_number": 4,
+        "parameter_set_id": "79c35542f420",
+        "parameter_short_name": "79c35542",
+        "parameter_set_number": 417,
+        "elapsed_seconds": 28.169400571845472,
+        "search_fraction": 0.2862045298558682
+      },
+      {
+        "change_number": 5,
+        "parameter_set_id": "9bbd74ac09ed",
+        "parameter_short_name": "9bbd74ac",
+        "parameter_set_number": 418,
+        "elapsed_seconds": 28.183728273957968,
+        "search_fraction": 0.2868908716540837
+      },
+      {
+        "change_number": 6,
+        "parameter_set_id": "051e9124b5ac",
+        "parameter_short_name": "051e9124",
+        "parameter_set_number": 588,
+        "elapsed_seconds": 39.890904994215816,
+        "search_fraction": 0.40356897735072067
+      },
+      {
+        "change_number": 7,
+        "parameter_set_id": "736a5db3b1c9",
+        "parameter_short_name": "736a5db3",
+        "parameter_set_number": 749,
+        "elapsed_seconds": 51.73334922082722,
+        "search_fraction": 0.514070006863418
+      },
+      {
+        "change_number": 8,
+        "parameter_set_id": "f256461b1f0e",
+        "parameter_short_name": "f256461b",
+        "parameter_set_number": 914,
+        "elapsed_seconds": 63.24745414406061,
+        "search_fraction": 0.6273164035689773
+      },
+      {
+        "change_number": 9,
+        "parameter_set_id": "d212abf22eb8",
+        "parameter_short_name": "d212abf2",
+        "parameter_set_number": 1233,
+        "elapsed_seconds": 94.39520358014852,
+        "search_fraction": 0.8462594371997255
+      }
+    ],
+    "last_improvement_elapsed_seconds": 94.41451594699174,
+    "time_since_last_improvement_seconds": 18.18706077709794
+  }
+}
