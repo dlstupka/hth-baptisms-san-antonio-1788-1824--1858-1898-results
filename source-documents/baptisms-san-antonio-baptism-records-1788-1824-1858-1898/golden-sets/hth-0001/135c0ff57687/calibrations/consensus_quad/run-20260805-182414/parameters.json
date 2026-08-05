@@ -1,0 +1,94 @@
+{
+  "schema_version": "0.4",
+  "detector": "consensus_quad",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/consensus_quad.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 4,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "18.622",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "7",
+    "ranked_quality": "0.55128524"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "consensus_quad",
+    "description": "Calibration space for the HTH Consensus Quad detector.",
+    "profiles": {
+      "baseline": {
+        "minimum_polygon_iou": 0.9,
+        "maximum_mean_corner_distance_fraction": 0.025,
+        "contour_quad_weight": 0.5,
+        "edge_contour_weight": 0.5,
+        "minimum_consensus_confidence": 0.2
+      }
+    },
+    "parameters": {
+      "minimum_polygon_iou": {
+        "type": "float",
+        "values": [
+          0.8,
+          0.9,
+          0.95
+        ]
+      },
+      "maximum_mean_corner_distance_fraction": {
+        "type": "float",
+        "values": [
+          0.015,
+          0.025,
+          0.04
+        ]
+      },
+      "contour_quad_weight": {
+        "type": "float",
+        "values": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "edge_contour_weight": {
+        "type": "float",
+        "values": [
+          0.25,
+          0.5,
+          0.75
+        ]
+      },
+      "minimum_consensus_confidence": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.2,
+          0.35
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner"
+    }
+  }
+}
