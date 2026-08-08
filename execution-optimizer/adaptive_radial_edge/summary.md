@@ -3,6 +3,16 @@
 Detector: `adaptive_radial_edge`  
 Optimizer run: **31219056421** — this table contains only shapes completed in this execution.
 
+#### Preferred optimizer executor configuration
+
+Compatible completed optimizer runs are coalesced by detector, workload, and concrete runner profile. Repeated shapes retain all observations; the preferred shape is the fastest measured compatible shape.
+
+| Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Allocated | Sets/s | Wall | Observations |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 147 | 70.56 | 1m 33s | 1 |
+
+#### Shapes completed in this execution
+
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | e7k — rh8-al97 (96 vCPU) | 1 | 1 | 96 | 96 | 42m 52s | 2.55 | 1.00× | 2.0 | 5.1 | 2.1% | 18.5 GiB |
