@@ -1,9 +1,13 @@
 ### Execution optimizer summary
 
-Detector: `adaptive_radial_edge`  
-Optimizer run: **31219056421** — this table contains only shapes completed in this execution.
+<a id="navigation"></a>
+**Navigation:** [Preferred Detector Run Configuration](#preferred-detector-run-configuration) · [Detector Run Profile Plot](#detector-run-profile-plot) · [Detector Pipeline-Thread Shape Optimization Data](#detector-pipeline-thread-shape-optimization-data)
 
-#### Preferred optimizer executor configuration
+Detector: `adaptive_radial_edge`  
+Optimizer run: **31219056421** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+
+<a id="preferred-detector-run-configuration"></a>
+#### 1. Preferred Detector Run Configuration
 
 Compatible completed optimizer runs are coalesced by detector, workload, and concrete runner profile. Repeated shapes retain all observations; the preferred shape is the fastest measured compatible shape.
 
@@ -11,7 +15,22 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 147 | 70.56 | 1m 33s | 1 |
 
-#### Shapes completed in this execution
+[Back to navigation](#navigation)
+
+<a id="detector-run-profile-plot"></a>
+#### 2. Detector Run Profile Plot
+
+Compatible completed measurements are plotted as detector pipelines versus parameter sets/second; thread count is annotated at each measured shape.
+
+![Detector Run Profile Plot](heatmap.svg)
+
+[Back to navigation](#navigation)
+
+<a id="detector-pipeline-thread-shape-optimization-data"></a>
+<details>
+<summary><strong>3. Detector Pipeline-Thread Shape Optimization Data</strong></summary>
+
+Shapes completed in this execution are shown below.
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -69,3 +88,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | e7k — rh8-al97 (96 vCPU) | 52 | 52 | 3 | 156 | 1m 33s | 70.56 | 27.66× | 270.5 | 270.5 | 74.2% | 24.0 GiB |
 
 **Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 1.0% from the perceived maximum.
+
+[Back to navigation](#navigation)
+
+</details>
