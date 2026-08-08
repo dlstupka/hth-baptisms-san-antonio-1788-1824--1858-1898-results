@@ -24,10 +24,10 @@ This report coalesces compatible measurements from completed optimizer runs only
 
 Compatible completed optimizer runs are coalesced by detector, workload, and concrete runner profile. Repeated shapes retain all observations; the preferred shape is the fastest measured compatible shape.
 
-| Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Allocated | Sets/s | Wall | Observations |
-|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 147 | 70.56 | 1m 33s | 1 |
-| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 192 | 1.92 | 1h 53m 40s | 1 |
+| Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Allocated | Sets/s | Wall | Observations |
+|---|---|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|
+| adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46–52p / 3–4t (5 shapes) | 147 | 70.56 | 1m 33s | 1 |
+| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 2p / 96t (1 shape) | 192 | 1.92 | 1h 53m 40s | 1 |
 
 </details>
 
