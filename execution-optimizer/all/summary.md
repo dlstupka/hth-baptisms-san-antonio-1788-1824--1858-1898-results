@@ -26,8 +26,8 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Allocated | Sets/s | Wall | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|
-| adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46–52p / 3–4t (5 shapes) | 147 | 70.56 | 1m 33s | 1 |
-| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 2p / 96t (1 shape) | 192 | 1.92 | 1h 53m 40s | 1 |
+| adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46p/4t, 49p/3t, 50p/3t, 51p/3t, 52p/3t | 147 | 70.56 | 1m 33s | 1 |
+| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 2p/96t | 192 | 1.92 | 1h 53m 40s | 1 |
 
 </details>
 
