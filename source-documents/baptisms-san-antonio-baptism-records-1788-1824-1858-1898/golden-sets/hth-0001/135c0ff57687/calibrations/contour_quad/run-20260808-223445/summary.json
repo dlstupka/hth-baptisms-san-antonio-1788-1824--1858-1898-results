@@ -1,0 +1,4047 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260808-223445",
+  "detector": "contour_quad",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "37.106",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "5",
+    "ranked_quality": "0.87682013"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 1062882,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 36,
+  "fully_successful_parameter_set_count": 1,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "winner": {
+    "parameter_set_id": "bea942a4969a",
+    "parameters": {
+      "minimum_contour_area_fraction": 0.12,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "epsilon_min_fraction": 0.008,
+      "epsilon_max_fraction": 0.04,
+      "epsilon_steps": 9,
+      "minimum_rectangularity": 0.55,
+      "area_weight": 0.35,
+      "rectangularity_weight": 0.3,
+      "angle_weight": 0.2,
+      "edge_support_weight": 0.15,
+      "edge_support_dilation_fraction": 0.004,
+      "merge_fragmented_contours": true
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.87682013,
+      "minimum_iou": 0.75890607,
+      "stddev_iou": 0.07335619,
+      "mean_edge_error_px": 34.8,
+      "elapsed_ms_total": 1496.137,
+      "wall_ms": 1496.895
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          111,
+          18,
+          1382,
+          939
+        ],
+        "iou": 0.85424412,
+        "edge_errors": {
+          "left": 14,
+          "top": 38,
+          "right": 93,
+          "bottom": 28,
+          "mean": 43.25,
+          "maximum": 93
+        },
+        "edge_error_mean_px": 43.25,
+        "edge_error_maximum_px": 93,
+        "elapsed_ms": 271.837,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "corners": [
+            [
+              111.0,
+              90.0
+            ],
+            [
+              1381.0,
+              18.0
+            ],
+            [
+              1257.0,
+              938.0
+            ],
+            [
+              235.0,
+              917.0
+            ]
+          ],
+          "confidence": 0.79374,
+          "score": 0.79374,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 8,
+            "contour_hypothesis_count": 9,
+            "quadrilateral_count": 13,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.68700079,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.016,
+            "contour_area": 1068351.5,
+            "quadrilateral_area": 1001031.0,
+            "area_score": 0.7346197,
+            "rectangularity": 1.0,
+            "angle_score": 0.85918058,
+            "edge_support": 0.43191015,
+            "elapsed_ms": 271.801
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          119,
+          15,
+          1316,
+          949
+        ],
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52,
+          "top": 7,
+          "right": 83,
+          "bottom": 28,
+          "mean": 42.5,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 180.857,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "corners": [
+            [
+              119.0,
+              36.0
+            ],
+            [
+              1315.0,
+              15.0
+            ],
+            [
+              739.0,
+              948.0
+            ],
+            [
+              137.0,
+              771.0
+            ]
+          ],
+          "confidence": 0.749072,
+          "score": 0.749072,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 14,
+            "contour_hypothesis_count": 15,
+            "quadrilateral_count": 7,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.34829609,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.032,
+            "contour_area": 828549.5,
+            "quadrilateral_area": 771528.0,
+            "area_score": 0.59398934,
+            "rectangularity": 1.0,
+            "angle_score": 0.72086268,
+            "edge_support": 0.64668527,
+            "elapsed_ms": 180.804
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          140,
+          44,
+          1037,
+          888
+        ],
+        "iou": 0.75890607,
+        "edge_errors": {
+          "left": 125,
+          "top": 16,
+          "right": 37,
+          "bottom": 82,
+          "mean": 65.0,
+          "maximum": 125
+        },
+        "edge_error_mean_px": 65.0,
+        "edge_error_maximum_px": 125,
+        "elapsed_ms": 138.623,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "corners": [
+            [
+              140.0,
+              44.0
+            ],
+            [
+              1036.0,
+              223.0
+            ],
+            [
+              1021.0,
+              886.0
+            ],
+            [
+              424.0,
+              887.0
+            ]
+          ],
+          "confidence": 0.662027,
+          "score": 0.662027,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 125,
+            "contour_hypothesis_count": 126,
+            "quadrilateral_count": 6,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.04919944,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.02,
+            "contour_area": 598808.0,
+            "quadrilateral_area": 550144.0,
+            "area_score": 0.51439172,
+            "rectangularity": 1.0,
+            "angle_score": 0.74640746,
+            "edge_support": 0.21805849,
+            "elapsed_ms": 138.595
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          56,
+          1119,
+          938
+        ],
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11,
+          "top": 5,
+          "right": 18,
+          "bottom": 3,
+          "mean": 9.25,
+          "maximum": 18
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18,
+        "elapsed_ms": 476.58,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "corners": [
+            [
+              77.0,
+              56.0
+            ],
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              1118.0,
+              937.0
+            ],
+            [
+              73.0,
+              932.0
+            ]
+          ],
+          "confidence": 0.879702,
+          "score": 0.879702,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 1,
+            "contour_hypothesis_count": 2,
+            "quadrilateral_count": 18,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.73095422,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "contour_area": 925396.0,
+            "quadrilateral_area": 914959.0,
+            "area_score": 0.72118974,
+            "rectangularity": 1.0,
+            "angle_score": 0.9959051,
+            "edge_support": 0.85402918,
+            "elapsed_ms": 476.555
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          81,
+          44,
+          1172,
+          948
+        ],
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7,
+          "top": 11,
+          "right": 18,
+          "bottom": 20,
+          "mean": 14.0,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 428.24,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "corners": [
+            [
+              84.0,
+              44.0
+            ],
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              1171.0,
+              947.0
+            ],
+            [
+              81.0,
+              945.0
+            ]
+          ],
+          "confidence": 0.856308,
+          "score": 0.856308,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 3,
+            "contour_hypothesis_count": 4,
+            "quadrilateral_count": 18,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.78381767,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "contour_area": 981375.0,
+            "quadrilateral_area": 969638.0,
+            "area_score": 0.77242297,
+            "rectangularity": 1.0,
+            "angle_score": 0.98339192,
+            "edge_support": 0.59520998,
+            "elapsed_ms": 428.211
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260808-223445",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "bea942a4969a",
+    "parameters": {
+      "minimum_contour_area_fraction": 0.12,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "epsilon_min_fraction": 0.008,
+      "epsilon_max_fraction": 0.04,
+      "epsilon_steps": 9,
+      "minimum_rectangularity": 0.55,
+      "area_weight": 0.35,
+      "rectangularity_weight": 0.3,
+      "angle_weight": 0.2,
+      "edge_support_weight": 0.15,
+      "edge_support_dilation_fraction": 0.004,
+      "merge_fragmented_contours": true
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.87682013,
+      "minimum_iou": 0.75890607,
+      "stddev_iou": 0.07335619,
+      "mean_edge_error_px": 34.8,
+      "elapsed_ms_total": 1496.137,
+      "wall_ms": 1496.895
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          111,
+          18,
+          1382,
+          939
+        ],
+        "iou": 0.85424412,
+        "edge_errors": {
+          "left": 14,
+          "top": 38,
+          "right": 93,
+          "bottom": 28,
+          "mean": 43.25,
+          "maximum": 93
+        },
+        "edge_error_mean_px": 43.25,
+        "edge_error_maximum_px": 93,
+        "elapsed_ms": 271.837,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "corners": [
+            [
+              111.0,
+              90.0
+            ],
+            [
+              1381.0,
+              18.0
+            ],
+            [
+              1257.0,
+              938.0
+            ],
+            [
+              235.0,
+              917.0
+            ]
+          ],
+          "confidence": 0.79374,
+          "score": 0.79374,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 8,
+            "contour_hypothesis_count": 9,
+            "quadrilateral_count": 13,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.68700079,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.016,
+            "contour_area": 1068351.5,
+            "quadrilateral_area": 1001031.0,
+            "area_score": 0.7346197,
+            "rectangularity": 1.0,
+            "angle_score": 0.85918058,
+            "edge_support": 0.43191015,
+            "elapsed_ms": 271.801
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          119,
+          15,
+          1316,
+          949
+        ],
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52,
+          "top": 7,
+          "right": 83,
+          "bottom": 28,
+          "mean": 42.5,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 180.857,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "corners": [
+            [
+              119.0,
+              36.0
+            ],
+            [
+              1315.0,
+              15.0
+            ],
+            [
+              739.0,
+              948.0
+            ],
+            [
+              137.0,
+              771.0
+            ]
+          ],
+          "confidence": 0.749072,
+          "score": 0.749072,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 14,
+            "contour_hypothesis_count": 15,
+            "quadrilateral_count": 7,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.34829609,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.032,
+            "contour_area": 828549.5,
+            "quadrilateral_area": 771528.0,
+            "area_score": 0.59398934,
+            "rectangularity": 1.0,
+            "angle_score": 0.72086268,
+            "edge_support": 0.64668527,
+            "elapsed_ms": 180.804
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          140,
+          44,
+          1037,
+          888
+        ],
+        "iou": 0.75890607,
+        "edge_errors": {
+          "left": 125,
+          "top": 16,
+          "right": 37,
+          "bottom": 82,
+          "mean": 65.0,
+          "maximum": 125
+        },
+        "edge_error_mean_px": 65.0,
+        "edge_error_maximum_px": 125,
+        "elapsed_ms": 138.623,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "corners": [
+            [
+              140.0,
+              44.0
+            ],
+            [
+              1036.0,
+              223.0
+            ],
+            [
+              1021.0,
+              886.0
+            ],
+            [
+              424.0,
+              887.0
+            ]
+          ],
+          "confidence": 0.662027,
+          "score": 0.662027,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 125,
+            "contour_hypothesis_count": 126,
+            "quadrilateral_count": 6,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.04919944,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.02,
+            "contour_area": 598808.0,
+            "quadrilateral_area": 550144.0,
+            "area_score": 0.51439172,
+            "rectangularity": 1.0,
+            "angle_score": 0.74640746,
+            "edge_support": 0.21805849,
+            "elapsed_ms": 138.595
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          56,
+          1119,
+          938
+        ],
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11,
+          "top": 5,
+          "right": 18,
+          "bottom": 3,
+          "mean": 9.25,
+          "maximum": 18
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18,
+        "elapsed_ms": 476.58,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "corners": [
+            [
+              77.0,
+              56.0
+            ],
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              1118.0,
+              937.0
+            ],
+            [
+              73.0,
+              932.0
+            ]
+          ],
+          "confidence": 0.879702,
+          "score": 0.879702,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 1,
+            "contour_hypothesis_count": 2,
+            "quadrilateral_count": 18,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.73095422,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "contour_area": 925396.0,
+            "quadrilateral_area": 914959.0,
+            "area_score": 0.72118974,
+            "rectangularity": 1.0,
+            "angle_score": 0.9959051,
+            "edge_support": 0.85402918,
+            "elapsed_ms": 476.555
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          81,
+          44,
+          1172,
+          948
+        ],
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7,
+          "top": 11,
+          "right": 18,
+          "bottom": 20,
+          "mean": 14.0,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 428.24,
+        "candidate": {
+          "method": "contour_quad",
+          "bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "corners": [
+            [
+              84.0,
+              44.0
+            ],
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              1171.0,
+              947.0
+            ],
+            [
+              81.0,
+              945.0
+            ]
+          ],
+          "confidence": 0.856308,
+          "score": 0.856308,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "area_weight": 0.35,
+              "rectangularity_weight": 0.3,
+              "angle_weight": 0.2,
+              "edge_support_weight": 0.15,
+              "edge_support_dilation_fraction": 0.004,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 3,
+            "contour_hypothesis_count": 4,
+            "quadrilateral_count": 18,
+            "rejected_nonconvex": 0,
+            "rejected_rectangularity": 0,
+            "close_kernel_size": 9,
+            "edge_support_dilation_size": 5,
+            "mask_foreground_fraction": 0.78381767,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "contour_area": 981375.0,
+            "quadrilateral_area": 969638.0,
+            "area_score": 0.77242297,
+            "rectangularity": 1.0,
+            "angle_score": 0.98339192,
+            "edge_support": 0.59520998,
+            "elapsed_ms": 428.211
+          },
+          "status": "ok",
+          "detector_name": "Contour Quadrilateral",
+          "origin": "HTH",
+          "foundation": [
+            "Contour geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260808-223445",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "bea942a4969a",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.12,
+        "close_kernel_fraction": 0.008,
+        "close_iterations": 1,
+        "epsilon_min_fraction": 0.008,
+        "epsilon_max_fraction": 0.04,
+        "epsilon_steps": 9,
+        "minimum_rectangularity": 0.55,
+        "area_weight": 0.35,
+        "rectangularity_weight": 0.3,
+        "angle_weight": 0.2,
+        "edge_support_weight": 0.15,
+        "edge_support_dilation_fraction": 0.004,
+        "merge_fragmented_contours": true
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87682013,
+        "minimum_iou": 0.75890607,
+        "stddev_iou": 0.07335619,
+        "mean_edge_error_px": 34.8,
+        "elapsed_ms_total": 1496.137,
+        "wall_ms": 1496.895
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 271.837,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.79374,
+            "score": 0.79374,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "area_weight": 0.35,
+                "rectangularity_weight": 0.3,
+                "angle_weight": 0.2,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 8,
+              "contour_hypothesis_count": 9,
+              "quadrilateral_count": 13,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 9,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.68700079,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.016,
+              "contour_area": 1068351.5,
+              "quadrilateral_area": 1001031.0,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "edge_support": 0.43191015,
+              "elapsed_ms": 271.801
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 180.857,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.749072,
+            "score": 0.749072,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "area_weight": 0.35,
+                "rectangularity_weight": 0.3,
+                "angle_weight": 0.2,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 14,
+              "contour_hypothesis_count": 15,
+              "quadrilateral_count": 7,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 9,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.34829609,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.032,
+              "contour_area": 828549.5,
+              "quadrilateral_area": 771528.0,
+              "area_score": 0.59398934,
+              "rectangularity": 1.0,
+              "angle_score": 0.72086268,
+              "edge_support": 0.64668527,
+              "elapsed_ms": 180.804
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 138.623,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.662027,
+            "score": 0.662027,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "area_weight": 0.35,
+                "rectangularity_weight": 0.3,
+                "angle_weight": 0.2,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 125,
+              "contour_hypothesis_count": 126,
+              "quadrilateral_count": 6,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 9,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.04919944,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.02,
+              "contour_area": 598808.0,
+              "quadrilateral_area": 550144.0,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "edge_support": 0.21805849,
+              "elapsed_ms": 138.595
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 476.58,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.879702,
+            "score": 0.879702,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "area_weight": 0.35,
+                "rectangularity_weight": 0.3,
+                "angle_weight": 0.2,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 18,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 9,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.73095422,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "contour_area": 925396.0,
+              "quadrilateral_area": 914959.0,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "edge_support": 0.85402918,
+              "elapsed_ms": 476.555
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 428.24,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.856308,
+            "score": 0.856308,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "area_weight": 0.35,
+                "rectangularity_weight": 0.3,
+                "angle_weight": 0.2,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 18,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 9,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.78381767,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "contour_area": 981375.0,
+              "quadrilateral_area": 969638.0,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "edge_support": 0.59520998,
+              "elapsed_ms": 428.211
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260808-223445",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "34f9c8482c2a",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.06,
+        "close_kernel_fraction": 0.0,
+        "close_iterations": 0,
+        "epsilon_min_fraction": 0.004,
+        "epsilon_max_fraction": 0.025,
+        "epsilon_steps": 5,
+        "minimum_rectangularity": 0.45,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2,
+        "angle_weight": 0.1,
+        "edge_support_weight": 0.1,
+        "edge_support_dilation_fraction": 0.002,
+        "merge_fragmented_contours": true
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.70446686,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.3597122,
+        "mean_edge_error_px": 32.875,
+        "elapsed_ms_total": 688.783,
+        "wall_ms": 689.408
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 212.706,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.771983,
+            "score": 0.771983,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 9,
+              "contour_hypothesis_count": 10,
+              "quadrilateral_count": 5,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.68699492,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0145,
+              "contour_area": 1068351.5,
+              "quadrilateral_area": 1001031.0,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "edge_support": 0.32215707,
+              "elapsed_ms": 212.681
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9.751,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 16,
+              "contour_hypothesis_count": 17,
+              "quadrilateral_count": 0,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.34827453,
+              "reason": "no_plausible_quadrilateral",
+              "elapsed_ms": 9.702
+            },
+            "status": "no_candidate",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 47.457,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.641307,
+            "score": 0.641307,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 135,
+              "contour_hypothesis_count": 136,
+              "quadrilateral_count": 2,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.04911903,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.01975,
+              "contour_area": 598808.0,
+              "quadrilateral_area": 550144.0,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "edge_support": 0.13610586,
+              "elapsed_ms": 47.43
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 223.172,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.852618,
+            "score": 0.852618,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.73095422,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 925396.0,
+              "quadrilateral_area": 914959.0,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "edge_support": 0.74313998,
+              "elapsed_ms": 223.145
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 195.697,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.828776,
+            "score": 0.828776,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.78381767,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 981375.0,
+              "quadrilateral_area": 969638.0,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "edge_support": 0.47259234,
+              "elapsed_ms": 195.667
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 2.2090912969999863,
+        "search_fraction": 0.2222222222222222
+      },
+      "profile": null,
+      "run_id": "run-20260808-223445",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "52a859d3db22",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.06,
+        "close_kernel_fraction": 0.0,
+        "close_iterations": 0,
+        "epsilon_min_fraction": 0.004,
+        "epsilon_max_fraction": 0.025,
+        "epsilon_steps": 5,
+        "minimum_rectangularity": 0.45,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2,
+        "angle_weight": 0.1,
+        "edge_support_weight": 0.1,
+        "edge_support_dilation_fraction": 0.004,
+        "merge_fragmented_contours": true
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.70446686,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.3597122,
+        "mean_edge_error_px": 32.875,
+        "elapsed_ms_total": 603.929,
+        "wall_ms": 606.944
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 184.802,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.788868,
+            "score": 0.788868,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 9,
+              "contour_hypothesis_count": 10,
+              "quadrilateral_count": 5,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.68699492,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0145,
+              "contour_area": 1068351.5,
+              "quadrilateral_area": 1001031.0,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "edge_support": 0.43191015,
+              "elapsed_ms": 184.782
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.38,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 16,
+              "contour_hypothesis_count": 17,
+              "quadrilateral_count": 0,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.34827453,
+              "reason": "no_plausible_quadrilateral",
+              "elapsed_ms": 4.354
+            },
+            "status": "no_candidate",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 38.404,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.65388,
+            "score": 0.65388,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 135,
+              "contour_hypothesis_count": 136,
+              "quadrilateral_count": 2,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.04911903,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.01975,
+              "contour_area": 598808.0,
+              "quadrilateral_area": 550144.0,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "edge_support": 0.21783609,
+              "elapsed_ms": 38.377
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 161.921,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.869678,
+            "score": 0.869678,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.73095422,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 925396.0,
+              "quadrilateral_area": 914959.0,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "edge_support": 0.85402918,
+              "elapsed_ms": 161.894
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 214.422,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.84764,
+            "score": 0.84764,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.004,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 5,
+              "mask_foreground_fraction": 0.78381767,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 981375.0,
+              "quadrilateral_area": 969638.0,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "edge_support": 0.59520998,
+              "elapsed_ms": 214.395
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 2.818350984999995,
+        "search_fraction": 0.5555555555555556
+      },
+      "profile": null,
+      "run_id": "run-20260808-223445",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "4d07d3594663",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.06,
+        "close_kernel_fraction": 0.0,
+        "close_iterations": 0,
+        "epsilon_min_fraction": 0.004,
+        "epsilon_max_fraction": 0.025,
+        "epsilon_steps": 5,
+        "minimum_rectangularity": 0.45,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2,
+        "angle_weight": 0.1,
+        "edge_support_weight": 0.1,
+        "edge_support_dilation_fraction": 0.008,
+        "merge_fragmented_contours": true
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.70446686,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.3597122,
+        "mean_edge_error_px": 32.875,
+        "elapsed_ms_total": 509.107,
+        "wall_ms": 509.728
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 148.711,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.807277,
+            "score": 0.807277,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.008,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 9,
+              "contour_hypothesis_count": 10,
+              "quadrilateral_count": 5,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 9,
+              "mask_foreground_fraction": 0.68699492,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0145,
+              "contour_area": 1068351.5,
+              "quadrilateral_area": 1001031.0,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "edge_support": 0.55157321,
+              "elapsed_ms": 148.69
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9.574,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.008,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 16,
+              "contour_hypothesis_count": 17,
+              "quadrilateral_count": 0,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 9,
+              "mask_foreground_fraction": 0.34827453,
+              "reason": "no_plausible_quadrilateral",
+              "elapsed_ms": 9.547
+            },
+            "status": "no_candidate",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 31.804,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.672698,
+            "score": 0.672698,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.008,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 135,
+              "contour_hypothesis_count": 136,
+              "quadrilateral_count": 2,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 9,
+              "mask_foreground_fraction": 0.04911903,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.01975,
+              "contour_area": 598808.0,
+              "quadrilateral_area": 550144.0,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "edge_support": 0.34015345,
+              "elapsed_ms": 31.779
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 162.002,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.888381,
+            "score": 0.888381,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.008,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 9,
+              "mask_foreground_fraction": 0.73095422,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 925396.0,
+              "quadrilateral_area": 914959.0,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "edge_support": 0.97559917,
+              "elapsed_ms": 161.974
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 157.016,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.863793,
+            "score": 0.863793,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.1,
+                "edge_support_dilation_fraction": 0.008,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 9,
+              "mask_foreground_fraction": 0.78381767,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 981375.0,
+              "quadrilateral_area": 969638.0,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "edge_support": 0.7002024,
+              "elapsed_ms": 156.989
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 3.183463959999983,
+        "search_fraction": 0.6666666666666666
+      },
+      "profile": null,
+      "run_id": "run-20260808-223445",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "adb14cea60cf",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.06,
+        "close_kernel_fraction": 0.0,
+        "close_iterations": 0,
+        "epsilon_min_fraction": 0.004,
+        "epsilon_max_fraction": 0.025,
+        "epsilon_steps": 5,
+        "minimum_rectangularity": 0.45,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2,
+        "angle_weight": 0.1,
+        "edge_support_weight": 0.15,
+        "edge_support_dilation_fraction": 0.002,
+        "merge_fragmented_contours": true
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.70446686,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.3597122,
+        "mean_edge_error_px": 32.875,
+        "elapsed_ms_total": 501.007,
+        "wall_ms": 501.641
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 153.196,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.739852,
+            "score": 0.739852,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 9,
+              "contour_hypothesis_count": 10,
+              "quadrilateral_count": 5,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.68699492,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0145,
+              "contour_area": 1068351.5,
+              "quadrilateral_area": 1001031.0,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "edge_support": 0.32215707,
+              "elapsed_ms": 153.171
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 6.057,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 16,
+              "contour_hypothesis_count": 17,
+              "quadrilateral_count": 0,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.34827453,
+              "reason": "no_plausible_quadrilateral",
+              "elapsed_ms": 6.028
+            },
+            "status": "no_candidate",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 31.691,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.605221,
+            "score": 0.605221,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 135,
+              "contour_hypothesis_count": 136,
+              "quadrilateral_count": 2,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.04911903,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.01975,
+              "contour_area": 598808.0,
+              "quadrilateral_area": 550144.0,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "edge_support": 0.13610586,
+              "elapsed_ms": 31.665
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 207.704,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.844798,
+            "score": 0.844798,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.73095422,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 925396.0,
+              "quadrilateral_area": 914959.0,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "edge_support": 0.74313998,
+              "elapsed_ms": 207.675
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 102.359,
+          "candidate": {
+            "method": "contour_quad",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.803334,
+            "score": 0.803334,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.06,
+                "close_kernel_fraction": 0.0,
+                "close_iterations": 0,
+                "epsilon_min_fraction": 0.004,
+                "epsilon_max_fraction": 0.025,
+                "epsilon_steps": 5,
+                "minimum_rectangularity": 0.45,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.2,
+                "angle_weight": 0.1,
+                "edge_support_weight": 0.15,
+                "edge_support_dilation_fraction": 0.002,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 8,
+              "rejected_nonconvex": 0,
+              "rejected_rectangularity": 0,
+              "close_kernel_size": 0,
+              "edge_support_dilation_size": 3,
+              "mask_foreground_fraction": 0.78381767,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.00925,
+              "contour_area": 981375.0,
+              "quadrilateral_area": 969638.0,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "edge_support": 0.47259234,
+              "elapsed_ms": 102.33
+            },
+            "status": "ok",
+            "detector_name": "Contour Quadrilateral",
+            "origin": "HTH",
+            "foundation": [
+              "Contour geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 3.6851355160000026,
+        "search_fraction": 1.0
+      },
+      "profile": null,
+      "run_id": "run-20260808-223445",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.96377596,
+        "winner_iou": 0.96377596,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "bea942a4969a",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.94540817,
+        "winner_iou": 0.94540817,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "bea942a4969a",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.86176634,
+        "winner_iou": 0.86176634,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "bea942a4969a",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.85424412,
+        "winner_iou": 0.85424412,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "bea942a4969a",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.75890607,
+        "winner_iou": 0.75890607,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "bea942a4969a",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000364",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmvrwv9",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766423040,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.1",
+    "pipeline_commit": "7340b693a0fcf9880e30563d7be46bf5f999e208",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31281960685",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "2cdca59096ffebfe4e8a11d9a691e8282f91c2e4",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 1177100288,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 9,
+    "completed_parameter_sets": 9,
+    "average_eval_rate": 4.129688192041096,
+    "failures": 14,
+    "best_mean_iou": 0.87682013,
+    "best_worst_page_iou": 0.75890607,
+    "best_stddev_iou": 0.07335619,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 0,
+    "parameter_sets_with_improvements": 0,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": null,
+    "time_since_last_improvement_seconds": null
+  }
+}
