@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `contour_components`  
-Optimizer run: **31325710777** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **31329274497** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -22,7 +22,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Allocated | Sets/s | Wall | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|
-| contour_components | e9k — rh8-al320 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 8 | 8 | 8p/8t | 64 | 122.26 | 2m 41s | 1 |
+| contour_components | e9k — rh8-al320 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 8 | 8 | 7p/9t, 8p/8t, 9p/7t | 64 | 123.03 | 2m 40s | 2 |
 
 </details>
 
@@ -48,12 +48,13 @@ Shapes completed in this execution are shown below.
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| e9k — rh8-al320 (192 vCPU) | 1 | 1 | 64 | 64 | 8m 13s | 39.93 | 1.00× | -67.34% | 7.8 | 13.3 | 8.3% | 12.2 GiB |
-| e9k — rh8-al320 (192 vCPU) | 64 | 64 | 1 | 64 | 4m 43s | 69.55 | 1.74× | -43.11% | 1677.1 | 1997.1 | 92.3% | 20.5 GiB |
-| **e9k — rh8-al320 (192 vCPU)** | 8 | 8 | 8 | 64 | 2m 41s | 122.26 | 3.06× | 0.00% | 1183.6 | 1541.6 | 93.4% | 13.1 GiB |
-| e9k — rh8-al320 (192 vCPU) | 23 | 23 | 2 | 46 | 3m 55s | 83.76 | 2.10× | -31.49% | 1063.9 | 1195.0 | 94.0% | 15.1 GiB |
-| e9k — rh8-al320 (192 vCPU) | 14 | 14 | 4 | 56 | 2m 59s | 109.97 | 2.75× | -10.06% | 1003.0 | 1036.5 | 93.4% | 13.9 GiB |
-| e9k — rh8-al320 (192 vCPU) | 3 | 3 | 21 | 63 | 3m 35s | 91.55 | 2.29× | -25.12% | 253.2 | 592.1 | 30.8% | 12.5 GiB |
+| e9k — rh8-al320 (192 vCPU) | 4 | 4 | 16 | 64 | 3m 3s | 107.56 | — | -12.57% | 98.9 | 113.4 | 37.9% | 12.5 GiB |
+| e9k — rh8-al320 (192 vCPU) | 16 | 16 | 4 | 64 | 2m 52s | 114.44 | — | -6.98% | 837.0 | 968.7 | 89.5% | 14.2 GiB |
+| **e9k — rh8-al320 (192 vCPU)** | 8 | 8 | 8 | 64 | 2m 40s | 123.03 | — | 0.00% | 865.3 | 866.8 | 96.6% | 13.1 GiB |
+| e9k — rh8-al320 (192 vCPU) | 7 | 7 | 9 | 63 | 2m 42s | 121.51 | — | -1.23% | 783.4 | 813.3 | 93.1% | 13.0 GiB |
+| e9k — rh8-al320 (192 vCPU) | 9 | 9 | 7 | 63 | 2m 42s | 121.51 | — | -1.23% | 770.7 | 807.1 | 87.7% | 13.1 GiB |
+| e9k — rh8-al320 (192 vCPU) | 6 | 6 | 10 | 60 | 2m 48s | 117.17 | — | -4.76% | 738.7 | 739.6 | 94.7% | 12.7 GiB |
+| e9k — rh8-al320 (192 vCPU) | 10 | 10 | 6 | 60 | 2m 44s | 120.02 | — | -2.44% | 833.1 | 895.0 | 90.6% | 13.3 GiB |
 
 **Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 1.0% from the perceived maximum.
 
