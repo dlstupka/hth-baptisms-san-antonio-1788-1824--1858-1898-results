@@ -26,11 +26,11 @@ This report coalesces compatible measurements from completed optimizer runs only
 
 Compatible completed optimizer runs are coalesced by detector, workload, and concrete runner profile. Repeated shapes retain all observations; the preferred shape is the fastest measured compatible shape.
 
-| Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Wall | Observations |
+| Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
 | adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46p/4t, 49p/3t, 50p/3t, 51p/3t, 52p/3t | exhaustive | 3h 35m 57s | 147 | 70.56 | 1m 33s | 1 |
 | contour_components | e9k — rh8-al320 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 8 | 8 | 7p/9t, 8p/8t, 9p/7t | adaptive | 19m 31s | 64 | 123.03 | 2m 40s | 2 |
-| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 1p/192t, 2p/96t | binary | 7h 46m 58s | 192 | 1.92 | 1h 53m 40s | 1 |
+| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 1p/192t, 2p/96t | powers-of-2 | 7h 46m 58s | 192 | 1.92 | 1h 53m 40s | 1 |
 
 </details>
 
@@ -46,7 +46,7 @@ Compatible completed measurements are plotted by detector; thread count is annot
 <details>
 <summary><strong>adaptive_radial_edge</strong></summary>
 
-**Search method(s):** `binary, exhaustive`
+**Search method(s):** `exhaustive`
 
 ![adaptive_radial_edge Detector Run Profile Plot](profiles/adaptive_radial_edge.svg)
 
@@ -56,7 +56,7 @@ Compatible completed measurements are plotted by detector; thread count is annot
 <details>
 <summary><strong>contour_components</strong></summary>
 
-**Search method(s):** `binary, exhaustive`
+**Search method(s):** `adaptive`
 
 ![contour_components Detector Run Profile Plot](profiles/contour_components.svg)
 
@@ -66,7 +66,7 @@ Compatible completed measurements are plotted by detector; thread count is annot
 <details>
 <summary><strong>grabcut</strong></summary>
 
-**Search method(s):** `binary, exhaustive`
+**Search method(s):** `exhaustive, powers-of-2`
 
 ![grabcut Detector Run Profile Plot](profiles/grabcut.svg)
 
@@ -172,7 +172,7 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 <details>
 <summary><strong>grabcut</strong></summary>
 
-**Search method(s):** `binary, exhaustive`
+**Search method(s):** `exhaustive, powers-of-2`
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
