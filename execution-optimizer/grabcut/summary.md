@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `grabcut`  
-Optimizer run: **31316474200** — resumed from optimizer run **31280769949**; execution data below contains shapes completed in this execution or reused from that compatible local checkpoint; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **31318225875** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -46,9 +46,9 @@ Compatible completed measurements are plotted as detector pipelines versus param
 
 Shapes completed in this execution are shown below.
 
-| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Avg load | Peak load | Avg CPU | Peak RAM |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| **e7k — rh8-al97 (96 vCPU)** | 1 | 1 | 192 | 192 | 1h 54m | 1.92 | 1.00× | 232.1 | 258.1 | 97.2% | 53.1 GiB |
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **e7k — rh8-al97 (96 vCPU)** | 49 | 49 | 3 | 147 | 2h 53s | 1.81 | — | 0.00% | 316.9 | 407.2 | 98.7% | 49.1 GiB |
 
 **Stop reason:** `shape_range_complete`
 
