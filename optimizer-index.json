@@ -1700,7 +1700,7 @@
         "fastest_wall_clock_seconds": 6820.0,
         "median_wall_clock_seconds": 6820.0,
         "observation_count": 1,
-        "observed_speedup_vs_one_pipeline": null,
+        "observed_speedup_vs_one_pipeline": 1.002932551319648,
         "optimizer_shape_sequence": 1,
         "page_evaluations_per_second": null,
         "parallel_efficiency": 0.9852623778103617,
@@ -1725,7 +1725,7 @@
         "threads_per_pipeline": 96
       },
       "detector_id": "grabcut",
-      "observation_count": 4,
+      "observation_count": 5,
       "optimizer_run_id": null,
       "runner_count": 1,
       "runners": [
@@ -1737,7 +1737,7 @@
             "fastest_wall_clock_seconds": 6820.0,
             "median_wall_clock_seconds": 6820.0,
             "observation_count": 1,
-            "observed_speedup_vs_one_pipeline": null,
+            "observed_speedup_vs_one_pipeline": 1.002932551319648,
             "optimizer_shape_sequence": 1,
             "page_evaluations_per_second": null,
             "parallel_efficiency": 0.9852623778103617,
@@ -1761,11 +1761,49 @@
             "shards": 2,
             "threads_per_pipeline": 96
           },
+          "compatibility_key": "c407dde3f41d3ce23d14de7172bd792a1b2390f9e399e2a1ee5b4bbbfbeb2567",
           "runner_key": "c4887c2626ec2aa7",
           "runner_label": "e7k",
           "runner_labels": "self-hosted, linux, x64, e7k",
+          "runner_specs": {
+            "cpu_model": "AMD EPYC 74F3 24-Core Processor",
+            "logical_cpu_count": 96,
+            "memory_gib": 2003.86,
+            "physical_core_count": 48
+          },
           "runner_title": "e7k \u2014 rh8-al97 (96 vCPU)",
           "shapes": [
+            {
+              "allocated_threads": 192,
+              "effective_acceleration": null,
+              "execution_shape": "1p/1s/192t",
+              "fastest_wall_clock_seconds": 6840.0,
+              "median_wall_clock_seconds": 6840.0,
+              "observation_count": 1,
+              "observed_speedup_vs_one_pipeline": 1.0,
+              "optimizer_shape_sequence": 1,
+              "page_evaluations_per_second": null,
+              "parallel_efficiency": null,
+              "parameter_sets_per_second": 1.918421052631579,
+              "pipelines": 1,
+              "runner_metrics": {
+                "avg_cpu_pct": 97.23366426496374,
+                "avg_iowait_pct": 0.00018043585571474286,
+                "avg_load1": 232.13238938053095,
+                "avg_ram_used_bytes": 43445296680.77876,
+                "avg_swap_used_bytes": 0.0,
+                "first_sample_utc": "2026-08-08T22:04:05.805426Z",
+                "last_sample_utc": "2026-08-08T23:56:27.593406Z",
+                "peak_cpu_pct": 99.9918846165136,
+                "peak_iowait_pct": 0.01588236004964964,
+                "peak_load1": 258.05,
+                "peak_ram_used_bytes": 57043369984.0,
+                "peak_swap_used_bytes": 0.0,
+                "sample_count": 113
+              },
+              "shards": 1,
+              "threads_per_pipeline": 192
+            },
             {
               "allocated_threads": 192,
               "effective_acceleration": 189.17037653958945,
@@ -1773,7 +1811,7 @@
               "fastest_wall_clock_seconds": 6820.0,
               "median_wall_clock_seconds": 6820.0,
               "observation_count": 1,
-              "observed_speedup_vs_one_pipeline": null,
+              "observed_speedup_vs_one_pipeline": 1.002932551319648,
               "optimizer_shape_sequence": 1,
               "page_evaluations_per_second": null,
               "parallel_efficiency": 0.9852623778103617,
@@ -1804,7 +1842,7 @@
               "fastest_wall_clock_seconds": 7034.0,
               "median_wall_clock_seconds": 7034.0,
               "observation_count": 1,
-              "observed_speedup_vs_one_pipeline": null,
+              "observed_speedup_vs_one_pipeline": 0.972419675860108,
               "optimizer_shape_sequence": 2,
               "page_evaluations_per_second": null,
               "parallel_efficiency": 0.9868766763813857,
@@ -1835,7 +1873,7 @@
               "fastest_wall_clock_seconds": 7067.0,
               "median_wall_clock_seconds": 7067.0,
               "observation_count": 1,
-              "observed_speedup_vs_one_pipeline": null,
+              "observed_speedup_vs_one_pipeline": 0.9678788736380359,
               "optimizer_shape_sequence": 3,
               "page_evaluations_per_second": null,
               "parallel_efficiency": 0.9879007483432384,
@@ -1866,7 +1904,7 @@
               "fastest_wall_clock_seconds": 7097.0,
               "median_wall_clock_seconds": 7097.0,
               "observation_count": 1,
-              "observed_speedup_vs_one_pipeline": null,
+              "observed_speedup_vs_one_pipeline": 0.9637875158517684,
               "optimizer_shape_sequence": 4,
               "page_evaluations_per_second": null,
               "parallel_efficiency": 0.9873432671081678,
@@ -1890,13 +1928,103 @@
               "shards": 16,
               "threads_per_pipeline": 12
             }
-          ]
+          ],
+          "workload_key": "eedeb197736f660b93592784e9a70738a49a1014533cd6ed9291ca7d933965b6"
         }
       ],
-      "schema_version": "2.0",
-      "updated_at_utc": "2026-08-08T21:41:01.288517Z"
+      "schema_version": "2.1",
+      "updated_at_utc": "2026-08-09T13:42:10.163588Z"
     }
   },
+  "preferred_executor_configurations": [
+    {
+      "compatibility_key": null,
+      "detector_id": "adaptive_radial_edge",
+      "preferred_shape": {
+        "allocated_threads": 147,
+        "effective_acceleration": 125.80710752688172,
+        "execution_shape": "49p/49s/3t",
+        "fastest_wall_clock_seconds": 93.0,
+        "median_wall_clock_seconds": 93.0,
+        "observation_count": 1,
+        "observed_speedup_vs_one_pipeline": 27.655913978494624,
+        "optimizer_shape_sequence": 49,
+        "page_evaluations_per_second": null,
+        "parallel_efficiency": 0.8558306634481749,
+        "parameter_sets_per_second": 70.55913978494624,
+        "pipelines": 49,
+        "runner_metrics": {
+          "avg_cpu_pct": 78.60815380109261,
+          "avg_iowait_pct": 0.0005284338196448299,
+          "avg_load1": 253.83999999999997,
+          "avg_ram_used_bytes": 25139415040.0,
+          "avg_swap_used_bytes": 0.0,
+          "first_sample_utc": "2026-08-08T00:42:29.046287Z",
+          "last_sample_utc": "2026-08-08T00:43:29.182037Z",
+          "peak_cpu_pct": 87.28815648162819,
+          "peak_iowait_pct": 0.0005286893262911915,
+          "peak_load1": 287.83,
+          "peak_ram_used_bytes": 25286873088.0,
+          "peak_swap_used_bytes": 0.0,
+          "sample_count": 2
+        },
+        "shards": 49,
+        "threads_per_pipeline": 3
+      },
+      "runner_key": "c4887c2626ec2aa7",
+      "runner_label": "e7k",
+      "runner_labels": "self-hosted, linux, x64, e7k",
+      "runner_specs": {},
+      "runner_title": "e7k \u2014 rh8-al97 (96 vCPU)",
+      "workload_key": null
+    },
+    {
+      "compatibility_key": "c407dde3f41d3ce23d14de7172bd792a1b2390f9e399e2a1ee5b4bbbfbeb2567",
+      "detector_id": "grabcut",
+      "preferred_shape": {
+        "allocated_threads": 192,
+        "effective_acceleration": 189.17037653958945,
+        "execution_shape": "2p/2s/96t",
+        "fastest_wall_clock_seconds": 6820.0,
+        "median_wall_clock_seconds": 6820.0,
+        "observation_count": 1,
+        "observed_speedup_vs_one_pipeline": 1.002932551319648,
+        "optimizer_shape_sequence": 1,
+        "page_evaluations_per_second": null,
+        "parallel_efficiency": 0.9852623778103617,
+        "parameter_sets_per_second": 1.9240469208211144,
+        "pipelines": 2,
+        "runner_metrics": {
+          "avg_cpu_pct": 98.34094361743216,
+          "avg_iowait_pct": 0.000192741247924473,
+          "avg_load1": 281.12230088495573,
+          "avg_ram_used_bytes": 47618379594.76106,
+          "avg_swap_used_bytes": 0.0,
+          "first_sample_utc": "2026-08-08T13:54:52.412039Z",
+          "last_sample_utc": "2026-08-08T15:47:20.745636Z",
+          "peak_cpu_pct": 100.0,
+          "peak_iowait_pct": 0.017971128690561358,
+          "peak_load1": 316.97,
+          "peak_ram_used_bytes": 57291395072.0,
+          "peak_swap_used_bytes": 0.0,
+          "sample_count": 113
+        },
+        "shards": 2,
+        "threads_per_pipeline": 96
+      },
+      "runner_key": "c4887c2626ec2aa7",
+      "runner_label": "e7k",
+      "runner_labels": "self-hosted, linux, x64, e7k",
+      "runner_specs": {
+        "cpu_model": "AMD EPYC 74F3 24-Core Processor",
+        "logical_cpu_count": 96,
+        "memory_gib": 2003.86,
+        "physical_core_count": 48
+      },
+      "runner_title": "e7k \u2014 rh8-al97 (96 vCPU)",
+      "workload_key": "eedeb197736f660b93592784e9a70738a49a1014533cd6ed9291ca7d933965b6"
+    }
+  ],
   "runs": {
     "31219056421": {
       "current_execution": {
@@ -19367,8 +19495,178 @@
       "shape_observation_count": 4,
       "shard_observation_count": 30,
       "updated_at_utc": "2026-08-08T21:41:01.288668Z"
+    },
+    "31316474200": {
+      "current_execution": {
+        "best_across_runners": {
+          "allocated_threads": 192,
+          "effective_acceleration": null,
+          "execution_shape": "1p/1s/192t",
+          "fastest_wall_clock_seconds": 6840.0,
+          "median_wall_clock_seconds": 6840.0,
+          "observation_count": 1,
+          "observed_speedup_vs_one_pipeline": 1.0,
+          "optimizer_shape_sequence": 1,
+          "page_evaluations_per_second": null,
+          "parallel_efficiency": null,
+          "parameter_sets_per_second": 1.918421052631579,
+          "pipelines": 1,
+          "runner_metrics": {
+            "avg_cpu_pct": 97.23366426496374,
+            "avg_iowait_pct": 0.00018043585571474286,
+            "avg_load1": 232.13238938053095,
+            "avg_ram_used_bytes": 43445296680.77876,
+            "avg_swap_used_bytes": 0.0,
+            "first_sample_utc": "2026-08-08T22:04:05.805426Z",
+            "last_sample_utc": "2026-08-08T23:56:27.593406Z",
+            "peak_cpu_pct": 99.9918846165136,
+            "peak_iowait_pct": 0.01588236004964964,
+            "peak_load1": 258.05,
+            "peak_ram_used_bytes": 57043369984.0,
+            "peak_swap_used_bytes": 0.0,
+            "sample_count": 113
+          },
+          "shards": 1,
+          "threads_per_pipeline": 192
+        },
+        "detector_id": "grabcut",
+        "observation_count": 1,
+        "optimizer_run_id": "31316474200",
+        "runner_count": 1,
+        "runners": [
+          {
+            "best_shape": {
+              "allocated_threads": 192,
+              "effective_acceleration": null,
+              "execution_shape": "1p/1s/192t",
+              "fastest_wall_clock_seconds": 6840.0,
+              "median_wall_clock_seconds": 6840.0,
+              "observation_count": 1,
+              "observed_speedup_vs_one_pipeline": 1.0,
+              "optimizer_shape_sequence": 1,
+              "page_evaluations_per_second": null,
+              "parallel_efficiency": null,
+              "parameter_sets_per_second": 1.918421052631579,
+              "pipelines": 1,
+              "runner_metrics": {
+                "avg_cpu_pct": 97.23366426496374,
+                "avg_iowait_pct": 0.00018043585571474286,
+                "avg_load1": 232.13238938053095,
+                "avg_ram_used_bytes": 43445296680.77876,
+                "avg_swap_used_bytes": 0.0,
+                "first_sample_utc": "2026-08-08T22:04:05.805426Z",
+                "last_sample_utc": "2026-08-08T23:56:27.593406Z",
+                "peak_cpu_pct": 99.9918846165136,
+                "peak_iowait_pct": 0.01588236004964964,
+                "peak_load1": 258.05,
+                "peak_ram_used_bytes": 57043369984.0,
+                "peak_swap_used_bytes": 0.0,
+                "sample_count": 113
+              },
+              "shards": 1,
+              "threads_per_pipeline": 192
+            },
+            "compatibility_key": "c407dde3f41d3ce23d14de7172bd792a1b2390f9e399e2a1ee5b4bbbfbeb2567",
+            "runner_key": "c4887c2626ec2aa7",
+            "runner_label": "e7k",
+            "runner_labels": "self-hosted, linux, x64, e7k",
+            "runner_specs": {
+              "cpu_model": "AMD EPYC 74F3 24-Core Processor",
+              "logical_cpu_count": 96,
+              "memory_gib": 2003.86,
+              "physical_core_count": 48
+            },
+            "runner_title": "e7k \u2014 rh8-al97 (96 vCPU)",
+            "shapes": [
+              {
+                "allocated_threads": 192,
+                "effective_acceleration": null,
+                "execution_shape": "1p/1s/192t",
+                "fastest_wall_clock_seconds": 6840.0,
+                "median_wall_clock_seconds": 6840.0,
+                "observation_count": 1,
+                "observed_speedup_vs_one_pipeline": 1.0,
+                "optimizer_shape_sequence": 1,
+                "page_evaluations_per_second": null,
+                "parallel_efficiency": null,
+                "parameter_sets_per_second": 1.918421052631579,
+                "pipelines": 1,
+                "runner_metrics": {
+                  "avg_cpu_pct": 97.23366426496374,
+                  "avg_iowait_pct": 0.00018043585571474286,
+                  "avg_load1": 232.13238938053095,
+                  "avg_ram_used_bytes": 43445296680.77876,
+                  "avg_swap_used_bytes": 0.0,
+                  "first_sample_utc": "2026-08-08T22:04:05.805426Z",
+                  "last_sample_utc": "2026-08-08T23:56:27.593406Z",
+                  "peak_cpu_pct": 99.9918846165136,
+                  "peak_iowait_pct": 0.01588236004964964,
+                  "peak_load1": 258.05,
+                  "peak_ram_used_bytes": 57043369984.0,
+                  "peak_swap_used_bytes": 0.0,
+                  "sample_count": 113
+                },
+                "shards": 1,
+                "threads_per_pipeline": 192
+              }
+            ],
+            "workload_key": "eedeb197736f660b93592784e9a70738a49a1014533cd6ed9291ca7d933965b6"
+          }
+        ],
+        "schema_version": "2.1",
+        "updated_at_utc": "2026-08-09T13:42:10.163702Z"
+      },
+      "detector_id": "grabcut",
+      "optimizer_run_id": "31316474200",
+      "run_metadata": {
+        "completed_shapes": 1,
+        "detector_id": "grabcut",
+        "early_stop": {
+          "required_consecutive_shapes": 3,
+          "threshold_pct": 1.0
+        },
+        "early_stop_enabled": true,
+        "optimizer_run_id": "31316474200",
+        "pipeline_enumeration": "exhaustive",
+        "pipeline_max": 1,
+        "pipeline_min": 1,
+        "resumed_from_optimizer_run_id": "31280769949",
+        "resumed_shape_count": 1,
+        "runner_label": "e7k",
+        "runner_thread_budget": 192,
+        "stop_reason": "shape_range_complete",
+        "thread_max": 192,
+        "thread_min": 192
+      },
+      "runner_metrics_samples": [
+        {
+          "cpu_pct": null,
+          "detector_id": null,
+          "iowait_pct": null,
+          "load1": 0.44,
+          "load15": 0.04,
+          "load5": 0.14,
+          "observed_at_utc": "2026-08-09T13:42:04.128675Z",
+          "optimizer_run_id": "31316474200",
+          "phase": "setup",
+          "pipelines": null,
+          "ram_total_bytes": 2151626199040,
+          "ram_used_bytes": 14391324672,
+          "runner_label": "e7k",
+          "runner_name": "rh8-al97",
+          "shape_sequence": null,
+          "shape_total": null,
+          "shards": null,
+          "swap_total_bytes": 274877902848,
+          "swap_used_bytes": 0,
+          "threads_per_pipeline": null
+        }
+      ],
+      "shape_observation_count": 1,
+      "shard_observation_count": 1,
+      "updated_at_utc": "2026-08-09T13:42:10.163702Z"
     }
   },
-  "schema_version": "2.0",
-  "updated_at_utc": "2026-08-08T21:41:01.288668Z"
+  "schema_version": "2.1",
+  "updated_at_utc": "2026-08-09T13:42:10.163702Z"
 }
