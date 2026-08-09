@@ -27,7 +27,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Allocated | Sets/s | Wall | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---:|---:|---:|---:|
 | adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46p/4t, 49p/3t, 50p/3t, 51p/3t, 52p/3t | 147 | 70.56 | 1m 33s | 1 |
-| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 2p/96t | 192 | 1.92 | 1h 53m 40s | 1 |
+| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 1p/192t, 2p/96t | 192 | 1.92 | 1h 53m 40s | 1 |
 
 </details>
 
@@ -132,10 +132,11 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| **e7k — rh8-al97 (96 vCPU)** | 2 | 2 | 96 | 192 | 1h 53m 40s | 1.92 | — | 281.1 | 317.0 | 98.3% | 53.4 GiB |
-| e7k — rh8-al97 (96 vCPU) | 4 | 4 | 48 | 192 | 1h 57m 14s | 1.87 | — | 321.1 | 377.9 | 99.3% | 53.9 GiB |
-| e7k — rh8-al97 (96 vCPU) | 8 | 8 | 24 | 192 | 1h 57m 47s | 1.86 | — | 328.4 | 420.9 | 99.2% | 54.3 GiB |
-| e7k — rh8-al97 (96 vCPU) | 16 | 16 | 12 | 192 | 1h 58m 17s | 1.85 | — | 343.3 | 435.7 | 99.3% | 54.9 GiB |
+| e7k — rh8-al97 (96 vCPU) | 1 | 1 | 192 | 192 | 1h 54m | 1.92 | 1.00× | 232.1 | 258.1 | 97.2% | 53.1 GiB |
+| **e7k — rh8-al97 (96 vCPU)** | 2 | 2 | 96 | 192 | 1h 53m 40s | 1.92 | 1.00× | 281.1 | 317.0 | 98.3% | 53.4 GiB |
+| e7k — rh8-al97 (96 vCPU) | 4 | 4 | 48 | 192 | 1h 57m 14s | 1.87 | 0.97× | 321.1 | 377.9 | 99.3% | 53.9 GiB |
+| e7k — rh8-al97 (96 vCPU) | 8 | 8 | 24 | 192 | 1h 57m 47s | 1.86 | 0.97× | 328.4 | 420.9 | 99.2% | 54.3 GiB |
+| e7k — rh8-al97 (96 vCPU) | 16 | 16 | 12 | 192 | 1h 58m 17s | 1.85 | 0.96× | 343.3 | 435.7 | 99.3% | 54.9 GiB |
 
 </details>
 
