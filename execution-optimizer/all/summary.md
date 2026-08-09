@@ -11,10 +11,12 @@ This report coalesces compatible measurements from completed optimizer runs only
 - [Preferred Detector Run Configuration](#preferred-detector-run-configuration)
 - [Detector Run Profile Plot](#detector-run-profile-plot)
   - [adaptive_radial_edge](#detector-run-profile-adaptive-radial-edge)
+  - [consensus_quad](#detector-run-profile-consensus-quad)
   - [contour_components](#detector-run-profile-contour-components)
   - [grabcut](#detector-run-profile-grabcut)
 - [Detector Pipeline-Thread Shape Optimization Data](#detector-pipeline-thread-shape-optimization-data)
   - [adaptive_radial_edge](#detector-shape-data-adaptive-radial-edge)
+  - [consensus_quad](#detector-shape-data-consensus-quad)
   - [contour_components](#detector-shape-data-contour-components)
   - [grabcut](#detector-shape-data-grabcut)
 
@@ -24,13 +26,14 @@ This report coalesces compatible measurements from completed optimizer runs only
 <details open>
 <summary><strong>1. Preferred Detector Run Configuration</strong></summary>
 
-Compatible completed optimizer runs are coalesced by detector, workload, and concrete runner profile. Repeated shapes retain all observations; the preferred shape is the fastest measured compatible shape.
+Compatible completed optimizer runs are coalesced by detector, workload, and concrete runner profile. Repeated shapes retain all observations; the preferred shape is selected canonically by throughput, then lower resource use for throughput-equivalent shapes.
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
 | adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46p/4t, 49p/3t, 50p/3t, 51p/3t, 52p/3t | exhaustive | 3h 35m 57s | 147 | 70.56 | 1m 33s | 1 |
+| consensus_quad | 192t — rh8-al323 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 5 | 76 | 5p/76t, 6p/64t | adaptive | 2m 46s | 380 | 27.00 | 9s | 1 |
 | contour_components | e9k — rh8-al320 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 8 | 8 | 7p/9t, 8p/8t, 9p/7t | adaptive | 19m 31s | 64 | 123.03 | 2m 40s | 2 |
-| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 2 | 96 | 1p/192t, 2p/96t | powers-of-2 | 7h 46m 58s | 192 | 1.92 | 1h 53m 40s | 1 |
+| grabcut | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 1 | 192 | 1p/192t, 2p/96t | exhaustive | 1h 54m | 192 | 1.92 | 1h 54m | 1 |
 
 </details>
 
@@ -49,6 +52,16 @@ Compatible completed measurements are plotted by detector; thread count is annot
 **Search method(s):** `exhaustive`
 
 ![adaptive_radial_edge Detector Run Profile Plot](profiles/adaptive_radial_edge.svg)
+
+</details>
+
+<a id="detector-run-profile-consensus-quad"></a>
+<details>
+<summary><strong>consensus_quad</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![consensus_quad Detector Run Profile Plot](profiles/consensus_quad.svg)
 
 </details>
 
@@ -145,6 +158,27 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 
 </details>
 
+<a id="detector-shape-data-consensus-quad"></a>
+<details>
+<summary><strong>consensus_quad</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al323 (192 vCPU) | 1 | 1 | 384 | 384 | 21s | 11.57 | 1.00× | -57.14% | — | — | — | — |
+| 192t — rh8-al323 (192 vCPU) | 4 | 4 | 96 | 384 | 10s | 24.30 | 2.10× | -10.00% | — | — | — | — |
+| **192t — rh8-al323 (192 vCPU)** | 5 | 5 | 76 | 380 | 9s | 27.00 | 2.33× | 0.00% | — | — | — | — |
+| 192t — rh8-al323 (192 vCPU) | 6 | 6 | 64 | 384 | 9s | 27.00 | 2.33× | 0.00% | — | — | — | — |
+| 192t — rh8-al323 (192 vCPU) | 7 | 7 | 54 | 378 | 10s | 24.30 | 2.10× | -10.00% | — | — | — | — |
+| 192t — rh8-al323 (192 vCPU) | 8 | 8 | 48 | 384 | 10s | 24.30 | 2.10× | -10.00% | — | — | — | — |
+| 192t — rh8-al323 (192 vCPU) | 9 | 9 | 42 | 378 | 11s | 22.09 | 1.91× | -18.18% | 991.7 | 991.7 | 82.6% | 11.7 GiB |
+| 192t — rh8-al323 (192 vCPU) | 10 | 10 | 38 | 380 | 11s | 22.09 | 1.91× | -18.18% | — | — | — | — |
+| 192t — rh8-al323 (192 vCPU) | 11 | 11 | 34 | 374 | 12s | 20.25 | 1.75× | -25.00% | — | — | — | — |
+| 192t — rh8-al323 (192 vCPU) | 128 | 128 | 3 | 384 | 1m 2s | 3.92 | 0.34× | -85.48% | 1212.0 | 1212.0 | 61.8% | 14.8 GiB |
+
+</details>
+
 <a id="detector-shape-data-contour-components"></a>
 <details>
 <summary><strong>contour_components</strong></summary>
@@ -176,8 +210,8 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| e7k — rh8-al97 (96 vCPU) | 1 | 1 | 192 | 192 | 1h 54m | 1.92 | 1.00× | -0.29% | 232.1 | 258.1 | 97.2% | 53.1 GiB |
-| **e7k — rh8-al97 (96 vCPU)** | 2 | 2 | 96 | 192 | 1h 53m 40s | 1.92 | 1.00× | 0.00% | 281.1 | 317.0 | 98.3% | 53.4 GiB |
+| **e7k — rh8-al97 (96 vCPU)** | 1 | 1 | 192 | 192 | 1h 54m | 1.92 | 1.00× | -0.29% | 232.1 | 258.1 | 97.2% | 53.1 GiB |
+| e7k — rh8-al97 (96 vCPU) | 2 | 2 | 96 | 192 | 1h 53m 40s | 1.92 | 1.00× | 0.00% | 281.1 | 317.0 | 98.3% | 53.4 GiB |
 | e7k — rh8-al97 (96 vCPU) | 4 | 4 | 48 | 192 | 1h 57m 14s | 1.87 | 0.97× | -3.04% | 321.1 | 377.9 | 99.3% | 53.9 GiB |
 | e7k — rh8-al97 (96 vCPU) | 8 | 8 | 24 | 192 | 1h 57m 47s | 1.86 | 0.97× | -3.50% | 328.4 | 420.9 | 99.2% | 54.3 GiB |
 | e7k — rh8-al97 (96 vCPU) | 16 | 16 | 12 | 192 | 1h 58m 17s | 1.85 | 0.96× | -3.90% | 343.3 | 435.7 | 99.3% | 54.9 GiB |
