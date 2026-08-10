@@ -4294,7 +4294,7 @@
         "threads_per_pipeline": 20
       },
       "detector_id": "contour_components",
-      "observation_count": 23,
+      "observation_count": 25,
       "optimizer_run_id": null,
       "run_metadata_by_id": {
         "31325710777": {
@@ -4586,6 +4586,56 @@
           "pipeline_enumeration": "adaptive",
           "pipeline_max": 32,
           "pipeline_min": 1,
+          "resumed_from_optimizer_run_id": null,
+          "resumed_shape_count": 0,
+          "runner_label": "192t",
+          "runner_thread_budget": 384,
+          "stop_reason": "adaptive_search_complete",
+          "thread_max": 384,
+          "thread_min": 1
+        },
+        "31396396063": {
+          "allow_thread_oversubscription": false,
+          "completed_shapes": 2,
+          "detector_id": "contour_components",
+          "early_stop": {
+            "assessments": [
+              {
+                "execution_shape": "8p/8s/48t",
+                "improvement_pct_vs_perceived_max": null,
+                "meaningful_improvement": true,
+                "non_improving_streak": 0,
+                "parameter_sets_per_second": 166.8135593220339,
+                "previous_best_parameter_sets_per_second": null,
+                "shape_sequence": 1
+              },
+              {
+                "execution_shape": "96p/96s/4t",
+                "improvement_pct_vs_perceived_max": -0.8403361344537917,
+                "meaningful_improvement": false,
+                "non_improving_streak": 1,
+                "parameter_sets_per_second": 165.41176470588235,
+                "previous_best_parameter_sets_per_second": 166.8135593220339,
+                "shape_sequence": 2
+              }
+            ],
+            "best_execution_shape": "8p/8s/48t",
+            "best_parameter_sets_per_second": 166.8135593220339,
+            "completed_shapes": 2,
+            "non_improving_streak": 1,
+            "required_consecutive_shapes": 3,
+            "should_stop": false,
+            "stop_reason": null,
+            "threshold_pct": 2.0
+          },
+          "early_stop_enabled": true,
+          "optimization_finished_epoch": 1786371072,
+          "optimization_started_epoch": 1786370834,
+          "optimization_wall_seconds": 238,
+          "optimizer_run_id": "31396396063",
+          "pipeline_enumeration": "adaptive",
+          "pipeline_max": 96,
+          "pipeline_min": 8,
           "resumed_from_optimizer_run_id": null,
           "resumed_shape_count": 0,
           "runner_label": "192t",
@@ -5139,6 +5189,38 @@
               "threads_per_pipeline": 64
             },
             {
+              "allocated_threads": 384,
+              "effective_acceleration": 349.347093220339,
+              "execution_shape": "8p/8s/48t",
+              "fastest_wall_clock_seconds": 118.0,
+              "median_wall_clock_seconds": 118.0,
+              "observation_count": 1,
+              "observed_speedup_vs_one_pipeline": 4.9576271186440675,
+              "optimizer_run_id": "31396396063",
+              "optimizer_shape_sequence": 1,
+              "page_evaluations_per_second": null,
+              "parallel_efficiency": 0.9097580552612995,
+              "parameter_sets_per_second": 166.8135593220339,
+              "pipelines": 8,
+              "runner_metrics": {
+                "avg_cpu_pct": 90.61166079747898,
+                "avg_iowait_pct": 0.000473649435072068,
+                "avg_load1": 1018.78,
+                "avg_ram_used_bytes": 15717722112.0,
+                "avg_swap_used_bytes": 0.0,
+                "first_sample_utc": "2026-08-10T14:08:09.604061Z",
+                "last_sample_utc": "2026-08-10T14:09:09.715024Z",
+                "peak_cpu_pct": 91.23225460768963,
+                "peak_iowait_pct": 0.0008605985290649941,
+                "peak_load1": 1133.38,
+                "peak_ram_used_bytes": 19317493760.0,
+                "peak_swap_used_bytes": 0.0,
+                "sample_count": 2
+              },
+              "shards": 8,
+              "threads_per_pipeline": 48
+            },
+            {
               "allocated_threads": 378,
               "effective_acceleration": 331.3197032967033,
               "execution_shape": "14p/14s/27t",
@@ -5393,13 +5475,45 @@
               },
               "shards": 32,
               "threads_per_pipeline": 12
+            },
+            {
+              "allocated_threads": 384,
+              "effective_acceleration": 225.41778991596638,
+              "execution_shape": "96p/96s/4t",
+              "fastest_wall_clock_seconds": 119.0,
+              "median_wall_clock_seconds": 119.0,
+              "observation_count": 1,
+              "observed_speedup_vs_one_pipeline": 4.915966386554622,
+              "optimizer_run_id": "31396396063",
+              "optimizer_shape_sequence": 2,
+              "page_evaluations_per_second": null,
+              "parallel_efficiency": 0.5870254945728292,
+              "parameter_sets_per_second": 165.41176470588235,
+              "pipelines": 96,
+              "runner_metrics": {
+                "avg_cpu_pct": 83.60758542685741,
+                "avg_iowait_pct": 0.0012561147191972454,
+                "avg_load1": 1913.07,
+                "avg_ram_used_bytes": 22263388160.0,
+                "avg_swap_used_bytes": 0.0,
+                "first_sample_utc": "2026-08-10T14:10:10.530501Z",
+                "last_sample_utc": "2026-08-10T14:11:10.577909Z",
+                "peak_cpu_pct": 91.63709039758558,
+                "peak_iowait_pct": 0.0021695644816259584,
+                "peak_load1": 2187.18,
+                "peak_ram_used_bytes": 32240353280.0,
+                "peak_swap_used_bytes": 0.0,
+                "sample_count": 2
+              },
+              "shards": 96,
+              "threads_per_pipeline": 4
             }
           ],
           "workload_key": "1b152abe0b70948e387eca296ceb893967ead25ba36952c840d11a82954f40eb"
         }
       ],
       "schema_version": "2.1",
-      "updated_at_utc": "2026-08-09T23:01:03.681038Z"
+      "updated_at_utc": "2026-08-10T14:11:18.912745Z"
     },
     "contour_grabcut": {
       "best_across_runners": {
@@ -11664,6 +11778,47 @@
       },
       "runner_title": "192t \u2014 rh8-al321 (192 vCPU)",
       "workload_key": "5d2f1a7b334e5b57d043531d5742792658d1dbc88484ffb41ac73b926554fbfb"
+    },
+    {
+      "compatibility_key": null,
+      "detector_id": "contour_quad",
+      "preferred_shape": {
+        "allocated_threads": 63,
+        "effective_acceleration": 61.629644286065364,
+        "execution_shape": "3p/3s/21t",
+        "fastest_wall_clock_seconds": 20345.0,
+        "median_wall_clock_seconds": 20345.0,
+        "observation_count": 1,
+        "observed_speedup_vs_one_pipeline": 1.3676579012042271,
+        "optimizer_shape_sequence": 3,
+        "page_evaluations_per_second": null,
+        "parallel_efficiency": 0.9782483220010375,
+        "parameter_sets_per_second": 52.2429098058491,
+        "pipelines": 3,
+        "runner_metrics": {
+          "avg_cpu_pct": 97.41877606198318,
+          "avg_iowait_pct": 0.00011993955716991,
+          "avg_load1": 111.32292899408284,
+          "avg_ram_used_bytes": 29343999842.46154,
+          "avg_swap_used_bytes": 0.0,
+          "first_sample_utc": "2026-08-09T09:34:44.435608Z",
+          "last_sample_utc": "2026-08-09T15:13:01.287658Z",
+          "peak_cpu_pct": 99.40293715564025,
+          "peak_iowait_pct": 0.013485896864010291,
+          "peak_load1": 123.6,
+          "peak_ram_used_bytes": 41142710272.0,
+          "peak_swap_used_bytes": 0.0,
+          "sample_count": 338
+        },
+        "shards": 3,
+        "threads_per_pipeline": 21
+      },
+      "runner_key": "299a9c7a2e5a071a",
+      "runner_label": "e9k",
+      "runner_labels": "self-hosted, linux, x64, e9k",
+      "runner_specs": {},
+      "runner_title": "e9k \u2014 rh8-s32 (32 vCPU)",
+      "workload_key": null
     },
     {
       "compatibility_key": "163a0611508b89119b1be310c84a09acd8093521ee5228658b30cb20f217ed8a",
@@ -110520,8 +110675,680 @@
       "shape_observation_count": 1,
       "shard_observation_count": 2,
       "updated_at_utc": "2026-08-10T03:06:31.430941Z"
+    },
+    "31396396063": {
+      "current_execution": {
+        "best_across_runners": {
+          "allocated_threads": 384,
+          "effective_acceleration": 349.347093220339,
+          "execution_shape": "8p/8s/48t",
+          "fastest_wall_clock_seconds": 118.0,
+          "median_wall_clock_seconds": 118.0,
+          "observation_count": 1,
+          "observed_speedup_vs_one_pipeline": null,
+          "optimizer_run_id": "31396396063",
+          "optimizer_shape_sequence": 1,
+          "page_evaluations_per_second": null,
+          "parallel_efficiency": 0.9097580552612995,
+          "parameter_sets_per_second": 166.8135593220339,
+          "pipelines": 8,
+          "runner_metrics": {
+            "avg_cpu_pct": 90.61166079747898,
+            "avg_iowait_pct": 0.000473649435072068,
+            "avg_load1": 1018.78,
+            "avg_ram_used_bytes": 15717722112.0,
+            "avg_swap_used_bytes": 0.0,
+            "first_sample_utc": "2026-08-10T14:08:09.604061Z",
+            "last_sample_utc": "2026-08-10T14:09:09.715024Z",
+            "peak_cpu_pct": 91.23225460768963,
+            "peak_iowait_pct": 0.0008605985290649941,
+            "peak_load1": 1133.38,
+            "peak_ram_used_bytes": 19317493760.0,
+            "peak_swap_used_bytes": 0.0,
+            "sample_count": 2
+          },
+          "shards": 8,
+          "threads_per_pipeline": 48
+        },
+        "detector_id": "contour_components",
+        "observation_count": 2,
+        "optimizer_run_id": "31396396063",
+        "run_metadata_by_id": {
+          "31325710777": {
+            "allow_thread_oversubscription": false,
+            "completed_shapes": 6,
+            "detector_id": "contour_components",
+            "early_stop": {
+              "assessments": [
+                {
+                  "execution_shape": "1p/1s/64t",
+                  "improvement_pct_vs_perceived_max": null,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 39.926977687626774,
+                  "previous_best_parameter_sets_per_second": null,
+                  "shape_sequence": 1
+                },
+                {
+                  "execution_shape": "64p/64s/1t",
+                  "improvement_pct_vs_perceived_max": 74.20494699646642,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 69.5547703180212,
+                  "previous_best_parameter_sets_per_second": 39.926977687626774,
+                  "shape_sequence": 2
+                },
+                {
+                  "execution_shape": "8p/8s/8t",
+                  "improvement_pct_vs_perceived_max": 75.77639751552796,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 122.26086956521739,
+                  "previous_best_parameter_sets_per_second": 69.5547703180212,
+                  "shape_sequence": 3
+                },
+                {
+                  "execution_shape": "23p/23s/2t",
+                  "improvement_pct_vs_perceived_max": -31.48936170212766,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 1,
+                  "parameter_sets_per_second": 83.76170212765958,
+                  "previous_best_parameter_sets_per_second": 122.26086956521739,
+                  "shape_sequence": 4
+                },
+                {
+                  "execution_shape": "14p/14s/4t",
+                  "improvement_pct_vs_perceived_max": -10.055865921787706,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 2,
+                  "parameter_sets_per_second": 109.96648044692738,
+                  "previous_best_parameter_sets_per_second": 122.26086956521739,
+                  "shape_sequence": 5
+                },
+                {
+                  "execution_shape": "3p/3s/21t",
+                  "improvement_pct_vs_perceived_max": -25.11627906976744,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 3,
+                  "parameter_sets_per_second": 91.55348837209303,
+                  "previous_best_parameter_sets_per_second": 122.26086956521739,
+                  "shape_sequence": 6
+                }
+              ],
+              "best_execution_shape": "8p/8s/8t",
+              "best_parameter_sets_per_second": 122.26086956521739,
+              "completed_shapes": 6,
+              "non_improving_streak": 3,
+              "required_consecutive_shapes": 3,
+              "should_stop": true,
+              "stop_reason": "throughput_plateau",
+              "threshold_pct": 1.0
+            },
+            "early_stop_enabled": true,
+            "optimizer_run_id": "31325710777",
+            "pipeline_enumeration": "adaptive",
+            "pipeline_max": 64,
+            "pipeline_min": 1,
+            "resumed_from_optimizer_run_id": null,
+            "resumed_shape_count": 0,
+            "runner_label": "e9k",
+            "runner_thread_budget": 64,
+            "stop_reason": "throughput_plateau",
+            "thread_max": 64,
+            "thread_min": 1
+          },
+          "31329274497": {
+            "allow_thread_oversubscription": false,
+            "completed_shapes": 7,
+            "detector_id": "contour_components",
+            "early_stop": {
+              "assessments": [
+                {
+                  "execution_shape": "4p/4s/16t",
+                  "improvement_pct_vs_perceived_max": null,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 107.56284153005464,
+                  "previous_best_parameter_sets_per_second": null,
+                  "shape_sequence": 1
+                },
+                {
+                  "execution_shape": "16p/16s/4t",
+                  "improvement_pct_vs_perceived_max": 6.395348837209306,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 114.44186046511628,
+                  "previous_best_parameter_sets_per_second": 107.56284153005464,
+                  "shape_sequence": 2
+                },
+                {
+                  "execution_shape": "8p/8s/8t",
+                  "improvement_pct_vs_perceived_max": 7.500000000000005,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 123.025,
+                  "previous_best_parameter_sets_per_second": 114.44186046511628,
+                  "shape_sequence": 3
+                },
+                {
+                  "execution_shape": "7p/7s/9t",
+                  "improvement_pct_vs_perceived_max": -1.2345679012345685,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 1,
+                  "parameter_sets_per_second": 121.50617283950618,
+                  "previous_best_parameter_sets_per_second": 123.025,
+                  "shape_sequence": 4
+                },
+                {
+                  "execution_shape": "9p/9s/7t",
+                  "improvement_pct_vs_perceived_max": -1.2345679012345685,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 2,
+                  "parameter_sets_per_second": 121.50617283950618,
+                  "previous_best_parameter_sets_per_second": 123.025,
+                  "shape_sequence": 5
+                },
+                {
+                  "execution_shape": "6p/6s/10t",
+                  "improvement_pct_vs_perceived_max": -4.761904761904763,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 3,
+                  "parameter_sets_per_second": 117.16666666666667,
+                  "previous_best_parameter_sets_per_second": 123.025,
+                  "shape_sequence": 6
+                },
+                {
+                  "execution_shape": "10p/10s/6t",
+                  "improvement_pct_vs_perceived_max": -2.439024390243902,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 4,
+                  "parameter_sets_per_second": 120.02439024390245,
+                  "previous_best_parameter_sets_per_second": 123.025,
+                  "shape_sequence": 7
+                }
+              ],
+              "best_execution_shape": "8p/8s/8t",
+              "best_parameter_sets_per_second": 123.025,
+              "completed_shapes": 7,
+              "non_improving_streak": 4,
+              "required_consecutive_shapes": 3,
+              "should_stop": true,
+              "stop_reason": "throughput_plateau",
+              "threshold_pct": 1.0
+            },
+            "early_stop_enabled": true,
+            "optimizer_run_id": "31329274497",
+            "pipeline_enumeration": "adaptive",
+            "pipeline_max": 16,
+            "pipeline_min": 4,
+            "resumed_from_optimizer_run_id": null,
+            "resumed_shape_count": 0,
+            "runner_label": "e9k",
+            "runner_thread_budget": 64,
+            "stop_reason": "adaptive_search_complete",
+            "thread_max": 64,
+            "thread_min": 1
+          },
+          "31339803325": {
+            "allow_thread_oversubscription": false,
+            "completed_shapes": 10,
+            "detector_id": "contour_components",
+            "early_stop": {
+              "assessments": [
+                {
+                  "execution_shape": "1p/1s/384t",
+                  "improvement_pct_vs_perceived_max": null,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 33.64786324786325,
+                  "previous_best_parameter_sets_per_second": null,
+                  "shape_sequence": 1
+                },
+                {
+                  "execution_shape": "32p/32s/12t",
+                  "improvement_pct_vs_perceived_max": 557.3033707865168,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 221.1685393258427,
+                  "previous_best_parameter_sets_per_second": 33.64786324786325,
+                  "shape_sequence": 2
+                },
+                {
+                  "execution_shape": "6p/6s/64t",
+                  "improvement_pct_vs_perceived_max": -46.3855421686747,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 1,
+                  "parameter_sets_per_second": 118.57831325301204,
+                  "previous_best_parameter_sets_per_second": 221.1685393258427,
+                  "shape_sequence": 3
+                },
+                {
+                  "execution_shape": "14p/14s/27t",
+                  "improvement_pct_vs_perceived_max": -2.1978021978021878,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 2,
+                  "parameter_sets_per_second": 216.30769230769232,
+                  "previous_best_parameter_sets_per_second": 221.1685393258427,
+                  "shape_sequence": 4
+                },
+                {
+                  "execution_shape": "21p/21s/18t",
+                  "improvement_pct_vs_perceived_max": 0.0,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 3,
+                  "parameter_sets_per_second": 221.1685393258427,
+                  "previous_best_parameter_sets_per_second": 221.1685393258427,
+                  "shape_sequence": 5
+                },
+                {
+                  "execution_shape": "20p/20s/19t",
+                  "improvement_pct_vs_perceived_max": 1.1363636363636431,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 4,
+                  "parameter_sets_per_second": 223.6818181818182,
+                  "previous_best_parameter_sets_per_second": 221.1685393258427,
+                  "shape_sequence": 6
+                },
+                {
+                  "execution_shape": "19p/19s/20t",
+                  "improvement_pct_vs_perceived_max": 0.0,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 5,
+                  "parameter_sets_per_second": 223.6818181818182,
+                  "previous_best_parameter_sets_per_second": 223.6818181818182,
+                  "shape_sequence": 7
+                },
+                {
+                  "execution_shape": "18p/18s/21t",
+                  "improvement_pct_vs_perceived_max": -1.123595505617984,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 6,
+                  "parameter_sets_per_second": 221.1685393258427,
+                  "previous_best_parameter_sets_per_second": 223.6818181818182,
+                  "shape_sequence": 8
+                },
+                {
+                  "execution_shape": "17p/17s/22t",
+                  "improvement_pct_vs_perceived_max": -3.2967032967032934,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 7,
+                  "parameter_sets_per_second": 216.30769230769232,
+                  "previous_best_parameter_sets_per_second": 223.6818181818182,
+                  "shape_sequence": 9
+                },
+                {
+                  "execution_shape": "22p/22s/17t",
+                  "improvement_pct_vs_perceived_max": -2.222222222222226,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 8,
+                  "parameter_sets_per_second": 218.7111111111111,
+                  "previous_best_parameter_sets_per_second": 223.6818181818182,
+                  "shape_sequence": 10
+                }
+              ],
+              "best_execution_shape": "20p/20s/19t",
+              "best_parameter_sets_per_second": 223.6818181818182,
+              "completed_shapes": 10,
+              "non_improving_streak": 8,
+              "required_consecutive_shapes": 3,
+              "should_stop": true,
+              "stop_reason": "throughput_plateau",
+              "threshold_pct": 2.0
+            },
+            "early_stop_enabled": true,
+            "optimization_finished_epoch": 1786316456,
+            "optimization_started_epoch": 1786314987,
+            "optimization_wall_seconds": 1469,
+            "optimizer_run_id": "31339803325",
+            "pipeline_enumeration": "adaptive",
+            "pipeline_max": 32,
+            "pipeline_min": 1,
+            "resumed_from_optimizer_run_id": null,
+            "resumed_shape_count": 0,
+            "runner_label": "192t",
+            "runner_thread_budget": 384,
+            "stop_reason": "adaptive_search_complete",
+            "thread_max": 384,
+            "thread_min": 1
+          },
+          "31396396063": {
+            "allow_thread_oversubscription": false,
+            "completed_shapes": 2,
+            "detector_id": "contour_components",
+            "early_stop": {
+              "assessments": [
+                {
+                  "execution_shape": "8p/8s/48t",
+                  "improvement_pct_vs_perceived_max": null,
+                  "meaningful_improvement": true,
+                  "non_improving_streak": 0,
+                  "parameter_sets_per_second": 166.8135593220339,
+                  "previous_best_parameter_sets_per_second": null,
+                  "shape_sequence": 1
+                },
+                {
+                  "execution_shape": "96p/96s/4t",
+                  "improvement_pct_vs_perceived_max": -0.8403361344537917,
+                  "meaningful_improvement": false,
+                  "non_improving_streak": 1,
+                  "parameter_sets_per_second": 165.41176470588235,
+                  "previous_best_parameter_sets_per_second": 166.8135593220339,
+                  "shape_sequence": 2
+                }
+              ],
+              "best_execution_shape": "8p/8s/48t",
+              "best_parameter_sets_per_second": 166.8135593220339,
+              "completed_shapes": 2,
+              "non_improving_streak": 1,
+              "required_consecutive_shapes": 3,
+              "should_stop": false,
+              "stop_reason": null,
+              "threshold_pct": 2.0
+            },
+            "early_stop_enabled": true,
+            "optimization_finished_epoch": 1786371072,
+            "optimization_started_epoch": 1786370834,
+            "optimization_wall_seconds": 238,
+            "optimizer_run_id": "31396396063",
+            "pipeline_enumeration": "adaptive",
+            "pipeline_max": 96,
+            "pipeline_min": 8,
+            "resumed_from_optimizer_run_id": null,
+            "resumed_shape_count": 0,
+            "runner_label": "192t",
+            "runner_thread_budget": 384,
+            "stop_reason": "adaptive_search_complete",
+            "thread_max": 384,
+            "thread_min": 1
+          }
+        },
+        "runner_count": 1,
+        "runners": [
+          {
+            "best_shape": {
+              "allocated_threads": 384,
+              "effective_acceleration": 349.347093220339,
+              "execution_shape": "8p/8s/48t",
+              "fastest_wall_clock_seconds": 118.0,
+              "median_wall_clock_seconds": 118.0,
+              "observation_count": 1,
+              "observed_speedup_vs_one_pipeline": null,
+              "optimizer_run_id": "31396396063",
+              "optimizer_shape_sequence": 1,
+              "page_evaluations_per_second": null,
+              "parallel_efficiency": 0.9097580552612995,
+              "parameter_sets_per_second": 166.8135593220339,
+              "pipelines": 8,
+              "runner_metrics": {
+                "avg_cpu_pct": 90.61166079747898,
+                "avg_iowait_pct": 0.000473649435072068,
+                "avg_load1": 1018.78,
+                "avg_ram_used_bytes": 15717722112.0,
+                "avg_swap_used_bytes": 0.0,
+                "first_sample_utc": "2026-08-10T14:08:09.604061Z",
+                "last_sample_utc": "2026-08-10T14:09:09.715024Z",
+                "peak_cpu_pct": 91.23225460768963,
+                "peak_iowait_pct": 0.0008605985290649941,
+                "peak_load1": 1133.38,
+                "peak_ram_used_bytes": 19317493760.0,
+                "peak_swap_used_bytes": 0.0,
+                "sample_count": 2
+              },
+              "shards": 8,
+              "threads_per_pipeline": 48
+            },
+            "compatibility_key": "b02dda8dbb1915ecd44e61ece80361d7f00e7902e6508d585e4babd7d839b391",
+            "runner_key": "4f6968b9099d8749",
+            "runner_label": "192t",
+            "runner_labels": "self-hosted, 192t",
+            "runner_specs": {
+              "cpu_model": "AMD EPYC 9655 96-Core Processor",
+              "logical_cpu_count": 192,
+              "memory_gib": 1511.27,
+              "physical_core_count": 192
+            },
+            "runner_title": "192t \u2014 rh8-al320 (192 vCPU)",
+            "shapes": [
+              {
+                "allocated_threads": 384,
+                "effective_acceleration": 349.347093220339,
+                "execution_shape": "8p/8s/48t",
+                "fastest_wall_clock_seconds": 118.0,
+                "median_wall_clock_seconds": 118.0,
+                "observation_count": 1,
+                "observed_speedup_vs_one_pipeline": null,
+                "optimizer_run_id": "31396396063",
+                "optimizer_shape_sequence": 1,
+                "page_evaluations_per_second": null,
+                "parallel_efficiency": 0.9097580552612995,
+                "parameter_sets_per_second": 166.8135593220339,
+                "pipelines": 8,
+                "runner_metrics": {
+                  "avg_cpu_pct": 90.61166079747898,
+                  "avg_iowait_pct": 0.000473649435072068,
+                  "avg_load1": 1018.78,
+                  "avg_ram_used_bytes": 15717722112.0,
+                  "avg_swap_used_bytes": 0.0,
+                  "first_sample_utc": "2026-08-10T14:08:09.604061Z",
+                  "last_sample_utc": "2026-08-10T14:09:09.715024Z",
+                  "peak_cpu_pct": 91.23225460768963,
+                  "peak_iowait_pct": 0.0008605985290649941,
+                  "peak_load1": 1133.38,
+                  "peak_ram_used_bytes": 19317493760.0,
+                  "peak_swap_used_bytes": 0.0,
+                  "sample_count": 2
+                },
+                "shards": 8,
+                "threads_per_pipeline": 48
+              },
+              {
+                "allocated_threads": 384,
+                "effective_acceleration": 225.41778991596638,
+                "execution_shape": "96p/96s/4t",
+                "fastest_wall_clock_seconds": 119.0,
+                "median_wall_clock_seconds": 119.0,
+                "observation_count": 1,
+                "observed_speedup_vs_one_pipeline": null,
+                "optimizer_run_id": "31396396063",
+                "optimizer_shape_sequence": 2,
+                "page_evaluations_per_second": null,
+                "parallel_efficiency": 0.5870254945728292,
+                "parameter_sets_per_second": 165.41176470588235,
+                "pipelines": 96,
+                "runner_metrics": {
+                  "avg_cpu_pct": 83.60758542685741,
+                  "avg_iowait_pct": 0.0012561147191972454,
+                  "avg_load1": 1913.07,
+                  "avg_ram_used_bytes": 22263388160.0,
+                  "avg_swap_used_bytes": 0.0,
+                  "first_sample_utc": "2026-08-10T14:10:10.530501Z",
+                  "last_sample_utc": "2026-08-10T14:11:10.577909Z",
+                  "peak_cpu_pct": 91.63709039758558,
+                  "peak_iowait_pct": 0.0021695644816259584,
+                  "peak_load1": 2187.18,
+                  "peak_ram_used_bytes": 32240353280.0,
+                  "peak_swap_used_bytes": 0.0,
+                  "sample_count": 2
+                },
+                "shards": 96,
+                "threads_per_pipeline": 4
+              }
+            ],
+            "workload_key": "1b152abe0b70948e387eca296ceb893967ead25ba36952c840d11a82954f40eb"
+          }
+        ],
+        "schema_version": "2.1",
+        "updated_at_utc": "2026-08-10T14:11:18.912845Z"
+      },
+      "detector_id": "contour_components",
+      "optimizer_run_id": "31396396063",
+      "run_metadata": {
+        "allow_thread_oversubscription": false,
+        "completed_shapes": 2,
+        "detector_id": "contour_components",
+        "early_stop": {
+          "assessments": [
+            {
+              "execution_shape": "8p/8s/48t",
+              "improvement_pct_vs_perceived_max": null,
+              "meaningful_improvement": true,
+              "non_improving_streak": 0,
+              "parameter_sets_per_second": 166.8135593220339,
+              "previous_best_parameter_sets_per_second": null,
+              "shape_sequence": 1
+            },
+            {
+              "execution_shape": "96p/96s/4t",
+              "improvement_pct_vs_perceived_max": -0.8403361344537917,
+              "meaningful_improvement": false,
+              "non_improving_streak": 1,
+              "parameter_sets_per_second": 165.41176470588235,
+              "previous_best_parameter_sets_per_second": 166.8135593220339,
+              "shape_sequence": 2
+            }
+          ],
+          "best_execution_shape": "8p/8s/48t",
+          "best_parameter_sets_per_second": 166.8135593220339,
+          "completed_shapes": 2,
+          "non_improving_streak": 1,
+          "required_consecutive_shapes": 3,
+          "should_stop": false,
+          "stop_reason": null,
+          "threshold_pct": 2.0
+        },
+        "early_stop_enabled": true,
+        "optimization_finished_epoch": 1786371072,
+        "optimization_started_epoch": 1786370834,
+        "optimization_wall_seconds": 238,
+        "optimizer_run_id": "31396396063",
+        "pipeline_enumeration": "adaptive",
+        "pipeline_max": 96,
+        "pipeline_min": 8,
+        "resumed_from_optimizer_run_id": null,
+        "resumed_shape_count": 0,
+        "runner_label": "192t",
+        "runner_thread_budget": 384,
+        "stop_reason": "adaptive_search_complete",
+        "thread_max": 384,
+        "thread_min": 1
+      },
+      "runner_metrics_samples": [
+        {
+          "cpu_pct": null,
+          "detector_id": null,
+          "iowait_pct": null,
+          "load1": 0.49,
+          "load15": 0.04,
+          "load5": 0.13,
+          "observed_at_utc": "2026-08-10T14:07:09.065805Z",
+          "optimizer_run_id": "31396396063",
+          "phase": "setup",
+          "pipelines": null,
+          "ram_total_bytes": 1622717149184,
+          "ram_used_bytes": 11624869888,
+          "runner_label": "192t",
+          "runner_name": "rh8-al320",
+          "shape_sequence": null,
+          "shape_total": null,
+          "shards": null,
+          "swap_total_bytes": 780186677248,
+          "swap_used_bytes": 0,
+          "threads_per_pipeline": null
+        },
+        {
+          "cpu_pct": 89.99106698726831,
+          "detector_id": "contour_components",
+          "iowait_pct": 0.0008605985290649941,
+          "load1": 904.18,
+          "load15": 86.56,
+          "load5": 253.06,
+          "observed_at_utc": "2026-08-10T14:08:09.604061Z",
+          "optimizer_run_id": "31396396063",
+          "phase": "running",
+          "pipelines": 8,
+          "ram_total_bytes": 1622717149184,
+          "ram_used_bytes": 19317493760,
+          "runner_label": "192t",
+          "runner_name": "rh8-al320",
+          "shape_sequence": 1,
+          "shape_total": 89,
+          "shards": 8,
+          "swap_total_bytes": 780186677248,
+          "swap_used_bytes": 0,
+          "threads_per_pipeline": 48
+        },
+        {
+          "cpu_pct": 91.23225460768963,
+          "detector_id": "contour_components",
+          "iowait_pct": 8.670034107914181e-05,
+          "load1": 1133.38,
+          "load15": 173.06,
+          "load5": 467.68,
+          "observed_at_utc": "2026-08-10T14:09:09.715024Z",
+          "optimizer_run_id": "31396396063",
+          "phase": "running",
+          "pipelines": 8,
+          "ram_total_bytes": 1622717149184,
+          "ram_used_bytes": 12117950464,
+          "runner_label": "192t",
+          "runner_name": "rh8-al320",
+          "shape_sequence": 1,
+          "shape_total": 89,
+          "shards": 8,
+          "swap_total_bytes": 780186677248,
+          "swap_used_bytes": 0,
+          "threads_per_pipeline": 48
+        },
+        {
+          "cpu_pct": 91.63709039758558,
+          "detector_id": "contour_components",
+          "iowait_pct": 0.0003426649567685324,
+          "load1": 2187.18,
+          "load15": 330.88,
+          "load5": 875.98,
+          "observed_at_utc": "2026-08-10T14:10:10.530501Z",
+          "optimizer_run_id": "31396396063",
+          "phase": "running",
+          "pipelines": 96,
+          "ram_total_bytes": 1622717149184,
+          "ram_used_bytes": 32240353280,
+          "runner_label": "192t",
+          "runner_name": "rh8-al320",
+          "shape_sequence": 2,
+          "shape_total": 89,
+          "shards": 96,
+          "swap_total_bytes": 780186677248,
+          "swap_used_bytes": 0,
+          "threads_per_pipeline": 4
+        },
+        {
+          "cpu_pct": 75.57808045612924,
+          "detector_id": "contour_components",
+          "iowait_pct": 0.0021695644816259584,
+          "load1": 1638.96,
+          "load15": 412.43,
+          "load5": 1005.53,
+          "observed_at_utc": "2026-08-10T14:11:10.577909Z",
+          "optimizer_run_id": "31396396063",
+          "phase": "running",
+          "pipelines": 96,
+          "ram_total_bytes": 1622717149184,
+          "ram_used_bytes": 12286423040,
+          "runner_label": "192t",
+          "runner_name": "rh8-al320",
+          "shape_sequence": 2,
+          "shape_total": 89,
+          "shards": 96,
+          "swap_total_bytes": 780186677248,
+          "swap_used_bytes": 0,
+          "threads_per_pipeline": 4
+        }
+      ],
+      "shape_observation_count": 2,
+      "shard_observation_count": 100,
+      "updated_at_utc": "2026-08-10T14:11:18.912845Z"
     }
   },
-  "schema_version": "2.0",
-  "updated_at_utc": "2026-08-10T09:12:50.697167Z"
+  "schema_version": "2.1",
+  "updated_at_utc": "2026-08-10T14:11:18.912845Z"
 }
