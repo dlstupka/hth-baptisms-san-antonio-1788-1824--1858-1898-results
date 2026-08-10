@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `contour_components`  
-Optimizer run: **31339803325** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **31396396063** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -50,18 +50,10 @@ Shapes completed in this execution are shown below.
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al320 (192 vCPU) | 1 | 1 | 384 | 384 | 9m 45s | 33.65 | 1.00× | -84.96% | 10.5 | 18.6 | 7.1% | 17.4 GiB |
-| 192t — rh8-al320 (192 vCPU) | 6 | 6 | 64 | 384 | 2m 46s | 118.58 | 3.52× | -46.99% | 1146.1 | 1280.0 | 88.9% | 17.8 GiB |
-| 192t — rh8-al320 (192 vCPU) | 14 | 14 | 27 | 378 | 1m 31s | 216.31 | 6.43× | -3.30% | 1414.4 | 1414.4 | 93.9% | 18.9 GiB |
-| 192t — rh8-al320 (192 vCPU) | 17 | 17 | 22 | 374 | 1m 31s | 216.31 | 6.43× | -3.30% | 1548.7 | 1548.7 | 83.1% | 19.0 GiB |
-| 192t — rh8-al320 (192 vCPU) | 18 | 18 | 21 | 378 | 1m 29s | 221.17 | 6.57× | -1.12% | 1496.1 | 1613.3 | 91.4% | 19.6 GiB |
-| **192t — rh8-al320 (192 vCPU)** | 19 | 19 | 20 | 380 | 1m 28s | 223.68 | 6.65× | 0.00% | 1471.0 | 1471.0 | 83.0% | 19.3 GiB |
-| 192t — rh8-al320 (192 vCPU) | 20 | 20 | 19 | 380 | 1m 28s | 223.68 | 6.65× | 0.00% | 1570.0 | 1570.0 | 94.4% | 19.9 GiB |
-| 192t — rh8-al320 (192 vCPU) | 21 | 21 | 18 | 378 | 1m 29s | 221.17 | 6.57× | -1.12% | 1394.6 | 1400.2 | 85.8% | 19.5 GiB |
-| 192t — rh8-al320 (192 vCPU) | 22 | 22 | 17 | 374 | 1m 30s | 218.71 | 6.50× | -2.22% | 1500.4 | 1607.5 | 91.4% | 20.2 GiB |
-| 192t — rh8-al320 (192 vCPU) | 32 | 32 | 12 | 384 | 1m 29s | 221.17 | 6.57× | -1.12% | 1055.8 | 1549.1 | 60.3% | 21.9 GiB |
+| **192t — rh8-al320 (192 vCPU)** | 8 | 8 | 48 | 384 | 1m 58s | 166.81 | — | 0.00% | 1018.8 | 1133.4 | 90.6% | 18.0 GiB |
+| 192t — rh8-al320 (192 vCPU) | 96 | 96 | 4 | 384 | 1m 59s | 165.41 | — | -0.84% | 1913.1 | 2187.2 | 83.6% | 30.0 GiB |
 
-**Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 2.0% from the perceived maximum.
+**Stop reason:** `adaptive_search_complete`
 
 </details>
 
