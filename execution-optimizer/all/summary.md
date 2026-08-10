@@ -54,6 +54,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
+| adaptive_radial_edge | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 63 | 6 | 63p/6t | adaptive | 4m 10s | 378 | 145.82 | 45s | 1 |
 | adaptive_radial_edge | 192t — rh8-al323 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 60 | 6 | 60p/6t, 64p/6t | adaptive | 33m 4s | 360 | 152.60 | 43s | 1 |
 | adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46p/4t, 49p/3t, 50p/3t, 51p/3t, 52p/3t | exhaustive | 3h 35m 57s | 147 | 70.56 | 1m 33s | 1 |
 | border_energy | 192t — rh8-al325 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 8 | 48 | 7p/54t, 8p/48t, 9p/42t | adaptive | 13m 27s | 384 | 84.13 | 1m 18s | 1 |
@@ -74,6 +75,8 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | lsd | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 9 | 42 | 9p/42t | adaptive | 2m 19s | 378 | 168.23 | 13s | 1 |
 | radial_edge | 192t — rh8-al323 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 26 | 14 | 23p/16t, 24p/16t, 25p/15t, 26p/14t, 27p/14t | adaptive | 7m 47s | 364 | 345.37 | 19s | 1 |
 | ransac | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 23 | 16 | 23p/16t | adaptive | 2m 54s | 368 | 145.80 | 10s | 1 |
+
+**Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
 
 </details>
 
@@ -298,6 +301,7 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 | e7k — rh8-al97 (96 vCPU) | 30 | 30 | 6 | 180 | 1m 58s | 55.61 | 21.80× | -21.19% | 62.6 | 69.2 | 51.0% | 22.2 GiB |
 | e7k — rh8-al97 (96 vCPU) | 31 | 31 | 6 | 186 | 1m 46s | 61.91 | 24.26× | -12.26% | 55.0 | 59.4 | 48.0% | 22.6 GiB |
 | e7k — rh8-al97 (96 vCPU) | 32 | 32 | 6 | 192 | 1m 45s | 62.50 | 24.50× | -11.43% | 95.0 | 100.6 | 54.9% | 22.9 GiB |
+| 192t — rh8-al321 (192 vCPU) | 32 | 32 | 12 | 384 | 58s | 113.14 | — | -22.41% | 311.6 | 311.6 | 48.2% | 11.0 GiB |
 | e7k — rh8-al97 (96 vCPU) | 33 | 33 | 5 | 165 | 1m 50s | 59.65 | 23.38× | -15.45% | 90.2 | 104.6 | 51.0% | 22.1 GiB |
 | e7k — rh8-al97 (96 vCPU) | 34 | 34 | 5 | 170 | 1m 42s | 64.33 | 25.22× | -8.82% | 84.5 | 84.5 | 56.3% | 22.3 GiB |
 | e7k — rh8-al97 (96 vCPU) | 35 | 35 | 5 | 175 | 1m 42s | 64.33 | 25.22× | -8.82% | 128.1 | 133.0 | 59.1% | 22.8 GiB |
@@ -325,12 +329,16 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 | 192t — rh8-al323 (192 vCPU) | 59 | 59 | 6 | 354 | 45s | 145.82 | 31.31× | -4.44% | 809.4 | 809.4 | 78.4% | 28.7 GiB |
 | **192t — rh8-al323 (192 vCPU)** | 60 | 60 | 6 | 360 | 43s | 152.60 | 32.77× | 0.00% | 693.5 | 693.5 | 60.9% | 28.4 GiB |
 | 192t — rh8-al323 (192 vCPU) | 61 | 61 | 6 | 366 | 45s | 145.82 | 31.31× | -4.44% | 1025.5 | 1025.5 | 71.5% | 11.3 GiB |
+| 192t — rh8-al321 (192 vCPU) | 62 | 62 | 6 | 372 | 46s | 142.65 | — | -2.17% | 1020.8 | 1020.8 | 73.9% | 19.2 GiB |
+| **192t — rh8-al321 (192 vCPU)** | 63 | 63 | 6 | 378 | 45s | 145.82 | — | 0.00% | 971.3 | 971.3 | 72.7% | 29.7 GiB |
+| 192t — rh8-al321 (192 vCPU) | 64 | 64 | 6 | 384 | 47s | 139.62 | — | -4.26% | 503.1 | 503.1 | 59.5% | 29.2 GiB |
 | 192t — rh8-al323 (192 vCPU) | 64 | 64 | 6 | 384 | 43s | 152.60 | 32.77× | 0.00% | 591.5 | 591.5 | 41.2% | 30.2 GiB |
 | 192t — rh8-al323 (192 vCPU) | 68 | 68 | 5 | 340 | 47s | 139.62 | 29.98× | -8.51% | 660.2 | 660.2 | 67.1% | 29.3 GiB |
 | 192t — rh8-al323 (192 vCPU) | 80 | 80 | 4 | 320 | 48s | 136.71 | 29.35× | -10.42% | 715.1 | 715.1 | 52.4% | 11.2 GiB |
 | 192t — rh8-al323 (192 vCPU) | 81 | 81 | 4 | 324 | 44s | 149.14 | 32.02× | -2.27% | 798.7 | 798.7 | 68.7% | 17.9 GiB |
 | 192t — rh8-al323 (192 vCPU) | 82 | 82 | 4 | 328 | 49s | 133.92 | 28.76× | -12.24% | — | — | — | — |
 | 192t — rh8-al323 (192 vCPU) | 96 | 96 | 4 | 384 | 48s | 136.71 | 29.35× | -10.42% | 470.6 | 470.6 | 63.6% | 28.3 GiB |
+| 192t — rh8-al321 (192 vCPU) | 128 | 128 | 3 | 384 | 52s | 126.19 | — | -13.46% | — | — | — | — |
 
 </details>
 
