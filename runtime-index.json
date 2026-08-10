@@ -49,12 +49,12 @@
       "wall_clock_seconds": 4.975
     },
     "contour_grabcut": {
-      "configured_threads": 2,
-      "mode": "smoke",
-      "observation_id": "31436106085:contour_grabcut:run-20260810-215654",
-      "observed_at_utc": "2026-08-10T22:01:14.575186+00:00",
+      "configured_threads": 4,
+      "mode": "full",
+      "observation_id": "31424162073:contour_grabcut:run-20260810-223743",
+      "observed_at_utc": "2026-08-10T22:37:42.297736+00:00",
       "resolved_strategy": "exhaustive",
-      "wall_clock_seconds": 259.674
+      "wall_clock_seconds": 11370.393
     },
     "contour_projection": {
       "configured_threads": 2,
@@ -20829,6 +20829,70 @@
       "scheduler_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
       "strategy_fallback_reason": null,
       "wall_clock_seconds": 259.674
+    },
+    {
+      "actual_page_evaluations": 32810,
+      "actual_parameter_sets": 6562,
+      "build": {
+        "event": "workflow_dispatch",
+        "github_run_attempt": "1",
+        "github_run_id": "31424162073",
+        "github_run_number": "285",
+        "mode": "full",
+        "pipeline_commit": "0ccc635b9a943e9d1b51eebf1d64706001971da3",
+        "ref": "refs/heads/main",
+        "repository": "dlstupka/hth",
+        "run_url": "https://github.com/dlstupka/hth/actions/runs/31424162073",
+        "workflow": "HTH detector regression"
+      },
+      "configured_threads": 4,
+      "detector_config_sha256": "4fddc0dbcd9b85c0e5858e12f5dbafd86a06a150039ac5efe5e0ff920fe26d70",
+      "detector_id": "contour_grabcut",
+      "detector_loading_strategy": "lpt",
+      "detector_pipeline_number": 1,
+      "detector_pipelines": 4,
+      "golden_set_pages": 5,
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "max_dimension": 1800,
+      "mode": "full",
+      "observation_id": "31424162073:contour_grabcut:run-20260810-223743",
+      "observed_at_utc": "2026-08-10T22:37:42.297736+00:00",
+      "parameter_set_limit": null,
+      "parameter_sets_per_second": 0.5770248915962592,
+      "pipeline_stagger_minutes": null,
+      "planned_parameter_sets": 6562,
+      "possible_parameter_sets": 6562,
+      "requested_strategy": "exhaustive",
+      "resolved_strategy": "exhaustive",
+      "run_id": "run-20260810-223743",
+      "runner": {
+        "available_cpu_count": 192,
+        "cpu_model": "AMD EPYC 9655 96-Core Processor",
+        "execution_environment": null,
+        "logical_cpu_count": 192,
+        "memory_gib": 503.27,
+        "memory_total_bytes": 540386168832,
+        "numpy_version": "2.5.2",
+        "opencv_benchmark_seconds": null,
+        "opencv_version": "5.0.0",
+        "physical_core_count": 192,
+        "python_version": "3.12.0",
+        "runner_arch": "X64",
+        "runner_environment": "self-hosted",
+        "runner_labels": [
+          "self-hosted",
+          "linux",
+          "x64",
+          "e9k"
+        ],
+        "runner_name": "rh8-al325",
+        "runner_os": "Linux",
+        "smt_enabled": false
+      },
+      "scheduler_estimate_seconds": null,
+      "scheduler_estimate_source": "single-detector",
+      "strategy_fallback_reason": null,
+      "wall_clock_seconds": 11370.393
     },
     {
       "actual_page_evaluations": 55,
@@ -52063,5 +52127,5 @@
     }
   ],
   "schema_version": "1.0",
-  "updated_at_utc": "2026-08-10T22:12:25.840756Z"
+  "updated_at_utc": "2026-08-10T22:37:52.238256Z"
 }
