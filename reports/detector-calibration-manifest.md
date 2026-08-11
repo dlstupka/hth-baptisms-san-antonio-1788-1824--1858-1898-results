@@ -110,7 +110,7 @@ This recommendation is specific to the evaluated Golden Set and parameter grid a
 | 9 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | complete | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 0.1764 pg/s | 1h 27m 47s | 3h 9m 30s |
 | 10 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | complete | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | 19684 | 83.60 pg/s | 11.1s | 3m 48s |
 | 11 | Contour Envelope | `contour` | Generator | `HTH-0001` | complete | `7aed2fc501c5` | `7aed2fc501c5` | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | 1458 | 145.59 pg/s | 6.4s | 4.6s |
-| 12 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | complete | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 10 | 0.0770 pg/s | 3h 21m 11s | 4m 8s |
+| 12 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | complete | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 10 | 0.0724 pg/s | 3h 33m 57s | 4m 10s |
 | 13 | Connected Components | `components` | Generator | `HTH-0001` | complete | `f1929c8e2655` | `f1929c8e2655` | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | 19683 | 237.69 pg/s | 3.9s | 40.8s |
 | 14 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | complete | `9647b030702e` | `9647b030702e` | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | 1458 | 4.771 pg/s | 3m 15s | 1m 31s |
 | 15 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | complete | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | 2187 | 13.20 pg/s | 1m 10s | 59s |
@@ -163,7 +163,7 @@ This table prefers compatible full calibrations when available and falls back to
 | 9 | Edge-Supported Contour | `edge_contour` | Hybrid (Contour Quad + LSD) | `HTH-0001` | 2026-08-10 | [#301](https://github.com/dlstupka/hth/actions/runs/31437186835) | 1m 8s | `4e5bc37a649a` | 13123 | exhaustive | 12.3% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.3377 | 8.6% | 8.6% | Medium | Recommended |
 | 10 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | 2026-08-10 | [#284](https://github.com/dlstupka/hth/actions/runs/31424160561) | 3m 48s | `14818b491952` | 19684 | exhaustive | 100.0% | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
 | 11 | Contour Envelope | `contour` | Generator | `HTH-0001` | 2026-08-10 | [#283](https://github.com/dlstupka/hth/actions/runs/31424159190) | 4.6s | `7aed2fc501c5` | 1458 | exhaustive | 50.0% | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | +0.1776 | 1.9% | 1.9% | Medium | Recommended |
-| 12 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-11 | [#307](https://github.com/dlstupka/hth/actions/runs/31506382475) | 4m 8s | `3817f226228a` | 10 | smoke | 100.0% | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
+| 12 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-11 | [#308](https://github.com/dlstupka/hth/actions/runs/31541789804) | 4m 10s | `3817f226228a` | 10 | smoke | 100.0% | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
 | 13 | Connected Components | `components` | Generator | `HTH-0001` | 2026-08-10 | [#281](https://github.com/dlstupka/hth/actions/runs/31424156590) | 40.8s | `f1929c8e2655` | 19683 | exhaustive | 75.8% | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | +0.0712 | 0.8% | 0.8% | Medium | Recommended |
 | 14 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | 2026-08-10 | [#296](https://github.com/dlstupka/hth/actions/runs/31424177450) | 1m 31s | `9647b030702e` | 1458 | exhaustive | 5.3% | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | +0.0710 | 0.4% | 0.4% | Medium | Recommended |
 | 15 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | 2026-08-10 | [#294](https://github.com/dlstupka/hth/actions/runs/31424174875) | 59s | `7546c5067527` | 2187 | exhaustive | 0.0% | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | +0.1964 | 1.2% | 0.4% | Medium | Recommended |
@@ -185,7 +185,7 @@ This table prefers compatible full calibrations when available and falls back to
 - **Calibration Evidence:** deterministic evidence score for how completely this run characterizes the evaluated Golden Set and parameter grid. Score 2 points for complete exhaustive coverage, 1 point when at least 90% of parameter sets succeed on every page, and 1 point when at least 1% of tested sets are within 0.001 Avg IoU of the winner. **Low** = 0–1 points, **Medium** = 2–3 points, and **High** = 4 points. This is not confidence that the detector generalizes beyond this Golden Set and grid.
 - **Approval Level:** automatic Golden Set-scoped engineering status derived from Search Type and Calibration Evidence. **Provisional** = smoke or unavailable evidence; **Candidate** = any reduced search or exhaustive search with Low evidence; **Recommended** = exhaustive search with Medium evidence; **Approved** = exhaustive search with High evidence. A different Golden Set requires its own calibration and approval.
 - **Evidence tables:** identify what each detector actually observes and whether that evidence generates, validates, filters, or scores a page hypothesis.
-- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/687682a0465619b8fe508a60516da703f7430d8f/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_radial_edge/run-20260807-024337/calibration-intelligence.json).
+- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/e8eb04b02e0212c521958316ce4b3765f827198e/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_radial_edge/run-20260807-024337/calibration-intelligence.json).
 - **Est. Serial Runtime\*\*:** Estimated single-detector serial runtime derived from recorded regression evidence; actual wall time varies with parallelism and scheduling.
 
 [↑ Back to Navigation](#table-of-contents)
@@ -1334,7 +1334,7 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 | All possible parameter sets | 354295 |
 | Parameter sets evaluated | 10 |
 | Evaluated sets (% of all possible parameter sets) | 0.0% |
-| Est. serial runtime for full parameter set evaluation* | 266d 9h 26m 55s |
+| Est. serial runtime for full parameter set evaluation* | 283d 7h 26m 55s |
 | Fully successful parameter sets | 10 (100.0%) |
 | Best Avg IoU | 0.8130 |
 | Minimum Avg IoU | 0.7986 |
@@ -1351,12 +1351,12 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 354295 | 100.0% | 266d 9h 37m 45s | 1.0× |
-| Non-dormant | 6144 | 1.7% | 4d 14h 52m 30s | 57.7× |
-| Low+ | 6144 | 1.7% | 4d 14h 52m 30s | 57.7× |
-| Moderate+ | 6144 | 1.7% | 4d 14h 52m 30s | 57.7× |
-| Important+ | 3072 | 0.9% | 2d 7h 26m 15s | 115.3× |
-| Critical | 512 | 0.1% | 9h 14m 22s | 692.0× |
+| Exhaustive | 354295 | 100.0% | 283d 7h 38m 26s | 1.0× |
+| Non-dormant | 6144 | 1.7% | 4d 21h 54m 57s | 57.7× |
+| Low+ | 6144 | 1.7% | 4d 21h 54m 57s | 57.7× |
+| Moderate+ | 6144 | 1.7% | 4d 21h 54m 57s | 57.7× |
+| Important+ | 3072 | 0.9% | 2d 10h 57m 29s | 115.3× |
+| Critical | 512 | 0.1% | 9h 49m 35s | 692.0× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
@@ -2022,11 +2022,11 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Detector runs completed | 18 of 18 | Successful detector regressions completed out of those scheduled. |
 | Parameter sets evaluated | 1181972 | Total detector parameter configurations evaluated across all runs. |
 | Golden Set page evaluations | 5909860 | Parameter sets multiplied by evaluated Golden Set pages. |
-| Aggregate detector runtime | 21h 33m 43s | Sum of detector wall-clock runtimes; this is not the elapsed time experienced by the user. |
-| Regression wall-clock span | 4d 12h 40m 51s | Earliest detector start through latest detector finish. |
-| Effective detector concurrency | 0.20× | Aggregate detector runtime divided by regression wall-clock span. |
-| Detector pipelines | mixed | Maximum concurrent detector regressions used by this build. |
-| Loading strategy | LPT | Strategy used to order the shared detector queue. |
+| Aggregate detector runtime | 21h 33m 45s | Sum of detector wall-clock runtimes; this is not the elapsed time experienced by the user. |
+| Regression wall-clock span | 4d 19h 39m 11s | Earliest detector start through latest detector finish. |
+| Effective detector concurrency | 0.19× | Aggregate detector runtime divided by regression wall-clock span. |
+| Detector pipelines | 4 | Maximum concurrent detector regressions used by this build. |
+| Loading strategy | LPT (Longest Processing Time first) | Strategy used to order the shared detector queue. |
 | Pipeline stagger | 0m | Delay between initial pipeline starts; replacement loads begin immediately. |
 | Source-document images | 929 | Total images recorded for the source document. |
 
@@ -2037,9 +2037,10 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Setting | Value |
 |---|---|
-| Detector pipelines | mixed |
-| Detector loading strategy | LPT |
-| Threads per detector regression | mixed |
+| Detector pipelines | 4 |
+| Detector loading strategy | LPT (Longest Processing Time first) |
+| Threads per detector regression | 2 |
+| Execution recommendation basis | runtime-index coherent build 31541789804 (18/18 detectors) |
 | Pipeline start stagger | 0m |
 | Runtime intelligence | `runtime-index.json` |
 | Parallelism intelligence | `parallelism-index.json` |
@@ -2049,26 +2050,26 @@ Detector pipelines pull continuously from one shared queue. Once a detector fini
 
 | Queue | Detector | Pipeline | Estimated Runtime | Scheduling Basis |
 |---:|---|---:|---:|---|
-| 1 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 1 | unknown | single-detector |
-| 1 | Border Energy Validator (`border_energy`) | 1 | unknown | single-detector |
-| 1 | Connected Components (`components`) | 1 | unknown | single-detector |
-| 1 | Contour Envelope (`contour`) | 1 | unknown | single-detector |
-| 1 | Consensus Quadrilateral (`consensus_quad`) | 1 | unknown | single-detector |
-| 1 | Contour + Components (`contour_components`) | 1 | unknown | single-detector |
-| 1 | Contour + GrabCut (`contour_grabcut`) | 1 | unknown | single-detector |
-| 1 | Contour + Projection (`contour_projection`) | 1 | unknown | single-detector |
-| 1 | Contour Quadrilateral (`contour_quad`) | 1 | unknown | single-detector |
-| 1 | Cross-Edge Contour (`cross_edge_contour`) | 1 | unknown | single-detector |
-| 1 | GrabCut Segmentation (`grabcut`) | 1 | unknown | single-detector |
-| 1 | Hough Line Borders (`hough`) | 1 | unknown | single-detector |
-| 1 | Line Segment Detector (`lsd`) | 1 | unknown | single-detector |
-| 1 | Radial Edge Search (`radial_edge`) | 1 | unknown | single-detector |
-| 1 | RANSAC Border Fit (`ransac`) | 1 | unknown | single-detector |
-| 1 | Gradient Boundary Voting (`gradient_vote`) | 1 | unknown | single-detector |
-| 1 | Edge-Supported Contour (`edge_contour`) | 1 | unknown | single-detector |
-| 3 | GrabCut + Contour (`grabcut_contour`) | 3 | 4m 7s | runtime-index:mode+strategy+threads+dimension+golden-set:score=124 |
+| 1 | GrabCut Segmentation (`grabcut`) | 1 | 6m 12s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 2 | Contour + GrabCut (`contour_grabcut`) | 2 | 4m 22s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 3 | GrabCut + Contour (`grabcut_contour`) | 3 | 4m 10s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 4 | Contour Quadrilateral (`contour_quad`) | 4 | 30.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 5 | Hough Line Borders (`hough`) | 4 | 29.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 6 | Consensus Quadrilateral (`consensus_quad`) | 4 | 19s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 7 | Contour + Projection (`contour_projection`) | 4 | 15.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 8 | Border Energy Validator (`border_energy`) | 4 | 14.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 9 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 4 | 13.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 10 | Cross-Edge Contour (`cross_edge_contour`) | 4 | 11.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 11 | Edge-Supported Contour (`edge_contour`) | 4 | 9.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 12 | Line Segment Detector (`lsd`) | 4 | 6.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 13 | Contour + Components (`contour_components`) | 4 | 5.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 14 | Connected Components (`components`) | 4 | 3.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 15 | Radial Edge Search (`radial_edge`) | 4 | 3.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 16 | RANSAC Border Fit (`ransac`) | 4 | 2.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 17 | Gradient Boundary Voting (`gradient_vote`) | 4 | 2.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 18 | Contour Envelope (`contour`) | 4 | 1.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
 
-Queue order reflects the selected loading strategy. LPT schedules the longest estimated detector work first, FIFO preserves configured detector order, and Ranked uses historical detector quality.
+Queue order reflects the selected loading strategy. LPT (Longest Processing Time first) schedules the longest estimated detector work first, FIFO preserves configured detector order, and Ranked uses historical detector quality.
 
 [↑ Back to Navigation](#table-of-contents)
 
@@ -2080,17 +2081,17 @@ Queue order reflects the selected loading strategy. LPT schedules the longest es
 | Setting | Recommended | Basis |
 |---|---|---|
 | Detector pipelines | 4 | Current HTH default for multi-detector regressions. |
-| Detector loading | LPT | Reduces the slow-detector tail by loading historically longest regressions first. |
-| Threads per detector regression | mixed | Preserve the current measured setting until runtime history supports a different thread recommendation. |
+| Detector loading | LPT (Longest Processing Time first) | Reduces the slow-detector tail by loading historically longest regressions first. |
+| Threads per detector regression | 2 | Preserve the current measured setting until runtime history supports a different thread recommendation. |
 | Startup stagger | 0m | Avoids idle startup time unless runner contention requires a stagger. |
 
 #### Estimated Runtime
 
 | All-Detector Regression Scope | Estimated Wall Time* |
 |---|---:|
-| Exhaustive | 102d 13h 3m 2s |
-| Non-dormant | 1d 21h 52m 23s |
-| Critical only | 6h 45m 41s |
+| Exhaustive | 37d 3h 50m 42s |
+| Non-dormant | 1d 1h 1m 59s |
+| Critical only | 13h 54m 49s |
 
 \* Estimates scale each detector's measured runtime to the selected effect-size domain, apply the normal bounded shard plan, and simulate shard-level LPT placement across the recommended detector pipelines. Effect-group fallback remains active when a detector has no parameter sets in the requested group.
 
@@ -5405,15 +5406,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: `run-20260811-152020`
+- Run ID: `run-20260811-221838`
 - Detector: `grabcut_contour`
 - Strategy: `exhaustive`
-- Pipeline commit: `42b3540f9390`
+- Pipeline commit: `cb49a3c2fe06`
 - Python: `3.12.13`
 - OpenCV: `5.0.0`
-- Started: `2026-08-11T15:20:20.723426+00:00`
-- Finished: `2026-08-11T15:24:28.607067+00:00`
-- Wall-clock elapsed: `4m 8s`
+- Started: `2026-08-11T22:18:38.392071+00:00`
+- Finished: `2026-08-11T22:22:48.219465+00:00`
+- Wall-clock elapsed: `4m 10s`
 - Est. serial runtime: `unknown`
 - Effective acceleration: `unknown`
 
@@ -5449,7 +5450,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Winner | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 1m 5s |
+| Winner | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 1m 9s |
 
 ### Detector Evidence
 
@@ -5481,17 +5482,17 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
 |---|---:|---:|---:|---|---:|
-| `auto` | 4 | 2 | 8 | `GitHub Actions 1000000459` | unknown |
+| `auto` | 4 | 2 | 8 | `GitHub Actions 1000000467` | 8 |
 
 ### Top Parameter Sets
 
 | Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | +0.0000 | 0.8130 | 0 | unknown | unknown |
-| 2 | `2a39748afbe3` | `2a39748afbe3` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 23s | 44.44% |
-| 3 | `ea911909ef98` | `ea911909ef98` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 22s | 33.33% |
-| 4 | `47e727acc335` | `47e727acc335` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 3m 2s | 66.67% |
-| 5 | `8a86732de560` | `8a86732de560` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 3m 1s | 55.56% |
+| 2 | `2a39748afbe3` | `2a39748afbe3` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 27s | 33.33% |
+| 3 | `ea911909ef98` | `ea911909ef98` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 33s | 44.44% |
+| 4 | `47e727acc335` | `47e727acc335` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 3m 4s | 55.56% |
+| 5 | `8a86732de560` | `8a86732de560` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 3m 9s | 66.67% |
 
 ## Page Analysis — grabcut_contour
 
@@ -5512,7 +5513,7 @@ The regression execution shape selected for this detector run is recorded here s
 | — | no history | no history | no history |
 
 Total winner changes: **0**.
-Search completed in **4m 8s** wall-clock time.
+Search completed in **4m 10s** wall-clock time.
 
 **Stabilization Interpretation:** Unavailable because the completed-search fraction was not recorded.
 
@@ -5543,14 +5544,14 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: `run-20260811-152020`
+- Calibration run ID: `run-20260811-221838`
 - Calibration schema: `1.1`
 - Detector: `grabcut_contour`
 - Detector configuration: `hth-pipeline/config/detectors/grabcut_contour.json`
 - Golden Set configuration: `hth-pipeline/config/golden_set.json`
 - Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
-- Pipeline commit: `42b3540f939069d227029e8fd4f49a6e1725f5ba`
-- Source commit: `9d715e9d19209df42930d4d3b041b8180e6664fb`
+- Pipeline commit: `cb49a3c2fe0611da33b08188e497c76c96dc5d3a`
+- Source commit: `687682a0465619b8fe508a60516da703f7430d8f`
 - Requested search strategy: `exhaustive`
 - Resolved search strategy: `exhaustive`
 - Strategy fallback: `none`
@@ -5591,7 +5592,7 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 | All possible parameter sets | 354295 |
 | Parameter sets evaluated | 10 |
 | Evaluated sets (% of all possible parameter sets) | 0.0% |
-| Est. serial runtime for full parameter set evaluation* | 266d 9h 26m 55s |
+| Est. serial runtime for full parameter set evaluation* | 283d 7h 26m 55s |
 | Fully successful parameter sets | 10 (100.0%) |
 | Best Avg IoU | 0.8130 |
 | Minimum Avg IoU | 0.7986 |
@@ -5608,12 +5609,12 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 354295 | 100.0% | 266d 9h 37m 45s | 1.0× |
-| Non-dormant | 6144 | 1.7% | 4d 14h 52m 30s | 57.7× |
-| Low+ | 6144 | 1.7% | 4d 14h 52m 30s | 57.7× |
-| Moderate+ | 6144 | 1.7% | 4d 14h 52m 30s | 57.7× |
-| Important+ | 3072 | 0.9% | 2d 7h 26m 15s | 115.3× |
-| Critical | 512 | 0.1% | 9h 14m 22s | 692.0× |
+| Exhaustive | 354295 | 100.0% | 283d 7h 38m 26s | 1.0× |
+| Non-dormant | 6144 | 1.7% | 4d 21h 54m 57s | 57.7× |
+| Low+ | 6144 | 1.7% | 4d 21h 54m 57s | 57.7× |
+| Moderate+ | 6144 | 1.7% | 4d 21h 54m 57s | 57.7× |
+| Important+ | 3072 | 0.9% | 2d 10h 57m 29s | 115.3× |
+| Critical | 512 | 0.1% | 9h 49m 35s | 692.0× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
@@ -7075,12 +7076,12 @@ Every completed regression contributes reusable quality and runtime evidence so 
 
 - `calibration-index.json` retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata.
 - Compatible authoritative calibrations remain preferred over provisional smoke observations.
-- Results commit: [687682a0465619b8fe508a60516da703f7430d8f](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/687682a0465619b8fe508a60516da703f7430d8f).
-- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/31541872212).
+- Results commit: [e8eb04b02e0212c521958316ce4b3765f827198e](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/e8eb04b02e0212c521958316ce4b3765f827198e).
+- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/31545184507).
 - Pipeline repository: [dlstupka/hth](https://github.com/dlstupka/hth).
 - Results repository: [dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results).
-- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/687682a0465619b8fe508a60516da703f7430d8f/calibration-index.json).
-- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/687682a0465619b8fe508a60516da703f7430d8f/runtime-index.json).
+- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/e8eb04b02e0212c521958316ce4b3765f827198e/calibration-index.json).
+- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/e8eb04b02e0212c521958316ce4b3765f827198e/runtime-index.json).
 - Smoke records are provisional; complete exhaustive full regressions are authoritative.
 
 [↑ Back to Navigation](#table-of-contents)
