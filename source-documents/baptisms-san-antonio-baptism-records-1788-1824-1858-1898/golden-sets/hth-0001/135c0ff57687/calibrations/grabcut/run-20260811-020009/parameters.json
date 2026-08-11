@@ -1,0 +1,237 @@
+{
+  "schema_version": "0.4",
+  "detector": "grabcut",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/grabcut.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": null,
+  "threads": 4,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "single-detector",
+    "queue_position": "1",
+    "ranked_quality": "unknown"
+  },
+  "shard": {
+    "count": 116,
+    "assignment": "interleaved",
+    "source_run_ids": [
+      "run-20260810-193627",
+      "run-20260810-194945",
+      "run-20260810-194954",
+      "run-20260810-194957",
+      "run-20260810-195005",
+      "run-20260810-200256",
+      "run-20260810-200317",
+      "run-20260810-200328",
+      "run-20260810-200334",
+      "run-20260810-201608",
+      "run-20260810-201633",
+      "run-20260810-201642",
+      "run-20260810-201649",
+      "run-20260810-202926",
+      "run-20260810-202946",
+      "run-20260810-202957",
+      "run-20260810-203017",
+      "run-20260810-204237",
+      "run-20260810-204259",
+      "run-20260810-204312",
+      "run-20260810-204323",
+      "run-20260810-205545",
+      "run-20260810-205608",
+      "run-20260810-205621",
+      "run-20260810-205630",
+      "run-20260810-210855",
+      "run-20260810-210909",
+      "run-20260810-210924",
+      "run-20260810-210932",
+      "run-20260810-212208",
+      "run-20260810-212224",
+      "run-20260810-212233",
+      "run-20260810-212240",
+      "run-20260810-213508",
+      "run-20260810-213518",
+      "run-20260810-213538",
+      "run-20260810-213541",
+      "run-20260810-214824",
+      "run-20260810-214829",
+      "run-20260810-214832",
+      "run-20260810-214835",
+      "run-20260810-220124",
+      "run-20260810-220130",
+      "run-20260810-220131",
+      "run-20260810-220142",
+      "run-20260810-221433",
+      "run-20260810-221435",
+      "run-20260810-221441",
+      "run-20260810-221448",
+      "run-20260810-222735",
+      "run-20260810-222748",
+      "run-20260810-222750",
+      "run-20260810-224038",
+      "run-20260810-224042",
+      "run-20260810-224047",
+      "run-20260810-224049",
+      "run-20260810-225335",
+      "run-20260810-225339",
+      "run-20260810-225358",
+      "run-20260810-225402",
+      "run-20260810-230629",
+      "run-20260810-230652",
+      "run-20260810-230712",
+      "run-20260810-230722",
+      "run-20260810-231939",
+      "run-20260810-232007",
+      "run-20260810-232029",
+      "run-20260810-232039",
+      "run-20260810-233304",
+      "run-20260810-233313",
+      "run-20260810-233341",
+      "run-20260810-233404",
+      "run-20260810-234626",
+      "run-20260810-234630",
+      "run-20260810-234705",
+      "run-20260810-234721",
+      "run-20260810-235943",
+      "run-20260810-235948",
+      "run-20260811-000030",
+      "run-20260811-000037",
+      "run-20260811-001311",
+      "run-20260811-001316",
+      "run-20260811-001337",
+      "run-20260811-001354",
+      "run-20260811-002624",
+      "run-20260811-002625",
+      "run-20260811-002653",
+      "run-20260811-002713",
+      "run-20260811-003925",
+      "run-20260811-004009",
+      "run-20260811-004025",
+      "run-20260811-005232",
+      "run-20260811-005237",
+      "run-20260811-005316",
+      "run-20260811-005346",
+      "run-20260811-010539",
+      "run-20260811-010549",
+      "run-20260811-010623",
+      "run-20260811-010654",
+      "run-20260811-011845",
+      "run-20260811-011855",
+      "run-20260811-011941",
+      "run-20260811-012019",
+      "run-20260811-013158",
+      "run-20260811-013204",
+      "run-20260811-013302",
+      "run-20260811-013329",
+      "run-20260811-014510",
+      "run-20260811-014610",
+      "run-20260811-014656"
+    ]
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "grabcut",
+    "description": "Black-box calibration space for the HTH GrabCut geometry detector.",
+    "profiles": {
+      "baseline": {
+        "border_fraction": 0.02,
+        "erosion_kernel_fraction": 0.015,
+        "erosion_iterations": 1,
+        "grabcut_iterations": 3,
+        "close_kernel_fraction": 0.02,
+        "close_iterations": 1,
+        "minimum_bbox_area_fraction": 0.1,
+        "minimum_contour_area_fraction": 0.04,
+        "polygon_epsilon_fraction": 0.018
+      }
+    },
+    "parameters": {
+      "border_fraction": {
+        "type": "float",
+        "values": [
+          0.01,
+          0.02,
+          0.03
+        ]
+      },
+      "erosion_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0075,
+          0.015,
+          0.025
+        ]
+      },
+      "erosion_iterations": {
+        "type": "integer",
+        "values": [
+          0,
+          1,
+          2
+        ]
+      },
+      "grabcut_iterations": {
+        "type": "integer",
+        "values": [
+          1,
+          3,
+          5
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.01,
+          0.02,
+          0.035
+        ]
+      },
+      "close_iterations": {
+        "type": "integer",
+        "values": [
+          1,
+          2
+        ]
+      },
+      "minimum_bbox_area_fraction": {
+        "type": "float",
+        "values": [
+          0.07,
+          0.1,
+          0.15
+        ]
+      },
+      "minimum_contour_area_fraction": {
+        "type": "float",
+        "values": [
+          0.02,
+          0.04,
+          0.07
+        ]
+      },
+      "polygon_epsilon_fraction": {
+        "type": "float",
+        "values": [
+          0.01,
+          0.018,
+          0.03
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    }
+  }
+}
