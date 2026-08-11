@@ -47,25 +47,15 @@
   "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
   "winner": {
     "parameter_set_id": "7546c5067527",
+    "profile": null,
     "parameters": {
-      "refine_mode": "none",
-      "scale": 0.8,
-      "minimum_length_fraction": 0.22,
       "axis_angle_tolerance_degrees": 10.0,
-      "outer_percentile": 5.0,
+      "bbox_padding_fraction": 0.005,
       "minimum_bbox_area_fraction": 0.08,
-      "bbox_padding_fraction": 0.005
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 4,
-      "failure_count": 1,
-      "mean_iou": 0.73776731,
-      "minimum_iou": 0.0,
-      "stddev_iou": 0.3720797,
-      "mean_edge_error_px": 23.312,
-      "elapsed_ms_total": 378.649,
-      "wall_ms": 379.078
+      "minimum_length_fraction": 0.22,
+      "outer_percentile": 5.0,
+      "refine_mode": "none",
+      "scale": 0.8
     },
     "pages": [
       {
@@ -73,6 +63,16 @@
         "label": "ordinary_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.91017546,
+        "edge_errors": {
+          "left": 110.0,
+          "top": 1.0,
+          "right": 2.0,
+          "bottom": 1.0
+        },
+        "edge_error_mean_px": 28.5,
+        "edge_error_maximum_px": 110.0,
+        "elapsed_ms": 95.674,
         "approved_bbox": [
           125,
           56,
@@ -85,79 +85,6 @@
           1287,
           968
         ],
-        "iou": 0.91017546,
-        "edge_errors": {
-          "left": 110,
-          "top": 1,
-          "right": 2,
-          "bottom": 1,
-          "mean": 28.5,
-          "maximum": 110
-        },
-        "edge_error_mean_px": 28.5,
-        "edge_error_maximum_px": 110,
-        "elapsed_ms": 95.674,
-        "candidate": {
-          "method": "lsd",
-          "bbox": [
-            15,
-            57,
-            1287,
-            968
-          ],
-          "corners": [
-            [
-              15.0,
-              57.0
-            ],
-            [
-              1287.0,
-              57.0
-            ],
-            [
-              1287.0,
-              968.0
-            ],
-            [
-              15.0,
-              968.0
-            ]
-          ],
-          "confidence": 0.88128,
-          "score": 0.88128,
-          "diagnostics": {
-            "parameters": {
-              "refine_mode": "none",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.22,
-              "axis_angle_tolerance_degrees": 10.0,
-              "outer_percentile": 5.0,
-              "minimum_bbox_area_fraction": 0.08,
-              "bbox_padding_fraction": 0.005
-            },
-            "line_segments": 4713,
-            "vertical_segments": 10,
-            "horizontal_segments": 5,
-            "minimum_length_px": 216.92,
-            "bbox_area_fraction": 0.850395,
-            "mask_score": 0.901828,
-            "support_score": 0.75,
-            "area_score": 1.0,
-            "elapsed_ms": 95.646
-          },
-          "status": "ok",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -167,6 +94,16 @@
         "label": "damaged_partial_register_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.98496522,
+        "edge_errors": {
+          "left": 2.0,
+          "top": 7.0,
+          "right": 6.0,
+          "bottom": 1.0
+        },
+        "edge_error_mean_px": 4.0,
+        "edge_error_maximum_px": 7.0,
+        "elapsed_ms": 72.474,
         "approved_bbox": [
           67,
           8,
@@ -179,79 +116,6 @@
           1227,
           976
         ],
-        "iou": 0.98496522,
-        "edge_errors": {
-          "left": 2,
-          "top": 7,
-          "right": 6,
-          "bottom": 1,
-          "mean": 4.0,
-          "maximum": 7
-        },
-        "edge_error_mean_px": 4.0,
-        "edge_error_maximum_px": 7,
-        "elapsed_ms": 72.474,
-        "candidate": {
-          "method": "lsd",
-          "bbox": [
-            65,
-            15,
-            1227,
-            976
-          ],
-          "corners": [
-            [
-              65.0,
-              15.0
-            ],
-            [
-              1227.0,
-              15.0
-            ],
-            [
-              1227.0,
-              976.0
-            ],
-            [
-              65.0,
-              976.0
-            ]
-          ],
-          "confidence": 0.741407,
-          "score": 0.741407,
-          "diagnostics": {
-            "parameters": {
-              "refine_mode": "none",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.22,
-              "axis_angle_tolerance_degrees": 10.0,
-              "outer_percentile": 5.0,
-              "minimum_bbox_area_fraction": 0.08,
-              "bbox_padding_fraction": 0.005
-            },
-            "line_segments": 2532,
-            "vertical_segments": 13,
-            "horizontal_segments": 2,
-            "minimum_length_px": 217.14,
-            "bbox_area_fraction": 0.859719,
-            "mask_score": 0.702011,
-            "support_score": 0.75,
-            "area_score": 1.0,
-            "elapsed_ms": 72.441
-          },
-          "status": "ok",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -262,45 +126,12 @@
         "layout_type": "single_page",
         "status": "no_candidate",
         "iou": 0.0,
+        "edge_errors": {},
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
         "elapsed_ms": 45.697,
-        "candidate": {
-          "method": "lsd",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
-          "diagnostics": {
-            "reason": "insufficient_axis_segments",
-            "parameters": {
-              "refine_mode": "none",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.22,
-              "axis_angle_tolerance_degrees": 10.0,
-              "outer_percentile": 5.0,
-              "minimum_bbox_area_fraction": 0.08,
-              "bbox_padding_fraction": 0.005
-            },
-            "line_segments": 1372,
-            "vertical_segments": 2,
-            "horizontal_segments": 1,
-            "minimum_length_px": 216.26,
-            "elapsed_ms": 45.663
-          },
-          "status": "no_candidate",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
+        "approved_bbox": null,
+        "predicted_bbox": null,
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -310,6 +141,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.83996548,
+        "edge_errors": {
+          "left": 14.0,
+          "top": 3.0,
+          "right": 173.0,
+          "bottom": 2.0
+        },
+        "edge_error_mean_px": 48.0,
+        "edge_error_maximum_px": 173.0,
+        "elapsed_ms": 89.277,
         "approved_bbox": [
           84,
           51,
@@ -322,79 +163,6 @@
           1274,
           943
         ],
-        "iou": 0.83996548,
-        "edge_errors": {
-          "left": 14,
-          "top": 3,
-          "right": 173,
-          "bottom": 2,
-          "mean": 48.0,
-          "maximum": 173
-        },
-        "edge_error_mean_px": 48.0,
-        "edge_error_maximum_px": 173,
-        "elapsed_ms": 89.277,
-        "candidate": {
-          "method": "lsd",
-          "bbox": [
-            70,
-            48,
-            1274,
-            943
-          ],
-          "corners": [
-            [
-              70.0,
-              48.0
-            ],
-            [
-              1274.0,
-              48.0
-            ],
-            [
-              1274.0,
-              943.0
-            ],
-            [
-              70.0,
-              943.0
-            ]
-          ],
-          "confidence": 0.881204,
-          "score": 0.881204,
-          "diagnostics": {
-            "parameters": {
-              "refine_mode": "none",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.22,
-              "axis_angle_tolerance_degrees": 10.0,
-              "outer_percentile": 5.0,
-              "minimum_bbox_area_fraction": 0.08,
-              "bbox_padding_fraction": 0.005
-            },
-            "line_segments": 3373,
-            "vertical_segments": 9,
-            "horizontal_segments": 4,
-            "minimum_length_px": 216.7,
-            "bbox_area_fraction": 0.849371,
-            "mask_score": 0.930291,
-            "support_score": 0.65,
-            "area_score": 1.0,
-            "elapsed_ms": 89.248
-          },
-          "status": "ok",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -404,6 +172,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.95373041,
+        "edge_errors": {
+          "left": 15.0,
+          "top": 3.0,
+          "right": 32.0,
+          "bottom": 1.0
+        },
+        "edge_error_mean_px": 12.75,
+        "edge_error_maximum_px": 32.0,
+        "elapsed_ms": 75.527,
         "approved_bbox": [
           88,
           33,
@@ -416,79 +194,6 @@
           1186,
           967
         ],
-        "iou": 0.95373041,
-        "edge_errors": {
-          "left": 15,
-          "top": 3,
-          "right": 32,
-          "bottom": 1,
-          "mean": 12.75,
-          "maximum": 32
-        },
-        "edge_error_mean_px": 12.75,
-        "edge_error_maximum_px": 32,
-        "elapsed_ms": 75.527,
-        "candidate": {
-          "method": "lsd",
-          "bbox": [
-            73,
-            30,
-            1186,
-            967
-          ],
-          "corners": [
-            [
-              73.0,
-              30.0
-            ],
-            [
-              1186.0,
-              30.0
-            ],
-            [
-              1186.0,
-              967.0
-            ],
-            [
-              73.0,
-              967.0
-            ]
-          ],
-          "confidence": 0.86999,
-          "score": 0.86999,
-          "diagnostics": {
-            "parameters": {
-              "refine_mode": "none",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.22,
-              "axis_angle_tolerance_degrees": 10.0,
-              "outer_percentile": 5.0,
-              "minimum_bbox_area_fraction": 0.08,
-              "bbox_padding_fraction": 0.005
-            },
-            "line_segments": 3451,
-            "vertical_segments": 6,
-            "horizontal_segments": 3,
-            "minimum_length_px": 217.8,
-            "bbox_area_fraction": 0.830769,
-            "mask_score": 0.971414,
-            "support_score": 0.45,
-            "area_score": 1.0,
-            "elapsed_ms": 75.498
-          },
-          "status": "ok",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -500,34 +205,35 @@
       "elapsed_seconds": 7.879601600987371,
       "search_fraction": 0.18572735590118938
     },
-    "profile": null,
-    "run_id": "run-20260810-195852",
-    "rank": 1,
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.73776731,
+      "mean_iou_success": 0.92220914,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.3720797,
+      "mean_edge_error_px": 23.312,
+      "elapsed_ms_total": 378.649,
+      "wall_ms": 378.649
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 1,
+    "run_id": "run-20260810-195852"
   },
   "baseline": {
     "parameter_set_id": "b2df04f4e947",
+    "profile": "baseline",
     "parameters": {
-      "refine_mode": "std",
-      "scale": 0.8,
-      "minimum_length_fraction": 0.14,
       "axis_angle_tolerance_degrees": 18.0,
-      "outer_percentile": 10.0,
+      "bbox_padding_fraction": 0.0,
       "minimum_bbox_area_fraction": 0.1,
-      "bbox_padding_fraction": 0.0
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 3,
-      "failure_count": 2,
-      "mean_iou": 0.54140109,
-      "minimum_iou": 0.0,
-      "stddev_iou": 0.44360345,
-      "mean_edge_error_px": 29.25,
-      "elapsed_ms_total": 331.907,
-      "wall_ms": 332.548
+      "minimum_length_fraction": 0.14,
+      "outer_percentile": 10.0,
+      "refine_mode": "std",
+      "scale": 0.8
     },
     "pages": [
       {
@@ -535,6 +241,16 @@
         "label": "ordinary_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.89548147,
+        "edge_errors": {
+          "left": 105.0,
+          "top": 8.0,
+          "right": 9.0,
+          "bottom": 8.0
+        },
+        "edge_error_mean_px": 32.5,
+        "edge_error_maximum_px": 105.0,
+        "elapsed_ms": 86.043,
         "approved_bbox": [
           125,
           56,
@@ -547,79 +263,6 @@
           1280,
           959
         ],
-        "iou": 0.89548147,
-        "edge_errors": {
-          "left": 105,
-          "top": 8,
-          "right": 9,
-          "bottom": 8,
-          "mean": 32.5,
-          "maximum": 105
-        },
-        "edge_error_mean_px": 32.5,
-        "edge_error_maximum_px": 105,
-        "elapsed_ms": 86.043,
-        "candidate": {
-          "method": "lsd",
-          "bbox": [
-            20,
-            64,
-            1280,
-            959
-          ],
-          "corners": [
-            [
-              20.0,
-              64.0
-            ],
-            [
-              1280.0,
-              64.0
-            ],
-            [
-              1280.0,
-              959.0
-            ],
-            [
-              20.0,
-              959.0
-            ]
-          ],
-          "confidence": 0.878966,
-          "score": 0.878966,
-          "diagnostics": {
-            "parameters": {
-              "refine_mode": "std",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.14,
-              "axis_angle_tolerance_degrees": 18.0,
-              "outer_percentile": 10.0,
-              "minimum_bbox_area_fraction": 0.1,
-              "bbox_padding_fraction": 0.0
-            },
-            "line_segments": 5148,
-            "vertical_segments": 12,
-            "horizontal_segments": 2,
-            "minimum_length_px": 138.04,
-            "bbox_area_fraction": 0.827577,
-            "mask_score": 0.912809,
-            "support_score": 0.7,
-            "area_score": 1.0,
-            "elapsed_ms": 85.993
-          },
-          "status": "ok",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -630,44 +273,12 @@
         "layout_type": "two_page_spread",
         "status": "no_candidate",
         "iou": 0.0,
+        "edge_errors": {},
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
         "elapsed_ms": 70.983,
-        "candidate": {
-          "method": "lsd",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
-          "diagnostics": {
-            "reason": "lsd_envelope_too_small",
-            "parameters": {
-              "refine_mode": "std",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.14,
-              "axis_angle_tolerance_degrees": 18.0,
-              "outer_percentile": 10.0,
-              "minimum_bbox_area_fraction": 0.1,
-              "bbox_padding_fraction": 0.0
-            },
-            "bbox_area_fraction": 0.002587,
-            "vertical_segments": 9,
-            "horizontal_segments": 2,
-            "elapsed_ms": 70.934
-          },
-          "status": "no_candidate",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
+        "approved_bbox": null,
+        "predicted_bbox": null,
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -678,44 +289,12 @@
         "layout_type": "single_page",
         "status": "no_candidate",
         "iou": 0.0,
+        "edge_errors": {},
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
         "elapsed_ms": 34.591,
-        "candidate": {
-          "method": "lsd",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
-          "diagnostics": {
-            "reason": "lsd_envelope_too_small",
-            "parameters": {
-              "refine_mode": "std",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.14,
-              "axis_angle_tolerance_degrees": 18.0,
-              "outer_percentile": 10.0,
-              "minimum_bbox_area_fraction": 0.1,
-              "bbox_padding_fraction": 0.0
-            },
-            "bbox_area_fraction": 0.002959,
-            "vertical_segments": 2,
-            "horizontal_segments": 2,
-            "elapsed_ms": 34.556
-          },
-          "status": "no_candidate",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
+        "approved_bbox": null,
+        "predicted_bbox": null,
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -725,6 +304,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.84745601,
+        "edge_errors": {
+          "left": 7.0,
+          "top": 3.0,
+          "right": 168.0,
+          "bottom": 4.0
+        },
+        "edge_error_mean_px": 45.5,
+        "edge_error_maximum_px": 168.0,
+        "elapsed_ms": 67.666,
         "approved_bbox": [
           84,
           51,
@@ -737,79 +326,6 @@
           1269,
           937
         ],
-        "iou": 0.84745601,
-        "edge_errors": {
-          "left": 7,
-          "top": 3,
-          "right": 168,
-          "bottom": 4,
-          "mean": 45.5,
-          "maximum": 168
-        },
-        "edge_error_mean_px": 45.5,
-        "edge_error_maximum_px": 168,
-        "elapsed_ms": 67.666,
-        "candidate": {
-          "method": "lsd",
-          "bbox": [
-            77,
-            54,
-            1269,
-            937
-          ],
-          "corners": [
-            [
-              77.0,
-              54.0
-            ],
-            [
-              1269.0,
-              54.0
-            ],
-            [
-              1269.0,
-              937.0
-            ],
-            [
-              77.0,
-              937.0
-            ]
-          ],
-          "confidence": 0.936445,
-          "score": 0.936445,
-          "diagnostics": {
-            "parameters": {
-              "refine_mode": "std",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.14,
-              "axis_angle_tolerance_degrees": 18.0,
-              "outer_percentile": 10.0,
-              "minimum_bbox_area_fraction": 0.1,
-              "bbox_padding_fraction": 0.0
-            },
-            "line_segments": 3591,
-            "vertical_segments": 12,
-            "horizontal_segments": 6,
-            "minimum_length_px": 137.9,
-            "bbox_area_fraction": 0.829631,
-            "mask_score": 0.937778,
-            "support_score": 0.9,
-            "area_score": 1.0,
-            "elapsed_ms": 67.634
-          },
-          "status": "ok",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -819,6 +335,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.96406795,
+        "edge_errors": {
+          "left": 10.0,
+          "top": 1.0,
+          "right": 24.0,
+          "bottom": 4.0
+        },
+        "edge_error_mean_px": 9.75,
+        "edge_error_maximum_px": 24.0,
+        "elapsed_ms": 72.624,
         "approved_bbox": [
           88,
           33,
@@ -831,113 +357,41 @@
           1178,
           964
         ],
-        "iou": 0.96406795,
-        "edge_errors": {
-          "left": 10,
-          "top": 1,
-          "right": 24,
-          "bottom": 4,
-          "mean": 9.75,
-          "maximum": 24
-        },
-        "edge_error_mean_px": 9.75,
-        "edge_error_maximum_px": 24,
-        "elapsed_ms": 72.624,
-        "candidate": {
-          "method": "lsd",
-          "bbox": [
-            78,
-            34,
-            1178,
-            964
-          ],
-          "corners": [
-            [
-              78.0,
-              34.0
-            ],
-            [
-              1178.0,
-              34.0
-            ],
-            [
-              1178.0,
-              964.0
-            ],
-            [
-              78.0,
-              964.0
-            ]
-          ],
-          "confidence": 0.986156,
-          "score": 0.986156,
-          "diagnostics": {
-            "parameters": {
-              "refine_mode": "std",
-              "scale": 0.8,
-              "minimum_length_fraction": 0.14,
-              "axis_angle_tolerance_degrees": 18.0,
-              "outer_percentile": 10.0,
-              "minimum_bbox_area_fraction": 0.1,
-              "bbox_padding_fraction": 0.0
-            },
-            "line_segments": 3719,
-            "vertical_segments": 14,
-            "horizontal_segments": 7,
-            "minimum_length_px": 138.6,
-            "bbox_area_fraction": 0.814932,
-            "mask_score": 0.980223,
-            "support_score": 1.0,
-            "area_score": 1.0,
-            "elapsed_ms": 72.582
-          },
-          "status": "ok",
-          "detector_name": "Line Segment Detector",
-          "origin": "OpenCV",
-          "foundation": [
-            "LSD",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
       }
     ],
-    "profile": "baseline",
-    "run_id": "run-20260810-195852",
-    "rank": 775,
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.54140109,
+      "mean_iou_success": 0.90233514,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.44360345,
+      "mean_edge_error_px": 29.25,
+      "elapsed_ms_total": 331.907,
+      "wall_ms": 331.907
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 775,
+    "run_id": "run-20260810-195852"
   },
   "top_parameter_sets": [
     {
       "parameter_set_id": "7546c5067527",
+      "profile": null,
       "parameters": {
-        "refine_mode": "none",
-        "scale": 0.8,
-        "minimum_length_fraction": 0.22,
         "axis_angle_tolerance_degrees": 10.0,
-        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.005,
         "minimum_bbox_area_fraction": 0.08,
-        "bbox_padding_fraction": 0.005
-      },
-      "summary": {
-        "page_count": 5,
-        "success_count": 4,
-        "failure_count": 1,
-        "mean_iou": 0.73776731,
-        "minimum_iou": 0.0,
-        "stddev_iou": 0.3720797,
-        "mean_edge_error_px": 23.312,
-        "elapsed_ms_total": 378.649,
-        "wall_ms": 379.078
+        "minimum_length_fraction": 0.22,
+        "outer_percentile": 5.0,
+        "refine_mode": "none",
+        "scale": 0.8
       },
       "pages": [
         {
@@ -945,6 +399,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.91017546,
+          "edge_errors": {
+            "left": 110.0,
+            "top": 1.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 28.5,
+          "edge_error_maximum_px": 110.0,
+          "elapsed_ms": 95.674,
           "approved_bbox": [
             125,
             56,
@@ -957,79 +421,6 @@
             1287,
             968
           ],
-          "iou": 0.91017546,
-          "edge_errors": {
-            "left": 110,
-            "top": 1,
-            "right": 2,
-            "bottom": 1,
-            "mean": 28.5,
-            "maximum": 110
-          },
-          "edge_error_mean_px": 28.5,
-          "edge_error_maximum_px": 110,
-          "elapsed_ms": 95.674,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              15,
-              57,
-              1287,
-              968
-            ],
-            "corners": [
-              [
-                15.0,
-                57.0
-              ],
-              [
-                1287.0,
-                57.0
-              ],
-              [
-                1287.0,
-                968.0
-              ],
-              [
-                15.0,
-                968.0
-              ]
-            ],
-            "confidence": 0.88128,
-            "score": 0.88128,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 4713,
-              "vertical_segments": 10,
-              "horizontal_segments": 5,
-              "minimum_length_px": 216.92,
-              "bbox_area_fraction": 0.850395,
-              "mask_score": 0.901828,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 95.646
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1039,6 +430,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.98496522,
+          "edge_errors": {
+            "left": 2.0,
+            "top": 7.0,
+            "right": 6.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 4.0,
+          "edge_error_maximum_px": 7.0,
+          "elapsed_ms": 72.474,
           "approved_bbox": [
             67,
             8,
@@ -1051,79 +452,6 @@
             1227,
             976
           ],
-          "iou": 0.98496522,
-          "edge_errors": {
-            "left": 2,
-            "top": 7,
-            "right": 6,
-            "bottom": 1,
-            "mean": 4.0,
-            "maximum": 7
-          },
-          "edge_error_mean_px": 4.0,
-          "edge_error_maximum_px": 7,
-          "elapsed_ms": 72.474,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              65,
-              15,
-              1227,
-              976
-            ],
-            "corners": [
-              [
-                65.0,
-                15.0
-              ],
-              [
-                1227.0,
-                15.0
-              ],
-              [
-                1227.0,
-                976.0
-              ],
-              [
-                65.0,
-                976.0
-              ]
-            ],
-            "confidence": 0.741407,
-            "score": 0.741407,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 2532,
-              "vertical_segments": 13,
-              "horizontal_segments": 2,
-              "minimum_length_px": 217.14,
-              "bbox_area_fraction": 0.859719,
-              "mask_score": 0.702011,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 72.441
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1134,45 +462,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 45.697,
-          "candidate": {
-            "method": "lsd",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "reason": "insufficient_axis_segments",
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 1372,
-              "vertical_segments": 2,
-              "horizontal_segments": 1,
-              "minimum_length_px": 216.26,
-              "elapsed_ms": 45.663
-            },
-            "status": "no_candidate",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1182,6 +477,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.83996548,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 3.0,
+            "right": 173.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 48.0,
+          "edge_error_maximum_px": 173.0,
+          "elapsed_ms": 89.277,
           "approved_bbox": [
             84,
             51,
@@ -1194,79 +499,6 @@
             1274,
             943
           ],
-          "iou": 0.83996548,
-          "edge_errors": {
-            "left": 14,
-            "top": 3,
-            "right": 173,
-            "bottom": 2,
-            "mean": 48.0,
-            "maximum": 173
-          },
-          "edge_error_mean_px": 48.0,
-          "edge_error_maximum_px": 173,
-          "elapsed_ms": 89.277,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              70,
-              48,
-              1274,
-              943
-            ],
-            "corners": [
-              [
-                70.0,
-                48.0
-              ],
-              [
-                1274.0,
-                48.0
-              ],
-              [
-                1274.0,
-                943.0
-              ],
-              [
-                70.0,
-                943.0
-              ]
-            ],
-            "confidence": 0.881204,
-            "score": 0.881204,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3373,
-              "vertical_segments": 9,
-              "horizontal_segments": 4,
-              "minimum_length_px": 216.7,
-              "bbox_area_fraction": 0.849371,
-              "mask_score": 0.930291,
-              "support_score": 0.65,
-              "area_score": 1.0,
-              "elapsed_ms": 89.248
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1276,6 +508,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95373041,
+          "edge_errors": {
+            "left": 15.0,
+            "top": 3.0,
+            "right": 32.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 32.0,
+          "elapsed_ms": 75.527,
           "approved_bbox": [
             88,
             33,
@@ -1288,79 +530,6 @@
             1186,
             967
           ],
-          "iou": 0.95373041,
-          "edge_errors": {
-            "left": 15,
-            "top": 3,
-            "right": 32,
-            "bottom": 1,
-            "mean": 12.75,
-            "maximum": 32
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 32,
-          "elapsed_ms": 75.527,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              73,
-              30,
-              1186,
-              967
-            ],
-            "corners": [
-              [
-                73.0,
-                30.0
-              ],
-              [
-                1186.0,
-                30.0
-              ],
-              [
-                1186.0,
-                967.0
-              ],
-              [
-                73.0,
-                967.0
-              ]
-            ],
-            "confidence": 0.86999,
-            "score": 0.86999,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3451,
-              "vertical_segments": 6,
-              "horizontal_segments": 3,
-              "minimum_length_px": 217.8,
-              "bbox_area_fraction": 0.830769,
-              "mask_score": 0.971414,
-              "support_score": 0.45,
-              "area_score": 1.0,
-              "elapsed_ms": 75.498
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1372,34 +541,35 @@
         "elapsed_seconds": 7.879601600987371,
         "search_fraction": 0.18572735590118938
       },
-      "profile": null,
-      "run_id": "run-20260810-195852",
-      "rank": 1,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "05a653fabdd0",
-      "parameters": {
-        "refine_mode": "none",
-        "scale": 0.8,
-        "minimum_length_fraction": 0.22,
-        "axis_angle_tolerance_degrees": 10.0,
-        "outer_percentile": 5.0,
-        "minimum_bbox_area_fraction": 0.1,
-        "bbox_padding_fraction": 0.005
-      },
       "summary": {
         "page_count": 5,
         "success_count": 4,
         "failure_count": 1,
         "mean_iou": 0.73776731,
+        "mean_iou_success": 0.92220914,
         "minimum_iou": 0.0,
         "stddev_iou": 0.3720797,
         "mean_edge_error_px": 23.312,
-        "elapsed_ms_total": 452.296,
-        "wall_ms": 452.757
+        "elapsed_ms_total": 378.649,
+        "wall_ms": 378.649
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 1,
+      "run_id": "run-20260810-195852"
+    },
+    {
+      "parameter_set_id": "05a653fabdd0",
+      "profile": null,
+      "parameters": {
+        "axis_angle_tolerance_degrees": 10.0,
+        "bbox_padding_fraction": 0.005,
+        "minimum_bbox_area_fraction": 0.1,
+        "minimum_length_fraction": 0.22,
+        "outer_percentile": 5.0,
+        "refine_mode": "none",
+        "scale": 0.8
       },
       "pages": [
         {
@@ -1407,6 +577,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.91017546,
+          "edge_errors": {
+            "left": 110.0,
+            "top": 1.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 28.5,
+          "edge_error_maximum_px": 110.0,
+          "elapsed_ms": 117.451,
           "approved_bbox": [
             125,
             56,
@@ -1419,79 +599,6 @@
             1287,
             968
           ],
-          "iou": 0.91017546,
-          "edge_errors": {
-            "left": 110,
-            "top": 1,
-            "right": 2,
-            "bottom": 1,
-            "mean": 28.5,
-            "maximum": 110
-          },
-          "edge_error_mean_px": 28.5,
-          "edge_error_maximum_px": 110,
-          "elapsed_ms": 117.451,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              15,
-              57,
-              1287,
-              968
-            ],
-            "corners": [
-              [
-                15.0,
-                57.0
-              ],
-              [
-                1287.0,
-                57.0
-              ],
-              [
-                1287.0,
-                968.0
-              ],
-              [
-                15.0,
-                968.0
-              ]
-            ],
-            "confidence": 0.88128,
-            "score": 0.88128,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 4713,
-              "vertical_segments": 10,
-              "horizontal_segments": 5,
-              "minimum_length_px": 216.92,
-              "bbox_area_fraction": 0.850395,
-              "mask_score": 0.901828,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 117.422
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1501,6 +608,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.98496522,
+          "edge_errors": {
+            "left": 2.0,
+            "top": 7.0,
+            "right": 6.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 4.0,
+          "edge_error_maximum_px": 7.0,
+          "elapsed_ms": 108.057,
           "approved_bbox": [
             67,
             8,
@@ -1513,79 +630,6 @@
             1227,
             976
           ],
-          "iou": 0.98496522,
-          "edge_errors": {
-            "left": 2,
-            "top": 7,
-            "right": 6,
-            "bottom": 1,
-            "mean": 4.0,
-            "maximum": 7
-          },
-          "edge_error_mean_px": 4.0,
-          "edge_error_maximum_px": 7,
-          "elapsed_ms": 108.057,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              65,
-              15,
-              1227,
-              976
-            ],
-            "corners": [
-              [
-                65.0,
-                15.0
-              ],
-              [
-                1227.0,
-                15.0
-              ],
-              [
-                1227.0,
-                976.0
-              ],
-              [
-                65.0,
-                976.0
-              ]
-            ],
-            "confidence": 0.741407,
-            "score": 0.741407,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 2532,
-              "vertical_segments": 13,
-              "horizontal_segments": 2,
-              "minimum_length_px": 217.14,
-              "bbox_area_fraction": 0.859719,
-              "mask_score": 0.702011,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 108.014
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1596,45 +640,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 50.34,
-          "candidate": {
-            "method": "lsd",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "reason": "insufficient_axis_segments",
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 1372,
-              "vertical_segments": 2,
-              "horizontal_segments": 1,
-              "minimum_length_px": 216.26,
-              "elapsed_ms": 50.304
-            },
-            "status": "no_candidate",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1644,6 +655,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.83996548,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 3.0,
+            "right": 173.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 48.0,
+          "edge_error_maximum_px": 173.0,
+          "elapsed_ms": 80.912,
           "approved_bbox": [
             84,
             51,
@@ -1656,79 +677,6 @@
             1274,
             943
           ],
-          "iou": 0.83996548,
-          "edge_errors": {
-            "left": 14,
-            "top": 3,
-            "right": 173,
-            "bottom": 2,
-            "mean": 48.0,
-            "maximum": 173
-          },
-          "edge_error_mean_px": 48.0,
-          "edge_error_maximum_px": 173,
-          "elapsed_ms": 80.912,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              70,
-              48,
-              1274,
-              943
-            ],
-            "corners": [
-              [
-                70.0,
-                48.0
-              ],
-              [
-                1274.0,
-                48.0
-              ],
-              [
-                1274.0,
-                943.0
-              ],
-              [
-                70.0,
-                943.0
-              ]
-            ],
-            "confidence": 0.881204,
-            "score": 0.881204,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3373,
-              "vertical_segments": 9,
-              "horizontal_segments": 4,
-              "minimum_length_px": 216.7,
-              "bbox_area_fraction": 0.849371,
-              "mask_score": 0.930291,
-              "support_score": 0.65,
-              "area_score": 1.0,
-              "elapsed_ms": 80.875
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1738,6 +686,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95373041,
+          "edge_errors": {
+            "left": 15.0,
+            "top": 3.0,
+            "right": 32.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 32.0,
+          "elapsed_ms": 95.536,
           "approved_bbox": [
             88,
             33,
@@ -1750,79 +708,6 @@
             1186,
             967
           ],
-          "iou": 0.95373041,
-          "edge_errors": {
-            "left": 15,
-            "top": 3,
-            "right": 32,
-            "bottom": 1,
-            "mean": 12.75,
-            "maximum": 32
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 32,
-          "elapsed_ms": 95.536,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              73,
-              30,
-              1186,
-              967
-            ],
-            "corners": [
-              [
-                73.0,
-                30.0
-              ],
-              [
-                1186.0,
-                30.0
-              ],
-              [
-                1186.0,
-                967.0
-              ],
-              [
-                73.0,
-                967.0
-              ]
-            ],
-            "confidence": 0.86999,
-            "score": 0.86999,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3451,
-              "vertical_segments": 6,
-              "horizontal_segments": 3,
-              "minimum_length_px": 217.8,
-              "bbox_area_fraction": 0.830769,
-              "mask_score": 0.971414,
-              "support_score": 0.45,
-              "area_score": 1.0,
-              "elapsed_ms": 95.504
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1834,34 +719,35 @@
         "elapsed_seconds": 8.06631024001399,
         "search_fraction": 0.18755718206770358
       },
-      "profile": null,
-      "run_id": "run-20260810-195852",
-      "rank": 2,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "497528ffc236",
-      "parameters": {
-        "refine_mode": "none",
-        "scale": 0.8,
-        "minimum_length_fraction": 0.22,
-        "axis_angle_tolerance_degrees": 10.0,
-        "outer_percentile": 5.0,
-        "minimum_bbox_area_fraction": 0.15,
-        "bbox_padding_fraction": 0.005
-      },
       "summary": {
         "page_count": 5,
         "success_count": 4,
         "failure_count": 1,
         "mean_iou": 0.73776731,
+        "mean_iou_success": 0.92220914,
         "minimum_iou": 0.0,
         "stddev_iou": 0.3720797,
         "mean_edge_error_px": 23.312,
-        "elapsed_ms_total": 459.551,
-        "wall_ms": 460.03
+        "elapsed_ms_total": 452.296,
+        "wall_ms": 452.296
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 2,
+      "run_id": "run-20260810-195852"
+    },
+    {
+      "parameter_set_id": "497528ffc236",
+      "profile": null,
+      "parameters": {
+        "axis_angle_tolerance_degrees": 10.0,
+        "bbox_padding_fraction": 0.005,
+        "minimum_bbox_area_fraction": 0.15,
+        "minimum_length_fraction": 0.22,
+        "outer_percentile": 5.0,
+        "refine_mode": "none",
+        "scale": 0.8
       },
       "pages": [
         {
@@ -1869,6 +755,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.91017546,
+          "edge_errors": {
+            "left": 110.0,
+            "top": 1.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 28.5,
+          "edge_error_maximum_px": 110.0,
+          "elapsed_ms": 117.47,
           "approved_bbox": [
             125,
             56,
@@ -1881,79 +777,6 @@
             1287,
             968
           ],
-          "iou": 0.91017546,
-          "edge_errors": {
-            "left": 110,
-            "top": 1,
-            "right": 2,
-            "bottom": 1,
-            "mean": 28.5,
-            "maximum": 110
-          },
-          "edge_error_mean_px": 28.5,
-          "edge_error_maximum_px": 110,
-          "elapsed_ms": 117.47,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              15,
-              57,
-              1287,
-              968
-            ],
-            "corners": [
-              [
-                15.0,
-                57.0
-              ],
-              [
-                1287.0,
-                57.0
-              ],
-              [
-                1287.0,
-                968.0
-              ],
-              [
-                15.0,
-                968.0
-              ]
-            ],
-            "confidence": 0.88128,
-            "score": 0.88128,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.15,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 4713,
-              "vertical_segments": 10,
-              "horizontal_segments": 5,
-              "minimum_length_px": 216.92,
-              "bbox_area_fraction": 0.850395,
-              "mask_score": 0.901828,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 117.438
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1963,6 +786,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.98496522,
+          "edge_errors": {
+            "left": 2.0,
+            "top": 7.0,
+            "right": 6.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 4.0,
+          "edge_error_maximum_px": 7.0,
+          "elapsed_ms": 83.84,
           "approved_bbox": [
             67,
             8,
@@ -1975,79 +808,6 @@
             1227,
             976
           ],
-          "iou": 0.98496522,
-          "edge_errors": {
-            "left": 2,
-            "top": 7,
-            "right": 6,
-            "bottom": 1,
-            "mean": 4.0,
-            "maximum": 7
-          },
-          "edge_error_mean_px": 4.0,
-          "edge_error_maximum_px": 7,
-          "elapsed_ms": 83.84,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              65,
-              15,
-              1227,
-              976
-            ],
-            "corners": [
-              [
-                65.0,
-                15.0
-              ],
-              [
-                1227.0,
-                15.0
-              ],
-              [
-                1227.0,
-                976.0
-              ],
-              [
-                65.0,
-                976.0
-              ]
-            ],
-            "confidence": 0.741407,
-            "score": 0.741407,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.15,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 2532,
-              "vertical_segments": 13,
-              "horizontal_segments": 2,
-              "minimum_length_px": 217.14,
-              "bbox_area_fraction": 0.859719,
-              "mask_score": 0.702011,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 83.799
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2058,45 +818,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 48.6,
-          "candidate": {
-            "method": "lsd",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "reason": "insufficient_axis_segments",
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.15,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 1372,
-              "vertical_segments": 2,
-              "horizontal_segments": 1,
-              "minimum_length_px": 216.26,
-              "elapsed_ms": 48.564
-            },
-            "status": "no_candidate",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2106,6 +833,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.83996548,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 3.0,
+            "right": 173.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 48.0,
+          "edge_error_maximum_px": 173.0,
+          "elapsed_ms": 95.947,
           "approved_bbox": [
             84,
             51,
@@ -2118,79 +855,6 @@
             1274,
             943
           ],
-          "iou": 0.83996548,
-          "edge_errors": {
-            "left": 14,
-            "top": 3,
-            "right": 173,
-            "bottom": 2,
-            "mean": 48.0,
-            "maximum": 173
-          },
-          "edge_error_mean_px": 48.0,
-          "edge_error_maximum_px": 173,
-          "elapsed_ms": 95.947,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              70,
-              48,
-              1274,
-              943
-            ],
-            "corners": [
-              [
-                70.0,
-                48.0
-              ],
-              [
-                1274.0,
-                48.0
-              ],
-              [
-                1274.0,
-                943.0
-              ],
-              [
-                70.0,
-                943.0
-              ]
-            ],
-            "confidence": 0.881204,
-            "score": 0.881204,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.15,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3373,
-              "vertical_segments": 9,
-              "horizontal_segments": 4,
-              "minimum_length_px": 216.7,
-              "bbox_area_fraction": 0.849371,
-              "mask_score": 0.930291,
-              "support_score": 0.65,
-              "area_score": 1.0,
-              "elapsed_ms": 95.91
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2200,6 +864,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95373041,
+          "edge_errors": {
+            "left": 15.0,
+            "top": 3.0,
+            "right": 32.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 32.0,
+          "elapsed_ms": 113.694,
           "approved_bbox": [
             88,
             33,
@@ -2212,79 +886,6 @@
             1186,
             967
           ],
-          "iou": 0.95373041,
-          "edge_errors": {
-            "left": 15,
-            "top": 3,
-            "right": 32,
-            "bottom": 1,
-            "mean": 12.75,
-            "maximum": 32
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 32,
-          "elapsed_ms": 113.694,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              73,
-              30,
-              1186,
-              967
-            ],
-            "corners": [
-              [
-                73.0,
-                30.0
-              ],
-              [
-                1186.0,
-                30.0
-              ],
-              [
-                1186.0,
-                967.0
-              ],
-              [
-                73.0,
-                967.0
-              ]
-            ],
-            "confidence": 0.86999,
-            "score": 0.86999,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 10.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.15,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3451,
-              "vertical_segments": 6,
-              "horizontal_segments": 3,
-              "minimum_length_px": 217.8,
-              "bbox_area_fraction": 0.830769,
-              "mask_score": 0.971414,
-              "support_score": 0.45,
-              "area_score": 1.0,
-              "elapsed_ms": 113.66
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2296,34 +897,35 @@
         "elapsed_seconds": 8.187925153994001,
         "search_fraction": 0.1889295516925892
       },
-      "profile": null,
-      "run_id": "run-20260810-195852",
-      "rank": 3,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "24a5a18c61f3",
-      "parameters": {
-        "refine_mode": "none",
-        "scale": 0.8,
-        "minimum_length_fraction": 0.22,
-        "axis_angle_tolerance_degrees": 18.0,
-        "outer_percentile": 5.0,
-        "minimum_bbox_area_fraction": 0.08,
-        "bbox_padding_fraction": 0.005
-      },
       "summary": {
         "page_count": 5,
         "success_count": 4,
         "failure_count": 1,
         "mean_iou": 0.73776731,
+        "mean_iou_success": 0.92220914,
         "minimum_iou": 0.0,
         "stddev_iou": 0.3720797,
         "mean_edge_error_px": 23.312,
-        "elapsed_ms_total": 475.133,
-        "wall_ms": 475.474
+        "elapsed_ms_total": 459.551,
+        "wall_ms": 459.551
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 3,
+      "run_id": "run-20260810-195852"
+    },
+    {
+      "parameter_set_id": "24a5a18c61f3",
+      "profile": null,
+      "parameters": {
+        "axis_angle_tolerance_degrees": 18.0,
+        "bbox_padding_fraction": 0.005,
+        "minimum_bbox_area_fraction": 0.08,
+        "minimum_length_fraction": 0.22,
+        "outer_percentile": 5.0,
+        "refine_mode": "none",
+        "scale": 0.8
       },
       "pages": [
         {
@@ -2331,6 +933,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.91017546,
+          "edge_errors": {
+            "left": 110.0,
+            "top": 1.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 28.5,
+          "edge_error_maximum_px": 110.0,
+          "elapsed_ms": 125.636,
           "approved_bbox": [
             125,
             56,
@@ -2343,79 +955,6 @@
             1287,
             968
           ],
-          "iou": 0.91017546,
-          "edge_errors": {
-            "left": 110,
-            "top": 1,
-            "right": 2,
-            "bottom": 1,
-            "mean": 28.5,
-            "maximum": 110
-          },
-          "edge_error_mean_px": 28.5,
-          "edge_error_maximum_px": 110,
-          "elapsed_ms": 125.636,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              15,
-              57,
-              1287,
-              968
-            ],
-            "corners": [
-              [
-                15.0,
-                57.0
-              ],
-              [
-                1287.0,
-                57.0
-              ],
-              [
-                1287.0,
-                968.0
-              ],
-              [
-                15.0,
-                968.0
-              ]
-            ],
-            "confidence": 0.88128,
-            "score": 0.88128,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 4713,
-              "vertical_segments": 10,
-              "horizontal_segments": 5,
-              "minimum_length_px": 216.92,
-              "bbox_area_fraction": 0.850395,
-              "mask_score": 0.901828,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 125.607
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2425,6 +964,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.98496522,
+          "edge_errors": {
+            "left": 2.0,
+            "top": 7.0,
+            "right": 6.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 4.0,
+          "edge_error_maximum_px": 7.0,
+          "elapsed_ms": 115.925,
           "approved_bbox": [
             67,
             8,
@@ -2437,79 +986,6 @@
             1227,
             976
           ],
-          "iou": 0.98496522,
-          "edge_errors": {
-            "left": 2,
-            "top": 7,
-            "right": 6,
-            "bottom": 1,
-            "mean": 4.0,
-            "maximum": 7
-          },
-          "edge_error_mean_px": 4.0,
-          "edge_error_maximum_px": 7,
-          "elapsed_ms": 115.925,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              65,
-              15,
-              1227,
-              976
-            ],
-            "corners": [
-              [
-                65.0,
-                15.0
-              ],
-              [
-                1227.0,
-                15.0
-              ],
-              [
-                1227.0,
-                976.0
-              ],
-              [
-                65.0,
-                976.0
-              ]
-            ],
-            "confidence": 0.741407,
-            "score": 0.741407,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 2532,
-              "vertical_segments": 13,
-              "horizontal_segments": 2,
-              "minimum_length_px": 217.14,
-              "bbox_area_fraction": 0.859719,
-              "mask_score": 0.702011,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 115.895
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2520,45 +996,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 41.692,
-          "candidate": {
-            "method": "lsd",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "reason": "insufficient_axis_segments",
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 1372,
-              "vertical_segments": 2,
-              "horizontal_segments": 1,
-              "minimum_length_px": 216.26,
-              "elapsed_ms": 41.673
-            },
-            "status": "no_candidate",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2568,6 +1011,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.83996548,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 3.0,
+            "right": 173.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 48.0,
+          "edge_error_maximum_px": 173.0,
+          "elapsed_ms": 85.948,
           "approved_bbox": [
             84,
             51,
@@ -2580,79 +1033,6 @@
             1274,
             943
           ],
-          "iou": 0.83996548,
-          "edge_errors": {
-            "left": 14,
-            "top": 3,
-            "right": 173,
-            "bottom": 2,
-            "mean": 48.0,
-            "maximum": 173
-          },
-          "edge_error_mean_px": 48.0,
-          "edge_error_maximum_px": 173,
-          "elapsed_ms": 85.948,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              70,
-              48,
-              1274,
-              943
-            ],
-            "corners": [
-              [
-                70.0,
-                48.0
-              ],
-              [
-                1274.0,
-                48.0
-              ],
-              [
-                1274.0,
-                943.0
-              ],
-              [
-                70.0,
-                943.0
-              ]
-            ],
-            "confidence": 0.881204,
-            "score": 0.881204,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3373,
-              "vertical_segments": 9,
-              "horizontal_segments": 4,
-              "minimum_length_px": 216.7,
-              "bbox_area_fraction": 0.849371,
-              "mask_score": 0.930291,
-              "support_score": 0.65,
-              "area_score": 1.0,
-              "elapsed_ms": 85.935
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2662,6 +1042,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95373041,
+          "edge_errors": {
+            "left": 15.0,
+            "top": 3.0,
+            "right": 32.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 32.0,
+          "elapsed_ms": 105.932,
           "approved_bbox": [
             88,
             33,
@@ -2674,79 +1064,6 @@
             1186,
             967
           ],
-          "iou": 0.95373041,
-          "edge_errors": {
-            "left": 15,
-            "top": 3,
-            "right": 32,
-            "bottom": 1,
-            "mean": 12.75,
-            "maximum": 32
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 32,
-          "elapsed_ms": 105.932,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              73,
-              30,
-              1186,
-              967
-            ],
-            "corners": [
-              [
-                73.0,
-                30.0
-              ],
-              [
-                1186.0,
-                30.0
-              ],
-              [
-                1186.0,
-                967.0
-              ],
-              [
-                73.0,
-                967.0
-              ]
-            ],
-            "confidence": 0.86999,
-            "score": 0.86999,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.08,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3451,
-              "vertical_segments": 6,
-              "horizontal_segments": 3,
-              "minimum_length_px": 217.8,
-              "bbox_area_fraction": 0.830769,
-              "mask_score": 0.971414,
-              "support_score": 0.45,
-              "area_score": 1.0,
-              "elapsed_ms": 105.915
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2758,34 +1075,35 @@
         "elapsed_seconds": 8.677285101963207,
         "search_fraction": 0.19762122598353157
       },
-      "profile": null,
-      "run_id": "run-20260810-195852",
-      "rank": 4,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "97f5383e66cd",
-      "parameters": {
-        "refine_mode": "none",
-        "scale": 0.8,
-        "minimum_length_fraction": 0.22,
-        "axis_angle_tolerance_degrees": 18.0,
-        "outer_percentile": 5.0,
-        "minimum_bbox_area_fraction": 0.1,
-        "bbox_padding_fraction": 0.005
-      },
       "summary": {
         "page_count": 5,
         "success_count": 4,
         "failure_count": 1,
         "mean_iou": 0.73776731,
+        "mean_iou_success": 0.92220914,
         "minimum_iou": 0.0,
         "stddev_iou": 0.3720797,
         "mean_edge_error_px": 23.312,
-        "elapsed_ms_total": 475.712,
-        "wall_ms": 476.172
+        "elapsed_ms_total": 475.133,
+        "wall_ms": 475.133
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 4,
+      "run_id": "run-20260810-195852"
+    },
+    {
+      "parameter_set_id": "97f5383e66cd",
+      "profile": null,
+      "parameters": {
+        "axis_angle_tolerance_degrees": 18.0,
+        "bbox_padding_fraction": 0.005,
+        "minimum_bbox_area_fraction": 0.1,
+        "minimum_length_fraction": 0.22,
+        "outer_percentile": 5.0,
+        "refine_mode": "none",
+        "scale": 0.8
       },
       "pages": [
         {
@@ -2793,6 +1111,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.91017546,
+          "edge_errors": {
+            "left": 110.0,
+            "top": 1.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 28.5,
+          "edge_error_maximum_px": 110.0,
+          "elapsed_ms": 121.069,
           "approved_bbox": [
             125,
             56,
@@ -2805,79 +1133,6 @@
             1287,
             968
           ],
-          "iou": 0.91017546,
-          "edge_errors": {
-            "left": 110,
-            "top": 1,
-            "right": 2,
-            "bottom": 1,
-            "mean": 28.5,
-            "maximum": 110
-          },
-          "edge_error_mean_px": 28.5,
-          "edge_error_maximum_px": 110,
-          "elapsed_ms": 121.069,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              15,
-              57,
-              1287,
-              968
-            ],
-            "corners": [
-              [
-                15.0,
-                57.0
-              ],
-              [
-                1287.0,
-                57.0
-              ],
-              [
-                1287.0,
-                968.0
-              ],
-              [
-                15.0,
-                968.0
-              ]
-            ],
-            "confidence": 0.88128,
-            "score": 0.88128,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 4713,
-              "vertical_segments": 10,
-              "horizontal_segments": 5,
-              "minimum_length_px": 216.92,
-              "bbox_area_fraction": 0.850395,
-              "mask_score": 0.901828,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 121.036
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2887,6 +1142,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.98496522,
+          "edge_errors": {
+            "left": 2.0,
+            "top": 7.0,
+            "right": 6.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 4.0,
+          "edge_error_maximum_px": 7.0,
+          "elapsed_ms": 111.528,
           "approved_bbox": [
             67,
             8,
@@ -2899,79 +1164,6 @@
             1227,
             976
           ],
-          "iou": 0.98496522,
-          "edge_errors": {
-            "left": 2,
-            "top": 7,
-            "right": 6,
-            "bottom": 1,
-            "mean": 4.0,
-            "maximum": 7
-          },
-          "edge_error_mean_px": 4.0,
-          "edge_error_maximum_px": 7,
-          "elapsed_ms": 111.528,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              65,
-              15,
-              1227,
-              976
-            ],
-            "corners": [
-              [
-                65.0,
-                15.0
-              ],
-              [
-                1227.0,
-                15.0
-              ],
-              [
-                1227.0,
-                976.0
-              ],
-              [
-                65.0,
-                976.0
-              ]
-            ],
-            "confidence": 0.741407,
-            "score": 0.741407,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 2532,
-              "vertical_segments": 13,
-              "horizontal_segments": 2,
-              "minimum_length_px": 217.14,
-              "bbox_area_fraction": 0.859719,
-              "mask_score": 0.702011,
-              "support_score": 0.75,
-              "area_score": 1.0,
-              "elapsed_ms": 111.489
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2982,45 +1174,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 50.775,
-          "candidate": {
-            "method": "lsd",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "reason": "insufficient_axis_segments",
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 1372,
-              "vertical_segments": 2,
-              "horizontal_segments": 1,
-              "minimum_length_px": 216.26,
-              "elapsed_ms": 50.734
-            },
-            "status": "no_candidate",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3030,6 +1189,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.83996548,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 3.0,
+            "right": 173.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 48.0,
+          "edge_error_maximum_px": 173.0,
+          "elapsed_ms": 86.781,
           "approved_bbox": [
             84,
             51,
@@ -3042,79 +1211,6 @@
             1274,
             943
           ],
-          "iou": 0.83996548,
-          "edge_errors": {
-            "left": 14,
-            "top": 3,
-            "right": 173,
-            "bottom": 2,
-            "mean": 48.0,
-            "maximum": 173
-          },
-          "edge_error_mean_px": 48.0,
-          "edge_error_maximum_px": 173,
-          "elapsed_ms": 86.781,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              70,
-              48,
-              1274,
-              943
-            ],
-            "corners": [
-              [
-                70.0,
-                48.0
-              ],
-              [
-                1274.0,
-                48.0
-              ],
-              [
-                1274.0,
-                943.0
-              ],
-              [
-                70.0,
-                943.0
-              ]
-            ],
-            "confidence": 0.881204,
-            "score": 0.881204,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3373,
-              "vertical_segments": 9,
-              "horizontal_segments": 4,
-              "minimum_length_px": 216.7,
-              "bbox_area_fraction": 0.849371,
-              "mask_score": 0.930291,
-              "support_score": 0.65,
-              "area_score": 1.0,
-              "elapsed_ms": 86.749
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3124,6 +1220,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95373041,
+          "edge_errors": {
+            "left": 15.0,
+            "top": 3.0,
+            "right": 32.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 32.0,
+          "elapsed_ms": 105.559,
           "approved_bbox": [
             88,
             33,
@@ -3136,79 +1242,6 @@
             1186,
             967
           ],
-          "iou": 0.95373041,
-          "edge_errors": {
-            "left": 15,
-            "top": 3,
-            "right": 32,
-            "bottom": 1,
-            "mean": 12.75,
-            "maximum": 32
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 32,
-          "elapsed_ms": 105.559,
-          "candidate": {
-            "method": "lsd",
-            "bbox": [
-              73,
-              30,
-              1186,
-              967
-            ],
-            "corners": [
-              [
-                73.0,
-                30.0
-              ],
-              [
-                1186.0,
-                30.0
-              ],
-              [
-                1186.0,
-                967.0
-              ],
-              [
-                73.0,
-                967.0
-              ]
-            ],
-            "confidence": 0.86999,
-            "score": 0.86999,
-            "diagnostics": {
-              "parameters": {
-                "refine_mode": "none",
-                "scale": 0.8,
-                "minimum_length_fraction": 0.22,
-                "axis_angle_tolerance_degrees": 18.0,
-                "outer_percentile": 5.0,
-                "minimum_bbox_area_fraction": 0.1,
-                "bbox_padding_fraction": 0.005
-              },
-              "line_segments": 3451,
-              "vertical_segments": 6,
-              "horizontal_segments": 3,
-              "minimum_length_px": 217.8,
-              "bbox_area_fraction": 0.830769,
-              "mask_score": 0.971414,
-              "support_score": 0.45,
-              "area_score": 1.0,
-              "elapsed_ms": 105.525
-            },
-            "status": "ok",
-            "detector_name": "Line Segment Detector",
-            "origin": "OpenCV",
-            "foundation": [
-              "LSD",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3220,12 +1253,23 @@
         "elapsed_seconds": 8.690532320993952,
         "search_fraction": 0.19990850869167429
       },
-      "profile": null,
-      "run_id": "run-20260810-195852",
-      "rank": 5,
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.73776731,
+        "mean_iou_success": 0.92220914,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.3720797,
+        "mean_edge_error_px": 23.312,
+        "elapsed_ms_total": 475.712,
+        "wall_ms": 475.712
+      },
       "error": {},
       "warnings": [],
-      "metadata": {}
+      "metadata": {},
+      "rank": 5,
+      "run_id": "run-20260810-195852"
     }
   ],
   "winner_page_report": {
@@ -3394,5 +1438,14 @@
     ],
     "last_improvement_elapsed_seconds": 35.07399495696882,
     "time_since_last_improvement_seconds": 23.16129836702021
+  },
+  "historical_rerank": {
+    "schema_version": "1.0",
+    "reranked_from_raw": true,
+    "reranked_at_utc": "2026-08-11T02:36:05.021358Z",
+    "reason": "canonical-result-metrics",
+    "original_run_id": "run-20260810-195852",
+    "previous_winner_parameter_set_id": "7546c5067527",
+    "winner_changed": false
   }
 }
