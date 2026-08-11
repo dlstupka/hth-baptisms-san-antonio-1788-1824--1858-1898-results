@@ -52,27 +52,17 @@
   "max_dimension": 1800,
   "winner": {
     "parameter_set_id": "018d128420cb",
+    "profile": "baseline",
     "parameters": {
       "border_fraction": 0.02,
-      "erosion_kernel_fraction": 0.015,
-      "erosion_iterations": 1,
-      "grabcut_iterations": 3,
-      "close_kernel_fraction": 0.02,
       "close_iterations": 1,
+      "close_kernel_fraction": 0.02,
+      "erosion_iterations": 1,
+      "erosion_kernel_fraction": 0.015,
+      "grabcut_iterations": 3,
       "minimum_bbox_area_fraction": 0.1,
       "minimum_contour_area_fraction": 0.04,
       "polygon_epsilon_fraction": 0.018
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 5,
-      "failure_count": 0,
-      "mean_iou": 0.81302623,
-      "minimum_iou": 0.55318652,
-      "stddev_iou": 0.16920194,
-      "mean_edge_error_px": 53.5,
-      "elapsed_ms_total": 67729.743,
-      "wall_ms": 67730.532
     },
     "pages": [
       {
@@ -80,6 +70,16 @@
         "label": "ordinary_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.95675438,
+        "edge_errors": {
+          "left": 49.0,
+          "top": 1.0,
+          "right": 1.0,
+          "bottom": 1.0
+        },
+        "edge_error_mean_px": 13.0,
+        "edge_error_maximum_px": 49.0,
+        "elapsed_ms": 4435.008,
         "approved_bbox": [
           125,
           56,
@@ -92,84 +92,6 @@
           1290,
           966
         ],
-        "iou": 0.95675438,
-        "edge_errors": {
-          "left": 49,
-          "top": 1,
-          "right": 1,
-          "bottom": 1,
-          "mean": 13.0,
-          "maximum": 49
-        },
-        "edge_error_mean_px": 13.0,
-        "edge_error_maximum_px": 49,
-        "elapsed_ms": 4435.008,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            76,
-            55,
-            1290,
-            966
-          ],
-          "corners": [
-            [
-              89.0,
-              62.0
-            ],
-            [
-              100.0,
-              953.0
-            ],
-            [
-              1283.0,
-              950.0
-            ],
-            [
-              1272.0,
-              60.0
-            ]
-          ],
-          "confidence": 0.962022,
-          "score": 0.962022,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.686995,
-            "refined_foreground_fraction": 0.793406,
-            "contour_area_fraction": 0.79132,
-            "bbox_area_fraction": 0.811619,
-            "rectangularity": 0.974989,
-            "refined_mask_score": 0.987858,
-            "shared_mask_score": 0.921396,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 4434.966
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -179,6 +101,16 @@
         "label": "damaged_partial_register_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.55318652,
+        "edge_errors": {
+          "left": 38.0,
+          "top": 12.0,
+          "right": 468.0,
+          "bottom": 10.0
+        },
+        "edge_error_mean_px": 132.0,
+        "edge_error_maximum_px": 468.0,
+        "elapsed_ms": 6938.038,
         "approved_bbox": [
           67,
           8,
@@ -191,84 +123,6 @@
           765,
           967
         ],
-        "iou": 0.55318652,
-        "edge_errors": {
-          "left": 38,
-          "top": 12,
-          "right": 468,
-          "bottom": 10,
-          "mean": 132.0,
-          "maximum": 468
-        },
-        "edge_error_mean_px": 132.0,
-        "edge_error_maximum_px": 468,
-        "elapsed_ms": 6938.038,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            105,
-            20,
-            765,
-            967
-          ],
-          "corners": [
-            [
-              764.0,
-              966.0
-            ],
-            [
-              105.0,
-              966.0
-            ],
-            [
-              105.0,
-              20.0
-            ],
-            [
-              764.0,
-              20.0
-            ]
-          ],
-          "confidence": 0.888134,
-          "score": 0.888134,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.348275,
-            "refined_foreground_fraction": 0.443775,
-            "contour_area_fraction": 0.443094,
-            "bbox_area_fraction": 0.481195,
-            "rectangularity": 0.92082,
-            "refined_mask_score": 0.923511,
-            "shared_mask_score": 0.823971,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 6937.997
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -278,6 +132,16 @@
         "label": "title_or_index_sheet",
         "layout_type": "single_page",
         "status": "ok",
+        "iou": 0.6682906,
+        "edge_errors": {
+          "left": 229.0,
+          "top": 119.0,
+          "right": 13.0,
+          "bottom": 7.0
+        },
+        "edge_error_mean_px": 92.0,
+        "edge_error_maximum_px": 229.0,
+        "elapsed_ms": 51277.744,
         "approved_bbox": [
           15,
           28,
@@ -290,84 +154,6 @@
           1061,
           963
         ],
-        "iou": 0.6682906,
-        "edge_errors": {
-          "left": 229,
-          "top": 119,
-          "right": 13,
-          "bottom": 7,
-          "mean": 92.0,
-          "maximum": 229
-        },
-        "edge_error_mean_px": 92.0,
-        "edge_error_maximum_px": 229,
-        "elapsed_ms": 51277.744,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            244,
-            147,
-            1061,
-            963
-          ],
-          "corners": [
-            [
-              1059.9998779296875,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              147.0
-            ],
-            [
-              1059.9998779296875,
-              147.0
-            ]
-          ],
-          "confidence": 0.706299,
-          "score": 0.706299,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.049119,
-            "refined_foreground_fraction": 0.415848,
-            "contour_area_fraction": 0.444752,
-            "bbox_area_fraction": 0.623347,
-            "rectangularity": 0.713491,
-            "refined_mask_score": 0.833089,
-            "shared_mask_score": 0.539173,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 51277.709
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -377,6 +163,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94222541,
+        "edge_errors": {
+          "left": 13.0,
+          "top": 1.0,
+          "right": 35.0,
+          "bottom": 11.0
+        },
+        "edge_error_mean_px": 15.0,
+        "edge_error_maximum_px": 35.0,
+        "elapsed_ms": 2446.195,
         "approved_bbox": [
           84,
           51,
@@ -389,84 +185,6 @@
           1136,
           952
         ],
-        "iou": 0.94222541,
-        "edge_errors": {
-          "left": 13,
-          "top": 1,
-          "right": 35,
-          "bottom": 11,
-          "mean": 15.0,
-          "maximum": 35
-        },
-        "edge_error_mean_px": 15.0,
-        "edge_error_maximum_px": 35,
-        "elapsed_ms": 2446.195,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            71,
-            50,
-            1136,
-            952
-          ],
-          "corners": [
-            [
-              1117.0,
-              58.0
-            ],
-            [
-              77.0,
-              55.0
-            ],
-            [
-              72.0,
-              933.0
-            ],
-            [
-              1119.0,
-              937.0
-            ]
-          ],
-          "confidence": 0.980632,
-          "score": 0.980632,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.730954,
-            "refined_foreground_fraction": 0.735144,
-            "contour_area_fraction": 0.733033,
-            "bbox_area_fraction": 0.757189,
-            "rectangularity": 0.968098,
-            "refined_mask_score": 0.984612,
-            "shared_mask_score": 0.982676,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 2446.16
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -476,6 +194,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94467423,
+        "edge_errors": {
+          "left": 25.0,
+          "top": 1.0,
+          "right": 34.0,
+          "bottom": 2.0
+        },
+        "edge_error_mean_px": 15.5,
+        "edge_error_maximum_px": 34.0,
+        "elapsed_ms": 2632.758,
         "approved_bbox": [
           88,
           33,
@@ -488,119 +216,42 @@
           1188,
           966
         ],
-        "iou": 0.94467423,
-        "edge_errors": {
-          "left": 25,
-          "top": 1,
-          "right": 34,
-          "bottom": 2,
-          "mean": 15.5,
-          "maximum": 34
-        },
-        "edge_error_mean_px": 15.5,
-        "edge_error_maximum_px": 34,
-        "elapsed_ms": 2632.758,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            63,
-            34,
-            1188,
-            966
-          ],
-          "corners": [
-            [
-              77.0,
-              38.0
-            ],
-            [
-              78.0,
-              959.0
-            ],
-            [
-              1176.0,
-              956.0
-            ],
-            [
-              1166.0,
-              35.0
-            ]
-          ],
-          "confidence": 0.97876,
-          "score": 0.97876,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.783818,
-            "refined_foreground_fraction": 0.815672,
-            "contour_area_fraction": 0.814048,
-            "bbox_area_fraction": 0.835245,
-            "rectangularity": 0.974621,
-            "refined_mask_score": 0.988283,
-            "shared_mask_score": 0.968881,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 2632.721
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
       }
     ],
-    "profile": "baseline",
-    "run_id": "run-20260810-215654",
-    "rank": 1,
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.81302623,
+      "mean_iou_success": 0.81302623,
+      "minimum_iou": 0.55318652,
+      "stddev_iou": 0.16920194,
+      "mean_edge_error_px": 53.5,
+      "elapsed_ms_total": 67729.743,
+      "wall_ms": 67729.743
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 1,
+    "run_id": "run-20260810-215654"
   },
   "baseline": {
     "parameter_set_id": "018d128420cb",
+    "profile": "baseline",
     "parameters": {
       "border_fraction": 0.02,
-      "erosion_kernel_fraction": 0.015,
-      "erosion_iterations": 1,
-      "grabcut_iterations": 3,
-      "close_kernel_fraction": 0.02,
       "close_iterations": 1,
+      "close_kernel_fraction": 0.02,
+      "erosion_iterations": 1,
+      "erosion_kernel_fraction": 0.015,
+      "grabcut_iterations": 3,
       "minimum_bbox_area_fraction": 0.1,
       "minimum_contour_area_fraction": 0.04,
       "polygon_epsilon_fraction": 0.018
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 5,
-      "failure_count": 0,
-      "mean_iou": 0.81302623,
-      "minimum_iou": 0.55318652,
-      "stddev_iou": 0.16920194,
-      "mean_edge_error_px": 53.5,
-      "elapsed_ms_total": 67729.743,
-      "wall_ms": 67730.532
     },
     "pages": [
       {
@@ -608,6 +259,16 @@
         "label": "ordinary_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.95675438,
+        "edge_errors": {
+          "left": 49.0,
+          "top": 1.0,
+          "right": 1.0,
+          "bottom": 1.0
+        },
+        "edge_error_mean_px": 13.0,
+        "edge_error_maximum_px": 49.0,
+        "elapsed_ms": 4435.008,
         "approved_bbox": [
           125,
           56,
@@ -620,84 +281,6 @@
           1290,
           966
         ],
-        "iou": 0.95675438,
-        "edge_errors": {
-          "left": 49,
-          "top": 1,
-          "right": 1,
-          "bottom": 1,
-          "mean": 13.0,
-          "maximum": 49
-        },
-        "edge_error_mean_px": 13.0,
-        "edge_error_maximum_px": 49,
-        "elapsed_ms": 4435.008,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            76,
-            55,
-            1290,
-            966
-          ],
-          "corners": [
-            [
-              89.0,
-              62.0
-            ],
-            [
-              100.0,
-              953.0
-            ],
-            [
-              1283.0,
-              950.0
-            ],
-            [
-              1272.0,
-              60.0
-            ]
-          ],
-          "confidence": 0.962022,
-          "score": 0.962022,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.686995,
-            "refined_foreground_fraction": 0.793406,
-            "contour_area_fraction": 0.79132,
-            "bbox_area_fraction": 0.811619,
-            "rectangularity": 0.974989,
-            "refined_mask_score": 0.987858,
-            "shared_mask_score": 0.921396,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 4434.966
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -707,6 +290,16 @@
         "label": "damaged_partial_register_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.55318652,
+        "edge_errors": {
+          "left": 38.0,
+          "top": 12.0,
+          "right": 468.0,
+          "bottom": 10.0
+        },
+        "edge_error_mean_px": 132.0,
+        "edge_error_maximum_px": 468.0,
+        "elapsed_ms": 6938.038,
         "approved_bbox": [
           67,
           8,
@@ -719,84 +312,6 @@
           765,
           967
         ],
-        "iou": 0.55318652,
-        "edge_errors": {
-          "left": 38,
-          "top": 12,
-          "right": 468,
-          "bottom": 10,
-          "mean": 132.0,
-          "maximum": 468
-        },
-        "edge_error_mean_px": 132.0,
-        "edge_error_maximum_px": 468,
-        "elapsed_ms": 6938.038,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            105,
-            20,
-            765,
-            967
-          ],
-          "corners": [
-            [
-              764.0,
-              966.0
-            ],
-            [
-              105.0,
-              966.0
-            ],
-            [
-              105.0,
-              20.0
-            ],
-            [
-              764.0,
-              20.0
-            ]
-          ],
-          "confidence": 0.888134,
-          "score": 0.888134,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.348275,
-            "refined_foreground_fraction": 0.443775,
-            "contour_area_fraction": 0.443094,
-            "bbox_area_fraction": 0.481195,
-            "rectangularity": 0.92082,
-            "refined_mask_score": 0.923511,
-            "shared_mask_score": 0.823971,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 6937.997
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -806,6 +321,16 @@
         "label": "title_or_index_sheet",
         "layout_type": "single_page",
         "status": "ok",
+        "iou": 0.6682906,
+        "edge_errors": {
+          "left": 229.0,
+          "top": 119.0,
+          "right": 13.0,
+          "bottom": 7.0
+        },
+        "edge_error_mean_px": 92.0,
+        "edge_error_maximum_px": 229.0,
+        "elapsed_ms": 51277.744,
         "approved_bbox": [
           15,
           28,
@@ -818,84 +343,6 @@
           1061,
           963
         ],
-        "iou": 0.6682906,
-        "edge_errors": {
-          "left": 229,
-          "top": 119,
-          "right": 13,
-          "bottom": 7,
-          "mean": 92.0,
-          "maximum": 229
-        },
-        "edge_error_mean_px": 92.0,
-        "edge_error_maximum_px": 229,
-        "elapsed_ms": 51277.744,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            244,
-            147,
-            1061,
-            963
-          ],
-          "corners": [
-            [
-              1059.9998779296875,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              147.0
-            ],
-            [
-              1059.9998779296875,
-              147.0
-            ]
-          ],
-          "confidence": 0.706299,
-          "score": 0.706299,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.049119,
-            "refined_foreground_fraction": 0.415848,
-            "contour_area_fraction": 0.444752,
-            "bbox_area_fraction": 0.623347,
-            "rectangularity": 0.713491,
-            "refined_mask_score": 0.833089,
-            "shared_mask_score": 0.539173,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 51277.709
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -905,6 +352,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94222541,
+        "edge_errors": {
+          "left": 13.0,
+          "top": 1.0,
+          "right": 35.0,
+          "bottom": 11.0
+        },
+        "edge_error_mean_px": 15.0,
+        "edge_error_maximum_px": 35.0,
+        "elapsed_ms": 2446.195,
         "approved_bbox": [
           84,
           51,
@@ -917,84 +374,6 @@
           1136,
           952
         ],
-        "iou": 0.94222541,
-        "edge_errors": {
-          "left": 13,
-          "top": 1,
-          "right": 35,
-          "bottom": 11,
-          "mean": 15.0,
-          "maximum": 35
-        },
-        "edge_error_mean_px": 15.0,
-        "edge_error_maximum_px": 35,
-        "elapsed_ms": 2446.195,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            71,
-            50,
-            1136,
-            952
-          ],
-          "corners": [
-            [
-              1117.0,
-              58.0
-            ],
-            [
-              77.0,
-              55.0
-            ],
-            [
-              72.0,
-              933.0
-            ],
-            [
-              1119.0,
-              937.0
-            ]
-          ],
-          "confidence": 0.980632,
-          "score": 0.980632,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.730954,
-            "refined_foreground_fraction": 0.735144,
-            "contour_area_fraction": 0.733033,
-            "bbox_area_fraction": 0.757189,
-            "rectangularity": 0.968098,
-            "refined_mask_score": 0.984612,
-            "shared_mask_score": 0.982676,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 2446.16
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -1004,6 +383,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94467423,
+        "edge_errors": {
+          "left": 25.0,
+          "top": 1.0,
+          "right": 34.0,
+          "bottom": 2.0
+        },
+        "edge_error_mean_px": 15.5,
+        "edge_error_maximum_px": 34.0,
+        "elapsed_ms": 2632.758,
         "approved_bbox": [
           88,
           33,
@@ -1016,120 +405,43 @@
           1188,
           966
         ],
-        "iou": 0.94467423,
-        "edge_errors": {
-          "left": 25,
-          "top": 1,
-          "right": 34,
-          "bottom": 2,
-          "mean": 15.5,
-          "maximum": 34
-        },
-        "edge_error_mean_px": 15.5,
-        "edge_error_maximum_px": 34,
-        "elapsed_ms": 2632.758,
-        "candidate": {
-          "method": "grabcut",
-          "bbox": [
-            63,
-            34,
-            1188,
-            966
-          ],
-          "corners": [
-            [
-              77.0,
-              38.0
-            ],
-            [
-              78.0,
-              959.0
-            ],
-            [
-              1176.0,
-              956.0
-            ],
-            [
-              1166.0,
-              35.0
-            ]
-          ],
-          "confidence": 0.97876,
-          "score": 0.97876,
-          "diagnostics": {
-            "iterations": 3,
-            "border_px": 20,
-            "erosion_kernel_px": 15,
-            "close_kernel_px": 21,
-            "initial_foreground_fraction": 0.783818,
-            "refined_foreground_fraction": 0.815672,
-            "contour_area_fraction": 0.814048,
-            "bbox_area_fraction": 0.835245,
-            "rectangularity": 0.974621,
-            "refined_mask_score": 0.988283,
-            "shared_mask_score": 0.968881,
-            "parameters": {
-              "border_fraction": 0.02,
-              "erosion_kernel_fraction": 0.015,
-              "erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "close_kernel_fraction": 0.02,
-              "close_iterations": 1,
-              "minimum_bbox_area_fraction": 0.1,
-              "minimum_contour_area_fraction": 0.04,
-              "polygon_epsilon_fraction": 0.018
-            },
-            "elapsed_ms": 2632.721
-          },
-          "status": "ok",
-          "detector_name": "GrabCut",
-          "origin": "OpenCV",
-          "foundation": [
-            "GrabCut",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenCV contributors"
-          ],
-          "version": "5.0.0",
-          "repository": "https://github.com/opencv/opencv"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
       }
     ],
-    "profile": "baseline",
-    "run_id": "run-20260810-215654",
-    "rank": 1,
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.81302623,
+      "mean_iou_success": 0.81302623,
+      "minimum_iou": 0.55318652,
+      "stddev_iou": 0.16920194,
+      "mean_edge_error_px": 53.5,
+      "elapsed_ms_total": 67729.743,
+      "wall_ms": 67729.743
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 1,
+    "run_id": "run-20260810-215654"
   },
   "top_parameter_sets": [
     {
       "parameter_set_id": "018d128420cb",
+      "profile": "baseline",
       "parameters": {
         "border_fraction": 0.02,
-        "erosion_kernel_fraction": 0.015,
-        "erosion_iterations": 1,
-        "grabcut_iterations": 3,
-        "close_kernel_fraction": 0.02,
         "close_iterations": 1,
+        "close_kernel_fraction": 0.02,
+        "erosion_iterations": 1,
+        "erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 3,
         "minimum_bbox_area_fraction": 0.1,
         "minimum_contour_area_fraction": 0.04,
         "polygon_epsilon_fraction": 0.018
-      },
-      "summary": {
-        "page_count": 5,
-        "success_count": 5,
-        "failure_count": 0,
-        "mean_iou": 0.81302623,
-        "minimum_iou": 0.55318652,
-        "stddev_iou": 0.16920194,
-        "mean_edge_error_px": 53.5,
-        "elapsed_ms_total": 67729.743,
-        "wall_ms": 67730.532
       },
       "pages": [
         {
@@ -1137,6 +449,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95675438,
+          "edge_errors": {
+            "left": 49.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 13.0,
+          "edge_error_maximum_px": 49.0,
+          "elapsed_ms": 4435.008,
           "approved_bbox": [
             125,
             56,
@@ -1149,84 +471,6 @@
             1290,
             966
           ],
-          "iou": 0.95675438,
-          "edge_errors": {
-            "left": 49,
-            "top": 1,
-            "right": 1,
-            "bottom": 1,
-            "mean": 13.0,
-            "maximum": 49
-          },
-          "edge_error_mean_px": 13.0,
-          "edge_error_maximum_px": 49,
-          "elapsed_ms": 4435.008,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              76,
-              55,
-              1290,
-              966
-            ],
-            "corners": [
-              [
-                89.0,
-                62.0
-              ],
-              [
-                100.0,
-                953.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "confidence": 0.962022,
-            "score": 0.962022,
-            "diagnostics": {
-              "iterations": 3,
-              "border_px": 20,
-              "erosion_kernel_px": 15,
-              "close_kernel_px": 21,
-              "initial_foreground_fraction": 0.686995,
-              "refined_foreground_fraction": 0.793406,
-              "contour_area_fraction": 0.79132,
-              "bbox_area_fraction": 0.811619,
-              "rectangularity": 0.974989,
-              "refined_mask_score": 0.987858,
-              "shared_mask_score": 0.921396,
-              "parameters": {
-                "border_fraction": 0.02,
-                "erosion_kernel_fraction": 0.015,
-                "erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "close_kernel_fraction": 0.02,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.1,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 4434.966
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1236,6 +480,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.55318652,
+          "edge_errors": {
+            "left": 38.0,
+            "top": 12.0,
+            "right": 468.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 132.0,
+          "edge_error_maximum_px": 468.0,
+          "elapsed_ms": 6938.038,
           "approved_bbox": [
             67,
             8,
@@ -1248,84 +502,6 @@
             765,
             967
           ],
-          "iou": 0.55318652,
-          "edge_errors": {
-            "left": 38,
-            "top": 12,
-            "right": 468,
-            "bottom": 10,
-            "mean": 132.0,
-            "maximum": 468
-          },
-          "edge_error_mean_px": 132.0,
-          "edge_error_maximum_px": 468,
-          "elapsed_ms": 6938.038,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              105,
-              20,
-              765,
-              967
-            ],
-            "corners": [
-              [
-                764.0,
-                966.0
-              ],
-              [
-                105.0,
-                966.0
-              ],
-              [
-                105.0,
-                20.0
-              ],
-              [
-                764.0,
-                20.0
-              ]
-            ],
-            "confidence": 0.888134,
-            "score": 0.888134,
-            "diagnostics": {
-              "iterations": 3,
-              "border_px": 20,
-              "erosion_kernel_px": 15,
-              "close_kernel_px": 21,
-              "initial_foreground_fraction": 0.348275,
-              "refined_foreground_fraction": 0.443775,
-              "contour_area_fraction": 0.443094,
-              "bbox_area_fraction": 0.481195,
-              "rectangularity": 0.92082,
-              "refined_mask_score": 0.923511,
-              "shared_mask_score": 0.823971,
-              "parameters": {
-                "border_fraction": 0.02,
-                "erosion_kernel_fraction": 0.015,
-                "erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "close_kernel_fraction": 0.02,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.1,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 6937.997
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1335,6 +511,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.6682906,
+          "edge_errors": {
+            "left": 229.0,
+            "top": 119.0,
+            "right": 13.0,
+            "bottom": 7.0
+          },
+          "edge_error_mean_px": 92.0,
+          "edge_error_maximum_px": 229.0,
+          "elapsed_ms": 51277.744,
           "approved_bbox": [
             15,
             28,
@@ -1347,84 +533,6 @@
             1061,
             963
           ],
-          "iou": 0.6682906,
-          "edge_errors": {
-            "left": 229,
-            "top": 119,
-            "right": 13,
-            "bottom": 7,
-            "mean": 92.0,
-            "maximum": 229
-          },
-          "edge_error_mean_px": 92.0,
-          "edge_error_maximum_px": 229,
-          "elapsed_ms": 51277.744,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              244,
-              147,
-              1061,
-              963
-            ],
-            "corners": [
-              [
-                1059.9998779296875,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                147.0
-              ],
-              [
-                1059.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.706299,
-            "score": 0.706299,
-            "diagnostics": {
-              "iterations": 3,
-              "border_px": 20,
-              "erosion_kernel_px": 15,
-              "close_kernel_px": 21,
-              "initial_foreground_fraction": 0.049119,
-              "refined_foreground_fraction": 0.415848,
-              "contour_area_fraction": 0.444752,
-              "bbox_area_fraction": 0.623347,
-              "rectangularity": 0.713491,
-              "refined_mask_score": 0.833089,
-              "shared_mask_score": 0.539173,
-              "parameters": {
-                "border_fraction": 0.02,
-                "erosion_kernel_fraction": 0.015,
-                "erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "close_kernel_fraction": 0.02,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.1,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 51277.709
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1434,6 +542,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94222541,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 11.0
+          },
+          "edge_error_mean_px": 15.0,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 2446.195,
           "approved_bbox": [
             84,
             51,
@@ -1446,84 +564,6 @@
             1136,
             952
           ],
-          "iou": 0.94222541,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 11,
-            "mean": 15.0,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 15.0,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 2446.195,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              71,
-              50,
-              1136,
-              952
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.980632,
-            "score": 0.980632,
-            "diagnostics": {
-              "iterations": 3,
-              "border_px": 20,
-              "erosion_kernel_px": 15,
-              "close_kernel_px": 21,
-              "initial_foreground_fraction": 0.730954,
-              "refined_foreground_fraction": 0.735144,
-              "contour_area_fraction": 0.733033,
-              "bbox_area_fraction": 0.757189,
-              "rectangularity": 0.968098,
-              "refined_mask_score": 0.984612,
-              "shared_mask_score": 0.982676,
-              "parameters": {
-                "border_fraction": 0.02,
-                "erosion_kernel_fraction": 0.015,
-                "erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "close_kernel_fraction": 0.02,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.1,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 2446.16
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1533,6 +573,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94467423,
+          "edge_errors": {
+            "left": 25.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 2632.758,
           "approved_bbox": [
             88,
             33,
@@ -1545,119 +595,42 @@
             1188,
             966
           ],
-          "iou": 0.94467423,
-          "edge_errors": {
-            "left": 25,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 15.5,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 15.5,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 2632.758,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              63,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.97876,
-            "score": 0.97876,
-            "diagnostics": {
-              "iterations": 3,
-              "border_px": 20,
-              "erosion_kernel_px": 15,
-              "close_kernel_px": 21,
-              "initial_foreground_fraction": 0.783818,
-              "refined_foreground_fraction": 0.815672,
-              "contour_area_fraction": 0.814048,
-              "bbox_area_fraction": 0.835245,
-              "rectangularity": 0.974621,
-              "refined_mask_score": 0.988283,
-              "shared_mask_score": 0.968881,
-              "parameters": {
-                "border_fraction": 0.02,
-                "erosion_kernel_fraction": 0.015,
-                "erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "close_kernel_fraction": 0.02,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.1,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 2632.721
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
         }
       ],
-      "profile": "baseline",
-      "run_id": "run-20260810-215654",
-      "rank": 1,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "71c8fb00da00",
-      "parameters": {
-        "border_fraction": 0.01,
-        "erosion_kernel_fraction": 0.0075,
-        "erosion_iterations": 0,
-        "grabcut_iterations": 1,
-        "close_kernel_fraction": 0.01,
-        "close_iterations": 1,
-        "minimum_bbox_area_fraction": 0.07,
-        "minimum_contour_area_fraction": 0.04,
-        "polygon_epsilon_fraction": 0.018
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
-        "mean_iou": 0.74427133,
-        "minimum_iou": 0.37293491,
-        "stddev_iou": 0.25833478,
-        "mean_edge_error_px": 76.15,
-        "elapsed_ms_total": 43495.541,
-        "wall_ms": 43496.244
+        "mean_iou": 0.81302623,
+        "mean_iou_success": 0.81302623,
+        "minimum_iou": 0.55318652,
+        "stddev_iou": 0.16920194,
+        "mean_edge_error_px": 53.5,
+        "elapsed_ms_total": 67729.743,
+        "wall_ms": 67729.743
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 1,
+      "run_id": "run-20260810-215654"
+    },
+    {
+      "parameter_set_id": "71c8fb00da00",
+      "profile": null,
+      "parameters": {
+        "border_fraction": 0.01,
+        "close_iterations": 1,
+        "close_kernel_fraction": 0.01,
+        "erosion_iterations": 0,
+        "erosion_kernel_fraction": 0.0075,
+        "grabcut_iterations": 1,
+        "minimum_bbox_area_fraction": 0.07,
+        "minimum_contour_area_fraction": 0.04,
+        "polygon_epsilon_fraction": 0.018
       },
       "pages": [
         {
@@ -1665,6 +638,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 3691.782,
           "approved_bbox": [
             125,
             56,
@@ -1677,84 +660,6 @@
             1290,
             967
           ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 3691.782,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                82.344482421875,
-                967.158935546875
-              ],
-              [
-                80.5924072265625,
-                56.07579803466797
-              ],
-              [
-                1287.4630126953125,
-                53.75489044189453
-              ],
-              [
-                1289.215087890625,
-                964.8380126953125
-              ]
-            ],
-            "confidence": 0.950706,
-            "score": 0.950706,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.686995,
-              "refined_foreground_fraction": 0.76886,
-              "contour_area_fraction": 0.766651,
-              "bbox_area_fraction": 0.809163,
-              "rectangularity": 0.947462,
-              "refined_mask_score": 0.973936,
-              "shared_mask_score": 0.922693,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 3691.751
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1764,6 +669,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.37293491,
+          "edge_errors": {
+            "left": 202.0,
+            "top": 49.0,
+            "right": 478.0,
+            "bottom": 53.0
+          },
+          "edge_error_mean_px": 195.5,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 5103.236,
           "approved_bbox": [
             67,
             8,
@@ -1776,84 +691,6 @@
             755,
             924
           ],
-          "iou": 0.37293491,
-          "edge_errors": {
-            "left": 202,
-            "top": 49,
-            "right": 478,
-            "bottom": 53,
-            "mean": 195.5,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 195.5,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 5103.236,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              269,
-              57,
-              755,
-              924
-            ],
-            "corners": [
-              [
-                274.0,
-                131.0
-              ],
-              [
-                381.0,
-                806.0
-              ],
-              [
-                745.0,
-                923.0
-              ],
-              [
-                727.0,
-                57.0
-              ]
-            ],
-            "confidence": 0.788236,
-            "score": 0.788236,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.348275,
-              "refined_foreground_fraction": 0.24673,
-              "contour_area_fraction": 0.245888,
-              "bbox_area_fraction": 0.324401,
-              "rectangularity": 0.757974,
-              "refined_mask_score": 0.757225,
-              "shared_mask_score": 0.8454,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 5103.197
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1863,6 +700,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.48945346,
+          "edge_errors": {
+            "left": 463.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 146.25,
+          "edge_error_maximum_px": 463.0,
+          "elapsed_ms": 32952.205,
           "approved_bbox": [
             15,
             28,
@@ -1875,84 +722,6 @@
             1072,
             969
           ],
-          "iou": 0.48945346,
-          "edge_errors": {
-            "left": 463,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 146.25,
-            "maximum": 463
-          },
-          "edge_error_mean_px": 146.25,
-          "edge_error_maximum_px": 463,
-          "elapsed_ms": 32952.205,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              478,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.653644,
-            "score": 0.653644,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.049119,
-              "refined_foreground_fraction": 0.300985,
-              "contour_area_fraction": 0.298819,
-              "bbox_area_fraction": 0.456537,
-              "rectangularity": 0.654535,
-              "refined_mask_score": 0.778389,
-              "shared_mask_score": 0.492747,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 32952.172
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1962,6 +731,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 832.913,
           "approved_bbox": [
             84,
             51,
@@ -1974,84 +753,6 @@
             1136,
             951
           ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 832.913,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.980778,
-            "score": 0.980778,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.730954,
-              "refined_foreground_fraction": 0.73554,
-              "contour_area_fraction": 0.732668,
-              "bbox_area_fraction": 0.756349,
-              "rectangularity": 0.968691,
-              "refined_mask_score": 0.984258,
-              "shared_mask_score": 0.983212,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 832.882
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2061,6 +762,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 915.405,
           "approved_bbox": [
             88,
             33,
@@ -2073,84 +784,6 @@
             1188,
             966
           ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 915.405,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.984035,
-            "score": 0.984035,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.783818,
-              "refined_foreground_fraction": 0.814805,
-              "contour_area_fraction": 0.813188,
-              "bbox_area_fraction": 0.827078,
-              "rectangularity": 0.983205,
-              "refined_mask_score": 0.992579,
-              "shared_mask_score": 0.973523,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 915.371
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2162,36 +795,37 @@
         "elapsed_seconds": 291.05665405799994,
         "search_fraction": 0.5555555555555556
       },
-      "profile": null,
-      "run_id": "run-20260810-215654",
-      "rank": 2,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "c4569ce5ec31",
-      "parameters": {
-        "border_fraction": 0.01,
-        "erosion_kernel_fraction": 0.0075,
-        "erosion_iterations": 0,
-        "grabcut_iterations": 1,
-        "close_kernel_fraction": 0.01,
-        "close_iterations": 1,
-        "minimum_bbox_area_fraction": 0.07,
-        "minimum_contour_area_fraction": 0.04,
-        "polygon_epsilon_fraction": 0.03
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
         "mean_iou": 0.74427133,
+        "mean_iou_success": 0.74427133,
         "minimum_iou": 0.37293491,
         "stddev_iou": 0.25833478,
         "mean_edge_error_px": 76.15,
-        "elapsed_ms_total": 42033.708,
-        "wall_ms": 42034.316
+        "elapsed_ms_total": 43495.541,
+        "wall_ms": 43495.541
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 2,
+      "run_id": "run-20260810-215654"
+    },
+    {
+      "parameter_set_id": "c4569ce5ec31",
+      "profile": null,
+      "parameters": {
+        "border_fraction": 0.01,
+        "close_iterations": 1,
+        "close_kernel_fraction": 0.01,
+        "erosion_iterations": 0,
+        "erosion_kernel_fraction": 0.0075,
+        "grabcut_iterations": 1,
+        "minimum_bbox_area_fraction": 0.07,
+        "minimum_contour_area_fraction": 0.04,
+        "polygon_epsilon_fraction": 0.03
       },
       "pages": [
         {
@@ -2199,6 +833,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 4079.051,
           "approved_bbox": [
             125,
             56,
@@ -2211,84 +855,6 @@
             1290,
             967
           ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 4079.051,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                107.0,
-                63.0
-              ],
-              [
-                259.0,
-                963.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "confidence": 0.950706,
-            "score": 0.950706,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.686995,
-              "refined_foreground_fraction": 0.76886,
-              "contour_area_fraction": 0.766651,
-              "bbox_area_fraction": 0.809163,
-              "rectangularity": 0.947462,
-              "refined_mask_score": 0.973936,
-              "shared_mask_score": 0.922693,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.03
-              },
-              "elapsed_ms": 4079.018
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2298,6 +864,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.37293491,
+          "edge_errors": {
+            "left": 202.0,
+            "top": 49.0,
+            "right": 478.0,
+            "bottom": 53.0
+          },
+          "edge_error_mean_px": 195.5,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 3936.335,
           "approved_bbox": [
             67,
             8,
@@ -2310,84 +886,6 @@
             755,
             924
           ],
-          "iou": 0.37293491,
-          "edge_errors": {
-            "left": 202,
-            "top": 49,
-            "right": 478,
-            "bottom": 53,
-            "mean": 195.5,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 195.5,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 3936.335,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              269,
-              57,
-              755,
-              924
-            ],
-            "corners": [
-              [
-                274.0,
-                131.0
-              ],
-              [
-                381.0,
-                806.0
-              ],
-              [
-                745.0,
-                923.0
-              ],
-              [
-                727.0,
-                57.0
-              ]
-            ],
-            "confidence": 0.788236,
-            "score": 0.788236,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.348275,
-              "refined_foreground_fraction": 0.24673,
-              "contour_area_fraction": 0.245888,
-              "bbox_area_fraction": 0.324401,
-              "rectangularity": 0.757974,
-              "refined_mask_score": 0.757225,
-              "shared_mask_score": 0.8454,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.03
-              },
-              "elapsed_ms": 3936.303
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2397,6 +895,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.48945346,
+          "edge_errors": {
+            "left": 463.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 146.25,
+          "edge_error_maximum_px": 463.0,
+          "elapsed_ms": 32176.249,
           "approved_bbox": [
             15,
             28,
@@ -2409,84 +917,6 @@
             1072,
             969
           ],
-          "iou": 0.48945346,
-          "edge_errors": {
-            "left": 463,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 146.25,
-            "maximum": 463
-          },
-          "edge_error_mean_px": 146.25,
-          "edge_error_maximum_px": 463,
-          "elapsed_ms": 32176.249,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              478,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.653644,
-            "score": 0.653644,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.049119,
-              "refined_foreground_fraction": 0.300985,
-              "contour_area_fraction": 0.298819,
-              "bbox_area_fraction": 0.456537,
-              "rectangularity": 0.654535,
-              "refined_mask_score": 0.778389,
-              "shared_mask_score": 0.492747,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.03
-              },
-              "elapsed_ms": 32176.217
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2496,6 +926,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 916.414,
           "approved_bbox": [
             84,
             51,
@@ -2508,84 +948,6 @@
             1136,
             951
           ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 916.414,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.980778,
-            "score": 0.980778,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.730954,
-              "refined_foreground_fraction": 0.73554,
-              "contour_area_fraction": 0.732668,
-              "bbox_area_fraction": 0.756349,
-              "rectangularity": 0.968691,
-              "refined_mask_score": 0.984258,
-              "shared_mask_score": 0.983212,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.03
-              },
-              "elapsed_ms": 916.364
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2595,6 +957,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 925.659,
           "approved_bbox": [
             88,
             33,
@@ -2607,84 +979,6 @@
             1188,
             966
           ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 925.659,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.984035,
-            "score": 0.984035,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.783818,
-              "refined_foreground_fraction": 0.814805,
-              "contour_area_fraction": 0.813188,
-              "bbox_area_fraction": 0.827078,
-              "rectangularity": 0.983205,
-              "refined_mask_score": 0.992579,
-              "shared_mask_score": 0.973523,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.04,
-                "polygon_epsilon_fraction": 0.03
-              },
-              "elapsed_ms": 925.625
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2696,36 +990,37 @@
         "elapsed_seconds": 296.12446564000004,
         "search_fraction": 0.6666666666666666
       },
-      "profile": null,
-      "run_id": "run-20260810-215654",
-      "rank": 3,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "f5a2acd172d1",
-      "parameters": {
-        "border_fraction": 0.01,
-        "erosion_kernel_fraction": 0.0075,
-        "erosion_iterations": 0,
-        "grabcut_iterations": 1,
-        "close_kernel_fraction": 0.01,
-        "close_iterations": 1,
-        "minimum_bbox_area_fraction": 0.07,
-        "minimum_contour_area_fraction": 0.07,
-        "polygon_epsilon_fraction": 0.01
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
-        "mean_iou": 0.74088009,
-        "minimum_iou": 0.35597874,
-        "stddev_iou": 0.26325167,
-        "mean_edge_error_px": 78.05,
-        "elapsed_ms_total": 43180.363,
-        "wall_ms": 43180.903
+        "mean_iou": 0.74427133,
+        "mean_iou_success": 0.74427133,
+        "minimum_iou": 0.37293491,
+        "stddev_iou": 0.25833478,
+        "mean_edge_error_px": 76.15,
+        "elapsed_ms_total": 42033.708,
+        "wall_ms": 42033.708
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 3,
+      "run_id": "run-20260810-215654"
+    },
+    {
+      "parameter_set_id": "f5a2acd172d1",
+      "profile": null,
+      "parameters": {
+        "border_fraction": 0.01,
+        "close_iterations": 1,
+        "close_kernel_fraction": 0.01,
+        "erosion_iterations": 0,
+        "erosion_kernel_fraction": 0.0075,
+        "grabcut_iterations": 1,
+        "minimum_bbox_area_fraction": 0.07,
+        "minimum_contour_area_fraction": 0.07,
+        "polygon_epsilon_fraction": 0.01
       },
       "pages": [
         {
@@ -2733,6 +1028,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 3472.24,
           "approved_bbox": [
             125,
             56,
@@ -2745,84 +1050,6 @@
             1290,
             967
           ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 3472.24,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                82.344482421875,
-                967.158935546875
-              ],
-              [
-                80.5924072265625,
-                56.07579803466797
-              ],
-              [
-                1287.4630126953125,
-                53.75489044189453
-              ],
-              [
-                1289.215087890625,
-                964.8380126953125
-              ]
-            ],
-            "confidence": 0.945201,
-            "score": 0.945201,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.686995,
-              "refined_foreground_fraction": 0.758392,
-              "contour_area_fraction": 0.756155,
-              "bbox_area_fraction": 0.809163,
-              "rectangularity": 0.93449,
-              "refined_mask_score": 0.967468,
-              "shared_mask_score": 0.922693,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.01
-              },
-              "elapsed_ms": 3472.21
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2832,6 +1059,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.35597874,
+          "edge_errors": {
+            "left": 204.0,
+            "top": 85.0,
+            "right": 478.0,
+            "bottom": 53.0
+          },
+          "edge_error_mean_px": 205.0,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 3979.762,
           "approved_bbox": [
             67,
             8,
@@ -2844,84 +1081,6 @@
             755,
             924
           ],
-          "iou": 0.35597874,
-          "edge_errors": {
-            "left": 204,
-            "top": 85,
-            "right": 478,
-            "bottom": 53,
-            "mean": 205.0,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 205.0,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 3979.762,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              271,
-              93,
-              755,
-              924
-            ],
-            "corners": [
-              [
-                288.723388671875,
-                933.6730346679688
-              ],
-              [
-                269.1815185546875,
-                98.25891876220703
-              ],
-              [
-                745.4647216796875,
-                87.11779022216797
-              ],
-              [
-                765.006591796875,
-                922.5319213867188
-              ]
-            ],
-            "confidence": 0.779194,
-            "score": 0.779194,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.348275,
-              "refined_foreground_fraction": 0.234005,
-              "contour_area_fraction": 0.233193,
-              "bbox_area_fraction": 0.309652,
-              "rectangularity": 0.753083,
-              "refined_mask_score": 0.746744,
-              "shared_mask_score": 0.835837,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.01
-              },
-              "elapsed_ms": 3979.731
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2931,6 +1090,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.48945346,
+          "edge_errors": {
+            "left": 463.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 146.25,
+          "edge_error_maximum_px": 463.0,
+          "elapsed_ms": 34005.511,
           "approved_bbox": [
             15,
             28,
@@ -2943,84 +1112,6 @@
             1072,
             969
           ],
-          "iou": 0.48945346,
-          "edge_errors": {
-            "left": 463,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 146.25,
-            "maximum": 463
-          },
-          "edge_error_mean_px": 146.25,
-          "edge_error_maximum_px": 463,
-          "elapsed_ms": 34005.511,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              478,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.634547,
-            "score": 0.634547,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.049119,
-              "refined_foreground_fraction": 0.280343,
-              "contour_area_fraction": 0.278365,
-              "bbox_area_fraction": 0.456537,
-              "rectangularity": 0.609732,
-              "refined_mask_score": 0.755865,
-              "shared_mask_score": 0.492747,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.01
-              },
-              "elapsed_ms": 34005.481
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3030,6 +1121,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 814.236,
           "approved_bbox": [
             84,
             51,
@@ -3042,84 +1143,6 @@
             1136,
             951
           ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 814.236,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.98078,
-            "score": 0.98078,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.730954,
-              "refined_foreground_fraction": 0.735537,
-              "contour_area_fraction": 0.732668,
-              "bbox_area_fraction": 0.756349,
-              "rectangularity": 0.968691,
-              "refined_mask_score": 0.984261,
-              "shared_mask_score": 0.983212,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.01
-              },
-              "elapsed_ms": 814.203
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3129,6 +1152,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 908.614,
           "approved_bbox": [
             88,
             33,
@@ -3141,84 +1174,6 @@
             1188,
             966
           ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 908.614,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.984035,
-            "score": 0.984035,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.783818,
-              "refined_foreground_fraction": 0.814805,
-              "contour_area_fraction": 0.813188,
-              "bbox_area_fraction": 0.827078,
-              "rectangularity": 0.983205,
-              "refined_mask_score": 0.992579,
-              "shared_mask_score": 0.973523,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.01
-              },
-              "elapsed_ms": 908.581
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3230,36 +1185,37 @@
         "elapsed_seconds": 334.23765931800006,
         "search_fraction": 0.7777777777777778
       },
-      "profile": null,
-      "run_id": "run-20260810-215654",
-      "rank": 4,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "5a4694bf2661",
-      "parameters": {
-        "border_fraction": 0.01,
-        "erosion_kernel_fraction": 0.0075,
-        "erosion_iterations": 0,
-        "grabcut_iterations": 1,
-        "close_kernel_fraction": 0.01,
-        "close_iterations": 1,
-        "minimum_bbox_area_fraction": 0.07,
-        "minimum_contour_area_fraction": 0.07,
-        "polygon_epsilon_fraction": 0.018
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
         "mean_iou": 0.74088009,
+        "mean_iou_success": 0.74088009,
         "minimum_iou": 0.35597874,
         "stddev_iou": 0.26325167,
         "mean_edge_error_px": 78.05,
-        "elapsed_ms_total": 42860.021,
-        "wall_ms": 42860.644
+        "elapsed_ms_total": 43180.363,
+        "wall_ms": 43180.363
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 4,
+      "run_id": "run-20260810-215654"
+    },
+    {
+      "parameter_set_id": "5a4694bf2661",
+      "profile": null,
+      "parameters": {
+        "border_fraction": 0.01,
+        "close_iterations": 1,
+        "close_kernel_fraction": 0.01,
+        "erosion_iterations": 0,
+        "erosion_kernel_fraction": 0.0075,
+        "grabcut_iterations": 1,
+        "minimum_bbox_area_fraction": 0.07,
+        "minimum_contour_area_fraction": 0.07,
+        "polygon_epsilon_fraction": 0.018
       },
       "pages": [
         {
@@ -3267,6 +1223,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 3447.145,
           "approved_bbox": [
             125,
             56,
@@ -3279,84 +1245,6 @@
             1290,
             967
           ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 3447.145,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                82.344482421875,
-                967.158935546875
-              ],
-              [
-                80.5924072265625,
-                56.07579803466797
-              ],
-              [
-                1287.4630126953125,
-                53.75489044189453
-              ],
-              [
-                1289.215087890625,
-                964.8380126953125
-              ]
-            ],
-            "confidence": 0.945201,
-            "score": 0.945201,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.686995,
-              "refined_foreground_fraction": 0.758392,
-              "contour_area_fraction": 0.756155,
-              "bbox_area_fraction": 0.809163,
-              "rectangularity": 0.93449,
-              "refined_mask_score": 0.967468,
-              "shared_mask_score": 0.922693,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 3447.118
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3366,6 +1254,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.35597874,
+          "edge_errors": {
+            "left": 204.0,
+            "top": 85.0,
+            "right": 478.0,
+            "bottom": 53.0
+          },
+          "edge_error_mean_px": 205.0,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 3830.246,
           "approved_bbox": [
             67,
             8,
@@ -3378,84 +1276,6 @@
             755,
             924
           ],
-          "iou": 0.35597874,
-          "edge_errors": {
-            "left": 204,
-            "top": 85,
-            "right": 478,
-            "bottom": 53,
-            "mean": 205.0,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 205.0,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 3830.246,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              271,
-              93,
-              755,
-              924
-            ],
-            "corners": [
-              [
-                274.0,
-                131.0
-              ],
-              [
-                379.0,
-                770.0
-              ],
-              [
-                745.0,
-                923.0
-              ],
-              [
-                746.0,
-                110.0
-              ]
-            ],
-            "confidence": 0.779194,
-            "score": 0.779194,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.348275,
-              "refined_foreground_fraction": 0.234005,
-              "contour_area_fraction": 0.233193,
-              "bbox_area_fraction": 0.309652,
-              "rectangularity": 0.753083,
-              "refined_mask_score": 0.746744,
-              "shared_mask_score": 0.835837,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 3830.216
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3465,6 +1285,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.48945346,
+          "edge_errors": {
+            "left": 463.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 146.25,
+          "edge_error_maximum_px": 463.0,
+          "elapsed_ms": 33770.82,
           "approved_bbox": [
             15,
             28,
@@ -3477,84 +1307,6 @@
             1072,
             969
           ],
-          "iou": 0.48945346,
-          "edge_errors": {
-            "left": 463,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 146.25,
-            "maximum": 463
-          },
-          "edge_error_mean_px": 146.25,
-          "edge_error_maximum_px": 463,
-          "elapsed_ms": 33770.82,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              478,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                967.9998779296875
-              ],
-              [
-                478.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.634547,
-            "score": 0.634547,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.049119,
-              "refined_foreground_fraction": 0.280343,
-              "contour_area_fraction": 0.278365,
-              "bbox_area_fraction": 0.456537,
-              "rectangularity": 0.609732,
-              "refined_mask_score": 0.755865,
-              "shared_mask_score": 0.492747,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 33770.788
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3564,6 +1316,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 886.616,
           "approved_bbox": [
             84,
             51,
@@ -3576,84 +1338,6 @@
             1136,
             951
           ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 886.616,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.98078,
-            "score": 0.98078,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.730954,
-              "refined_foreground_fraction": 0.735537,
-              "contour_area_fraction": 0.732668,
-              "bbox_area_fraction": 0.756349,
-              "rectangularity": 0.968691,
-              "refined_mask_score": 0.984261,
-              "shared_mask_score": 0.983212,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 886.57
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3663,6 +1347,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 925.194,
           "approved_bbox": [
             88,
             33,
@@ -3675,84 +1369,6 @@
             1188,
             966
           ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 925.194,
-          "candidate": {
-            "method": "grabcut",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.984035,
-            "score": 0.984035,
-            "diagnostics": {
-              "iterations": 1,
-              "border_px": 10,
-              "erosion_kernel_px": 0,
-              "close_kernel_px": 11,
-              "initial_foreground_fraction": 0.783818,
-              "refined_foreground_fraction": 0.814805,
-              "contour_area_fraction": 0.813188,
-              "bbox_area_fraction": 0.827078,
-              "rectangularity": 0.983205,
-              "refined_mask_score": 0.992579,
-              "shared_mask_score": 0.973523,
-              "parameters": {
-                "border_fraction": 0.01,
-                "erosion_kernel_fraction": 0.0075,
-                "erosion_iterations": 0,
-                "grabcut_iterations": 1,
-                "close_kernel_fraction": 0.01,
-                "close_iterations": 1,
-                "minimum_bbox_area_fraction": 0.07,
-                "minimum_contour_area_fraction": 0.07,
-                "polygon_epsilon_fraction": 0.018
-              },
-              "elapsed_ms": 925.163
-            },
-            "status": "ok",
-            "detector_name": "GrabCut",
-            "origin": "OpenCV",
-            "foundation": [
-              "GrabCut",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenCV contributors"
-            ],
-            "version": "5.0.0",
-            "repository": "https://github.com/opencv/opencv"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3764,12 +1380,23 @@
         "elapsed_seconds": 338.98512847899997,
         "search_fraction": 0.8888888888888888
       },
-      "profile": null,
-      "run_id": "run-20260810-215654",
-      "rank": 5,
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.74088009,
+        "mean_iou_success": 0.74088009,
+        "minimum_iou": 0.35597874,
+        "stddev_iou": 0.26325167,
+        "mean_edge_error_px": 78.05,
+        "elapsed_ms_total": 42860.021,
+        "wall_ms": 42860.021
+      },
       "error": {},
       "warnings": [],
-      "metadata": {}
+      "metadata": {},
+      "rank": 5,
+      "run_id": "run-20260810-215654"
     }
   ],
   "winner_page_report": {
@@ -3901,5 +1528,14 @@
     "winner_history": [],
     "last_improvement_elapsed_seconds": null,
     "time_since_last_improvement_seconds": null
+  },
+  "historical_rerank": {
+    "schema_version": "1.0",
+    "reranked_from_raw": true,
+    "reranked_at_utc": "2026-08-11T17:18:32.242174Z",
+    "reason": "canonical-result-metrics",
+    "original_run_id": "run-20260810-215654",
+    "previous_winner_parameter_set_id": "018d128420cb",
+    "winner_changed": false
   }
 }

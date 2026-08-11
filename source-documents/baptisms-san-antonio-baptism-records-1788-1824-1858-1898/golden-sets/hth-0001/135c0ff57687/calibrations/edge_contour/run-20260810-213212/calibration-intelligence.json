@@ -119,7 +119,8 @@
         "title": "Baptisms: San Antonio. Baptism Records 1788\u20131824, 1858\u20131898"
       }
     },
-    "best_avg_iou": 0.96377596,
+    "avg_iou_success": 0.87682013,
+    "best_avg_iou": 0.87682013,
     "calibration_evidence": {
       "rating": "Medium",
       "reasons": [
@@ -128,12 +129,12 @@
         "broad near-best basin"
       ]
     },
-    "equivalent_best_coverage": 0.27775661053112854,
-    "failure_count": 4,
-    "minimum_iou": 0.96377596,
-    "near_best_coverage": 0.27775661053112854,
+    "equivalent_best_coverage": 0.08641316772079555,
+    "failure_count": 0,
+    "minimum_iou": 0.75890607,
+    "near_best_coverage": 0.08641316772079555,
     "recommended_detector_id": "edge_contour",
-    "recommended_parameter_set_id": "e6eb2b7491c5",
+    "recommended_parameter_set_id": "4e5bc37a649a",
     "recommended_parameters": {
       "edge_support_dilation_fraction": 0.003,
       "edge_support_weight": 0.2,
@@ -141,7 +142,7 @@
       "lsd_refine_mode": "none",
       "lsd_scale": 0.6,
       "minimum_contour_area_fraction": 0.08,
-      "minimum_edge_support": 0.2,
+      "minimum_edge_support": 0.05,
       "minimum_rectangularity": 0.45,
       "minimum_segment_length_fraction": 0.03
     },
@@ -149,9 +150,11 @@
       "exhaustive",
       "non_dormant",
       "low_plus",
-      "moderate_plus"
+      "moderate_plus",
+      "important_plus",
+      "critical"
     ],
-    "stddev_iou": 0.0
+    "stddev_iou": 0.07335619
   },
   "domain_space": {
     "critical": {
@@ -162,21 +165,22 @@
         "lsd_refine_mode": "none",
         "lsd_scale": 0.6,
         "minimum_contour_area_fraction": 0.08,
-        "minimum_edge_support": 0.2,
         "minimum_rectangularity": 0.45,
         "minimum_segment_length_fraction": 0.03
       },
-      "included_parameters": [],
-      "parameter_set_count": 0
+      "included_parameters": [
+        "minimum_edge_support"
+      ],
+      "parameter_set_count": 3
     },
     "exhaustive": {
       "fixed_parameters": {},
       "included_parameters": [
-        "lsd_scale",
-        "minimum_segment_length_fraction",
-        "lsd_refine_mode",
         "minimum_edge_support",
         "edge_support_dilation_fraction",
+        "minimum_segment_length_fraction",
+        "lsd_scale",
+        "lsd_refine_mode",
         "angle_weight",
         "area_weight",
         "close_iterations",
@@ -194,66 +198,67 @@
     },
     "important_plus": {
       "fixed_parameters": {
-        "edge_support_dilation_fraction": 0.003,
         "edge_support_weight": 0.2,
         "epsilon_max_fraction": 0.03,
         "lsd_refine_mode": "none",
-        "lsd_scale": 0.6,
         "minimum_contour_area_fraction": 0.08,
-        "minimum_edge_support": 0.2,
-        "minimum_rectangularity": 0.45,
-        "minimum_segment_length_fraction": 0.03
+        "minimum_rectangularity": 0.45
       },
-      "included_parameters": [],
-      "parameter_set_count": 0
+      "included_parameters": [
+        "minimum_edge_support",
+        "edge_support_dilation_fraction",
+        "minimum_segment_length_fraction",
+        "lsd_scale"
+      ],
+      "parameter_set_count": 81
     },
     "low_plus": {
       "fixed_parameters": {
-        "edge_support_dilation_fraction": 0.003,
         "edge_support_weight": 0.2,
         "epsilon_max_fraction": 0.03,
         "minimum_contour_area_fraction": 0.08,
         "minimum_rectangularity": 0.45
       },
       "included_parameters": [
-        "lsd_scale",
+        "minimum_edge_support",
+        "edge_support_dilation_fraction",
         "minimum_segment_length_fraction",
-        "lsd_refine_mode",
-        "minimum_edge_support"
+        "lsd_scale",
+        "lsd_refine_mode"
       ],
-      "parameter_set_count": 54
+      "parameter_set_count": 162
     },
     "moderate_plus": {
       "fixed_parameters": {
-        "edge_support_dilation_fraction": 0.003,
         "edge_support_weight": 0.2,
         "epsilon_max_fraction": 0.03,
-        "lsd_refine_mode": "none",
         "minimum_contour_area_fraction": 0.08,
-        "minimum_edge_support": 0.2,
         "minimum_rectangularity": 0.45
       },
       "included_parameters": [
+        "minimum_edge_support",
+        "edge_support_dilation_fraction",
+        "minimum_segment_length_fraction",
         "lsd_scale",
-        "minimum_segment_length_fraction"
+        "lsd_refine_mode"
       ],
-      "parameter_set_count": 9
+      "parameter_set_count": 162
     },
     "non_dormant": {
       "fixed_parameters": {
-        "edge_support_dilation_fraction": 0.003,
         "edge_support_weight": 0.2,
         "epsilon_max_fraction": 0.03,
         "minimum_contour_area_fraction": 0.08,
         "minimum_rectangularity": 0.45
       },
       "included_parameters": [
-        "lsd_scale",
+        "minimum_edge_support",
+        "edge_support_dilation_fraction",
         "minimum_segment_length_fraction",
-        "lsd_refine_mode",
-        "minimum_edge_support"
+        "lsd_scale",
+        "lsd_refine_mode"
       ],
-      "parameter_set_count": 54
+      "parameter_set_count": 162
     }
   },
   "domain_space_intelligence": {
@@ -261,7 +266,9 @@
       "exhaustive",
       "non_dormant",
       "low_plus",
-      "moderate_plus"
+      "moderate_plus",
+      "important_plus",
+      "critical"
     ],
     "default_strategy": "exhaustive",
     "domains": {
@@ -273,21 +280,22 @@
           "lsd_refine_mode": "none",
           "lsd_scale": 0.6,
           "minimum_contour_area_fraction": 0.08,
-          "minimum_edge_support": 0.2,
           "minimum_rectangularity": 0.45,
           "minimum_segment_length_fraction": 0.03
         },
-        "included_parameters": [],
-        "parameter_set_count": 0
+        "included_parameters": [
+          "minimum_edge_support"
+        ],
+        "parameter_set_count": 3
       },
       "exhaustive": {
         "fixed_parameters": {},
         "included_parameters": [
-          "lsd_scale",
-          "minimum_segment_length_fraction",
-          "lsd_refine_mode",
           "minimum_edge_support",
           "edge_support_dilation_fraction",
+          "minimum_segment_length_fraction",
+          "lsd_scale",
+          "lsd_refine_mode",
           "angle_weight",
           "area_weight",
           "close_iterations",
@@ -305,66 +313,67 @@
       },
       "important_plus": {
         "fixed_parameters": {
-          "edge_support_dilation_fraction": 0.003,
           "edge_support_weight": 0.2,
           "epsilon_max_fraction": 0.03,
           "lsd_refine_mode": "none",
-          "lsd_scale": 0.6,
           "minimum_contour_area_fraction": 0.08,
-          "minimum_edge_support": 0.2,
-          "minimum_rectangularity": 0.45,
-          "minimum_segment_length_fraction": 0.03
+          "minimum_rectangularity": 0.45
         },
-        "included_parameters": [],
-        "parameter_set_count": 0
+        "included_parameters": [
+          "minimum_edge_support",
+          "edge_support_dilation_fraction",
+          "minimum_segment_length_fraction",
+          "lsd_scale"
+        ],
+        "parameter_set_count": 81
       },
       "low_plus": {
         "fixed_parameters": {
-          "edge_support_dilation_fraction": 0.003,
           "edge_support_weight": 0.2,
           "epsilon_max_fraction": 0.03,
           "minimum_contour_area_fraction": 0.08,
           "minimum_rectangularity": 0.45
         },
         "included_parameters": [
-          "lsd_scale",
+          "minimum_edge_support",
+          "edge_support_dilation_fraction",
           "minimum_segment_length_fraction",
-          "lsd_refine_mode",
-          "minimum_edge_support"
+          "lsd_scale",
+          "lsd_refine_mode"
         ],
-        "parameter_set_count": 54
+        "parameter_set_count": 162
       },
       "moderate_plus": {
         "fixed_parameters": {
-          "edge_support_dilation_fraction": 0.003,
           "edge_support_weight": 0.2,
           "epsilon_max_fraction": 0.03,
-          "lsd_refine_mode": "none",
           "minimum_contour_area_fraction": 0.08,
-          "minimum_edge_support": 0.2,
           "minimum_rectangularity": 0.45
         },
         "included_parameters": [
+          "minimum_edge_support",
+          "edge_support_dilation_fraction",
+          "minimum_segment_length_fraction",
           "lsd_scale",
-          "minimum_segment_length_fraction"
+          "lsd_refine_mode"
         ],
-        "parameter_set_count": 9
+        "parameter_set_count": 162
       },
       "non_dormant": {
         "fixed_parameters": {
-          "edge_support_dilation_fraction": 0.003,
           "edge_support_weight": 0.2,
           "epsilon_max_fraction": 0.03,
           "minimum_contour_area_fraction": 0.08,
           "minimum_rectangularity": 0.45
         },
         "included_parameters": [
-          "lsd_scale",
+          "minimum_edge_support",
+          "edge_support_dilation_fraction",
           "minimum_segment_length_fraction",
-          "lsd_refine_mode",
-          "minimum_edge_support"
+          "lsd_scale",
+          "lsd_refine_mode"
         ],
-        "parameter_set_count": 54
+        "parameter_set_count": 162
       }
     },
     "fallback_order": [
@@ -380,11 +389,11 @@
   "interaction_method": {
     "note": "Pairwise interaction importance is estimated from a deterministic sample and is exploratory, not causal.",
     "parameters_considered": [
-      "lsd_scale",
-      "minimum_segment_length_fraction",
-      "lsd_refine_mode",
       "minimum_edge_support",
       "edge_support_dilation_fraction",
+      "minimum_segment_length_fraction",
+      "lsd_scale",
+      "lsd_refine_mode",
       "angle_weight"
     ],
     "sample_size": 13123,
@@ -392,111 +401,111 @@
   },
   "interactions": [
     {
-      "eta_squared": 0.1688305002587039,
-      "incremental_importance": 0.11516618663727891,
-      "parameters": [
-        "lsd_scale",
-        "minimum_segment_length_fraction"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.14439394456573543,
-      "incremental_importance": 0.09072963094431043,
-      "parameters": [
-        "lsd_scale",
-        "lsd_refine_mode"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.09855770298861849,
-      "incremental_importance": 0.06849701730034685,
-      "parameters": [
-        "minimum_segment_length_fraction",
-        "lsd_refine_mode"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.11423617466559212,
-      "incremental_importance": 0.06057186104416712,
-      "parameters": [
-        "lsd_scale",
-        "minimum_edge_support"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.0690818211250464,
-      "incremental_importance": 0.03902113543677477,
-      "parameters": [
-        "minimum_segment_length_fraction",
-        "minimum_edge_support"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.06363223620041651,
-      "incremental_importance": 0.0351933842414584,
-      "parameters": [
-        "lsd_refine_mode",
-        "minimum_edge_support"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.07052878392063949,
-      "incremental_importance": 0.016864470299214493,
-      "parameters": [
-        "lsd_scale",
-        "edge_support_dilation_fraction"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.03636355018347299,
-      "incremental_importance": 0.007924698224514883,
-      "parameters": [
-        "lsd_refine_mode",
-        "edge_support_dilation_fraction"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.03696889761295131,
-      "incremental_importance": 0.006908211924679667,
-      "parameters": [
-        "minimum_segment_length_fraction",
-        "edge_support_dilation_fraction"
-      ],
-      "sample_size": 13123
-    },
-    {
-      "eta_squared": 0.010019071779350538,
-      "incremental_importance": 0.006185300130931941,
+      "eta_squared": 0.5279217210767769,
+      "incremental_importance": 0.2071878060670378,
       "parameters": [
         "minimum_edge_support",
         "edge_support_dilation_fraction"
       ],
       "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.4739306900608512,
+      "incremental_importance": 0.15319677505111207,
+      "parameters": [
+        "minimum_edge_support",
+        "minimum_segment_length_fraction"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.3244723065579281,
+      "incremental_importance": 0.14377544773174653,
+      "parameters": [
+        "edge_support_dilation_fraction",
+        "minimum_segment_length_fraction"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.29650417555515646,
+      "incremental_importance": 0.1158073167289749,
+      "parameters": [
+        "edge_support_dilation_fraction",
+        "lsd_scale"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.25619285351646437,
+      "incremental_importance": 0.11447489947821268,
+      "parameters": [
+        "minimum_segment_length_fraction",
+        "lsd_scale"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.4348232082082294,
+      "incremental_importance": 0.11408929319849026,
+      "parameters": [
+        "minimum_edge_support",
+        "lsd_scale"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.2044065064069245,
+      "incremental_importance": 0.09254342685362985,
+      "parameters": [
+        "lsd_scale",
+        "lsd_refine_mode"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.20219808160932748,
+      "incremental_importance": 0.06048012757107579,
+      "parameters": [
+        "minimum_segment_length_fraction",
+        "lsd_refine_mode"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.3781561566014693,
+      "incremental_importance": 0.05742224159173015,
+      "parameters": [
+        "minimum_edge_support",
+        "lsd_refine_mode"
+      ],
+      "sample_size": 13123
+    },
+    {
+      "eta_squared": 0.23321713528158713,
+      "incremental_importance": 0.05252027645540558,
+      "parameters": [
+        "edge_support_dilation_fraction",
+        "lsd_refine_mode"
+      ],
+      "sample_size": 13123
     }
   ],
   "landscape": {
-    "best_mean_iou": 0.96377596,
+    "best_mean_iou": 0.87682013,
     "equivalent_tolerance": 0.0001,
-    "equivalent_winner_count": 3645,
-    "equivalent_winner_share": 0.27775661053112854,
-    "mean_mean_iou": 0.8836135626861237,
-    "median_mean_iou": 0.91277115,
+    "equivalent_winner_count": 1134,
+    "equivalent_winner_share": 0.08641316772079555,
+    "mean_mean_iou": 0.4629529871218471,
+    "median_mean_iou": 0.53916619,
     "minimum_mean_iou": 0.0,
-    "near_best_count": 3645,
-    "near_best_share": 0.27775661053112854,
+    "near_best_count": 1134,
+    "near_best_share": 0.08641316772079555,
     "near_best_tolerance": 0.001,
-    "p90_mean_iou": 0.96377596,
-    "p95_mean_iou": 0.96377596,
-    "p99_mean_iou": 0.96377596,
-    "stddev_mean_iou": 0.17631011638187485
+    "p90_mean_iou": 0.8617962299999999,
+    "p95_mean_iou": 0.87682013,
+    "p99_mean_iou": 0.87682013,
+    "stddev_mean_iou": 0.24950640448385858
   },
   "page_sensitivity": [
     {
@@ -534,9 +543,9 @@
     {
       "global_ordinal": 10,
       "maximum_iou": 0.94540817,
-      "mean_iou": 0.5717102041591295,
+      "mean_iou": 0.5717102041591917,
       "minimum_iou": 0.0,
-      "stddev_iou": 0.4277548761496874,
+      "stddev_iou": 0.4277548761495975,
       "success_rate": 0.6420025908709899
     }
   ],
@@ -544,95 +553,25 @@
     {
       "best_values": [
         {
-          "count": 4375,
-          "mean_iou": 0.9139693961440035,
-          "value": "0.8"
-        },
-        {
           "count": 4374,
-          "mean_iou": 0.9109895022222291,
-          "value": "0.6"
-        },
-        {
-          "count": 4374,
-          "mean_iou": 0.8258748496296592,
-          "value": "1"
-        }
-      ],
-      "classification": "Moderate",
-      "eta_squared": 0.053664313621425,
-      "mean_iou_range": 0.08809454651434434,
-      "near_best_value_coverage": 1.0,
-      "parameter": "lsd_scale",
-      "value_count": 3
-    },
-    {
-      "best_values": [
-        {
-          "count": 4374,
-          "mean_iou": 0.9053741968518407,
-          "value": "0.03"
-        },
-        {
-          "count": 4375,
-          "mean_iou": 0.9050808001394435,
-          "value": "0.06"
-        },
-        {
-          "count": 4374,
-          "mean_iou": 0.84038078314816,
-          "value": "0.1"
-        }
-      ],
-      "classification": "Moderate",
-      "eta_squared": 0.03006068568827164,
-      "mean_iou_range": 0.06499341370368072,
-      "near_best_value_coverage": 1.0,
-      "parameter": "minimum_segment_length_fraction",
-      "value_count": 3
-    },
-    {
-      "best_values": [
-        {
-          "count": 6561,
-          "mean_iou": 0.9133484540740561,
-          "value": "none"
-        },
-        {
-          "count": 6562,
-          "mean_iou": 0.8538832026744746,
-          "value": "std"
-        }
-      ],
-      "classification": "Low",
-      "eta_squared": 0.028438851958958105,
-      "mean_iou_range": 0.059465251399581476,
-      "near_best_value_coverage": 1.0,
-      "parameter": "lsd_refine_mode",
-      "value_count": 2
-    },
-    {
-      "best_values": [
-        {
-          "count": 4374,
-          "mean_iou": 0.8953229201851917,
+          "mean_iou": 0.6503813607406873,
           "value": "0.05"
         },
         {
           "count": 4375,
-          "mean_iou": 0.8864727832617191,
+          "mean_iou": 0.4292927504114643,
           "value": "0.12"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8690443309259602,
+          "mean_iou": 0.3091925457407699,
           "value": "0.2"
         }
       ],
-      "classification": "Low",
-      "eta_squared": 0.003833771648418597,
-      "mean_iou_range": 0.026278589259231433,
-      "near_best_value_coverage": 1.0,
+      "classification": "Critical",
+      "eta_squared": 0.32073391500973913,
+      "mean_iou_range": 0.34118881499991743,
+      "near_best_value_coverage": 0.6666666666666666,
       "parameter": "minimum_edge_support",
       "value_count": 3
     },
@@ -640,23 +579,23 @@
       "best_values": [
         {
           "count": 4374,
-          "mean_iou": 0.8874473614814721,
+          "mean_iou": 0.5775166890740532,
           "value": "0.01"
         },
         {
-          "count": 4374,
-          "mean_iou": 0.8863635842592752,
-          "value": "0.003"
+          "count": 4375,
+          "mean_iou": 0.4895175428937238,
+          "value": "0.006"
         },
         {
-          "count": 4375,
-          "mean_iou": 0.8770312471908528,
-          "value": "0.006"
+          "count": 4374,
+          "mean_iou": 0.321818656111135,
+          "value": "0.003"
         }
       ],
-      "classification": "Dormant",
-      "eta_squared": 0.0007033603929268766,
-      "mean_iou_range": 0.010416114290619283,
+      "classification": "Important",
+      "eta_squared": 0.18069685882618156,
+      "mean_iou_range": 0.25569803296291815,
       "near_best_value_coverage": 1.0,
       "parameter": "edge_support_dilation_fraction",
       "value_count": 3
@@ -664,13 +603,83 @@
     {
       "best_values": [
         {
+          "count": 4374,
+          "mean_iou": 0.590848146481458,
+          "value": "0.03"
+        },
+        {
+          "count": 4375,
+          "mean_iou": 0.4301079240434661,
+          "value": "0.06"
+        },
+        {
+          "count": 4374,
+          "mean_iou": 0.36791040000002323,
+          "value": "0.1"
+        }
+      ],
+      "classification": "Important",
+      "eta_squared": 0.1417179540382517,
+      "mean_iou_range": 0.22293774648143477,
+      "near_best_value_coverage": 0.3333333333333333,
+      "parameter": "minimum_segment_length_fraction",
+      "value_count": 3
+    },
+    {
+      "best_values": [
+        {
+          "count": 4374,
+          "mean_iou": 0.5389866055555352,
+          "value": "0.6"
+        },
+        {
+          "count": 4375,
+          "mean_iou": 0.5030995025508547,
+          "value": "0.8"
+        },
+        {
+          "count": 4374,
+          "mean_iou": 0.34676367481484577,
+          "value": "1"
+        }
+      ],
+      "classification": "Important",
+      "eta_squared": 0.11186307955329466,
+      "mean_iou_range": 0.19222293074068947,
+      "near_best_value_coverage": 0.6666666666666666,
+      "parameter": "lsd_scale",
+      "value_count": 3
+    },
+    {
+      "best_values": [
+        {
+          "count": 6561,
+          "mean_iou": 0.5197343420986872,
+          "value": "none"
+        },
+        {
+          "count": 6562,
+          "mean_iou": 0.4061802852011188,
+          "value": "std"
+        }
+      ],
+      "classification": "Moderate",
+      "eta_squared": 0.05178236955828413,
+      "mean_iou_range": 0.11355405689756837,
+      "near_best_value_coverage": 1.0,
+      "parameter": "lsd_refine_mode",
+      "value_count": 2
+    },
+    {
+      "best_values": [
+        {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "0.2"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "angle_weight",
@@ -680,12 +689,12 @@
       "best_values": [
         {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "0.25"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "area_weight",
@@ -695,12 +704,12 @@
       "best_values": [
         {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "1"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "close_iterations",
@@ -710,12 +719,12 @@
       "best_values": [
         {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "0.008"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "close_kernel_fraction",
@@ -725,12 +734,12 @@
       "best_values": [
         {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "0.008"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "epsilon_min_fraction",
@@ -740,12 +749,12 @@
       "best_values": [
         {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "9"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "epsilon_steps",
@@ -755,12 +764,12 @@
       "best_values": [
         {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "true"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "merge_fragmented_contours",
@@ -770,12 +779,12 @@
       "best_values": [
         {
           "count": 1,
-          "mean_iou": 0.89861032,
+          "mean_iou": 0.53916619,
           "value": "0.25"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 5.513242990764196e-07,
+      "eta_squared": 7.109906707338131e-06,
       "mean_iou_range": 0.0,
       "near_best_value_coverage": 0.0,
       "parameter": "rectangularity_weight",
@@ -785,23 +794,23 @@
       "best_values": [
         {
           "count": 4375,
-          "mean_iou": 0.8836158479062901,
+          "mean_iou": 0.46296460056232563,
           "value": "0.3"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.2"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.4"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 8.40177240907358e-11,
-      "mean_iou_range": 3.428091470913941e-06,
+      "eta_squared": 1.083496920133362e-09,
+      "mean_iou_range": 1.7421488211655234e-05,
       "near_best_value_coverage": 1.0,
       "parameter": "edge_support_weight",
       "value_count": 3
@@ -810,23 +819,23 @@
       "best_values": [
         {
           "count": 4375,
-          "mean_iou": 0.8836158479062901,
+          "mean_iou": 0.46296460056232563,
           "value": "0.04"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.03"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.06"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 8.40177240907358e-11,
-      "mean_iou_range": 3.428091470913941e-06,
+      "eta_squared": 1.083496920133362e-09,
+      "mean_iou_range": 1.7421488211655234e-05,
       "near_best_value_coverage": 1.0,
       "parameter": "epsilon_max_fraction",
       "value_count": 3
@@ -835,23 +844,23 @@
       "best_values": [
         {
           "count": 4375,
-          "mean_iou": 0.8836158479062901,
+          "mean_iou": 0.46296460056232563,
           "value": "0.12"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.08"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.18"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 8.40177240907358e-11,
-      "mean_iou_range": 3.428091470913941e-06,
+      "eta_squared": 1.083496920133362e-09,
+      "mean_iou_range": 1.7421488211655234e-05,
       "near_best_value_coverage": 1.0,
       "parameter": "minimum_contour_area_fraction",
       "value_count": 3
@@ -860,23 +869,23 @@
       "best_values": [
         {
           "count": 4375,
-          "mean_iou": 0.8836158479062901,
+          "mean_iou": 0.46296460056232563,
           "value": "0.55"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.45"
         },
         {
           "count": 4374,
-          "mean_iou": 0.8836124198148192,
+          "mean_iou": 0.462947179074114,
           "value": "0.7"
         }
       ],
       "classification": "Dormant",
-      "eta_squared": 8.40177240907358e-11,
-      "mean_iou_range": 3.428091470913941e-06,
+      "eta_squared": 1.083496920133362e-09,
+      "mean_iou_range": 1.7421488211655234e-05,
       "near_best_value_coverage": 1.0,
       "parameter": "minimum_rectangularity",
       "value_count": 3
@@ -884,10 +893,11 @@
   ],
   "parameter_intelligence": {
     "active_parameters": [
-      "lsd_scale",
+      "minimum_edge_support",
+      "edge_support_dilation_fraction",
       "minimum_segment_length_fraction",
-      "lsd_refine_mode",
-      "minimum_edge_support"
+      "lsd_scale",
+      "lsd_refine_mode"
     ],
     "classification_thresholds": {
       "critical": {
@@ -908,7 +918,6 @@
       }
     },
     "dormant_parameters": [
-      "edge_support_dilation_fraction",
       "angle_weight",
       "area_weight",
       "close_iterations",
@@ -926,11 +935,11 @@
     "interaction_method": {
       "note": "Pairwise interaction importance is estimated from a deterministic sample and is exploratory, not causal.",
       "parameters_considered": [
-        "lsd_scale",
-        "minimum_segment_length_fraction",
-        "lsd_refine_mode",
         "minimum_edge_support",
         "edge_support_dilation_fraction",
+        "minimum_segment_length_fraction",
+        "lsd_scale",
+        "lsd_refine_mode",
         "angle_weight"
       ],
       "sample_size": 13123,
@@ -938,92 +947,92 @@
     },
     "interactions": [
       {
-        "eta_squared": 0.1688305002587039,
-        "incremental_importance": 0.11516618663727891,
+        "eta_squared": 0.5279217210767769,
+        "incremental_importance": 0.2071878060670378,
         "parameters": [
-          "lsd_scale",
+          "minimum_edge_support",
+          "edge_support_dilation_fraction"
+        ],
+        "sample_size": 13123
+      },
+      {
+        "eta_squared": 0.4739306900608512,
+        "incremental_importance": 0.15319677505111207,
+        "parameters": [
+          "minimum_edge_support",
           "minimum_segment_length_fraction"
         ],
         "sample_size": 13123
       },
       {
-        "eta_squared": 0.14439394456573543,
-        "incremental_importance": 0.09072963094431043,
+        "eta_squared": 0.3244723065579281,
+        "incremental_importance": 0.14377544773174653,
         "parameters": [
-          "lsd_scale",
-          "lsd_refine_mode"
+          "edge_support_dilation_fraction",
+          "minimum_segment_length_fraction"
         ],
         "sample_size": 13123
       },
       {
-        "eta_squared": 0.09855770298861849,
-        "incremental_importance": 0.06849701730034685,
+        "eta_squared": 0.29650417555515646,
+        "incremental_importance": 0.1158073167289749,
         "parameters": [
-          "minimum_segment_length_fraction",
-          "lsd_refine_mode"
+          "edge_support_dilation_fraction",
+          "lsd_scale"
         ],
         "sample_size": 13123
       },
       {
-        "eta_squared": 0.11423617466559212,
-        "incremental_importance": 0.06057186104416712,
-        "parameters": [
-          "lsd_scale",
-          "minimum_edge_support"
-        ],
-        "sample_size": 13123
-      },
-      {
-        "eta_squared": 0.0690818211250464,
-        "incremental_importance": 0.03902113543677477,
+        "eta_squared": 0.25619285351646437,
+        "incremental_importance": 0.11447489947821268,
         "parameters": [
           "minimum_segment_length_fraction",
-          "minimum_edge_support"
+          "lsd_scale"
         ],
         "sample_size": 13123
       },
       {
-        "eta_squared": 0.06363223620041651,
-        "incremental_importance": 0.0351933842414584,
-        "parameters": [
-          "lsd_refine_mode",
-          "minimum_edge_support"
-        ],
-        "sample_size": 13123
-      },
-      {
-        "eta_squared": 0.07052878392063949,
-        "incremental_importance": 0.016864470299214493,
-        "parameters": [
-          "lsd_scale",
-          "edge_support_dilation_fraction"
-        ],
-        "sample_size": 13123
-      },
-      {
-        "eta_squared": 0.03636355018347299,
-        "incremental_importance": 0.007924698224514883,
-        "parameters": [
-          "lsd_refine_mode",
-          "edge_support_dilation_fraction"
-        ],
-        "sample_size": 13123
-      },
-      {
-        "eta_squared": 0.03696889761295131,
-        "incremental_importance": 0.006908211924679667,
-        "parameters": [
-          "minimum_segment_length_fraction",
-          "edge_support_dilation_fraction"
-        ],
-        "sample_size": 13123
-      },
-      {
-        "eta_squared": 0.010019071779350538,
-        "incremental_importance": 0.006185300130931941,
+        "eta_squared": 0.4348232082082294,
+        "incremental_importance": 0.11408929319849026,
         "parameters": [
           "minimum_edge_support",
-          "edge_support_dilation_fraction"
+          "lsd_scale"
+        ],
+        "sample_size": 13123
+      },
+      {
+        "eta_squared": 0.2044065064069245,
+        "incremental_importance": 0.09254342685362985,
+        "parameters": [
+          "lsd_scale",
+          "lsd_refine_mode"
+        ],
+        "sample_size": 13123
+      },
+      {
+        "eta_squared": 0.20219808160932748,
+        "incremental_importance": 0.06048012757107579,
+        "parameters": [
+          "minimum_segment_length_fraction",
+          "lsd_refine_mode"
+        ],
+        "sample_size": 13123
+      },
+      {
+        "eta_squared": 0.3781561566014693,
+        "incremental_importance": 0.05742224159173015,
+        "parameters": [
+          "minimum_edge_support",
+          "lsd_refine_mode"
+        ],
+        "sample_size": 13123
+      },
+      {
+        "eta_squared": 0.23321713528158713,
+        "incremental_importance": 0.05252027645540558,
+        "parameters": [
+          "edge_support_dilation_fraction",
+          "lsd_refine_mode"
         ],
         "sample_size": 13123
       }
@@ -1064,9 +1073,9 @@
       {
         "global_ordinal": 10,
         "maximum_iou": 0.94540817,
-        "mean_iou": 0.5717102041591295,
+        "mean_iou": 0.5717102041591917,
         "minimum_iou": 0.0,
-        "stddev_iou": 0.4277548761496874,
+        "stddev_iou": 0.4277548761495975,
         "success_rate": 0.6420025908709899
       }
     ],
@@ -1074,95 +1083,25 @@
       {
         "best_values": [
           {
-            "count": 4375,
-            "mean_iou": 0.9139693961440035,
-            "value": "0.8"
-          },
-          {
             "count": 4374,
-            "mean_iou": 0.9109895022222291,
-            "value": "0.6"
-          },
-          {
-            "count": 4374,
-            "mean_iou": 0.8258748496296592,
-            "value": "1"
-          }
-        ],
-        "classification": "Moderate",
-        "eta_squared": 0.053664313621425,
-        "mean_iou_range": 0.08809454651434434,
-        "near_best_value_coverage": 1.0,
-        "parameter": "lsd_scale",
-        "value_count": 3
-      },
-      {
-        "best_values": [
-          {
-            "count": 4374,
-            "mean_iou": 0.9053741968518407,
-            "value": "0.03"
-          },
-          {
-            "count": 4375,
-            "mean_iou": 0.9050808001394435,
-            "value": "0.06"
-          },
-          {
-            "count": 4374,
-            "mean_iou": 0.84038078314816,
-            "value": "0.1"
-          }
-        ],
-        "classification": "Moderate",
-        "eta_squared": 0.03006068568827164,
-        "mean_iou_range": 0.06499341370368072,
-        "near_best_value_coverage": 1.0,
-        "parameter": "minimum_segment_length_fraction",
-        "value_count": 3
-      },
-      {
-        "best_values": [
-          {
-            "count": 6561,
-            "mean_iou": 0.9133484540740561,
-            "value": "none"
-          },
-          {
-            "count": 6562,
-            "mean_iou": 0.8538832026744746,
-            "value": "std"
-          }
-        ],
-        "classification": "Low",
-        "eta_squared": 0.028438851958958105,
-        "mean_iou_range": 0.059465251399581476,
-        "near_best_value_coverage": 1.0,
-        "parameter": "lsd_refine_mode",
-        "value_count": 2
-      },
-      {
-        "best_values": [
-          {
-            "count": 4374,
-            "mean_iou": 0.8953229201851917,
+            "mean_iou": 0.6503813607406873,
             "value": "0.05"
           },
           {
             "count": 4375,
-            "mean_iou": 0.8864727832617191,
+            "mean_iou": 0.4292927504114643,
             "value": "0.12"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8690443309259602,
+            "mean_iou": 0.3091925457407699,
             "value": "0.2"
           }
         ],
-        "classification": "Low",
-        "eta_squared": 0.003833771648418597,
-        "mean_iou_range": 0.026278589259231433,
-        "near_best_value_coverage": 1.0,
+        "classification": "Critical",
+        "eta_squared": 0.32073391500973913,
+        "mean_iou_range": 0.34118881499991743,
+        "near_best_value_coverage": 0.6666666666666666,
         "parameter": "minimum_edge_support",
         "value_count": 3
       },
@@ -1170,23 +1109,23 @@
         "best_values": [
           {
             "count": 4374,
-            "mean_iou": 0.8874473614814721,
+            "mean_iou": 0.5775166890740532,
             "value": "0.01"
           },
           {
-            "count": 4374,
-            "mean_iou": 0.8863635842592752,
-            "value": "0.003"
+            "count": 4375,
+            "mean_iou": 0.4895175428937238,
+            "value": "0.006"
           },
           {
-            "count": 4375,
-            "mean_iou": 0.8770312471908528,
-            "value": "0.006"
+            "count": 4374,
+            "mean_iou": 0.321818656111135,
+            "value": "0.003"
           }
         ],
-        "classification": "Dormant",
-        "eta_squared": 0.0007033603929268766,
-        "mean_iou_range": 0.010416114290619283,
+        "classification": "Important",
+        "eta_squared": 0.18069685882618156,
+        "mean_iou_range": 0.25569803296291815,
         "near_best_value_coverage": 1.0,
         "parameter": "edge_support_dilation_fraction",
         "value_count": 3
@@ -1194,13 +1133,83 @@
       {
         "best_values": [
           {
+            "count": 4374,
+            "mean_iou": 0.590848146481458,
+            "value": "0.03"
+          },
+          {
+            "count": 4375,
+            "mean_iou": 0.4301079240434661,
+            "value": "0.06"
+          },
+          {
+            "count": 4374,
+            "mean_iou": 0.36791040000002323,
+            "value": "0.1"
+          }
+        ],
+        "classification": "Important",
+        "eta_squared": 0.1417179540382517,
+        "mean_iou_range": 0.22293774648143477,
+        "near_best_value_coverage": 0.3333333333333333,
+        "parameter": "minimum_segment_length_fraction",
+        "value_count": 3
+      },
+      {
+        "best_values": [
+          {
+            "count": 4374,
+            "mean_iou": 0.5389866055555352,
+            "value": "0.6"
+          },
+          {
+            "count": 4375,
+            "mean_iou": 0.5030995025508547,
+            "value": "0.8"
+          },
+          {
+            "count": 4374,
+            "mean_iou": 0.34676367481484577,
+            "value": "1"
+          }
+        ],
+        "classification": "Important",
+        "eta_squared": 0.11186307955329466,
+        "mean_iou_range": 0.19222293074068947,
+        "near_best_value_coverage": 0.6666666666666666,
+        "parameter": "lsd_scale",
+        "value_count": 3
+      },
+      {
+        "best_values": [
+          {
+            "count": 6561,
+            "mean_iou": 0.5197343420986872,
+            "value": "none"
+          },
+          {
+            "count": 6562,
+            "mean_iou": 0.4061802852011188,
+            "value": "std"
+          }
+        ],
+        "classification": "Moderate",
+        "eta_squared": 0.05178236955828413,
+        "mean_iou_range": 0.11355405689756837,
+        "near_best_value_coverage": 1.0,
+        "parameter": "lsd_refine_mode",
+        "value_count": 2
+      },
+      {
+        "best_values": [
+          {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "0.2"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "angle_weight",
@@ -1210,12 +1219,12 @@
         "best_values": [
           {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "0.25"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "area_weight",
@@ -1225,12 +1234,12 @@
         "best_values": [
           {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "1"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "close_iterations",
@@ -1240,12 +1249,12 @@
         "best_values": [
           {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "0.008"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "close_kernel_fraction",
@@ -1255,12 +1264,12 @@
         "best_values": [
           {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "0.008"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "epsilon_min_fraction",
@@ -1270,12 +1279,12 @@
         "best_values": [
           {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "9"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "epsilon_steps",
@@ -1285,12 +1294,12 @@
         "best_values": [
           {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "true"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "merge_fragmented_contours",
@@ -1300,12 +1309,12 @@
         "best_values": [
           {
             "count": 1,
-            "mean_iou": 0.89861032,
+            "mean_iou": 0.53916619,
             "value": "0.25"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 5.513242990764196e-07,
+        "eta_squared": 7.109906707338131e-06,
         "mean_iou_range": 0.0,
         "near_best_value_coverage": 0.0,
         "parameter": "rectangularity_weight",
@@ -1315,23 +1324,23 @@
         "best_values": [
           {
             "count": 4375,
-            "mean_iou": 0.8836158479062901,
+            "mean_iou": 0.46296460056232563,
             "value": "0.3"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.2"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.4"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 8.40177240907358e-11,
-        "mean_iou_range": 3.428091470913941e-06,
+        "eta_squared": 1.083496920133362e-09,
+        "mean_iou_range": 1.7421488211655234e-05,
         "near_best_value_coverage": 1.0,
         "parameter": "edge_support_weight",
         "value_count": 3
@@ -1340,23 +1349,23 @@
         "best_values": [
           {
             "count": 4375,
-            "mean_iou": 0.8836158479062901,
+            "mean_iou": 0.46296460056232563,
             "value": "0.04"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.03"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.06"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 8.40177240907358e-11,
-        "mean_iou_range": 3.428091470913941e-06,
+        "eta_squared": 1.083496920133362e-09,
+        "mean_iou_range": 1.7421488211655234e-05,
         "near_best_value_coverage": 1.0,
         "parameter": "epsilon_max_fraction",
         "value_count": 3
@@ -1365,23 +1374,23 @@
         "best_values": [
           {
             "count": 4375,
-            "mean_iou": 0.8836158479062901,
+            "mean_iou": 0.46296460056232563,
             "value": "0.12"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.08"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.18"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 8.40177240907358e-11,
-        "mean_iou_range": 3.428091470913941e-06,
+        "eta_squared": 1.083496920133362e-09,
+        "mean_iou_range": 1.7421488211655234e-05,
         "near_best_value_coverage": 1.0,
         "parameter": "minimum_contour_area_fraction",
         "value_count": 3
@@ -1390,23 +1399,23 @@
         "best_values": [
           {
             "count": 4375,
-            "mean_iou": 0.8836158479062901,
+            "mean_iou": 0.46296460056232563,
             "value": "0.55"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.45"
           },
           {
             "count": 4374,
-            "mean_iou": 0.8836124198148192,
+            "mean_iou": 0.462947179074114,
             "value": "0.7"
           }
         ],
         "classification": "Dormant",
-        "eta_squared": 8.40177240907358e-11,
-        "mean_iou_range": 3.428091470913941e-06,
+        "eta_squared": 1.083496920133362e-09,
+        "mean_iou_range": 1.7421488211655234e-05,
         "near_best_value_coverage": 1.0,
         "parameter": "minimum_rectangularity",
         "value_count": 3
@@ -1415,13 +1424,12 @@
   },
   "persistence": {
     "index": "calibration-index.json",
-    "published_at_utc": "2026-08-10T21:32:15.761670Z",
+    "published_at_utc": "2026-08-11T17:18:38.051315Z",
     "record_path": "source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/edge_contour/run-20260810-213212",
     "store": "results-repository"
   },
   "recommendations": {
     "dormant_parameters": [
-      "edge_support_dilation_fraction",
       "angle_weight",
       "area_weight",
       "close_iterations",

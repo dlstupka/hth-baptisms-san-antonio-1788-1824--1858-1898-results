@@ -47,35 +47,25 @@
   "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
   "winner": {
     "parameter_set_id": "3817f226228a",
+    "profile": "baseline",
     "parameters": {
+      "agreement_weight": 0.25,
+      "contour_epsilon_max_fraction": 0.04,
+      "contour_minimum_area_fraction": 0.12,
+      "contour_minimum_rectangularity": 0.55,
+      "contour_weight": 0.2,
       "grabcut_border_fraction": 0.02,
-      "grabcut_erosion_kernel_fraction": 0.015,
-      "grabcut_erosion_iterations": 1,
-      "grabcut_iterations": 3,
-      "grabcut_close_kernel_fraction": 0.02,
       "grabcut_close_iterations": 1,
+      "grabcut_close_kernel_fraction": 0.02,
+      "grabcut_erosion_iterations": 1,
+      "grabcut_erosion_kernel_fraction": 0.015,
+      "grabcut_iterations": 3,
       "grabcut_minimum_bbox_area_fraction": 0.1,
       "grabcut_minimum_contour_area_fraction": 0.04,
       "grabcut_polygon_epsilon_fraction": 0.018,
-      "contour_minimum_area_fraction": 0.12,
-      "contour_epsilon_max_fraction": 0.04,
-      "contour_minimum_rectangularity": 0.55,
-      "minimum_agreement_iou": 0.15,
       "grabcut_weight": 0.55,
-      "contour_weight": 0.2,
-      "agreement_weight": 0.25,
+      "minimum_agreement_iou": 0.15,
       "require_contour": false
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 5,
-      "failure_count": 0,
-      "mean_iou": 0.81302623,
-      "minimum_iou": 0.55318652,
-      "stddev_iou": 0.16920194,
-      "mean_edge_error_px": 53.5,
-      "elapsed_ms_total": 82316.348,
-      "wall_ms": 82317.24
     },
     "pages": [
       {
@@ -83,6 +73,16 @@
         "label": "ordinary_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.95675438,
+        "edge_errors": {
+          "left": 49.0,
+          "top": 1.0,
+          "right": 1.0,
+          "bottom": 1.0
+        },
+        "edge_error_mean_px": 13.0,
+        "edge_error_maximum_px": 49.0,
+        "elapsed_ms": 7080.971,
         "approved_bbox": [
           125,
           56,
@@ -95,130 +95,6 @@
           1290,
           966
         ],
-        "iou": 0.95675438,
-        "edge_errors": {
-          "left": 49,
-          "top": 1,
-          "right": 1,
-          "bottom": 1,
-          "mean": 13.0,
-          "maximum": 49
-        },
-        "edge_error_mean_px": 13.0,
-        "edge_error_maximum_px": 49,
-        "elapsed_ms": 7080.971,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            76,
-            55,
-            1290,
-            966
-          ],
-          "corners": [
-            [
-              89.0,
-              62.0
-            ],
-            [
-              100.0,
-              953.0
-            ],
-            [
-              1283.0,
-              950.0
-            ],
-            [
-              1272.0,
-              60.0
-            ]
-          ],
-          "confidence": 0.902468,
-          "score": 0.902468,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.962022,
-            "contour_score": 0.79374,
-            "grabcut_corners": [
-              [
-                89.0,
-                62.0
-              ],
-              [
-                100.0,
-                953.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                111.0,
-                90.0
-              ],
-              [
-                1381.0,
-                18.0
-              ],
-              [
-                1257.0,
-                938.0
-              ],
-              [
-                235.0,
-                917.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.793406,
-            "grabcut_contour_area_fraction": 0.79132,
-            "agreement_iou": 0.85843006,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 7080.932
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -228,6 +104,16 @@
         "label": "damaged_partial_register_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.55318652,
+        "edge_errors": {
+          "left": 38.0,
+          "top": 12.0,
+          "right": 468.0,
+          "bottom": 10.0
+        },
+        "edge_error_mean_px": 132.0,
+        "edge_error_maximum_px": 468.0,
+        "elapsed_ms": 9709.743,
         "approved_bbox": [
           67,
           8,
@@ -240,130 +126,6 @@
           765,
           967
         ],
-        "iou": 0.55318652,
-        "edge_errors": {
-          "left": 38,
-          "top": 12,
-          "right": 468,
-          "bottom": 10,
-          "mean": 132.0,
-          "maximum": 468
-        },
-        "edge_error_mean_px": 132.0,
-        "edge_error_maximum_px": 468,
-        "elapsed_ms": 9709.743,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            105,
-            20,
-            765,
-            967
-          ],
-          "corners": [
-            [
-              764.0,
-              966.0
-            ],
-            [
-              105.0,
-              966.0
-            ],
-            [
-              105.0,
-              20.0
-            ],
-            [
-              764.0,
-              20.0
-            ]
-          ],
-          "confidence": 0.790775,
-          "score": 0.790775,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.888134,
-            "contour_score": 0.749072,
-            "grabcut_corners": [
-              [
-                764.0,
-                966.0
-              ],
-              [
-                105.0,
-                966.0
-              ],
-              [
-                105.0,
-                20.0
-              ],
-              [
-                764.0,
-                20.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                119.0,
-                36.0
-              ],
-              [
-                1315.0,
-                15.0
-              ],
-              [
-                739.0,
-                948.0
-              ],
-              [
-                137.0,
-                771.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.443775,
-            "grabcut_contour_area_fraction": 0.443094,
-            "agreement_iou": 0.6099472,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 9709.702
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -373,6 +135,16 @@
         "label": "title_or_index_sheet",
         "layout_type": "single_page",
         "status": "ok",
+        "iou": 0.6682906,
+        "edge_errors": {
+          "left": 229.0,
+          "top": 119.0,
+          "right": 13.0,
+          "bottom": 7.0
+        },
+        "edge_error_mean_px": 92.0,
+        "edge_error_maximum_px": 229.0,
+        "elapsed_ms": 58629.461,
         "approved_bbox": [
           15,
           28,
@@ -385,130 +157,6 @@
           1061,
           963
         ],
-        "iou": 0.6682906,
-        "edge_errors": {
-          "left": 229,
-          "top": 119,
-          "right": 13,
-          "bottom": 7,
-          "mean": 92.0,
-          "maximum": 229
-        },
-        "edge_error_mean_px": 92.0,
-        "edge_error_maximum_px": 229,
-        "elapsed_ms": 58629.461,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            244,
-            147,
-            1061,
-            963
-          ],
-          "corners": [
-            [
-              1059.9998779296875,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              147.0
-            ],
-            [
-              1059.9998779296875,
-              147.0
-            ]
-          ],
-          "confidence": 0.706821,
-          "score": 0.706821,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.706299,
-            "contour_score": 0.662027,
-            "grabcut_corners": [
-              [
-                1059.9998779296875,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                147.0
-              ],
-              [
-                1059.9998779296875,
-                147.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                140.0,
-                44.0
-              ],
-              [
-                1036.0,
-                223.0
-              ],
-              [
-                1021.0,
-                886.0
-              ],
-              [
-                424.0,
-                887.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.415848,
-            "grabcut_contour_area_fraction": 0.444752,
-            "agreement_iou": 0.74380595,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 58629.43
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -518,6 +166,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94222541,
+        "edge_errors": {
+          "left": 13.0,
+          "top": 1.0,
+          "right": 35.0,
+          "bottom": 11.0
+        },
+        "edge_error_mean_px": 15.0,
+        "edge_error_maximum_px": 35.0,
+        "elapsed_ms": 2690.074,
         "approved_bbox": [
           84,
           51,
@@ -530,130 +188,6 @@
           1136,
           952
         ],
-        "iou": 0.94222541,
-        "edge_errors": {
-          "left": 13,
-          "top": 1,
-          "right": 35,
-          "bottom": 11,
-          "mean": 15.0,
-          "maximum": 35
-        },
-        "edge_error_mean_px": 15.0,
-        "edge_error_maximum_px": 35,
-        "elapsed_ms": 2690.074,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            71,
-            50,
-            1136,
-            952
-          ],
-          "corners": [
-            [
-              1117.0,
-              58.0
-            ],
-            [
-              77.0,
-              55.0
-            ],
-            [
-              72.0,
-              933.0
-            ],
-            [
-              1119.0,
-              937.0
-            ]
-          ],
-          "confidence": 0.964433,
-          "score": 0.964433,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.980632,
-            "contour_score": 0.879702,
-            "grabcut_corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                77.0,
-                56.0
-              ],
-              [
-                1115.0,
-                56.0
-              ],
-              [
-                1118.0,
-                937.0
-              ],
-              [
-                73.0,
-                932.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.735144,
-            "grabcut_contour_area_fraction": 0.733033,
-            "agreement_iou": 0.99658013,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 2690.042
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -663,6 +197,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94467423,
+        "edge_errors": {
+          "left": 25.0,
+          "top": 1.0,
+          "right": 34.0,
+          "bottom": 2.0
+        },
+        "edge_error_mean_px": 15.5,
+        "edge_error_maximum_px": 34.0,
+        "elapsed_ms": 4206.099,
         "approved_bbox": [
           88,
           33,
@@ -675,173 +219,50 @@
           1188,
           966
         ],
-        "iou": 0.94467423,
-        "edge_errors": {
-          "left": 25,
-          "top": 1,
-          "right": 34,
-          "bottom": 2,
-          "mean": 15.5,
-          "maximum": 34
-        },
-        "edge_error_mean_px": 15.5,
-        "edge_error_maximum_px": 34,
-        "elapsed_ms": 4206.099,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            63,
-            34,
-            1188,
-            966
-          ],
-          "corners": [
-            [
-              77.0,
-              38.0
-            ],
-            [
-              78.0,
-              959.0
-            ],
-            [
-              1176.0,
-              956.0
-            ],
-            [
-              1166.0,
-              35.0
-            ]
-          ],
-          "confidence": 0.950282,
-          "score": 0.950282,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.97876,
-            "contour_score": 0.856308,
-            "grabcut_corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                84.0,
-                44.0
-              ],
-              [
-                1144.0,
-                44.0
-              ],
-              [
-                1171.0,
-                947.0
-              ],
-              [
-                81.0,
-                945.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.815672,
-            "grabcut_contour_area_fraction": 0.814048,
-            "agreement_iou": 0.96280918,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 4206.067
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
       }
     ],
-    "profile": "baseline",
-    "run_id": "run-20260805-220922",
-    "rank": 1,
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.81302623,
+      "mean_iou_success": 0.81302623,
+      "minimum_iou": 0.55318652,
+      "stddev_iou": 0.16920194,
+      "mean_edge_error_px": 53.5,
+      "elapsed_ms_total": 82316.348,
+      "wall_ms": 82316.348
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 1,
+    "run_id": "run-20260805-220922"
   },
   "baseline": {
     "parameter_set_id": "3817f226228a",
+    "profile": "baseline",
     "parameters": {
+      "agreement_weight": 0.25,
+      "contour_epsilon_max_fraction": 0.04,
+      "contour_minimum_area_fraction": 0.12,
+      "contour_minimum_rectangularity": 0.55,
+      "contour_weight": 0.2,
       "grabcut_border_fraction": 0.02,
-      "grabcut_erosion_kernel_fraction": 0.015,
-      "grabcut_erosion_iterations": 1,
-      "grabcut_iterations": 3,
-      "grabcut_close_kernel_fraction": 0.02,
       "grabcut_close_iterations": 1,
+      "grabcut_close_kernel_fraction": 0.02,
+      "grabcut_erosion_iterations": 1,
+      "grabcut_erosion_kernel_fraction": 0.015,
+      "grabcut_iterations": 3,
       "grabcut_minimum_bbox_area_fraction": 0.1,
       "grabcut_minimum_contour_area_fraction": 0.04,
       "grabcut_polygon_epsilon_fraction": 0.018,
-      "contour_minimum_area_fraction": 0.12,
-      "contour_epsilon_max_fraction": 0.04,
-      "contour_minimum_rectangularity": 0.55,
-      "minimum_agreement_iou": 0.15,
       "grabcut_weight": 0.55,
-      "contour_weight": 0.2,
-      "agreement_weight": 0.25,
+      "minimum_agreement_iou": 0.15,
       "require_contour": false
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 5,
-      "failure_count": 0,
-      "mean_iou": 0.81302623,
-      "minimum_iou": 0.55318652,
-      "stddev_iou": 0.16920194,
-      "mean_edge_error_px": 53.5,
-      "elapsed_ms_total": 82316.348,
-      "wall_ms": 82317.24
     },
     "pages": [
       {
@@ -849,6 +270,16 @@
         "label": "ordinary_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.95675438,
+        "edge_errors": {
+          "left": 49.0,
+          "top": 1.0,
+          "right": 1.0,
+          "bottom": 1.0
+        },
+        "edge_error_mean_px": 13.0,
+        "edge_error_maximum_px": 49.0,
+        "elapsed_ms": 7080.971,
         "approved_bbox": [
           125,
           56,
@@ -861,130 +292,6 @@
           1290,
           966
         ],
-        "iou": 0.95675438,
-        "edge_errors": {
-          "left": 49,
-          "top": 1,
-          "right": 1,
-          "bottom": 1,
-          "mean": 13.0,
-          "maximum": 49
-        },
-        "edge_error_mean_px": 13.0,
-        "edge_error_maximum_px": 49,
-        "elapsed_ms": 7080.971,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            76,
-            55,
-            1290,
-            966
-          ],
-          "corners": [
-            [
-              89.0,
-              62.0
-            ],
-            [
-              100.0,
-              953.0
-            ],
-            [
-              1283.0,
-              950.0
-            ],
-            [
-              1272.0,
-              60.0
-            ]
-          ],
-          "confidence": 0.902468,
-          "score": 0.902468,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.962022,
-            "contour_score": 0.79374,
-            "grabcut_corners": [
-              [
-                89.0,
-                62.0
-              ],
-              [
-                100.0,
-                953.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                111.0,
-                90.0
-              ],
-              [
-                1381.0,
-                18.0
-              ],
-              [
-                1257.0,
-                938.0
-              ],
-              [
-                235.0,
-                917.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.793406,
-            "grabcut_contour_area_fraction": 0.79132,
-            "agreement_iou": 0.85843006,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 7080.932
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -994,6 +301,16 @@
         "label": "damaged_partial_register_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.55318652,
+        "edge_errors": {
+          "left": 38.0,
+          "top": 12.0,
+          "right": 468.0,
+          "bottom": 10.0
+        },
+        "edge_error_mean_px": 132.0,
+        "edge_error_maximum_px": 468.0,
+        "elapsed_ms": 9709.743,
         "approved_bbox": [
           67,
           8,
@@ -1006,130 +323,6 @@
           765,
           967
         ],
-        "iou": 0.55318652,
-        "edge_errors": {
-          "left": 38,
-          "top": 12,
-          "right": 468,
-          "bottom": 10,
-          "mean": 132.0,
-          "maximum": 468
-        },
-        "edge_error_mean_px": 132.0,
-        "edge_error_maximum_px": 468,
-        "elapsed_ms": 9709.743,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            105,
-            20,
-            765,
-            967
-          ],
-          "corners": [
-            [
-              764.0,
-              966.0
-            ],
-            [
-              105.0,
-              966.0
-            ],
-            [
-              105.0,
-              20.0
-            ],
-            [
-              764.0,
-              20.0
-            ]
-          ],
-          "confidence": 0.790775,
-          "score": 0.790775,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.888134,
-            "contour_score": 0.749072,
-            "grabcut_corners": [
-              [
-                764.0,
-                966.0
-              ],
-              [
-                105.0,
-                966.0
-              ],
-              [
-                105.0,
-                20.0
-              ],
-              [
-                764.0,
-                20.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                119.0,
-                36.0
-              ],
-              [
-                1315.0,
-                15.0
-              ],
-              [
-                739.0,
-                948.0
-              ],
-              [
-                137.0,
-                771.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.443775,
-            "grabcut_contour_area_fraction": 0.443094,
-            "agreement_iou": 0.6099472,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 9709.702
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -1139,6 +332,16 @@
         "label": "title_or_index_sheet",
         "layout_type": "single_page",
         "status": "ok",
+        "iou": 0.6682906,
+        "edge_errors": {
+          "left": 229.0,
+          "top": 119.0,
+          "right": 13.0,
+          "bottom": 7.0
+        },
+        "edge_error_mean_px": 92.0,
+        "edge_error_maximum_px": 229.0,
+        "elapsed_ms": 58629.461,
         "approved_bbox": [
           15,
           28,
@@ -1151,130 +354,6 @@
           1061,
           963
         ],
-        "iou": 0.6682906,
-        "edge_errors": {
-          "left": 229,
-          "top": 119,
-          "right": 13,
-          "bottom": 7,
-          "mean": 92.0,
-          "maximum": 229
-        },
-        "edge_error_mean_px": 92.0,
-        "edge_error_maximum_px": 229,
-        "elapsed_ms": 58629.461,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            244,
-            147,
-            1061,
-            963
-          ],
-          "corners": [
-            [
-              1059.9998779296875,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              961.9998779296875
-            ],
-            [
-              244.0,
-              147.0
-            ],
-            [
-              1059.9998779296875,
-              147.0
-            ]
-          ],
-          "confidence": 0.706821,
-          "score": 0.706821,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.706299,
-            "contour_score": 0.662027,
-            "grabcut_corners": [
-              [
-                1059.9998779296875,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                147.0
-              ],
-              [
-                1059.9998779296875,
-                147.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                140.0,
-                44.0
-              ],
-              [
-                1036.0,
-                223.0
-              ],
-              [
-                1021.0,
-                886.0
-              ],
-              [
-                424.0,
-                887.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.415848,
-            "grabcut_contour_area_fraction": 0.444752,
-            "agreement_iou": 0.74380595,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 58629.43
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -1284,6 +363,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94222541,
+        "edge_errors": {
+          "left": 13.0,
+          "top": 1.0,
+          "right": 35.0,
+          "bottom": 11.0
+        },
+        "edge_error_mean_px": 15.0,
+        "edge_error_maximum_px": 35.0,
+        "elapsed_ms": 2690.074,
         "approved_bbox": [
           84,
           51,
@@ -1296,130 +385,6 @@
           1136,
           952
         ],
-        "iou": 0.94222541,
-        "edge_errors": {
-          "left": 13,
-          "top": 1,
-          "right": 35,
-          "bottom": 11,
-          "mean": 15.0,
-          "maximum": 35
-        },
-        "edge_error_mean_px": 15.0,
-        "edge_error_maximum_px": 35,
-        "elapsed_ms": 2690.074,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            71,
-            50,
-            1136,
-            952
-          ],
-          "corners": [
-            [
-              1117.0,
-              58.0
-            ],
-            [
-              77.0,
-              55.0
-            ],
-            [
-              72.0,
-              933.0
-            ],
-            [
-              1119.0,
-              937.0
-            ]
-          ],
-          "confidence": 0.964433,
-          "score": 0.964433,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.980632,
-            "contour_score": 0.879702,
-            "grabcut_corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                77.0,
-                56.0
-              ],
-              [
-                1115.0,
-                56.0
-              ],
-              [
-                1118.0,
-                937.0
-              ],
-              [
-                73.0,
-                932.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.735144,
-            "grabcut_contour_area_fraction": 0.733033,
-            "agreement_iou": 0.99658013,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 2690.042
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -1429,6 +394,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94467423,
+        "edge_errors": {
+          "left": 25.0,
+          "top": 1.0,
+          "right": 34.0,
+          "bottom": 2.0
+        },
+        "edge_error_mean_px": 15.5,
+        "edge_error_maximum_px": 34.0,
+        "elapsed_ms": 4206.099,
         "approved_bbox": [
           88,
           33,
@@ -1441,174 +416,243 @@
           1188,
           966
         ],
-        "iou": 0.94467423,
-        "edge_errors": {
-          "left": 25,
-          "top": 1,
-          "right": 34,
-          "bottom": 2,
-          "mean": 15.5,
-          "maximum": 34
-        },
-        "edge_error_mean_px": 15.5,
-        "edge_error_maximum_px": 34,
-        "elapsed_ms": 4206.099,
-        "candidate": {
-          "method": "grabcut_contour",
-          "bbox": [
-            63,
-            34,
-            1188,
-            966
-          ],
-          "corners": [
-            [
-              77.0,
-              38.0
-            ],
-            [
-              78.0,
-              959.0
-            ],
-            [
-              1176.0,
-              956.0
-            ],
-            [
-              1166.0,
-              35.0
-            ]
-          ],
-          "confidence": 0.950282,
-          "score": 0.950282,
-          "diagnostics": {
-            "parameters": {
-              "grabcut_border_fraction": 0.02,
-              "grabcut_erosion_kernel_fraction": 0.015,
-              "grabcut_erosion_iterations": 1,
-              "grabcut_iterations": 3,
-              "grabcut_close_kernel_fraction": 0.02,
-              "grabcut_close_iterations": 1,
-              "grabcut_minimum_bbox_area_fraction": 0.1,
-              "grabcut_minimum_contour_area_fraction": 0.04,
-              "grabcut_polygon_epsilon_fraction": 0.018,
-              "contour_minimum_area_fraction": 0.12,
-              "contour_epsilon_max_fraction": 0.04,
-              "contour_minimum_rectangularity": 0.55,
-              "minimum_agreement_iou": 0.15,
-              "grabcut_weight": 0.55,
-              "contour_weight": 0.2,
-              "agreement_weight": 0.25,
-              "require_contour": false
-            },
-            "grabcut_status": "ok",
-            "contour_status": "ok",
-            "grabcut_score": 0.97876,
-            "contour_score": 0.856308,
-            "grabcut_corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "contour_corners": [
-              [
-                84.0,
-                44.0
-              ],
-              [
-                1144.0,
-                44.0
-              ],
-              [
-                1171.0,
-                947.0
-              ],
-              [
-                81.0,
-                945.0
-              ]
-            ],
-            "grabcut_reason": null,
-            "contour_reason": null,
-            "grabcut_refined_foreground_fraction": 0.815672,
-            "grabcut_contour_area_fraction": 0.814048,
-            "agreement_iou": 0.96280918,
-            "fusion_mode": "grabcut_generated_contour_validated",
-            "selected_geometry": "grabcut",
-            "reason": "accepted",
-            "elapsed_ms": 4206.067
-          },
-          "status": "ok",
-          "detector_name": "GrabCut + Contour",
-          "origin": "HTH",
-          "foundation": [
-            "GrabCut",
-            "Contour geometry",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
       }
     ],
-    "profile": "baseline",
-    "run_id": "run-20260805-220922",
-    "rank": 1,
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.81302623,
+      "mean_iou_success": 0.81302623,
+      "minimum_iou": 0.55318652,
+      "stddev_iou": 0.16920194,
+      "mean_edge_error_px": 53.5,
+      "elapsed_ms_total": 82316.348,
+      "wall_ms": 82316.348
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 1,
+    "run_id": "run-20260805-220922"
   },
   "top_parameter_sets": [
     {
       "parameter_set_id": "3817f226228a",
+      "profile": "baseline",
       "parameters": {
+        "agreement_weight": 0.25,
+        "contour_epsilon_max_fraction": 0.04,
+        "contour_minimum_area_fraction": 0.12,
+        "contour_minimum_rectangularity": 0.55,
+        "contour_weight": 0.2,
         "grabcut_border_fraction": 0.02,
-        "grabcut_erosion_kernel_fraction": 0.015,
-        "grabcut_erosion_iterations": 1,
-        "grabcut_iterations": 3,
-        "grabcut_close_kernel_fraction": 0.02,
         "grabcut_close_iterations": 1,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_iterations": 1,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 3,
         "grabcut_minimum_bbox_area_fraction": 0.1,
         "grabcut_minimum_contour_area_fraction": 0.04,
         "grabcut_polygon_epsilon_fraction": 0.018,
-        "contour_minimum_area_fraction": 0.12,
-        "contour_epsilon_max_fraction": 0.04,
-        "contour_minimum_rectangularity": 0.55,
-        "minimum_agreement_iou": 0.15,
         "grabcut_weight": 0.55,
-        "contour_weight": 0.2,
-        "agreement_weight": 0.25,
+        "minimum_agreement_iou": 0.15,
         "require_contour": false
       },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "iou": 0.95675438,
+          "edge_errors": {
+            "left": 49.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 13.0,
+          "edge_error_maximum_px": 49.0,
+          "elapsed_ms": 7080.971,
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            76,
+            55,
+            1290,
+            966
+          ],
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "iou": 0.55318652,
+          "edge_errors": {
+            "left": 38.0,
+            "top": 12.0,
+            "right": 468.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 132.0,
+          "edge_error_maximum_px": 468.0,
+          "elapsed_ms": 9709.743,
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            105,
+            20,
+            765,
+            967
+          ],
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "iou": 0.6682906,
+          "edge_errors": {
+            "left": 229.0,
+            "top": 119.0,
+            "right": 13.0,
+            "bottom": 7.0
+          },
+          "edge_error_mean_px": 92.0,
+          "edge_error_maximum_px": 229.0,
+          "elapsed_ms": 58629.461,
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            244,
+            147,
+            1061,
+            963
+          ],
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "iou": 0.94222541,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 11.0
+          },
+          "edge_error_mean_px": 15.0,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 2690.074,
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            71,
+            50,
+            1136,
+            952
+          ],
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "iou": 0.94467423,
+          "edge_errors": {
+            "left": 25.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 4206.099,
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            63,
+            34,
+            1188,
+            966
+          ],
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
         "mean_iou": 0.81302623,
+        "mean_iou_success": 0.81302623,
         "minimum_iou": 0.55318652,
         "stddev_iou": 0.16920194,
         "mean_edge_error_px": 53.5,
         "elapsed_ms_total": 82316.348,
-        "wall_ms": 82317.24
+        "wall_ms": 82316.348
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 1,
+      "run_id": "run-20260805-220922"
+    },
+    {
+      "parameter_set_id": "47e727acc335",
+      "profile": null,
+      "parameters": {
+        "agreement_weight": 0.35,
+        "contour_minimum_area_fraction": 0.08,
+        "contour_minimum_rectangularity": 0.45,
+        "grabcut_border_fraction": 0.01,
+        "grabcut_close_kernel_fraction": 0.01,
+        "grabcut_erosion_kernel_fraction": 0.008,
+        "grabcut_iterations": 1,
+        "grabcut_minimum_contour_area_fraction": 0.02,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.45,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
       },
       "pages": [
         {
@@ -1616,6 +660,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 12935.504,
           "approved_bbox": [
             125,
             56,
@@ -1623,135 +677,11 @@
             967
           ],
           "predicted_bbox": [
-            76,
+            81,
             55,
             1290,
-            966
+            967
           ],
-          "iou": 0.95675438,
-          "edge_errors": {
-            "left": 49,
-            "top": 1,
-            "right": 1,
-            "bottom": 1,
-            "mean": 13.0,
-            "maximum": 49
-          },
-          "edge_error_mean_px": 13.0,
-          "edge_error_maximum_px": 49,
-          "elapsed_ms": 7080.971,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              76,
-              55,
-              1290,
-              966
-            ],
-            "corners": [
-              [
-                89.0,
-                62.0
-              ],
-              [
-                100.0,
-                953.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "confidence": 0.902468,
-            "score": 0.902468,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.02,
-                "grabcut_erosion_kernel_fraction": 0.015,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "grabcut_close_kernel_fraction": 0.02,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.04,
-                "grabcut_polygon_epsilon_fraction": 0.018,
-                "contour_minimum_area_fraction": 0.12,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.55,
-                "minimum_agreement_iou": 0.15,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.25,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.962022,
-              "contour_score": 0.79374,
-              "grabcut_corners": [
-                [
-                  89.0,
-                  62.0
-                ],
-                [
-                  100.0,
-                  953.0
-                ],
-                [
-                  1283.0,
-                  950.0
-                ],
-                [
-                  1272.0,
-                  60.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  111.0,
-                  90.0
-                ],
-                [
-                  1381.0,
-                  18.0
-                ],
-                [
-                  1257.0,
-                  938.0
-                ],
-                [
-                  235.0,
-                  917.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.793406,
-              "grabcut_contour_area_fraction": 0.79132,
-              "agreement_iou": 0.85843006,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 7080.932
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1761,6 +691,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.5491621,
+          "edge_errors": {
+            "left": 41.0,
+            "top": 8.0,
+            "right": 478.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 132.25,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 9780.635,
           "approved_bbox": [
             67,
             8,
@@ -1768,135 +708,11 @@
             977
           ],
           "predicted_bbox": [
-            105,
-            20,
-            765,
-            967
+            108,
+            16,
+            755,
+            975
           ],
-          "iou": 0.55318652,
-          "edge_errors": {
-            "left": 38,
-            "top": 12,
-            "right": 468,
-            "bottom": 10,
-            "mean": 132.0,
-            "maximum": 468
-          },
-          "edge_error_mean_px": 132.0,
-          "edge_error_maximum_px": 468,
-          "elapsed_ms": 9709.743,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              105,
-              20,
-              765,
-              967
-            ],
-            "corners": [
-              [
-                764.0,
-                966.0
-              ],
-              [
-                105.0,
-                966.0
-              ],
-              [
-                105.0,
-                20.0
-              ],
-              [
-                764.0,
-                20.0
-              ]
-            ],
-            "confidence": 0.790775,
-            "score": 0.790775,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.02,
-                "grabcut_erosion_kernel_fraction": 0.015,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "grabcut_close_kernel_fraction": 0.02,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.04,
-                "grabcut_polygon_epsilon_fraction": 0.018,
-                "contour_minimum_area_fraction": 0.12,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.55,
-                "minimum_agreement_iou": 0.15,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.25,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.888134,
-              "contour_score": 0.749072,
-              "grabcut_corners": [
-                [
-                  764.0,
-                  966.0
-                ],
-                [
-                  105.0,
-                  966.0
-                ],
-                [
-                  105.0,
-                  20.0
-                ],
-                [
-                  764.0,
-                  20.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  119.0,
-                  36.0
-                ],
-                [
-                  1315.0,
-                  15.0
-                ],
-                [
-                  739.0,
-                  948.0
-                ],
-                [
-                  137.0,
-                  771.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.443775,
-              "grabcut_contour_area_fraction": 0.443094,
-              "agreement_iou": 0.6099472,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 9709.702
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1906,6 +722,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.5973969,
+          "edge_errors": {
+            "left": 332.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 113.5,
+          "edge_error_maximum_px": 332.0,
+          "elapsed_ms": 57549.507,
           "approved_bbox": [
             15,
             28,
@@ -1913,135 +739,11 @@
             970
           ],
           "predicted_bbox": [
-            244,
+            347,
             147,
-            1061,
-            963
+            1072,
+            969
           ],
-          "iou": 0.6682906,
-          "edge_errors": {
-            "left": 229,
-            "top": 119,
-            "right": 13,
-            "bottom": 7,
-            "mean": 92.0,
-            "maximum": 229
-          },
-          "edge_error_mean_px": 92.0,
-          "edge_error_maximum_px": 229,
-          "elapsed_ms": 58629.461,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              244,
-              147,
-              1061,
-              963
-            ],
-            "corners": [
-              [
-                1059.9998779296875,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                961.9998779296875
-              ],
-              [
-                244.0,
-                147.0
-              ],
-              [
-                1059.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.706821,
-            "score": 0.706821,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.02,
-                "grabcut_erosion_kernel_fraction": 0.015,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "grabcut_close_kernel_fraction": 0.02,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.04,
-                "grabcut_polygon_epsilon_fraction": 0.018,
-                "contour_minimum_area_fraction": 0.12,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.55,
-                "minimum_agreement_iou": 0.15,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.25,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.706299,
-              "contour_score": 0.662027,
-              "grabcut_corners": [
-                [
-                  1059.9998779296875,
-                  961.9998779296875
-                ],
-                [
-                  244.0,
-                  961.9998779296875
-                ],
-                [
-                  244.0,
-                  147.0
-                ],
-                [
-                  1059.9998779296875,
-                  147.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  140.0,
-                  44.0
-                ],
-                [
-                  1036.0,
-                  223.0
-                ],
-                [
-                  1021.0,
-                  886.0
-                ],
-                [
-                  424.0,
-                  887.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.415848,
-              "grabcut_contour_area_fraction": 0.444752,
-              "agreement_iou": 0.74380595,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 58629.43
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2051,6 +753,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 4650.981,
           "approved_bbox": [
             84,
             51,
@@ -2061,132 +773,8 @@
             71,
             50,
             1136,
-            952
+            951
           ],
-          "iou": 0.94222541,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 11,
-            "mean": 15.0,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 15.0,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 2690.074,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              71,
-              50,
-              1136,
-              952
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.964433,
-            "score": 0.964433,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.02,
-                "grabcut_erosion_kernel_fraction": 0.015,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "grabcut_close_kernel_fraction": 0.02,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.04,
-                "grabcut_polygon_epsilon_fraction": 0.018,
-                "contour_minimum_area_fraction": 0.12,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.55,
-                "minimum_agreement_iou": 0.15,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.25,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.980632,
-              "contour_score": 0.879702,
-              "grabcut_corners": [
-                [
-                  1117.0,
-                  58.0
-                ],
-                [
-                  77.0,
-                  55.0
-                ],
-                [
-                  72.0,
-                  933.0
-                ],
-                [
-                  1119.0,
-                  937.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  77.0,
-                  56.0
-                ],
-                [
-                  1115.0,
-                  56.0
-                ],
-                [
-                  1118.0,
-                  937.0
-                ],
-                [
-                  73.0,
-                  932.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.735144,
-              "grabcut_contour_area_fraction": 0.733033,
-              "agreement_iou": 0.99658013,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 2690.042
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2196,6 +784,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 5604.754,
           "approved_bbox": [
             88,
             33,
@@ -2203,173 +801,50 @@
             968
           ],
           "predicted_bbox": [
-            63,
+            74,
             34,
             1188,
             966
           ],
-          "iou": 0.94467423,
-          "edge_errors": {
-            "left": 25,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 15.5,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 15.5,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 4206.099,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              63,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.950282,
-            "score": 0.950282,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.02,
-                "grabcut_erosion_kernel_fraction": 0.015,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 3,
-                "grabcut_close_kernel_fraction": 0.02,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.04,
-                "grabcut_polygon_epsilon_fraction": 0.018,
-                "contour_minimum_area_fraction": 0.12,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.55,
-                "minimum_agreement_iou": 0.15,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.25,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.97876,
-              "contour_score": 0.856308,
-              "grabcut_corners": [
-                [
-                  77.0,
-                  38.0
-                ],
-                [
-                  78.0,
-                  959.0
-                ],
-                [
-                  1176.0,
-                  956.0
-                ],
-                [
-                  1166.0,
-                  35.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  84.0,
-                  44.0
-                ],
-                [
-                  1144.0,
-                  44.0
-                ],
-                [
-                  1171.0,
-                  947.0
-                ],
-                [
-                  81.0,
-                  945.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.815672,
-              "grabcut_contour_area_fraction": 0.814048,
-              "agreement_iou": 0.96280918,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 4206.067
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
         }
       ],
-      "profile": "baseline",
-      "run_id": "run-20260805-220922",
-      "rank": 1,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "47e727acc335",
-      "parameters": {
-        "grabcut_border_fraction": 0.01,
-        "grabcut_erosion_kernel_fraction": 0.008,
-        "grabcut_iterations": 1,
-        "grabcut_close_kernel_fraction": 0.01,
-        "grabcut_minimum_contour_area_fraction": 0.02,
-        "grabcut_polygon_epsilon_fraction": 0.01,
-        "contour_minimum_area_fraction": 0.08,
-        "contour_minimum_rectangularity": 0.45,
-        "minimum_agreement_iou": 0.05,
-        "grabcut_weight": 0.45,
-        "agreement_weight": 0.35,
-        "require_contour": false
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
         "mean_iou": 0.80110545,
+        "mean_iou_success": 0.80110545,
         "minimum_iou": 0.5491621,
         "stddev_iou": 0.1867354,
         "mean_edge_error_px": 56.95,
         "elapsed_ms_total": 90521.381,
-        "wall_ms": 90531.217
+        "wall_ms": 90521.381
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 2,
+      "run_id": "run-20260805-220922"
+    },
+    {
+      "parameter_set_id": "8a86732de560",
+      "profile": null,
+      "parameters": {
+        "agreement_weight": 0.35,
+        "contour_minimum_area_fraction": 0.08,
+        "contour_minimum_rectangularity": 0.45,
+        "grabcut_border_fraction": 0.01,
+        "grabcut_close_kernel_fraction": 0.01,
+        "grabcut_erosion_kernel_fraction": 0.008,
+        "grabcut_iterations": 1,
+        "grabcut_minimum_contour_area_fraction": 0.02,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.45,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": true
       },
       "pages": [
         {
@@ -2377,6 +852,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 12601.868,
           "approved_bbox": [
             125,
             56,
@@ -2389,130 +874,6 @@
             1290,
             967
           ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 12935.504,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                107.0,
-                63.0
-              ],
-              [
-                115.0,
-                955.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "confidence": 0.893931,
-            "score": 0.893931,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.95769,
-              "contour_score": 0.79374,
-              "grabcut_corners": [
-                [
-                  107.0,
-                  63.0
-                ],
-                [
-                  115.0,
-                  955.0
-                ],
-                [
-                  1283.0,
-                  950.0
-                ],
-                [
-                  1272.0,
-                  60.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  111.0,
-                  90.0
-                ],
-                [
-                  1381.0,
-                  18.0
-                ],
-                [
-                  1257.0,
-                  938.0
-                ],
-                [
-                  235.0,
-                  917.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.782801,
-              "grabcut_contour_area_fraction": 0.780245,
-              "agreement_iou": 0.86920722,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 12935.475
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2522,6 +883,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.5491621,
+          "edge_errors": {
+            "left": 41.0,
+            "top": 8.0,
+            "right": 478.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 132.25,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 7999.692,
           "approved_bbox": [
             67,
             8,
@@ -2534,130 +905,6 @@
             755,
             975
           ],
-          "iou": 0.5491621,
-          "edge_errors": {
-            "left": 41,
-            "top": 8,
-            "right": 478,
-            "bottom": 2,
-            "mean": 132.25,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 132.25,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 9780.635,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              108,
-              16,
-              755,
-              975
-            ],
-            "corners": [
-              [
-                109.55450439453125,
-                974.3335571289062
-              ],
-              [
-                107.83270263671875,
-                17.005699157714844
-              ],
-              [
-                753.99072265625,
-                15.843544006347656
-              ],
-              [
-                755.7125244140625,
-                973.1714477539062
-              ]
-            ],
-            "confidence": 0.758215,
-            "score": 0.758215,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.886347,
-              "contour_score": 0.749072,
-              "grabcut_corners": [
-                [
-                  109.55450439453125,
-                  974.3335571289062
-                ],
-                [
-                  107.83270263671875,
-                  17.005699157714844
-                ],
-                [
-                  753.99072265625,
-                  15.843544006347656
-                ],
-                [
-                  755.7125244140625,
-                  973.1714477539062
-                ]
-              ],
-              "contour_corners": [
-                [
-                  119.0,
-                  36.0
-                ],
-                [
-                  1315.0,
-                  15.0
-                ],
-                [
-                  739.0,
-                  948.0
-                ],
-                [
-                  137.0,
-                  771.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.43964,
-              "grabcut_contour_area_fraction": 0.438175,
-              "agreement_iou": 0.59869748,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 9780.596
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2667,6 +914,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.5973969,
+          "edge_errors": {
+            "left": 332.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 113.5,
+          "edge_error_maximum_px": 332.0,
+          "elapsed_ms": 51466.084,
           "approved_bbox": [
             15,
             28,
@@ -2679,130 +936,6 @@
             1072,
             969
           ],
-          "iou": 0.5973969,
-          "edge_errors": {
-            "left": 332,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 113.5,
-            "maximum": 332
-          },
-          "edge_error_mean_px": 113.5,
-          "edge_error_maximum_px": 332,
-          "elapsed_ms": 57549.507,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              347,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.715242,
-            "score": 0.715242,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.730589,
-              "contour_score": 0.662027,
-              "grabcut_corners": [
-                [
-                  1070.9998779296875,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  147.0
-                ],
-                [
-                  1070.9998779296875,
-                  147.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  140.0,
-                  44.0
-                ],
-                [
-                  1036.0,
-                  223.0
-                ],
-                [
-                  1021.0,
-                  886.0
-                ],
-                [
-                  424.0,
-                  887.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.391308,
-              "grabcut_contour_area_fraction": 0.439188,
-              "agreement_iou": 0.72591959,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 57549.475
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2812,6 +945,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 3372.655,
           "approved_bbox": [
             84,
             51,
@@ -2824,130 +967,6 @@
             1136,
             951
           ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 4650.981,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.966094,
-            "score": 0.966094,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.980779,
-              "contour_score": 0.879702,
-              "grabcut_corners": [
-                [
-                  1117.0,
-                  58.0
-                ],
-                [
-                  77.0,
-                  55.0
-                ],
-                [
-                  72.0,
-                  933.0
-                ],
-                [
-                  1119.0,
-                  937.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  77.0,
-                  56.0
-                ],
-                [
-                  1115.0,
-                  56.0
-                ],
-                [
-                  1118.0,
-                  937.0
-                ],
-                [
-                  73.0,
-                  932.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.735539,
-              "grabcut_contour_area_fraction": 0.732668,
-              "agreement_iou": 0.99658013,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 4650.95
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2957,6 +976,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 4998.112,
           "approved_bbox": [
             88,
             33,
@@ -2969,173 +998,45 @@
             1188,
             966
           ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 5604.754,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.95092,
-            "score": 0.95092,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.983723,
-              "contour_score": 0.856308,
-              "grabcut_corners": [
-                [
-                  77.0,
-                  38.0
-                ],
-                [
-                  78.0,
-                  959.0
-                ],
-                [
-                  1176.0,
-                  956.0
-                ],
-                [
-                  1166.0,
-                  35.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  84.0,
-                  44.0
-                ],
-                [
-                  1144.0,
-                  44.0
-                ],
-                [
-                  1171.0,
-                  947.0
-                ],
-                [
-                  81.0,
-                  945.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.814199,
-              "grabcut_contour_area_fraction": 0.81258,
-              "agreement_iou": 0.96280918,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 5604.723
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
         }
       ],
-      "search_observation": {
-        "parameter_set_number": 8,
-        "elapsed_seconds": 236.787135331,
-        "search_fraction": 0.8
-      },
-      "profile": null,
-      "run_id": "run-20260805-220922",
-      "rank": 2,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "8a86732de560",
-      "parameters": {
-        "grabcut_border_fraction": 0.01,
-        "grabcut_erosion_kernel_fraction": 0.008,
-        "grabcut_iterations": 1,
-        "grabcut_close_kernel_fraction": 0.01,
-        "grabcut_minimum_contour_area_fraction": 0.02,
-        "grabcut_polygon_epsilon_fraction": 0.01,
-        "contour_minimum_area_fraction": 0.08,
-        "contour_minimum_rectangularity": 0.45,
-        "minimum_agreement_iou": 0.05,
-        "grabcut_weight": 0.45,
-        "agreement_weight": 0.35,
-        "require_contour": true
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
         "mean_iou": 0.80110545,
+        "mean_iou_success": 0.80110545,
         "minimum_iou": 0.5491621,
         "stddev_iou": 0.1867354,
         "mean_edge_error_px": 56.95,
         "elapsed_ms_total": 80438.411,
-        "wall_ms": 80439.168
+        "wall_ms": 80438.411
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 3,
+      "run_id": "run-20260805-220922"
+    },
+    {
+      "parameter_set_id": "442d85444faf",
+      "profile": null,
+      "parameters": {
+        "agreement_weight": 0.15,
+        "contour_minimum_area_fraction": 0.08,
+        "contour_minimum_rectangularity": 0.45,
+        "grabcut_border_fraction": 0.01,
+        "grabcut_close_kernel_fraction": 0.01,
+        "grabcut_erosion_kernel_fraction": 0.008,
+        "grabcut_iterations": 1,
+        "grabcut_minimum_contour_area_fraction": 0.02,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.55,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
       },
       "pages": [
         {
@@ -3143,6 +1044,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 11731.567,
           "approved_bbox": [
             125,
             56,
@@ -3155,130 +1066,6 @@
             1290,
             967
           ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 12601.868,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                107.0,
-                63.0
-              ],
-              [
-                115.0,
-                955.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "confidence": 0.893931,
-            "score": 0.893931,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.95769,
-              "contour_score": 0.79374,
-              "grabcut_corners": [
-                [
-                  107.0,
-                  63.0
-                ],
-                [
-                  115.0,
-                  955.0
-                ],
-                [
-                  1283.0,
-                  950.0
-                ],
-                [
-                  1272.0,
-                  60.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  111.0,
-                  90.0
-                ],
-                [
-                  1381.0,
-                  18.0
-                ],
-                [
-                  1257.0,
-                  938.0
-                ],
-                [
-                  235.0,
-                  917.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.782801,
-              "grabcut_contour_area_fraction": 0.780245,
-              "agreement_iou": 0.86920722,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 12601.842
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3288,6 +1075,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.5491621,
+          "edge_errors": {
+            "left": 41.0,
+            "top": 8.0,
+            "right": 478.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 132.25,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 7955.961,
           "approved_bbox": [
             67,
             8,
@@ -3300,130 +1097,6 @@
             755,
             975
           ],
-          "iou": 0.5491621,
-          "edge_errors": {
-            "left": 41,
-            "top": 8,
-            "right": 478,
-            "bottom": 2,
-            "mean": 132.25,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 132.25,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 7999.692,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              108,
-              16,
-              755,
-              975
-            ],
-            "corners": [
-              [
-                109.55450439453125,
-                974.3335571289062
-              ],
-              [
-                107.83270263671875,
-                17.005699157714844
-              ],
-              [
-                753.99072265625,
-                15.843544006347656
-              ],
-              [
-                755.7125244140625,
-                973.1714477539062
-              ]
-            ],
-            "confidence": 0.758215,
-            "score": 0.758215,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.886347,
-              "contour_score": 0.749072,
-              "grabcut_corners": [
-                [
-                  109.55450439453125,
-                  974.3335571289062
-                ],
-                [
-                  107.83270263671875,
-                  17.005699157714844
-                ],
-                [
-                  753.99072265625,
-                  15.843544006347656
-                ],
-                [
-                  755.7125244140625,
-                  973.1714477539062
-                ]
-              ],
-              "contour_corners": [
-                [
-                  119.0,
-                  36.0
-                ],
-                [
-                  1315.0,
-                  15.0
-                ],
-                [
-                  739.0,
-                  948.0
-                ],
-                [
-                  137.0,
-                  771.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.43964,
-              "grabcut_contour_area_fraction": 0.438175,
-              "agreement_iou": 0.59869748,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 7999.662
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3433,6 +1106,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.5973969,
+          "edge_errors": {
+            "left": 332.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 113.5,
+          "edge_error_maximum_px": 332.0,
+          "elapsed_ms": 52904.575,
           "approved_bbox": [
             15,
             28,
@@ -3445,130 +1128,6 @@
             1072,
             969
           ],
-          "iou": 0.5973969,
-          "edge_errors": {
-            "left": 332,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 113.5,
-            "maximum": 332
-          },
-          "edge_error_mean_px": 113.5,
-          "edge_error_maximum_px": 332,
-          "elapsed_ms": 51466.084,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              347,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.715242,
-            "score": 0.715242,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.730589,
-              "contour_score": 0.662027,
-              "grabcut_corners": [
-                [
-                  1070.9998779296875,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  147.0
-                ],
-                [
-                  1070.9998779296875,
-                  147.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  140.0,
-                  44.0
-                ],
-                [
-                  1036.0,
-                  223.0
-                ],
-                [
-                  1021.0,
-                  886.0
-                ],
-                [
-                  424.0,
-                  887.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.391308,
-              "grabcut_contour_area_fraction": 0.439188,
-              "agreement_iou": 0.72591959,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 51466.053
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3578,6 +1137,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 4710.947,
           "approved_bbox": [
             84,
             51,
@@ -3590,130 +1159,6 @@
             1136,
             951
           ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 3372.655,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.966094,
-            "score": 0.966094,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.980779,
-              "contour_score": 0.879702,
-              "grabcut_corners": [
-                [
-                  1117.0,
-                  58.0
-                ],
-                [
-                  77.0,
-                  55.0
-                ],
-                [
-                  72.0,
-                  933.0
-                ],
-                [
-                  1119.0,
-                  937.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  77.0,
-                  56.0
-                ],
-                [
-                  1115.0,
-                  56.0
-                ],
-                [
-                  1118.0,
-                  937.0
-                ],
-                [
-                  73.0,
-                  932.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.735539,
-              "grabcut_contour_area_fraction": 0.732668,
-              "agreement_iou": 0.99658013,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 3372.625
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3723,6 +1168,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 5676.035,
           "approved_bbox": [
             88,
             33,
@@ -3735,173 +1190,45 @@
             1188,
             966
           ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 4998.112,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.95092,
-            "score": 0.95092,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.45,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.35,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.983723,
-              "contour_score": 0.856308,
-              "grabcut_corners": [
-                [
-                  77.0,
-                  38.0
-                ],
-                [
-                  78.0,
-                  959.0
-                ],
-                [
-                  1176.0,
-                  956.0
-                ],
-                [
-                  1166.0,
-                  35.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  84.0,
-                  44.0
-                ],
-                [
-                  1144.0,
-                  44.0
-                ],
-                [
-                  1171.0,
-                  947.0
-                ],
-                [
-                  81.0,
-                  945.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.814199,
-              "grabcut_contour_area_fraction": 0.81258,
-              "agreement_iou": 0.96280918,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 4998.082
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
         }
       ],
-      "search_observation": {
-        "parameter_set_number": 5,
-        "elapsed_seconds": 227.81505815399998,
-        "search_fraction": 0.5
-      },
-      "profile": null,
-      "run_id": "run-20260805-220922",
-      "rank": 3,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "442d85444faf",
-      "parameters": {
-        "grabcut_border_fraction": 0.01,
-        "grabcut_erosion_kernel_fraction": 0.008,
-        "grabcut_iterations": 1,
-        "grabcut_close_kernel_fraction": 0.01,
-        "grabcut_minimum_contour_area_fraction": 0.02,
-        "grabcut_polygon_epsilon_fraction": 0.01,
-        "contour_minimum_area_fraction": 0.08,
-        "contour_minimum_rectangularity": 0.45,
-        "minimum_agreement_iou": 0.05,
-        "grabcut_weight": 0.55,
-        "agreement_weight": 0.15,
-        "require_contour": false
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
         "mean_iou": 0.80110545,
+        "mean_iou_success": 0.80110545,
         "minimum_iou": 0.5491621,
         "stddev_iou": 0.1867354,
         "mean_edge_error_px": 56.95,
         "elapsed_ms_total": 82979.085,
-        "wall_ms": 82979.85
+        "wall_ms": 82979.085
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 4,
+      "run_id": "run-20260805-220922"
+    },
+    {
+      "parameter_set_id": "e0ee2eca2f73",
+      "profile": null,
+      "parameters": {
+        "agreement_weight": 0.15,
+        "contour_minimum_area_fraction": 0.08,
+        "contour_minimum_rectangularity": 0.45,
+        "grabcut_border_fraction": 0.01,
+        "grabcut_close_kernel_fraction": 0.01,
+        "grabcut_erosion_kernel_fraction": 0.008,
+        "grabcut_iterations": 1,
+        "grabcut_minimum_contour_area_fraction": 0.02,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.55,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": true
       },
       "pages": [
         {
@@ -3909,6 +1236,16 @@
           "label": "ordinary_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96172348,
+          "edge_errors": {
+            "left": 44.0,
+            "top": 1.0,
+            "right": 1.0,
+            "bottom": 0.0
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 44.0,
+          "elapsed_ms": 8758.857,
           "approved_bbox": [
             125,
             56,
@@ -3921,130 +1258,6 @@
             1290,
             967
           ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 11731.567,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                107.0,
-                63.0
-              ],
-              [
-                115.0,
-                955.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "confidence": 0.90651,
-            "score": 0.90651,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.95769,
-              "contour_score": 0.79374,
-              "grabcut_corners": [
-                [
-                  107.0,
-                  63.0
-                ],
-                [
-                  115.0,
-                  955.0
-                ],
-                [
-                  1283.0,
-                  950.0
-                ],
-                [
-                  1272.0,
-                  60.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  111.0,
-                  90.0
-                ],
-                [
-                  1381.0,
-                  18.0
-                ],
-                [
-                  1257.0,
-                  938.0
-                ],
-                [
-                  235.0,
-                  917.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.782801,
-              "grabcut_contour_area_fraction": 0.780245,
-              "agreement_iou": 0.86920722,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 11731.541
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -4054,6 +1267,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.5491621,
+          "edge_errors": {
+            "left": 41.0,
+            "top": 8.0,
+            "right": 478.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 132.25,
+          "edge_error_maximum_px": 478.0,
+          "elapsed_ms": 10125.652,
           "approved_bbox": [
             67,
             8,
@@ -4066,130 +1289,6 @@
             755,
             975
           ],
-          "iou": 0.5491621,
-          "edge_errors": {
-            "left": 41,
-            "top": 8,
-            "right": 478,
-            "bottom": 2,
-            "mean": 132.25,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 132.25,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 7955.961,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              108,
-              16,
-              755,
-              975
-            ],
-            "corners": [
-              [
-                109.55450439453125,
-                974.3335571289062
-              ],
-              [
-                107.83270263671875,
-                17.005699157714844
-              ],
-              [
-                753.99072265625,
-                15.843544006347656
-              ],
-              [
-                755.7125244140625,
-                973.1714477539062
-              ]
-            ],
-            "confidence": 0.8079,
-            "score": 0.8079,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.886347,
-              "contour_score": 0.749072,
-              "grabcut_corners": [
-                [
-                  109.55450439453125,
-                  974.3335571289062
-                ],
-                [
-                  107.83270263671875,
-                  17.005699157714844
-                ],
-                [
-                  753.99072265625,
-                  15.843544006347656
-                ],
-                [
-                  755.7125244140625,
-                  973.1714477539062
-                ]
-              ],
-              "contour_corners": [
-                [
-                  119.0,
-                  36.0
-                ],
-                [
-                  1315.0,
-                  15.0
-                ],
-                [
-                  739.0,
-                  948.0
-                ],
-                [
-                  137.0,
-                  771.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.43964,
-              "grabcut_contour_area_fraction": 0.438175,
-              "agreement_iou": 0.59869748,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 7955.93
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -4199,6 +1298,16 @@
           "label": "title_or_index_sheet",
           "layout_type": "single_page",
           "status": "ok",
+          "iou": 0.5973969,
+          "edge_errors": {
+            "left": 332.0,
+            "top": 119.0,
+            "right": 2.0,
+            "bottom": 1.0
+          },
+          "edge_error_mean_px": 113.5,
+          "edge_error_maximum_px": 332.0,
+          "elapsed_ms": 50361.54,
           "approved_bbox": [
             15,
             28,
@@ -4211,130 +1320,6 @@
             1072,
             969
           ],
-          "iou": 0.5973969,
-          "edge_errors": {
-            "left": 332,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 113.5,
-            "maximum": 332
-          },
-          "edge_error_mean_px": 113.5,
-          "edge_error_maximum_px": 332,
-          "elapsed_ms": 52904.575,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              347,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.714575,
-            "score": 0.714575,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.730589,
-              "contour_score": 0.662027,
-              "grabcut_corners": [
-                [
-                  1070.9998779296875,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  147.0
-                ],
-                [
-                  1070.9998779296875,
-                  147.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  140.0,
-                  44.0
-                ],
-                [
-                  1036.0,
-                  223.0
-                ],
-                [
-                  1021.0,
-                  886.0
-                ],
-                [
-                  424.0,
-                  887.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.391308,
-              "grabcut_contour_area_fraction": 0.439188,
-              "agreement_iou": 0.72591959,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 52904.543
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -4344,6 +1329,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94327117,
+          "edge_errors": {
+            "left": 13.0,
+            "top": 1.0,
+            "right": 35.0,
+            "bottom": 10.0
+          },
+          "edge_error_mean_px": 14.75,
+          "edge_error_maximum_px": 35.0,
+          "elapsed_ms": 4471.882,
           "approved_bbox": [
             84,
             51,
@@ -4356,130 +1351,6 @@
             1136,
             951
           ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 4710.947,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.960951,
-            "score": 0.960951,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.980779,
-              "contour_score": 0.879702,
-              "grabcut_corners": [
-                [
-                  1117.0,
-                  58.0
-                ],
-                [
-                  77.0,
-                  55.0
-                ],
-                [
-                  72.0,
-                  933.0
-                ],
-                [
-                  1119.0,
-                  937.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  77.0,
-                  56.0
-                ],
-                [
-                  1115.0,
-                  56.0
-                ],
-                [
-                  1118.0,
-                  937.0
-                ],
-                [
-                  73.0,
-                  932.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.735539,
-              "grabcut_contour_area_fraction": 0.732668,
-              "agreement_iou": 0.99658013,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 4710.914
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -4489,6 +1360,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.95397361,
+          "edge_errors": {
+            "left": 14.0,
+            "top": 1.0,
+            "right": 34.0,
+            "bottom": 2.0
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 34.0,
+          "elapsed_ms": 4290.321,
           "approved_bbox": [
             88,
             33,
@@ -4501,912 +1382,28 @@
             1188,
             966
           ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 5676.035,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.951923,
-            "score": 0.951923,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": false
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.983723,
-              "contour_score": 0.856308,
-              "grabcut_corners": [
-                [
-                  77.0,
-                  38.0
-                ],
-                [
-                  78.0,
-                  959.0
-                ],
-                [
-                  1176.0,
-                  956.0
-                ],
-                [
-                  1166.0,
-                  35.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  84.0,
-                  44.0
-                ],
-                [
-                  1144.0,
-                  44.0
-                ],
-                [
-                  1171.0,
-                  947.0
-                ],
-                [
-                  81.0,
-                  945.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.814199,
-              "grabcut_contour_area_fraction": 0.81258,
-              "agreement_iou": 0.96280918,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 5676.005
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
         }
       ],
-      "search_observation": {
-        "parameter_set_number": 7,
-        "elapsed_seconds": 232.247183629,
-        "search_fraction": 0.7
-      },
-      "profile": null,
-      "run_id": "run-20260805-220922",
-      "rank": 4,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "e0ee2eca2f73",
-      "parameters": {
-        "grabcut_border_fraction": 0.01,
-        "grabcut_erosion_kernel_fraction": 0.008,
-        "grabcut_iterations": 1,
-        "grabcut_close_kernel_fraction": 0.01,
-        "grabcut_minimum_contour_area_fraction": 0.02,
-        "grabcut_polygon_epsilon_fraction": 0.01,
-        "contour_minimum_area_fraction": 0.08,
-        "contour_minimum_rectangularity": 0.45,
-        "minimum_agreement_iou": 0.05,
-        "grabcut_weight": 0.55,
-        "agreement_weight": 0.15,
-        "require_contour": true
-      },
       "summary": {
         "page_count": 5,
         "success_count": 5,
         "failure_count": 0,
         "mean_iou": 0.80110545,
+        "mean_iou_success": 0.80110545,
         "minimum_iou": 0.5491621,
         "stddev_iou": 0.1867354,
         "mean_edge_error_px": 56.95,
         "elapsed_ms_total": 78008.252,
-        "wall_ms": 78009.028
+        "wall_ms": 78008.252
       },
-      "pages": [
-        {
-          "global_ordinal": 1,
-          "label": "ordinary_two_page_spread",
-          "layout_type": "two_page_spread",
-          "status": "ok",
-          "approved_bbox": [
-            125,
-            56,
-            1289,
-            967
-          ],
-          "predicted_bbox": [
-            81,
-            55,
-            1290,
-            967
-          ],
-          "iou": 0.96172348,
-          "edge_errors": {
-            "left": 44,
-            "top": 1,
-            "right": 1,
-            "bottom": 0,
-            "mean": 11.5,
-            "maximum": 44
-          },
-          "edge_error_mean_px": 11.5,
-          "edge_error_maximum_px": 44,
-          "elapsed_ms": 8758.857,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              81,
-              55,
-              1290,
-              967
-            ],
-            "corners": [
-              [
-                107.0,
-                63.0
-              ],
-              [
-                115.0,
-                955.0
-              ],
-              [
-                1283.0,
-                950.0
-              ],
-              [
-                1272.0,
-                60.0
-              ]
-            ],
-            "confidence": 0.90651,
-            "score": 0.90651,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.95769,
-              "contour_score": 0.79374,
-              "grabcut_corners": [
-                [
-                  107.0,
-                  63.0
-                ],
-                [
-                  115.0,
-                  955.0
-                ],
-                [
-                  1283.0,
-                  950.0
-                ],
-                [
-                  1272.0,
-                  60.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  111.0,
-                  90.0
-                ],
-                [
-                  1381.0,
-                  18.0
-                ],
-                [
-                  1257.0,
-                  938.0
-                ],
-                [
-                  235.0,
-                  917.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.782801,
-              "grabcut_contour_area_fraction": 0.780245,
-              "agreement_iou": 0.86920722,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 8758.83
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
-          "error": {},
-          "warnings": [],
-          "metadata": {}
-        },
-        {
-          "global_ordinal": 5,
-          "label": "damaged_partial_register_spread",
-          "layout_type": "two_page_spread",
-          "status": "ok",
-          "approved_bbox": [
-            67,
-            8,
-            1233,
-            977
-          ],
-          "predicted_bbox": [
-            108,
-            16,
-            755,
-            975
-          ],
-          "iou": 0.5491621,
-          "edge_errors": {
-            "left": 41,
-            "top": 8,
-            "right": 478,
-            "bottom": 2,
-            "mean": 132.25,
-            "maximum": 478
-          },
-          "edge_error_mean_px": 132.25,
-          "edge_error_maximum_px": 478,
-          "elapsed_ms": 10125.652,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              108,
-              16,
-              755,
-              975
-            ],
-            "corners": [
-              [
-                109.55450439453125,
-                974.3335571289062
-              ],
-              [
-                107.83270263671875,
-                17.005699157714844
-              ],
-              [
-                753.99072265625,
-                15.843544006347656
-              ],
-              [
-                755.7125244140625,
-                973.1714477539062
-              ]
-            ],
-            "confidence": 0.8079,
-            "score": 0.8079,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.886347,
-              "contour_score": 0.749072,
-              "grabcut_corners": [
-                [
-                  109.55450439453125,
-                  974.3335571289062
-                ],
-                [
-                  107.83270263671875,
-                  17.005699157714844
-                ],
-                [
-                  753.99072265625,
-                  15.843544006347656
-                ],
-                [
-                  755.7125244140625,
-                  973.1714477539062
-                ]
-              ],
-              "contour_corners": [
-                [
-                  119.0,
-                  36.0
-                ],
-                [
-                  1315.0,
-                  15.0
-                ],
-                [
-                  739.0,
-                  948.0
-                ],
-                [
-                  137.0,
-                  771.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.43964,
-              "grabcut_contour_area_fraction": 0.438175,
-              "agreement_iou": 0.59869748,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 10125.619
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
-          "error": {},
-          "warnings": [],
-          "metadata": {}
-        },
-        {
-          "global_ordinal": 6,
-          "label": "title_or_index_sheet",
-          "layout_type": "single_page",
-          "status": "ok",
-          "approved_bbox": [
-            15,
-            28,
-            1074,
-            970
-          ],
-          "predicted_bbox": [
-            347,
-            147,
-            1072,
-            969
-          ],
-          "iou": 0.5973969,
-          "edge_errors": {
-            "left": 332,
-            "top": 119,
-            "right": 2,
-            "bottom": 1,
-            "mean": 113.5,
-            "maximum": 332
-          },
-          "edge_error_mean_px": 113.5,
-          "edge_error_maximum_px": 332,
-          "elapsed_ms": 50361.54,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              347,
-              147,
-              1072,
-              969
-            ],
-            "corners": [
-              [
-                1070.9998779296875,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                967.9998779296875
-              ],
-              [
-                347.0,
-                147.0
-              ],
-              [
-                1070.9998779296875,
-                147.0
-              ]
-            ],
-            "confidence": 0.714575,
-            "score": 0.714575,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.730589,
-              "contour_score": 0.662027,
-              "grabcut_corners": [
-                [
-                  1070.9998779296875,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  967.9998779296875
-                ],
-                [
-                  347.0,
-                  147.0
-                ],
-                [
-                  1070.9998779296875,
-                  147.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  140.0,
-                  44.0
-                ],
-                [
-                  1036.0,
-                  223.0
-                ],
-                [
-                  1021.0,
-                  886.0
-                ],
-                [
-                  424.0,
-                  887.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.391308,
-              "grabcut_contour_area_fraction": 0.439188,
-              "agreement_iou": 0.72591959,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 50361.507
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
-          "error": {},
-          "warnings": [],
-          "metadata": {}
-        },
-        {
-          "global_ordinal": 9,
-          "label": "clean_two_page_spread",
-          "layout_type": "two_page_spread",
-          "status": "ok",
-          "approved_bbox": [
-            84,
-            51,
-            1101,
-            941
-          ],
-          "predicted_bbox": [
-            71,
-            50,
-            1136,
-            951
-          ],
-          "iou": 0.94327117,
-          "edge_errors": {
-            "left": 13,
-            "top": 1,
-            "right": 35,
-            "bottom": 10,
-            "mean": 14.75,
-            "maximum": 35
-          },
-          "edge_error_mean_px": 14.75,
-          "edge_error_maximum_px": 35,
-          "elapsed_ms": 4471.882,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              71,
-              50,
-              1136,
-              951
-            ],
-            "corners": [
-              [
-                1117.0,
-                58.0
-              ],
-              [
-                77.0,
-                55.0
-              ],
-              [
-                72.0,
-                933.0
-              ],
-              [
-                1119.0,
-                937.0
-              ]
-            ],
-            "confidence": 0.960951,
-            "score": 0.960951,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.980779,
-              "contour_score": 0.879702,
-              "grabcut_corners": [
-                [
-                  1117.0,
-                  58.0
-                ],
-                [
-                  77.0,
-                  55.0
-                ],
-                [
-                  72.0,
-                  933.0
-                ],
-                [
-                  1119.0,
-                  937.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  77.0,
-                  56.0
-                ],
-                [
-                  1115.0,
-                  56.0
-                ],
-                [
-                  1118.0,
-                  937.0
-                ],
-                [
-                  73.0,
-                  932.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.735539,
-              "grabcut_contour_area_fraction": 0.732668,
-              "agreement_iou": 0.99658013,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 4471.852
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
-          "error": {},
-          "warnings": [],
-          "metadata": {}
-        },
-        {
-          "global_ordinal": 10,
-          "label": "clean_two_page_spread_2",
-          "layout_type": "two_page_spread",
-          "status": "ok",
-          "approved_bbox": [
-            88,
-            33,
-            1154,
-            968
-          ],
-          "predicted_bbox": [
-            74,
-            34,
-            1188,
-            966
-          ],
-          "iou": 0.95397361,
-          "edge_errors": {
-            "left": 14,
-            "top": 1,
-            "right": 34,
-            "bottom": 2,
-            "mean": 12.75,
-            "maximum": 34
-          },
-          "edge_error_mean_px": 12.75,
-          "edge_error_maximum_px": 34,
-          "elapsed_ms": 4290.321,
-          "candidate": {
-            "method": "grabcut_contour",
-            "bbox": [
-              74,
-              34,
-              1188,
-              966
-            ],
-            "corners": [
-              [
-                77.0,
-                38.0
-              ],
-              [
-                78.0,
-                959.0
-              ],
-              [
-                1176.0,
-                956.0
-              ],
-              [
-                1166.0,
-                35.0
-              ]
-            ],
-            "confidence": 0.951923,
-            "score": 0.951923,
-            "diagnostics": {
-              "parameters": {
-                "grabcut_border_fraction": 0.01,
-                "grabcut_erosion_kernel_fraction": 0.008,
-                "grabcut_erosion_iterations": 1,
-                "grabcut_iterations": 1,
-                "grabcut_close_kernel_fraction": 0.01,
-                "grabcut_close_iterations": 1,
-                "grabcut_minimum_bbox_area_fraction": 0.1,
-                "grabcut_minimum_contour_area_fraction": 0.02,
-                "grabcut_polygon_epsilon_fraction": 0.01,
-                "contour_minimum_area_fraction": 0.08,
-                "contour_epsilon_max_fraction": 0.04,
-                "contour_minimum_rectangularity": 0.45,
-                "minimum_agreement_iou": 0.05,
-                "grabcut_weight": 0.55,
-                "contour_weight": 0.2,
-                "agreement_weight": 0.15,
-                "require_contour": true
-              },
-              "grabcut_status": "ok",
-              "contour_status": "ok",
-              "grabcut_score": 0.983723,
-              "contour_score": 0.856308,
-              "grabcut_corners": [
-                [
-                  77.0,
-                  38.0
-                ],
-                [
-                  78.0,
-                  959.0
-                ],
-                [
-                  1176.0,
-                  956.0
-                ],
-                [
-                  1166.0,
-                  35.0
-                ]
-              ],
-              "contour_corners": [
-                [
-                  84.0,
-                  44.0
-                ],
-                [
-                  1144.0,
-                  44.0
-                ],
-                [
-                  1171.0,
-                  947.0
-                ],
-                [
-                  81.0,
-                  945.0
-                ]
-              ],
-              "grabcut_reason": null,
-              "contour_reason": null,
-              "grabcut_refined_foreground_fraction": 0.814199,
-              "grabcut_contour_area_fraction": 0.81258,
-              "agreement_iou": 0.96280918,
-              "fusion_mode": "grabcut_generated_contour_validated",
-              "selected_geometry": "grabcut",
-              "reason": "accepted",
-              "elapsed_ms": 4290.29
-            },
-            "status": "ok",
-            "detector_name": "GrabCut + Contour",
-            "origin": "HTH",
-            "foundation": [
-              "GrabCut",
-              "Contour geometry",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
-          "error": {},
-          "warnings": [],
-          "metadata": {}
-        }
-      ],
-      "search_observation": {
-        "parameter_set_number": 6,
-        "elapsed_seconds": 232.14686543199997,
-        "search_fraction": 0.6
-      },
-      "profile": null,
-      "run_id": "run-20260805-220922",
-      "rank": 5,
       "error": {},
       "warnings": [],
-      "metadata": {}
+      "metadata": {},
+      "rank": 5,
+      "run_id": "run-20260805-220922"
     }
   ],
   "winner_page_report": {
@@ -5538,5 +1535,14 @@
     "winner_history": [],
     "last_improvement_elapsed_seconds": null,
     "time_since_last_improvement_seconds": null
+  },
+  "historical_rerank": {
+    "schema_version": "1.0",
+    "reranked_from_raw": true,
+    "reranked_at_utc": "2026-08-11T18:42:51.398976Z",
+    "reason": "canonical-result-metrics",
+    "original_run_id": "run-20260805-220922",
+    "previous_winner_parameter_set_id": "3817f226228a",
+    "winner_changed": false
   }
 }

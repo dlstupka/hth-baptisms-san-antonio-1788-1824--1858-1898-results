@@ -47,28 +47,18 @@
   "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
   "winner": {
     "parameter_set_id": "e38a975d1436",
+    "profile": "baseline",
     "parameters": {
-      "minimum_contour_area_fraction": 0.12,
-      "epsilon_max_fraction": 0.04,
-      "minimum_rectangularity": 0.55,
-      "gaussian_sigma": 1.2,
       "band_fraction": 0.008,
-      "minimum_border_energy": 0.1,
-      "minimum_side_consistency": 0.45,
+      "consistency_weight": 0.15,
       "contour_weight": 0.45,
       "energy_weight": 0.4,
-      "consistency_weight": 0.15
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 3,
-      "failure_count": 2,
-      "mean_iou": 0.55419009,
-      "minimum_iou": 0.0,
-      "stddev_iou": 0.45379921,
-      "mean_edge_error_px": 21.917,
-      "elapsed_ms_total": 1629.277,
-      "wall_ms": 1629.953
+      "epsilon_max_fraction": 0.04,
+      "gaussian_sigma": 1.2,
+      "minimum_border_energy": 0.1,
+      "minimum_contour_area_fraction": 0.12,
+      "minimum_rectangularity": 0.55,
+      "minimum_side_consistency": 0.45
     },
     "pages": [
       {
@@ -77,56 +67,12 @@
         "layout_type": "two_page_spread",
         "status": "no_candidate",
         "iou": 0.0,
+        "edge_errors": {},
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
         "elapsed_ms": 271.74,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.79374,
-            "border_energy": 0.1838456029072404,
-            "side_consistency": 0.32418604094868747,
-            "side_energy": [
-              0.1723022311925888,
-              0.05960017815232277,
-              0.19582818448543549,
-              0.3076518177986145
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "reason": "inconsistent_border_energy",
-            "elapsed_ms": 271.7
-          },
-          "status": "no_candidate",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
+        "approved_bbox": null,
+        "predicted_bbox": null,
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -136,6 +82,16 @@
         "label": "damaged_partial_register_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52.0,
+          "top": 7.0,
+          "right": 83.0,
+          "bottom": 28.0
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83.0,
+        "elapsed_ms": 202.049,
         "approved_bbox": [
           67,
           8,
@@ -148,86 +104,6 @@
           1316,
           949
         ],
-        "iou": 0.86176634,
-        "edge_errors": {
-          "left": 52,
-          "top": 7,
-          "right": 83,
-          "bottom": 28,
-          "mean": 42.5,
-          "maximum": 83
-        },
-        "edge_error_mean_px": 42.5,
-        "edge_error_maximum_px": 83,
-        "elapsed_ms": 202.049,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": [
-            119,
-            15,
-            1316,
-            949
-          ],
-          "corners": [
-            [
-              119.0,
-              36.0
-            ],
-            [
-              1315.0,
-              15.0
-            ],
-            [
-              739.0,
-              948.0
-            ],
-            [
-              137.0,
-              771.0
-            ]
-          ],
-          "confidence": 0.5914031058908732,
-          "score": 0.5914031058908732,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.749072,
-            "border_energy": 0.3356582149863243,
-            "side_consistency": 0.8003827993089564,
-            "side_energy": [
-              0.32010307908058167,
-              0.2939760982990265,
-              0.26865506172180176,
-              0.45989862084388733
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "elapsed_ms": 202.007
-          },
-          "status": "ok",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -238,56 +114,12 @@
         "layout_type": "single_page",
         "status": "no_candidate",
         "iou": 0.0,
+        "edge_errors": {},
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
         "elapsed_ms": 156.169,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.662027,
-            "border_energy": 0.09030215023085475,
-            "side_consistency": 0.12206518225118212,
-            "side_energy": [
-              0.16073200106620789,
-              0.011022748425602913,
-              0.013891767710447311,
-              0.1755620837211609
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "reason": "insufficient_border_energy",
-            "elapsed_ms": 156.133
-          },
-          "status": "no_candidate",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
+        "approved_bbox": null,
+        "predicted_bbox": null,
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -297,6 +129,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11.0,
+          "top": 5.0,
+          "right": 18.0,
+          "bottom": 3.0
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18.0,
+        "elapsed_ms": 500.72,
         "approved_bbox": [
           84,
           51,
@@ -309,86 +151,6 @@
           1119,
           938
         ],
-        "iou": 0.96377596,
-        "edge_errors": {
-          "left": 11,
-          "top": 5,
-          "right": 18,
-          "bottom": 3,
-          "mean": 9.25,
-          "maximum": 18
-        },
-        "edge_error_mean_px": 9.25,
-        "edge_error_maximum_px": 18,
-        "elapsed_ms": 500.72,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": [
-            73,
-            56,
-            1119,
-            938
-          ],
-          "corners": [
-            [
-              77.0,
-              56.0
-            ],
-            [
-              1115.0,
-              56.0
-            ],
-            [
-              1118.0,
-              937.0
-            ],
-            [
-              73.0,
-              932.0
-            ]
-          ],
-          "confidence": 0.6854803124557093,
-          "score": 0.6854803124557093,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.879702,
-            "border_energy": 0.4798555374145508,
-            "side_consistency": 0.6511479832659267,
-            "side_energy": [
-              0.5509741306304932,
-              0.31245696544647217,
-              0.5188503265380859,
-              0.5371407270431519
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "elapsed_ms": 500.668
-          },
-          "status": "ok",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -398,6 +160,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7.0,
+          "top": 11.0,
+          "right": 18.0,
+          "bottom": 20.0
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20.0,
+        "elapsed_ms": 498.599,
         "approved_bbox": [
           88,
           33,
@@ -410,122 +182,43 @@
           1172,
           948
         ],
-        "iou": 0.94540817,
-        "edge_errors": {
-          "left": 7,
-          "top": 11,
-          "right": 18,
-          "bottom": 20,
-          "mean": 14.0,
-          "maximum": 20
-        },
-        "edge_error_mean_px": 14.0,
-        "edge_error_maximum_px": 20,
-        "elapsed_ms": 498.599,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": [
-            81,
-            44,
-            1172,
-            948
-          ],
-          "corners": [
-            [
-              84.0,
-              44.0
-            ],
-            [
-              1144.0,
-              44.0
-            ],
-            [
-              1171.0,
-              947.0
-            ],
-            [
-              81.0,
-              945.0
-            ]
-          ],
-          "confidence": 0.5888562635061524,
-          "score": 0.5888562635061524,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.856308,
-            "border_energy": 0.29620856791734695,
-            "side_consistency": 0.5668949089280905,
-            "side_energy": [
-              0.1679191291332245,
-              0.29604682326316833,
-              0.2991314232349396,
-              0.4217368960380554
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "elapsed_ms": 498.561
-          },
-          "status": "ok",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
       }
     ],
-    "profile": "baseline",
-    "run_id": "run-20260810-185426",
-    "rank": 1,
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.55419009,
+      "mean_iou_success": 0.92365016,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.45379921,
+      "mean_edge_error_px": 21.917,
+      "elapsed_ms_total": 1629.277,
+      "wall_ms": 1629.277
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 1,
+    "run_id": "run-20260810-185426"
   },
   "baseline": {
     "parameter_set_id": "e38a975d1436",
+    "profile": "baseline",
     "parameters": {
-      "minimum_contour_area_fraction": 0.12,
-      "epsilon_max_fraction": 0.04,
-      "minimum_rectangularity": 0.55,
-      "gaussian_sigma": 1.2,
       "band_fraction": 0.008,
-      "minimum_border_energy": 0.1,
-      "minimum_side_consistency": 0.45,
+      "consistency_weight": 0.15,
       "contour_weight": 0.45,
       "energy_weight": 0.4,
-      "consistency_weight": 0.15
-    },
-    "summary": {
-      "page_count": 5,
-      "success_count": 3,
-      "failure_count": 2,
-      "mean_iou": 0.55419009,
-      "minimum_iou": 0.0,
-      "stddev_iou": 0.45379921,
-      "mean_edge_error_px": 21.917,
-      "elapsed_ms_total": 1629.277,
-      "wall_ms": 1629.953
+      "epsilon_max_fraction": 0.04,
+      "gaussian_sigma": 1.2,
+      "minimum_border_energy": 0.1,
+      "minimum_contour_area_fraction": 0.12,
+      "minimum_rectangularity": 0.55,
+      "minimum_side_consistency": 0.45
     },
     "pages": [
       {
@@ -534,56 +227,12 @@
         "layout_type": "two_page_spread",
         "status": "no_candidate",
         "iou": 0.0,
+        "edge_errors": {},
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
         "elapsed_ms": 271.74,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.79374,
-            "border_energy": 0.1838456029072404,
-            "side_consistency": 0.32418604094868747,
-            "side_energy": [
-              0.1723022311925888,
-              0.05960017815232277,
-              0.19582818448543549,
-              0.3076518177986145
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "reason": "inconsistent_border_energy",
-            "elapsed_ms": 271.7
-          },
-          "status": "no_candidate",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
+        "approved_bbox": null,
+        "predicted_bbox": null,
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -593,6 +242,16 @@
         "label": "damaged_partial_register_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52.0,
+          "top": 7.0,
+          "right": 83.0,
+          "bottom": 28.0
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83.0,
+        "elapsed_ms": 202.049,
         "approved_bbox": [
           67,
           8,
@@ -605,86 +264,6 @@
           1316,
           949
         ],
-        "iou": 0.86176634,
-        "edge_errors": {
-          "left": 52,
-          "top": 7,
-          "right": 83,
-          "bottom": 28,
-          "mean": 42.5,
-          "maximum": 83
-        },
-        "edge_error_mean_px": 42.5,
-        "edge_error_maximum_px": 83,
-        "elapsed_ms": 202.049,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": [
-            119,
-            15,
-            1316,
-            949
-          ],
-          "corners": [
-            [
-              119.0,
-              36.0
-            ],
-            [
-              1315.0,
-              15.0
-            ],
-            [
-              739.0,
-              948.0
-            ],
-            [
-              137.0,
-              771.0
-            ]
-          ],
-          "confidence": 0.5914031058908732,
-          "score": 0.5914031058908732,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.749072,
-            "border_energy": 0.3356582149863243,
-            "side_consistency": 0.8003827993089564,
-            "side_energy": [
-              0.32010307908058167,
-              0.2939760982990265,
-              0.26865506172180176,
-              0.45989862084388733
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "elapsed_ms": 202.007
-          },
-          "status": "ok",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -695,56 +274,12 @@
         "layout_type": "single_page",
         "status": "no_candidate",
         "iou": 0.0,
+        "edge_errors": {},
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
         "elapsed_ms": 156.169,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.662027,
-            "border_energy": 0.09030215023085475,
-            "side_consistency": 0.12206518225118212,
-            "side_energy": [
-              0.16073200106620789,
-              0.011022748425602913,
-              0.013891767710447311,
-              0.1755620837211609
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "reason": "insufficient_border_energy",
-            "elapsed_ms": 156.133
-          },
-          "status": "no_candidate",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
+        "approved_bbox": null,
+        "predicted_bbox": null,
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -754,6 +289,16 @@
         "label": "clean_two_page_spread",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11.0,
+          "top": 5.0,
+          "right": 18.0,
+          "bottom": 3.0
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18.0,
+        "elapsed_ms": 500.72,
         "approved_bbox": [
           84,
           51,
@@ -766,86 +311,6 @@
           1119,
           938
         ],
-        "iou": 0.96377596,
-        "edge_errors": {
-          "left": 11,
-          "top": 5,
-          "right": 18,
-          "bottom": 3,
-          "mean": 9.25,
-          "maximum": 18
-        },
-        "edge_error_mean_px": 9.25,
-        "edge_error_maximum_px": 18,
-        "elapsed_ms": 500.72,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": [
-            73,
-            56,
-            1119,
-            938
-          ],
-          "corners": [
-            [
-              77.0,
-              56.0
-            ],
-            [
-              1115.0,
-              56.0
-            ],
-            [
-              1118.0,
-              937.0
-            ],
-            [
-              73.0,
-              932.0
-            ]
-          ],
-          "confidence": 0.6854803124557093,
-          "score": 0.6854803124557093,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.879702,
-            "border_energy": 0.4798555374145508,
-            "side_consistency": 0.6511479832659267,
-            "side_energy": [
-              0.5509741306304932,
-              0.31245696544647217,
-              0.5188503265380859,
-              0.5371407270431519
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "elapsed_ms": 500.668
-          },
-          "status": "ok",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
@@ -855,6 +320,16 @@
         "label": "clean_two_page_spread_2",
         "layout_type": "two_page_spread",
         "status": "ok",
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7.0,
+          "top": 11.0,
+          "right": 18.0,
+          "bottom": 20.0
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20.0,
+        "elapsed_ms": 498.599,
         "approved_bbox": [
           88,
           33,
@@ -867,123 +342,44 @@
           1172,
           948
         ],
-        "iou": 0.94540817,
-        "edge_errors": {
-          "left": 7,
-          "top": 11,
-          "right": 18,
-          "bottom": 20,
-          "mean": 14.0,
-          "maximum": 20
-        },
-        "edge_error_mean_px": 14.0,
-        "edge_error_maximum_px": 20,
-        "elapsed_ms": 498.599,
-        "candidate": {
-          "method": "border_energy",
-          "bbox": [
-            81,
-            44,
-            1172,
-            948
-          ],
-          "corners": [
-            [
-              84.0,
-              44.0
-            ],
-            [
-              1144.0,
-              44.0
-            ],
-            [
-              1171.0,
-              947.0
-            ],
-            [
-              81.0,
-              945.0
-            ]
-          ],
-          "confidence": 0.5888562635061524,
-          "score": 0.5888562635061524,
-          "diagnostics": {
-            "parameters": {
-              "minimum_contour_area_fraction": 0.12,
-              "epsilon_max_fraction": 0.04,
-              "minimum_rectangularity": 0.55,
-              "gaussian_sigma": 1.2,
-              "band_fraction": 0.008,
-              "minimum_border_energy": 0.1,
-              "minimum_side_consistency": 0.45,
-              "contour_weight": 0.45,
-              "energy_weight": 0.4,
-              "consistency_weight": 0.15
-            },
-            "contour_score": 0.856308,
-            "border_energy": 0.29620856791734695,
-            "side_consistency": 0.5668949089280905,
-            "side_energy": [
-              0.1679191291332245,
-              0.29604682326316833,
-              0.2991314232349396,
-              0.4217368960380554
-            ],
-            "band_width_pixels": 8,
-            "evidence": "sobel_energy_along_candidate_borders",
-            "elapsed_ms": 498.561
-          },
-          "status": "ok",
-          "detector_name": "Border Energy Validator",
-          "origin": "HTH",
-          "foundation": [
-            "Contour geometry",
-            "Sobel border energy",
-            "OpenCV"
-          ],
-          "authors": [
-            "OpenAI ChatGPT"
-          ],
-          "version": "0.6.1",
-          "repository": "https://github.com/dlstupka/hth"
-        },
         "error": {},
         "warnings": [],
         "metadata": {}
       }
     ],
-    "profile": "baseline",
-    "run_id": "run-20260810-185426",
-    "rank": 1,
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.55419009,
+      "mean_iou_success": 0.92365016,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.45379921,
+      "mean_edge_error_px": 21.917,
+      "elapsed_ms_total": 1629.277,
+      "wall_ms": 1629.277
+    },
     "error": {},
     "warnings": [],
-    "metadata": {}
+    "metadata": {},
+    "rank": 1,
+    "run_id": "run-20260810-185426"
   },
   "top_parameter_sets": [
     {
       "parameter_set_id": "e38a975d1436",
+      "profile": "baseline",
       "parameters": {
-        "minimum_contour_area_fraction": 0.12,
-        "epsilon_max_fraction": 0.04,
-        "minimum_rectangularity": 0.55,
-        "gaussian_sigma": 1.2,
         "band_fraction": 0.008,
-        "minimum_border_energy": 0.1,
-        "minimum_side_consistency": 0.45,
+        "consistency_weight": 0.15,
         "contour_weight": 0.45,
         "energy_weight": 0.4,
-        "consistency_weight": 0.15
-      },
-      "summary": {
-        "page_count": 5,
-        "success_count": 3,
-        "failure_count": 2,
-        "mean_iou": 0.55419009,
-        "minimum_iou": 0.0,
-        "stddev_iou": 0.45379921,
-        "mean_edge_error_px": 21.917,
-        "elapsed_ms_total": 1629.277,
-        "wall_ms": 1629.953
+        "epsilon_max_fraction": 0.04,
+        "gaussian_sigma": 1.2,
+        "minimum_border_energy": 0.1,
+        "minimum_contour_area_fraction": 0.12,
+        "minimum_rectangularity": 0.55,
+        "minimum_side_consistency": 0.45
       },
       "pages": [
         {
@@ -992,56 +388,12 @@
           "layout_type": "two_page_spread",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 271.74,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.12,
-                "epsilon_max_fraction": 0.04,
-                "minimum_rectangularity": 0.55,
-                "gaussian_sigma": 1.2,
-                "band_fraction": 0.008,
-                "minimum_border_energy": 0.1,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.79374,
-              "border_energy": 0.1838456029072404,
-              "side_consistency": 0.32418604094868747,
-              "side_energy": [
-                0.1723022311925888,
-                0.05960017815232277,
-                0.19582818448543549,
-                0.3076518177986145
-              ],
-              "band_width_pixels": 8,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 271.7
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1051,6 +403,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52.0,
+            "top": 7.0,
+            "right": 83.0,
+            "bottom": 28.0
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83.0,
+          "elapsed_ms": 202.049,
           "approved_bbox": [
             67,
             8,
@@ -1063,86 +425,6 @@
             1316,
             949
           ],
-          "iou": 0.86176634,
-          "edge_errors": {
-            "left": 52,
-            "top": 7,
-            "right": 83,
-            "bottom": 28,
-            "mean": 42.5,
-            "maximum": 83
-          },
-          "edge_error_mean_px": 42.5,
-          "edge_error_maximum_px": 83,
-          "elapsed_ms": 202.049,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              119,
-              15,
-              1316,
-              949
-            ],
-            "corners": [
-              [
-                119.0,
-                36.0
-              ],
-              [
-                1315.0,
-                15.0
-              ],
-              [
-                739.0,
-                948.0
-              ],
-              [
-                137.0,
-                771.0
-              ]
-            ],
-            "confidence": 0.5914031058908732,
-            "score": 0.5914031058908732,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.12,
-                "epsilon_max_fraction": 0.04,
-                "minimum_rectangularity": 0.55,
-                "gaussian_sigma": 1.2,
-                "band_fraction": 0.008,
-                "minimum_border_energy": 0.1,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.749072,
-              "border_energy": 0.3356582149863243,
-              "side_consistency": 0.8003827993089564,
-              "side_energy": [
-                0.32010307908058167,
-                0.2939760982990265,
-                0.26865506172180176,
-                0.45989862084388733
-              ],
-              "band_width_pixels": 8,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 202.007
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1153,56 +435,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 156.169,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.12,
-                "epsilon_max_fraction": 0.04,
-                "minimum_rectangularity": 0.55,
-                "gaussian_sigma": 1.2,
-                "band_fraction": 0.008,
-                "minimum_border_energy": 0.1,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.662027,
-              "border_energy": 0.09030215023085475,
-              "side_consistency": 0.12206518225118212,
-              "side_energy": [
-                0.16073200106620789,
-                0.011022748425602913,
-                0.013891767710447311,
-                0.1755620837211609
-              ],
-              "band_width_pixels": 8,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "insufficient_border_energy",
-              "elapsed_ms": 156.133
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1212,6 +450,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11.0,
+            "top": 5.0,
+            "right": 18.0,
+            "bottom": 3.0
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18.0,
+          "elapsed_ms": 500.72,
           "approved_bbox": [
             84,
             51,
@@ -1224,86 +472,6 @@
             1119,
             938
           ],
-          "iou": 0.96377596,
-          "edge_errors": {
-            "left": 11,
-            "top": 5,
-            "right": 18,
-            "bottom": 3,
-            "mean": 9.25,
-            "maximum": 18
-          },
-          "edge_error_mean_px": 9.25,
-          "edge_error_maximum_px": 18,
-          "elapsed_ms": 500.72,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              73,
-              56,
-              1119,
-              938
-            ],
-            "corners": [
-              [
-                77.0,
-                56.0
-              ],
-              [
-                1115.0,
-                56.0
-              ],
-              [
-                1118.0,
-                937.0
-              ],
-              [
-                73.0,
-                932.0
-              ]
-            ],
-            "confidence": 0.6854803124557093,
-            "score": 0.6854803124557093,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.12,
-                "epsilon_max_fraction": 0.04,
-                "minimum_rectangularity": 0.55,
-                "gaussian_sigma": 1.2,
-                "band_fraction": 0.008,
-                "minimum_border_energy": 0.1,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.879702,
-              "border_energy": 0.4798555374145508,
-              "side_consistency": 0.6511479832659267,
-              "side_energy": [
-                0.5509741306304932,
-                0.31245696544647217,
-                0.5188503265380859,
-                0.5371407270431519
-              ],
-              "band_width_pixels": 8,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 500.668
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1313,6 +481,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7.0,
+            "top": 11.0,
+            "right": 18.0,
+            "bottom": 20.0
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20.0,
+          "elapsed_ms": 498.599,
           "approved_bbox": [
             88,
             33,
@@ -1325,120 +503,41 @@
             1172,
             948
           ],
-          "iou": 0.94540817,
-          "edge_errors": {
-            "left": 7,
-            "top": 11,
-            "right": 18,
-            "bottom": 20,
-            "mean": 14.0,
-            "maximum": 20
-          },
-          "edge_error_mean_px": 14.0,
-          "edge_error_maximum_px": 20,
-          "elapsed_ms": 498.599,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              81,
-              44,
-              1172,
-              948
-            ],
-            "corners": [
-              [
-                84.0,
-                44.0
-              ],
-              [
-                1144.0,
-                44.0
-              ],
-              [
-                1171.0,
-                947.0
-              ],
-              [
-                81.0,
-                945.0
-              ]
-            ],
-            "confidence": 0.5888562635061524,
-            "score": 0.5888562635061524,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.12,
-                "epsilon_max_fraction": 0.04,
-                "minimum_rectangularity": 0.55,
-                "gaussian_sigma": 1.2,
-                "band_fraction": 0.008,
-                "minimum_border_energy": 0.1,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.856308,
-              "border_energy": 0.29620856791734695,
-              "side_consistency": 0.5668949089280905,
-              "side_energy": [
-                0.1679191291332245,
-                0.29604682326316833,
-                0.2991314232349396,
-                0.4217368960380554
-              ],
-              "band_width_pixels": 8,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 498.561
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
         }
       ],
-      "profile": "baseline",
-      "run_id": "run-20260810-185426",
-      "rank": 1,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "ee832909df97",
-      "parameters": {
-        "minimum_contour_area_fraction": 0.08,
-        "epsilon_max_fraction": 0.03,
-        "minimum_rectangularity": 0.45,
-        "gaussian_sigma": 0.8,
-        "band_fraction": 0.004,
-        "minimum_border_energy": 0.05,
-        "minimum_side_consistency": 0.3,
-        "energy_weight": 0.3
-      },
       "summary": {
         "page_count": 5,
         "success_count": 3,
         "failure_count": 2,
         "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
         "minimum_iou": 0.0,
         "stddev_iou": 0.45379921,
         "mean_edge_error_px": 21.917,
-        "elapsed_ms_total": 1786.109,
-        "wall_ms": 1786.731
+        "elapsed_ms_total": 1629.277,
+        "wall_ms": 1629.277
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 1,
+      "run_id": "run-20260810-185426"
+    },
+    {
+      "parameter_set_id": "ee832909df97",
+      "profile": null,
+      "parameters": {
+        "band_fraction": 0.004,
+        "energy_weight": 0.3,
+        "epsilon_max_fraction": 0.03,
+        "gaussian_sigma": 0.8,
+        "minimum_border_energy": 0.05,
+        "minimum_contour_area_fraction": 0.08,
+        "minimum_rectangularity": 0.45,
+        "minimum_side_consistency": 0.3
       },
       "pages": [
         {
@@ -1447,56 +546,12 @@
           "layout_type": "two_page_spread",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 586.308,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.79374,
-              "border_energy": 0.15914328210055828,
-              "side_consistency": 0.26206059806202525,
-              "side_energy": [
-                0.13412173092365265,
-                0.0417051836848259,
-                0.1807355135679245,
-                0.2800107002258301
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 586.283
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1506,6 +561,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52.0,
+            "top": 7.0,
+            "right": 83.0,
+            "bottom": 28.0
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83.0,
+          "elapsed_ms": 136.411,
           "approved_bbox": [
             67,
             8,
@@ -1518,86 +583,6 @@
             1316,
             949
           ],
-          "iou": 0.86176634,
-          "edge_errors": {
-            "left": 52,
-            "top": 7,
-            "right": 83,
-            "bottom": 28,
-            "mean": 42.5,
-            "maximum": 83
-          },
-          "edge_error_mean_px": 42.5,
-          "edge_error_maximum_px": 83,
-          "elapsed_ms": 136.411,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              119,
-              15,
-              1316,
-              949
-            ],
-            "corners": [
-              [
-                119.0,
-                36.0
-              ],
-              [
-                1315.0,
-                15.0
-              ],
-              [
-                739.0,
-                948.0
-              ],
-              [
-                137.0,
-                771.0
-              ]
-            ],
-            "confidence": 0.6231196770473257,
-            "score": 0.6231196770473257,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.749072,
-              "border_energy": 0.32633276283741,
-              "side_consistency": 0.8388365366091348,
-              "side_energy": [
-                0.30438509583473206,
-                0.2899622917175293,
-                0.27373984456062317,
-                0.43724381923675537
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 136.374
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1608,56 +593,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 170.69,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.662027,
-              "border_energy": 0.08308111340738833,
-              "side_consistency": 0.1490825122891274,
-              "side_energy": [
-                0.1391364336013794,
-                0.012385941110551357,
-                0.01816144771873951,
-                0.16264063119888306
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 170.651
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1667,6 +608,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11.0,
+            "top": 5.0,
+            "right": 18.0,
+            "bottom": 3.0
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18.0,
+          "elapsed_ms": 460.688,
           "approved_bbox": [
             84,
             51,
@@ -1679,86 +630,6 @@
             1119,
             938
           ],
-          "iou": 0.96377596,
-          "edge_errors": {
-            "left": 11,
-            "top": 5,
-            "right": 18,
-            "bottom": 3,
-            "mean": 9.25,
-            "maximum": 18
-          },
-          "edge_error_mean_px": 9.25,
-          "edge_error_maximum_px": 18,
-          "elapsed_ms": 460.688,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              73,
-              56,
-              1119,
-              938
-            ],
-            "corners": [
-              [
-                77.0,
-                56.0
-              ],
-              [
-                1115.0,
-                56.0
-              ],
-              [
-                1118.0,
-                937.0
-              ],
-              [
-                73.0,
-                932.0
-              ]
-            ],
-            "confidence": 0.6943925313628397,
-            "score": 0.6943925313628397,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.879702,
-              "border_energy": 0.443991094827652,
-              "side_consistency": 0.6392669985217349,
-              "side_energy": [
-                0.5115740299224854,
-                0.28382885456085205,
-                0.4305248260498047,
-                0.5500366687774658
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 460.654
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1768,6 +639,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7.0,
+            "top": 11.0,
+            "right": 18.0,
+            "bottom": 20.0
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20.0,
+          "elapsed_ms": 432.012,
           "approved_bbox": [
             88,
             33,
@@ -1780,86 +661,6 @@
             1172,
             948
           ],
-          "iou": 0.94540817,
-          "edge_errors": {
-            "left": 7,
-            "top": 11,
-            "right": 18,
-            "bottom": 20,
-            "mean": 14.0,
-            "maximum": 20
-          },
-          "edge_error_mean_px": 14.0,
-          "edge_error_maximum_px": 20,
-          "elapsed_ms": 432.012,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              81,
-              44,
-              1172,
-              948
-            ],
-            "corners": [
-              [
-                84.0,
-                44.0
-              ],
-              [
-                1144.0,
-                44.0
-              ],
-              [
-                1171.0,
-                947.0
-              ],
-              [
-                81.0,
-                945.0
-              ]
-            ],
-            "confidence": 0.5935546625044528,
-            "score": 0.5935546625044528,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.856308,
-              "border_energy": 0.23540425300598145,
-              "side_consistency": 0.5215954690147535,
-              "side_energy": [
-                0.1227857917547226,
-                0.27309727668762207,
-                0.3042528033256531,
-                0.24148114025592804
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 431.976
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1871,35 +672,36 @@
         "elapsed_seconds": 3.4239145489999885,
         "search_fraction": 0.1111111111111111
       },
-      "profile": null,
-      "run_id": "run-20260810-185426",
-      "rank": 2,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "24d1f88af992",
-      "parameters": {
-        "minimum_contour_area_fraction": 0.08,
-        "epsilon_max_fraction": 0.03,
-        "minimum_rectangularity": 0.45,
-        "gaussian_sigma": 0.8,
-        "band_fraction": 0.004,
-        "minimum_border_energy": 0.05,
-        "minimum_side_consistency": 0.3,
-        "energy_weight": 0.4
-      },
       "summary": {
         "page_count": 5,
         "success_count": 3,
         "failure_count": 2,
         "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
         "minimum_iou": 0.0,
         "stddev_iou": 0.45379921,
         "mean_edge_error_px": 21.917,
-        "elapsed_ms_total": 2483.177,
-        "wall_ms": 2486.801
+        "elapsed_ms_total": 1786.109,
+        "wall_ms": 1786.109
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 2,
+      "run_id": "run-20260810-185426"
+    },
+    {
+      "parameter_set_id": "24d1f88af992",
+      "profile": null,
+      "parameters": {
+        "band_fraction": 0.004,
+        "energy_weight": 0.4,
+        "epsilon_max_fraction": 0.03,
+        "gaussian_sigma": 0.8,
+        "minimum_border_energy": 0.05,
+        "minimum_contour_area_fraction": 0.08,
+        "minimum_rectangularity": 0.45,
+        "minimum_side_consistency": 0.3
       },
       "pages": [
         {
@@ -1908,56 +710,12 @@
           "layout_type": "two_page_spread",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 576.121,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.79374,
-              "border_energy": 0.15914328210055828,
-              "side_consistency": 0.26206059806202525,
-              "side_energy": [
-                0.13412173092365265,
-                0.0417051836848259,
-                0.1807355135679245,
-                0.2800107002258301
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 576.09
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -1967,6 +725,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52.0,
+            "top": 7.0,
+            "right": 83.0,
+            "bottom": 28.0
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83.0,
+          "elapsed_ms": 239.919,
           "approved_bbox": [
             67,
             8,
@@ -1979,86 +747,6 @@
             1316,
             949
           ],
-          "iou": 0.86176634,
-          "edge_errors": {
-            "left": 52,
-            "top": 7,
-            "right": 83,
-            "bottom": 28,
-            "mean": 42.5,
-            "maximum": 83
-          },
-          "edge_error_mean_px": 42.5,
-          "edge_error_maximum_px": 83,
-          "elapsed_ms": 239.919,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              119,
-              15,
-              1316,
-              949
-            ],
-            "corners": [
-              [
-                119.0,
-                36.0
-              ],
-              [
-                1315.0,
-                15.0
-              ],
-              [
-                739.0,
-                948.0
-              ],
-              [
-                137.0,
-                771.0
-              ]
-            ],
-            "confidence": 0.5934409856263342,
-            "score": 0.5934409856263342,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.749072,
-              "border_energy": 0.32633276283741,
-              "side_consistency": 0.8388365366091348,
-              "side_energy": [
-                0.30438509583473206,
-                0.2899622917175293,
-                0.27373984456062317,
-                0.43724381923675537
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 239.886
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2069,56 +757,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 191.348,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.662027,
-              "border_energy": 0.08308111340738833,
-              "side_consistency": 0.1490825122891274,
-              "side_energy": [
-                0.1391364336013794,
-                0.012385941110551357,
-                0.01816144771873951,
-                0.16264063119888306
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 191.312
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2128,6 +772,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11.0,
+            "top": 5.0,
+            "right": 18.0,
+            "bottom": 3.0
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18.0,
+          "elapsed_ms": 900.526,
           "approved_bbox": [
             84,
             51,
@@ -2140,86 +794,6 @@
             1119,
             938
           ],
-          "iou": 0.96377596,
-          "edge_errors": {
-            "left": 11,
-            "top": 5,
-            "right": 18,
-            "bottom": 3,
-            "mean": 9.25,
-            "maximum": 18
-          },
-          "edge_error_mean_px": 9.25,
-          "edge_error_maximum_px": 18,
-          "elapsed_ms": 900.526,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              73,
-              56,
-              1119,
-              938
-            ],
-            "corners": [
-              [
-                77.0,
-                56.0
-              ],
-              [
-                1115.0,
-                56.0
-              ],
-              [
-                1118.0,
-                937.0
-              ],
-              [
-                73.0,
-                932.0
-              ]
-            ],
-            "confidence": 0.669352387709321,
-            "score": 0.669352387709321,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.879702,
-              "border_energy": 0.443991094827652,
-              "side_consistency": 0.6392669985217349,
-              "side_energy": [
-                0.5115740299224854,
-                0.28382885456085205,
-                0.4305248260498047,
-                0.5500366687774658
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 900.49
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2229,6 +803,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7.0,
+            "top": 11.0,
+            "right": 18.0,
+            "bottom": 20.0
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20.0,
+          "elapsed_ms": 575.263,
           "approved_bbox": [
             88,
             33,
@@ -2241,86 +825,6 @@
             1172,
             948
           ],
-          "iou": 0.94540817,
-          "edge_errors": {
-            "left": 7,
-            "top": 11,
-            "right": 18,
-            "bottom": 20,
-            "mean": 14.0,
-            "maximum": 20
-          },
-          "edge_error_mean_px": 14.0,
-          "edge_error_maximum_px": 20,
-          "elapsed_ms": 575.263,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              81,
-              44,
-              1172,
-              948
-            ],
-            "corners": [
-              [
-                84.0,
-                44.0
-              ],
-              [
-                1144.0,
-                44.0
-              ],
-              [
-                1171.0,
-                947.0
-              ],
-              [
-                81.0,
-                945.0
-              ]
-            ],
-            "confidence": 0.5577396215546055,
-            "score": 0.5577396215546055,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.4,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.856308,
-              "border_energy": 0.23540425300598145,
-              "side_consistency": 0.5215954690147535,
-              "side_energy": [
-                0.1227857917547226,
-                0.27309727668762207,
-                0.3042528033256531,
-                0.24148114025592804
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 575.225
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2332,35 +836,36 @@
         "elapsed_seconds": 4.130888545000005,
         "search_fraction": 0.2222222222222222
       },
-      "profile": null,
-      "run_id": "run-20260810-185426",
-      "rank": 3,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "66d5d1766542",
-      "parameters": {
-        "minimum_contour_area_fraction": 0.08,
-        "epsilon_max_fraction": 0.03,
-        "minimum_rectangularity": 0.45,
-        "gaussian_sigma": 0.8,
-        "band_fraction": 0.004,
-        "minimum_border_energy": 0.05,
-        "minimum_side_consistency": 0.3,
-        "energy_weight": 0.5
-      },
       "summary": {
         "page_count": 5,
         "success_count": 3,
         "failure_count": 2,
         "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
         "minimum_iou": 0.0,
         "stddev_iou": 0.45379921,
         "mean_edge_error_px": 21.917,
-        "elapsed_ms_total": 2574.426,
-        "wall_ms": 2575.047
+        "elapsed_ms_total": 2483.177,
+        "wall_ms": 2483.177
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 3,
+      "run_id": "run-20260810-185426"
+    },
+    {
+      "parameter_set_id": "66d5d1766542",
+      "profile": null,
+      "parameters": {
+        "band_fraction": 0.004,
+        "energy_weight": 0.5,
+        "epsilon_max_fraction": 0.03,
+        "gaussian_sigma": 0.8,
+        "minimum_border_energy": 0.05,
+        "minimum_contour_area_fraction": 0.08,
+        "minimum_rectangularity": 0.45,
+        "minimum_side_consistency": 0.3
       },
       "pages": [
         {
@@ -2369,56 +874,12 @@
           "layout_type": "two_page_spread",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 782.077,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.5,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.79374,
-              "border_energy": 0.15914328210055828,
-              "side_consistency": 0.26206059806202525,
-              "side_energy": [
-                0.13412173092365265,
-                0.0417051836848259,
-                0.1807355135679245,
-                0.2800107002258301
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 782.042
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2428,6 +889,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52.0,
+            "top": 7.0,
+            "right": 83.0,
+            "bottom": 28.0
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83.0,
+          "elapsed_ms": 276.977,
           "approved_bbox": [
             67,
             8,
@@ -2440,86 +911,6 @@
             1316,
             949
           ],
-          "iou": 0.86176634,
-          "edge_errors": {
-            "left": 52,
-            "top": 7,
-            "right": 83,
-            "bottom": 28,
-            "mean": 42.5,
-            "maximum": 83
-          },
-          "edge_error_mean_px": 42.5,
-          "edge_error_maximum_px": 83,
-          "elapsed_ms": 276.977,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              119,
-              15,
-              1316,
-              949
-            ],
-            "corners": [
-              [
-                119.0,
-                36.0
-              ],
-              [
-                1315.0,
-                15.0
-              ],
-              [
-                739.0,
-                948.0
-              ],
-              [
-                137.0,
-                771.0
-              ]
-            ],
-            "confidence": 0.5691584199182502,
-            "score": 0.5691584199182502,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.5,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.749072,
-              "border_energy": 0.32633276283741,
-              "side_consistency": 0.8388365366091348,
-              "side_energy": [
-                0.30438509583473206,
-                0.2899622917175293,
-                0.27373984456062317,
-                0.43724381923675537
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 276.94
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2530,56 +921,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 184.053,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.5,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.662027,
-              "border_energy": 0.08308111340738833,
-              "side_consistency": 0.1490825122891274,
-              "side_energy": [
-                0.1391364336013794,
-                0.012385941110551357,
-                0.01816144771873951,
-                0.16264063119888306
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 184.016
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2589,6 +936,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11.0,
+            "top": 5.0,
+            "right": 18.0,
+            "bottom": 3.0
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18.0,
+          "elapsed_ms": 676.263,
           "approved_bbox": [
             84,
             51,
@@ -2601,86 +958,6 @@
             1119,
             938
           ],
-          "iou": 0.96377596,
-          "edge_errors": {
-            "left": 11,
-            "top": 5,
-            "right": 18,
-            "bottom": 3,
-            "mean": 9.25,
-            "maximum": 18
-          },
-          "edge_error_mean_px": 9.25,
-          "edge_error_maximum_px": 18,
-          "elapsed_ms": 676.263,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              73,
-              56,
-              1119,
-              938
-            ],
-            "corners": [
-              [
-                77.0,
-                56.0
-              ],
-              [
-                1115.0,
-                56.0
-              ],
-              [
-                1118.0,
-                937.0
-              ],
-              [
-                73.0,
-                932.0
-              ]
-            ],
-            "confidence": 0.6488649974473512,
-            "score": 0.6488649974473512,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.5,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.879702,
-              "border_energy": 0.443991094827652,
-              "side_consistency": 0.6392669985217349,
-              "side_energy": [
-                0.5115740299224854,
-                0.28382885456085205,
-                0.4305248260498047,
-                0.5500366687774658
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 676.229
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2690,6 +967,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7.0,
+            "top": 11.0,
+            "right": 18.0,
+            "bottom": 20.0
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20.0,
+          "elapsed_ms": 655.056,
           "approved_bbox": [
             88,
             33,
@@ -2702,86 +989,6 @@
             1172,
             948
           ],
-          "iou": 0.94540817,
-          "edge_errors": {
-            "left": 7,
-            "top": 11,
-            "right": 18,
-            "bottom": 20,
-            "mean": 14.0,
-            "maximum": 20
-          },
-          "edge_error_mean_px": 14.0,
-          "edge_error_maximum_px": 20,
-          "elapsed_ms": 655.056,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              81,
-              44,
-              1172,
-              948
-            ],
-            "corners": [
-              [
-                84.0,
-                44.0
-              ],
-              [
-                1144.0,
-                44.0
-              ],
-              [
-                1171.0,
-                947.0
-              ],
-              [
-                81.0,
-                945.0
-              ]
-            ],
-            "confidence": 0.5284364062320035,
-            "score": 0.5284364062320035,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.3,
-                "contour_weight": 0.45,
-                "energy_weight": 0.5,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.856308,
-              "border_energy": 0.23540425300598145,
-              "side_consistency": 0.5215954690147535,
-              "side_energy": [
-                0.1227857917547226,
-                0.27309727668762207,
-                0.3042528033256531,
-                0.24148114025592804
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 655.017
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2793,35 +1000,36 @@
         "elapsed_seconds": 5.996469260999987,
         "search_fraction": 0.3333333333333333
       },
-      "profile": null,
-      "run_id": "run-20260810-185426",
-      "rank": 4,
-      "error": {},
-      "warnings": [],
-      "metadata": {}
-    },
-    {
-      "parameter_set_id": "d051925a3a6c",
-      "parameters": {
-        "minimum_contour_area_fraction": 0.08,
-        "epsilon_max_fraction": 0.03,
-        "minimum_rectangularity": 0.45,
-        "gaussian_sigma": 0.8,
-        "band_fraction": 0.004,
-        "minimum_border_energy": 0.05,
-        "minimum_side_consistency": 0.45,
-        "energy_weight": 0.3
-      },
       "summary": {
         "page_count": 5,
         "success_count": 3,
         "failure_count": 2,
         "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
         "minimum_iou": 0.0,
         "stddev_iou": 0.45379921,
         "mean_edge_error_px": 21.917,
-        "elapsed_ms_total": 2025.133,
-        "wall_ms": 2025.732
+        "elapsed_ms_total": 2574.426,
+        "wall_ms": 2574.426
+      },
+      "error": {},
+      "warnings": [],
+      "metadata": {},
+      "rank": 4,
+      "run_id": "run-20260810-185426"
+    },
+    {
+      "parameter_set_id": "d051925a3a6c",
+      "profile": null,
+      "parameters": {
+        "band_fraction": 0.004,
+        "energy_weight": 0.3,
+        "epsilon_max_fraction": 0.03,
+        "gaussian_sigma": 0.8,
+        "minimum_border_energy": 0.05,
+        "minimum_contour_area_fraction": 0.08,
+        "minimum_rectangularity": 0.45,
+        "minimum_side_consistency": 0.45
       },
       "pages": [
         {
@@ -2830,56 +1038,12 @@
           "layout_type": "two_page_spread",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 491.002,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.79374,
-              "border_energy": 0.15914328210055828,
-              "side_consistency": 0.26206059806202525,
-              "side_energy": [
-                0.13412173092365265,
-                0.0417051836848259,
-                0.1807355135679245,
-                0.2800107002258301
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 490.972
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2889,6 +1053,16 @@
           "label": "damaged_partial_register_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52.0,
+            "top": 7.0,
+            "right": 83.0,
+            "bottom": 28.0
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83.0,
+          "elapsed_ms": 145.497,
           "approved_bbox": [
             67,
             8,
@@ -2901,86 +1075,6 @@
             1316,
             949
           ],
-          "iou": 0.86176634,
-          "edge_errors": {
-            "left": 52,
-            "top": 7,
-            "right": 83,
-            "bottom": 28,
-            "mean": 42.5,
-            "maximum": 83
-          },
-          "edge_error_mean_px": 42.5,
-          "edge_error_maximum_px": 83,
-          "elapsed_ms": 145.497,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              119,
-              15,
-              1316,
-              949
-            ],
-            "corners": [
-              [
-                119.0,
-                36.0
-              ],
-              [
-                1315.0,
-                15.0
-              ],
-              [
-                739.0,
-                948.0
-              ],
-              [
-                137.0,
-                771.0
-              ]
-            ],
-            "confidence": 0.6231196770473257,
-            "score": 0.6231196770473257,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.749072,
-              "border_energy": 0.32633276283741,
-              "side_consistency": 0.8388365366091348,
-              "side_energy": [
-                0.30438509583473206,
-                0.2899622917175293,
-                0.27373984456062317,
-                0.43724381923675537
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 145.462
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -2991,56 +1085,12 @@
           "layout_type": "single_page",
           "status": "no_candidate",
           "iou": 0.0,
+          "edge_errors": {},
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
           "elapsed_ms": 167.484,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": null,
-            "corners": null,
-            "confidence": 0.0,
-            "score": 0.0,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.662027,
-              "border_energy": 0.08308111340738833,
-              "side_consistency": 0.1490825122891274,
-              "side_energy": [
-                0.1391364336013794,
-                0.012385941110551357,
-                0.01816144771873951,
-                0.16264063119888306
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "reason": "inconsistent_border_energy",
-              "elapsed_ms": 167.449
-            },
-            "status": "no_candidate",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
+          "approved_bbox": null,
+          "predicted_bbox": null,
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3050,6 +1100,16 @@
           "label": "clean_two_page_spread",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11.0,
+            "top": 5.0,
+            "right": 18.0,
+            "bottom": 3.0
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18.0,
+          "elapsed_ms": 515.821,
           "approved_bbox": [
             84,
             51,
@@ -3062,86 +1122,6 @@
             1119,
             938
           ],
-          "iou": 0.96377596,
-          "edge_errors": {
-            "left": 11,
-            "top": 5,
-            "right": 18,
-            "bottom": 3,
-            "mean": 9.25,
-            "maximum": 18
-          },
-          "edge_error_mean_px": 9.25,
-          "edge_error_maximum_px": 18,
-          "elapsed_ms": 515.821,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              73,
-              56,
-              1119,
-              938
-            ],
-            "corners": [
-              [
-                77.0,
-                56.0
-              ],
-              [
-                1115.0,
-                56.0
-              ],
-              [
-                1118.0,
-                937.0
-              ],
-              [
-                73.0,
-                932.0
-              ]
-            ],
-            "confidence": 0.6943925313628397,
-            "score": 0.6943925313628397,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.879702,
-              "border_energy": 0.443991094827652,
-              "side_consistency": 0.6392669985217349,
-              "side_energy": [
-                0.5115740299224854,
-                0.28382885456085205,
-                0.4305248260498047,
-                0.5500366687774658
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 515.785
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3151,6 +1131,16 @@
           "label": "clean_two_page_spread_2",
           "layout_type": "two_page_spread",
           "status": "ok",
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7.0,
+            "top": 11.0,
+            "right": 18.0,
+            "bottom": 20.0
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20.0,
+          "elapsed_ms": 705.329,
           "approved_bbox": [
             88,
             33,
@@ -3163,86 +1153,6 @@
             1172,
             948
           ],
-          "iou": 0.94540817,
-          "edge_errors": {
-            "left": 7,
-            "top": 11,
-            "right": 18,
-            "bottom": 20,
-            "mean": 14.0,
-            "maximum": 20
-          },
-          "edge_error_mean_px": 14.0,
-          "edge_error_maximum_px": 20,
-          "elapsed_ms": 705.329,
-          "candidate": {
-            "method": "border_energy",
-            "bbox": [
-              81,
-              44,
-              1172,
-              948
-            ],
-            "corners": [
-              [
-                84.0,
-                44.0
-              ],
-              [
-                1144.0,
-                44.0
-              ],
-              [
-                1171.0,
-                947.0
-              ],
-              [
-                81.0,
-                945.0
-              ]
-            ],
-            "confidence": 0.5935546625044528,
-            "score": 0.5935546625044528,
-            "diagnostics": {
-              "parameters": {
-                "minimum_contour_area_fraction": 0.08,
-                "epsilon_max_fraction": 0.03,
-                "minimum_rectangularity": 0.45,
-                "gaussian_sigma": 0.8,
-                "band_fraction": 0.004,
-                "minimum_border_energy": 0.05,
-                "minimum_side_consistency": 0.45,
-                "contour_weight": 0.45,
-                "energy_weight": 0.3,
-                "consistency_weight": 0.15
-              },
-              "contour_score": 0.856308,
-              "border_energy": 0.23540425300598145,
-              "side_consistency": 0.5215954690147535,
-              "side_energy": [
-                0.1227857917547226,
-                0.27309727668762207,
-                0.3042528033256531,
-                0.24148114025592804
-              ],
-              "band_width_pixels": 4,
-              "evidence": "sobel_energy_along_candidate_borders",
-              "elapsed_ms": 705.293
-            },
-            "status": "ok",
-            "detector_name": "Border Energy Validator",
-            "origin": "HTH",
-            "foundation": [
-              "Contour geometry",
-              "Sobel border energy",
-              "OpenCV"
-            ],
-            "authors": [
-              "OpenAI ChatGPT"
-            ],
-            "version": "0.6.1",
-            "repository": "https://github.com/dlstupka/hth"
-          },
           "error": {},
           "warnings": [],
           "metadata": {}
@@ -3254,12 +1164,23 @@
         "elapsed_seconds": 6.154085301000009,
         "search_fraction": 0.4444444444444444
       },
-      "profile": null,
-      "run_id": "run-20260810-185426",
-      "rank": 5,
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 2025.133,
+        "wall_ms": 2025.133
+      },
       "error": {},
       "warnings": [],
-      "metadata": {}
+      "metadata": {},
+      "rank": 5,
+      "run_id": "run-20260810-185426"
     }
   ],
   "winner_page_report": {
@@ -3395,5 +1316,14 @@
     "winner_history": [],
     "last_improvement_elapsed_seconds": 9.772848914999997,
     "time_since_last_improvement_seconds": 1.603950617999999
+  },
+  "historical_rerank": {
+    "schema_version": "1.0",
+    "reranked_from_raw": true,
+    "reranked_at_utc": "2026-08-11T17:25:55.898291Z",
+    "reason": "canonical-result-metrics",
+    "original_run_id": "run-20260810-185426",
+    "previous_winner_parameter_set_id": "e38a975d1436",
+    "winner_changed": false
   }
 }
