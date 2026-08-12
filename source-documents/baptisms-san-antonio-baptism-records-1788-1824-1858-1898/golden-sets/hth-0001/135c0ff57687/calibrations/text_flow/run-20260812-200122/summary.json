@@ -1,0 +1,2377 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260812-200122",
+  "detector": "text_flow",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 384,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 728
+  },
+  "detector_pipeline": {
+    "pipeline_count": 1,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "single-detector",
+    "queue_position": "1",
+    "ranked_quality": "unknown",
+    "execution_shape_source": "preferred-exact-runner",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 729,
+    "planned_parameter_sets": 729,
+    "actual_parameter_sets": 729,
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 728,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 3645,
+    "actual_page_evaluations": 3645
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 729,
+  "page_evaluation_count": 3645,
+  "successful_page_evaluation_count": 513,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "161f74b6ff2e1336968d708b7a0a594d0b5db4ce3601736e99befd0289f7cc09",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "a2bbfc162f9e",
+    "parameters": {
+      "minimum_component_area_fraction": 1e-05,
+      "maximum_component_area_fraction": 0.005,
+      "line_join_fraction": 0.03,
+      "minimum_line_count": 2,
+      "minimum_text_coverage_fraction": 0.04,
+      "bbox_padding_fraction": 0.04
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 1,
+      "failure_count": 4,
+      "mean_iou": 0.16340617,
+      "mean_iou_success": 0.81703084,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.32681234,
+      "mean_edge_error_px": 50.25,
+      "elapsed_ms_total": 381.052,
+      "wall_ms": 381.6
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 25.899,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 1e-05,
+              "maximum_component_area_fraction": 0.005,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 2,
+              "minimum_text_coverage_fraction": 0.04,
+              "bbox_padding_fraction": 0.04
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 25.878
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 51.932,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 1e-05,
+              "maximum_component_area_fraction": 0.005,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 2,
+              "minimum_text_coverage_fraction": 0.04,
+              "bbox_padding_fraction": 0.04
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 51.911
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          180,
+          19,
+          1088,
+          983
+        ],
+        "iou": 0.81703084,
+        "edge_errors": {
+          "left": 165,
+          "top": 9,
+          "right": 14,
+          "bottom": 13,
+          "mean": 50.25,
+          "maximum": 165
+        },
+        "edge_error_mean_px": 50.25,
+        "edge_error_maximum_px": 165,
+        "elapsed_ms": 238.141,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": [
+            180,
+            19,
+            1088,
+            983
+          ],
+          "corners": [
+            [
+              558.425537109375,
+              964.1041259765625
+            ],
+            [
+              219.32101440429688,
+              672.2066650390625
+            ],
+            [
+              747.4168701171875,
+              58.7044677734375
+            ],
+            [
+              1086.5213623046875,
+              350.6019287109375
+            ]
+          ],
+          "confidence": 0.6,
+          "score": 0.6,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 1e-05,
+              "maximum_component_area_fraction": 0.005,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 2,
+              "minimum_text_coverage_fraction": 0.04,
+              "bbox_padding_fraction": 0.04
+            },
+            "line_count": 4,
+            "text_coverage": 0.10358883034666369,
+            "component_count": 134,
+            "evidence": "text_line_envelope",
+            "elapsed_ms": 238.12
+          },
+          "status": "ok",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 22.909,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 1e-05,
+              "maximum_component_area_fraction": 0.005,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 2,
+              "minimum_text_coverage_fraction": 0.04,
+              "bbox_padding_fraction": 0.04
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 22.888
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 42.171,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 1e-05,
+              "maximum_component_area_fraction": 0.005,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 2,
+              "minimum_text_coverage_fraction": 0.04,
+              "bbox_padding_fraction": 0.04
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 42.151
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 149,
+      "parameter_set_number": 149,
+      "elapsed_seconds": 2.442096857004799,
+      "search_fraction": 0.20467032967032966
+    },
+    "profile": null,
+    "run_id": "run-20260812-200122",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "cd4fbe8ec7d8",
+    "parameters": {
+      "minimum_component_area_fraction": 2e-05,
+      "maximum_component_area_fraction": 0.01,
+      "line_join_fraction": 0.03,
+      "minimum_line_count": 3,
+      "minimum_text_coverage_fraction": 0.08,
+      "bbox_padding_fraction": 0.02
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 1,
+      "failure_count": 4,
+      "mean_iou": 0.15956047,
+      "mean_iou_success": 0.79780235,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.31912094,
+      "mean_edge_error_px": 55.25,
+      "elapsed_ms_total": 18.323,
+      "wall_ms": 18.633
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.537,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 4.495
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.424,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 3.407
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          199,
+          38,
+          1088,
+          983
+        ],
+        "iou": 0.79780235,
+        "edge_errors": {
+          "left": 184,
+          "top": 10,
+          "right": 14,
+          "bottom": 13,
+          "mean": 55.25,
+          "maximum": 184
+        },
+        "edge_error_mean_px": 55.25,
+        "edge_error_maximum_px": 184,
+        "elapsed_ms": 3.104,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": [
+            199,
+            38,
+            1088,
+            983
+          ],
+          "corners": [
+            [
+              558.425537109375,
+              964.1041259765625
+            ],
+            [
+              219.32101440429688,
+              672.2066650390625
+            ],
+            [
+              747.4168701171875,
+              58.7044677734375
+            ],
+            [
+              1086.5213623046875,
+              350.6019287109375
+            ]
+          ],
+          "confidence": 0.6,
+          "score": 0.6,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "line_count": 4,
+            "text_coverage": 0.10358883034666369,
+            "component_count": 134,
+            "evidence": "text_line_envelope",
+            "elapsed_ms": 3.094
+          },
+          "status": "ok",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.529,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 3.519
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.729,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0,
+            "elapsed_ms": 3.72
+          },
+          "status": "no_candidate",
+          "detector_name": "Text Flow Envelope",
+          "origin": "HTH",
+          "foundation": [
+            "Connected components",
+            "Text-line geometry",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260812-200122",
+    "rank": 59,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "a2bbfc162f9e",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.03,
+        "minimum_line_count": 2,
+        "minimum_text_coverage_fraction": 0.04,
+        "bbox_padding_fraction": 0.04
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.16340617,
+        "mean_iou_success": 0.81703084,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32681234,
+        "mean_edge_error_px": 50.25,
+        "elapsed_ms_total": 381.052,
+        "wall_ms": 381.6
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 25.899,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 25.878
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 51.932,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 51.911
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            180,
+            19,
+            1088,
+            983
+          ],
+          "iou": 0.81703084,
+          "edge_errors": {
+            "left": 165,
+            "top": 9,
+            "right": 14,
+            "bottom": 13,
+            "mean": 50.25,
+            "maximum": 165
+          },
+          "edge_error_mean_px": 50.25,
+          "edge_error_maximum_px": 165,
+          "elapsed_ms": 238.141,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              180,
+              19,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                558.425537109375,
+                964.1041259765625
+              ],
+              [
+                219.32101440429688,
+                672.2066650390625
+              ],
+              [
+                747.4168701171875,
+                58.7044677734375
+              ],
+              [
+                1086.5213623046875,
+                350.6019287109375
+              ]
+            ],
+            "confidence": 0.6,
+            "score": 0.6,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "line_count": 4,
+              "text_coverage": 0.10358883034666369,
+              "component_count": 134,
+              "evidence": "text_line_envelope",
+              "elapsed_ms": 238.12
+            },
+            "status": "ok",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 22.909,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 22.888
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 42.171,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 42.151
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 149,
+        "parameter_set_number": 149,
+        "elapsed_seconds": 2.442096857004799,
+        "search_fraction": 0.20467032967032966
+      },
+      "profile": null,
+      "run_id": "run-20260812-200122",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "919f35cbc4af",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.03,
+        "minimum_line_count": 2,
+        "minimum_text_coverage_fraction": 0.08,
+        "bbox_padding_fraction": 0.04
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.16340617,
+        "mean_iou_success": 0.81703084,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32681234,
+        "mean_edge_error_px": 50.25,
+        "elapsed_ms_total": 341.419,
+        "wall_ms": 341.747
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 30.767,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 30.741
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 59.938,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 59.902
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            180,
+            19,
+            1088,
+            983
+          ],
+          "iou": 0.81703084,
+          "edge_errors": {
+            "left": 165,
+            "top": 9,
+            "right": 14,
+            "bottom": 13,
+            "mean": 50.25,
+            "maximum": 165
+          },
+          "edge_error_mean_px": 50.25,
+          "edge_error_maximum_px": 165,
+          "elapsed_ms": 198.318,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              180,
+              19,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                558.425537109375,
+                964.1041259765625
+              ],
+              [
+                219.32101440429688,
+                672.2066650390625
+              ],
+              [
+                747.4168701171875,
+                58.7044677734375
+              ],
+              [
+                1086.5213623046875,
+                350.6019287109375
+              ]
+            ],
+            "confidence": 0.6,
+            "score": 0.6,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "line_count": 4,
+              "text_coverage": 0.10358883034666369,
+              "component_count": 134,
+              "evidence": "text_line_envelope",
+              "elapsed_ms": 198.287
+            },
+            "status": "ok",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 27.451,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 27.417
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 24.945,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 24.913
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 130,
+        "parameter_set_number": 130,
+        "elapsed_seconds": 2.4419054890749976,
+        "search_fraction": 0.17857142857142858
+      },
+      "profile": null,
+      "run_id": "run-20260812-200122",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "e127c712c18d",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.03,
+        "minimum_line_count": 3,
+        "minimum_text_coverage_fraction": 0.04,
+        "bbox_padding_fraction": 0.04
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.16340617,
+        "mean_iou_success": 0.81703084,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32681234,
+        "mean_edge_error_px": 50.25,
+        "elapsed_ms_total": 512.527,
+        "wall_ms": 512.85
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 50.587,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 50.554
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 55.031,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 54.996
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            180,
+            19,
+            1088,
+            983
+          ],
+          "iou": 0.81703084,
+          "edge_errors": {
+            "left": 165,
+            "top": 9,
+            "right": 14,
+            "bottom": 13,
+            "mean": 50.25,
+            "maximum": 165
+          },
+          "edge_error_mean_px": 50.25,
+          "edge_error_maximum_px": 165,
+          "elapsed_ms": 327.197,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              180,
+              19,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                558.425537109375,
+                964.1041259765625
+              ],
+              [
+                219.32101440429688,
+                672.2066650390625
+              ],
+              [
+                747.4168701171875,
+                58.7044677734375
+              ],
+              [
+                1086.5213623046875,
+                350.6019287109375
+              ]
+            ],
+            "confidence": 0.6,
+            "score": 0.6,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "line_count": 4,
+              "text_coverage": 0.10358883034666369,
+              "component_count": 134,
+              "evidence": "text_line_envelope",
+              "elapsed_ms": 327.174
+            },
+            "status": "ok",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 38.9,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 38.862
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 40.812,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 40.783
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 108,
+        "parameter_set_number": 108,
+        "elapsed_seconds": 2.4416789580136538,
+        "search_fraction": 0.14835164835164835
+      },
+      "profile": null,
+      "run_id": "run-20260812-200122",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "a83d7e03757b",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.03,
+        "minimum_line_count": 3,
+        "minimum_text_coverage_fraction": 0.08,
+        "bbox_padding_fraction": 0.04
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.16340617,
+        "mean_iou_success": 0.81703084,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32681234,
+        "mean_edge_error_px": 50.25,
+        "elapsed_ms_total": 509.241,
+        "wall_ms": 509.514
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 42.252,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 42.204
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 42.875,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 42.842
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            180,
+            19,
+            1088,
+            983
+          ],
+          "iou": 0.81703084,
+          "edge_errors": {
+            "left": 165,
+            "top": 9,
+            "right": 14,
+            "bottom": 13,
+            "mean": 50.25,
+            "maximum": 165
+          },
+          "edge_error_mean_px": 50.25,
+          "edge_error_maximum_px": 165,
+          "elapsed_ms": 357.965,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              180,
+              19,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                558.425537109375,
+                964.1041259765625
+              ],
+              [
+                219.32101440429688,
+                672.2066650390625
+              ],
+              [
+                747.4168701171875,
+                58.7044677734375
+              ],
+              [
+                1086.5213623046875,
+                350.6019287109375
+              ]
+            ],
+            "confidence": 0.6,
+            "score": 0.6,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "line_count": 4,
+              "text_coverage": 0.10358883034666369,
+              "component_count": 134,
+              "evidence": "text_line_envelope",
+              "elapsed_ms": 357.941
+            },
+            "status": "ok",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 30.674,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 30.651
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 35.475,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 35.452
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 10,
+        "parameter_set_number": 10,
+        "elapsed_seconds": 2.4405630490509793,
+        "search_fraction": 0.013736263736263736
+      },
+      "profile": null,
+      "run_id": "run-20260812-200122",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "5caa04c23d75",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.01,
+        "line_join_fraction": 0.03,
+        "minimum_line_count": 2,
+        "minimum_text_coverage_fraction": 0.04,
+        "bbox_padding_fraction": 0.04
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.16340617,
+        "mean_iou_success": 0.81703084,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32681234,
+        "mean_edge_error_px": 50.25,
+        "elapsed_ms_total": 602.421,
+        "wall_ms": 602.709
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 34.777,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 34.751
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 54.591,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 54.561
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            180,
+            19,
+            1088,
+            983
+          ],
+          "iou": 0.81703084,
+          "edge_errors": {
+            "left": 165,
+            "top": 9,
+            "right": 14,
+            "bottom": 13,
+            "mean": 50.25,
+            "maximum": 165
+          },
+          "edge_error_mean_px": 50.25,
+          "edge_error_maximum_px": 165,
+          "elapsed_ms": 439.068,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              180,
+              19,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                558.425537109375,
+                964.1041259765625
+              ],
+              [
+                219.32101440429688,
+                672.2066650390625
+              ],
+              [
+                747.4168701171875,
+                58.7044677734375
+              ],
+              [
+                1086.5213623046875,
+                350.6019287109375
+              ]
+            ],
+            "confidence": 0.6,
+            "score": 0.6,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "line_count": 4,
+              "text_coverage": 0.10358883034666369,
+              "component_count": 134,
+              "evidence": "text_line_envelope",
+              "elapsed_ms": 439.04
+            },
+            "status": "ok",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 37.364,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 37.338
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 36.621,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0,
+              "elapsed_ms": 36.596
+            },
+            "status": "no_candidate",
+            "detector_name": "Text Flow Envelope",
+            "origin": "HTH",
+            "foundation": [
+              "Connected components",
+              "Text-line geometry",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 323,
+        "parameter_set_number": 323,
+        "elapsed_seconds": 2.4438551930943504,
+        "search_fraction": 0.44368131868131866
+      },
+      "profile": null,
+      "run_id": "run-20260812-200122",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 4,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.79780235,
+        "winner_iou": 0.81703084,
+        "delta_iou": 0.01922849,
+        "status": "Improved",
+        "parameter_set": "a2bbfc162f9e",
+        "parameter_set_id": "a2bbfc162f9e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "a2bbfc162f9e",
+        "parameter_set_id": "a2bbfc162f9e",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "a2bbfc162f9e",
+        "parameter_set_id": "a2bbfc162f9e",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "a2bbfc162f9e",
+        "parameter_set_id": "a2bbfc162f9e",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "a2bbfc162f9e",
+        "parameter_set_id": "a2bbfc162f9e",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-al319",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "atlhwe-lsf319",
+    "cpu_model": "AMD EPYC 9655 96-Core Processor",
+    "physical_core_count": 192,
+    "logical_cpu_count": 192,
+    "available_cpu_count": 192,
+    "smt_enabled": false,
+    "memory_bytes": 1622717128704,
+    "memory_gib": 1511.27,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "eea9070116fb1cce18838ae0b338cc7b2b4ba8ab",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31635508472",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "self-hosted",
+      "linux",
+      "x64",
+      "e9k"
+    ]
+  },
+  "source_commit": "05558f4a01ba3142555502b7ac352df66660a75f",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 384,
+    "peak_rss_bytes": 7027171328,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 728,
+    "completed_parameter_sets": 728,
+    "average_eval_rate": 267.1216876150256,
+    "failures": 3132,
+    "best_mean_iou": 0.16340617,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.0,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 1,
+    "total_metric_improvements": 2,
+    "parameter_sets_with_improvements": 2,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 2.1397699411027133,
+    "winner_last_changed_elapsed_seconds": 2.1397699411027133,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "b9cf797aedf9",
+        "parameter_short_name": "b9cf797a",
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 2.1397699411027133,
+        "search_fraction": 0.006868131868131868
+      }
+    ],
+    "last_improvement_elapsed_seconds": 2.1397699411027133,
+    "time_since_last_improvement_seconds": 0.6046701970044523
+  }
+}
