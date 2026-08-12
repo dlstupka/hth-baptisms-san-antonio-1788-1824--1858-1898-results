@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.4",
+  "detector": "polar_boundary_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/polar_boundary_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "no-history",
+    "queue_position": "2",
+    "ranked_quality": "unknown",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "polar_boundary_vote",
+    "description": "Calibration space for the HTH Polar Boundary Vote detector.",
+    "profiles": {
+      "baseline": {
+        "ray_count": 180,
+        "inner_radius_fraction": 0.12,
+        "outer_radius_fraction": 0.7,
+        "gradient_percentile": 82.0,
+        "minimum_support_fraction": 0.35,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "ray_count": {
+        "type": "integer",
+        "values": [
+          90,
+          180,
+          360
+        ]
+      },
+      "inner_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.06,
+          0.12,
+          0.18
+        ]
+      },
+      "outer_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.6,
+          0.7,
+          0.82
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          72.0,
+          82.0,
+          90.0
+        ]
+      },
+      "minimum_support_fraction": {
+        "type": "float",
+        "values": [
+          0.25,
+          0.35,
+          0.5
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures"
+    }
+  }
+}
