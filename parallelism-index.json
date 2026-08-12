@@ -241,14 +241,14 @@
       "wall_clock_seconds": 3.323
     },
     "whitespace_frame": {
-      "active_pipelines": 4,
+      "active_pipelines": 1,
       "allocated_threads": 384,
-      "effective_acceleration": 28.55,
-      "execution_shape": "4p/4s/96t",
-      "observation_id": "optimizer:31632756904:6:run-20260812-192847",
-      "shards": 4,
-      "threads_per_pipeline": 96,
-      "wall_clock_seconds": 3.0
+      "effective_acceleration": null,
+      "execution_shape": "1p/1s/384t",
+      "observation_id": "31633282476:whitespace_frame:run-20260812-193428",
+      "shards": 1,
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 1.327
     }
   },
   "best_by_compatibility": {
@@ -743,6 +743,18 @@
       "shards": 1,
       "threads_per_pipeline": 384,
       "wall_clock_seconds": 27.182
+    },
+    "a9b3af596b65c43574be59fb815f94ec1e85837a3b2edd0b910a36b56b49e04d": {
+      "active_pipelines": 1,
+      "allocated_threads": 384,
+      "detector_id": "whitespace_frame",
+      "effective_acceleration": null,
+      "execution_shape": "1p/1s/384t",
+      "observation_id": "31633282476:whitespace_frame:run-20260812-193428",
+      "parallel_efficiency": null,
+      "shards": 1,
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 1.327
     },
     "b02dda8dbb1915ecd44e61ece80361d7f00e7902e6508d585e4babd7d839b391": {
       "active_pipelines": 19,
@@ -82211,6 +82223,63 @@
       "threads_per_pipeline": 96,
       "wall_clock_seconds": 3.0,
       "workload_key": "7d333b7616d372adf2393bc46a3465b02efe67b1f28b9d94d82625569b7ea60b"
+    },
+    {
+      "active_pipelines": 1,
+      "actual_parameter_sets": 730,
+      "allocated_thread_seconds": 509.568,
+      "allocated_threads": 384,
+      "build": {
+        "event": "workflow_dispatch",
+        "github_run_attempt": "1",
+        "github_run_id": "31633282476",
+        "github_run_number": "333",
+        "mode": "full",
+        "pipeline_commit": "eea9070116fb1cce18838ae0b338cc7b2b4ba8ab",
+        "ref": "refs/heads/main",
+        "repository": "dlstupka/hth",
+        "run_url": "https://github.com/dlstupka/hth/actions/runs/31633282476",
+        "workflow": "HTH detector regression"
+      },
+      "compatibility_key": "a9b3af596b65c43574be59fb815f94ec1e85837a3b2edd0b910a36b56b49e04d",
+      "detector_config_sha256": "f39c62493a192d13de505202bba3651cd8235ffcd166ca06cb8b3082200f7c57",
+      "detector_id": "whitespace_frame",
+      "effective_acceleration": null,
+      "estimated_serial_runtime_seconds": null,
+      "execution_shape": "1p/1s/384t",
+      "golden_set_pages": null,
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "max_dimension": 1800,
+      "mode": "full",
+      "observation_id": "31633282476:whitespace_frame:run-20260812-193428",
+      "observed_at_utc": "2026-08-12T19:34:30.305717+00:00",
+      "page_evaluations": null,
+      "page_evaluations_per_second": null,
+      "parallel_efficiency": null,
+      "parameter_sets_per_second": 550.1130369253956,
+      "possible_parameter_sets": 730,
+      "run_id": "run-20260812-193428",
+      "runner": {
+        "cpu_model": "AMD EPYC 9655 96-Core Processor",
+        "logical_cpu_count": 192,
+        "memory_gib": 1511.27,
+        "physical_core_count": 192,
+        "runner_label": null,
+        "runner_labels": [
+          "self-hosted",
+          "linux",
+          "x64",
+          "e9k"
+        ],
+        "runner_name": "rh8-al319"
+      },
+      "runner_key": "b2d7fe31731525f92c1842d5f263461e432c852d9c87d43ecd0729b4e236fe8a",
+      "schema_version": "1.0",
+      "shards": 1,
+      "strategy": "exhaustive",
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 1.327,
+      "workload_key": "7d333b7616d372adf2393bc46a3465b02efe67b1f28b9d94d82625569b7ea60b"
     }
   ],
   "schema_version": "2.3",
@@ -87719,6 +87788,21 @@
       "observation_count": 1,
       "shards": 64,
       "threads_per_pipeline": 6
+    },
+    {
+      "active_pipelines": 1,
+      "allocated_threads": 384,
+      "compatibility_key": "a9b3af596b65c43574be59fb815f94ec1e85837a3b2edd0b910a36b56b49e04d",
+      "detector_id": "whitespace_frame",
+      "execution_shape": "1p/1s/384t",
+      "fastest_observation_id": "31633282476:whitespace_frame:run-20260812-193428",
+      "fastest_wall_clock_seconds": 1.327,
+      "latest_observation_id": "31633282476:whitespace_frame:run-20260812-193428",
+      "latest_wall_clock_seconds": 1.327,
+      "median_wall_clock_seconds": 1.327,
+      "observation_count": 1,
+      "shards": 1,
+      "threads_per_pipeline": 384
     },
     {
       "active_pipelines": 4,
@@ -414798,5 +414882,5 @@
       "wall_clock_seconds": 2.0
     }
   ],
-  "updated_at_utc": "2026-08-12T19:33:55.572532Z"
+  "updated_at_utc": "2026-08-12T19:34:36.416998Z"
 }
