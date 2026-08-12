@@ -1,0 +1,1899 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260812-232910",
+  "detector": "learned_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "no-history",
+    "queue_position": "1",
+    "ranked_quality": "unknown",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 243,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 0,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "8b66f5588f3cb34d44cde4cd56a1618ac073b52c1c316faa3502e5315682e4ab",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "04e0ef2b5787",
+    "parameters": {
+      "mask_threshold": 0.5,
+      "minimum_mask_area_fraction": 0.15,
+      "close_kernel_fraction": 0.006,
+      "polygon_epsilon_fraction": 0.012,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 23.155,
+      "wall_ms": 23.401
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.889,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "error",
+            "exception_message": "OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 29, in _network\n    _THREAD_LOCAL.net=cv2.dnn.readNet(str(weights),str(proto),\"Caffe\")\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncv2.error: OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n\n",
+            "elapsed_ms": 5.232
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.646,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 4.297
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.762,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 3.458
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.447,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 4.131
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.411,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 4.137
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260812-232910",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "04e0ef2b5787",
+    "parameters": {
+      "mask_threshold": 0.5,
+      "minimum_mask_area_fraction": 0.15,
+      "close_kernel_fraction": 0.006,
+      "polygon_epsilon_fraction": 0.012,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 23.155,
+      "wall_ms": 23.401
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.889,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "error",
+            "exception_message": "OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 29, in _network\n    _THREAD_LOCAL.net=cv2.dnn.readNet(str(weights),str(proto),\"Caffe\")\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncv2.error: OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n\n",
+            "elapsed_ms": 5.232
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.646,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 4.297
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.762,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 3.458
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.447,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 4.131
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.411,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "AttributeError",
+            "exception_message": "'_thread._local' object has no attribute 'net'",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+            "elapsed_ms": 4.137
+          },
+          "status": "error",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260812-232910",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "04e0ef2b5787",
+      "parameters": {
+        "mask_threshold": 0.5,
+        "minimum_mask_area_fraction": 0.15,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 23.155,
+        "wall_ms": 23.401
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.889,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "error",
+              "exception_message": "OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 29, in _network\n    _THREAD_LOCAL.net=cv2.dnn.readNet(str(weights),str(proto),\"Caffe\")\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncv2.error: OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n\n",
+              "elapsed_ms": 5.232
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.646,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.297
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 3.762,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 3.458
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.447,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.131
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.411,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.137
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260812-232910",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "baa6f6136836",
+      "parameters": {
+        "mask_threshold": 0.35,
+        "minimum_mask_area_fraction": 0.08,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.005,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 28.824,
+        "wall_ms": 28.995
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.504,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "error",
+              "exception_message": "OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 29, in _network\n    _THREAD_LOCAL.net=cv2.dnn.readNet(str(weights),str(proto),\"Caffe\")\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncv2.error: OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n\n",
+              "elapsed_ms": 7.205
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.911,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 7.656
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 3.972,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 3.732
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.826,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.604
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.611,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.359
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 1,
+        "parameter_set_number": 1,
+        "elapsed_seconds": 0.06108524100000068,
+        "search_fraction": 0.1111111111111111
+      },
+      "profile": null,
+      "run_id": "run-20260812-232910",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "5ceb42dbc8d0",
+      "parameters": {
+        "mask_threshold": 0.35,
+        "minimum_mask_area_fraction": 0.08,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.005,
+        "bbox_padding_fraction": 0.006
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 45.429,
+        "wall_ms": 48.606
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 12.178,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "error",
+              "exception_message": "OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 29, in _network\n    _THREAD_LOCAL.net=cv2.dnn.readNet(str(weights),str(proto),\"Caffe\")\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ncv2.error: OpenCV(5.0.0) /io/opencv/modules/dnn/src/dnn_read.cpp:23: error: (-2:Unspecified error) Caffe importer has been removed. Please use ONNX-converted models or use an older OpenCV version. in function 'readNet'\n\n",
+              "elapsed_ms": 8.827
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.688,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 7.465
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.006,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 6.788
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.812,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 7.604
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 10.745,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 10.541
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.07786927899999796,
+        "search_fraction": 0.2222222222222222
+      },
+      "profile": null,
+      "run_id": "run-20260812-232910",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "e95ea97809c4",
+      "parameters": {
+        "mask_threshold": 0.35,
+        "minimum_mask_area_fraction": 0.08,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.005,
+        "bbox_padding_fraction": 0.012
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 23.331,
+        "wall_ms": 23.454
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.831,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.619
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.838,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.595
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.447,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.222
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.721,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.5
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.494,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 4.272
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.08606684199999393,
+        "search_fraction": 0.3333333333333333
+      },
+      "profile": null,
+      "run_id": "run-20260812-232910",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "d0885eb7b09e",
+      "parameters": {
+        "mask_threshold": 0.35,
+        "minimum_mask_area_fraction": 0.08,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 49.844,
+        "wall_ms": 49.975
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 10.331,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 10.107
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 10.816,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 10.619
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.22,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 6.93
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 10.904,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 10.642
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 10.573,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "AttributeError",
+              "exception_message": "'_thread._local' object has no attribute 'net'",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 444, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 46, in detect\n    del mask; v=_parameters(parameters); prob,binary,contour,prov=_proposal(image_bgr,v); h,w=binary.shape; area=float(h*w)\n                                                                  ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 40, in _proposal\n    prob,prov=_probability(image); binary=np.where(prob>=v[\"mask_threshold\"],255,0).astype(np.uint8); h,w=binary.shape\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 34, in _probability\n    net=_network(proto,weights); net.setInput(blob); raw=np.asarray(net.forward(\"out\"),dtype=np.float32)\n        ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_learned_page_mask.py\", line 30, in _network\n    return _THREAD_LOCAL.net\n           ^^^^^^^^^^^^^^^^^\nAttributeError: '_thread._local' object has no attribute 'net'\n",
+              "elapsed_ms": 10.345
+            },
+            "status": "error",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.1278978729999949,
+        "search_fraction": 0.6666666666666666
+      },
+      "profile": null,
+      "run_id": "run-20260812-232910",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 5,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "04e0ef2b5787",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "04e0ef2b5787",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "04e0ef2b5787",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "04e0ef2b5787",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "04e0ef2b5787",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000496",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 9V45 96-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "4e20593895f42fa3fd427593683ffa296880d5c0",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31651017310",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "91667bb10b4cb4743b1c4f9a4f5b92d9a7504731",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 174620672,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 9,
+    "completed_parameter_sets": 9,
+    "average_eval_rate": 58.035007387082906,
+    "failures": 50,
+    "best_mean_iou": 0.0,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.0,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 0,
+    "parameter_sets_with_improvements": 0,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": null,
+    "time_since_last_improvement_seconds": null
+  }
+}

@@ -1,0 +1,2298 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260812-233016",
+  "detector": "joint_rectangle_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "12.313",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "9",
+    "ranked_quality": "0.19797977",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 2187,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 0,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "0b94f9621f29c3424b456eb3bd11b8c451718079c9466f80fec244bccfd39620",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "697c22dd549f",
+    "parameters": {
+      "canny_low": 50.0,
+      "canny_high": 150.0,
+      "hough_threshold": 80,
+      "axis_tolerance_degrees": 12.0,
+      "minimum_side_support": 0.18,
+      "minimum_area_fraction": 0.16,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 762.011,
+      "wall_ms": 762.457
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 234.063,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.3703175865885053,
+            "side_support": [
+              74.87038432554634,
+              0.0,
+              13.054231717337716,
+              0.054231717337715694
+            ],
+            "elapsed_ms": 234.012
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 170.139,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.43091804399442,
+            "side_support": [
+              85.41686460807601,
+              0.0,
+              13.6072,
+              0.0064
+            ],
+            "elapsed_ms": 170.083
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 18.234,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 1.9388987792472023,
+            "side_support": [
+              0.0,
+              0.502803738317757,
+              0.9803921568627451,
+              0.9711042311661506
+            ],
+            "elapsed_ms": 18.199
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 113.558,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.3476369139578144,
+            "side_support": [
+              60.92588235294118,
+              0.0,
+              1.1087328767123288,
+              0.04794520547945205
+            ],
+            "elapsed_ms": 113.517
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 226.017,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.2667367683140554,
+            "side_support": [
+              67.94985731757032,
+              0.0,
+              5.262931034482759,
+              0.0
+            ],
+            "elapsed_ms": 225.971
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260812-233016",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "697c22dd549f",
+    "parameters": {
+      "canny_low": 50.0,
+      "canny_high": 150.0,
+      "hough_threshold": 80,
+      "axis_tolerance_degrees": 12.0,
+      "minimum_side_support": 0.18,
+      "minimum_area_fraction": 0.16,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 762.011,
+      "wall_ms": 762.457
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 234.063,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.3703175865885053,
+            "side_support": [
+              74.87038432554634,
+              0.0,
+              13.054231717337716,
+              0.054231717337715694
+            ],
+            "elapsed_ms": 234.012
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 170.139,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.43091804399442,
+            "side_support": [
+              85.41686460807601,
+              0.0,
+              13.6072,
+              0.0064
+            ],
+            "elapsed_ms": 170.083
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 18.234,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 1.9388987792472023,
+            "side_support": [
+              0.0,
+              0.502803738317757,
+              0.9803921568627451,
+              0.9711042311661506
+            ],
+            "elapsed_ms": 18.199
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 113.558,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.3476369139578144,
+            "side_support": [
+              60.92588235294118,
+              0.0,
+              1.1087328767123288,
+              0.04794520547945205
+            ],
+            "elapsed_ms": 113.517
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 226.017,
+        "candidate": {
+          "method": "joint_rectangle_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "canny_low": 50.0,
+              "canny_high": 150.0,
+              "hough_threshold": 80,
+              "axis_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.16,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_joint_rectangle",
+            "area_fraction": 2.2667367683140554,
+            "side_support": [
+              67.94985731757032,
+              0.0,
+              5.262931034482759,
+              0.0
+            ],
+            "elapsed_ms": 225.971
+          },
+          "status": "no_candidate",
+          "detector_name": "Joint Rectangle Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Hough lines",
+            "Joint rectangle scoring",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260812-233016",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "697c22dd549f",
+      "parameters": {
+        "canny_low": 50.0,
+        "canny_high": 150.0,
+        "hough_threshold": 80,
+        "axis_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.18,
+        "minimum_area_fraction": 0.16,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 762.011,
+        "wall_ms": 762.457
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 234.063,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 50.0,
+                "canny_high": 150.0,
+                "hough_threshold": 80,
+                "axis_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.3703175865885053,
+              "side_support": [
+                74.87038432554634,
+                0.0,
+                13.054231717337716,
+                0.054231717337715694
+              ],
+              "elapsed_ms": 234.012
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 170.139,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 50.0,
+                "canny_high": 150.0,
+                "hough_threshold": 80,
+                "axis_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.43091804399442,
+              "side_support": [
+                85.41686460807601,
+                0.0,
+                13.6072,
+                0.0064
+              ],
+              "elapsed_ms": 170.083
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 18.234,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 50.0,
+                "canny_high": 150.0,
+                "hough_threshold": 80,
+                "axis_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 1.9388987792472023,
+              "side_support": [
+                0.0,
+                0.502803738317757,
+                0.9803921568627451,
+                0.9711042311661506
+              ],
+              "elapsed_ms": 18.199
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 113.558,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 50.0,
+                "canny_high": 150.0,
+                "hough_threshold": 80,
+                "axis_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.3476369139578144,
+              "side_support": [
+                60.92588235294118,
+                0.0,
+                1.1087328767123288,
+                0.04794520547945205
+              ],
+              "elapsed_ms": 113.517
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 226.017,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 50.0,
+                "canny_high": 150.0,
+                "hough_threshold": 80,
+                "axis_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.2667367683140554,
+              "side_support": [
+                67.94985731757032,
+                0.0,
+                5.262931034482759,
+                0.0
+              ],
+              "elapsed_ms": 225.971
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260812-233016",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "b699602175ff",
+      "parameters": {
+        "canny_low": 30.0,
+        "canny_high": 100.0,
+        "hough_threshold": 50,
+        "axis_tolerance_degrees": 6.0,
+        "minimum_side_support": 0.1,
+        "minimum_area_fraction": 0.1,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 1426.909,
+        "wall_ms": 1430.32
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 243.638,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.055145407631589,
+              "side_support": [
+                102.1063829787234,
+                0.0,
+                16.137218045112782,
+                0.19736842105263158
+              ],
+              "elapsed_ms": 243.591
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 339.785,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 1.9534326179543795,
+              "side_support": [
+                130.4027496967246,
+                0.0,
+                14.673489278752436,
+                0.03216374269005848
+              ],
+              "elapsed_ms": 339.726
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 156.707,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0583261025671713,
+              "side_support": [
+                18.01439182915506,
+                0.0,
+                1.0890410958904109,
+                0.02054794520547945
+              ],
+              "elapsed_ms": 156.656
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 294.036,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0921445912286787,
+              "side_support": [
+                72.95747970622342,
+                0.0,
+                1.6676413255360625,
+                0.0
+              ],
+              "elapsed_ms": 293.992
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 392.743,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.05762674059204,
+              "side_support": [
+                84.64001657000829,
+                0.0,
+                5.917757009345794,
+                0.08317757009345794
+              ],
+              "elapsed_ms": 392.7
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 1,
+        "parameter_set_number": 1,
+        "elapsed_seconds": 2.2051957570000127,
+        "search_fraction": 0.1111111111111111
+      },
+      "profile": null,
+      "run_id": "run-20260812-233016",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "832829bf5599",
+      "parameters": {
+        "canny_low": 30.0,
+        "canny_high": 100.0,
+        "hough_threshold": 50,
+        "axis_tolerance_degrees": 6.0,
+        "minimum_side_support": 0.1,
+        "minimum_area_fraction": 0.1,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 1494.509,
+        "wall_ms": 1494.874
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 427.384,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.055145407631589,
+              "side_support": [
+                102.1063829787234,
+                0.0,
+                16.137218045112782,
+                0.19736842105263158
+              ],
+              "elapsed_ms": 427.343
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 364.143,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 1.9534326179543795,
+              "side_support": [
+                130.4027496967246,
+                0.0,
+                14.673489278752436,
+                0.03216374269005848
+              ],
+              "elapsed_ms": 364.094
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 112.632,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0583261025671713,
+              "side_support": [
+                18.01439182915506,
+                0.0,
+                1.0890410958904109,
+                0.02054794520547945
+              ],
+              "elapsed_ms": 112.586
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 236.818,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0921445912286787,
+              "side_support": [
+                72.95747970622342,
+                0.0,
+                1.6676413255360625,
+                0.0
+              ],
+              "elapsed_ms": 236.774
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 353.532,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.05762674059204,
+              "side_support": [
+                84.64001657000829,
+                0.0,
+                5.917757009345794,
+                0.08317757009345794
+              ],
+              "elapsed_ms": 353.484
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 2.2711676690000218,
+        "search_fraction": 0.2222222222222222
+      },
+      "profile": null,
+      "run_id": "run-20260812-233016",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "ae65e4295acc",
+      "parameters": {
+        "canny_low": 30.0,
+        "canny_high": 100.0,
+        "hough_threshold": 50,
+        "axis_tolerance_degrees": 6.0,
+        "minimum_side_support": 0.1,
+        "minimum_area_fraction": 0.1,
+        "bbox_padding_fraction": 0.016
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 1642.863,
+        "wall_ms": 1643.281
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 276.88,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.055145407631589,
+              "side_support": [
+                102.1063829787234,
+                0.0,
+                16.137218045112782,
+                0.19736842105263158
+              ],
+              "elapsed_ms": 276.844
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 399.29,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 1.9534326179543795,
+              "side_support": [
+                130.4027496967246,
+                0.0,
+                14.673489278752436,
+                0.03216374269005848
+              ],
+              "elapsed_ms": 399.24
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 143.453,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0583261025671713,
+              "side_support": [
+                18.01439182915506,
+                0.0,
+                1.0890410958904109,
+                0.02054794520547945
+              ],
+              "elapsed_ms": 143.41
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 376.34,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0921445912286787,
+              "side_support": [
+                72.95747970622342,
+                0.0,
+                1.6676413255360625,
+                0.0
+              ],
+              "elapsed_ms": 376.294
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 446.9,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.05762674059204,
+              "side_support": [
+                84.64001657000829,
+                0.0,
+                5.917757009345794,
+                0.08317757009345794
+              ],
+              "elapsed_ms": 437.912
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 3.8405736349999984,
+        "search_fraction": 0.3333333333333333
+      },
+      "profile": null,
+      "run_id": "run-20260812-233016",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bd9ecd87d248",
+      "parameters": {
+        "canny_low": 30.0,
+        "canny_high": 100.0,
+        "hough_threshold": 50,
+        "axis_tolerance_degrees": 6.0,
+        "minimum_side_support": 0.1,
+        "minimum_area_fraction": 0.16,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 1673.662,
+        "wall_ms": 1674.051
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 361.096,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.055145407631589,
+              "side_support": [
+                102.1063829787234,
+                0.0,
+                16.137218045112782,
+                0.19736842105263158
+              ],
+              "elapsed_ms": 361.04
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 507.943,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 1.9534326179543795,
+              "side_support": [
+                130.4027496967246,
+                0.0,
+                14.673489278752436,
+                0.03216374269005848
+              ],
+              "elapsed_ms": 507.892
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 145.005,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0583261025671713,
+              "side_support": [
+                18.01439182915506,
+                0.0,
+                1.0890410958904109,
+                0.02054794520547945
+              ],
+              "elapsed_ms": 144.962
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 292.348,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.0921445912286787,
+              "side_support": [
+                72.95747970622342,
+                0.0,
+                1.6676413255360625,
+                0.0
+              ],
+              "elapsed_ms": 292.304
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 367.27,
+          "candidate": {
+            "method": "joint_rectangle_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "canny_low": 30.0,
+                "canny_high": 100.0,
+                "hough_threshold": 50,
+                "axis_tolerance_degrees": 6.0,
+                "minimum_side_support": 0.1,
+                "minimum_area_fraction": 0.16,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_joint_rectangle",
+              "area_fraction": 2.05762674059204,
+              "side_support": [
+                84.64001657000829,
+                0.0,
+                5.917757009345794,
+                0.08317757009345794
+              ],
+              "elapsed_ms": 367.219
+            },
+            "status": "no_candidate",
+            "detector_name": "Joint Rectangle Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Hough lines",
+              "Joint rectangle scoring",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 3.945167502000004,
+        "search_fraction": 0.4444444444444444
+      },
+      "profile": null,
+      "run_id": "run-20260812-233016",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 5,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "697c22dd549f",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "697c22dd549f",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "697c22dd549f",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "697c22dd549f",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "697c22dd549f",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000496",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 9V45 96-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "5.0.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "4e20593895f42fa3fd427593683ffa296880d5c0",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31651017310",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "91667bb10b4cb4743b1c4f9a4f5b92d9a7504731",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 185253888,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 9,
+    "completed_parameter_sets": 9,
+    "average_eval_rate": 1.3215110715975134,
+    "failures": 50,
+    "best_mean_iou": 0.0,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.0,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 0,
+    "parameter_sets_with_improvements": 0,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": null,
+    "time_since_last_improvement_seconds": null
+  }
+}
