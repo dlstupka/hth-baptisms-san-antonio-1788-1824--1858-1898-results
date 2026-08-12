@@ -93,12 +93,12 @@
     "convex_hull": {
       "active_pipelines": 8,
       "allocated_threads": 384,
-      "effective_acceleration": 93.1032,
+      "effective_acceleration": 254.1866,
       "execution_shape": "8p/8s/48t",
-      "observation_id": "optimizer:31550274130:3:run-20260812-002856",
+      "observation_id": "31550568912:convex_hull:run-20260812-003316",
       "shards": 8,
       "threads_per_pipeline": 48,
-      "wall_clock_seconds": 5.0
+      "wall_clock_seconds": 1.834
     },
     "cross_edge_contour": {
       "active_pipelines": 7,
@@ -275,6 +275,18 @@
       "shards": 64,
       "threads_per_pipeline": 6,
       "wall_clock_seconds": 30.0
+    },
+    "207eaa2893ee503cb6619ec4bc0fec00d9041327421cbeb2caf32b8f4fb96765": {
+      "active_pipelines": 8,
+      "allocated_threads": 384,
+      "detector_id": "convex_hull",
+      "effective_acceleration": 254.1866,
+      "execution_shape": "8p/8s/48t",
+      "observation_id": "31550568912:convex_hull:run-20260812-003316",
+      "parallel_efficiency": 0.6619442708333333,
+      "shards": 8,
+      "threads_per_pipeline": 48,
+      "wall_clock_seconds": 1.834
     },
     "2189d16f686fb592de25aa502f57e05e530b99fdfc11beb44c9981b36b99dc28": {
       "active_pipelines": 9,
@@ -40264,6 +40276,63 @@
       "workload_key": "74cfda909863bc88b817e5811895bc055bcd81ce4fdb673ffa2b358575e7d102"
     },
     {
+      "active_pipelines": 8,
+      "actual_parameter_sets": 2187,
+      "allocated_thread_seconds": 704.2560000000001,
+      "allocated_threads": 384,
+      "build": {
+        "event": "workflow_dispatch",
+        "github_run_attempt": "1",
+        "github_run_id": "31550568912",
+        "github_run_number": "311",
+        "mode": "full",
+        "pipeline_commit": "41c4637ee0cc971080f3ad2734a05778ee6d75dc",
+        "ref": "refs/heads/main",
+        "repository": "dlstupka/hth",
+        "run_url": "https://github.com/dlstupka/hth/actions/runs/31550568912",
+        "workflow": "HTH detector regression"
+      },
+      "compatibility_key": "207eaa2893ee503cb6619ec4bc0fec00d9041327421cbeb2caf32b8f4fb96765",
+      "detector_config_sha256": "35e2e87f251b84dbe337733d4641d39cd35b99aaab37d60db8a02b98c6f2ba01",
+      "detector_id": "convex_hull",
+      "effective_acceleration": 254.1866,
+      "estimated_serial_runtime_seconds": 466.254,
+      "execution_shape": "8p/8s/48t",
+      "golden_set_pages": null,
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "max_dimension": 1800,
+      "mode": "full",
+      "observation_id": "31550568912:convex_hull:run-20260812-003316",
+      "observed_at_utc": "2026-08-12T00:33:16.326989+00:00",
+      "page_evaluations": null,
+      "page_evaluations_per_second": null,
+      "parallel_efficiency": 0.6619442708333333,
+      "parameter_sets_per_second": 1192.4754634678297,
+      "possible_parameter_sets": 2187,
+      "run_id": "run-20260812-003316",
+      "runner": {
+        "cpu_model": "AMD EPYC 9655 96-Core Processor",
+        "logical_cpu_count": 192,
+        "memory_gib": 1511.27,
+        "physical_core_count": 192,
+        "runner_label": null,
+        "runner_labels": [
+          "self-hosted",
+          "linux",
+          "x64",
+          "e9k"
+        ],
+        "runner_name": "rh8-al318"
+      },
+      "runner_key": "5fd6df5292a8d23c77b71c89fdedb0cdb65f051db6db101d0661408cf62c0d3c",
+      "schema_version": "1.0",
+      "shards": 8,
+      "strategy": "exhaustive",
+      "threads_per_pipeline": 48,
+      "wall_clock_seconds": 1.834,
+      "workload_key": "74cfda909863bc88b817e5811895bc055bcd81ce4fdb673ffa2b358575e7d102"
+    },
+    {
       "active_pipelines": 1,
       "actual_parameter_sets": 10,
       "allocated_threads": 2,
@@ -73323,6 +73392,21 @@
       "observation_count": 1,
       "shards": 64,
       "threads_per_pipeline": 6
+    },
+    {
+      "active_pipelines": 8,
+      "allocated_threads": 384,
+      "compatibility_key": "207eaa2893ee503cb6619ec4bc0fec00d9041327421cbeb2caf32b8f4fb96765",
+      "detector_id": "convex_hull",
+      "execution_shape": "8p/8s/48t",
+      "fastest_observation_id": "31550568912:convex_hull:run-20260812-003316",
+      "fastest_wall_clock_seconds": 1.834,
+      "latest_observation_id": "31550568912:convex_hull:run-20260812-003316",
+      "latest_wall_clock_seconds": 1.834,
+      "median_wall_clock_seconds": 1.834,
+      "observation_count": 1,
+      "shards": 8,
+      "threads_per_pipeline": 48
     },
     {
       "active_pipelines": 7,
@@ -375161,5 +375245,5 @@
       "wall_clock_seconds": 6.0
     }
   ],
-  "updated_at_utc": "2026-08-12T00:30:20.029550Z"
+  "updated_at_utc": "2026-08-12T00:33:23.169538Z"
 }
