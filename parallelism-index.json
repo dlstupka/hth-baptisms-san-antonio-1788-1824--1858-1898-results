@@ -111,14 +111,14 @@
       "wall_clock_seconds": 70.0
     },
     "distance_transform": {
-      "active_pipelines": 64,
+      "active_pipelines": 1,
       "allocated_threads": 384,
-      "effective_acceleration": 110.32526666666666,
-      "execution_shape": "64p/64s/6t",
-      "observation_id": "optimizer:31550320569:2:run-20260812-003012",
-      "shards": 64,
-      "threads_per_pipeline": 6,
-      "wall_clock_seconds": 30.0
+      "effective_acceleration": null,
+      "execution_shape": "1p/1s/384t",
+      "observation_id": "31550605544:distance_transform:run-20260812-003350",
+      "shards": 1,
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 27.323
     },
     "edge_contour": {
       "active_pipelines": 20,
@@ -431,6 +431,18 @@
       "shards": 4,
       "threads_per_pipeline": 4,
       "wall_clock_seconds": 441.57
+    },
+    "6eef55b2037caa8f4b2094790b881ca5cbedbb564f0f8d9efdd342103dbae12b": {
+      "active_pipelines": 1,
+      "allocated_threads": 384,
+      "detector_id": "distance_transform",
+      "effective_acceleration": null,
+      "execution_shape": "1p/1s/384t",
+      "observation_id": "31550605544:distance_transform:run-20260812-003350",
+      "parallel_efficiency": null,
+      "shards": 1,
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 27.323
     },
     "72c9a94018053699f7c063989a1d4b8b1f8704f2ff47be7226b6101b6c9c11c0": {
       "active_pipelines": 2,
@@ -44158,6 +44170,63 @@
     },
     {
       "active_pipelines": 1,
+      "actual_parameter_sets": 2187,
+      "allocated_thread_seconds": 10492.032,
+      "allocated_threads": 384,
+      "build": {
+        "event": "workflow_dispatch",
+        "github_run_attempt": "1",
+        "github_run_id": "31550605544",
+        "github_run_number": "312",
+        "mode": "full",
+        "pipeline_commit": "41c4637ee0cc971080f3ad2734a05778ee6d75dc",
+        "ref": "refs/heads/main",
+        "repository": "dlstupka/hth",
+        "run_url": "https://github.com/dlstupka/hth/actions/runs/31550605544",
+        "workflow": "HTH detector regression"
+      },
+      "compatibility_key": "6eef55b2037caa8f4b2094790b881ca5cbedbb564f0f8d9efdd342103dbae12b",
+      "detector_config_sha256": "0779968e9f1dc6a1dd3a8f1ec446259d8e22a0c90ce5f0057d0d9490d6963ba9",
+      "detector_id": "distance_transform",
+      "effective_acceleration": null,
+      "estimated_serial_runtime_seconds": null,
+      "execution_shape": "1p/1s/384t",
+      "golden_set_pages": null,
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "max_dimension": 1800,
+      "mode": "full",
+      "observation_id": "31550605544:distance_transform:run-20260812-003350",
+      "observed_at_utc": "2026-08-12T00:34:18.192333+00:00",
+      "page_evaluations": null,
+      "page_evaluations_per_second": null,
+      "parallel_efficiency": null,
+      "parameter_sets_per_second": 80.04245507447938,
+      "possible_parameter_sets": 2187,
+      "run_id": "run-20260812-003350",
+      "runner": {
+        "cpu_model": "AMD EPYC 9655 96-Core Processor",
+        "logical_cpu_count": 192,
+        "memory_gib": 1511.27,
+        "physical_core_count": 192,
+        "runner_label": null,
+        "runner_labels": [
+          "self-hosted",
+          "linux",
+          "x64",
+          "e9k"
+        ],
+        "runner_name": "rh8-al319"
+      },
+      "runner_key": "b2d7fe31731525f92c1842d5f263461e432c852d9c87d43ecd0729b4e236fe8a",
+      "schema_version": "1.0",
+      "shards": 1,
+      "strategy": "exhaustive",
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 27.323,
+      "workload_key": "c157bbb0dc75a141ed6e637d92a7a98d50c1af8b0df09eb5714c68801593d872"
+    },
+    {
+      "active_pipelines": 1,
       "actual_parameter_sets": 10,
       "allocated_threads": 2,
       "build": {
@@ -73554,6 +73623,21 @@
       "latest_observation_id": "optimizer:31550320569:1:run-20260812-002913",
       "latest_wall_clock_seconds": 30.0,
       "median_wall_clock_seconds": 30.0,
+      "observation_count": 1,
+      "shards": 1,
+      "threads_per_pipeline": 384
+    },
+    {
+      "active_pipelines": 1,
+      "allocated_threads": 384,
+      "compatibility_key": "6eef55b2037caa8f4b2094790b881ca5cbedbb564f0f8d9efdd342103dbae12b",
+      "detector_id": "distance_transform",
+      "execution_shape": "1p/1s/384t",
+      "fastest_observation_id": "31550605544:distance_transform:run-20260812-003350",
+      "fastest_wall_clock_seconds": 27.323,
+      "latest_observation_id": "31550605544:distance_transform:run-20260812-003350",
+      "latest_wall_clock_seconds": 27.323,
+      "median_wall_clock_seconds": 27.323,
       "observation_count": 1,
       "shards": 1,
       "threads_per_pipeline": 384
@@ -375245,5 +375329,5 @@
       "wall_clock_seconds": 6.0
     }
   ],
-  "updated_at_utc": "2026-08-12T00:33:23.169538Z"
+  "updated_at_utc": "2026-08-12T00:34:24.419847Z"
 }
