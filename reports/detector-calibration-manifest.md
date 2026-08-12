@@ -13,6 +13,7 @@
   - [Best Known Detector Calibrations](#best-known-detector-calibrations)
   - [Calibration Report Legend](#calibration-report-legend)
   - [Per-Detector Calibration Reports](#per-detector-calibration-reports)
+    - [Polar Boundary Vote (`polar_boundary_vote`)](#polar-boundary-vote-polarboundaryvote)
     - [Adaptive Radial Edge Search (`adaptive_radial_edge`)](#adaptive-radial-edge-search-adaptiveradialedge)
     - [Radial Edge Search (`radial_edge`)](#radial-edge-search-radialedge)
     - [Gradient Boundary Voting (`gradient_vote`)](#gradient-boundary-voting-gradientvote)
@@ -25,12 +26,14 @@
     - [Contour + Components (`contour_components`)](#contour-components-contourcomponents)
     - [Contour Envelope (`contour`)](#contour-envelope-contour)
     - [Distance Transform (`distance_transform`)](#distance-transform-distancetransform)
+    - [Star Convex (`star_convex`)](#star-convex-starconvex)
     - [GrabCut + Contour (`grabcut_contour`)](#grabcut-contour-grabcutcontour)
     - [Connected Components (`components`)](#connected-components-components)
     - [RANSAC Border Fit (`ransac`)](#ransac-border-fit-ransac)
     - [Line Segment Detector (`lsd`)](#line-segment-detector-lsd)
     - [Convex Hull (`convex_hull`)](#convex-hull-convexhull)
     - [Border Energy Validator (`border_energy`)](#border-energy-validator-borderenergy)
+    - [Distance Transform Rect (`distance_transform_rect`)](#distance-transform-rect-distancetransformrect)
     - [Hough Line Borders (`hough`)](#hough-line-borders-hough)
     - [Consensus Quadrilateral (`consensus_quad`)](#consensus-quadrilateral-consensusquad)
 - [Detector Regression Reports](#detector-regression-reports)
@@ -50,14 +53,17 @@
     - [Convex Hull (`convex_hull`)](#convex-hull-convexhull-2)
     - [Cross-Edge Contour (`cross_edge_contour`)](#cross-edge-contour-crossedgecontour-2)
     - [Distance Transform (`distance_transform`)](#distance-transform-distancetransform-2)
+    - [Distance Transform Rect (`distance_transform_rect`)](#distance-transform-rect-distancetransformrect-2)
     - [Edge-Supported Contour (`edge_contour`)](#edge-supported-contour-edgecontour-2)
     - [GrabCut Segmentation (`grabcut`)](#grabcut-segmentation-grabcut-2)
     - [GrabCut + Contour (`grabcut_contour`)](#grabcut-contour-grabcutcontour-2)
     - [Gradient Boundary Voting (`gradient_vote`)](#gradient-boundary-voting-gradientvote-2)
     - [Hough Line Borders (`hough`)](#hough-line-borders-hough-2)
     - [Line Segment Detector (`lsd`)](#line-segment-detector-lsd-2)
+    - [Polar Boundary Vote (`polar_boundary_vote`)](#polar-boundary-vote-polarboundaryvote-2)
     - [Radial Edge Search (`radial_edge`)](#radial-edge-search-radialedge-2)
     - [RANSAC Border Fit (`ransac`)](#ransac-border-fit-ransac-2)
+    - [Star Convex (`star_convex`)](#star-convex-starconvex-2)
 - [Engineering Continuous Improvement](#engineering-continuous-improvement)
   - [Calibration Intelligence Persistence](#calibration-intelligence-persistence)
   - [Runtime Intelligence Persistence](#runtime-intelligence-persistence)
@@ -66,7 +72,7 @@
 </details>
 
 
-**Detectors evaluated:** 20
+**Detectors evaluated:** 23
 
 <a id="source-document"></a>
 ## Source document
@@ -79,19 +85,19 @@
 <a id="detector-recommendation-for-this-golden-set"></a>
 ## Detector Recommendation for this Golden Set
 
-- **Recommended detector:** Adaptive Radial Edge Search
-- **Detector short name:** Adaptive Radial
-- **Detector ID:** `adaptive_radial_edge`
-- **Best observed Avg IoU:** `0.9599`
-- **Worst Golden Set page (Min IoU):** `0.9440`
-- **Page-to-page StdDev:** `0.0114`
-- **Role:** `Generator`
+- **Recommended detector:** Polar Boundary Vote
+- **Detector short name:** polar_boundary_vote
+- **Detector ID:** `polar_boundary_vote`
+- **Best observed Avg IoU:** `0.9678`
+- **Worst Golden Set page (Min IoU):** `0.9425`
+- **Page-to-page StdDev:** `0.0182`
+- **Role:** `Unknown`
 - **Engineering Recommendation:** Retain this detector as the current Golden Set recommendation. Additional tuning should be driven by unresolved page failures, late winner changes, or a plausible untested parameter region rather than by search expansion alone.
 
 **Recommendation basis:**
 
 - The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
-- 10 of 16 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- 2 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
 - The configured grid is fully characterized for this Golden Set; continue detector work only if the resulting quality or failure pattern remains operationally inadequate.
 
 This recommendation is specific to the evaluated Golden Set and parameter grid and should be revisited when the Golden Set, parameter grid, or source document changes.
@@ -103,26 +109,29 @@ This recommendation is specific to the evaluated Golden Set and parameter grid a
 
 | Rank | Detector | Detector ID | Role | Golden Set ID | Status | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Parameter Sets | Eval Rate | Doc Time | Run Elapsed |
 |---:|---|---|---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | Adaptive Radial Edge Search | `adaptive_radial_edge` | Generator | `HTH-0001` | complete | `5010d5b46516` | `5010d5b46516` | 0.9599 | 0.9440 | 0.0114 | 0.9599 | 0 | 6562 | 0.0853 pg/s | 3h 1m 27s | 45m 27s |
-| 2 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | complete | `5f802d0c469d` | `5f802d0c469d` | 0.9547 | 0.9432 | 0.0104 | 0.9547 | 0 | 6562 | 10.64 pg/s | 1m 27s | 3m 52s |
-| 3 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | complete | `736327fcfb98` | `736327fcfb98` | 0.9250 | 0.7525 | 0.0869 | 0.9250 | 0 | 6562 | 18.38 pg/s | 50.5s | 6.4s |
-| 4 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | complete | `f33aa4421393` | `f33aa4421393` | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | 13122 | 0.1448 pg/s | 1h 46m 54s | 6h 23m 40s |
-| 5 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | complete | `49095b866d0d` | `49095b866d0d` | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | 1062882 | 12.52 pg/s | 1m 14s | 10h 40m 34s |
-| 6 | Cross-Edge Contour | `cross_edge_contour` | Hybrid (Contour Quad + Cross-Edge Validation) | `HTH-0001` | complete | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 23.42 pg/s | 39.7s | 3m 28s |
-| 7 | Contour + Projection | `contour_projection` | Hybrid (Contour Quad + Projection) | `HTH-0001` | complete | `0cd13eb1a471` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 10.92 pg/s | 1m 25s | 7m 22s |
-| 8 | Edge-Supported Contour | `edge_contour` | Hybrid (Contour Quad + LSD) | `HTH-0001` | complete | `4e5bc37a649a` | `4e5bc37a649a` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 13123 | 4.823 pg/s | 3m 13s | 1m 8s |
-| 9 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | complete | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 0.1764 pg/s | 1h 27m 47s | 3h 9m 30s |
-| 10 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | complete | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | 19684 | 83.60 pg/s | 11.1s | 3m 48s |
-| 11 | Contour Envelope | `contour` | Generator | `HTH-0001` | complete | `7aed2fc501c5` | `7aed2fc501c5` | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | 1458 | 145.59 pg/s | 6.4s | 4.6s |
-| 12 | Distance Transform | `distance_transform` | Unknown | `HTH-0001` | complete | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | 2187 | 2.026 pg/s | 7m 39s | 28.6s |
-| 13 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | complete | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 10 | 0.0707 pg/s | 3h 38m 55s | 3m 59s |
-| 14 | Connected Components | `components` | Generator | `HTH-0001` | complete | `f1929c8e2655` | `f1929c8e2655` | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | 19683 | 237.69 pg/s | 3.9s | 40.8s |
-| 15 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | complete | `9647b030702e` | `9647b030702e` | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | 1458 | 4.771 pg/s | 3m 15s | 1m 31s |
-| 16 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | complete | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | 2187 | 13.20 pg/s | 1m 10s | 59s |
-| 17 | Convex Hull | `convex_hull` | Unknown | `HTH-0001` | complete | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | 2187 | 28.47 pg/s | 32.6s | 2s |
-| 18 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | complete | `74e2112aac01` | `74e2112aac01` | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | 6562 | 9.159 pg/s | 1m 41s | 3m 59s |
-| 19 | Hough Line Borders | `hough` | Generator | `HTH-0001` | complete | `c2c117479e3f` | `c2c117479e3f` | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | 2188 | 3.685 pg/s | 4m 12s | 3m 4s |
-| 20 | Consensus Quadrilateral | `consensus_quad` | Hybrid (Contour Quad + Edge Contour) | `HTH-0001` | complete | `f387da7ebb7e` | `f387da7ebb7e` | 0.5528 | 0.0000 | 0.4526 | 0.9213 | 2 | 243 | 3.487 pg/s | 4m 26s | 21.3s |
+| 1 | Polar Boundary Vote | `polar_boundary_vote` | Unknown | `HTH-0001` | complete | `cd967f93437d` | `cd967f93437d` | 0.9678 | 0.9425 | 0.0182 | 0.9678 | 0 | 729 | 1.278 pg/s | 12m 7s | 8.9s |
+| 2 | Adaptive Radial Edge Search | `adaptive_radial_edge` | Generator | `HTH-0001` | complete | `5010d5b46516` | `5010d5b46516` | 0.9599 | 0.9440 | 0.0114 | 0.9599 | 0 | 6562 | 0.0853 pg/s | 3h 1m 27s | 45m 27s |
+| 3 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | complete | `5f802d0c469d` | `5f802d0c469d` | 0.9547 | 0.9432 | 0.0104 | 0.9547 | 0 | 6562 | 10.64 pg/s | 1m 27s | 3m 52s |
+| 4 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | complete | `736327fcfb98` | `736327fcfb98` | 0.9250 | 0.7525 | 0.0869 | 0.9250 | 0 | 6562 | 18.38 pg/s | 50.5s | 6.4s |
+| 5 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | complete | `f33aa4421393` | `f33aa4421393` | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | 13122 | 0.1448 pg/s | 1h 46m 54s | 6h 23m 40s |
+| 6 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | complete | `49095b866d0d` | `49095b866d0d` | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | 1062882 | 12.52 pg/s | 1m 14s | 10h 40m 34s |
+| 7 | Cross-Edge Contour | `cross_edge_contour` | Hybrid (Contour Quad + Cross-Edge Validation) | `HTH-0001` | complete | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 23.42 pg/s | 39.7s | 3m 28s |
+| 8 | Contour + Projection | `contour_projection` | Hybrid (Contour Quad + Projection) | `HTH-0001` | complete | `0cd13eb1a471` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 10.92 pg/s | 1m 25s | 7m 22s |
+| 9 | Edge-Supported Contour | `edge_contour` | Hybrid (Contour Quad + LSD) | `HTH-0001` | complete | `4e5bc37a649a` | `4e5bc37a649a` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 13123 | 4.823 pg/s | 3m 13s | 1m 8s |
+| 10 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | complete | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 0.1764 pg/s | 1h 27m 47s | 3h 9m 30s |
+| 11 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | complete | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | 19684 | 83.60 pg/s | 11.1s | 3m 48s |
+| 12 | Contour Envelope | `contour` | Generator | `HTH-0001` | complete | `7aed2fc501c5` | `7aed2fc501c5` | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | 1458 | 145.59 pg/s | 6.4s | 4.6s |
+| 13 | Distance Transform | `distance_transform` | Unknown | `HTH-0001` | complete | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | 2187 | 2.026 pg/s | 7m 39s | 28.6s |
+| 14 | Star Convex | `star_convex` | Unknown | `HTH-0001` | complete | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | 729 | 1.314 pg/s | 11m 47s | 7.2s |
+| 15 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | complete | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 10 | 0.0775 pg/s | 3h 19m 48s | 4m 4s |
+| 16 | Connected Components | `components` | Generator | `HTH-0001` | complete | `f1929c8e2655` | `f1929c8e2655` | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | 19683 | 237.69 pg/s | 3.9s | 40.8s |
+| 17 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | complete | `9647b030702e` | `9647b030702e` | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | 1458 | 4.771 pg/s | 3m 15s | 1m 31s |
+| 18 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | complete | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | 2187 | 13.20 pg/s | 1m 10s | 59s |
+| 19 | Convex Hull | `convex_hull` | Unknown | `HTH-0001` | complete | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | 2187 | 28.47 pg/s | 32.6s | 2s |
+| 20 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | complete | `74e2112aac01` | `74e2112aac01` | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | 6562 | 9.159 pg/s | 1m 41s | 3m 59s |
+| 21 | Distance Transform Rect | `distance_transform_rect` | Unknown | `HTH-0001` | complete | `0a8482550c35` | `0a8482550c35` | 0.7243 | 0.4499 | 0.2245 | 0.7243 | 0 | 729 | 12.21 pg/s | 1m 16s | 1.2s |
+| 22 | Hough Line Borders | `hough` | Generator | `HTH-0001` | complete | `c2c117479e3f` | `c2c117479e3f` | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | 2188 | 3.685 pg/s | 4m 12s | 3m 4s |
+| 23 | Consensus Quadrilateral | `consensus_quad` | Hybrid (Contour Quad + Edge Contour) | `HTH-0001` | complete | `f387da7ebb7e` | `f387da7ebb7e` | 0.5528 | 0.0000 | 0.4526 | 0.9213 | 2 | 243 | 3.487 pg/s | 4m 26s | 21.3s |
 
 [↑ Back to Navigation](#table-of-contents)
 
@@ -160,26 +169,29 @@ This table prefers compatible full calibrations when available and falls back to
 
 | Rank | Detector | Detector ID | Role | Golden Set ID | Date | Build* | Est. Serial Runtime** | Parameter Set ID | Parameter Sets | Search Type | Successful Parameter Sets | Best Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Δ Baseline Avg IoU | Near-best Coverage (Basin) | Equivalent Best Configurations | Calibration Evidence | Approval Level |
 |---:|---|---|---|---|---|---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
-| **1** | **Adaptive Radial Edge Search** | **`adaptive_radial_edge`** | **Generator** | **`HTH-0001`** | **2026-08-07** | **[#241](https://github.com/dlstupka/hth/actions/runs/31142095265)** | **45m 27s** | **`5010d5b46516`** | **6562** | **exhaustive** | **100.0%** | **0.9599** | **0.9440** | **0.0114** | **0.9599** | **0** | **+0.0270** | **0.1%** | **0.1%** | **Medium** | **Recommended** |
-| 2 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | 2026-08-10 | [#295](https://github.com/dlstupka/hth/actions/runs/31424176107) | 3m 52s | `5f802d0c469d` | 6562 | exhaustive | 100.0% | 0.9547 | 0.9432 | 0.0104 | 0.9547 | 0 | +0.0044 | 1.2% | 1.2% | High | Approved |
-| 3 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | 2026-08-10 | [#300](https://github.com/dlstupka/hth/actions/runs/31436321510) | 6.4s | `736327fcfb98` | 6562 | exhaustive | 79.4% | 0.9250 | 0.7525 | 0.0869 | 0.9250 | 0 | +0.0368 | 8.6% | 1.2% | Medium | Recommended |
-| 4 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | 2026-08-10 | [#290](https://github.com/dlstupka/hth/actions/runs/31424169237) | 6h 23m 40s | `f33aa4421393` | 13122 | exhaustive | 95.7% | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | +0.1006 | 0.0% | 0.0% | Medium | Recommended |
-| 5 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | 2026-08-10 | [#287](https://github.com/dlstupka/hth/actions/runs/31424165043) | 10h 40m 34s | `49095b866d0d` | 1062882 | exhaustive | 33.3% | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | +0.0105 | 15.5% | 5.3% | Medium | Recommended |
-| 6 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | 2026-08-10 | [#285](https://github.com/dlstupka/hth/actions/runs/31424162073) | 3h 9m 30s | `3eec8a03f1de` | 6562 | exhaustive | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
-| 7 | Contour + Projection | `contour_projection` | Hybrid (Contour Quad + Projection) | `HTH-0001` | 2026-08-10 | [#286](https://github.com/dlstupka/hth/actions/runs/31424163624) | 7m 22s | `0cd13eb1a471` | 6562 | exhaustive | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 92.6% | 92.6% | High | Approved |
-| 8 | Cross-Edge Contour | `cross_edge_contour` | Hybrid (Contour Quad + Cross-Edge Validation) | `HTH-0001` | 2026-08-10 | [#288](https://github.com/dlstupka/hth/actions/runs/31424166301) | 3m 28s | `a5450e58ec9e` | 6562 | exhaustive | 29.6% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 29.6% | 29.6% | Medium | Recommended |
-| 9 | Edge-Supported Contour | `edge_contour` | Hybrid (Contour Quad + LSD) | `HTH-0001` | 2026-08-10 | [#301](https://github.com/dlstupka/hth/actions/runs/31437186835) | 1m 8s | `4e5bc37a649a` | 13123 | exhaustive | 12.3% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.3377 | 8.6% | 8.6% | Medium | Recommended |
-| 10 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | 2026-08-10 | [#284](https://github.com/dlstupka/hth/actions/runs/31424160561) | 3m 48s | `14818b491952` | 19684 | exhaustive | 100.0% | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
-| 11 | Contour Envelope | `contour` | Generator | `HTH-0001` | 2026-08-10 | [#283](https://github.com/dlstupka/hth/actions/runs/31424159190) | 4.6s | `7aed2fc501c5` | 1458 | exhaustive | 50.0% | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | +0.1776 | 1.9% | 1.9% | Medium | Recommended |
-| 12 | Distance Transform | `distance_transform` | Unknown | `HTH-0001` | 2026-08-12 | [#322](https://github.com/dlstupka/hth/actions/runs/31606269618) | 28.6s | `e66a7546e1a7` | 2187 | exhaustive | 51.2% | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | +0.0795 | 6.6% | 6.6% | Medium | Recommended |
-| 13 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-12 | [#323](https://github.com/dlstupka/hth/actions/runs/31607757389) | 3m 59s | `3817f226228a` | 10 | smoke | 100.0% | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 14 | Connected Components | `components` | Generator | `HTH-0001` | 2026-08-10 | [#281](https://github.com/dlstupka/hth/actions/runs/31424156590) | 40.8s | `f1929c8e2655` | 19683 | exhaustive | 75.8% | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | +0.0712 | 0.8% | 0.8% | Medium | Recommended |
-| 15 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | 2026-08-10 | [#296](https://github.com/dlstupka/hth/actions/runs/31424177450) | 1m 31s | `9647b030702e` | 1458 | exhaustive | 5.3% | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | +0.0710 | 0.4% | 0.4% | Medium | Recommended |
-| 16 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | 2026-08-10 | [#294](https://github.com/dlstupka/hth/actions/runs/31424174875) | 59s | `7546c5067527` | 2187 | exhaustive | 0.0% | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | +0.1964 | 1.2% | 0.4% | Medium | Recommended |
-| 17 | Convex Hull | `convex_hull` | Unknown | `HTH-0001` | 2026-08-12 | [#321](https://github.com/dlstupka/hth/actions/runs/31606215160) | 2s | `04fd0a6e4bc2` | 2187 | exhaustive | 0.0% | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | +0.0692 | 6.6% | 6.6% | Medium | Recommended |
-| 18 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | 2026-08-10 | [#278](https://github.com/dlstupka/hth/actions/runs/31423513220) | 3m 59s | `74e2112aac01` | 6562 | exhaustive | 0.0% | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | +0.1708 | 19.8% | 19.8% | Medium | Recommended |
-| 19 | Hough Line Borders | `hough` | Generator | `HTH-0001` | 2026-08-10 | [#293](https://github.com/dlstupka/hth/actions/runs/31424173458) | 3m 4s | `c2c117479e3f` | 2188 | exhaustive | 0.0% | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | +0.1266 | 0.0% | 0.0% | Medium | Recommended |
-| 20 | Consensus Quadrilateral | `consensus_quad` | Hybrid (Contour Quad + Edge Contour) | `HTH-0001` | 2026-08-10 | [#282](https://github.com/dlstupka/hth/actions/runs/31424157793) | 21.3s | `f387da7ebb7e` | 243 | exhaustive | 0.0% | 0.5528 | 0.0000 | 0.4526 | 0.9213 | 2 | +0.0015 | 9.9% | 4.9% | Medium | Recommended |
+| **1** | **Polar Boundary Vote** | **`polar_boundary_vote`** | **Unknown** | **`HTH-0001`** | **2026-08-12** | **[#327](https://github.com/dlstupka/hth/actions/runs/31614759801)** | **8.9s** | **`cd967f93437d`** | **729** | **exhaustive** | **100.0%** | **0.9678** | **0.9425** | **0.0182** | **0.9678** | **0** | **+0.0832** | **0.8%** | **0.4%** | **Medium** | **Recommended** |
+| 2 | Adaptive Radial Edge Search | `adaptive_radial_edge` | Generator | `HTH-0001` | 2026-08-07 | [#241](https://github.com/dlstupka/hth/actions/runs/31142095265) | 45m 27s | `5010d5b46516` | 6562 | exhaustive | 100.0% | 0.9599 | 0.9440 | 0.0114 | 0.9599 | 0 | +0.0270 | 0.1% | 0.1% | Medium | Recommended |
+| 3 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | 2026-08-10 | [#295](https://github.com/dlstupka/hth/actions/runs/31424176107) | 3m 52s | `5f802d0c469d` | 6562 | exhaustive | 100.0% | 0.9547 | 0.9432 | 0.0104 | 0.9547 | 0 | +0.0044 | 1.2% | 1.2% | High | Approved |
+| 4 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | 2026-08-10 | [#300](https://github.com/dlstupka/hth/actions/runs/31436321510) | 6.4s | `736327fcfb98` | 6562 | exhaustive | 79.4% | 0.9250 | 0.7525 | 0.0869 | 0.9250 | 0 | +0.0368 | 8.6% | 1.2% | Medium | Recommended |
+| 5 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | 2026-08-10 | [#290](https://github.com/dlstupka/hth/actions/runs/31424169237) | 6h 23m 40s | `f33aa4421393` | 13122 | exhaustive | 95.7% | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | +0.1006 | 0.0% | 0.0% | Medium | Recommended |
+| 6 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | 2026-08-10 | [#287](https://github.com/dlstupka/hth/actions/runs/31424165043) | 10h 40m 34s | `49095b866d0d` | 1062882 | exhaustive | 33.3% | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | +0.0105 | 15.5% | 5.3% | Medium | Recommended |
+| 7 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | 2026-08-10 | [#285](https://github.com/dlstupka/hth/actions/runs/31424162073) | 3h 9m 30s | `3eec8a03f1de` | 6562 | exhaustive | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
+| 8 | Contour + Projection | `contour_projection` | Hybrid (Contour Quad + Projection) | `HTH-0001` | 2026-08-10 | [#286](https://github.com/dlstupka/hth/actions/runs/31424163624) | 7m 22s | `0cd13eb1a471` | 6562 | exhaustive | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 92.6% | 92.6% | High | Approved |
+| 9 | Cross-Edge Contour | `cross_edge_contour` | Hybrid (Contour Quad + Cross-Edge Validation) | `HTH-0001` | 2026-08-10 | [#288](https://github.com/dlstupka/hth/actions/runs/31424166301) | 3m 28s | `a5450e58ec9e` | 6562 | exhaustive | 29.6% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 29.6% | 29.6% | Medium | Recommended |
+| 10 | Edge-Supported Contour | `edge_contour` | Hybrid (Contour Quad + LSD) | `HTH-0001` | 2026-08-10 | [#301](https://github.com/dlstupka/hth/actions/runs/31437186835) | 1m 8s | `4e5bc37a649a` | 13123 | exhaustive | 12.3% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.3377 | 8.6% | 8.6% | Medium | Recommended |
+| 11 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | 2026-08-10 | [#284](https://github.com/dlstupka/hth/actions/runs/31424160561) | 3m 48s | `14818b491952` | 19684 | exhaustive | 100.0% | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
+| 12 | Contour Envelope | `contour` | Generator | `HTH-0001` | 2026-08-10 | [#283](https://github.com/dlstupka/hth/actions/runs/31424159190) | 4.6s | `7aed2fc501c5` | 1458 | exhaustive | 50.0% | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | +0.1776 | 1.9% | 1.9% | Medium | Recommended |
+| 13 | Distance Transform | `distance_transform` | Unknown | `HTH-0001` | 2026-08-12 | [#322](https://github.com/dlstupka/hth/actions/runs/31606269618) | 28.6s | `e66a7546e1a7` | 2187 | exhaustive | 51.2% | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | +0.0795 | 6.6% | 6.6% | Medium | Recommended |
+| 14 | Star Convex | `star_convex` | Unknown | `HTH-0001` | 2026-08-12 | [#328](https://github.com/dlstupka/hth/actions/runs/31614832224) | 7.2s | `024732f5e631` | 729 | exhaustive | 100.0% | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | +0.0422 | 0.4% | 0.4% | Medium | Recommended |
+| 15 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-12 | [#325](https://github.com/dlstupka/hth/actions/runs/31613739498) | 4m 4s | `3817f226228a` | 10 | smoke | 100.0% | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
+| 16 | Connected Components | `components` | Generator | `HTH-0001` | 2026-08-10 | [#281](https://github.com/dlstupka/hth/actions/runs/31424156590) | 40.8s | `f1929c8e2655` | 19683 | exhaustive | 75.8% | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | +0.0712 | 0.8% | 0.8% | Medium | Recommended |
+| 17 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | 2026-08-10 | [#296](https://github.com/dlstupka/hth/actions/runs/31424177450) | 1m 31s | `9647b030702e` | 1458 | exhaustive | 5.3% | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | +0.0710 | 0.4% | 0.4% | Medium | Recommended |
+| 18 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | 2026-08-10 | [#294](https://github.com/dlstupka/hth/actions/runs/31424174875) | 59s | `7546c5067527` | 2187 | exhaustive | 0.0% | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | +0.1964 | 1.2% | 0.4% | Medium | Recommended |
+| 19 | Convex Hull | `convex_hull` | Unknown | `HTH-0001` | 2026-08-12 | [#321](https://github.com/dlstupka/hth/actions/runs/31606215160) | 2s | `04fd0a6e4bc2` | 2187 | exhaustive | 0.0% | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | +0.0692 | 6.6% | 6.6% | Medium | Recommended |
+| 20 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | 2026-08-10 | [#278](https://github.com/dlstupka/hth/actions/runs/31423513220) | 3m 59s | `74e2112aac01` | 6562 | exhaustive | 0.0% | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | +0.1708 | 19.8% | 19.8% | Medium | Recommended |
+| 21 | Distance Transform Rect | `distance_transform_rect` | Unknown | `HTH-0001` | 2026-08-12 | [#326](https://github.com/dlstupka/hth/actions/runs/31614704921) | 1.2s | `0a8482550c35` | 729 | exhaustive | 9.9% | 0.7243 | 0.4499 | 0.2245 | 0.7243 | 0 | +0.0896 | 0.8% | 0.8% | Medium | Recommended |
+| 22 | Hough Line Borders | `hough` | Generator | `HTH-0001` | 2026-08-10 | [#293](https://github.com/dlstupka/hth/actions/runs/31424173458) | 3m 4s | `c2c117479e3f` | 2188 | exhaustive | 0.0% | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | +0.1266 | 0.0% | 0.0% | Medium | Recommended |
+| 23 | Consensus Quadrilateral | `consensus_quad` | Hybrid (Contour Quad + Edge Contour) | `HTH-0001` | 2026-08-10 | [#282](https://github.com/dlstupka/hth/actions/runs/31424157793) | 21.3s | `f387da7ebb7e` | 243 | exhaustive | 0.0% | 0.5528 | 0.0000 | 0.4526 | 0.9213 | 2 | +0.0015 | 9.9% | 4.9% | Medium | Recommended |
 
 [↑ Back to Navigation](#table-of-contents)
 
@@ -195,7 +207,7 @@ This table prefers compatible full calibrations when available and falls back to
 - **Calibration Evidence:** deterministic evidence score for how completely this run characterizes the evaluated Golden Set and parameter grid. Score 2 points for complete exhaustive coverage, 1 point when at least 90% of parameter sets succeed on every page, and 1 point when at least 1% of tested sets are within 0.001 Avg IoU of the winner. **Low** = 0–1 points, **Medium** = 2–3 points, and **High** = 4 points. This is not confidence that the detector generalizes beyond this Golden Set and grid.
 - **Approval Level:** automatic Golden Set-scoped engineering status derived from Search Type and Calibration Evidence. **Provisional** = smoke or unavailable evidence; **Candidate** = any reduced search or exhaustive search with Low evidence; **Recommended** = exhaustive search with Medium evidence; **Approved** = exhaustive search with High evidence. A different Golden Set requires its own calibration and approval.
 - **Evidence tables:** identify what each detector actually observes and whether that evidence generates, validates, filters, or scores a page hypothesis.
-- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0cfc881da9111cb8f3dbd4e2c3e03f5a163921bf/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_radial_edge/run-20260807-024337/calibration-intelligence.json).
+- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/c486317abbf98a861d8db9948ac1eb78426290e3/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/polar_boundary_vote/run-20260812-155410/calibration-intelligence.json).
 - **Est. Serial Runtime\*\*:** Estimated single-detector serial runtime derived from recorded regression evidence; actual wall time varies with parallelism and scheduling.
 
 [↑ Back to Navigation](#table-of-contents)
@@ -204,6 +216,105 @@ This table prefers compatible full calibrations when available and falls back to
 <details open>
 <summary><h3>Per-Detector Calibration Reports</h3></summary>
 
+
+[↑ Back to Navigation](#table-of-contents)
+
+<a id="polar-boundary-vote-polarboundaryvote"></a>
+<details>
+<summary><strong>Polar Boundary Vote (`polar_boundary_vote`)</strong></summary>
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 2 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Most parameter sets evaluated every Golden Set page successfully.
+
+#### Evidence of ROI
+
+The configured grid is fully characterized for this Golden Set; continue detector work only if the resulting quality or failure pattern remains operationally inadequate.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | complete exhaustive |
+| All possible parameter sets | 729 |
+| Parameter sets evaluated | 729 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 729 (100.0%) |
+| Best Avg IoU | 0.9678 |
+| Minimum Avg IoU | 0.8176 |
+| Avg IoU StdDev | 0.0470 |
+| Winner stabilized after | 341 parameter sets |
+| Winner stabilized | 4.1s (47% of search) |
+| Near-best coverage (basin; within 0.0010) | 6 (0.8%) |
+| Equivalent-best configurations (within 0.0001) | 3 (0.4%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 729 | 100.0% | 47m 31s | 1.0× |
+| Non-dormant | 81 | 11.1% | 5m 17s | 9.0× |
+| Low+ | 81 | 11.1% | 5m 17s | 9.0× |
+| Moderate+ | 27 | 3.7% | 1m 46s | 27.0× |
+| Important+ | 3 | 0.4% | 11.7s | 243.0× |
+| Critical | 3 | 0.4% | 11.7s | 243.0× |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: complete exhaustive coverage, high fully-successful-set rate, narrow near-best basin.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `outer_radius_fraction` | Critical | 0.8387 | 0.1046 | 33.3% | `0.6` (0.9297), `0.7` (0.8660), `0.82` (0.8251) |
+| `bbox_padding_fraction` | Moderate | 0.0722 | 0.0308 | 33.3% | `0` (0.8899), `0.008` (0.8717), `0.016` (0.8592) |
+| `gradient_percentile` | Moderate | 0.0455 | 0.0243 | 33.3% | `90` (0.8868), `82` (0.8715), `72` (0.8625) |
+| `ray_count` | Low | 0.0073 | 0.0099 | 66.7% | `90` (0.8786), `180` (0.8734), `360` (0.8688) |
+| `inner_radius_fraction` | Dormant | 0.0008 | 0.0029 | 33.3% | `0.12` (0.8746), `0.06` (0.8745), `0.18` (0.8717) |
+| `minimum_support_fraction` | Dormant | 0.0000 | 0.0000 | 100.0% | `0.25` (0.8736), `0.35` (0.8736), `0.5` (0.8736) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`inner_radius_fraction`, `minimum_support_fraction`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `outer_radius_fraction` × `bbox_padding_fraction` | 0.9269 | 0.0882 | 729 |
+| `outer_radius_fraction` × `gradient_percentile` | 0.8926 | 0.0539 | 729 |
+| `bbox_padding_fraction` × `gradient_percentile` | 0.1186 | 0.0464 | 729 |
+| `outer_radius_fraction` × `ray_count` | 0.8486 | 0.0099 | 729 |
+| `gradient_percentile` × `ray_count` | 0.0540 | 0.0085 | 729 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.8628 | 0.7782 | 0.9819 | 0.0661 | 100.0% |
+| 5 | 0.9109 | 0.8699 | 0.9942 | 0.0449 | 100.0% |
+| 6 | 0.9444 | 0.9327 | 0.9753 | 0.0131 | 100.0% |
+| 9 | 0.7901 | 0.7134 | 0.9473 | 0.0738 | 100.0% |
+| 10 | 0.8597 | 0.7940 | 0.9543 | 0.0545 | 100.0% |
+
+</details>
 
 [↑ Back to Navigation](#table-of-contents)
 
@@ -1418,6 +1529,105 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 [↑ Back to Navigation](#table-of-contents)
 
+<a id="star-convex-starconvex"></a>
+<details>
+<summary><strong>Star Convex (`star_convex`)</strong></summary>
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 1 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Most parameter sets evaluated every Golden Set page successfully.
+
+#### Evidence of ROI
+
+The configured grid is fully characterized for this Golden Set; continue detector work only if the resulting quality or failure pattern remains operationally inadequate.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | complete exhaustive |
+| All possible parameter sets | 729 |
+| Parameter sets evaluated | 729 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 729 (100.0%) |
+| Best Avg IoU | 0.8179 |
+| Minimum Avg IoU | 0.7309 |
+| Avg IoU StdDev | 0.0213 |
+| Winner stabilized after | 719 parameter sets |
+| Winner stabilized | 6.8s (99% of search) |
+| Near-best coverage (basin; within 0.0010) | 3 (0.4%) |
+| Equivalent-best configurations (within 0.0001) | 3 (0.4%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 729 | 100.0% | 46m 14s | 1.0× |
+| Non-dormant | 243 | 33.3% | 15m 25s | 3.0× |
+| Low+ | 243 | 33.3% | 15m 25s | 3.0× |
+| Moderate+ | 27 | 3.7% | 1m 43s | 27.0× |
+| Important+ | 3 | 0.4% | 11.4s | 243.0× |
+| Critical | 3 | 0.4% | 11.4s | 243.0× |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: complete exhaustive coverage, high fully-successful-set rate, narrow near-best basin.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `smoothing_window` | Critical | 0.6484 | 0.0365 | 33.3% | `1` (0.8009), `9` (0.7645), `5` (0.7644) |
+| `maximum_radius_fraction` | Moderate | 0.0970 | 0.0150 | 33.3% | `0.6` (0.7822), `0.72` (0.7803), `0.84` (0.7673) |
+| `bbox_padding_fraction` | Moderate | 0.0312 | 0.0084 | 33.3% | `0` (0.7797), `0.008` (0.7788), `0.016` (0.7713) |
+| `ray_count` | Low | 0.0171 | 0.0065 | 33.3% | `360` (0.7804), `180` (0.7755), `90` (0.7739) |
+| `minimum_radius_fraction` | Low | 0.0053 | 0.0034 | 33.3% | `0.16` (0.7788), `0.05` (0.7756), `0.1` (0.7754) |
+| `minimum_support_fraction` | Dormant | 0.0000 | 0.0000 | 100.0% | `0.4` (0.7766), `0.55` (0.7766), `0.7` (0.7766) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`minimum_support_fraction`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `smoothing_window` × `maximum_radius_fraction` | 0.8276 | 0.1793 | 729 |
+| `maximum_radius_fraction` × `ray_count` | 0.1744 | 0.0774 | 729 |
+| `smoothing_window` × `ray_count` | 0.6890 | 0.0407 | 729 |
+| `maximum_radius_fraction` × `bbox_padding_fraction` | 0.1305 | 0.0335 | 729 |
+| `smoothing_window` × `bbox_padding_fraction` | 0.6799 | 0.0315 | 729 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.9437 | 0.8260 | 0.9917 | 0.0502 | 100.0% |
+| 5 | 0.5759 | 0.5286 | 0.6053 | 0.0208 | 100.0% |
+| 6 | 0.5139 | 0.3465 | 0.8804 | 0.1373 | 100.0% |
+| 9 | 0.9260 | 0.8888 | 0.9601 | 0.0244 | 100.0% |
+| 10 | 0.9235 | 0.8454 | 0.9738 | 0.0386 | 100.0% |
+
+</details>
+
+[↑ Back to Navigation](#table-of-contents)
+
 <a id="grabcut-contour-grabcutcontour"></a>
 <details>
 <summary><strong>GrabCut + Contour (`grabcut_contour`)</strong></summary>
@@ -1443,7 +1653,7 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 | All possible parameter sets | 354295 |
 | Parameter sets evaluated | 10 |
 | Evaluated sets (% of all possible parameter sets) | 0.0% |
-| Est. serial runtime for full parameter set evaluation* | 289d 21h 25m 47s |
+| Est. serial runtime for full parameter set evaluation* | 264d 13h 27m 13s |
 | Fully successful parameter sets | 10 (100.0%) |
 | Best Avg IoU | 0.8130 |
 | Minimum Avg IoU | 0.7986 |
@@ -1460,12 +1670,12 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 354295 | 100.0% | 289d 21h 37m 34s | 1.0× |
-| Non-dormant | 6144 | 1.7% | 5d 39m 20s | 57.7× |
-| Low+ | 6144 | 1.7% | 5d 39m 20s | 57.7× |
-| Moderate+ | 6144 | 1.7% | 5d 39m 20s | 57.7× |
-| Important+ | 3072 | 0.9% | 2d 12h 19m 40s | 115.3× |
-| Critical | 512 | 0.1% | 10h 3m 17s | 692.0× |
+| Exhaustive | 354295 | 100.0% | 264d 13h 37m 58s | 1.0× |
+| Non-dormant | 6144 | 1.7% | 4d 14h 6m 43s | 57.7× |
+| Low+ | 6144 | 1.7% | 4d 14h 6m 43s | 57.7× |
+| Moderate+ | 6144 | 1.7% | 4d 14h 6m 43s | 57.7× |
+| Important+ | 3072 | 0.9% | 2d 7h 3m 22s | 115.3× |
+| Critical | 512 | 0.1% | 9h 10m 34s | 692.0× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
@@ -2015,6 +2225,105 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 [↑ Back to Navigation](#table-of-contents)
 
+<a id="distance-transform-rect-distancetransformrect"></a>
+<details>
+<summary><strong>Distance Transform Rect (`distance_transform_rect`)</strong></summary>
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 1 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Detector failed on at least one Golden Set page for 657 of 729 parameter configurations.
+
+#### Evidence of ROI
+
+Additional tuning may improve reliability, but detector-level ROI should be weighed against stronger alternatives before expanding the search.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | complete exhaustive |
+| All possible parameter sets | 729 |
+| Parameter sets evaluated | 729 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 72 (9.9%) |
+| Best Avg IoU | 0.7243 |
+| Minimum Avg IoU | 0.5022 |
+| Avg IoU StdDev | 0.0415 |
+| Winner stabilized after | 597 parameter sets |
+| Winner stabilized | 836 ms (82% of search) |
+| Near-best coverage (basin; within 0.0010) | 6 (0.8%) |
+| Equivalent-best configurations (within 0.0001) | 6 (0.8%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 729 | 100.0% | 4m 59s | 1.0× |
+| Non-dormant | 243 | 33.3% | 1m 40s | 3.0× |
+| Low+ | 243 | 33.3% | 1m 40s | 3.0× |
+| Moderate+ | 9 | 1.2% | 3.7s | 81.0× |
+| Important+ | 0 | 0.0% | 0 ms | unavailable |
+| Critical | 0 | 0.0% | 0 ms | unavailable |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: complete exhaustive coverage, many parameter sets failed at least one page, narrow near-best basin.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `proposal_expansion_fraction` | Moderate | 0.0415 | 0.0184 | 33.3% | `0.06` (0.6160), `0.12` (0.6149), `0.22` (0.5975) |
+| `minimum_mask_coverage` | Moderate | 0.0411 | 0.0199 | 33.3% | `0.06` (0.6210), `0.12` (0.6064), `0.22` (0.6011) |
+| `minimum_core_area_fraction` | Low | 0.0204 | 0.0126 | 66.7% | `0.002` (0.6137), `0.006` (0.6137), `0.015` (0.6011) |
+| `distance_threshold_fraction` | Low | 0.0192 | 0.0140 | 33.3% | `0.18` (0.6168), `0.3` (0.6090), `0.1` (0.6027) |
+| `bbox_padding_fraction` | Low | 0.0018 | 0.0042 | 33.3% | `0.016` (0.6114), `0.008` (0.6099), `0` (0.6072) |
+| `minimum_bbox_area_fraction` | Dormant | 0.0000 | 0.0000 | 100.0% | `0.08` (0.6095), `0.14` (0.6095), `0.22` (0.6095) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`minimum_bbox_area_fraction`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `proposal_expansion_fraction` × `distance_threshold_fraction` | 0.6474 | 0.6058 | 729 |
+| `minimum_mask_coverage` × `distance_threshold_fraction` | 0.1424 | 0.1013 | 729 |
+| `minimum_core_area_fraction` × `distance_threshold_fraction` | 0.0804 | 0.0600 | 729 |
+| `proposal_expansion_fraction` × `minimum_mask_coverage` | 0.0943 | 0.0527 | 729 |
+| `minimum_mask_coverage` × `minimum_core_area_fraction` | 0.0820 | 0.0409 | 729 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.8507 | 0.7782 | 0.9672 | 0.0699 | 100.0% |
+| 5 | 0.5053 | 0.3489 | 0.6490 | 0.0763 | 100.0% |
+| 6 | 0.0419 | 0.0000 | 0.5727 | 0.1291 | 9.9% |
+| 9 | 0.8127 | 0.6903 | 0.9353 | 0.0795 | 100.0% |
+| 10 | 0.8368 | 0.6685 | 0.9433 | 0.0704 | 100.0% |
+
+</details>
+
+[↑ Back to Navigation](#table-of-contents)
+
 <a id="hough-line-borders-hough"></a>
 <details>
 <summary><strong>Hough Line Borders (`hough`)</strong></summary>
@@ -2226,11 +2535,11 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Measure | Value | Notes |
 |---|---:|---|
-| Detector runs completed | 20 of 20 | Successful detector regressions completed out of those scheduled. |
-| Parameter sets evaluated | 1186346 | Total detector parameter configurations evaluated across all runs. |
-| Golden Set page evaluations | 5931730 | Parameter sets multiplied by evaluated Golden Set pages. |
-| Aggregate detector runtime | 21h 34m 6s | Sum of detector wall-clock runtimes; this is not the elapsed time experienced by the user. |
-| Regression wall-clock span | 5d 11h 58m 11s | Earliest detector start through latest detector finish. |
+| Detector runs completed | 23 of 23 | Successful detector regressions completed out of those scheduled. |
+| Parameter sets evaluated | 1188533 | Total detector parameter configurations evaluated across all runs. |
+| Golden Set page evaluations | 5942665 | Parameter sets multiplied by evaluated Golden Set pages. |
+| Aggregate detector runtime | 21h 34m 27s | Sum of detector wall-clock runtimes; this is not the elapsed time experienced by the user. |
+| Regression wall-clock span | 5d 13h 11m 15s | Earliest detector start through latest detector finish. |
 | Effective detector concurrency | 0.16× | Aggregate detector runtime divided by regression wall-clock span. |
 | Detector pipelines | 4 | Maximum concurrent detector regressions used by this build. |
 | Loading strategy | LPT (Longest Processing Time first) | Strategy used to order the shared detector queue. |
@@ -2247,7 +2556,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Detector pipelines | 4 |
 | Detector loading strategy | LPT (Longest Processing Time first) |
 | Threads per detector regression | 2 |
-| Execution recommendation basis | runtime-index coherent build 31607757389 (20/20 detectors) |
+| Execution recommendation basis | runtime-index coherent build 31613739498 (23/23 detectors) |
 | Pipeline start stagger | 0m |
 | Runtime intelligence | `runtime-index.json` |
 | Parallelism intelligence | `parallelism-index.json` |
@@ -2257,26 +2566,29 @@ Detector pipelines pull continuously from one shared queue. Once a detector fini
 
 | Queue | Detector | Pipeline | Estimated Runtime | Scheduling Basis |
 |---:|---|---:|---:|---|
-| 1 | GrabCut Segmentation (`grabcut`) | 1 | 5m 45s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 2 | Contour + GrabCut (`contour_grabcut`) | 2 | 4m 8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 3 | GrabCut + Contour (`grabcut_contour`) | 3 | 3m 59s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 4 | Hough Line Borders (`hough`) | 4 | 30.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 5 | Contour Quadrilateral (`contour_quad`) | 4 | 28.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 6 | Consensus Quadrilateral (`consensus_quad`) | 4 | 19.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 7 | Contour + Projection (`contour_projection`) | 4 | 14.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 8 | Border Energy Validator (`border_energy`) | 4 | 12.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 9 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 4 | 10.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 10 | Cross-Edge Contour (`cross_edge_contour`) | 4 | 10.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 11 | Edge-Supported Contour (`edge_contour`) | 4 | 8.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 12 | Distance Transform (`distance_transform`) | 4 | 7.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 13 | Line Segment Detector (`lsd`) | 4 | 6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 14 | Contour + Components (`contour_components`) | 4 | 4.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 15 | Radial Edge Search (`radial_edge`) | 4 | 2.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 16 | Connected Components (`components`) | 4 | 2.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 17 | RANSAC Border Fit (`ransac`) | 4 | 2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 18 | Gradient Boundary Voting (`gradient_vote`) | 4 | 1.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 19 | Convex Hull (`convex_hull`) | 4 | 1.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 20 | Contour Envelope (`contour`) | 4 | 1.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 1 | GrabCut Segmentation (`grabcut`) | 1 | 6m 12s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 2 | GrabCut + Contour (`grabcut_contour`) | 2 | 4m 4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 3 | Contour + GrabCut (`contour_grabcut`) | 3 | 4m | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 4 | Contour Quadrilateral (`contour_quad`) | 4 | 43.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 5 | Hough Line Borders (`hough`) | 4 | 30.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 6 | Consensus Quadrilateral (`consensus_quad`) | 4 | 23.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 7 | Contour + Projection (`contour_projection`) | 4 | 18.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 8 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 4 | 14.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 9 | Cross-Edge Contour (`cross_edge_contour`) | 4 | 12s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 10 | Border Energy Validator (`border_energy`) | 4 | 10.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 11 | Distance Transform (`distance_transform`) | 4 | 7.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 12 | Edge-Supported Contour (`edge_contour`) | 4 | 6.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 13 | Line Segment Detector (`lsd`) | 4 | 6.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 14 | Contour + Components (`contour_components`) | 4 | 5.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 15 | RANSAC Border Fit (`ransac`) | 4 | 4.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 16 | Connected Components (`components`) | 4 | 3.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 17 | Radial Edge Search (`radial_edge`) | 4 | 3.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 18 | Polar Boundary Vote (`polar_boundary_vote`) | 4 | 2.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 19 | Star Convex (`star_convex`) | 4 | 1.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 20 | Gradient Boundary Voting (`gradient_vote`) | 4 | 1.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 21 | Convex Hull (`convex_hull`) | 4 | 1.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 22 | Distance Transform Rect (`distance_transform_rect`) | 4 | 1.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 23 | Contour Envelope (`contour`) | 4 | 889 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
 
 Queue order reflects the selected loading strategy. LPT (Longest Processing Time first) schedules the longest estimated detector work first, FIFO preserves configured detector order, and Ranked uses historical detector quality.
 
@@ -2298,9 +2610,9 @@ Queue order reflects the selected loading strategy. LPT (Longest Processing Time
 
 | All-Detector Regression Scope | Estimated Wall Time* |
 |---|---:|
-| Exhaustive | 35d 8h 6s |
-| Non-dormant | 23h 36m 41s |
-| Critical only | 12h 50m 3s |
+| Exhaustive | 40d 10h 29m 16s |
+| Non-dormant | 23h 38m 35s |
+| Critical only | 12h 45m 10s |
 
 \* Estimates scale each detector's measured runtime to the selected effect-size domain, apply the normal bounded shard plan, and simulate shard-level LPT placement across the recommended detector pipelines. Effect-group fallback remains active when a detector has no parameter sets in the requested group.
 
@@ -5595,6 +5907,284 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 [↑ Back to Navigation](#table-of-contents)
 
+<a id="distance-transform-rect-distancetransformrect-2"></a>
+<details>
+<summary><strong>Distance Transform Rect (`distance_transform_rect`)</strong></summary>
+
+**Status:** complete
+
+## Run Information — distance_transform_rect
+
+### Build Provenance
+
+- Run ID: `run-20260812-155322`
+- Detector: `distance_transform_rect`
+- Strategy: `exhaustive`
+- Pipeline commit: `4f49196091a4`
+- Python: `3.12.0`
+- OpenCV: `5.0.0`
+- Started: `2026-08-12T15:53:21.237383+00:00`
+- Finished: `2026-08-12T15:53:22.463952+00:00`
+- Wall-clock elapsed: `1.2s`
+- Est. serial runtime: `3m 48s`
+- Effective acceleration: `185.84×`
+
+### Golden Set
+
+- Configuration: `hth-pipeline/config/golden_set.json`
+- SHA-256: `135c0ff57687`
+- Pages: `5`
+- Ordinals: `1, 5, 6, 9, 10`
+
+### Parameter Space
+
+- All possible parameter sets: `729`
+- Parameter sets evaluated: `729`
+- Evaluated sets (% of all possible parameter sets): `100.00%`
+- Configured named profiles: `baseline`
+
+### Outputs
+
+- `RUN-INFO.json` — present
+- `parameters.json` — present
+- `raw/results.csv` — missing
+- `reports/summary.json` — present
+- `reports/winner-pages.json` — present
+- `reports/calibration-intelligence.json` — present
+- `reports/rankings.csv` — missing
+- `reports/top20.csv` — missing
+
+## Results — distance_transform_rect
+
+### Result
+
+| Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| Winner | `0a8482550c35` | `0a8482550c35` | 0.7243 | 0.4499 | 0.2245 | 0.7243 | 0 | 410 ms |
+| Baseline | `e04459bcb474` | `baseline` | 0.6347 | 0.0000 | 0.3534 | 0.7933 | 1 | 32 ms |
+
+### Detector Evidence
+
+**Role:** Unknown
+
+| Evidence source | Function | Interpretation |
+|---|---|---|
+| Detector output | Primary | Evidence characterization has not yet been registered for this detector. |
+
+### Regression Statistics for Detector Calibration
+
+| Statistic | Count |
+|---|---:|
+| Avg IoU improvements | 0 |
+| Minimum IoU improvements | 0 |
+| StdDev improvements | 0 |
+| Total metric improvements | 0 |
+| Parameter sets with improvements | 0 |
+| Winner changes | 7 |
+| Baseline surpassed | no |
+
+### Preferred Execution Shape
+
+The regression execution shape selected for this detector run is recorded here so the calibration result can be interpreted without returning to build provenance.
+
+| Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
+|---|---:|---:|---:|---|---:|
+| `preferred-hardware-profile` | 5 | 76 | 380 | `rh8-al318` | 384 |
+
+### Top Parameter Sets
+
+| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | `0a8482550c35` | `0a8482550c35` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 836 ms | 82.01% |
+| 2 | `43eedb6484a7` | `43eedb6484a7` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 881 ms | 98.21% |
+| 3 | `b42ab476afc9` | `b42ab476afc9` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 844 ms | 84.75% |
+| 4 | `1ce89ec0c98a` | `1ce89ec0c98a` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 810 ms | 74.45% |
+| 5 | `7e13cb642dbe` | `7e13cb642dbe` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 791 ms | 70.47% |
+
+## Page Analysis — distance_transform_rect
+
+### Golden Set Winner Summary
+
+| Golden Set Page | Parameter Set ID | Baseline | Winner | Δ IoU | Status |
+|---:|---|---:|---:|---:|---|
+| 1 | `0a8482550c35` | 0.8697 | 0.9520 | +0.0823 | Improved |
+| 5 | `0a8482550c35` | 0.4937 | 0.4499 | -0.0438 | Regressed |
+| 6 | `0a8482550c35` | 0.0000 | 0.4523 | +0.4523 | Recovered |
+| 9 | `0a8482550c35` | 0.8916 | 0.8884 | -0.0032 | Regressed |
+| 10 | `0a8482550c35` | 0.9183 | 0.8788 | -0.0395 | Regressed |
+
+#### Winner History
+
+| Discovery Order | Parameter Set ID | Search Time | % Search |
+|---:|---|---:|---:|
+| 3 | `5638d44f7565` | 544 ms | 14.42% |
+| 4 | `e74ab4635629` | 685 ms | 30.49% |
+| 5 | `42564449a7c9` | 759 ms | 62.77% |
+| 6 | `cacd39184a6d` | 778 ms | 67.31% |
+| 7 (final) | `7e13cb642dbe` | 791 ms | 70.47% |
+
+Total winner changes: **7**.
+Search completed in **1.2s** wall-clock time.
+
+**Stabilization Interpretation:** Late convergence — the final winner emerged after 40–80% of the evaluated search.
+
+### Status Definitions
+
+- **Recovered:** baseline IoU was zero and the winner found a matching polygon.
+- **Improved:** Δ IoU is greater than `0.0010`.
+- **Unchanged:** Δ IoU is between `-0.0010` and `+0.0010`.
+- **Regressed:** Δ IoU is less than `-0.0010`.
+- **Poor match:** Winner IoU is greater than zero but below `0.5000`.
+- **Zero overlap:** a polygon was returned, but its IoU is zero.
+- **No polygon found:** the detector completed without returning a polygon.
+- **Unprocessed:** evaluation raised an error.
+
+### Golden Set Page Issues
+
+- Unprocessed pages: `0`
+- No polygon found: `0`
+- Zero overlap: `0`
+- Poor matches (Winner IoU < 0.5000): `2`
+- Regressed pages (Δ IoU < -0.0010): `3`
+
+#### Affected Pages
+
+| Golden Set Page | Parameter Set ID | Winner IoU | Problem |
+|---:|---|---:|---|
+| 5 | `0a8482550c35` | 0.4499 | Poor match; Regressed |
+| 6 | `0a8482550c35` | 0.4523 | Poor match |
+| 9 | `0a8482550c35` | 0.8884 | Regressed |
+| 10 | `0a8482550c35` | 0.8788 | Regressed |
+
+## Calibration Intelligence — distance_transform_rect
+
+This run generated the same machine-readable calibration intelligence used by the multi-detector smoke regression. The conclusions remain specific to this Golden Set and configured parameter grid.
+
+### Calibration Identity
+
+- Calibration run ID: `run-20260812-155322`
+- Calibration schema: `1.1`
+- Detector: `distance_transform_rect`
+- Detector configuration: `hth-pipeline/config/detectors/distance_transform_rect.json`
+- Golden Set configuration: `hth-pipeline/config/golden_set.json`
+- Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
+- Pipeline commit: `4f49196091a44d5ca7cfe2269ab7c5a207f6336f`
+- Source commit: `927d9bb3457cf7af9276ccf5a629fe648cbf7660`
+- Requested search strategy: `exhaustive`
+- Resolved search strategy: `exhaustive`
+- Strategy fallback: `none`
+- Configured threads: `76`
+
+### Detector-Selection Intelligence
+
+- Recommended parameter set: `0a8482550c35`
+- Recommended parameter short name: `0a8482550c35`
+- Best observed Avg IoU: `0.7243`
+- Avg IoU Success: `0.7243`
+- Worst Golden Set page (Min IoU): `0.4499`
+- Page-to-page StdDev: `0.2245`
+- Calibration evidence: `Medium`
+- Dormant parameters: `minimum_bbox_area_fraction`
+- Available domain spaces: `exhaustive, low_plus, moderate_plus, non_dormant`
+
+### Calibration Analysis
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 1 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Detector failed on at least one Golden Set page for 657 of 729 parameter configurations.
+
+#### Evidence of ROI
+
+Additional tuning may improve reliability, but detector-level ROI should be weighed against stronger alternatives before expanding the search.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | complete exhaustive |
+| All possible parameter sets | 729 |
+| Parameter sets evaluated | 729 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 72 (9.9%) |
+| Best Avg IoU | 0.7243 |
+| Minimum Avg IoU | 0.5022 |
+| Avg IoU StdDev | 0.0415 |
+| Winner stabilized after | 597 parameter sets |
+| Winner stabilized | 836 ms (82% of search) |
+| Near-best coverage (basin; within 0.0010) | 6 (0.8%) |
+| Equivalent-best configurations (within 0.0001) | 6 (0.8%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 729 | 100.0% | 4m 59s | 1.0× |
+| Non-dormant | 243 | 33.3% | 1m 40s | 3.0× |
+| Low+ | 243 | 33.3% | 1m 40s | 3.0× |
+| Moderate+ | 9 | 1.2% | 3.7s | 81.0× |
+| Important+ | 0 | 0.0% | 0 ms | unavailable |
+| Critical | 0 | 0.0% | 0 ms | unavailable |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: complete exhaustive coverage, many parameter sets failed at least one page, narrow near-best basin.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `proposal_expansion_fraction` | Moderate | 0.0415 | 0.0184 | 33.3% | `0.06` (0.6160), `0.12` (0.6149), `0.22` (0.5975) |
+| `minimum_mask_coverage` | Moderate | 0.0411 | 0.0199 | 33.3% | `0.06` (0.6210), `0.12` (0.6064), `0.22` (0.6011) |
+| `minimum_core_area_fraction` | Low | 0.0204 | 0.0126 | 66.7% | `0.002` (0.6137), `0.006` (0.6137), `0.015` (0.6011) |
+| `distance_threshold_fraction` | Low | 0.0192 | 0.0140 | 33.3% | `0.18` (0.6168), `0.3` (0.6090), `0.1` (0.6027) |
+| `bbox_padding_fraction` | Low | 0.0018 | 0.0042 | 33.3% | `0.016` (0.6114), `0.008` (0.6099), `0` (0.6072) |
+| `minimum_bbox_area_fraction` | Dormant | 0.0000 | 0.0000 | 100.0% | `0.08` (0.6095), `0.14` (0.6095), `0.22` (0.6095) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`minimum_bbox_area_fraction`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `proposal_expansion_fraction` × `distance_threshold_fraction` | 0.6474 | 0.6058 | 729 |
+| `minimum_mask_coverage` × `distance_threshold_fraction` | 0.1424 | 0.1013 | 729 |
+| `minimum_core_area_fraction` × `distance_threshold_fraction` | 0.0804 | 0.0600 | 729 |
+| `proposal_expansion_fraction` × `minimum_mask_coverage` | 0.0943 | 0.0527 | 729 |
+| `minimum_mask_coverage` × `minimum_core_area_fraction` | 0.0820 | 0.0409 | 729 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.8507 | 0.7782 | 0.9672 | 0.0699 | 100.0% |
+| 5 | 0.5053 | 0.3489 | 0.6490 | 0.0763 | 100.0% |
+| 6 | 0.0419 | 0.0000 | 0.5727 | 0.1291 | 9.9% |
+| 9 | 0.8127 | 0.6903 | 0.9353 | 0.0795 | 100.0% |
+| 10 | 0.8368 | 0.6685 | 0.9433 | 0.0704 | 100.0% |
+
+</details>
+
+
+[↑ Back to Navigation](#table-of-contents)
+
 <a id="edge-supported-contour-edgecontour-2"></a>
 <details>
 <summary><strong>Edge-Supported Contour (`edge_contour`)</strong></summary>
@@ -6159,15 +6749,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: `run-20260812-143749`
+- Run ID: `run-20260812-154309`
 - Detector: `grabcut_contour`
 - Strategy: `exhaustive`
-- Pipeline commit: `f21e40350ca7`
+- Pipeline commit: `4f49196091a4`
 - Python: `3.12.13`
 - OpenCV: `5.0.0`
-- Started: `2026-08-12T14:37:49.067764+00:00`
-- Finished: `2026-08-12T14:41:48.561923+00:00`
-- Wall-clock elapsed: `3m 59s`
+- Started: `2026-08-12T15:43:09.515241+00:00`
+- Finished: `2026-08-12T15:47:13.269216+00:00`
+- Wall-clock elapsed: `4m 4s`
 - Est. serial runtime: `unknown`
 - Effective acceleration: `unknown`
 
@@ -6203,7 +6793,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Winner | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 1m 11s |
+| Winner | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 1m 5s |
 
 ### Detector Evidence
 
@@ -6235,17 +6825,17 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
 |---|---:|---:|---:|---|---:|
-| `auto` | 4 | 2 | 8 | `GitHub Actions 1000000481` | 8 |
+| `auto` | 4 | 2 | 8 | `GitHub Actions 1000000487` | 8 |
 
 ### Top Parameter Sets
 
 | Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 1 | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | +0.0000 | 0.8130 | 0 | unknown | unknown |
-| 2 | `2a39748afbe3` | `2a39748afbe3` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 21s | 33.33% |
-| 3 | `ea911909ef98` | `ea911909ef98` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 31s | 44.44% |
-| 4 | `47e727acc335` | `47e727acc335` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 2m 57s | 55.56% |
-| 5 | `8a86732de560` | `8a86732de560` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 3m 8s | 66.67% |
+| 2 | `2a39748afbe3` | `2a39748afbe3` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 18s | 33.33% |
+| 3 | `ea911909ef98` | `ea911909ef98` | 0.8011 | 0.5492 | 0.1867 | -0.0119 | 0.8011 | 0 | 2m 21s | 44.44% |
+| 4 | `47e727acc335` | `47e727acc335` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 2m 59s | 66.67% |
+| 5 | `8a86732de560` | `8a86732de560` | 0.8010 | 0.5486 | 0.1869 | -0.0120 | 0.8010 | 0 | 2m 56s | 55.56% |
 
 ## Page Analysis — grabcut_contour
 
@@ -6266,7 +6856,7 @@ The regression execution shape selected for this detector run is recorded here s
 | — | no history | no history | no history |
 
 Total winner changes: **0**.
-Search completed in **3m 59s** wall-clock time.
+Search completed in **4m 4s** wall-clock time.
 
 **Stabilization Interpretation:** Unavailable because the completed-search fraction was not recorded.
 
@@ -6297,14 +6887,14 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: `run-20260812-143749`
+- Calibration run ID: `run-20260812-154309`
 - Calibration schema: `1.1`
 - Detector: `grabcut_contour`
 - Detector configuration: `hth-pipeline/config/detectors/grabcut_contour.json`
 - Golden Set configuration: `hth-pipeline/config/golden_set.json`
 - Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
-- Pipeline commit: `f21e40350ca7a834536018811e96d08236fd1b8d`
-- Source commit: `e10a65cde34fc88710805800c59f99b355d0008f`
+- Pipeline commit: `4f49196091a44d5ca7cfe2269ab7c5a207f6336f`
+- Source commit: `3d17cdf3ef1a95c315601e599c85f0f4220fc3e0`
 - Requested search strategy: `exhaustive`
 - Resolved search strategy: `exhaustive`
 - Strategy fallback: `none`
@@ -6345,7 +6935,7 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 | All possible parameter sets | 354295 |
 | Parameter sets evaluated | 10 |
 | Evaluated sets (% of all possible parameter sets) | 0.0% |
-| Est. serial runtime for full parameter set evaluation* | 289d 21h 25m 47s |
+| Est. serial runtime for full parameter set evaluation* | 264d 13h 27m 13s |
 | Fully successful parameter sets | 10 (100.0%) |
 | Best Avg IoU | 0.8130 |
 | Minimum Avg IoU | 0.7986 |
@@ -6362,12 +6952,12 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 354295 | 100.0% | 289d 21h 37m 34s | 1.0× |
-| Non-dormant | 6144 | 1.7% | 5d 39m 20s | 57.7× |
-| Low+ | 6144 | 1.7% | 5d 39m 20s | 57.7× |
-| Moderate+ | 6144 | 1.7% | 5d 39m 20s | 57.7× |
-| Important+ | 3072 | 0.9% | 2d 12h 19m 40s | 115.3× |
-| Critical | 512 | 0.1% | 10h 3m 17s | 692.0× |
+| Exhaustive | 354295 | 100.0% | 264d 13h 37m 58s | 1.0× |
+| Non-dormant | 6144 | 1.7% | 4d 14h 6m 43s | 57.7× |
+| Low+ | 6144 | 1.7% | 4d 14h 6m 43s | 57.7× |
+| Moderate+ | 6144 | 1.7% | 4d 14h 6m 43s | 57.7× |
+| Important+ | 3072 | 0.9% | 2d 7h 3m 22s | 115.3× |
+| Critical | 512 | 0.1% | 9h 10m 34s | 692.0× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
@@ -7253,6 +7843,277 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 [↑ Back to Navigation](#table-of-contents)
 
+<a id="polar-boundary-vote-polarboundaryvote-2"></a>
+<details>
+<summary><strong>Polar Boundary Vote (`polar_boundary_vote`)</strong></summary>
+
+**Status:** complete
+
+## Run Information — polar_boundary_vote
+
+### Build Provenance
+
+- Run ID: `run-20260812-155410`
+- Detector: `polar_boundary_vote`
+- Strategy: `exhaustive`
+- Pipeline commit: `4f49196091a4`
+- Python: `3.12.0`
+- OpenCV: `5.0.0`
+- Started: `2026-08-12T15:54:00.712731+00:00`
+- Finished: `2026-08-12T15:54:09.604942+00:00`
+- Wall-clock elapsed: `8.9s`
+- Est. serial runtime: `40m 22s`
+- Effective acceleration: `272.38×`
+
+### Golden Set
+
+- Configuration: `hth-pipeline/config/golden_set.json`
+- SHA-256: `135c0ff57687`
+- Pages: `5`
+- Ordinals: `1, 5, 6, 9, 10`
+
+### Parameter Space
+
+- All possible parameter sets: `729`
+- Parameter sets evaluated: `729`
+- Evaluated sets (% of all possible parameter sets): `100.00%`
+- Configured named profiles: `baseline`
+
+### Outputs
+
+- `RUN-INFO.json` — present
+- `parameters.json` — present
+- `raw/results.csv` — missing
+- `reports/summary.json` — present
+- `reports/winner-pages.json` — present
+- `reports/calibration-intelligence.json` — present
+- `reports/rankings.csv` — missing
+- `reports/top20.csv` — missing
+
+## Results — polar_boundary_vote
+
+### Result
+
+| Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| Winner | `cd967f93437d` | `cd967f93437d` | 0.9678 | 0.9425 | 0.0182 | 0.9678 | 0 | 3.9s |
+| Baseline | `91ecb91a68da` | `baseline` | 0.8846 | 0.8109 | 0.0467 | 0.8846 | 0 | 48 ms |
+
+### Detector Evidence
+
+**Role:** Unknown
+
+| Evidence source | Function | Interpretation |
+|---|---|---|
+| Detector output | Primary | Evidence characterization has not yet been registered for this detector. |
+
+### Regression Statistics for Detector Calibration
+
+| Statistic | Count |
+|---|---:|
+| Avg IoU improvements | 0 |
+| Minimum IoU improvements | 0 |
+| StdDev improvements | 0 |
+| Total metric improvements | 0 |
+| Parameter sets with improvements | 0 |
+| Winner changes | 7 |
+| Baseline surpassed | no |
+
+### Preferred Execution Shape
+
+The regression execution shape selected for this detector run is recorded here so the calibration result can be interpreted without returning to build provenance.
+
+| Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
+|---|---:|---:|---:|---|---:|
+| `preferred-hardware-profile` | 13 | 29 | 377 | `rh8-al319` | 384 |
+
+### Top Parameter Sets
+
+| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | `cd967f93437d` | `cd967f93437d` | 0.9678 | 0.9425 | 0.0182 | +0.0000 | 0.9678 | 0 | 4.1s | 46.84% |
+| 2 | `52758d19b01b` | `52758d19b01b` | 0.9678 | 0.9425 | 0.0182 | +0.0000 | 0.9678 | 0 | 4.1s | 44.92% |
+| 3 | `7eacb65c300d` | `7eacb65c300d` | 0.9678 | 0.9425 | 0.0182 | +0.0000 | 0.9678 | 0 | 4.3s | 53.30% |
+| 4 | `21908c0f7b95` | `21908c0f7b95` | 0.9668 | 0.9473 | 0.0162 | -0.0010 | 0.9668 | 0 | 2.4s | 31.87% |
+| 5 | `b415644b159d` | `b415644b159d` | 0.9668 | 0.9473 | 0.0162 | -0.0010 | 0.9668 | 0 | 2.3s | 25.55% |
+
+## Page Analysis — polar_boundary_vote
+
+### Golden Set Winner Summary
+
+| Golden Set Page | Parameter Set ID | Baseline | Winner | Δ IoU | Status |
+|---:|---|---:|---:|---:|---|
+| 1 | `cd967f93437d` | 0.8861 | 0.9819 | +0.0957 | Improved |
+| 5 | `cd967f93437d` | 0.8986 | 0.9925 | +0.0938 | Improved |
+| 6 | `cd967f93437d` | 0.9560 | 0.9688 | +0.0128 | Improved |
+| 9 | `cd967f93437d` | 0.8109 | 0.9425 | +0.1316 | Improved |
+| 10 | `cd967f93437d` | 0.8713 | 0.9533 | +0.0820 | Improved |
+
+#### Winner History
+
+| Discovery Order | Parameter Set ID | Search Time | % Search |
+|---:|---|---:|---:|
+| 3 | `3ed8c2ba4281` | 1.2s | 0.41% |
+| 4 | `a848f8d6c1d3` | 1.2s | 0.55% |
+| 5 | `be950390744a` | 1.2s | 0.96% |
+| 6 | `cc5b8803e2f2` | 2.1s | 11.13% |
+| 7 (final) | `52758d19b01b` | 4.1s | 44.92% |
+
+Total winner changes: **7**.
+Search completed in **8.9s** wall-clock time.
+
+**Stabilization Interpretation:** Late convergence — the final winner emerged after 40–80% of the evaluated search.
+
+### Status Definitions
+
+- **Recovered:** baseline IoU was zero and the winner found a matching polygon.
+- **Improved:** Δ IoU is greater than `0.0010`.
+- **Unchanged:** Δ IoU is between `-0.0010` and `+0.0010`.
+- **Regressed:** Δ IoU is less than `-0.0010`.
+- **Poor match:** Winner IoU is greater than zero but below `0.5000`.
+- **Zero overlap:** a polygon was returned, but its IoU is zero.
+- **No polygon found:** the detector completed without returning a polygon.
+- **Unprocessed:** evaluation raised an error.
+
+### Golden Set Page Issues
+
+- Unprocessed pages: `0`
+- No polygon found: `0`
+- Zero overlap: `0`
+- Poor matches (Winner IoU < 0.5000): `0`
+- Regressed pages (Δ IoU < -0.0010): `0`
+
+No problem pages were identified.
+
+## Calibration Intelligence — polar_boundary_vote
+
+This run generated the same machine-readable calibration intelligence used by the multi-detector smoke regression. The conclusions remain specific to this Golden Set and configured parameter grid.
+
+### Calibration Identity
+
+- Calibration run ID: `run-20260812-155410`
+- Calibration schema: `1.1`
+- Detector: `polar_boundary_vote`
+- Detector configuration: `hth-pipeline/config/detectors/polar_boundary_vote.json`
+- Golden Set configuration: `hth-pipeline/config/golden_set.json`
+- Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
+- Pipeline commit: `4f49196091a44d5ca7cfe2269ab7c5a207f6336f`
+- Source commit: `b184338c29c994b4feaf0e9a2915a1855897f4fb`
+- Requested search strategy: `exhaustive`
+- Resolved search strategy: `exhaustive`
+- Strategy fallback: `none`
+- Configured threads: `29`
+
+### Detector-Selection Intelligence
+
+- Recommended parameter set: `cd967f93437d`
+- Recommended parameter short name: `cd967f93437d`
+- Best observed Avg IoU: `0.9678`
+- Avg IoU Success: `0.9678`
+- Worst Golden Set page (Min IoU): `0.9425`
+- Page-to-page StdDev: `0.0182`
+- Calibration evidence: `Medium`
+- Dormant parameters: `inner_radius_fraction, minimum_support_fraction`
+- Available domain spaces: `critical, exhaustive, important_plus, low_plus, moderate_plus, non_dormant`
+
+### Calibration Analysis
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 2 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Most parameter sets evaluated every Golden Set page successfully.
+
+#### Evidence of ROI
+
+The configured grid is fully characterized for this Golden Set; continue detector work only if the resulting quality or failure pattern remains operationally inadequate.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | complete exhaustive |
+| All possible parameter sets | 729 |
+| Parameter sets evaluated | 729 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 729 (100.0%) |
+| Best Avg IoU | 0.9678 |
+| Minimum Avg IoU | 0.8176 |
+| Avg IoU StdDev | 0.0470 |
+| Winner stabilized after | 341 parameter sets |
+| Winner stabilized | 4.1s (47% of search) |
+| Near-best coverage (basin; within 0.0010) | 6 (0.8%) |
+| Equivalent-best configurations (within 0.0001) | 3 (0.4%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 729 | 100.0% | 47m 31s | 1.0× |
+| Non-dormant | 81 | 11.1% | 5m 17s | 9.0× |
+| Low+ | 81 | 11.1% | 5m 17s | 9.0× |
+| Moderate+ | 27 | 3.7% | 1m 46s | 27.0× |
+| Important+ | 3 | 0.4% | 11.7s | 243.0× |
+| Critical | 3 | 0.4% | 11.7s | 243.0× |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: complete exhaustive coverage, high fully-successful-set rate, narrow near-best basin.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `outer_radius_fraction` | Critical | 0.8387 | 0.1046 | 33.3% | `0.6` (0.9297), `0.7` (0.8660), `0.82` (0.8251) |
+| `bbox_padding_fraction` | Moderate | 0.0722 | 0.0308 | 33.3% | `0` (0.8899), `0.008` (0.8717), `0.016` (0.8592) |
+| `gradient_percentile` | Moderate | 0.0455 | 0.0243 | 33.3% | `90` (0.8868), `82` (0.8715), `72` (0.8625) |
+| `ray_count` | Low | 0.0073 | 0.0099 | 66.7% | `90` (0.8786), `180` (0.8734), `360` (0.8688) |
+| `inner_radius_fraction` | Dormant | 0.0008 | 0.0029 | 33.3% | `0.12` (0.8746), `0.06` (0.8745), `0.18` (0.8717) |
+| `minimum_support_fraction` | Dormant | 0.0000 | 0.0000 | 100.0% | `0.25` (0.8736), `0.35` (0.8736), `0.5` (0.8736) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`inner_radius_fraction`, `minimum_support_fraction`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `outer_radius_fraction` × `bbox_padding_fraction` | 0.9269 | 0.0882 | 729 |
+| `outer_radius_fraction` × `gradient_percentile` | 0.8926 | 0.0539 | 729 |
+| `bbox_padding_fraction` × `gradient_percentile` | 0.1186 | 0.0464 | 729 |
+| `outer_radius_fraction` × `ray_count` | 0.8486 | 0.0099 | 729 |
+| `gradient_percentile` × `ray_count` | 0.0540 | 0.0085 | 729 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.8628 | 0.7782 | 0.9819 | 0.0661 | 100.0% |
+| 5 | 0.9109 | 0.8699 | 0.9942 | 0.0449 | 100.0% |
+| 6 | 0.9444 | 0.9327 | 0.9753 | 0.0131 | 100.0% |
+| 9 | 0.7901 | 0.7134 | 0.9473 | 0.0738 | 100.0% |
+| 10 | 0.8597 | 0.7940 | 0.9543 | 0.0545 | 100.0% |
+
+</details>
+
+
+[↑ Back to Navigation](#table-of-contents)
+
 <a id="radial-edge-search-radialedge-2"></a>
 <details>
 <summary><strong>Radial Edge Search (`radial_edge`)</strong></summary>
@@ -7811,6 +8672,284 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 </details>
 
+
+[↑ Back to Navigation](#table-of-contents)
+
+<a id="star-convex-starconvex-2"></a>
+<details>
+<summary><strong>Star Convex (`star_convex`)</strong></summary>
+
+**Status:** complete
+
+## Run Information — star_convex
+
+### Build Provenance
+
+- Run ID: `run-20260812-155453`
+- Detector: `star_convex`
+- Strategy: `exhaustive`
+- Pipeline commit: `4f49196091a4`
+- Python: `3.12.0`
+- OpenCV: `5.0.0`
+- Started: `2026-08-12T15:54:45.430152+00:00`
+- Finished: `2026-08-12T15:54:52.583237+00:00`
+- Wall-clock elapsed: `7.2s`
+- Est. serial runtime: `32m 46s`
+- Effective acceleration: `274.84×`
+
+### Golden Set
+
+- Configuration: `hth-pipeline/config/golden_set.json`
+- SHA-256: `135c0ff57687`
+- Pages: `5`
+- Ordinals: `1, 5, 6, 9, 10`
+
+### Parameter Space
+
+- All possible parameter sets: `729`
+- Parameter sets evaluated: `729`
+- Evaluated sets (% of all possible parameter sets): `100.00%`
+- Configured named profiles: `baseline`
+
+### Outputs
+
+- `RUN-INFO.json` — present
+- `parameters.json` — present
+- `raw/results.csv` — missing
+- `reports/summary.json` — present
+- `reports/winner-pages.json` — present
+- `reports/calibration-intelligence.json` — present
+- `reports/rankings.csv` — missing
+- `reports/top20.csv` — missing
+
+## Results — star_convex
+
+### Result
+
+| Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| Winner | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | 3.8s |
+| Baseline | `f914375ada78` | `baseline` | 0.7756 | 0.3969 | 0.2448 | 0.7756 | 0 | 46 ms |
+
+### Detector Evidence
+
+**Role:** Unknown
+
+| Evidence source | Function | Interpretation |
+|---|---|---|
+| Detector output | Primary | Evidence characterization has not yet been registered for this detector. |
+
+### Regression Statistics for Detector Calibration
+
+| Statistic | Count |
+|---|---:|
+| Avg IoU improvements | 0 |
+| Minimum IoU improvements | 0 |
+| StdDev improvements | 0 |
+| Total metric improvements | 0 |
+| Parameter sets with improvements | 0 |
+| Winner changes | 11 |
+| Baseline surpassed | no |
+
+### Preferred Execution Shape
+
+The regression execution shape selected for this detector run is recorded here so the calibration result can be interpreted without returning to build provenance.
+
+| Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
+|---|---:|---:|---:|---|---:|
+| `preferred-exact-runner` | 10 | 38 | 380 | `rh8-al319` | 384 |
+
+### Top Parameter Sets
+
+| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 6.8s | 98.76% |
+| 2 | `d1a67626e1a7` | `d1a67626e1a7` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 5.7s | 74.31% |
+| 3 | `fa97b23311b2` | `fa97b23311b2` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 6.6s | 95.88% |
+| 4 | `9e7c1f9b7e79` | `9e7c1f9b7e79` | 0.8166 | 0.5344 | 0.1825 | -0.0013 | 0.8166 | 0 | 6.2s | 82.97% |
+| 5 | `ef8cc5554d87` | `ef8cc5554d87` | 0.8166 | 0.5344 | 0.1825 | -0.0013 | 0.8166 | 0 | 6.4s | 86.81% |
+
+## Page Analysis — star_convex
+
+### Golden Set Winner Summary
+
+| Golden Set Page | Parameter Set ID | Baseline | Winner | Δ IoU | Status |
+|---:|---|---:|---:|---:|---|
+| 1 | `024732f5e631` | 0.9881 | 0.9761 | -0.0120 | Regressed |
+| 5 | `024732f5e631` | 0.5706 | 0.5367 | -0.0339 | Regressed |
+| 6 | `024732f5e631` | 0.3969 | 0.6626 | +0.2657 | Improved |
+| 9 | `024732f5e631` | 0.9542 | 0.9523 | -0.0020 | Regressed |
+| 10 | `024732f5e631` | 0.9683 | 0.9617 | -0.0066 | Regressed |
+
+#### Winner History
+
+| Discovery Order | Parameter Set ID | Search Time | % Search |
+|---:|---|---:|---:|
+| 7 | `05bb5aa0b671` | 5.3s | 67.72% |
+| 8 | `8b82548b32eb` | 5.3s | 68.54% |
+| 9 | `e7bf7814121d` | 5.4s | 68.96% |
+| 10 | `7ecd223a15dc` | 5.5s | 70.60% |
+| 11 (final) | `d1a67626e1a7` | 5.7s | 74.31% |
+
+Total winner changes: **11**.
+Search completed in **7.2s** wall-clock time.
+
+**Stabilization Interpretation:** Late convergence — the final winner emerged after 40–80% of the evaluated search.
+
+### Status Definitions
+
+- **Recovered:** baseline IoU was zero and the winner found a matching polygon.
+- **Improved:** Δ IoU is greater than `0.0010`.
+- **Unchanged:** Δ IoU is between `-0.0010` and `+0.0010`.
+- **Regressed:** Δ IoU is less than `-0.0010`.
+- **Poor match:** Winner IoU is greater than zero but below `0.5000`.
+- **Zero overlap:** a polygon was returned, but its IoU is zero.
+- **No polygon found:** the detector completed without returning a polygon.
+- **Unprocessed:** evaluation raised an error.
+
+### Golden Set Page Issues
+
+- Unprocessed pages: `0`
+- No polygon found: `0`
+- Zero overlap: `0`
+- Poor matches (Winner IoU < 0.5000): `0`
+- Regressed pages (Δ IoU < -0.0010): `4`
+
+#### Affected Pages
+
+| Golden Set Page | Parameter Set ID | Winner IoU | Problem |
+|---:|---|---:|---|
+| 1 | `024732f5e631` | 0.9761 | Regressed |
+| 5 | `024732f5e631` | 0.5367 | Regressed |
+| 9 | `024732f5e631` | 0.9523 | Regressed |
+| 10 | `024732f5e631` | 0.9617 | Regressed |
+
+## Calibration Intelligence — star_convex
+
+This run generated the same machine-readable calibration intelligence used by the multi-detector smoke regression. The conclusions remain specific to this Golden Set and configured parameter grid.
+
+### Calibration Identity
+
+- Calibration run ID: `run-20260812-155453`
+- Calibration schema: `1.1`
+- Detector: `star_convex`
+- Detector configuration: `hth-pipeline/config/detectors/star_convex.json`
+- Golden Set configuration: `hth-pipeline/config/golden_set.json`
+- Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
+- Pipeline commit: `4f49196091a44d5ca7cfe2269ab7c5a207f6336f`
+- Source commit: `1baeee3568bc00f0ccf273e8e318da8ded66e8e0`
+- Requested search strategy: `exhaustive`
+- Resolved search strategy: `exhaustive`
+- Strategy fallback: `none`
+- Configured threads: `38`
+
+### Detector-Selection Intelligence
+
+- Recommended parameter set: `024732f5e631`
+- Recommended parameter short name: `024732f5e631`
+- Best observed Avg IoU: `0.8179`
+- Avg IoU Success: `0.8179`
+- Worst Golden Set page (Min IoU): `0.5367`
+- Page-to-page StdDev: `0.1827`
+- Calibration evidence: `Medium`
+- Dormant parameters: `minimum_support_fraction`
+- Available domain spaces: `critical, exhaustive, important_plus, low_plus, moderate_plus, non_dormant`
+
+### Calibration Analysis
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 1 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Most parameter sets evaluated every Golden Set page successfully.
+
+#### Evidence of ROI
+
+The configured grid is fully characterized for this Golden Set; continue detector work only if the resulting quality or failure pattern remains operationally inadequate.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | complete exhaustive |
+| All possible parameter sets | 729 |
+| Parameter sets evaluated | 729 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 729 (100.0%) |
+| Best Avg IoU | 0.8179 |
+| Minimum Avg IoU | 0.7309 |
+| Avg IoU StdDev | 0.0213 |
+| Winner stabilized after | 719 parameter sets |
+| Winner stabilized | 6.8s (99% of search) |
+| Near-best coverage (basin; within 0.0010) | 3 (0.4%) |
+| Equivalent-best configurations (within 0.0001) | 3 (0.4%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 729 | 100.0% | 46m 14s | 1.0× |
+| Non-dormant | 243 | 33.3% | 15m 25s | 3.0× |
+| Low+ | 243 | 33.3% | 15m 25s | 3.0× |
+| Moderate+ | 27 | 3.7% | 1m 43s | 27.0× |
+| Important+ | 3 | 0.4% | 11.4s | 243.0× |
+| Critical | 3 | 0.4% | 11.4s | 243.0× |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: complete exhaustive coverage, high fully-successful-set rate, narrow near-best basin.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `smoothing_window` | Critical | 0.6484 | 0.0365 | 33.3% | `1` (0.8009), `9` (0.7645), `5` (0.7644) |
+| `maximum_radius_fraction` | Moderate | 0.0970 | 0.0150 | 33.3% | `0.6` (0.7822), `0.72` (0.7803), `0.84` (0.7673) |
+| `bbox_padding_fraction` | Moderate | 0.0312 | 0.0084 | 33.3% | `0` (0.7797), `0.008` (0.7788), `0.016` (0.7713) |
+| `ray_count` | Low | 0.0171 | 0.0065 | 33.3% | `360` (0.7804), `180` (0.7755), `90` (0.7739) |
+| `minimum_radius_fraction` | Low | 0.0053 | 0.0034 | 33.3% | `0.16` (0.7788), `0.05` (0.7756), `0.1` (0.7754) |
+| `minimum_support_fraction` | Dormant | 0.0000 | 0.0000 | 100.0% | `0.4` (0.7766), `0.55` (0.7766), `0.7` (0.7766) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`minimum_support_fraction`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `smoothing_window` × `maximum_radius_fraction` | 0.8276 | 0.1793 | 729 |
+| `maximum_radius_fraction` × `ray_count` | 0.1744 | 0.0774 | 729 |
+| `smoothing_window` × `ray_count` | 0.6890 | 0.0407 | 729 |
+| `maximum_radius_fraction` × `bbox_padding_fraction` | 0.1305 | 0.0335 | 729 |
+| `smoothing_window` × `bbox_padding_fraction` | 0.6799 | 0.0315 | 729 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.9437 | 0.8260 | 0.9917 | 0.0502 | 100.0% |
+| 5 | 0.5759 | 0.5286 | 0.6053 | 0.0208 | 100.0% |
+| 6 | 0.5139 | 0.3465 | 0.8804 | 0.1373 | 100.0% |
+| 9 | 0.9260 | 0.8888 | 0.9601 | 0.0244 | 100.0% |
+| 10 | 0.9235 | 0.8454 | 0.9738 | 0.0386 | 100.0% |
+
+</details>
+
 </details>
 
 </details>
@@ -7829,12 +8968,12 @@ Every completed regression contributes reusable quality and runtime evidence so 
 
 - `calibration-index.json` retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata.
 - Compatible authoritative calibrations remain preferred over provisional smoke observations.
-- Results commit: [0cfc881da9111cb8f3dbd4e2c3e03f5a163921bf](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/0cfc881da9111cb8f3dbd4e2c3e03f5a163921bf).
-- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/31611708328).
+- Results commit: [c486317abbf98a861d8db9948ac1eb78426290e3](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/c486317abbf98a861d8db9948ac1eb78426290e3).
+- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/31615060150).
 - Pipeline repository: [dlstupka/hth](https://github.com/dlstupka/hth).
 - Results repository: [dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results).
-- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0cfc881da9111cb8f3dbd4e2c3e03f5a163921bf/calibration-index.json).
-- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0cfc881da9111cb8f3dbd4e2c3e03f5a163921bf/runtime-index.json).
+- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/c486317abbf98a861d8db9948ac1eb78426290e3/calibration-index.json).
+- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/c486317abbf98a861d8db9948ac1eb78426290e3/runtime-index.json).
 - Smoke records are provisional; complete exhaustive full regressions are authoritative.
 
 [↑ Back to Navigation](#table-of-contents)
