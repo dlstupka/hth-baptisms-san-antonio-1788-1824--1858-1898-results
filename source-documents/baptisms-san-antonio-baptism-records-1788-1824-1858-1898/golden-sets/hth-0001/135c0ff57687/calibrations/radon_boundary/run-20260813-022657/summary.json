@@ -1,0 +1,3593 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260813-022657",
+  "detector": "radon_boundary",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "7.446",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "14",
+    "ranked_quality": "0.48107065",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 729,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 41,
+  "fully_successful_parameter_set_count": 7,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "72a4caf2b968f25a10d95da59f32415ac81e09525c5a3e64239999c5526573f9",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "7310593db919",
+    "parameters": {
+      "angle_limit_degrees": 4.0,
+      "angle_step_degrees": 0.5,
+      "edge_percentile": 75.0,
+      "projection_smooth_fraction": 0.006,
+      "minimum_peak_prominence": 1.05,
+      "bbox_padding_fraction": 0.016
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.48107065,
+      "mean_iou_success": 0.48107065,
+      "minimum_iou": 0.19175699,
+      "stddev_iou": 0.26547694,
+      "mean_edge_error_px": 161.7,
+      "elapsed_ms_total": 1237.029,
+      "wall_ms": 1240.116
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          418,
+          384,
+          1203,
+          753
+        ],
+        "iou": 0.27316476,
+        "edge_errors": {
+          "left": 293,
+          "top": 328,
+          "right": 86,
+          "bottom": 214,
+          "mean": 230.25,
+          "maximum": 328
+        },
+        "edge_error_mean_px": 230.25,
+        "edge_error_maximum_px": 328,
+        "elapsed_ms": 296.887,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            418,
+            384,
+            1203,
+            753
+          ],
+          "corners": [
+            [
+              437.7950439453125,
+              400.7868957519531
+            ],
+            [
+              1186.7664794921875,
+              407.32305908203125
+            ],
+            [
+              1183.8955078125,
+              736.3104858398438
+            ],
+            [
+              434.92401123046875,
+              729.7742919921875
+            ]
+          ],
+          "confidence": 0.03679721250121544,
+          "score": 0.03679721250121544,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 4.0,
+              "angle_step_degrees": 0.5,
+              "edge_percentile": 75.0,
+              "projection_smooth_fraction": 0.006,
+              "minimum_peak_prominence": 1.05,
+              "bbox_padding_fraction": 0.016
+            },
+            "angle_degrees": 0.5,
+            "projection_score": 762926.125,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 296.832
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          78,
+          82,
+          767,
+          987
+        ],
+        "iou": 0.54247482,
+        "edge_errors": {
+          "left": 11,
+          "top": 74,
+          "right": 466,
+          "bottom": 10,
+          "mean": 140.25,
+          "maximum": 466
+        },
+        "edge_error_mean_px": 140.25,
+        "edge_error_maximum_px": 466,
+        "elapsed_ms": 251.74,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            78,
+            82,
+            767,
+            987
+          ],
+          "corners": [
+            [
+              94.0,
+              98.0
+            ],
+            [
+              750.0,
+              98.0
+            ],
+            [
+              750.0,
+              971.0
+            ],
+            [
+              94.0,
+              971.0
+            ]
+          ],
+          "confidence": 0.06433737943799997,
+          "score": 0.06433737943799997,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 4.0,
+              "angle_step_degrees": 0.5,
+              "edge_percentile": 75.0,
+              "projection_smooth_fraction": 0.006,
+              "minimum_peak_prominence": 1.05,
+              "bbox_padding_fraction": 0.016
+            },
+            "angle_degrees": 0.0,
+            "projection_score": 510458.6875,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 251.708
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          2,
+          15,
+          1086,
+          983
+        ],
+        "iou": 0.95069722,
+        "edge_errors": {
+          "left": 13,
+          "top": 13,
+          "right": 12,
+          "bottom": 13,
+          "mean": 12.75,
+          "maximum": 13
+        },
+        "edge_error_mean_px": 12.75,
+        "edge_error_maximum_px": 13,
+        "elapsed_ms": 204.211,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            2,
+            15,
+            1086,
+            983
+          ],
+          "corners": [
+            [
+              18.0,
+              31.0
+            ],
+            [
+              1069.0,
+              31.0
+            ],
+            [
+              1069.0,
+              966.0
+            ],
+            [
+              18.0,
+              966.0
+            ]
+          ],
+          "confidence": 0.09904780616241338,
+          "score": 0.09904780616241338,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 4.0,
+              "angle_step_degrees": 0.5,
+              "edge_percentile": 75.0,
+              "projection_smooth_fraction": 0.006,
+              "minimum_peak_prominence": 1.05,
+              "bbox_padding_fraction": 0.016
+            },
+            "angle_degrees": 0.0,
+            "projection_score": 787018.8125,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 204.177
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          423,
+          423,
+          974,
+          738
+        ],
+        "iou": 0.19175699,
+        "edge_errors": {
+          "left": 339,
+          "top": 372,
+          "right": 127,
+          "bottom": 203,
+          "mean": 260.25,
+          "maximum": 372
+        },
+        "edge_error_mean_px": 260.25,
+        "edge_error_maximum_px": 372,
+        "elapsed_ms": 218.485,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            423,
+            423,
+            974,
+            738
+          ],
+          "corners": [
+            [
+              439.0,
+              439.0
+            ],
+            [
+              957.0,
+              439.0
+            ],
+            [
+              957.0,
+              721.0
+            ],
+            [
+              439.0,
+              721.0
+            ]
+          ],
+          "confidence": 0.04569243943563825,
+          "score": 0.04569243943563825,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 4.0,
+              "angle_step_degrees": 0.5,
+              "edge_percentile": 75.0,
+              "projection_smooth_fraction": 0.006,
+              "minimum_peak_prominence": 1.05,
+              "bbox_padding_fraction": 0.016
+            },
+            "angle_degrees": 0.0,
+            "projection_score": 741560.9375,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 218.45
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          452,
+          106,
+          1061,
+          838
+        ],
+        "iou": 0.44725948,
+        "edge_errors": {
+          "left": 364,
+          "top": 73,
+          "right": 93,
+          "bottom": 130,
+          "mean": 165.0,
+          "maximum": 364
+        },
+        "edge_error_mean_px": 165.0,
+        "edge_error_maximum_px": 364,
+        "elapsed_ms": 265.706,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            452,
+            106,
+            1061,
+            838
+          ],
+          "corners": [
+            [
+              468.0,
+              122.0
+            ],
+            [
+              1044.0,
+              122.0
+            ],
+            [
+              1044.0,
+              821.0
+            ],
+            [
+              468.0,
+              821.0
+            ]
+          ],
+          "confidence": 0.0432314967524763,
+          "score": 0.0432314967524763,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 4.0,
+              "angle_step_degrees": 0.5,
+              "edge_percentile": 75.0,
+              "projection_smooth_fraction": 0.006,
+              "minimum_peak_prominence": 1.05,
+              "bbox_padding_fraction": 0.016
+            },
+            "angle_degrees": 0.0,
+            "projection_score": 715847.125,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 265.674
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 4,
+      "parameter_set_number": 4,
+      "elapsed_seconds": 2.9549696580000386,
+      "search_fraction": 0.4
+    },
+    "profile": null,
+    "run_id": "run-20260813-022657",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "f26bbb16c7b6",
+    "parameters": {
+      "angle_limit_degrees": 8.0,
+      "angle_step_degrees": 1.0,
+      "edge_percentile": 82.0,
+      "projection_smooth_fraction": 0.012,
+      "minimum_peak_prominence": 1.25,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.42266405,
+      "mean_iou_success": 0.42266405,
+      "minimum_iou": 0.21297272,
+      "stddev_iou": 0.28627365,
+      "mean_edge_error_px": 188.25,
+      "elapsed_ms_total": 711.666,
+      "wall_ms": 712.399
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          432,
+          373,
+          1179,
+          725
+        ],
+        "iou": 0.24796587,
+        "edge_errors": {
+          "left": 307,
+          "top": 317,
+          "right": 110,
+          "bottom": 242,
+          "mean": 244.0,
+          "maximum": 317
+        },
+        "edge_error_mean_px": 244.0,
+        "edge_error_maximum_px": 317,
+        "elapsed_ms": 116.36,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            432,
+            373,
+            1179,
+            725
+          ],
+          "corners": [
+            [
+              432.958984375,
+              448.7301330566406
+            ],
+            [
+              1150.00927734375,
+              373.3651123046875
+            ],
+            [
+              1178.963623046875,
+              648.8477172851562
+            ],
+            [
+              461.9133605957031,
+              724.2127075195312
+            ]
+          ],
+          "confidence": 0.034749202583294135,
+          "score": 0.034749202583294135,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 8.0,
+              "angle_step_degrees": 1.0,
+              "edge_percentile": 82.0,
+              "projection_smooth_fraction": 0.012,
+              "minimum_peak_prominence": 1.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "angle_degrees": -6.0,
+            "projection_score": 613639.875,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 116.313
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          95,
+          99,
+          754,
+          810
+        ],
+        "iou": 0.41469871,
+        "edge_errors": {
+          "left": 28,
+          "top": 91,
+          "right": 479,
+          "bottom": 167,
+          "mean": 191.25,
+          "maximum": 479
+        },
+        "edge_error_mean_px": 191.25,
+        "edge_error_maximum_px": 479,
+        "elapsed_ms": 117.505,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            95,
+            99,
+            754,
+            810
+          ],
+          "corners": [
+            [
+              95.0,
+              99.0
+            ],
+            [
+              753.0,
+              99.0
+            ],
+            [
+              753.0,
+              809.0
+            ],
+            [
+              95.0,
+              809.0
+            ]
+          ],
+          "confidence": 0.06108169926121383,
+          "score": 0.06108169926121383,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 8.0,
+              "angle_step_degrees": 1.0,
+              "edge_percentile": 82.0,
+              "projection_smooth_fraction": 0.012,
+              "minimum_peak_prominence": 1.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "angle_degrees": 0.0,
+            "projection_score": 406921.3125,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 117.468
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          20,
+          34,
+          1067,
+          966
+        ],
+        "iou": 0.97817314,
+        "edge_errors": {
+          "left": 5,
+          "top": 6,
+          "right": 7,
+          "bottom": 4,
+          "mean": 5.5,
+          "maximum": 7
+        },
+        "edge_error_mean_px": 5.5,
+        "edge_error_maximum_px": 7,
+        "elapsed_ms": 137.426,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            20,
+            34,
+            1067,
+            966
+          ],
+          "corners": [
+            [
+              20.0,
+              34.0
+            ],
+            [
+              1066.0,
+              34.0
+            ],
+            [
+              1066.0,
+              965.0
+            ],
+            [
+              20.0,
+              965.0
+            ]
+          ],
+          "confidence": 0.062166139863977676,
+          "score": 0.062166139863977676,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 8.0,
+              "angle_step_degrees": 1.0,
+              "edge_percentile": 82.0,
+              "projection_smooth_fraction": 0.012,
+              "minimum_peak_prominence": 1.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "angle_degrees": 0.0,
+            "projection_score": 472884.8125,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 137.394
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          455,
+          437,
+          957,
+          821
+        ],
+        "iou": 0.21297272,
+        "edge_errors": {
+          "left": 371,
+          "top": 386,
+          "right": 144,
+          "bottom": 120,
+          "mean": 255.25,
+          "maximum": 386
+        },
+        "edge_error_mean_px": 255.25,
+        "edge_error_maximum_px": 386,
+        "elapsed_ms": 192.342,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            455,
+            437,
+            957,
+            821
+          ],
+          "corners": [
+            [
+              455.0,
+              437.0
+            ],
+            [
+              956.0,
+              437.0
+            ],
+            [
+              956.0,
+              820.0
+            ],
+            [
+              455.0,
+              820.0
+            ]
+          ],
+          "confidence": 0.04007246670062374,
+          "score": 0.04007246670062374,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 8.0,
+              "angle_step_degrees": 1.0,
+              "edge_percentile": 82.0,
+              "projection_smooth_fraction": 0.012,
+              "minimum_peak_prominence": 1.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "angle_degrees": 0.0,
+            "projection_score": 565080.5,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 192.309
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          509,
+          119,
+          981,
+          667
+        ],
+        "iou": 0.25950979,
+        "edge_errors": {
+          "left": 421,
+          "top": 86,
+          "right": 173,
+          "bottom": 301,
+          "mean": 245.25,
+          "maximum": 421
+        },
+        "edge_error_mean_px": 245.25,
+        "edge_error_maximum_px": 421,
+        "elapsed_ms": 148.033,
+        "candidate": {
+          "method": "radon_boundary",
+          "bbox": [
+            509,
+            119,
+            981,
+            667
+          ],
+          "corners": [
+            [
+              509.36480712890625,
+              135.13047790527344
+            ],
+            [
+              962.0888671875,
+              119.32101440429688
+            ],
+            [
+              980.6553955078125,
+              650.9968872070312
+            ],
+            [
+              527.9313354492188,
+              666.806396484375
+            ]
+          ],
+          "confidence": 0.03469597945338511,
+          "score": 0.03469597945338511,
+          "diagnostics": {
+            "parameters": {
+              "angle_limit_degrees": 8.0,
+              "angle_step_degrees": 1.0,
+              "edge_percentile": 82.0,
+              "projection_smooth_fraction": 0.012,
+              "minimum_peak_prominence": 1.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "angle_degrees": -2.0,
+            "projection_score": 489703.125,
+            "evidence": "projection_angle_boundary_integration",
+            "elapsed_ms": 147.997
+          },
+          "status": "ok",
+          "detector_name": "Radon Boundary Projection",
+          "origin": "HTH",
+          "foundation": [
+            "Projection-angle integration",
+            "Sobel gradients",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260813-022657",
+    "rank": 7,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "7310593db919",
+      "parameters": {
+        "angle_limit_degrees": 4.0,
+        "angle_step_degrees": 0.5,
+        "edge_percentile": 75.0,
+        "projection_smooth_fraction": 0.006,
+        "minimum_peak_prominence": 1.05,
+        "bbox_padding_fraction": 0.016
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.48107065,
+        "mean_iou_success": 0.48107065,
+        "minimum_iou": 0.19175699,
+        "stddev_iou": 0.26547694,
+        "mean_edge_error_px": 161.7,
+        "elapsed_ms_total": 1237.029,
+        "wall_ms": 1240.116
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            418,
+            384,
+            1203,
+            753
+          ],
+          "iou": 0.27316476,
+          "edge_errors": {
+            "left": 293,
+            "top": 328,
+            "right": 86,
+            "bottom": 214,
+            "mean": 230.25,
+            "maximum": 328
+          },
+          "edge_error_mean_px": 230.25,
+          "edge_error_maximum_px": 328,
+          "elapsed_ms": 296.887,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              418,
+              384,
+              1203,
+              753
+            ],
+            "corners": [
+              [
+                437.7950439453125,
+                400.7868957519531
+              ],
+              [
+                1186.7664794921875,
+                407.32305908203125
+              ],
+              [
+                1183.8955078125,
+                736.3104858398438
+              ],
+              [
+                434.92401123046875,
+                729.7742919921875
+              ]
+            ],
+            "confidence": 0.03679721250121544,
+            "score": 0.03679721250121544,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.5,
+              "projection_score": 762926.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 296.832
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            78,
+            82,
+            767,
+            987
+          ],
+          "iou": 0.54247482,
+          "edge_errors": {
+            "left": 11,
+            "top": 74,
+            "right": 466,
+            "bottom": 10,
+            "mean": 140.25,
+            "maximum": 466
+          },
+          "edge_error_mean_px": 140.25,
+          "edge_error_maximum_px": 466,
+          "elapsed_ms": 251.74,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              78,
+              82,
+              767,
+              987
+            ],
+            "corners": [
+              [
+                94.0,
+                98.0
+              ],
+              [
+                750.0,
+                98.0
+              ],
+              [
+                750.0,
+                971.0
+              ],
+              [
+                94.0,
+                971.0
+              ]
+            ],
+            "confidence": 0.06433737943799997,
+            "score": 0.06433737943799997,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 510458.6875,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 251.708
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            2,
+            15,
+            1086,
+            983
+          ],
+          "iou": 0.95069722,
+          "edge_errors": {
+            "left": 13,
+            "top": 13,
+            "right": 12,
+            "bottom": 13,
+            "mean": 12.75,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 204.211,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              2,
+              15,
+              1086,
+              983
+            ],
+            "corners": [
+              [
+                18.0,
+                31.0
+              ],
+              [
+                1069.0,
+                31.0
+              ],
+              [
+                1069.0,
+                966.0
+              ],
+              [
+                18.0,
+                966.0
+              ]
+            ],
+            "confidence": 0.09904780616241338,
+            "score": 0.09904780616241338,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 787018.8125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 204.177
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            423,
+            423,
+            974,
+            738
+          ],
+          "iou": 0.19175699,
+          "edge_errors": {
+            "left": 339,
+            "top": 372,
+            "right": 127,
+            "bottom": 203,
+            "mean": 260.25,
+            "maximum": 372
+          },
+          "edge_error_mean_px": 260.25,
+          "edge_error_maximum_px": 372,
+          "elapsed_ms": 218.485,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              423,
+              423,
+              974,
+              738
+            ],
+            "corners": [
+              [
+                439.0,
+                439.0
+              ],
+              [
+                957.0,
+                439.0
+              ],
+              [
+                957.0,
+                721.0
+              ],
+              [
+                439.0,
+                721.0
+              ]
+            ],
+            "confidence": 0.04569243943563825,
+            "score": 0.04569243943563825,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 741560.9375,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 218.45
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            452,
+            106,
+            1061,
+            838
+          ],
+          "iou": 0.44725948,
+          "edge_errors": {
+            "left": 364,
+            "top": 73,
+            "right": 93,
+            "bottom": 130,
+            "mean": 165.0,
+            "maximum": 364
+          },
+          "edge_error_mean_px": 165.0,
+          "edge_error_maximum_px": 364,
+          "elapsed_ms": 265.706,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              452,
+              106,
+              1061,
+              838
+            ],
+            "corners": [
+              [
+                468.0,
+                122.0
+              ],
+              [
+                1044.0,
+                122.0
+              ],
+              [
+                1044.0,
+                821.0
+              ],
+              [
+                468.0,
+                821.0
+              ]
+            ],
+            "confidence": 0.0432314967524763,
+            "score": 0.0432314967524763,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 715847.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 265.674
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 2.9549696580000386,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260813-022657",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "991ec364dc7e",
+      "parameters": {
+        "angle_limit_degrees": 4.0,
+        "angle_step_degrees": 0.5,
+        "edge_percentile": 75.0,
+        "projection_smooth_fraction": 0.006,
+        "minimum_peak_prominence": 1.05,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.47345467,
+        "mean_iou_success": 0.47345467,
+        "minimum_iou": 0.17673152,
+        "stddev_iou": 0.28222649,
+        "mean_edge_error_px": 165.75,
+        "elapsed_ms_total": 1419.964,
+        "wall_ms": 1420.538
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            426,
+            392,
+            1195,
+            745
+          ],
+          "iou": 0.25599394,
+          "edge_errors": {
+            "left": 301,
+            "top": 336,
+            "right": 94,
+            "bottom": 222,
+            "mean": 238.25,
+            "maximum": 336
+          },
+          "edge_error_mean_px": 238.25,
+          "edge_error_maximum_px": 336,
+          "elapsed_ms": 375.234,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              426,
+              392,
+              1195,
+              745
+            ],
+            "corners": [
+              [
+                437.7950439453125,
+                400.7868957519531
+              ],
+              [
+                1186.7664794921875,
+                407.32305908203125
+              ],
+              [
+                1183.8955078125,
+                736.3104858398438
+              ],
+              [
+                434.92401123046875,
+                729.7742919921875
+              ]
+            ],
+            "confidence": 0.03679721250121544,
+            "score": 0.03679721250121544,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.5,
+              "projection_score": 762926.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 375.202
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            86,
+            90,
+            759,
+            980
+          ],
+          "iou": 0.52740104,
+          "edge_errors": {
+            "left": 19,
+            "top": 82,
+            "right": 474,
+            "bottom": 3,
+            "mean": 144.5,
+            "maximum": 474
+          },
+          "edge_error_mean_px": 144.5,
+          "edge_error_maximum_px": 474,
+          "elapsed_ms": 208.01,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              86,
+              90,
+              759,
+              980
+            ],
+            "corners": [
+              [
+                94.0,
+                98.0
+              ],
+              [
+                750.0,
+                98.0
+              ],
+              [
+                750.0,
+                971.0
+              ],
+              [
+                94.0,
+                971.0
+              ]
+            ],
+            "confidence": 0.06433737943799997,
+            "score": 0.06433737943799997,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 510458.6875,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 207.975
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            10,
+            23,
+            1078,
+            975
+          ],
+          "iou": 0.98115735,
+          "edge_errors": {
+            "left": 5,
+            "top": 5,
+            "right": 4,
+            "bottom": 5,
+            "mean": 4.75,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 4.75,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 216.72,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              10,
+              23,
+              1078,
+              975
+            ],
+            "corners": [
+              [
+                18.0,
+                31.0
+              ],
+              [
+                1069.0,
+                31.0
+              ],
+              [
+                1069.0,
+                966.0
+              ],
+              [
+                18.0,
+                966.0
+              ]
+            ],
+            "confidence": 0.09904780616241338,
+            "score": 0.09904780616241338,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 787018.8125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 216.689
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            431,
+            431,
+            966,
+            730
+          ],
+          "iou": 0.17673152,
+          "edge_errors": {
+            "left": 347,
+            "top": 380,
+            "right": 135,
+            "bottom": 211,
+            "mean": 268.25,
+            "maximum": 380
+          },
+          "edge_error_mean_px": 268.25,
+          "edge_error_maximum_px": 380,
+          "elapsed_ms": 320.01,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              431,
+              431,
+              966,
+              730
+            ],
+            "corners": [
+              [
+                439.0,
+                439.0
+              ],
+              [
+                957.0,
+                439.0
+              ],
+              [
+                957.0,
+                721.0
+              ],
+              [
+                439.0,
+                721.0
+              ]
+            ],
+            "confidence": 0.04569243943563825,
+            "score": 0.04569243943563825,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 741560.9375,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 319.977
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            460,
+            114,
+            1053,
+            830
+          ],
+          "iou": 0.42598951,
+          "edge_errors": {
+            "left": 372,
+            "top": 81,
+            "right": 101,
+            "bottom": 138,
+            "mean": 173.0,
+            "maximum": 372
+          },
+          "edge_error_mean_px": 173.0,
+          "edge_error_maximum_px": 372,
+          "elapsed_ms": 299.99,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              460,
+              114,
+              1053,
+              830
+            ],
+            "corners": [
+              [
+                468.0,
+                122.0
+              ],
+              [
+                1044.0,
+                122.0
+              ],
+              [
+                1044.0,
+                821.0
+              ],
+              [
+                468.0,
+                821.0
+              ]
+            ],
+            "confidence": 0.0432314967524763,
+            "score": 0.0432314967524763,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 715847.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 299.956
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 2.143108428000005,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260813-022657",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "d16cee8d5acd",
+      "parameters": {
+        "angle_limit_degrees": 4.0,
+        "angle_step_degrees": 0.5,
+        "edge_percentile": 75.0,
+        "projection_smooth_fraction": 0.006,
+        "minimum_peak_prominence": 1.05,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.46041935,
+        "mean_iou_success": 0.46041935,
+        "minimum_iou": 0.16227172,
+        "stddev_iou": 0.28998864,
+        "mean_edge_error_px": 171.55,
+        "elapsed_ms_total": 997.045,
+        "wall_ms": 997.751
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            434,
+            400,
+            1187,
+            737
+          ],
+          "iou": 0.23930596,
+          "edge_errors": {
+            "left": 309,
+            "top": 344,
+            "right": 102,
+            "bottom": 230,
+            "mean": 246.25,
+            "maximum": 344
+          },
+          "edge_error_mean_px": 246.25,
+          "edge_error_maximum_px": 344,
+          "elapsed_ms": 135.985,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              434,
+              400,
+              1187,
+              737
+            ],
+            "corners": [
+              [
+                437.7950439453125,
+                400.7868957519531
+              ],
+              [
+                1186.7664794921875,
+                407.32305908203125
+              ],
+              [
+                1183.8955078125,
+                736.3104858398438
+              ],
+              [
+                434.92401123046875,
+                729.7742919921875
+              ]
+            ],
+            "confidence": 0.03679721250121544,
+            "score": 0.03679721250121544,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.0
+              },
+              "angle_degrees": 0.5,
+              "projection_score": 762926.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 135.953
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            94,
+            98,
+            751,
+            972
+          ],
+          "iou": 0.50822319,
+          "edge_errors": {
+            "left": 27,
+            "top": 90,
+            "right": 482,
+            "bottom": 5,
+            "mean": 151.0,
+            "maximum": 482
+          },
+          "edge_error_mean_px": 151.0,
+          "edge_error_maximum_px": 482,
+          "elapsed_ms": 142.862,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              94,
+              98,
+              751,
+              972
+            ],
+            "corners": [
+              [
+                94.0,
+                98.0
+              ],
+              [
+                750.0,
+                98.0
+              ],
+              [
+                750.0,
+                971.0
+              ],
+              [
+                94.0,
+                971.0
+              ]
+            ],
+            "confidence": 0.06433737943799997,
+            "score": 0.06433737943799997,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.0
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 510458.6875,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 142.804
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            18,
+            31,
+            1070,
+            967
+          ],
+          "iou": 0.98706267,
+          "edge_errors": {
+            "left": 3,
+            "top": 3,
+            "right": 4,
+            "bottom": 3,
+            "mean": 3.25,
+            "maximum": 4
+          },
+          "edge_error_mean_px": 3.25,
+          "edge_error_maximum_px": 4,
+          "elapsed_ms": 185.386,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              18,
+              31,
+              1070,
+              967
+            ],
+            "corners": [
+              [
+                18.0,
+                31.0
+              ],
+              [
+                1069.0,
+                31.0
+              ],
+              [
+                1069.0,
+                966.0
+              ],
+              [
+                18.0,
+                966.0
+              ]
+            ],
+            "confidence": 0.09904780616241338,
+            "score": 0.09904780616241338,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.0
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 787018.8125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 185.349
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            439,
+            439,
+            958,
+            722
+          ],
+          "iou": 0.16227172,
+          "edge_errors": {
+            "left": 355,
+            "top": 388,
+            "right": 143,
+            "bottom": 219,
+            "mean": 276.25,
+            "maximum": 388
+          },
+          "edge_error_mean_px": 276.25,
+          "edge_error_maximum_px": 388,
+          "elapsed_ms": 292.828,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              439,
+              439,
+              958,
+              722
+            ],
+            "corners": [
+              [
+                439.0,
+                439.0
+              ],
+              [
+                957.0,
+                439.0
+              ],
+              [
+                957.0,
+                721.0
+              ],
+              [
+                439.0,
+                721.0
+              ]
+            ],
+            "confidence": 0.04569243943563825,
+            "score": 0.04569243943563825,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.0
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 741560.9375,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 292.793
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            468,
+            122,
+            1045,
+            822
+          ],
+          "iou": 0.40523322,
+          "edge_errors": {
+            "left": 380,
+            "top": 89,
+            "right": 109,
+            "bottom": 146,
+            "mean": 181.0,
+            "maximum": 380
+          },
+          "edge_error_mean_px": 181.0,
+          "edge_error_maximum_px": 380,
+          "elapsed_ms": 239.984,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              468,
+              122,
+              1045,
+              822
+            ],
+            "corners": [
+              [
+                468.0,
+                122.0
+              ],
+              [
+                1044.0,
+                122.0
+              ],
+              [
+                1044.0,
+                821.0
+              ],
+              [
+                468.0,
+                821.0
+              ]
+            ],
+            "confidence": 0.0432314967524763,
+            "score": 0.0432314967524763,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.05,
+                "bbox_padding_fraction": 0.0
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 715847.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 239.951
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 1.7149694500000123,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260813-022657",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "227420ed6c9e",
+      "parameters": {
+        "angle_limit_degrees": 4.0,
+        "angle_step_degrees": 0.5,
+        "edge_percentile": 75.0,
+        "projection_smooth_fraction": 0.006,
+        "minimum_peak_prominence": 1.25,
+        "bbox_padding_fraction": 0.016
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.45568014,
+        "mean_iou_success": 0.45568014,
+        "minimum_iou": 0.1462122,
+        "stddev_iou": 0.28916154,
+        "mean_edge_error_px": 179.45,
+        "elapsed_ms_total": 1025.865,
+        "wall_ms": 1026.453
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            370,
+            441,
+            837,
+            773
+          ],
+          "iou": 0.1462122,
+          "edge_errors": {
+            "left": 245,
+            "top": 385,
+            "right": 452,
+            "bottom": 194,
+            "mean": 319.0,
+            "maximum": 452
+          },
+          "edge_error_mean_px": 319.0,
+          "edge_error_maximum_px": 452,
+          "elapsed_ms": 242.668,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              370,
+              441,
+              837,
+              773
+            ],
+            "corners": [
+              [
+                386.2665100097656,
+                468.96875
+              ],
+              [
+                813.1201782226562,
+                457.79119873046875
+              ],
+              [
+                820.6591186523438,
+                745.6925048828125
+              ],
+              [
+                393.80548095703125,
+                756.8700561523438
+              ]
+            ],
+            "confidence": 0.036400359182965546,
+            "score": 0.036400359182965546,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": -1.5,
+              "projection_score": 754698.0625,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 242.639
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            78,
+            82,
+            767,
+            987
+          ],
+          "iou": 0.54247482,
+          "edge_errors": {
+            "left": 11,
+            "top": 74,
+            "right": 466,
+            "bottom": 10,
+            "mean": 140.25,
+            "maximum": 466
+          },
+          "edge_error_mean_px": 140.25,
+          "edge_error_maximum_px": 466,
+          "elapsed_ms": 321.637,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              78,
+              82,
+              767,
+              987
+            ],
+            "corners": [
+              [
+                94.0,
+                98.0
+              ],
+              [
+                750.0,
+                98.0
+              ],
+              [
+                750.0,
+                971.0
+              ],
+              [
+                94.0,
+                971.0
+              ]
+            ],
+            "confidence": 0.06433737943799997,
+            "score": 0.06433737943799997,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 510458.6875,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 321.605
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            2,
+            15,
+            1086,
+            983
+          ],
+          "iou": 0.95069722,
+          "edge_errors": {
+            "left": 13,
+            "top": 13,
+            "right": 12,
+            "bottom": 13,
+            "mean": 12.75,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 169.003,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              2,
+              15,
+              1086,
+              983
+            ],
+            "corners": [
+              [
+                18.0,
+                31.0
+              ],
+              [
+                1069.0,
+                31.0
+              ],
+              [
+                1069.0,
+                966.0
+              ],
+              [
+                18.0,
+                966.0
+              ]
+            ],
+            "confidence": 0.09904780616241338,
+            "score": 0.09904780616241338,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 787018.8125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 168.973
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            423,
+            423,
+            974,
+            738
+          ],
+          "iou": 0.19175699,
+          "edge_errors": {
+            "left": 339,
+            "top": 372,
+            "right": 127,
+            "bottom": 203,
+            "mean": 260.25,
+            "maximum": 372
+          },
+          "edge_error_mean_px": 260.25,
+          "edge_error_maximum_px": 372,
+          "elapsed_ms": 126.473,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              423,
+              423,
+              974,
+              738
+            ],
+            "corners": [
+              [
+                439.0,
+                439.0
+              ],
+              [
+                957.0,
+                439.0
+              ],
+              [
+                957.0,
+                721.0
+              ],
+              [
+                439.0,
+                721.0
+              ]
+            ],
+            "confidence": 0.04569243943563825,
+            "score": 0.04569243943563825,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 741560.9375,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 126.443
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            452,
+            106,
+            1061,
+            838
+          ],
+          "iou": 0.44725948,
+          "edge_errors": {
+            "left": 364,
+            "top": 73,
+            "right": 93,
+            "bottom": 130,
+            "mean": 165.0,
+            "maximum": 364
+          },
+          "edge_error_mean_px": 165.0,
+          "edge_error_maximum_px": 364,
+          "elapsed_ms": 166.084,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              452,
+              106,
+              1061,
+              838
+            ],
+            "corners": [
+              [
+                468.0,
+                122.0
+              ],
+              [
+                1044.0,
+                122.0
+              ],
+              [
+                1044.0,
+                821.0
+              ],
+              [
+                468.0,
+                821.0
+              ]
+            ],
+            "confidence": 0.0432314967524763,
+            "score": 0.0432314967524763,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.016
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 715847.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 166.053
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 4.256962561000023,
+        "search_fraction": 0.7
+      },
+      "profile": null,
+      "run_id": "run-20260813-022657",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "06163c156ed7",
+      "parameters": {
+        "angle_limit_degrees": 4.0,
+        "angle_step_degrees": 0.5,
+        "edge_percentile": 75.0,
+        "projection_smooth_fraction": 0.006,
+        "minimum_peak_prominence": 1.25,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.44913545,
+        "mean_iou_success": 0.44913545,
+        "minimum_iou": 0.13439783,
+        "stddev_iou": 0.30429335,
+        "mean_edge_error_px": 183.5,
+        "elapsed_ms_total": 1089.029,
+        "wall_ms": 1089.598
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            378,
+            449,
+            829,
+            765
+          ],
+          "iou": 0.13439783,
+          "edge_errors": {
+            "left": 253,
+            "top": 393,
+            "right": 460,
+            "bottom": 202,
+            "mean": 327.0,
+            "maximum": 460
+          },
+          "edge_error_mean_px": 327.0,
+          "edge_error_maximum_px": 460,
+          "elapsed_ms": 142.039,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              378,
+              449,
+              829,
+              765
+            ],
+            "corners": [
+              [
+                386.2665100097656,
+                468.96875
+              ],
+              [
+                813.1201782226562,
+                457.79119873046875
+              ],
+              [
+                820.6591186523438,
+                745.6925048828125
+              ],
+              [
+                393.80548095703125,
+                756.8700561523438
+              ]
+            ],
+            "confidence": 0.036400359182965546,
+            "score": 0.036400359182965546,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": -1.5,
+              "projection_score": 754698.0625,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 142.011
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            86,
+            90,
+            759,
+            980
+          ],
+          "iou": 0.52740104,
+          "edge_errors": {
+            "left": 19,
+            "top": 82,
+            "right": 474,
+            "bottom": 3,
+            "mean": 144.5,
+            "maximum": 474
+          },
+          "edge_error_mean_px": 144.5,
+          "edge_error_maximum_px": 474,
+          "elapsed_ms": 234.218,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              86,
+              90,
+              759,
+              980
+            ],
+            "corners": [
+              [
+                94.0,
+                98.0
+              ],
+              [
+                750.0,
+                98.0
+              ],
+              [
+                750.0,
+                971.0
+              ],
+              [
+                94.0,
+                971.0
+              ]
+            ],
+            "confidence": 0.06433737943799997,
+            "score": 0.06433737943799997,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 510458.6875,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 234.186
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            10,
+            23,
+            1078,
+            975
+          ],
+          "iou": 0.98115735,
+          "edge_errors": {
+            "left": 5,
+            "top": 5,
+            "right": 4,
+            "bottom": 5,
+            "mean": 4.75,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 4.75,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 281.996,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              10,
+              23,
+              1078,
+              975
+            ],
+            "corners": [
+              [
+                18.0,
+                31.0
+              ],
+              [
+                1069.0,
+                31.0
+              ],
+              [
+                1069.0,
+                966.0
+              ],
+              [
+                18.0,
+                966.0
+              ]
+            ],
+            "confidence": 0.09904780616241338,
+            "score": 0.09904780616241338,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 787018.8125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 281.965
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            431,
+            431,
+            966,
+            730
+          ],
+          "iou": 0.17673152,
+          "edge_errors": {
+            "left": 347,
+            "top": 380,
+            "right": 135,
+            "bottom": 211,
+            "mean": 268.25,
+            "maximum": 380
+          },
+          "edge_error_mean_px": 268.25,
+          "edge_error_maximum_px": 380,
+          "elapsed_ms": 262.984,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              431,
+              431,
+              966,
+              730
+            ],
+            "corners": [
+              [
+                439.0,
+                439.0
+              ],
+              [
+                957.0,
+                439.0
+              ],
+              [
+                957.0,
+                721.0
+              ],
+              [
+                439.0,
+                721.0
+              ]
+            ],
+            "confidence": 0.04569243943563825,
+            "score": 0.04569243943563825,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 741560.9375,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 262.955
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            460,
+            114,
+            1053,
+            830
+          ],
+          "iou": 0.42598951,
+          "edge_errors": {
+            "left": 372,
+            "top": 81,
+            "right": 101,
+            "bottom": 138,
+            "mean": 173.0,
+            "maximum": 372
+          },
+          "edge_error_mean_px": 173.0,
+          "edge_error_maximum_px": 372,
+          "elapsed_ms": 167.792,
+          "candidate": {
+            "method": "radon_boundary",
+            "bbox": [
+              460,
+              114,
+              1053,
+              830
+            ],
+            "corners": [
+              [
+                468.0,
+                122.0
+              ],
+              [
+                1044.0,
+                122.0
+              ],
+              [
+                1044.0,
+                821.0
+              ],
+              [
+                468.0,
+                821.0
+              ]
+            ],
+            "confidence": 0.0432314967524763,
+            "score": 0.0432314967524763,
+            "diagnostics": {
+              "parameters": {
+                "angle_limit_degrees": 4.0,
+                "angle_step_degrees": 0.5,
+                "edge_percentile": 75.0,
+                "projection_smooth_fraction": 0.006,
+                "minimum_peak_prominence": 1.25,
+                "bbox_padding_fraction": 0.008
+              },
+              "angle_degrees": 0.0,
+              "projection_score": 715847.125,
+              "evidence": "projection_angle_boundary_integration",
+              "elapsed_ms": 167.759
+            },
+            "status": "ok",
+            "detector_name": "Radon Boundary Projection",
+            "origin": "HTH",
+            "foundation": [
+              "Projection-angle integration",
+              "Sobel gradients",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 4.044020590000002,
+        "search_fraction": 0.6
+      },
+      "profile": null,
+      "run_id": "run-20260813-022657",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 3,
+      "regressions": 2
+    },
+    "pages": [
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.97817314,
+        "winner_iou": 0.95069722,
+        "delta_iou": -0.02747592,
+        "status": "Regressed",
+        "parameter_set": "7310593db919",
+        "parameter_set_id": "7310593db919",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.41469871,
+        "winner_iou": 0.54247482,
+        "delta_iou": 0.12777611,
+        "status": "Improved",
+        "parameter_set": "7310593db919",
+        "parameter_set_id": "7310593db919",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.25950979,
+        "winner_iou": 0.44725948,
+        "delta_iou": 0.18774969,
+        "status": "Improved",
+        "parameter_set": "7310593db919",
+        "parameter_set_id": "7310593db919",
+        "problem": true,
+        "problem_reasons": [
+          "Poor match"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.24796587,
+        "winner_iou": 0.27316476,
+        "delta_iou": 0.02519889,
+        "status": "Improved",
+        "parameter_set": "7310593db919",
+        "parameter_set_id": "7310593db919",
+        "problem": true,
+        "problem_reasons": [
+          "Poor match"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.21297272,
+        "winner_iou": 0.19175699,
+        "delta_iou": -0.02121573,
+        "status": "Regressed",
+        "parameter_set": "7310593db919",
+        "parameter_set_id": "7310593db919",
+        "problem": true,
+        "problem_reasons": [
+          "Poor match",
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000509",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmvrwv9",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766423040,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "7b47d04d81e4a6729ab168e9f03e3a037da7d88b",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31660494922",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "ad6992f42d74e6a1bd45427e1c0d30f149440803",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 237993984,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 1.7571704110559399,
+    "failures": 9,
+    "best_mean_iou": 0.48107065,
+    "best_worst_page_iou": 0.21297272,
+    "best_stddev_iou": 0.26547694,
+    "mean_iou_improvements": 3,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 2,
+    "total_metric_improvements": 5,
+    "parameter_sets_with_improvements": 3,
+    "winner_changes": 3,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 1.7149694500000123,
+    "winner_last_changed_elapsed_seconds": 2.9549696580000386,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "d16cee8d5acd",
+        "parameter_short_name": "d16cee8d",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 1.7149694500000123,
+        "search_fraction": 0.2
+      },
+      {
+        "change_number": 2,
+        "parameter_set_id": "991ec364dc7e",
+        "parameter_short_name": "991ec364",
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 2.143108428000005,
+        "search_fraction": 0.3
+      },
+      {
+        "change_number": 3,
+        "parameter_set_id": "7310593db919",
+        "parameter_short_name": "7310593d",
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 2.9549696580000386,
+        "search_fraction": 0.4
+      }
+    ],
+    "last_improvement_elapsed_seconds": 2.9549696580000386,
+    "time_since_last_improvement_seconds": 2.735998011999982
+  }
+}
