@@ -1,0 +1,127 @@
+{
+  "schema_version": "0.4",
+  "detector": "gradient_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/gradient_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "1.215",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "24",
+    "ranked_quality": "0.90563354",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "gradient_vote",
+    "description": "Calibration space for the HTH Gradient Boundary Voting detector.",
+    "profiles": {
+      "baseline": {
+        "gaussian_sigma": 1.2,
+        "border_search_fraction": 0.42,
+        "central_band_fraction": 0.86,
+        "gradient_percentile": 82.0,
+        "vote_smooth_fraction": 0.012,
+        "minimum_vote_support": 0.16,
+        "minimum_span_fraction": 0.45,
+        "minimum_area_fraction": 0.2,
+        "support_weight": 0.55,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2
+      }
+    },
+    "parameters": {
+      "gaussian_sigma": {
+        "type": "float",
+        "values": [
+          0.8,
+          1.2,
+          1.8
+        ]
+      },
+      "border_search_fraction": {
+        "type": "float",
+        "values": [
+          0.35,
+          0.42,
+          0.47
+        ]
+      },
+      "central_band_fraction": {
+        "type": "float",
+        "values": [
+          0.7,
+          0.86,
+          1.0
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          70.0,
+          82.0,
+          90.0
+        ]
+      },
+      "vote_smooth_fraction": {
+        "type": "float",
+        "values": [
+          0.006,
+          0.012,
+          0.02
+        ]
+      },
+      "minimum_vote_support": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.16,
+          0.25
+        ]
+      },
+      "minimum_span_fraction": {
+        "type": "float",
+        "values": [
+          0.35,
+          0.45,
+          0.55
+        ]
+      },
+      "support_weight": {
+        "type": "float",
+        "values": [
+          0.45,
+          0.55,
+          0.65
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures"
+    }
+  }
+}

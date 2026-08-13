@@ -1,0 +1,3981 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260813-133610",
+  "detector": "learned_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "87.514",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "4",
+    "ranked_quality": "0.87945478",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 10000,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 50,
+  "fully_successful_parameter_set_count": 10,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "c27406ddb1ca81cb221653223428f53b64577e1353fb7eec0a7673176720cca0",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "aecf1aa9e190",
+    "parameters": {
+      "mask_threshold": 0.12,
+      "minimum_mask_area_fraction": 0.04,
+      "close_kernel_fraction": 0.0,
+      "polygon_epsilon_fraction": 0.012,
+      "bbox_padding_fraction": 0.012
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.87411197,
+      "mean_iou_success": 0.87411197,
+      "minimum_iou": 0.77274158,
+      "stddev_iou": 0.05806013,
+      "mean_edge_error_px": 33.45,
+      "elapsed_ms_total": 11675.776,
+      "wall_ms": 11676.385
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          112,
+          18,
+          1308,
+          986
+        ],
+        "iou": 0.91593535,
+        "edge_errors": {
+          "left": 13,
+          "top": 38,
+          "right": 19,
+          "bottom": 19,
+          "mean": 22.25,
+          "maximum": 38
+        },
+        "edge_error_mean_px": 22.25,
+        "edge_error_maximum_px": 38,
+        "elapsed_ms": 2258.956,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            112,
+            18,
+            1308,
+            986
+          ],
+          "corners": [
+            [
+              1295.625,
+              982.1484375
+            ],
+            [
+              124.1640625,
+              982.1484375
+            ],
+            [
+              124.1640625,
+              30.8125
+            ],
+            [
+              1295.625,
+              30.8125
+            ]
+          ],
+          "confidence": 0.9524234175682068,
+          "score": 0.9524234175682068,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.12,
+              "minimum_mask_area_fraction": 0.04,
+              "close_kernel_fraction": 0.0,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.012
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 0.0,
+            "probability_max": 0.9999984502792358,
+            "probability_mean": 0.6749371886253357,
+            "thresholded_fraction": 0.72479248046875,
+            "mask_area_fraction": 0.7152786254882812,
+            "mean_page_probability": 0.9268052577972412,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2258.932
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          59,
+          0,
+          1303,
+          987
+        ],
+        "iou": 0.92020544,
+        "edge_errors": {
+          "left": 8,
+          "top": 8,
+          "right": 70,
+          "bottom": 10,
+          "mean": 24.0,
+          "maximum": 70
+        },
+        "edge_error_mean_px": 24.0,
+        "edge_error_maximum_px": 70,
+        "elapsed_ms": 2384.882,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            59,
+            0,
+            1303,
+            987
+          ],
+          "corners": [
+            [
+              1205.21142578125,
+              991.3297729492188
+            ],
+            [
+              71.28336334228516,
+              933.58349609375
+            ],
+            [
+              156.7181396484375,
+              -10.082571983337402
+            ],
+            [
+              1290.646240234375,
+              47.66374588012695
+            ]
+          ],
+          "confidence": 0.8517429411411286,
+          "score": 0.8517429411411286,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.12,
+              "minimum_mask_area_fraction": 0.04,
+              "close_kernel_fraction": 0.0,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.012
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 0.0,
+            "probability_max": 0.9999995827674866,
+            "probability_mean": 0.5188907384872437,
+            "thresholded_fraction": 0.6632232666015625,
+            "mask_area_fraction": 0.6541824340820312,
+            "mean_page_probability": 0.7719122171401978,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2384.843
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          85,
+          45,
+          1067,
+          830
+        ],
+        "iou": 0.77274158,
+        "edge_errors": {
+          "left": 70,
+          "top": 17,
+          "right": 7,
+          "bottom": 140,
+          "mean": 58.5,
+          "maximum": 140
+        },
+        "edge_error_mean_px": 58.5,
+        "edge_error_maximum_px": 140,
+        "elapsed_ms": 2439.515,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            85,
+            45,
+            1067,
+            830
+          ],
+          "corners": [
+            [
+              1054.0,
+              817.88671875
+            ],
+            [
+              97.75,
+              817.88671875
+            ],
+            [
+              97.75,
+              57.59765625
+            ],
+            [
+              1054.0,
+              57.59765625
+            ]
+          ],
+          "confidence": 0.8793491661548615,
+          "score": 0.8793491661548615,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.12,
+              "minimum_mask_area_fraction": 0.04,
+              "close_kernel_fraction": 0.0,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.012
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 1.1920928955078125e-07,
+            "probability_max": 0.9999979734420776,
+            "probability_mean": 0.4156903624534607,
+            "thresholded_fraction": 0.4884033203125,
+            "mask_area_fraction": 0.47832489013671875,
+            "mean_page_probability": 0.8377257585525513,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2439.476
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          113,
+          26,
+          1145,
+          878
+        ],
+        "iou": 0.84468189,
+        "edge_errors": {
+          "left": 29,
+          "top": 25,
+          "right": 44,
+          "bottom": 63,
+          "mean": 40.25,
+          "maximum": 63
+        },
+        "edge_error_mean_px": 40.25,
+        "edge_error_maximum_px": 63,
+        "elapsed_ms": 2344.815,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            113,
+            26,
+            1145,
+            878
+          ],
+          "corners": [
+            [
+              1132.03125,
+              865.72265625
+            ],
+            [
+              125.78125,
+              865.72265625
+            ],
+            [
+              125.78125,
+              38.4765625
+            ],
+            [
+              1132.03125,
+              38.4765625
+            ]
+          ],
+          "confidence": 0.9685649603605271,
+          "score": 0.9685649603605271,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.12,
+              "minimum_mask_area_fraction": 0.04,
+              "close_kernel_fraction": 0.0,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.012
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 0.0,
+            "probability_max": 0.9999871850013733,
+            "probability_mean": 0.5691831111907959,
+            "thresholded_fraction": 0.5826568603515625,
+            "mask_area_fraction": 0.5766830444335938,
+            "mean_page_probability": 0.951638400554657,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2344.778
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          109,
+          18,
+          1189,
+          950
+        ],
+        "iou": 0.91699561,
+        "edge_errors": {
+          "left": 21,
+          "top": 15,
+          "right": 35,
+          "bottom": 18,
+          "mean": 22.25,
+          "maximum": 35
+        },
+        "edge_error_mean_px": 22.25,
+        "edge_error_maximum_px": 35,
+        "elapsed_ms": 2247.608,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            109,
+            18,
+            1189,
+            950
+          ],
+          "corners": [
+            [
+              1168.92529296875,
+              937.2536010742188
+            ],
+            [
+              121.60685729980469,
+              931.6909790039062
+            ],
+            [
+              129.46267700195312,
+              30.072935104370117
+            ],
+            [
+              1176.781005859375,
+              35.63555908203125
+            ]
+          ],
+          "confidence": 0.9612831711769104,
+          "score": 0.9612831711769104,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.12,
+              "minimum_mask_area_fraction": 0.04,
+              "close_kernel_fraction": 0.0,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.012
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 1.1920928955078125e-07,
+            "probability_max": 0.9999127984046936,
+            "probability_mean": 0.6228923201560974,
+            "thresholded_fraction": 0.6515655517578125,
+            "mask_area_fraction": 0.6451416015625,
+            "mean_page_probability": 0.9404356479644775,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2247.569
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 22.964554424,
+      "search_fraction": 0.2
+    },
+    "profile": null,
+    "run_id": "run-20260813-133610",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "04e0ef2b5787",
+    "parameters": {
+      "mask_threshold": 0.5,
+      "minimum_mask_area_fraction": 0.15,
+      "close_kernel_fraction": 0.006,
+      "polygon_epsilon_fraction": 0.012,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.8374375,
+      "mean_iou_success": 0.8374375,
+      "minimum_iou": 0.70294253,
+      "stddev_iou": 0.07402179,
+      "mean_edge_error_px": 42.4,
+      "elapsed_ms_total": 11282.089,
+      "wall_ms": 11282.792
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          134,
+          34,
+          1285,
+          894
+        ],
+        "iou": 0.88838068,
+        "edge_errors": {
+          "left": 9,
+          "top": 22,
+          "right": 4,
+          "bottom": 73,
+          "mean": 27.0,
+          "maximum": 73
+        },
+        "edge_error_mean_px": 27.0,
+        "edge_error_maximum_px": 73,
+        "elapsed_ms": 2300.634,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            134,
+            34,
+            1285,
+            894
+          ],
+          "corners": [
+            [
+              1284.8280029296875,
+              893.5623779296875
+            ],
+            [
+              134.9609375,
+              893.5623779296875
+            ],
+            [
+              134.9609375,
+              34.6640625
+            ],
+            [
+              1284.8280029296875,
+              34.6640625
+            ]
+          ],
+          "confidence": 0.9880215883255005,
+          "score": 0.9880215883255005,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.5,
+              "minimum_mask_area_fraction": 0.15,
+              "close_kernel_fraction": 0.006,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.0
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 0.0,
+            "probability_max": 0.9999984502792358,
+            "probability_mean": 0.6749371886253357,
+            "thresholded_fraction": 0.6577606201171875,
+            "mask_area_fraction": 0.6508102416992188,
+            "mean_page_probability": 0.9815716743469238,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2300.594
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          108,
+          6,
+          1275,
+          965
+        ],
+        "iou": 0.9183227,
+        "edge_errors": {
+          "left": 41,
+          "top": 2,
+          "right": 42,
+          "bottom": 12,
+          "mean": 24.25,
+          "maximum": 42
+        },
+        "edge_error_mean_px": 24.25,
+        "edge_error_maximum_px": 42,
+        "elapsed_ms": 2146.957,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            108,
+            6,
+            1275,
+            965
+          ],
+          "corners": [
+            [
+              1209.570556640625,
+              964.948974609375
+            ],
+            [
+              108.4143295288086,
+              921.1943969726562
+            ],
+            [
+              173.02178955078125,
+              6.59420108795166
+            ],
+            [
+              1274.1781005859375,
+              50.34867858886719
+            ]
+          ],
+          "confidence": 0.9015190809965133,
+          "score": 0.9015190809965133,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.5,
+              "minimum_mask_area_fraction": 0.15,
+              "close_kernel_fraction": 0.006,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.0
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 0.0,
+            "probability_max": 0.9999995827674866,
+            "probability_mean": 0.5188907384872437,
+            "thresholded_fraction": 0.573944091796875,
+            "mask_area_fraction": 0.5662612915039062,
+            "mean_page_probability": 0.8484908938407898,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2146.913
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          110,
+          61,
+          1050,
+          807
+        ],
+        "iou": 0.70294253,
+        "edge_errors": {
+          "left": 95,
+          "top": 33,
+          "right": 24,
+          "bottom": 163,
+          "mean": 78.75,
+          "maximum": 163
+        },
+        "edge_error_mean_px": 78.75,
+        "edge_error_maximum_px": 163,
+        "elapsed_ms": 2177.32,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            110,
+            61,
+            1050,
+            807
+          ],
+          "corners": [
+            [
+              1049.75,
+              806.3671875
+            ],
+            [
+              110.5,
+              806.3671875
+            ],
+            [
+              110.5,
+              61.4375
+            ],
+            [
+              1049.75,
+              61.4375
+            ]
+          ],
+          "confidence": 0.8873628377914429,
+          "score": 0.8873628377914429,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.5,
+              "minimum_mask_area_fraction": 0.15,
+              "close_kernel_fraction": 0.006,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.0
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 1.1920928955078125e-07,
+            "probability_max": 0.9999979734420776,
+            "probability_mean": 0.4156903624534607,
+            "thresholded_fraction": 0.427886962890625,
+            "mask_area_fraction": 0.41922760009765625,
+            "mean_page_probability": 0.9136977195739746,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2177.28
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          129,
+          53,
+          1123,
+          858
+        ],
+        "iou": 0.84788262,
+        "edge_errors": {
+          "left": 45,
+          "top": 2,
+          "right": 22,
+          "bottom": 83,
+          "mean": 38.0,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 38.0,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 2256.355,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            129,
+            53,
+            1123,
+            858
+          ],
+          "corners": [
+            [
+              1116.093994140625,
+              857.9994506835938
+            ],
+            [
+              129.9132843017578,
+              853.3150634765625
+            ],
+            [
+              136.41270446777344,
+              53.08123016357422
+            ],
+            [
+              1122.5933837890625,
+              57.765628814697266
+            ]
+          ],
+          "confidence": 0.9859283417463303,
+          "score": 0.9859283417463303,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.5,
+              "minimum_mask_area_fraction": 0.15,
+              "close_kernel_fraction": 0.006,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.0
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 0.0,
+            "probability_max": 0.9999871850013733,
+            "probability_mean": 0.5691831111907959,
+            "thresholded_fraction": 0.5601959228515625,
+            "mask_area_fraction": 0.554412841796875,
+            "mean_page_probability": 0.9783512949943542,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2256.317
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          138,
+          58,
+          1169,
+          882
+        ],
+        "iou": 0.82965899,
+        "edge_errors": {
+          "left": 50,
+          "top": 25,
+          "right": 15,
+          "bottom": 86,
+          "mean": 44.0,
+          "maximum": 86
+        },
+        "edge_error_mean_px": 44.0,
+        "edge_error_maximum_px": 86,
+        "elapsed_ms": 2400.823,
+        "candidate": {
+          "method": "learned_page_mask",
+          "bbox": [
+            138,
+            58,
+            1169,
+            882
+          ],
+          "corners": [
+            [
+              1168.9373779296875,
+              881.7186279296875
+            ],
+            [
+              138.6875,
+              881.7186279296875
+            ],
+            [
+              138.6875,
+              58.0078125
+            ],
+            [
+              1168.9373779296875,
+              58.0078125
+            ]
+          ],
+          "confidence": 0.9830526798963547,
+          "score": 0.9830526798963547,
+          "diagnostics": {
+            "parameters": {
+              "mask_threshold": 0.5,
+              "minimum_mask_area_fraction": 0.15,
+              "close_kernel_fraction": 0.006,
+              "polygon_epsilon_fraction": 0.012,
+              "bbox_padding_fraction": 0.0
+            },
+            "model_id": "pagenet-ohio",
+            "model_family": "PageNet",
+            "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+            "model_license": "BSD-3-Clause",
+            "model_source": "https://github.com/ctensmeyer/pagenet",
+            "inference_backend": "opencv-dnn-caffe",
+            "probability_min": 1.1920928955078125e-07,
+            "probability_max": 0.9999127984046936,
+            "probability_mean": 0.6228923201560974,
+            "thresholded_fraction": 0.6202239990234375,
+            "mask_area_fraction": 0.6141586303710938,
+            "mean_page_probability": 0.9739271998405457,
+            "evidence": "pagenet_learned_page_segmentation",
+            "postprocess_resolution": "256x256",
+            "elapsed_ms": 2400.784
+          },
+          "status": "ok",
+          "detector_name": "Learned Page-Mask Detector",
+          "origin": "PageNet / HTH",
+          "foundation": [
+            "PageNet",
+            "Learned page segmentation",
+            "OpenCV DNN",
+            "Caffe"
+          ],
+          "authors": [
+            "Chris Tensmeyer et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260813-133610",
+    "rank": 10,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "aecf1aa9e190",
+      "parameters": {
+        "mask_threshold": 0.12,
+        "minimum_mask_area_fraction": 0.04,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.012
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87411197,
+        "mean_iou_success": 0.87411197,
+        "minimum_iou": 0.77274158,
+        "stddev_iou": 0.05806013,
+        "mean_edge_error_px": 33.45,
+        "elapsed_ms_total": 11675.776,
+        "wall_ms": 11676.385
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            112,
+            18,
+            1308,
+            986
+          ],
+          "iou": 0.91593535,
+          "edge_errors": {
+            "left": 13,
+            "top": 38,
+            "right": 19,
+            "bottom": 19,
+            "mean": 22.25,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 2258.956,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              112,
+              18,
+              1308,
+              986
+            ],
+            "corners": [
+              [
+                1295.625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                30.8125
+              ],
+              [
+                1295.625,
+                30.8125
+              ]
+            ],
+            "confidence": 0.9524234175682068,
+            "score": 0.9524234175682068,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.012
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999984502792358,
+              "probability_mean": 0.6749371886253357,
+              "thresholded_fraction": 0.72479248046875,
+              "mask_area_fraction": 0.7152786254882812,
+              "mean_page_probability": 0.9268052577972412,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2258.932
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            59,
+            0,
+            1303,
+            987
+          ],
+          "iou": 0.92020544,
+          "edge_errors": {
+            "left": 8,
+            "top": 8,
+            "right": 70,
+            "bottom": 10,
+            "mean": 24.0,
+            "maximum": 70
+          },
+          "edge_error_mean_px": 24.0,
+          "edge_error_maximum_px": 70,
+          "elapsed_ms": 2384.882,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              59,
+              0,
+              1303,
+              987
+            ],
+            "corners": [
+              [
+                1205.21142578125,
+                991.3297729492188
+              ],
+              [
+                71.28336334228516,
+                933.58349609375
+              ],
+              [
+                156.7181396484375,
+                -10.082571983337402
+              ],
+              [
+                1290.646240234375,
+                47.66374588012695
+              ]
+            ],
+            "confidence": 0.8517429411411286,
+            "score": 0.8517429411411286,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.012
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999995827674866,
+              "probability_mean": 0.5188907384872437,
+              "thresholded_fraction": 0.6632232666015625,
+              "mask_area_fraction": 0.6541824340820312,
+              "mean_page_probability": 0.7719122171401978,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2384.843
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            85,
+            45,
+            1067,
+            830
+          ],
+          "iou": 0.77274158,
+          "edge_errors": {
+            "left": 70,
+            "top": 17,
+            "right": 7,
+            "bottom": 140,
+            "mean": 58.5,
+            "maximum": 140
+          },
+          "edge_error_mean_px": 58.5,
+          "edge_error_maximum_px": 140,
+          "elapsed_ms": 2439.515,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              85,
+              45,
+              1067,
+              830
+            ],
+            "corners": [
+              [
+                1054.0,
+                817.88671875
+              ],
+              [
+                97.75,
+                817.88671875
+              ],
+              [
+                97.75,
+                57.59765625
+              ],
+              [
+                1054.0,
+                57.59765625
+              ]
+            ],
+            "confidence": 0.8793491661548615,
+            "score": 0.8793491661548615,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.012
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999979734420776,
+              "probability_mean": 0.4156903624534607,
+              "thresholded_fraction": 0.4884033203125,
+              "mask_area_fraction": 0.47832489013671875,
+              "mean_page_probability": 0.8377257585525513,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2439.476
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            113,
+            26,
+            1145,
+            878
+          ],
+          "iou": 0.84468189,
+          "edge_errors": {
+            "left": 29,
+            "top": 25,
+            "right": 44,
+            "bottom": 63,
+            "mean": 40.25,
+            "maximum": 63
+          },
+          "edge_error_mean_px": 40.25,
+          "edge_error_maximum_px": 63,
+          "elapsed_ms": 2344.815,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              113,
+              26,
+              1145,
+              878
+            ],
+            "corners": [
+              [
+                1132.03125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                38.4765625
+              ],
+              [
+                1132.03125,
+                38.4765625
+              ]
+            ],
+            "confidence": 0.9685649603605271,
+            "score": 0.9685649603605271,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.012
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999871850013733,
+              "probability_mean": 0.5691831111907959,
+              "thresholded_fraction": 0.5826568603515625,
+              "mask_area_fraction": 0.5766830444335938,
+              "mean_page_probability": 0.951638400554657,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2344.778
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            109,
+            18,
+            1189,
+            950
+          ],
+          "iou": 0.91699561,
+          "edge_errors": {
+            "left": 21,
+            "top": 15,
+            "right": 35,
+            "bottom": 18,
+            "mean": 22.25,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 2247.608,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              109,
+              18,
+              1189,
+              950
+            ],
+            "corners": [
+              [
+                1168.92529296875,
+                937.2536010742188
+              ],
+              [
+                121.60685729980469,
+                931.6909790039062
+              ],
+              [
+                129.46267700195312,
+                30.072935104370117
+              ],
+              [
+                1176.781005859375,
+                35.63555908203125
+              ]
+            ],
+            "confidence": 0.9612831711769104,
+            "score": 0.9612831711769104,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.012
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999127984046936,
+              "probability_mean": 0.6228923201560974,
+              "thresholded_fraction": 0.6515655517578125,
+              "mask_area_fraction": 0.6451416015625,
+              "mean_page_probability": 0.9404356479644775,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2247.569
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 22.964554424,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260813-133610",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "06d0a8cf62b8",
+      "parameters": {
+        "mask_threshold": 0.12,
+        "minimum_mask_area_fraction": 0.04,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87411183,
+        "mean_iou_success": 0.87411183,
+        "minimum_iou": 0.73080802,
+        "stddev_iou": 0.08040199,
+        "mean_edge_error_px": 33.1,
+        "elapsed_ms_total": 28912.997,
+        "wall_ms": 28913.583
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            124,
+            30,
+            1296,
+            983
+          ],
+          "iou": 0.94940354,
+          "edge_errors": {
+            "left": 1,
+            "top": 26,
+            "right": 7,
+            "bottom": 16,
+            "mean": 12.5,
+            "maximum": 26
+          },
+          "edge_error_mean_px": 12.5,
+          "edge_error_maximum_px": 26,
+          "elapsed_ms": 5726.892,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              124,
+              30,
+              1296,
+              983
+            ],
+            "corners": [
+              [
+                1295.625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                30.8125
+              ],
+              [
+                1295.625,
+                30.8125
+              ]
+            ],
+            "confidence": 0.9524234175682068,
+            "score": 0.9524234175682068,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.0
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999984502792358,
+              "probability_mean": 0.6749371886253357,
+              "thresholded_fraction": 0.72479248046875,
+              "mask_area_fraction": 0.7152786254882812,
+              "mean_page_probability": 0.9268052577972412,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 5726.858
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            71,
+            0,
+            1291,
+            987
+          ],
+          "iou": 0.93208865,
+          "edge_errors": {
+            "left": 4,
+            "top": 8,
+            "right": 58,
+            "bottom": 10,
+            "mean": 20.0,
+            "maximum": 58
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 58,
+          "elapsed_ms": 5500.333,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              71,
+              0,
+              1291,
+              987
+            ],
+            "corners": [
+              [
+                1205.21142578125,
+                991.3297729492188
+              ],
+              [
+                71.28336334228516,
+                933.58349609375
+              ],
+              [
+                156.7181396484375,
+                -10.082571983337402
+              ],
+              [
+                1290.646240234375,
+                47.66374588012695
+              ]
+            ],
+            "confidence": 0.8517429411411286,
+            "score": 0.8517429411411286,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.0
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999995827674866,
+              "probability_mean": 0.5188907384872437,
+              "thresholded_fraction": 0.6632232666015625,
+              "mask_area_fraction": 0.6541824340820312,
+              "mean_page_probability": 0.7719122171401978,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 5500.294
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            97,
+            57,
+            1055,
+            818
+          ],
+          "iou": 0.73080802,
+          "edge_errors": {
+            "left": 82,
+            "top": 29,
+            "right": 19,
+            "bottom": 152,
+            "mean": 70.5,
+            "maximum": 152
+          },
+          "edge_error_mean_px": 70.5,
+          "edge_error_maximum_px": 152,
+          "elapsed_ms": 6016.027,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              97,
+              57,
+              1055,
+              818
+            ],
+            "corners": [
+              [
+                1054.0,
+                817.88671875
+              ],
+              [
+                97.75,
+                817.88671875
+              ],
+              [
+                97.75,
+                57.59765625
+              ],
+              [
+                1054.0,
+                57.59765625
+              ]
+            ],
+            "confidence": 0.8793491661548615,
+            "score": 0.8793491661548615,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.0
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999979734420776,
+              "probability_mean": 0.4156903624534607,
+              "thresholded_fraction": 0.4884033203125,
+              "mask_area_fraction": 0.47832489013671875,
+              "mean_page_probability": 0.8377257585525513,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 6015.987
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            125,
+            38,
+            1133,
+            866
+          ],
+          "iou": 0.84234693,
+          "edge_errors": {
+            "left": 41,
+            "top": 13,
+            "right": 32,
+            "bottom": 75,
+            "mean": 40.25,
+            "maximum": 75
+          },
+          "edge_error_mean_px": 40.25,
+          "edge_error_maximum_px": 75,
+          "elapsed_ms": 6385.406,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              125,
+              38,
+              1133,
+              866
+            ],
+            "corners": [
+              [
+                1132.03125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                38.4765625
+              ],
+              [
+                1132.03125,
+                38.4765625
+              ]
+            ],
+            "confidence": 0.9685649603605271,
+            "score": 0.9685649603605271,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.0
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999871850013733,
+              "probability_mean": 0.5691831111907959,
+              "thresholded_fraction": 0.5826568603515625,
+              "mask_area_fraction": 0.5766830444335938,
+              "mean_page_probability": 0.951638400554657,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 6385.368
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            121,
+            30,
+            1177,
+            938
+          ],
+          "iou": 0.91591203,
+          "edge_errors": {
+            "left": 33,
+            "top": 3,
+            "right": 23,
+            "bottom": 30,
+            "mean": 22.25,
+            "maximum": 33
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 33,
+          "elapsed_ms": 5284.339,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              121,
+              30,
+              1177,
+              938
+            ],
+            "corners": [
+              [
+                1168.92529296875,
+                937.2536010742188
+              ],
+              [
+                121.60685729980469,
+                931.6909790039062
+              ],
+              [
+                129.46267700195312,
+                30.072935104370117
+              ],
+              [
+                1176.781005859375,
+                35.63555908203125
+              ]
+            ],
+            "confidence": 0.9612831711769104,
+            "score": 0.9612831711769104,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.0
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999127984046936,
+              "probability_mean": 0.6228923201560974,
+              "thresholded_fraction": 0.6515655517578125,
+              "mask_area_fraction": 0.6451416015625,
+              "mean_page_probability": 0.9404356479644775,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 5284.301
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 40.198821558000006,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260813-133610",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "2d3cd7912da7",
+      "parameters": {
+        "mask_threshold": 0.12,
+        "minimum_mask_area_fraction": 0.04,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.018
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87395677,
+        "mean_iou_success": 0.87395677,
+        "minimum_iou": 0.79414141,
+        "stddev_iou": 0.04733381,
+        "mean_edge_error_px": 33.75,
+        "elapsed_ms_total": 10547.058,
+        "wall_ms": 10547.66
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            106,
+            12,
+            1314,
+            986
+          ],
+          "iou": 0.90125039,
+          "edge_errors": {
+            "left": 19,
+            "top": 44,
+            "right": 25,
+            "bottom": 19,
+            "mean": 26.75,
+            "maximum": 44
+          },
+          "edge_error_mean_px": 26.75,
+          "edge_error_maximum_px": 44,
+          "elapsed_ms": 1941.063,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              106,
+              12,
+              1314,
+              986
+            ],
+            "corners": [
+              [
+                1295.625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                30.8125
+              ],
+              [
+                1295.625,
+                30.8125
+              ]
+            ],
+            "confidence": 0.9524234175682068,
+            "score": 0.9524234175682068,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.018
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999984502792358,
+              "probability_mean": 0.6749371886253357,
+              "thresholded_fraction": 0.72479248046875,
+              "mask_area_fraction": 0.7152786254882812,
+              "mean_page_probability": 0.9268052577972412,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 1941.028
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            53,
+            0,
+            1309,
+            987
+          ],
+          "iou": 0.91141366,
+          "edge_errors": {
+            "left": 14,
+            "top": 8,
+            "right": 76,
+            "bottom": 10,
+            "mean": 27.0,
+            "maximum": 76
+          },
+          "edge_error_mean_px": 27.0,
+          "edge_error_maximum_px": 76,
+          "elapsed_ms": 2232.512,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              53,
+              0,
+              1309,
+              987
+            ],
+            "corners": [
+              [
+                1205.21142578125,
+                991.3297729492188
+              ],
+              [
+                71.28336334228516,
+                933.58349609375
+              ],
+              [
+                156.7181396484375,
+                -10.082571983337402
+              ],
+              [
+                1290.646240234375,
+                47.66374588012695
+              ]
+            ],
+            "confidence": 0.8517429411411286,
+            "score": 0.8517429411411286,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.018
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999995827674866,
+              "probability_mean": 0.5188907384872437,
+              "thresholded_fraction": 0.6632232666015625,
+              "mask_area_fraction": 0.6541824340820312,
+              "mean_page_probability": 0.7719122171401978,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2229.451
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            79,
+            39,
+            1073,
+            836
+          ],
+          "iou": 0.79414141,
+          "edge_errors": {
+            "left": 64,
+            "top": 11,
+            "right": 1,
+            "bottom": 134,
+            "mean": 52.5,
+            "maximum": 134
+          },
+          "edge_error_mean_px": 52.5,
+          "edge_error_maximum_px": 134,
+          "elapsed_ms": 2020.193,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              79,
+              39,
+              1073,
+              836
+            ],
+            "corners": [
+              [
+                1054.0,
+                817.88671875
+              ],
+              [
+                97.75,
+                817.88671875
+              ],
+              [
+                97.75,
+                57.59765625
+              ],
+              [
+                1054.0,
+                57.59765625
+              ]
+            ],
+            "confidence": 0.8793491661548615,
+            "score": 0.8793491661548615,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.018
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999979734420776,
+              "probability_mean": 0.4156903624534607,
+              "thresholded_fraction": 0.4884033203125,
+              "mask_area_fraction": 0.47832489013671875,
+              "mean_page_probability": 0.8377257585525513,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2020.155
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            107,
+            20,
+            1151,
+            884
+          ],
+          "iou": 0.84563864,
+          "edge_errors": {
+            "left": 23,
+            "top": 31,
+            "right": 50,
+            "bottom": 57,
+            "mean": 40.25,
+            "maximum": 57
+          },
+          "edge_error_mean_px": 40.25,
+          "edge_error_maximum_px": 57,
+          "elapsed_ms": 2119.5,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              107,
+              20,
+              1151,
+              884
+            ],
+            "corners": [
+              [
+                1132.03125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                38.4765625
+              ],
+              [
+                1132.03125,
+                38.4765625
+              ]
+            ],
+            "confidence": 0.9685649603605271,
+            "score": 0.9685649603605271,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.018
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999871850013733,
+              "probability_mean": 0.5691831111907959,
+              "thresholded_fraction": 0.5826568603515625,
+              "mask_area_fraction": 0.5766830444335938,
+              "mean_page_probability": 0.951638400554657,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2119.462
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            103,
+            12,
+            1195,
+            956
+          ],
+          "iou": 0.91733973,
+          "edge_errors": {
+            "left": 15,
+            "top": 21,
+            "right": 41,
+            "bottom": 12,
+            "mean": 22.25,
+            "maximum": 41
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 41,
+          "elapsed_ms": 2233.79,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              103,
+              12,
+              1195,
+              956
+            ],
+            "corners": [
+              [
+                1168.92529296875,
+                937.2536010742188
+              ],
+              [
+                121.60685729980469,
+                931.6909790039062
+              ],
+              [
+                129.46267700195312,
+                30.072935104370117
+              ],
+              [
+                1176.781005859375,
+                35.63555908203125
+              ]
+            ],
+            "confidence": 0.9612831711769104,
+            "score": 0.9612831711769104,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.018
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999127984046936,
+              "probability_mean": 0.6228923201560974,
+              "thresholded_fraction": 0.6515655517578125,
+              "mask_area_fraction": 0.6451416015625,
+              "mean_page_probability": 0.9404356479644775,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2233.753
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 33.511554878,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260813-133610",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "43b968e78978",
+      "parameters": {
+        "mask_threshold": 0.12,
+        "minimum_mask_area_fraction": 0.04,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.024
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87244515,
+        "mean_iou_success": 0.87244515,
+        "minimum_iou": 0.80849681,
+        "stddev_iou": 0.03982468,
+        "mean_edge_error_px": 34.55,
+        "elapsed_ms_total": 11001.252,
+        "wall_ms": 11001.882
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            100,
+            6,
+            1320,
+            986
+          ],
+          "iou": 0.88692205,
+          "edge_errors": {
+            "left": 25,
+            "top": 50,
+            "right": 31,
+            "bottom": 19,
+            "mean": 31.25,
+            "maximum": 50
+          },
+          "edge_error_mean_px": 31.25,
+          "edge_error_maximum_px": 50,
+          "elapsed_ms": 1997.437,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              100,
+              6,
+              1320,
+              986
+            ],
+            "corners": [
+              [
+                1295.625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                30.8125
+              ],
+              [
+                1295.625,
+                30.8125
+              ]
+            ],
+            "confidence": 0.9524234175682068,
+            "score": 0.9524234175682068,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.024
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999984502792358,
+              "probability_mean": 0.6749371886253357,
+              "thresholded_fraction": 0.72479248046875,
+              "mask_area_fraction": 0.7152786254882812,
+              "mean_page_probability": 0.9268052577972412,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 1997.402
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            47,
+            0,
+            1315,
+            987
+          ],
+          "iou": 0.9027883,
+          "edge_errors": {
+            "left": 20,
+            "top": 8,
+            "right": 82,
+            "bottom": 10,
+            "mean": 30.0,
+            "maximum": 82
+          },
+          "edge_error_mean_px": 30.0,
+          "edge_error_maximum_px": 82,
+          "elapsed_ms": 2210.122,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              47,
+              0,
+              1315,
+              987
+            ],
+            "corners": [
+              [
+                1205.21142578125,
+                991.3297729492188
+              ],
+              [
+                71.28336334228516,
+                933.58349609375
+              ],
+              [
+                156.7181396484375,
+                -10.082571983337402
+              ],
+              [
+                1290.646240234375,
+                47.66374588012695
+              ]
+            ],
+            "confidence": 0.8517429411411286,
+            "score": 0.8517429411411286,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.024
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999995827674866,
+              "probability_mean": 0.5188907384872437,
+              "thresholded_fraction": 0.6632232666015625,
+              "mask_area_fraction": 0.6541824340820312,
+              "mean_page_probability": 0.7719122171401978,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2210.084
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            73,
+            33,
+            1079,
+            842
+          ],
+          "iou": 0.80849681,
+          "edge_errors": {
+            "left": 58,
+            "top": 5,
+            "right": 5,
+            "bottom": 128,
+            "mean": 49.0,
+            "maximum": 128
+          },
+          "edge_error_mean_px": 49.0,
+          "edge_error_maximum_px": 128,
+          "elapsed_ms": 2017.884,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              73,
+              33,
+              1079,
+              842
+            ],
+            "corners": [
+              [
+                1054.0,
+                817.88671875
+              ],
+              [
+                97.75,
+                817.88671875
+              ],
+              [
+                97.75,
+                57.59765625
+              ],
+              [
+                1054.0,
+                57.59765625
+              ]
+            ],
+            "confidence": 0.8793491661548615,
+            "score": 0.8793491661548615,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.024
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999979734420776,
+              "probability_mean": 0.4156903624534607,
+              "thresholded_fraction": 0.4884033203125,
+              "mask_area_fraction": 0.47832489013671875,
+              "mean_page_probability": 0.8377257585525513,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2017.847
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            101,
+            14,
+            1157,
+            890
+          ],
+          "iou": 0.8464607,
+          "edge_errors": {
+            "left": 17,
+            "top": 37,
+            "right": 56,
+            "bottom": 51,
+            "mean": 40.25,
+            "maximum": 56
+          },
+          "edge_error_mean_px": 40.25,
+          "edge_error_maximum_px": 56,
+          "elapsed_ms": 2271.291,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              101,
+              14,
+              1157,
+              890
+            ],
+            "corners": [
+              [
+                1132.03125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                38.4765625
+              ],
+              [
+                1132.03125,
+                38.4765625
+              ]
+            ],
+            "confidence": 0.9685649603605271,
+            "score": 0.9685649603605271,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.024
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999871850013733,
+              "probability_mean": 0.5691831111907959,
+              "thresholded_fraction": 0.5826568603515625,
+              "mask_area_fraction": 0.5766830444335938,
+              "mean_page_probability": 0.951638400554657,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2271.254
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            97,
+            6,
+            1201,
+            962
+          ],
+          "iou": 0.91755787,
+          "edge_errors": {
+            "left": 9,
+            "top": 27,
+            "right": 47,
+            "bottom": 6,
+            "mean": 22.25,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 2504.518,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              97,
+              6,
+              1201,
+              962
+            ],
+            "corners": [
+              [
+                1168.92529296875,
+                937.2536010742188
+              ],
+              [
+                121.60685729980469,
+                931.6909790039062
+              ],
+              [
+                129.46267700195312,
+                30.072935104370117
+              ],
+              [
+                1176.781005859375,
+                35.63555908203125
+              ]
+            ],
+            "confidence": 0.9612831711769104,
+            "score": 0.9612831711769104,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.024
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999127984046936,
+              "probability_mean": 0.6228923201560974,
+              "thresholded_fraction": 0.6515655517578125,
+              "mask_area_fraction": 0.6451416015625,
+              "mean_page_probability": 0.9404356479644775,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2504.476
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 44.514549040999995,
+        "search_fraction": 0.5
+      },
+      "profile": null,
+      "run_id": "run-20260813-133610",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "8dd004be459c",
+      "parameters": {
+        "mask_threshold": 0.12,
+        "minimum_mask_area_fraction": 0.04,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.03
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87095323,
+        "mean_iou_success": 0.87095323,
+        "minimum_iou": 0.81918892,
+        "stddev_iou": 0.0350811,
+        "mean_edge_error_px": 35.3,
+        "elapsed_ms_total": 19933.754,
+        "wall_ms": 19934.467
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            94,
+            0,
+            1326,
+            986
+          ],
+          "iou": 0.87293867,
+          "edge_errors": {
+            "left": 31,
+            "top": 56,
+            "right": 37,
+            "bottom": 19,
+            "mean": 35.75,
+            "maximum": 56
+          },
+          "edge_error_mean_px": 35.75,
+          "edge_error_maximum_px": 56,
+          "elapsed_ms": 6106.576,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              94,
+              0,
+              1326,
+              986
+            ],
+            "corners": [
+              [
+                1295.625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                982.1484375
+              ],
+              [
+                124.1640625,
+                30.8125
+              ],
+              [
+                1295.625,
+                30.8125
+              ]
+            ],
+            "confidence": 0.9524234175682068,
+            "score": 0.9524234175682068,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.03
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999984502792358,
+              "probability_mean": 0.6749371886253357,
+              "thresholded_fraction": 0.72479248046875,
+              "mask_area_fraction": 0.7152786254882812,
+              "mean_page_probability": 0.9268052577972412,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 6106.542
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            41,
+            0,
+            1316,
+            987
+          ],
+          "iou": 0.89783181,
+          "edge_errors": {
+            "left": 26,
+            "top": 8,
+            "right": 83,
+            "bottom": 10,
+            "mean": 31.75,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 31.75,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 5572.354,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              41,
+              0,
+              1316,
+              987
+            ],
+            "corners": [
+              [
+                1205.21142578125,
+                991.3297729492188
+              ],
+              [
+                71.28336334228516,
+                933.58349609375
+              ],
+              [
+                156.7181396484375,
+                -10.082571983337402
+              ],
+              [
+                1290.646240234375,
+                47.66374588012695
+              ]
+            ],
+            "confidence": 0.8517429411411286,
+            "score": 0.8517429411411286,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.03
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999995827674866,
+              "probability_mean": 0.5188907384872437,
+              "thresholded_fraction": 0.6632232666015625,
+              "mask_area_fraction": 0.6541824340820312,
+              "mean_page_probability": 0.7719122171401978,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 5572.315
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            68,
+            28,
+            1084,
+            847
+          ],
+          "iou": 0.81918892,
+          "edge_errors": {
+            "left": 53,
+            "top": 0,
+            "right": 10,
+            "bottom": 123,
+            "mean": 46.5,
+            "maximum": 123
+          },
+          "edge_error_mean_px": 46.5,
+          "edge_error_maximum_px": 123,
+          "elapsed_ms": 1883.421,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              68,
+              28,
+              1084,
+              847
+            ],
+            "corners": [
+              [
+                1054.0,
+                817.88671875
+              ],
+              [
+                97.75,
+                817.88671875
+              ],
+              [
+                97.75,
+                57.59765625
+              ],
+              [
+                1054.0,
+                57.59765625
+              ]
+            ],
+            "confidence": 0.8793491661548615,
+            "score": 0.8793491661548615,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.03
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999979734420776,
+              "probability_mean": 0.4156903624534607,
+              "thresholded_fraction": 0.4884033203125,
+              "mask_area_fraction": 0.47832489013671875,
+              "mean_page_probability": 0.8377257585525513,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 1883.378
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            95,
+            8,
+            1163,
+            896
+          ],
+          "iou": 0.84715241,
+          "edge_errors": {
+            "left": 11,
+            "top": 43,
+            "right": 62,
+            "bottom": 45,
+            "mean": 40.25,
+            "maximum": 62
+          },
+          "edge_error_mean_px": 40.25,
+          "edge_error_maximum_px": 62,
+          "elapsed_ms": 2173.855,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              95,
+              8,
+              1163,
+              896
+            ],
+            "corners": [
+              [
+                1132.03125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                865.72265625
+              ],
+              [
+                125.78125,
+                38.4765625
+              ],
+              [
+                1132.03125,
+                38.4765625
+              ]
+            ],
+            "confidence": 0.9685649603605271,
+            "score": 0.9685649603605271,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.03
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 0.0,
+              "probability_max": 0.9999871850013733,
+              "probability_mean": 0.5691831111907959,
+              "thresholded_fraction": 0.5826568603515625,
+              "mask_area_fraction": 0.5766830444335938,
+              "mean_page_probability": 0.951638400554657,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 2173.816
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            91,
+            0,
+            1207,
+            968
+          ],
+          "iou": 0.91765435,
+          "edge_errors": {
+            "left": 3,
+            "top": 33,
+            "right": 53,
+            "bottom": 0,
+            "mean": 22.25,
+            "maximum": 53
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 53,
+          "elapsed_ms": 4197.548,
+          "candidate": {
+            "method": "learned_page_mask",
+            "bbox": [
+              91,
+              0,
+              1207,
+              968
+            ],
+            "corners": [
+              [
+                1168.92529296875,
+                937.2536010742188
+              ],
+              [
+                121.60685729980469,
+                931.6909790039062
+              ],
+              [
+                129.46267700195312,
+                30.072935104370117
+              ],
+              [
+                1176.781005859375,
+                35.63555908203125
+              ]
+            ],
+            "confidence": 0.9612831711769104,
+            "score": 0.9612831711769104,
+            "diagnostics": {
+              "parameters": {
+                "mask_threshold": 0.12,
+                "minimum_mask_area_fraction": 0.04,
+                "close_kernel_fraction": 0.0,
+                "polygon_epsilon_fraction": 0.012,
+                "bbox_padding_fraction": 0.03
+              },
+              "model_id": "pagenet-ohio",
+              "model_family": "PageNet",
+              "model_weights_sha256": "868d9251ec61da6014454e829798c4779c79655053ff213843ac8cdbd6f66e4c",
+              "model_license": "BSD-3-Clause",
+              "model_source": "https://github.com/ctensmeyer/pagenet",
+              "inference_backend": "opencv-dnn-caffe",
+              "probability_min": 1.1920928955078125e-07,
+              "probability_max": 0.9999127984046936,
+              "probability_mean": 0.6228923201560974,
+              "thresholded_fraction": 0.6515655517578125,
+              "mask_area_fraction": 0.6451416015625,
+              "mean_page_probability": 0.9404356479644775,
+              "evidence": "pagenet_learned_page_segmentation",
+              "postprocess_resolution": "256x256",
+              "elapsed_ms": 4197.51
+            },
+            "status": "ok",
+            "detector_name": "Learned Page-Mask Detector",
+            "origin": "PageNet / HTH",
+            "foundation": [
+              "PageNet",
+              "Learned page segmentation",
+              "OpenCV DNN",
+              "Caffe"
+            ],
+            "authors": [
+              "Chris Tensmeyer et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 60.13553981599999,
+        "search_fraction": 0.7
+      },
+      "profile": null,
+      "run_id": "run-20260813-133610",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 1
+    },
+    "pages": [
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.9183227,
+        "winner_iou": 0.92020544,
+        "delta_iou": 0.00188274,
+        "status": "Improved",
+        "parameter_set": "aecf1aa9e190",
+        "parameter_set_id": "aecf1aa9e190",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.82965899,
+        "winner_iou": 0.91699561,
+        "delta_iou": 0.08733662,
+        "status": "Improved",
+        "parameter_set": "aecf1aa9e190",
+        "parameter_set_id": "aecf1aa9e190",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.88838068,
+        "winner_iou": 0.91593535,
+        "delta_iou": 0.02755467,
+        "status": "Improved",
+        "parameter_set": "aecf1aa9e190",
+        "parameter_set_id": "aecf1aa9e190",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.84788262,
+        "winner_iou": 0.84468189,
+        "delta_iou": -0.00320073,
+        "status": "Regressed",
+        "parameter_set": "aecf1aa9e190",
+        "parameter_set_id": "aecf1aa9e190",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.70294253,
+        "winner_iou": 0.77274158,
+        "delta_iou": 0.06979905,
+        "status": "Improved",
+        "parameter_set": "aecf1aa9e190",
+        "parameter_set_id": "aecf1aa9e190",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000519",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmvrwv9",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766423040,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "e2044c7abd3c47b9c7ceb0b0a4070b4883f959e3",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31705647728",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "433157889ac04a636701f7e288b7f0f712b81992",
+  "performance": {
+    "sample_count": 3,
+    "configured_threads": 2,
+    "peak_rss_bytes": 391884800,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 0.12141165538111437,
+    "failures": 0,
+    "best_mean_iou": 0.87411197,
+    "best_worst_page_iou": 0.83938494,
+    "best_stddev_iou": 0.01676295,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 6,
+    "stddev_improvements": 6,
+    "total_metric_improvements": 13,
+    "parameter_sets_with_improvements": 6,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 22.964554424,
+    "winner_last_changed_elapsed_seconds": 22.964554424,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "aecf1aa9e190",
+        "parameter_short_name": "aecf1aa9",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 22.964554424,
+        "search_fraction": 0.2
+      }
+    ],
+    "last_improvement_elapsed_seconds": 79.61757824499999,
+    "time_since_last_improvement_seconds": 2.7468370050000033
+  }
+}
