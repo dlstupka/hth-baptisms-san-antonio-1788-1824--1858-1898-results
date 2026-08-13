@@ -1,0 +1,126 @@
+{
+  "schema_version": "0.4",
+  "detector": "border_energy",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/border_energy.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "10.361",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "10",
+    "ranked_quality": "0.55419009",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "border_energy",
+    "description": "Calibration space for the HTH Border Energy Validator detector.",
+    "profiles": {
+      "baseline": {
+        "minimum_contour_area_fraction": 0.12,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.55,
+        "gaussian_sigma": 1.2,
+        "band_fraction": 0.008,
+        "minimum_border_energy": 0.1,
+        "minimum_side_consistency": 0.45,
+        "contour_weight": 0.45,
+        "energy_weight": 0.4,
+        "consistency_weight": 0.15
+      }
+    },
+    "parameters": {
+      "minimum_contour_area_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.12,
+          0.2
+        ]
+      },
+      "epsilon_max_fraction": {
+        "type": "float",
+        "values": [
+          0.03,
+          0.04,
+          0.06
+        ]
+      },
+      "minimum_rectangularity": {
+        "type": "float",
+        "values": [
+          0.45,
+          0.55,
+          0.7
+        ]
+      },
+      "gaussian_sigma": {
+        "type": "float",
+        "values": [
+          0.8,
+          1.2,
+          1.8
+        ]
+      },
+      "band_fraction": {
+        "type": "float",
+        "values": [
+          0.004,
+          0.008,
+          0.015
+        ]
+      },
+      "minimum_border_energy": {
+        "type": "float",
+        "values": [
+          0.05,
+          0.1,
+          0.18
+        ]
+      },
+      "minimum_side_consistency": {
+        "type": "float",
+        "values": [
+          0.3,
+          0.45,
+          0.6
+        ]
+      },
+      "energy_weight": {
+        "type": "float",
+        "values": [
+          0.3,
+          0.4,
+          0.5
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner"
+    }
+  }
+}
