@@ -181,14 +181,14 @@
       "wall_clock_seconds": 21.697
     },
     "learned_page_mask": {
-      "active_pipelines": 3,
+      "active_pipelines": 1,
       "allocated_threads": 384,
-      "effective_acceleration": 192.15490322580644,
-      "execution_shape": "3p/3s/128t",
-      "observation_id": "optimizer:31659246497:4:run-20260813-020020",
-      "shards": 3,
-      "threads_per_pipeline": 128,
-      "wall_clock_seconds": 31.0
+      "effective_acceleration": null,
+      "execution_shape": "1p/1s/384t",
+      "observation_id": "31659667926:learned_page_mask:run-20260813-020417",
+      "shards": 1,
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 28.594
     },
     "lsd": {
       "active_pipelines": 9,
@@ -511,6 +511,18 @@
       "shards": 7,
       "threads_per_pipeline": 54,
       "wall_clock_seconds": 10.398
+    },
+    "4c4169f59d36961e063b500fb7d8158a653b32a139ff48cd7c507812cd055308": {
+      "active_pipelines": 1,
+      "allocated_threads": 384,
+      "detector_id": "learned_page_mask",
+      "effective_acceleration": null,
+      "execution_shape": "1p/1s/384t",
+      "observation_id": "31659667926:learned_page_mask:run-20260813-020417",
+      "parallel_efficiency": null,
+      "shards": 1,
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 28.594
     },
     "4d0310a76bac0d68e211967f22b8684752dbcf61b40c15ee9fe46086b92ddf9d": {
       "active_pipelines": 23,
@@ -74639,6 +74651,63 @@
     },
     {
       "active_pipelines": 1,
+      "actual_parameter_sets": 243,
+      "allocated_thread_seconds": 10980.096000000001,
+      "allocated_threads": 384,
+      "build": {
+        "event": "workflow_dispatch",
+        "github_run_attempt": "1",
+        "github_run_id": "31659667926",
+        "github_run_number": "342",
+        "mode": "full",
+        "pipeline_commit": "d140ccbea91448b889433fa4e158a93ab4f9601c",
+        "ref": "refs/heads/main",
+        "repository": "dlstupka/hth",
+        "run_url": "https://github.com/dlstupka/hth/actions/runs/31659667926",
+        "workflow": "HTH detector regression"
+      },
+      "compatibility_key": "4c4169f59d36961e063b500fb7d8158a653b32a139ff48cd7c507812cd055308",
+      "detector_config_sha256": "8b66f5588f3cb34d44cde4cd56a1618ac073b52c1c316faa3502e5315682e4ab",
+      "detector_id": "learned_page_mask",
+      "effective_acceleration": null,
+      "estimated_serial_runtime_seconds": null,
+      "execution_shape": "1p/1s/384t",
+      "golden_set_pages": null,
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "max_dimension": 1800,
+      "mode": "full",
+      "observation_id": "31659667926:learned_page_mask:run-20260813-020417",
+      "observed_at_utc": "2026-08-13T02:04:45.742528+00:00",
+      "page_evaluations": null,
+      "page_evaluations_per_second": null,
+      "parallel_efficiency": null,
+      "parameter_sets_per_second": 8.498286353780513,
+      "possible_parameter_sets": 243,
+      "run_id": "run-20260813-020417",
+      "runner": {
+        "cpu_model": "AMD EPYC 9655 96-Core Processor",
+        "logical_cpu_count": 192,
+        "memory_gib": 1511.27,
+        "physical_core_count": 192,
+        "runner_label": null,
+        "runner_labels": [
+          "self-hosted",
+          "linux",
+          "x64",
+          "e9k"
+        ],
+        "runner_name": "rh8-al319"
+      },
+      "runner_key": "b2d7fe31731525f92c1842d5f263461e432c852d9c87d43ecd0729b4e236fe8a",
+      "schema_version": "1.0",
+      "shards": 1,
+      "strategy": "exhaustive",
+      "threads_per_pipeline": 384,
+      "wall_clock_seconds": 28.594,
+      "workload_key": "63274c6a2ce85a686f26bd91a15753f8bdbecf5b3197036e87493aa366e452da"
+    },
+    {
+      "active_pipelines": 1,
       "actual_parameter_sets": 10,
       "allocated_threads": 2,
       "build": {
@@ -95666,6 +95735,21 @@
       "observation_count": 1,
       "shards": 23,
       "threads_per_pipeline": 16
+    },
+    {
+      "active_pipelines": 1,
+      "allocated_threads": 384,
+      "compatibility_key": "4c4169f59d36961e063b500fb7d8158a653b32a139ff48cd7c507812cd055308",
+      "detector_id": "learned_page_mask",
+      "execution_shape": "1p/1s/384t",
+      "fastest_observation_id": "31659667926:learned_page_mask:run-20260813-020417",
+      "fastest_wall_clock_seconds": 28.594,
+      "latest_observation_id": "31659667926:learned_page_mask:run-20260813-020417",
+      "latest_wall_clock_seconds": 28.594,
+      "median_wall_clock_seconds": 28.594,
+      "observation_count": 1,
+      "shards": 1,
+      "threads_per_pipeline": 384
     },
     {
       "active_pipelines": 3,
@@ -433891,5 +433975,5 @@
       "wall_clock_seconds": 2.0
     }
   ],
-  "updated_at_utc": "2026-08-13T02:01:38.324828Z"
+  "updated_at_utc": "2026-08-13T02:04:52.214308Z"
 }
