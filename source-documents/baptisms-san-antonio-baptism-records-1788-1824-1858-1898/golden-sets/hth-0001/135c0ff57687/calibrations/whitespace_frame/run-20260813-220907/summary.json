@@ -1,0 +1,2049 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260813-220907",
+  "detector": "whitespace_frame",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "1.162",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "30",
+    "ranked_quality": "0.00000000",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 730,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 0,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "f39c62493a192d13de505202bba3651cd8235ffcd166ca06cb8b3082200f7c57",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "9ef715dda063",
+    "parameters": {
+      "background_threshold": 245,
+      "minimum_border_background_fraction": 0.55,
+      "minimum_page_area_fraction": 0.18,
+      "maximum_page_area_fraction": 0.98,
+      "close_kernel_fraction": 0.01,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 26.576,
+      "wall_ms": 27.028
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 7.591,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 7.543
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.584,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0034737299174989146,
+            "elapsed_ms": 5.536
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.895,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 3.858
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.095,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 5.056
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.411,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 4.374
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260813-220907",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "9ef715dda063",
+    "parameters": {
+      "background_threshold": 245,
+      "minimum_border_background_fraction": 0.55,
+      "minimum_page_area_fraction": 0.18,
+      "maximum_page_area_fraction": 0.98,
+      "close_kernel_fraction": 0.01,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 26.576,
+      "wall_ms": 27.028
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 7.591,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 7.543
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.584,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0034737299174989146,
+            "elapsed_ms": 5.536
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.895,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 3.858
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.095,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 5.056
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4.411,
+        "candidate": {
+          "method": "whitespace_frame",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "background_threshold": 245,
+              "minimum_border_background_fraction": 0.55,
+              "minimum_page_area_fraction": 0.18,
+              "maximum_page_area_fraction": 0.98,
+              "close_kernel_fraction": 0.01,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "border_not_background",
+            "border_background_fraction": 0.0,
+            "elapsed_ms": 4.374
+          },
+          "status": "no_candidate",
+          "detector_name": "Whitespace Frame",
+          "origin": "HTH",
+          "foundation": [
+            "Negative-space segmentation",
+            "Morphology",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260813-220907",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "9ef715dda063",
+      "parameters": {
+        "background_threshold": 245,
+        "minimum_border_background_fraction": 0.55,
+        "minimum_page_area_fraction": 0.18,
+        "maximum_page_area_fraction": 0.98,
+        "close_kernel_fraction": 0.01,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 26.576,
+        "wall_ms": 27.028
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.591,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 245,
+                "minimum_border_background_fraction": 0.55,
+                "minimum_page_area_fraction": 0.18,
+                "maximum_page_area_fraction": 0.98,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 7.543
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.584,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 245,
+                "minimum_border_background_fraction": 0.55,
+                "minimum_page_area_fraction": 0.18,
+                "maximum_page_area_fraction": 0.98,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0034737299174989146,
+              "elapsed_ms": 5.536
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 3.895,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 245,
+                "minimum_border_background_fraction": 0.55,
+                "minimum_page_area_fraction": 0.18,
+                "maximum_page_area_fraction": 0.98,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 3.858
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.095,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 245,
+                "minimum_border_background_fraction": 0.55,
+                "minimum_page_area_fraction": 0.18,
+                "maximum_page_area_fraction": 0.98,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 5.056
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.411,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 245,
+                "minimum_border_background_fraction": 0.55,
+                "minimum_page_area_fraction": 0.18,
+                "maximum_page_area_fraction": 0.98,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 4.374
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260813-220907",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "f7e0d706deeb",
+      "parameters": {
+        "background_threshold": 235,
+        "minimum_border_background_fraction": 0.4,
+        "minimum_page_area_fraction": 0.1,
+        "maximum_page_area_fraction": 0.9,
+        "close_kernel_fraction": 0.004,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 56.497,
+        "wall_ms": 56.843
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 17.024,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 17.0
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 11.263,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0034737299174989146,
+              "elapsed_ms": 11.236
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.084,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 7.049
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 11.426,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 11.39
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9.7,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 9.661
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.08870984300006057,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260813-220907",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "93f2d7e9ecfa",
+      "parameters": {
+        "background_threshold": 235,
+        "minimum_border_background_fraction": 0.4,
+        "minimum_page_area_fraction": 0.1,
+        "maximum_page_area_fraction": 0.9,
+        "close_kernel_fraction": 0.004,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 31.224,
+        "wall_ms": 31.697
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9.623,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 9.59
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 6.785,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0034737299174989146,
+              "elapsed_ms": 6.74
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.379,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 4.341
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.061,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 5.021
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.376,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 5.333
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.06305313600000773,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260813-220907",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "f2b82f6c9e72",
+      "parameters": {
+        "background_threshold": 235,
+        "minimum_border_background_fraction": 0.4,
+        "minimum_page_area_fraction": 0.1,
+        "maximum_page_area_fraction": 0.9,
+        "close_kernel_fraction": 0.004,
+        "bbox_padding_fraction": 0.016
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 27.401,
+        "wall_ms": 27.728
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.99,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 5.957
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.489,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0034737299174989146,
+              "elapsed_ms": 5.449
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.034,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 3.992
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.332,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 5.294
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 6.556,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.004,
+                "bbox_padding_fraction": 0.016
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 6.514
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.09186262299999726,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260813-220907",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "051f77f76305",
+      "parameters": {
+        "background_threshold": 235,
+        "minimum_border_background_fraction": 0.4,
+        "minimum_page_area_fraction": 0.1,
+        "maximum_page_area_fraction": 0.9,
+        "close_kernel_fraction": 0.01,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 63.823,
+        "wall_ms": 64.159
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 16.991,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 16.953
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 11.944,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0034737299174989146,
+              "elapsed_ms": 11.903
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 10.659,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 10.628
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 10.36,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 10.335
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 13.869,
+          "candidate": {
+            "method": "whitespace_frame",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "background_threshold": 235,
+                "minimum_border_background_fraction": 0.4,
+                "minimum_page_area_fraction": 0.1,
+                "maximum_page_area_fraction": 0.9,
+                "close_kernel_fraction": 0.01,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "border_not_background",
+              "border_background_fraction": 0.0,
+              "elapsed_ms": 13.838
+            },
+            "status": "no_candidate",
+            "detector_name": "Whitespace Frame",
+            "origin": "HTH",
+            "foundation": [
+              "Negative-space segmentation",
+              "Morphology",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.15085167200004435,
+        "search_fraction": 0.6
+      },
+      "profile": null,
+      "run_id": "run-20260813-220907",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 5,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "9ef715dda063",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "9ef715dda063",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "9ef715dda063",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "9ef715dda063",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "9ef715dda063",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000550",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmvrwv9",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16770756608,
+    "memory_gib": 15.62,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "1000d4a6d7b9b8f1bd73682a42f3c26d9ba73f62",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31748205351",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "c3ce5a61fca2d0595cbc4d75f8d1757fabee3c95",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 178774016,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 46.034911136470946,
+    "failures": 50,
+    "best_mean_iou": 0.0,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.0,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 0,
+    "parameter_sets_with_improvements": 0,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": null,
+    "time_since_last_improvement_seconds": null
+  }
+}
