@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `segment_supported_polar_vote`  
-Optimizer run: **31726390401** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **31740981857** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -54,17 +54,15 @@ Shapes completed in this execution are shown below.
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al318 (192 vCPU) | 1 | 1 | 384 | 384 | 1h 53m 3s | 2.90 | 1.00× | -97.94% | 2.3 | 4.1 | 1.4% | 24.9 GiB |
-| 192t — rh8-al318 (192 vCPU) | 8 | 8 | 48 | 384 | 15m 54s | 20.63 | 7.11× | -85.32% | 51.1 | 335.8 | 11.3% | 25.2 GiB |
-| 192t — rh8-al318 (192 vCPU) | 23 | 23 | 16 | 368 | 7m 17s | 45.04 | 15.52× | -67.96% | 61.6 | 68.4 | 37.4% | 27.0 GiB |
-| 192t — rh8-al318 (192 vCPU) | 38 | 38 | 10 | 380 | 3m 50s | 85.58 | 29.49× | -39.13% | 353.9 | 567.7 | 68.0% | 29.4 GiB |
-| 192t — rh8-al318 (192 vCPU) | 49 | 49 | 7 | 343 | 2m 32s | 129.49 | 44.62× | -7.89% | 683.2 | 733.3 | 79.6% | 29.1 GiB |
-| 192t — rh8-al318 (192 vCPU) | 56 | 56 | 6 | 336 | 2m 23s | 137.64 | 47.43× | -2.10% | 703.4 | 816.2 | 84.5% | 30.1 GiB |
-| 192t — rh8-al318 (192 vCPU) | 60 | 60 | 6 | 360 | 2m 23s | 137.64 | 47.43× | -2.10% | 843.7 | 887.5 | 83.9% | 30.5 GiB |
-| 192t — rh8-al318 (192 vCPU) | 61 | 61 | 6 | 366 | 2m 22s | 138.61 | 47.77× | -1.41% | 957.0 | 984.7 | 95.7% | 30.8 GiB |
-| **192t — rh8-al318 (192 vCPU)** | 62 | 62 | 6 | 372 | 2m 20s | 140.59 | 48.45× | 0.00% | 755.7 | 885.2 | 74.0% | 31.9 GiB |
-| 192t — rh8-al318 (192 vCPU) | 63 | 63 | 6 | 378 | 2m 21s | 139.60 | 48.11× | -0.71% | 895.5 | 925.7 | 80.4% | 31.7 GiB |
-| 192t — rh8-al318 (192 vCPU) | 64 | 64 | 6 | 384 | 2m 20s | 140.59 | 48.45× | 0.00% | 820.2 | 880.0 | 94.3% | 31.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 48 | 48 | 8 | 384 | 2m 40s | 123.02 | — | -10.62% | 687.5 | 777.6 | 90.1% | 29.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 72 | 72 | 5 | 360 | 2m 26s | 134.82 | — | -2.05% | 838.2 | 1029.3 | 75.3% | 31.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 73 | 73 | 5 | 365 | 2m 25s | 135.74 | — | -1.38% | 886.7 | 925.9 | 76.7% | 32.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 74 | 74 | 5 | 370 | 2m 25s | 135.74 | — | -1.38% | 957.2 | 964.9 | 95.0% | 32.4 GiB |
+| 192t — rh8-al318 (192 vCPU) | 75 | 75 | 5 | 375 | 2m 24s | 136.69 | — | -0.69% | 851.4 | 1066.5 | 66.6% | 32.9 GiB |
+| **192t — rh8-al318 (192 vCPU)** | 76 | 76 | 5 | 380 | 2m 23s | 137.64 | — | 0.00% | 1038.2 | 1073.4 | 87.1% | 33.3 GiB |
+| 192t — rh8-al318 (192 vCPU) | 77 | 77 | 4 | 308 | 2m 27s | 133.90 | — | -2.72% | 861.1 | 1026.2 | 73.5% | 30.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 78 | 78 | 4 | 312 | 2m 27s | 133.90 | — | -2.72% | 978.4 | 993.9 | 82.4% | 30.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 128 | 128 | 3 | 384 | 2m 35s | 126.99 | — | -7.74% | 1000.9 | 1445.5 | 79.2% | 39.5 GiB |
 
 **Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 2.0% from the perceived maximum.
 
