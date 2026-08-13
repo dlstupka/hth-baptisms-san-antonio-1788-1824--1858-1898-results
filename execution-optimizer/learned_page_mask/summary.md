@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `learned_page_mask`  
-Optimizer run: **31660393352** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **31660698451** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -22,6 +22,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
+| learned_page_mask | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 2 | 192 | 2p/192t | adaptive | 16m 42s | 384 | 9.99 | 16m 41s | 1 |
 | learned_page_mask | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 1 | 384 | 1p/384t, 3p/128t | adaptive | 1m 2s | 384 | 8.10 | 30s | 2 |
 
 **Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
@@ -54,8 +55,7 @@ Shapes completed in this execution are shown below.
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| **192t — rh8-al319 (192 vCPU)** | 1 | 1 | 384 | 384 | 30s | 8.10 | 1.00× | 0.00% | — | — | — | — |
-| 192t — rh8-al319 (192 vCPU) | 3 | 3 | 128 | 384 | 30s | 8.10 | 1.00× | 0.00% | 180.8 | 180.8 | 66.8% | 48.6 GiB |
+| **192t — rh8-al318 (192 vCPU)** | 2 | 2 | 192 | 384 | 16m 41s | 9.99 | — | 0.00% | 412.5 | 452.0 | 78.5% | 72.3 GiB |
 
 **Stop reason:** `adaptive_search_complete`
 
