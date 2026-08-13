@@ -1,0 +1,3605 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260813-161320",
+  "detector": "projective_gradient_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "8.653",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "12",
+    "ranked_quality": "0.55411904",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 730,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 30,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "196f35b35d3c64d30b5e8aa0d717b052119d548d5f4f630af85c57022ac48eea",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "ea6049908ba9",
+    "parameters": {
+      "gaussian_sigma": 0.8,
+      "gradient_percentile": 74.0,
+      "minimum_segment_fraction": 0.1,
+      "family_tolerance_degrees": 10.0,
+      "orthogonality_tolerance_degrees": 12.0,
+      "minimum_side_support": 0.08
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.54631183,
+      "mean_iou_success": 0.91051971,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.44774952,
+      "mean_edge_error_px": 25.833,
+      "elapsed_ms_total": 1617.995,
+      "wall_ms": 1618.501
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          77,
+          27,
+          1285,
+          979
+        ],
+        "iou": 0.91600645,
+        "edge_errors": {
+          "left": 48,
+          "top": 29,
+          "right": 4,
+          "bottom": 12,
+          "mean": 23.25,
+          "maximum": 48
+        },
+        "edge_error_mean_px": 23.25,
+        "edge_error_maximum_px": 48,
+        "elapsed_ms": 401.992,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "corners": [
+            [
+              77.05387115478516,
+              84.10990905761719
+            ],
+            [
+              1277.788330078125,
+              27.608470916748047
+            ],
+            [
+              1284.981689453125,
+              954.44580078125
+            ],
+            [
+              79.0566635131836,
+              978.106689453125
+            ]
+          ],
+          "confidence": 0.9001583581398024,
+          "score": 0.9001583581398024,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 0.8,
+              "gradient_percentile": 74.0,
+              "minimum_segment_fraction": 0.1,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 38,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.804105682657883,
+            "side_support": [
+              0.994575023651123,
+              0.8949861526489258,
+              1.0,
+              0.9616570472717285
+            ],
+            "projective_geometry_score": 0.8333333333333353,
+            "elapsed_ms": 401.968
+          },
+          "status": "ok",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 307.406,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 0.8,
+              "gradient_percentile": 74.0,
+              "minimum_segment_fraction": 0.1,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 25,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.00014651724977051767,
+            "reason": "implausible_area",
+            "elapsed_ms": 307.376
+          },
+          "status": "no_candidate",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 240.6,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 0.8,
+              "gradient_percentile": 74.0,
+              "minimum_segment_fraction": 0.1,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 4,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.0025023949011669174,
+            "reason": "implausible_area",
+            "elapsed_ms": 240.569
+          },
+          "status": "no_candidate",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          77,
+          50,
+          1277,
+          941
+        ],
+        "iou": 0.84654882,
+        "edge_errors": {
+          "left": 7,
+          "top": 1,
+          "right": 176,
+          "bottom": 0,
+          "mean": 46.0,
+          "maximum": 176
+        },
+        "edge_error_mean_px": 46.0,
+        "edge_error_maximum_px": 176,
+        "elapsed_ms": 325.907,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "corners": [
+            [
+              77.29579162597656,
+              50.077056884765625
+            ],
+            [
+              1261.8223876953125,
+              54.38561248779297
+            ],
+            [
+              1276.758056640625,
+              922.2930297851562
+            ],
+            [
+              77.59259796142578,
+              940.2809448242188
+            ]
+          ],
+          "confidence": 0.9159041583521523,
+          "score": 0.9159041583521523,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 0.8,
+              "gradient_percentile": 74.0,
+              "minimum_segment_fraction": 0.1,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 29,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8258592237918627,
+            "side_support": [
+              1.0,
+              0.9542874097824097,
+              0.9877145886421204,
+              1.0
+            ],
+            "projective_geometry_score": 0.8333333333333331,
+            "elapsed_ms": 325.879
+          },
+          "status": "ok",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          87,
+          30,
+          1179,
+          964
+        ],
+        "iou": 0.96900386,
+        "edge_errors": {
+          "left": 1,
+          "top": 3,
+          "right": 25,
+          "bottom": 4,
+          "mean": 8.25,
+          "maximum": 25
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 25,
+        "elapsed_ms": 342.09,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "corners": [
+            [
+              87.11235046386719,
+              37.80858612060547
+            ],
+            [
+              1177.111083984375,
+              30.905242919921875
+            ],
+            [
+              1178.8079833984375,
+              963.6783447265625
+            ],
+            [
+              92.83401489257812,
+              955.4651489257812
+            ]
+          ],
+          "confidence": 0.8964312986663535,
+          "score": 0.8964312986663535,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 0.8,
+              "gradient_percentile": 74.0,
+              "minimum_segment_fraction": 0.1,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 12.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 28,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8018821336372359,
+            "side_support": [
+              1.0,
+              0.9903110861778259,
+              0.9389243721961975,
+              0.8973025679588318
+            ],
+            "projective_geometry_score": 0.8333333333333353,
+            "elapsed_ms": 342.016
+          },
+          "status": "ok",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 2.369827289,
+      "search_fraction": 0.2
+    },
+    "profile": null,
+    "run_id": "run-20260813-161320",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "c6d5d9271464",
+    "parameters": {
+      "gaussian_sigma": 1.2,
+      "gradient_percentile": 82.0,
+      "minimum_segment_fraction": 0.16,
+      "angle_bin_degrees": 4.0,
+      "family_tolerance_degrees": 16.0,
+      "orthogonality_tolerance_degrees": 22.0,
+      "minimum_side_support": 0.18,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "maximum_corner_overshoot_fraction": 0.08,
+      "bbox_padding_fraction": 0.0,
+      "support_weight": 0.55,
+      "geometry_weight": 0.3,
+      "area_weight": 0.15
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.44744418,
+      "mean_iou_success": 0.7457403,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.39165461,
+      "mean_edge_error_px": 70.667,
+      "elapsed_ms_total": 746.411,
+      "wall_ms": 746.997
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          70,
+          20,
+          1285,
+          976
+        ],
+        "iou": 0.90694689,
+        "edge_errors": {
+          "left": 55,
+          "top": 36,
+          "right": 4,
+          "bottom": 9,
+          "mean": 26.0,
+          "maximum": 55
+        },
+        "edge_error_mean_px": 26.0,
+        "edge_error_maximum_px": 55,
+        "elapsed_ms": 194.636,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            70,
+            20,
+            1285,
+            976
+          ],
+          "corners": [
+            [
+              80.8549575805664,
+              90.1684341430664
+            ],
+            [
+              1277.9691162109375,
+              20.5197696685791
+            ],
+            [
+              1284.3485107421875,
+              954.5369262695312
+            ],
+            [
+              70.39095306396484,
+              975.792724609375
+            ]
+          ],
+          "confidence": 0.893324534788106,
+          "score": 0.893324534788106,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 17,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8048486916634235,
+            "side_support": [
+              0.9856069087982178,
+              0.6708105206489563,
+              0.9958590269088745,
+              0.9831414222717285
+            ],
+            "projective_geometry_score": 0.9090909090909101,
+            "elapsed_ms": 194.605
+          },
+          "status": "ok",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 149.234,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 7,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "reason": "insufficient_projective_line_families",
+            "elapsed_ms": 149.199
+          },
+          "status": "no_candidate",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 87.767,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 4,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.002587485513850787,
+            "reason": "implausible_area",
+            "elapsed_ms": 87.739
+          },
+          "status": "no_candidate",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          77,
+          45,
+          1278,
+          943
+        ],
+        "iou": 0.83925051,
+        "edge_errors": {
+          "left": 7,
+          "top": 6,
+          "right": 177,
+          "bottom": 2,
+          "mean": 48.0,
+          "maximum": 177
+        },
+        "edge_error_mean_px": 48.0,
+        "edge_error_maximum_px": 177,
+        "elapsed_ms": 154.519,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            77,
+            45,
+            1278,
+            943
+          ],
+          "corners": [
+            [
+              77.26133728027344,
+              57.59391403198242
+            ],
+            [
+              1261.940673828125,
+              45.67426300048828
+            ],
+            [
+              1277.43701171875,
+              942.076904296875
+            ],
+            [
+              77.78326416015625,
+              929.38134765625
+            ]
+          ],
+          "confidence": 0.9383380657243056,
+          "score": 0.9383380657243056,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 16,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8307732576300734,
+            "side_support": [
+              1.0,
+              0.9937031269073486,
+              0.9507922530174255,
+              0.9900122880935669
+            ],
+            "projective_geometry_score": 0.909090909090909,
+            "elapsed_ms": 154.49
+          },
+          "status": "ok",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          78,
+          34,
+          622,
+          959
+        ],
+        "iou": 0.4910235,
+        "edge_errors": {
+          "left": 10,
+          "top": 1,
+          "right": 532,
+          "bottom": 9,
+          "mean": 138.0,
+          "maximum": 532
+        },
+        "edge_error_mean_px": 138.0,
+        "edge_error_maximum_px": 532,
+        "elapsed_ms": 160.255,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            78,
+            34,
+            622,
+            959
+          ],
+          "corners": [
+            [
+              79.1539077758789,
+              38.255123138427734
+            ],
+            [
+              611.9496459960938,
+              34.43716812133789
+            ],
+            [
+              621.667724609375,
+              958.6958618164062
+            ],
+            [
+              78.588623046875,
+              951.5828857421875
+            ]
+          ],
+          "confidence": 0.8618035799867418,
+          "score": 0.8618035799867418,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 15,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.39372089897572093,
+            "side_support": [
+              0.9356620907783508,
+              0.9658136963844299,
+              0.994644045829773,
+              0.9585577845573425
+            ],
+            "projective_geometry_score": 0.9090909090909101,
+            "elapsed_ms": 160.227
+          },
+          "status": "ok",
+          "detector_name": "Projective Gradient Vote",
+          "origin": "HTH",
+          "foundation": [
+            "Sobel gradients",
+            "Line Segment Detector",
+            "Projective line intersections",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260813-161320",
+    "rank": 10,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "ea6049908ba9",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.08
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1617.995,
+        "wall_ms": 1618.501
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 401.992,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353,
+              "elapsed_ms": 401.968
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 307.406,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area",
+              "elapsed_ms": 307.376
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 240.6,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area",
+              "elapsed_ms": 240.569
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 325.907,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331,
+              "elapsed_ms": 325.879
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 342.09,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353,
+              "elapsed_ms": 342.016
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 2.369827289,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260813-161320",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "058b6c85f605",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.18
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1637.947,
+        "wall_ms": 1638.428
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 411.942,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353,
+              "elapsed_ms": 411.92
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 330.474,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area",
+              "elapsed_ms": 330.444
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 248.421,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area",
+              "elapsed_ms": 248.391
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 317.571,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331,
+              "elapsed_ms": 317.543
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 329.539,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353,
+              "elapsed_ms": 329.512
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 2.3938121179999143,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260813-161320",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "218afc35ed78",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1599.221,
+        "wall_ms": 1605.763
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 438.696,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353,
+              "elapsed_ms": 438.67
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 359.878,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area",
+              "elapsed_ms": 359.849
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 162.599,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area",
+              "elapsed_ms": 162.569
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 300.786,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331,
+              "elapsed_ms": 300.756
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 337.262,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353,
+              "elapsed_ms": 337.225
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 3.97376778499995,
+        "search_fraction": 0.5
+      },
+      "profile": null,
+      "run_id": "run-20260813-161320",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "09234c13ffc4",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 22.0,
+        "minimum_side_support": 0.08
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1136.713,
+        "wall_ms": 1137.211
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 418.492,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9228856308670748,
+            "score": 0.9228856308670748,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.9090909090909101,
+              "elapsed_ms": 418.472
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 176.653,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area",
+              "elapsed_ms": 176.627
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 91.306,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area",
+              "elapsed_ms": 91.277
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 214.474,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.938631431079425,
+            "score": 0.938631431079425,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.909090909090909,
+              "elapsed_ms": 214.446
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 235.788,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.9191585713936259,
+            "score": 0.9191585713936259,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.9090909090909101,
+              "elapsed_ms": 235.759
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 3.525958785999933,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260813-161320",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "928d5fcecfd4",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 22.0,
+        "minimum_side_support": 0.18
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 989.228,
+        "wall_ms": 989.718
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 326.291,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9228856308670748,
+            "score": 0.9228856308670748,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.9090909090909101,
+              "elapsed_ms": 326.264
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 188.377,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area",
+              "elapsed_ms": 188.346
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 99.117,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area",
+              "elapsed_ms": 99.092
+            },
+            "status": "no_candidate",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 155.995,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.938631431079425,
+            "score": 0.938631431079425,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.909090909090909,
+              "elapsed_ms": 155.967
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 219.448,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.9191585713936259,
+            "score": 0.9191585713936259,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.9090909090909101,
+              "elapsed_ms": 219.421
+            },
+            "status": "ok",
+            "detector_name": "Projective Gradient Vote",
+            "origin": "HTH",
+            "foundation": [
+              "Sobel gradients",
+              "Line Segment Detector",
+              "Projective line intersections",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 4.5177587899999025,
+        "search_fraction": 0.6
+      },
+      "profile": null,
+      "run_id": "run-20260813-161320",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 2,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.4910235,
+        "winner_iou": 0.96900386,
+        "delta_iou": 0.47798036,
+        "status": "Improved",
+        "parameter_set": "ea6049908ba9",
+        "parameter_set_id": "ea6049908ba9",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.90694689,
+        "winner_iou": 0.91600645,
+        "delta_iou": 0.00905956,
+        "status": "Improved",
+        "parameter_set": "ea6049908ba9",
+        "parameter_set_id": "ea6049908ba9",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.83925051,
+        "winner_iou": 0.84654882,
+        "delta_iou": 0.00729831,
+        "status": "Improved",
+        "parameter_set": "ea6049908ba9",
+        "parameter_set_id": "ea6049908ba9",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "ea6049908ba9",
+        "parameter_set_id": "ea6049908ba9",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "ea6049908ba9",
+        "parameter_set_id": "ea6049908ba9",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000535",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmvrwv9",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766423040,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1020-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "cf31a2d70c0b2d5bcd7978870e45be978e0aae2c",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31719057236",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "637417ae7583023e72077fdec06618a2d510c3f8",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 272293888,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 1.1739636676856988,
+    "failures": 20,
+    "best_mean_iou": 0.54631183,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.39165461,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 1,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 2.369827289,
+    "winner_last_changed_elapsed_seconds": 2.369827289,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "ea6049908ba9",
+        "parameter_short_name": "ea604990",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 2.369827289,
+        "search_fraction": 0.2
+      }
+    ],
+    "last_improvement_elapsed_seconds": 2.369827289,
+    "time_since_last_improvement_seconds": 6.148323889999915
+  }
+}
