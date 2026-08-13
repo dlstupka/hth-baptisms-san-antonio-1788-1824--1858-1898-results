@@ -1,0 +1,114 @@
+{
+  "schema_version": "0.4",
+  "detector": "multi_scale_radial_edge",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/multi_scale_radial_edge.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "no-history",
+    "queue_position": "2",
+    "ranked_quality": "unknown",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "multi_scale_radial_edge",
+    "description": "Calibration space for the HTH Multi-Scale Radial Edge Search detector.",
+    "profiles": {
+      "baseline": {
+        "base_sigma": 0.8,
+        "scale_ratio": 2.0,
+        "scale_count": 3,
+        "ray_count": 144,
+        "minimum_radius_fraction": 0.16,
+        "maximum_radius_fraction": 0.78,
+        "gradient_percentile": 82.0,
+        "minimum_ray_support": 0.36,
+        "minimum_area_fraction": 0.18,
+        "maximum_area_fraction": 0.98,
+        "bbox_padding_fraction": 0.0,
+        "support_weight": 0.5,
+        "strength_weight": 0.3,
+        "area_weight": 0.2
+      }
+    },
+    "parameters": {
+      "base_sigma": {
+        "type": "float",
+        "values": [
+          0.6,
+          0.8,
+          1.2
+        ]
+      },
+      "scale_ratio": {
+        "type": "float",
+        "values": [
+          1.6,
+          2.0,
+          2.5
+        ]
+      },
+      "scale_count": {
+        "type": "int",
+        "values": [
+          2,
+          3,
+          4
+        ]
+      },
+      "ray_count": {
+        "type": "int",
+        "values": [
+          96,
+          144,
+          192
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          74.0,
+          82.0,
+          90.0
+        ]
+      },
+      "minimum_ray_support": {
+        "type": "float",
+        "values": [
+          0.24,
+          0.36,
+          0.5
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner"
+    }
+  }
+}
