@@ -1,0 +1,1909 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260814-231927",
+  "detector": "dhsegment_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "11.959",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "16",
+    "ranked_quality": "0.00000000",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 10000,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 0,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "9cb0b223675c5ea900c5fd9ca840230a35b639eb9e53dc423bfdc1f043103de0",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "013084b6c0e9",
+    "parameters": {
+      "probability_threshold": -1.0,
+      "minimum_page_area_fraction": 0.2,
+      "close_kernel_fraction": 0.005,
+      "open_kernel_fraction": 0.0,
+      "contour_offset_fraction": 0.0,
+      "fill_holes": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 29283.474,
+      "wall_ms": 29284.059
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 11032.015,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 11013.08
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4036.714,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4028.442
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4894.395,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4882.33
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4937.675,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4928.632
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4382.675,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4371.253
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260814-231927",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "013084b6c0e9",
+    "parameters": {
+      "probability_threshold": -1.0,
+      "minimum_page_area_fraction": 0.2,
+      "close_kernel_fraction": 0.005,
+      "open_kernel_fraction": 0.0,
+      "contour_offset_fraction": 0.0,
+      "fill_holes": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 29283.474,
+      "wall_ms": 29284.059
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 11032.015,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 11013.08
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4036.714,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4028.442
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4894.395,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4882.33
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4937.675,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4928.632
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 4382.675,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "KeyError",
+            "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+            "elapsed_ms": 4371.253
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260814-231927",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "013084b6c0e9",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.2,
+        "close_kernel_fraction": 0.005,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 29283.474,
+        "wall_ms": 29284.059
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 11032.015,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 11013.08
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4036.714,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 4028.442
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4894.395,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 4882.33
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4937.675,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 4928.632
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4382.675,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 4371.253
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260814-231927",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bdbe0ec8e9e7",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": -0.004,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 34424.443,
+        "wall_ms": 34424.965
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 3757.248,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 3747.136
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7072.781,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7035.087
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 8273.861,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 8253.292
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 8051.97,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 8028.872
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7268.583,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7246.746
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 63.7175337189999,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260814-231927",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "6373899f3670",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": -0.004,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 38909.9,
+        "wall_ms": 38913.029
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7118.795,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7073.175
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7774.814,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7750.986
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 8687.636,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 8679.556
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7509.955,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7479.961
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7818.7,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7786.712
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 68.20762068399995,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260814-231927",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bebf5b6a6773",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 39051.923,
+        "wall_ms": 39060.568
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 8947.927,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 8939.42
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7044.094,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7013.29
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7904.906,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7885.755
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7486.446,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7446.787
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7668.55,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7662.708
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 102.77803052999991,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260814-231927",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "e291357a4811",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 36497.677,
+        "wall_ms": 36498.029
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 8449.719,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 8441.263
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 6646.24,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 6610.147
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7401.269,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 7367.795
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9064.035,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 9030.187
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4936.414,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "KeyError",
+              "exception_message": "\"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/framework/ops.py\", line 2969, in _as_graph_element_locked\n    op = self._get_operation_by_name(op_name)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: ''\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 342, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 327, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 237, in _model\n    model = _SavedModel(model_dir)\n            ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 90, in __init__\n    self.model = tf.saved_model.load(str(model_dir))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 912, in load\n    result = load_partial(export_dir, None, tags, options)[\"root\"]\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load.py\", line 1070, in load_partial\n    root = load_v1_in_v2.load(\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31849428514-1/lib/python3.12/site-packages/tensorflow/python/saved_model/load_v1_in_v2.py\", line 316, in load\n    result = loader.load(\n             ^^^^^^^^^^^^\nKeyError: \"The name 'softmax:0' refers to a Tensor which does not exist. The operation, 'softmax', does not exist in the graph.\"\n",
+              "elapsed_ms": 4930.566
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 104.7057844279999,
+        "search_fraction": 0.5
+      },
+      "profile": null,
+      "run_id": "run-20260814-231927",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 5,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000609",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "c130a45635c26791bf0737810d6e2890cc038154",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31849428514",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "ed575b97fb1717a7b4420df5428ebc491eaa037d",
+  "performance": {
+    "sample_count": 3,
+    "configured_threads": 2,
+    "peak_rss_bytes": 7343529984,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 0.06753284354695581,
+    "failures": 50,
+    "best_mean_iou": 0.0,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.0,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 0,
+    "parameter_sets_with_improvements": 0,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": null,
+    "time_since_last_improvement_seconds": null
+  }
+}
