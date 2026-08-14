@@ -1,0 +1,146 @@
+{
+  "schema_version": "0.4",
+  "detector": "segment_supported_polar_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/segment_supported_polar_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "33.246",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "7",
+    "ranked_quality": "0.90857092",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "segment_supported_polar_vote",
+    "description": "Generation-2 calibration space for Segment-Supported Polar Voting, concentrated around the isolated exhaustive winner while extending the winning low-distance, short-segment, low-support, and outer-radius boundaries.",
+    "profiles": {
+      "baseline": {
+        "ray_count": 180,
+        "inner_radius_fraction": 0.12,
+        "outer_radius_fraction": 0.7,
+        "gradient_percentile": 82.0,
+        "minimum_support_fraction": 0.35,
+        "segment_distance_fraction": 0.018,
+        "minimum_segment_length_fraction": 0.1,
+        "minimum_segment_support_fraction": 0.3,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "ray_count": {
+        "type": "integer",
+        "values": [
+          60,
+          90,
+          120,
+          180
+        ]
+      },
+      "inner_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.1,
+          0.12,
+          0.14
+        ]
+      },
+      "outer_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.72,
+          0.78,
+          0.82,
+          0.86,
+          0.9
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          78.0,
+          80.0,
+          82.0,
+          84.0,
+          86.0
+        ]
+      },
+      "minimum_support_fraction": {
+        "type": "float",
+        "values": [
+          0.15,
+          0.2,
+          0.25,
+          0.35
+        ]
+      },
+      "segment_distance_fraction": {
+        "type": "float",
+        "values": [
+          0.005,
+          0.0075,
+          0.01,
+          0.0125,
+          0.018
+        ]
+      },
+      "minimum_segment_length_fraction": {
+        "type": "float",
+        "values": [
+          0.03,
+          0.045,
+          0.06,
+          0.075,
+          0.1
+        ]
+      },
+      "minimum_segment_support_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.15,
+          0.2,
+          0.3
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.002,
+          0.008
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
