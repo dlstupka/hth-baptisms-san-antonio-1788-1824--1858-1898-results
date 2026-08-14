@@ -10,8 +10,10 @@ This report coalesces compatible measurements from completed optimizer runs only
 
 - [Preferred Detector Run Configuration](#preferred-detector-run-configuration)
 - [Detector Run Profile Plot](#detector-run-profile-plot)
+  - [adaptive_multi_scale_radial_edge](#detector-run-profile-adaptive-multi-scale-radial-edge)
   - [adaptive_radial_edge](#detector-run-profile-adaptive-radial-edge)
   - [border_energy](#detector-run-profile-border-energy)
+  - [border_fusion_quad](#detector-run-profile-border-fusion-quad)
   - [components](#detector-run-profile-components)
   - [consensus_quad](#detector-run-profile-consensus-quad)
   - [contour](#detector-run-profile-contour)
@@ -30,16 +32,24 @@ This report coalesces compatible measurements from completed optimizer runs only
   - [joint_rectangle_vote](#detector-run-profile-joint-rectangle-vote)
   - [learned_page_mask](#detector-run-profile-learned-page-mask)
   - [lsd](#detector-run-profile-lsd)
+  - [msre_bfq_spbv_pbg](#detector-run-profile-msre-bfq-spbv-pbg)
+  - [multi_scale_radial_edge](#detector-run-profile-multi-scale-radial-edge)
+  - [page_background](#detector-run-profile-page-background)
   - [polar_boundary_vote](#detector-run-profile-polar-boundary-vote)
+  - [projective_gradient_vote](#detector-run-profile-projective-gradient-vote)
   - [radial_edge](#detector-run-profile-radial-edge)
   - [radon_boundary](#detector-run-profile-radon-boundary)
   - [ransac](#detector-run-profile-ransac)
+  - [segment_supported_polar_vote](#detector-run-profile-segment-supported-polar-vote)
+  - [signed_polar_boundary_vote](#detector-run-profile-signed-polar-boundary-vote)
   - [star_convex](#detector-run-profile-star-convex)
   - [text_flow](#detector-run-profile-text-flow)
   - [whitespace_frame](#detector-run-profile-whitespace-frame)
 - [Detector Pipeline-Thread Shape Optimization Data](#detector-pipeline-thread-shape-optimization-data)
+  - [adaptive_multi_scale_radial_edge](#detector-shape-data-adaptive-multi-scale-radial-edge)
   - [adaptive_radial_edge](#detector-shape-data-adaptive-radial-edge)
   - [border_energy](#detector-shape-data-border-energy)
+  - [border_fusion_quad](#detector-shape-data-border-fusion-quad)
   - [components](#detector-shape-data-components)
   - [consensus_quad](#detector-shape-data-consensus-quad)
   - [contour](#detector-shape-data-contour)
@@ -58,10 +68,16 @@ This report coalesces compatible measurements from completed optimizer runs only
   - [joint_rectangle_vote](#detector-shape-data-joint-rectangle-vote)
   - [learned_page_mask](#detector-shape-data-learned-page-mask)
   - [lsd](#detector-shape-data-lsd)
+  - [msre_bfq_spbv_pbg](#detector-shape-data-msre-bfq-spbv-pbg)
+  - [multi_scale_radial_edge](#detector-shape-data-multi-scale-radial-edge)
+  - [page_background](#detector-shape-data-page-background)
   - [polar_boundary_vote](#detector-shape-data-polar-boundary-vote)
+  - [projective_gradient_vote](#detector-shape-data-projective-gradient-vote)
   - [radial_edge](#detector-shape-data-radial-edge)
   - [radon_boundary](#detector-shape-data-radon-boundary)
   - [ransac](#detector-shape-data-ransac)
+  - [segment_supported_polar_vote](#detector-shape-data-segment-supported-polar-vote)
+  - [signed_polar_boundary_vote](#detector-shape-data-signed-polar-boundary-vote)
   - [star_convex](#detector-shape-data-star-convex)
   - [text_flow](#detector-shape-data-text-flow)
   - [whitespace_frame](#detector-shape-data-whitespace-frame)
@@ -76,11 +92,13 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
+| adaptive_multi_scale_radial_edge | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 25 | 15 | 23p/16t, 24p/16t, 25p/15t, 26p/14t, 27p/14t, 28p/13t, 29p/13t, 30p/12t, 31p/12t, 32p/12t | adaptive | 1h 44m 25s | 375 | 26.04 | 6m 24s | 1 |
 | adaptive_radial_edge | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 63 | 6 | 63p/6t | adaptive | 4m 10s | 378 | 145.82 | 45s | 1 |
 | adaptive_radial_edge | 192t — rh8-al323 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 60 | 6 | 60p/6t, 64p/6t | adaptive | 33m 4s | 360 | 152.60 | 43s | 1 |
 | adaptive_radial_edge | 32t — rh8-s32 (32 vCPU) | AMD EPYC 9175F 16-Core Processor | 16 | 32 | 1511.3 GiB | 22 | 2 | 21p/3t, 22p/2t, 23p/2t, 24p/2t, 25p/2t, 26p/2t, 27p/2t | adaptive | 19m 31s | 44 | 74.57 | 1m 28s | 1 |
 | adaptive_radial_edge | e7k — rh8-al97 (96 vCPU) | AMD EPYC 74F3 24-Core Processor | 48 | 96 | 2003.9 GiB | 49 | 3 | 46p/4t, 49p/3t, 50p/3t, 51p/3t, 52p/3t | exhaustive | 3h 35m 57s | 147 | 70.56 | 1m 33s | 1 |
 | border_energy | 192t — rh8-al325 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 8 | 48 | 7p/54t, 8p/48t, 9p/42t | adaptive | 13m 27s | 384 | 84.13 | 1m 18s | 1 |
+| border_fusion_quad | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 11 | 34 | 10p/38t, 11p/34t, 12p/32t, 13p/29t, 14p/27t, 15p/25t | adaptive | 4m 18s | 374 | 18.77 | 13s | 1 |
 | components | 192t — rh8-al324 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 8 | 48 | 8p/48t | adaptive | 3m 31s | 384 | 596.45 | 33s | 1 |
 | consensus_quad | 192t — rh8-al323 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 5 | 76 | 5p/76t, 6p/64t | adaptive | 2m 46s | 380 | 27.00 | 9s | 1 |
 | contour | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 7 | 54 | 2p/192t, 3p/128t, 4p/96t, 5p/76t, 6p/64t, 7p/54t, 8p/48t | adaptive | 56s | 378 | 364.50 | 4s | 2 |
@@ -104,13 +122,19 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | hough | 192t — rh8-al324 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 23 | 16 | 18p/21t, 22p/17t, 23p/16t | adaptive | 31m 29s | 368 | 25.15 | 1m 27s | 1 |
 | joint_rectangle_vote | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 23 | 16 | 22p/17t, 23p/16t | adaptive | 10m 2s | 368 | 75.41 | 29s | 1 |
 | learned_page_mask | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 2 | 192 | 2p/192t | adaptive | 16m 42s | 384 | 9.99 | 16m 41s | 1 |
-| learned_page_mask | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 4 | 96 | 3p/128t, 4p/96t | exhaustive | 1h 8m 59s | 384 | 10.28 | 16m 13s | 2 |
+| learned_page_mask | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 4 | 96 | 3p/128t, 4p/96t | adaptive | 1h 54m 3s | 384 | 10.29 | 16m 12s | 3 |
 | learned_page_mask | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 1 | 384 | 1p/384t, 3p/128t | adaptive | 1m 2s | 384 | 8.10 | 30s | 2 |
 | lsd | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 9 | 42 | 9p/42t | adaptive | 2m 19s | 378 | 168.23 | 13s | 1 |
+| msre_bfq_spbv_pbg | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 36 | 10 | 29p/13t, 30p/12t, 31p/12t, 32p/12t, 33p/11t, 34p/11t, 35p/10t, 36p/10t, 37p/10t, 38p/10t | adaptive | 1h 27m 24s | 360 | 11.10 | 3m 17s | 1 |
+| multi_scale_radial_edge | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 9 | 42 | 9p/42t | adaptive | 2m 27s | 378 | 60.83 | 12s | 1 |
+| page_background | 192t — rh8-al307 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 5 | 76 | 4p/96t, 5p/76t | adaptive | 3m 6s | 380 | 136.75 | 16s | 1 |
 | polar_boundary_vote | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 13 | 29 | 13p/29t | adaptive | 4m 2s | 377 | 60.75 | 12s | 1 |
+| projective_gradient_vote | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 6 | 64 | 6p/64t | adaptive | 1m 31s | 384 | 91.25 | 8s | 1 |
 | radial_edge | 192t — rh8-al323 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 26 | 14 | 23p/16t, 24p/16t, 25p/15t, 26p/14t, 27p/14t | adaptive | 7m 47s | 364 | 345.37 | 19s | 1 |
 | radon_boundary | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 7 | 54 | 5p/76t, 6p/64t, 7p/54t | adaptive | 2m 26s | 378 | 56.08 | 13s | 1 |
 | ransac | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 23 | 16 | 23p/16t | adaptive | 2m 54s | 368 | 145.80 | 10s | 1 |
+| segment_supported_polar_vote | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 62 | 6 | 61p/6t, 62p/6t, 63p/6t, 64p/6t | adaptive | 2h 36m 48s | 372 | 140.59 | 2m 20s | 1 |
+| signed_polar_boundary_vote | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 40 | 9 | 40p/9t | adaptive | 12m 39s | 360 | 87.48 | 25s | 1 |
 | star_convex | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 10 | 38 | 10p/38t | adaptive | 2m 29s | 380 | 72.90 | 10s | 1 |
 | text_flow | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 1 | 384 | 1p/384t, 8p/48t | adaptive | 1m 3s | 384 | 145.80 | 5s | 1 |
 | whitespace_frame | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 1 | 384 | 1p/384t, 3p/128t, 4p/96t | adaptive | 40s | 384 | 243.33 | 3s | 1 |
@@ -121,8 +145,10 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Observed vCPU anchors | Prediction readiness | Prediction checks | Desired / missing optimization data |
 |---|---|---|---|---|
+| adaptive_multi_scale_radial_edge | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | adaptive_radial_edge | 32, 96, 192 | high | 0 verified / 0 pending | basic vCPU shape coverage is sufficient; additional runner sizes are optional validation |
 | border_energy | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| border_fusion_quad | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | components | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | consensus_quad | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | contour | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
@@ -141,10 +167,16 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | joint_rectangle_vote | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | learned_page_mask | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | lsd | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| msre_bfq_spbv_pbg | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| multi_scale_radial_edge | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| page_background | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | polar_boundary_vote | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| projective_gradient_vote | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | radial_edge | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | radon_boundary | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | ransac | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| segment_supported_polar_vote | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| signed_polar_boundary_vote | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | star_convex | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | text_flow | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | whitespace_frame | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
@@ -158,6 +190,16 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 <summary><strong>2. Detector Run Profile Plot</strong></summary>
 
 Compatible completed measurements are plotted by detector; thread count is annotated at each measured shape.
+
+<a id="detector-run-profile-adaptive-multi-scale-radial-edge"></a>
+<details>
+<summary><strong>adaptive_multi_scale_radial_edge</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![adaptive_multi_scale_radial_edge Detector Run Profile Plot](profiles/adaptive_multi_scale_radial_edge.svg)
+
+</details>
 
 <a id="detector-run-profile-adaptive-radial-edge"></a>
 <details>
@@ -176,6 +218,16 @@ Compatible completed measurements are plotted by detector; thread count is annot
 **Search method(s):** `adaptive`
 
 ![border_energy Detector Run Profile Plot](profiles/border_energy.svg)
+
+</details>
+
+<a id="detector-run-profile-border-fusion-quad"></a>
+<details>
+<summary><strong>border_fusion_quad</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![border_fusion_quad Detector Run Profile Plot](profiles/border_fusion_quad.svg)
 
 </details>
 
@@ -359,6 +411,36 @@ Compatible completed measurements are plotted by detector; thread count is annot
 
 </details>
 
+<a id="detector-run-profile-msre-bfq-spbv-pbg"></a>
+<details>
+<summary><strong>msre_bfq_spbv_pbg</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![msre_bfq_spbv_pbg Detector Run Profile Plot](profiles/msre_bfq_spbv_pbg.svg)
+
+</details>
+
+<a id="detector-run-profile-multi-scale-radial-edge"></a>
+<details>
+<summary><strong>multi_scale_radial_edge</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![multi_scale_radial_edge Detector Run Profile Plot](profiles/multi_scale_radial_edge.svg)
+
+</details>
+
+<a id="detector-run-profile-page-background"></a>
+<details>
+<summary><strong>page_background</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![page_background Detector Run Profile Plot](profiles/page_background.svg)
+
+</details>
+
 <a id="detector-run-profile-polar-boundary-vote"></a>
 <details>
 <summary><strong>polar_boundary_vote</strong></summary>
@@ -366,6 +448,16 @@ Compatible completed measurements are plotted by detector; thread count is annot
 **Search method(s):** `adaptive`
 
 ![polar_boundary_vote Detector Run Profile Plot](profiles/polar_boundary_vote.svg)
+
+</details>
+
+<a id="detector-run-profile-projective-gradient-vote"></a>
+<details>
+<summary><strong>projective_gradient_vote</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![projective_gradient_vote Detector Run Profile Plot](profiles/projective_gradient_vote.svg)
 
 </details>
 
@@ -396,6 +488,26 @@ Compatible completed measurements are plotted by detector; thread count is annot
 **Search method(s):** `adaptive`
 
 ![ransac Detector Run Profile Plot](profiles/ransac.svg)
+
+</details>
+
+<a id="detector-run-profile-segment-supported-polar-vote"></a>
+<details>
+<summary><strong>segment_supported_polar_vote</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![segment_supported_polar_vote Detector Run Profile Plot](profiles/segment_supported_polar_vote.svg)
+
+</details>
+
+<a id="detector-run-profile-signed-polar-boundary-vote"></a>
+<details>
+<summary><strong>signed_polar_boundary_vote</strong></summary>
+
+**Search method(s):** `adaptive`
+
+![signed_polar_boundary_vote Detector Run Profile Plot](profiles/signed_polar_boundary_vote.svg)
 
 </details>
 
@@ -438,6 +550,32 @@ Compatible completed measurements are plotted by detector; thread count is annot
 <summary><strong>3. Detector Pipeline-Thread Shape Optimization Data</strong></summary>
 
 Coalesced compatible shape measurements from completed optimizer runs are shown below.
+
+<a id="detector-shape-data-adaptive-multi-scale-radial-edge"></a>
+<details>
+<summary><strong>adaptive_multi_scale_radial_edge</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al319 (192 vCPU) | 4 | 4 | 96 | 384 | 18m 10s | 9.18 | — | -64.77% | 380.8 | 584.4 | 74.5% | 34.4 GiB |
+| 192t — rh8-al319 (192 vCPU) | 11 | 11 | 34 | 374 | 8m 22s | 19.92 | — | -23.51% | 1176.9 | 1282.4 | 96.2% | 36.1 GiB |
+| 192t — rh8-al319 (192 vCPU) | 19 | 19 | 20 | 380 | 6m 46s | 24.63 | — | -5.42% | 1373.0 | 1556.6 | 97.6% | 38.5 GiB |
+| 192t — rh8-al319 (192 vCPU) | 22 | 22 | 17 | 374 | 6m 34s | 25.38 | — | -2.54% | 1454.9 | 1682.9 | 96.8% | 38.7 GiB |
+| 192t — rh8-al319 (192 vCPU) | 23 | 23 | 16 | 368 | 6m 27s | 25.84 | — | -0.78% | 1632.5 | 1765.9 | 98.1% | 38.7 GiB |
+| 192t — rh8-al319 (192 vCPU) | 24 | 24 | 16 | 384 | 6m 26s | 25.91 | — | -0.52% | 1616.7 | 1788.8 | 98.4% | 39.8 GiB |
+| **192t — rh8-al319 (192 vCPU)** | 25 | 25 | 15 | 375 | 6m 24s | 26.04 | — | 0.00% | 1680.7 | 2038.6 | 96.4% | 39.6 GiB |
+| 192t — rh8-al319 (192 vCPU) | 26 | 26 | 14 | 364 | 6m 26s | 25.91 | — | -0.52% | 1704.4 | 1885.0 | 96.2% | 39.2 GiB |
+| 192t — rh8-al319 (192 vCPU) | 27 | 27 | 14 | 378 | 6m 28s | 25.78 | — | -1.03% | 1861.0 | 2006.0 | 97.4% | 40.4 GiB |
+| 192t — rh8-al319 (192 vCPU) | 28 | 28 | 13 | 364 | 6m 25s | 25.98 | — | -0.26% | 1787.3 | 2000.0 | 97.4% | 39.6 GiB |
+| 192t — rh8-al319 (192 vCPU) | 29 | 29 | 13 | 377 | 6m 29s | 25.71 | — | -1.29% | 1856.2 | 2094.0 | 96.3% | 40.9 GiB |
+| 192t — rh8-al319 (192 vCPU) | 30 | 30 | 12 | 360 | 6m 26s | 25.91 | — | -0.52% | 1980.2 | 2214.9 | 97.9% | 40.1 GiB |
+| 192t — rh8-al319 (192 vCPU) | 31 | 31 | 12 | 372 | 6m 26s | 25.91 | — | -0.52% | 1995.8 | 2200.2 | 97.2% | 41.3 GiB |
+| 192t — rh8-al319 (192 vCPU) | 32 | 32 | 12 | 384 | 6m 25s | 25.98 | — | -0.26% | 1929.5 | 2167.1 | 96.8% | 41.8 GiB |
+| 192t — rh8-al319 (192 vCPU) | 48 | 48 | 8 | 384 | 6m 41s | 24.94 | — | -4.24% | 2494.6 | 3008.2 | 96.3% | 46.0 GiB |
+
+</details>
 
 <a id="detector-shape-data-adaptive-radial-edge"></a>
 <details>
@@ -550,6 +688,29 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 | 192t — rh8-al325 (192 vCPU) | 9 | 9 | 42 | 378 | 1m 19s | 83.06 | 3.33× | -1.27% | 975.8 | 975.8 | 92.6% | 23.8 GiB |
 | 192t — rh8-al325 (192 vCPU) | 10 | 10 | 38 | 380 | 1m 21s | 81.01 | 3.25× | -3.70% | 963.7 | 963.7 | 92.0% | 24.0 GiB |
 | 192t — rh8-al325 (192 vCPU) | 64 | 64 | 6 | 384 | 2m 21s | 46.54 | 1.87× | -44.68% | 1903.7 | 2504.5 | 84.3% | 32.9 GiB |
+
+</details>
+
+<a id="detector-shape-data-border-fusion-quad"></a>
+<details>
+<summary><strong>border_fusion_quad</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al318 (192 vCPU) | 1 | 1 | 384 | 384 | 1m 26s | 2.84 | 1.00× | -84.88% | 36.0 | 36.0 | 1.2% | 21.3 GiB |
+| 192t — rh8-al318 (192 vCPU) | 7 | 7 | 54 | 378 | 18s | 13.56 | 4.78× | -27.78% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 8 | 8 | 48 | 384 | 16s | 15.25 | 5.38× | -18.75% | 179.2 | 179.2 | 8.6% | 22.1 GiB |
+| 192t — rh8-al318 (192 vCPU) | 9 | 9 | 42 | 378 | 15s | 16.27 | 5.73× | -13.33% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 10 | 10 | 38 | 380 | 13s | 18.77 | 6.62× | 0.00% | 106.8 | 106.8 | 10.0% | 11.0 GiB |
+| **192t — rh8-al318 (192 vCPU)** | 11 | 11 | 34 | 374 | 13s | 18.77 | 6.62× | 0.00% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 12 | 12 | 32 | 384 | 13s | 18.77 | 6.62× | 0.00% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 13 | 13 | 29 | 377 | 13s | 18.77 | 6.62× | 0.00% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 14 | 14 | 27 | 378 | 13s | 18.77 | 6.62× | 0.00% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 15 | 15 | 25 | 375 | 13s | 18.77 | 6.62× | 0.00% | 53.1 | 53.1 | 14.0% | 22.7 GiB |
+| 192t — rh8-al318 (192 vCPU) | 16 | 16 | 24 | 384 | 14s | 17.43 | 6.14× | -7.14% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 64 | 64 | 6 | 384 | 25s | 9.76 | 3.44× | -48.00% | — | — | — | — |
 
 </details>
 
@@ -929,20 +1090,20 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al318 (192 vCPU) | 1 | 1 | 384 | 384 | 19m 43s | 8.45 | 1.00× | -17.75% | 381.0 | 404.3 | 62.7% | 75.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 1 | 1 | 384 | 384 | 19m 43s | 8.45 | 1.00× | -17.84% | 381.0 | 404.3 | 62.7% | 75.6 GiB |
 | **192t — rh8-al319 (192 vCPU)** | 1 | 1 | 384 | 384 | 30s | 8.10 | 1.00× | 0.00% | — | — | — | — |
-| **192t — rh8-al318 (192 vCPU)** | 2 | 2 | 192 | 384 | 16m 41s | 9.99 | — | -2.80% | 412.5 | 452.0 | 78.5% | 72.3 GiB |
-| 192t — rh8-al318 (192 vCPU) | 2 | 2 | 192 | 384 | 16m 40s | 10.00 | 1.18× | -2.70% | 419.5 | 446.8 | 77.6% | 75.1 GiB |
-| 192t — rh8-al318 (192 vCPU) | 3 | 3 | 128 | 384 | 16m 19s | 10.21 | 1.21× | -0.61% | 481.0 | 528.9 | 82.9% | 72.2 GiB |
+| **192t — rh8-al318 (192 vCPU)** | 2 | 2 | 192 | 384 | 16m 41s | 9.99 | — | -2.90% | 412.5 | 452.0 | 78.5% | 72.3 GiB |
+| 192t — rh8-al318 (192 vCPU) | 2 | 2 | 192 | 384 | 16m 40s | 10.00 | 1.18× | -2.80% | 419.5 | 446.8 | 77.6% | 75.1 GiB |
+| 192t — rh8-al318 (192 vCPU) | 3 | 3 | 128 | 384 | 16m 17s | 10.24 | 1.21× | -0.51% | 481.5 | 527.3 | 83.4% | 70.4 GiB |
 | 192t — rh8-al319 (192 vCPU) | 3 | 3 | 128 | 384 | 30s | 8.10 | 1.00× | 0.00% | 180.8 | 180.8 | 66.8% | 48.6 GiB |
-| **192t — rh8-al318 (192 vCPU)** | 4 | 4 | 96 | 384 | 16m 13s | 10.28 | 1.22× | 0.00% | 523.1 | 578.0 | 87.2% | 73.5 GiB |
+| **192t — rh8-al318 (192 vCPU)** | 4 | 4 | 96 | 384 | 16m 12s | 10.29 | 1.22× | 0.00% | 575.8 | 847.5 | 87.8% | 72.9 GiB |
 | 192t — rh8-al319 (192 vCPU) | 4 | 4 | 96 | 384 | 33s | 7.36 | 0.91× | -9.09% | 638.4 | 638.4 | 79.4% | 49.8 GiB |
-| 192t — rh8-al318 (192 vCPU) | 5 | 5 | 76 | 380 | 16m 53s | 9.87 | 1.17× | -3.95% | 607.3 | 649.1 | 88.9% | 71.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 5 | 5 | 76 | 380 | 16m 53s | 9.87 | 1.17× | -4.05% | 607.3 | 649.1 | 88.9% | 71.9 GiB |
 | 192t — rh8-al319 (192 vCPU) | 5 | 5 | 76 | 380 | 36s | 6.75 | 0.83× | -16.67% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 6 | 6 | 64 | 384 | 17m 35s | 9.48 | 1.12× | -7.77% | 640.6 | 680.2 | 89.4% | 71.0 GiB |
-| 192t — rh8-al318 (192 vCPU) | 8 | 8 | 48 | 384 | 19m 35s | 8.51 | 1.01× | -17.19% | 801.9 | 872.2 | 89.6% | 74.3 GiB |
+| 192t — rh8-al318 (192 vCPU) | 6 | 6 | 64 | 384 | 17m 35s | 9.48 | 1.12× | -7.87% | 640.6 | 680.2 | 89.4% | 71.0 GiB |
+| 192t — rh8-al318 (192 vCPU) | 8 | 8 | 48 | 384 | 19m 35s | 8.51 | 1.01× | -17.28% | 801.9 | 872.2 | 89.6% | 74.3 GiB |
 | 192t — rh8-al319 (192 vCPU) | 8 | 8 | 48 | 384 | 48s | 5.06 | 0.62× | -37.50% | 1816.9 | 1816.9 | 67.1% | 48.2 GiB |
-| 192t — rh8-al318 (192 vCPU) | 16 | 16 | 24 | 384 | 28m 9s | 5.92 | 0.70× | -42.39% | 1201.2 | 1317.4 | 92.0% | 74.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 16 | 16 | 24 | 384 | 28m 9s | 5.92 | 0.70× | -42.45% | 1201.2 | 1317.4 | 92.0% | 74.6 GiB |
 | 192t — rh8-al319 (192 vCPU) | 64 | 64 | 6 | 384 | 2m 10s | 1.87 | 0.23× | -76.92% | 2031.1 | 2855.7 | 85.6% | 57.7 GiB |
 
 </details>
@@ -966,6 +1127,67 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 
 </details>
 
+<a id="detector-shape-data-msre-bfq-spbv-pbg"></a>
+<details>
+<summary><strong>msre_bfq_spbv_pbg</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al318 (192 vCPU) | 2 | 2 | 192 | 384 | 38m 24s | 0.95 | — | -91.45% | 67.7 | 146.1 | 15.9% | 37.7 GiB |
+| 192t — rh8-al318 (192 vCPU) | 14 | 14 | 27 | 378 | 5m 11s | 7.03 | — | -36.66% | 1096.9 | 1395.8 | 87.7% | 38.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 28 | 28 | 13 | 364 | 3m 22s | 10.83 | — | -2.48% | 1399.0 | 1498.5 | 91.5% | 41.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 29 | 29 | 13 | 377 | 3m 20s | 10.94 | — | -1.50% | 1547.8 | 1551.7 | 94.7% | 42.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 30 | 30 | 12 | 360 | 3m 21s | 10.88 | — | -1.99% | 1500.9 | 1590.9 | 91.9% | 41.7 GiB |
+| 192t — rh8-al318 (192 vCPU) | 31 | 31 | 12 | 372 | 3m 20s | 10.94 | — | -1.50% | 1676.5 | 1824.3 | 93.2% | 42.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 32 | 32 | 12 | 384 | 3m 18s | 11.05 | — | -0.51% | 1591.1 | 1791.1 | 93.2% | 43.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 33 | 33 | 11 | 363 | 3m 18s | 11.05 | — | -0.51% | 1554.2 | 1749.7 | 91.7% | 42.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 34 | 34 | 11 | 374 | 3m 17s | 11.10 | — | 0.00% | 1687.5 | 1818.9 | 90.9% | 43.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 35 | 35 | 10 | 350 | 3m 20s | 10.94 | — | -1.50% | 1712.5 | 1812.8 | 93.4% | 42.4 GiB |
+| **192t — rh8-al318 (192 vCPU)** | 36 | 36 | 10 | 360 | 3m 17s | 11.10 | — | 0.00% | 1703.8 | 1827.7 | 91.2% | 43.3 GiB |
+| 192t — rh8-al318 (192 vCPU) | 37 | 37 | 10 | 370 | 3m 20s | 10.94 | — | -1.50% | 1657.9 | 1874.3 | 92.3% | 44.4 GiB |
+| 192t — rh8-al318 (192 vCPU) | 38 | 38 | 10 | 380 | 3m 19s | 10.99 | — | -1.01% | 1730.3 | 1921.0 | 91.4% | 45.5 GiB |
+| 192t — rh8-al318 (192 vCPU) | 39 | 39 | 9 | 351 | 3m 23s | 10.77 | — | -2.96% | 1733.6 | 1948.3 | 93.6% | 43.7 GiB |
+| 192t — rh8-al318 (192 vCPU) | 96 | 96 | 4 | 384 | 3m 48s | 9.59 | — | -13.60% | 2774.1 | 3885.8 | 80.6% | 60.2 GiB |
+
+</details>
+
+<a id="detector-shape-data-multi-scale-radial-edge"></a>
+<details>
+<summary><strong>multi_scale_radial_edge</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al318 (192 vCPU) | 1 | 1 | 384 | 384 | 1m 7s | 10.90 | 1.00× | -82.09% | 8.6 | 8.6 | 7.0% | 32.7 GiB |
+| 192t — rh8-al318 (192 vCPU) | 8 | 8 | 48 | 384 | 14s | 52.14 | 4.79× | -14.29% | — | — | — | — |
+| **192t — rh8-al318 (192 vCPU)** | 9 | 9 | 42 | 378 | 12s | 60.83 | 5.58× | 0.00% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 10 | 10 | 38 | 380 | 13s | 56.15 | 5.15× | -7.69% | 220.2 | 220.2 | 31.1% | 11.3 GiB |
+| 192t — rh8-al318 (192 vCPU) | 96 | 96 | 4 | 384 | 38s | 19.21 | 1.76× | -68.42% | — | — | — | — |
+
+</details>
+
+<a id="detector-shape-data-page-background"></a>
+<details>
+<summary><strong>page_background</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al307 (192 vCPU) | 1 | 1 | 384 | 384 | 40s | 54.70 | 1.00× | -60.00% | — | — | — | — |
+| 192t — rh8-al307 (192 vCPU) | 3 | 3 | 128 | 384 | 19s | 115.16 | 2.11× | -15.79% | 138.7 | 138.7 | 41.0% | 41.3 GiB |
+| 192t — rh8-al307 (192 vCPU) | 4 | 4 | 96 | 384 | 16s | 136.75 | 2.50× | 0.00% | — | — | — | — |
+| **192t — rh8-al307 (192 vCPU)** | 5 | 5 | 76 | 380 | 16s | 136.75 | 2.50× | 0.00% | — | — | — | — |
+| 192t — rh8-al307 (192 vCPU) | 6 | 6 | 64 | 384 | 17s | 128.71 | 2.35× | -5.88% | — | — | — | — |
+| 192t — rh8-al307 (192 vCPU) | 7 | 7 | 54 | 378 | 18s | 121.56 | 2.22× | -11.11% | 224.1 | 224.1 | 36.3% | 22.3 GiB |
+| 192t — rh8-al307 (192 vCPU) | 8 | 8 | 48 | 384 | 18s | 121.56 | 2.22× | -11.11% | — | — | — | — |
+| 192t — rh8-al307 (192 vCPU) | 64 | 64 | 6 | 384 | 37s | 59.14 | 1.08× | -56.76% | 313.5 | 313.5 | 27.4% | 22.8 GiB |
+
+</details>
+
 <a id="detector-shape-data-polar-boundary-vote"></a>
 <details>
 <summary><strong>polar_boundary_vote</strong></summary>
@@ -984,6 +1206,23 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 | **192t — rh8-al318 (192 vCPU)** | 13 | 13 | 29 | 377 | 12s | 60.75 | 8.25× | 0.00% | — | — | — | — |
 | 192t — rh8-al318 (192 vCPU) | 14 | 14 | 27 | 378 | 13s | 56.08 | 7.62× | -7.69% | 175.2 | 175.2 | 11.2% | 20.4 GiB |
 | 192t — rh8-al318 (192 vCPU) | 64 | 64 | 6 | 384 | 21s | 34.71 | 4.71× | -42.86% | 196.0 | 196.0 | 6.1% | 11.2 GiB |
+
+</details>
+
+<a id="detector-shape-data-projective-gradient-vote"></a>
+<details>
+<summary><strong>projective_gradient_vote</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al318 (192 vCPU) | 1 | 1 | 384 | 384 | 24s | 30.42 | 1.00× | -66.67% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 5 | 5 | 76 | 380 | 9s | 81.11 | 2.67× | -11.11% | — | — | — | — |
+| **192t — rh8-al318 (192 vCPU)** | 6 | 6 | 64 | 384 | 8s | 91.25 | 3.00× | 0.00% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 7 | 7 | 54 | 378 | 9s | 81.11 | 2.67× | -11.11% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 8 | 8 | 48 | 384 | 10s | 73.00 | 2.40× | -20.00% | 256.9 | 256.9 | 17.4% | 25.0 GiB |
+| 192t — rh8-al318 (192 vCPU) | 64 | 64 | 6 | 384 | 27s | 27.04 | 0.89× | -70.37% | — | — | — | — |
 
 </details>
 
@@ -1040,6 +1279,57 @@ Coalesced compatible shape measurements from completed optimizer runs are shown 
 | **192t — rh8-al321 (192 vCPU)** | 23 | 23 | 16 | 368 | 10s | 145.80 | 11.30× | 0.00% | — | — | — | — |
 | 192t — rh8-al321 (192 vCPU) | 24 | 24 | 16 | 384 | 11s | 132.55 | 10.27× | -9.09% | — | — | — | — |
 | 192t — rh8-al321 (192 vCPU) | 64 | 64 | 6 | 384 | 12s | 121.50 | 9.42× | -16.67% | 1.3 | 1.3 | 0.7% | 11.0 GiB |
+
+</details>
+
+<a id="detector-shape-data-segment-supported-polar-vote"></a>
+<details>
+<summary><strong>segment_supported_polar_vote</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al318 (192 vCPU) | 1 | 1 | 384 | 384 | 1h 53m 3s | 2.90 | 1.00× | -97.94% | 2.3 | 4.1 | 1.4% | 24.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 8 | 8 | 48 | 384 | 15m 54s | 20.63 | 7.11× | -85.32% | 51.1 | 335.8 | 11.3% | 25.2 GiB |
+| 192t — rh8-al318 (192 vCPU) | 23 | 23 | 16 | 368 | 7m 17s | 45.04 | 15.52× | -67.96% | 61.6 | 68.4 | 37.4% | 27.0 GiB |
+| 192t — rh8-al318 (192 vCPU) | 38 | 38 | 10 | 380 | 3m 50s | 85.58 | 29.49× | -39.13% | 353.9 | 567.7 | 68.0% | 29.4 GiB |
+| 192t — rh8-al318 (192 vCPU) | 48 | 48 | 8 | 384 | 2m 40s | 123.02 | 42.39× | -12.50% | 687.5 | 777.6 | 90.1% | 29.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 49 | 49 | 7 | 343 | 2m 32s | 129.49 | 44.62× | -7.89% | 683.2 | 733.3 | 79.6% | 29.1 GiB |
+| 192t — rh8-al318 (192 vCPU) | 56 | 56 | 6 | 336 | 2m 23s | 137.64 | 47.43× | -2.10% | 703.4 | 816.2 | 84.5% | 30.1 GiB |
+| 192t — rh8-al318 (192 vCPU) | 60 | 60 | 6 | 360 | 2m 23s | 137.64 | 47.43× | -2.10% | 843.7 | 887.5 | 83.9% | 30.5 GiB |
+| 192t — rh8-al318 (192 vCPU) | 61 | 61 | 6 | 366 | 2m 22s | 138.61 | 47.77× | -1.41% | 957.0 | 984.7 | 95.7% | 30.8 GiB |
+| **192t — rh8-al318 (192 vCPU)** | 62 | 62 | 6 | 372 | 2m 20s | 140.59 | 48.45× | 0.00% | 755.7 | 885.2 | 74.0% | 31.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 63 | 63 | 6 | 378 | 2m 21s | 139.60 | 48.11× | -0.71% | 895.5 | 925.7 | 80.4% | 31.7 GiB |
+| 192t — rh8-al318 (192 vCPU) | 64 | 64 | 6 | 384 | 2m 20s | 140.59 | 48.45× | 0.00% | 820.2 | 880.0 | 94.3% | 31.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 72 | 72 | 5 | 360 | 2m 26s | 134.82 | 46.46× | -4.11% | 838.2 | 1029.3 | 75.3% | 31.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 73 | 73 | 5 | 365 | 2m 25s | 135.74 | 46.78× | -3.45% | 886.7 | 925.9 | 76.7% | 32.6 GiB |
+| 192t — rh8-al318 (192 vCPU) | 74 | 74 | 5 | 370 | 2m 25s | 135.74 | 46.78× | -3.45% | 957.2 | 964.9 | 95.0% | 32.4 GiB |
+| 192t — rh8-al318 (192 vCPU) | 75 | 75 | 5 | 375 | 2m 24s | 136.69 | 47.10× | -2.78% | 851.4 | 1066.5 | 66.6% | 32.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 76 | 76 | 5 | 380 | 2m 23s | 137.64 | 47.43× | -2.10% | 1038.2 | 1073.4 | 87.1% | 33.3 GiB |
+| 192t — rh8-al318 (192 vCPU) | 77 | 77 | 4 | 308 | 2m 27s | 133.90 | 46.14× | -4.76% | 861.1 | 1026.2 | 73.5% | 30.8 GiB |
+| 192t — rh8-al318 (192 vCPU) | 78 | 78 | 4 | 312 | 2m 27s | 133.90 | 46.14× | -4.76% | 978.4 | 993.9 | 82.4% | 30.9 GiB |
+| 192t — rh8-al318 (192 vCPU) | 128 | 128 | 3 | 384 | 2m 35s | 126.99 | 43.76× | -9.68% | 1000.9 | 1445.5 | 79.2% | 39.5 GiB |
+
+</details>
+
+<a id="detector-shape-data-signed-polar-boundary-vote"></a>
+<details>
+<summary><strong>signed_polar_boundary_vote</strong></summary>
+
+**Search method(s):** `adaptive`
+
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al319 (192 vCPU) | 1 | 1 | 384 | 384 | 8m 3s | 4.53 | 1.00× | -94.82% | 2.8 | 8.3 | 1.5% | 21.1 GiB |
+| 192t — rh8-al319 (192 vCPU) | 8 | 8 | 48 | 384 | 1m 13s | 29.96 | 6.62× | -65.75% | 62.8 | 62.8 | 16.7% | 21.4 GiB |
+| 192t — rh8-al319 (192 vCPU) | 23 | 23 | 16 | 368 | 37s | 59.11 | 13.05× | -32.43% | 42.6 | 42.6 | 13.1% | 22.7 GiB |
+| 192t — rh8-al319 (192 vCPU) | 37 | 37 | 10 | 370 | 29s | 75.41 | 16.66× | -13.79% | 183.2 | 183.2 | 33.6% | 24.2 GiB |
+| 192t — rh8-al319 (192 vCPU) | 38 | 38 | 10 | 380 | 27s | 81.00 | 17.89× | -7.41% | — | — | — | — |
+| 192t — rh8-al319 (192 vCPU) | 39 | 39 | 9 | 351 | 26s | 84.12 | 18.58× | -3.85% | — | — | — | — |
+| **192t — rh8-al319 (192 vCPU)** | 40 | 40 | 9 | 360 | 25s | 87.48 | 19.32× | 0.00% | 297.9 | 297.9 | 38.4% | 24.5 GiB |
+| 192t — rh8-al319 (192 vCPU) | 41 | 41 | 9 | 369 | 26s | 84.12 | 18.58× | -3.85% | — | — | — | — |
+| 192t — rh8-al319 (192 vCPU) | 64 | 64 | 6 | 384 | 29s | 75.41 | 16.66× | -13.79% | — | — | — | — |
 
 </details>
 
