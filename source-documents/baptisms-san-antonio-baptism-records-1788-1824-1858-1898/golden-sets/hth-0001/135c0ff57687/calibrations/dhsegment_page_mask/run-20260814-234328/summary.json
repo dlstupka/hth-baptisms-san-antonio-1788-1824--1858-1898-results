@@ -1,0 +1,1909 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260814-234328",
+  "detector": "dhsegment_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "8.684",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "21",
+    "ranked_quality": "0.00000000",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 10000,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 0,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "9cb0b223675c5ea900c5fd9ca840230a35b639eb9e53dc423bfdc1f043103de0",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "013084b6c0e9",
+    "parameters": {
+      "probability_threshold": -1.0,
+      "minimum_page_area_fraction": 0.2,
+      "close_kernel_fraction": 0.005,
+      "open_kernel_fraction": 0.0,
+      "contour_offset_fraction": 0.0,
+      "fill_holes": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 9352.1,
+      "wall_ms": 9352.498
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 8919.518,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 8917.359
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 79.498,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 78.397
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 76.52,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 72.954
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 133.51,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 132.409
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 143.054,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 142.034
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260814-234328",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "013084b6c0e9",
+    "parameters": {
+      "probability_threshold": -1.0,
+      "minimum_page_area_fraction": 0.2,
+      "close_kernel_fraction": 0.005,
+      "open_kernel_fraction": 0.0,
+      "contour_offset_fraction": 0.0,
+      "fill_holes": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 0,
+      "failure_count": 5,
+      "mean_iou": 0.0,
+      "mean_iou_success": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "mean_edge_error_px": null,
+      "elapsed_ms_total": 9352.1,
+      "wall_ms": 9352.498
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 8919.518,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 8917.359
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 79.498,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 78.397
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 76.52,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 72.954
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 133.51,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 132.409
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "error",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 143.054,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "detector_exception",
+            "exception_type": "InvalidArgumentError",
+            "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+            "elapsed_ms": 142.034
+          },
+          "status": "error",
+          "detector_name": "dhSegment Page-Mask Detector",
+          "origin": "dhSegment / HTH",
+          "foundation": [
+            "dhSegment",
+            "ResNet-50",
+            "Learned page segmentation",
+            "TensorFlow SavedModel"
+          ],
+          "authors": [
+            "Sofia Ares Oliveira et al.",
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260814-234328",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "013084b6c0e9",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.2,
+        "close_kernel_fraction": 0.005,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 9352.1,
+        "wall_ms": 9352.498
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 8919.518,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 8917.359
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 79.498,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 78.397
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 76.52,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 72.954
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 133.51,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 132.409
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 143.054,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 142.034
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260814-234328",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bdbe0ec8e9e7",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": -0.004,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 849.575,
+        "wall_ms": 849.832
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 171.735,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 170.875
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 175.17,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 174.179
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 135.836,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 134.901
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 187.216,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 185.051
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 179.618,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 178.765
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 10.21584152999992,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260814-234328",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "6373899f3670",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": -0.004,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 687.139,
+        "wall_ms": 687.432
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 168.978,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 159.938
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 138.991,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 138.062
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 102.912,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 101.943
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 133.947,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 132.981
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 142.311,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 141.401
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 10.054190590999951,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260814-234328",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bebf5b6a6773",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 676.554,
+        "wall_ms": 676.837
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 156.555,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 154.433
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 133.997,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 133.045
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 104.687,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 103.716
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 133.258,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 132.242
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 148.057,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 147.013
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 10.736996138999984,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260814-234328",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "e291357a4811",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 0,
+        "failure_count": 5,
+        "mean_iou": 0.0,
+        "mean_iou_success": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "mean_edge_error_px": null,
+        "elapsed_ms_total": 759.81,
+        "wall_ms": 760.09
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 193.844,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 192.936
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 178.867,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 176.017
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 130.003,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 129.031
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 145.015,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 143.979
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "error",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 112.081,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "detector_exception",
+              "exception_type": "InvalidArgumentError",
+              "exception_message": "Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n",
+              "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1407, in _do_call\n    return fn(*args)\n           ^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1390, in _run_fn\n    return self._call_tf_sessionrun(options, feed_dict, fetch_list,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1483, in _call_tf_sessionrun\n    return tf_session.TF_SessionRun_wrapper(self._session, options, feed_dict,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Input filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 536, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 373, in detect\n    probability, binary, contour, _ = _proposal(image_bgr, values)\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 358, in _proposal\n    probability, original_shape = _model().predict(image_bgr)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_dhsegment_page_mask.py\", line 243, in predict\n    outputs = self.session.run(\n              ^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 977, in run\n    result = self._run(None, fetches, feed_dict, options_ptr,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1220, in _run\n    results = self._do_run(handle, final_targets, final_fetches,\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1400, in _do_run\n    return self._do_call(_run_fn, feeds, fetches, targets, options,\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/_temp/hth-python-31850486746-1/lib/python3.12/site-packages/tensorflow/python/client/session.py\", line 1426, in _do_call\n    raise type(e)(node_def, op, message)  # pylint: disable=no-value-for-parameter\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntensorflow.python.framework.errors_impl.InvalidArgumentError: Graph execution error:\n\nDetected at node 'ReadFile' defined at (most recent call last):\nNode: 'ReadFile'\nInput filename tensor must be scalar, but had shape: [1]\n\t [[{{node ReadFile}}]]\n\nOriginal stack trace for 'ReadFile':\n\n",
+              "elapsed_ms": 111.124
+            },
+            "status": "error",
+            "detector_name": "dhSegment Page-Mask Detector",
+            "origin": "dhSegment / HTH",
+            "foundation": [
+              "dhSegment",
+              "ResNet-50",
+              "Learned page segmentation",
+              "TensorFlow SavedModel"
+            ],
+            "authors": [
+              "Sofia Ares Oliveira et al.",
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 10.977993615999935,
+        "search_fraction": 0.5
+      },
+      "profile": null,
+      "run_id": "run-20260814-234328",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 5,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "Unprocessed",
+        "parameter_set": "baseline",
+        "parameter_set_id": "013084b6c0e9",
+        "problem": true,
+        "problem_reasons": [
+          "Unprocessed"
+        ],
+        "detector_status": "error"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000618",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766410752,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "0be38879305ce516753d337f6fddf68aa39bfbf7",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31850486746",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "a3e9a90416cb335a8c63e9c705b99712d0f06f5e",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 842149888,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 0.7978689312122241,
+    "failures": 50,
+    "best_mean_iou": 0.0,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.0,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 0,
+    "parameter_sets_with_improvements": 0,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": null,
+    "time_since_last_improvement_seconds": null
+  }
+}
