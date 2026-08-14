@@ -1,0 +1,4298 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260814-031233",
+  "detector": "page_background",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "4.174",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "22",
+    "ranked_quality": "0.96617696",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 500001,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 49,
+  "fully_successful_parameter_set_count": 9,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "959bce407d180f59c255384d79e58124c0ac9b9f93e93b363af99901c680598a",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "5481c2b53f48",
+    "parameters": {
+      "border_band_fraction": 0.005,
+      "color_distance_threshold": 3.0,
+      "blur_sigma": 0.0,
+      "close_kernel_fraction": 0.0,
+      "open_kernel_fraction": 0.003,
+      "minimum_border_background_fraction": 0.15,
+      "minimum_page_area_fraction": 0.15
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.96376408,
+      "mean_iou_success": 0.96376408,
+      "minimum_iou": 0.94371118,
+      "stddev_iou": 0.02218281,
+      "mean_edge_error_px": 10.1,
+      "elapsed_ms_total": 695.567,
+      "wall_ms": 696.158
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          64,
+          55,
+          1291,
+          968
+        ],
+        "iou": 0.94657715,
+        "edge_errors": {
+          "left": 61,
+          "top": 1,
+          "right": 2,
+          "bottom": 1,
+          "mean": 16.25,
+          "maximum": 61
+        },
+        "edge_error_mean_px": 16.25,
+        "edge_error_maximum_px": 61,
+        "elapsed_ms": 189.145,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "corners": [
+            [
+              1290.0,
+              967.0
+            ],
+            [
+              64.0,
+              967.0
+            ],
+            [
+              64.0,
+              55.0
+            ],
+            [
+              1290.0,
+              55.0
+            ]
+          ],
+          "confidence": 0.9554715461098584,
+          "score": 0.9554715461098584,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9938083121289228,
+            "border_band_pixels": 5,
+            "page_area_fraction": 0.7967404737232984,
+            "rectangularity": 0.9709939612489625,
+            "center_score": 0.9731356929418532,
+            "proposal_score": 0.9190391747451969,
+            "parameters": {
+              "border_band_fraction": 0.005,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9190391747451969,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 189.109
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          72,
+          9,
+          1231,
+          978
+        ],
+        "iou": 0.99195323,
+        "edge_errors": {
+          "left": 5,
+          "top": 1,
+          "right": 2,
+          "bottom": 1,
+          "mean": 2.25,
+          "maximum": 5
+        },
+        "edge_error_mean_px": 2.25,
+        "edge_error_maximum_px": 5,
+        "elapsed_ms": 133.75,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "corners": [
+            [
+              1229.1820068359375,
+              977.2440185546875
+            ],
+            [
+              72.92110443115234,
+              975.7913818359375
+            ],
+            [
+              74.13455963134766,
+              9.93231201171875
+            ],
+            [
+              1230.3953857421875,
+              11.38494873046875
+            ]
+          ],
+          "confidence": 0.9310032266494346,
+          "score": 0.9310032266494346,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9811164413432185,
+            "border_band_pixels": 5,
+            "page_area_fraction": 0.7722893820271431,
+            "rectangularity": 0.8982203016133536,
+            "center_score": 0.9922889379020158,
+            "proposal_score": 0.8745513211807899,
+            "parameters": {
+              "border_band_fraction": 0.005,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.8745513211807899,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 133.712
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          15,
+          22,
+          1071,
+          969
+        ],
+        "iou": 0.98982184,
+        "edge_errors": {
+          "left": 0,
+          "top": 6,
+          "right": 3,
+          "bottom": 1,
+          "mean": 2.5,
+          "maximum": 6
+        },
+        "edge_error_mean_px": 2.5,
+        "edge_error_maximum_px": 6,
+        "elapsed_ms": 102.526,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "corners": [
+            [
+              1070.999755859375,
+              968.9998779296875
+            ],
+            [
+              15.0,
+              968.9998779296875
+            ],
+            [
+              15.0,
+              22.0
+            ],
+            [
+              1070.999755859375,
+              22.0
+            ]
+          ],
+          "confidence": 0.982381209595891,
+          "score": 0.982381209595891,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9999514798641436,
+            "border_band_pixels": 5,
+            "page_area_fraction": 0.9218661173777751,
+            "rectangularity": 0.9859083059670779,
+            "center_score": 0.9943762142244481,
+            "proposal_score": 0.9679658356288926,
+            "parameters": {
+              "border_band_fraction": 0.005,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9679658356288926,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 102.487
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          69,
+          47,
+          1136,
+          943
+        ],
+        "iou": 0.94675701,
+        "edge_errors": {
+          "left": 15,
+          "top": 4,
+          "right": 35,
+          "bottom": 2,
+          "mean": 14.0,
+          "maximum": 35
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 35,
+        "elapsed_ms": 125.886,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "corners": [
+            [
+              1132.96923828125,
+              942.46533203125
+            ],
+            [
+              69.86297607421875,
+              938.90576171875
+            ],
+            [
+              72.84674072265625,
+              47.769561767578125
+            ],
+            [
+              1135.953125,
+              51.329132080078125
+            ]
+          ],
+          "confidence": 0.9474131973331177,
+          "score": 0.9474131973331177,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9916924436588599,
+            "border_band_pixels": 5,
+            "page_area_fraction": 0.7351522842639594,
+            "rectangularity": 0.984472863311694,
+            "center_score": 0.9492124760942648,
+            "proposal_score": 0.9043876315147593,
+            "parameters": {
+              "border_band_fraction": 0.005,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9043876315147593,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 125.852
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          72,
+          27,
+          1192,
+          970
+        ],
+        "iou": 0.94371118,
+        "edge_errors": {
+          "left": 16,
+          "top": 6,
+          "right": 38,
+          "bottom": 2,
+          "mean": 15.5,
+          "maximum": 38
+        },
+        "edge_error_mean_px": 15.5,
+        "edge_error_maximum_px": 38,
+        "elapsed_ms": 144.26,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "corners": [
+            [
+              1187.9901123046875,
+              969.769775390625
+            ],
+            [
+              72.84422302246094,
+              965.9022216796875
+            ],
+            [
+              76.09864807128906,
+              27.555267333984375
+            ],
+            [
+              1191.2445068359375,
+              31.422882080078125
+            ]
+          ],
+          "confidence": 0.963137530342278,
+          "score": 0.963137530342278,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.986432384341637,
+            "border_band_pixels": 5,
+            "page_area_fraction": 0.8165722684255807,
+            "rectangularity": 0.9795998650489806,
+            "center_score": 0.9948381439362495,
+            "proposal_score": 0.932977327895051,
+            "parameters": {
+              "border_band_fraction": 0.005,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.932977327895051,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 144.224
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 3,
+      "parameter_set_number": 3,
+      "elapsed_seconds": 1.5113033370000153,
+      "search_fraction": 0.3
+    },
+    "profile": null,
+    "run_id": "run-20260814-031233",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "c81fb1ff4213",
+    "parameters": {
+      "border_band_fraction": 0.06,
+      "color_distance_threshold": 3.0,
+      "blur_sigma": 1.2,
+      "close_kernel_fraction": 0.008,
+      "open_kernel_fraction": 0.003,
+      "minimum_border_background_fraction": 0.5,
+      "minimum_page_area_fraction": 0.25,
+      "maximum_page_area_fraction": 0.98,
+      "minimum_rectangularity": 0.6
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.76184508,
+      "mean_iou_success": 0.95230635,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.38118323,
+      "mean_edge_error_px": 13.438,
+      "elapsed_ms_total": 793.599,
+      "wall_ms": 797.452
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          57,
+          54,
+          1291,
+          968
+        ],
+        "iou": 0.94017782,
+        "edge_errors": {
+          "left": 68,
+          "top": 2,
+          "right": 2,
+          "bottom": 1,
+          "mean": 18.25,
+          "maximum": 68
+        },
+        "edge_error_mean_px": 18.25,
+        "edge_error_maximum_px": 68,
+        "elapsed_ms": 165.472,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            57,
+            54,
+            1291,
+            968
+          ],
+          "corners": [
+            [
+              1290.0,
+              967.0
+            ],
+            [
+              57.0,
+              967.0
+            ],
+            [
+              57.0,
+              54.0
+            ],
+            [
+              1290.0,
+              54.0
+            ]
+          ],
+          "confidence": 0.9577362668494684,
+          "score": 0.9577362668494684,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.8203954802259887,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.8051017427780534,
+            "rectangularity": 0.9745449393237626,
+            "center_score": 0.9708440623715314,
+            "proposal_score": 0.9231568488172152,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9231568488172152,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 165.431
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          52,
+          9,
+          1232,
+          983
+        ],
+        "iou": 0.9793878,
+        "edge_errors": {
+          "left": 15,
+          "top": 1,
+          "right": 1,
+          "bottom": 6,
+          "mean": 5.75,
+          "maximum": 15
+        },
+        "edge_error_mean_px": 5.75,
+        "edge_error_maximum_px": 15,
+        "elapsed_ms": 142.636,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            52,
+            9,
+            1232,
+            983
+          ],
+          "corners": [
+            [
+              1224.74072265625,
+              982.95263671875
+            ],
+            [
+              52.815914154052734,
+              974.728515625
+            ],
+            [
+              59.589359283447266,
+              9.512908935546875
+            ],
+            [
+              1231.51416015625,
+              17.736968994140625
+            ]
+          ],
+          "confidence": 0.9338357405288751,
+          "score": 0.9338357405288751,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.7030407632936431,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.7864868672684103,
+            "rectangularity": 0.9030651083754777,
+            "center_score": 0.9804631775273378,
+            "proposal_score": 0.8797013464161365,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.8797013464161365,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 142.595
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 143.627,
+        "candidate": {
+          "method": "page_background",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "background_lab_median": [
+              176.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              29.652000427246094,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.6183403195431626,
+            "border_band_pixels": 59,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "reason": "no_plausible_non_background_page_region",
+            "elapsed_ms": 143.586
+          },
+          "status": "no_candidate",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          67,
+          47,
+          1137,
+          943
+        ],
+        "iou": 0.94410255,
+        "edge_errors": {
+          "left": 17,
+          "top": 4,
+          "right": 36,
+          "bottom": 2,
+          "mean": 14.75,
+          "maximum": 36
+        },
+        "edge_error_mean_px": 14.75,
+        "edge_error_maximum_px": 36,
+        "elapsed_ms": 174.896,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            67,
+            47,
+            1137,
+            943
+          ],
+          "corners": [
+            [
+              1134.4661865234375,
+              942.6181640625
+            ],
+            [
+              67.90916442871094,
+              939.9214477539062
+            ],
+            [
+              70.16603088378906,
+              47.31646728515625
+            ],
+            [
+              1136.7230224609375,
+              50.01318359375
+            ]
+          ],
+          "confidence": 0.9470838929084164,
+          "score": 0.9470838929084164,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.8970034212906524,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.7372300343664281,
+            "rectangularity": 0.9824465839860996,
+            "center_score": 0.9484950979655826,
+            "proposal_score": 0.9037888961971207,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9037888961971207,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 172.708
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          72,
+          27,
+          1191,
+          969
+        ],
+        "iou": 0.94555724,
+        "edge_errors": {
+          "left": 16,
+          "top": 6,
+          "right": 37,
+          "bottom": 1,
+          "mean": 15.0,
+          "maximum": 37
+        },
+        "edge_error_mean_px": 15.0,
+        "edge_error_maximum_px": 37,
+        "elapsed_ms": 166.968,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            72,
+            27,
+            1191,
+            969
+          ],
+          "corners": [
+            [
+              1187.958740234375,
+              968.5653686523438
+            ],
+            [
+              72.85415649414062,
+              965.9385375976562
+            ],
+            [
+              75.06515502929688,
+              27.36297607421875
+            ],
+            [
+              1190.169677734375,
+              29.98980712890625
+            ]
+          ],
+          "confidence": 0.9644511844994803,
+          "score": 0.9644511844994803,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.7402502772057659,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.8191186311060128,
+            "rectangularity": 0.9824580026178514,
+            "center_score": 0.9951886615162193,
+            "proposal_score": 0.9353657899990551,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9353657899990551,
+              "border_background": 1.0
+            },
+            "elapsed_ms": 166.93
+          },
+          "status": "ok",
+          "detector_name": "Page Background",
+          "origin": "HTH",
+          "foundation": [
+            "Robust border background model",
+            "CIE Lab color distance",
+            "Negative-space segmentation",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260814-031233",
+    "rank": 10,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "5481c2b53f48",
+      "parameters": {
+        "border_band_fraction": 0.005,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.003,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 695.567,
+        "wall_ms": 696.158
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 189.145,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9938083121289228,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 189.109
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 133.75,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9811164413432185,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 133.712
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 102.526,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9999514798641436,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 102.487
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 125.886,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9916924436588599,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 125.852
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 144.26,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.986432384341637,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 144.224
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 1.5113033370000153,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260814-031233",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "4f644508dbcb",
+      "parameters": {
+        "border_band_fraction": 0.005,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.003,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.2
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 564.72,
+        "wall_ms": 565.261
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 152.836,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9938083121289228,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.2,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 152.812
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 125.967,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9811164413432185,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.2,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 125.933
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 89.848,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9999514798641436,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.2,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 89.805
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 121.388,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9916924436588599,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.2,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 121.349
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 74.681,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.986432384341637,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.2,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 74.645
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 1.3754759440000157,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260814-031233",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "fe2ce08f54dd",
+      "parameters": {
+        "border_band_fraction": 0.005,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.003,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.25
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 575.132,
+        "wall_ms": 575.657
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 71.443,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9938083121289228,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.25,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 71.41
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 142.855,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9811164413432185,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.25,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 142.82
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 136.163,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9999514798641436,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.25,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 136.121
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 115.082,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9916924436588599,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.25,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 115.043
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 109.589,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.986432384341637,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.25,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 109.552
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 1.9552955920000272,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260814-031233",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "5a89ad7d5cf4",
+      "parameters": {
+        "border_band_fraction": 0.005,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.003,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 701.419,
+        "wall_ms": 702.096
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 174.735,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9938083121289228,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.4,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 174.693
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 139.732,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9811164413432185,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.4,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 139.697
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 140.324,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9999514798641436,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.4,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 140.288
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 123.4,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9916924436588599,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.4,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 123.364
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 123.228,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.986432384341637,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.4,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 123.192
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 2.2106580299999905,
+        "search_fraction": 0.5
+      },
+      "profile": null,
+      "run_id": "run-20260814-031233",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "9d2d3e8c2ae9",
+      "parameters": {
+        "border_band_fraction": 0.005,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.003,
+        "minimum_border_background_fraction": 0.25,
+        "minimum_page_area_fraction": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 557.868,
+        "wall_ms": 558.391
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 136.994,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9938083121289228,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.25,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 136.967
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 98.62,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9811164413432185,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.25,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 98.595
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 72.256,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9999514798641436,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.25,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 72.217
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 133.719,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9916924436588599,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.25,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 133.687
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 116.279,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.986432384341637,
+              "border_band_pixels": 5,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.005,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.003,
+                "minimum_border_background_fraction": 0.25,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              },
+              "elapsed_ms": 116.246
+            },
+            "status": "ok",
+            "detector_name": "Page Background",
+            "origin": "HTH",
+            "foundation": [
+              "Robust border background model",
+              "CIE Lab color distance",
+              "Negative-space segmentation",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 2.5119206910000003,
+        "search_fraction": 0.6
+      },
+      "profile": null,
+      "run_id": "run-20260814-031233",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 1
+    },
+    "pages": [
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.9793878,
+        "winner_iou": 0.99195323,
+        "delta_iou": 0.01256543,
+        "status": "Improved",
+        "parameter_set": "5481c2b53f48",
+        "parameter_set_id": "5481c2b53f48",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.98982184,
+        "delta_iou": 0.98982184,
+        "status": "Recovered",
+        "parameter_set": "5481c2b53f48",
+        "parameter_set_id": "5481c2b53f48",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.94410255,
+        "winner_iou": 0.94675701,
+        "delta_iou": 0.00265446,
+        "status": "Improved",
+        "parameter_set": "5481c2b53f48",
+        "parameter_set_id": "5481c2b53f48",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.94017782,
+        "winner_iou": 0.94657715,
+        "delta_iou": 0.00639933,
+        "status": "Improved",
+        "parameter_set": "5481c2b53f48",
+        "parameter_set_id": "5481c2b53f48",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.94555724,
+        "winner_iou": 0.94371118,
+        "delta_iou": -0.00184606,
+        "status": "Regressed",
+        "parameter_set": "5481c2b53f48",
+        "parameter_set_id": "5481c2b53f48",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000570",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "f5a5b5597b4b5b5647593d780b829b3242f11194",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31765779234",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "80e4a3e607992d3b007fe3d8ae078696937160db",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 441102336,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 2.911719677379282,
+    "failures": 1,
+    "best_mean_iou": 0.96376408,
+    "best_worst_page_iou": 0.94371118,
+    "best_stddev_iou": 0.02218281,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 1,
+    "stddev_improvements": 1,
+    "total_metric_improvements": 3,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 1.3754759440000157,
+    "winner_last_changed_elapsed_seconds": 1.3754759440000157,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "4f644508dbcb",
+        "parameter_short_name": "4f644508",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 1.3754759440000157,
+        "search_fraction": 0.2
+      }
+    ],
+    "last_improvement_elapsed_seconds": 1.3754759440000157,
+    "time_since_last_improvement_seconds": 2.058920601000011
+  }
+}
