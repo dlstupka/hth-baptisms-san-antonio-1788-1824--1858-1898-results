@@ -1,0 +1,4404 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260814-022126",
+  "detector": "components",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "1.908",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "27",
+    "ranked_quality": "0.77943311",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 19683,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 50,
+  "fully_successful_parameter_set_count": 10,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "315731f5ea519ca2e6c27f1a20a15a5b362490960046090f2d15ca99ae51c0dd",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "7eb87978bb9a",
+    "parameters": {
+      "minimum_component_area_fraction": 0.00075,
+      "minimum_component_area_px": 10,
+      "merge_area_ratio": 0.01,
+      "merge_gap_fraction": 0.02,
+      "minimum_bbox_area_fraction": 0.08,
+      "minimum_selected_area_fraction": 0.02,
+      "bbox_padding_fraction": 0.0,
+      "morphology_close_fraction": 0.004,
+      "morphology_dilate_fraction": 0.03
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.77943311,
+      "mean_iou_success": 0.77943311,
+      "minimum_iou": 0.55041009,
+      "stddev_iou": 0.17888878,
+      "mean_edge_error_px": 63.2,
+      "elapsed_ms_total": 89.354,
+      "wall_ms": 89.815
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          95,
+          45,
+          1295,
+          972
+        ],
+        "iou": 0.95325782,
+        "edge_errors": {
+          "left": 30,
+          "top": 11,
+          "right": 6,
+          "bottom": 5,
+          "mean": 13.0,
+          "maximum": 30
+        },
+        "edge_error_mean_px": 13.0,
+        "edge_error_maximum_px": 30,
+        "elapsed_ms": 28.389,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            95,
+            45,
+            1295,
+            972
+          ],
+          "corners": [
+            [
+              95.0,
+              45.0
+            ],
+            [
+              1295.0,
+              45.0
+            ],
+            [
+              1295.0,
+              972.0
+            ],
+            [
+              95.0,
+              972.0
+            ]
+          ],
+          "confidence": 0.947296,
+          "score": 0.947296,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.00075,
+              "minimum_component_area_px": 10,
+              "merge_area_ratio": 0.01,
+              "merge_gap_fraction": 0.02,
+              "minimum_bbox_area_fraction": 0.08,
+              "minimum_selected_area_fraction": 0.02,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.004,
+              "morphology_dilate_fraction": 0.03
+            },
+            "component_count": 2,
+            "minimum_component_area": 1022,
+            "morphology_close_kernel_px": 5,
+            "morphology_dilate_kernel_px": 31,
+            "significant_components": 2,
+            "merged_components": 1,
+            "merge_area_floor": 10369,
+            "merge_gap_px": 20,
+            "selected_component_labels": [
+              2
+            ],
+            "bbox_area_fraction": 0.816349,
+            "component_area_fraction": 0.760917,
+            "fill_ratio": 0.932097,
+            "largest_component_fraction": 0.760917,
+            "largest_merged_fraction": 0.760917,
+            "envelope_fraction": 0.816349,
+            "text_density": 0.840209,
+            "mask_score": 0.918917,
+            "fill_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 28.373
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          97,
+          6,
+          766,
+          976
+        ],
+        "iou": 0.57248637,
+        "edge_errors": {
+          "left": 30,
+          "top": 2,
+          "right": 467,
+          "bottom": 1,
+          "mean": 125.0,
+          "maximum": 467
+        },
+        "edge_error_mean_px": 125.0,
+        "edge_error_maximum_px": 467,
+        "elapsed_ms": 15.309,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            97,
+            6,
+            766,
+            976
+          ],
+          "corners": [
+            [
+              97.0,
+              6.0
+            ],
+            [
+              766.0,
+              6.0
+            ],
+            [
+              766.0,
+              976.0
+            ],
+            [
+              97.0,
+              976.0
+            ]
+          ],
+          "confidence": 0.858346,
+          "score": 0.858346,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.00075,
+              "minimum_component_area_px": 10,
+              "merge_area_ratio": 0.01,
+              "merge_gap_fraction": 0.02,
+              "minimum_bbox_area_fraction": 0.08,
+              "minimum_selected_area_fraction": 0.02,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.004,
+              "morphology_dilate_fraction": 0.03
+            },
+            "component_count": 5,
+            "minimum_component_area": 974,
+            "morphology_close_kernel_px": 5,
+            "morphology_dilate_kernel_px": 31,
+            "significant_components": 5,
+            "merged_components": 1,
+            "merge_area_floor": 5321,
+            "merge_gap_px": 20,
+            "selected_component_labels": [
+              2
+            ],
+            "bbox_area_fraction": 0.499603,
+            "component_area_fraction": 0.409624,
+            "fill_ratio": 0.819899,
+            "largest_component_fraction": 0.409624,
+            "largest_merged_fraction": 0.409624,
+            "envelope_fraction": 0.499603,
+            "text_density": 0.696564,
+            "mask_score": 0.820685,
+            "fill_score": 1.0,
+            "area_score": 0.832671,
+            "elapsed_ms": 15.29
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          327,
+          159,
+          1066,
+          902
+        ],
+        "iou": 0.55041009,
+        "edge_errors": {
+          "left": 312,
+          "top": 131,
+          "right": 8,
+          "bottom": 68,
+          "mean": 129.75,
+          "maximum": 312
+        },
+        "edge_error_mean_px": 129.75,
+        "edge_error_maximum_px": 312,
+        "elapsed_ms": 11.797,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            327,
+            159,
+            1066,
+            902
+          ],
+          "corners": [
+            [
+              327.0,
+              159.0
+            ],
+            [
+              1066.0,
+              159.0
+            ],
+            [
+              1066.0,
+              902.0
+            ],
+            [
+              327.0,
+              902.0
+            ]
+          ],
+          "confidence": 0.628051,
+          "score": 0.628051,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.00075,
+              "minimum_component_area_px": 10,
+              "merge_area_ratio": 0.01,
+              "merge_gap_fraction": 0.02,
+              "minimum_bbox_area_fraction": 0.08,
+              "minimum_selected_area_fraction": 0.02,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.004,
+              "morphology_dilate_fraction": 0.03
+            },
+            "component_count": 33,
+            "minimum_component_area": 802,
+            "morphology_close_kernel_px": 5,
+            "morphology_dilate_kernel_px": 29,
+            "significant_components": 33,
+            "merged_components": 20,
+            "merge_area_floor": 1429,
+            "merge_gap_px": 20,
+            "selected_component_labels": [
+              5,
+              19,
+              6,
+              25,
+              28,
+              23,
+              16,
+              14,
+              29,
+              20,
+              12,
+              17,
+              8,
+              15,
+              13,
+              3,
+              31,
+              2,
+              24,
+              26
+            ],
+            "bbox_area_fraction": 0.513394,
+            "component_area_fraction": 0.221621,
+            "fill_ratio": 0.431679,
+            "largest_component_fraction": 0.133615,
+            "largest_merged_fraction": 0.221621,
+            "envelope_fraction": 0.513394,
+            "text_density": 0.094836,
+            "mask_score": 0.527274,
+            "fill_score": 0.784871,
+            "area_score": 0.855657,
+            "elapsed_ms": 11.778
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          58,
+          36,
+          1149,
+          956
+        ],
+        "iou": 0.9017754,
+        "edge_errors": {
+          "left": 26,
+          "top": 15,
+          "right": 48,
+          "bottom": 15,
+          "mean": 26.0,
+          "maximum": 48
+        },
+        "edge_error_mean_px": 26.0,
+        "edge_error_maximum_px": 48,
+        "elapsed_ms": 17.297,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            58,
+            36,
+            1149,
+            956
+          ],
+          "corners": [
+            [
+              58.0,
+              36.0
+            ],
+            [
+              1149.0,
+              36.0
+            ],
+            [
+              1149.0,
+              956.0
+            ],
+            [
+              58.0,
+              956.0
+            ]
+          ],
+          "confidence": 0.975271,
+          "score": 0.975271,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.00075,
+              "minimum_component_area_px": 10,
+              "merge_area_ratio": 0.01,
+              "merge_gap_fraction": 0.02,
+              "minimum_bbox_area_fraction": 0.08,
+              "minimum_selected_area_fraction": 0.02,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.004,
+              "morphology_dilate_fraction": 0.03
+            },
+            "component_count": 1,
+            "minimum_component_area": 952,
+            "morphology_close_kernel_px": 5,
+            "morphology_dilate_kernel_px": 31,
+            "significant_components": 1,
+            "merged_components": 1,
+            "merge_area_floor": 9886,
+            "merge_gap_px": 20,
+            "selected_component_labels": [
+              1
+            ],
+            "bbox_area_fraction": 0.791153,
+            "component_area_fraction": 0.779241,
+            "fill_ratio": 0.984944,
+            "largest_component_fraction": 0.779241,
+            "largest_merged_fraction": 0.779241,
+            "envelope_fraction": 0.791153,
+            "text_density": 0.92391,
+            "mask_score": 0.961955,
+            "fill_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 17.279
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          66,
+          19,
+          1199,
+          976
+        ],
+        "iou": 0.91923588,
+        "edge_errors": {
+          "left": 22,
+          "top": 14,
+          "right": 45,
+          "bottom": 8,
+          "mean": 22.25,
+          "maximum": 45
+        },
+        "edge_error_mean_px": 22.25,
+        "edge_error_maximum_px": 45,
+        "elapsed_ms": 16.562,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            66,
+            19,
+            1199,
+            976
+          ],
+          "corners": [
+            [
+              66.0,
+              19.0
+            ],
+            [
+              1199.0,
+              19.0
+            ],
+            [
+              1199.0,
+              976.0
+            ],
+            [
+              66.0,
+              976.0
+            ]
+          ],
+          "confidence": 0.96968,
+          "score": 0.96968,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.00075,
+              "minimum_component_area_px": 10,
+              "merge_area_ratio": 0.01,
+              "merge_gap_fraction": 0.02,
+              "minimum_bbox_area_fraction": 0.08,
+              "minimum_selected_area_fraction": 0.02,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.004,
+              "morphology_dilate_fraction": 0.03
+            },
+            "component_count": 2,
+            "minimum_component_area": 941,
+            "morphology_close_kernel_px": 5,
+            "morphology_dilate_kernel_px": 31,
+            "significant_components": 2,
+            "merged_components": 1,
+            "merge_area_floor": 10528,
+            "merge_gap_px": 20,
+            "selected_component_labels": [
+              1
+            ],
+            "bbox_area_fraction": 0.863749,
+            "component_area_fraction": 0.838633,
+            "fill_ratio": 0.970923,
+            "largest_component_fraction": 0.838633,
+            "largest_merged_fraction": 0.838633,
+            "envelope_fraction": 0.863749,
+            "text_density": 0.907247,
+            "mask_score": 0.953354,
+            "fill_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 16.545
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 4,
+      "parameter_set_number": 4,
+      "elapsed_seconds": 0.24967320799999015,
+      "search_fraction": 0.4
+    },
+    "profile": null,
+    "run_id": "run-20260814-022126",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "4e09dc84fa8a",
+    "parameters": {
+      "minimum_component_area_fraction": 0.0015,
+      "minimum_component_area_px": 25,
+      "merge_area_ratio": 0.02,
+      "merge_gap_fraction": 0.035,
+      "minimum_bbox_area_fraction": 0.12,
+      "minimum_selected_area_fraction": 0.04,
+      "bbox_padding_fraction": 0.0,
+      "morphology_close_fraction": 0.008,
+      "morphology_dilate_fraction": 0.015
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.71851231,
+      "mean_iou_success": 0.71851231,
+      "minimum_iou": 0.24133652,
+      "stddev_iou": 0.2966746,
+      "mean_edge_error_px": 86.4,
+      "elapsed_ms_total": 50.361,
+      "wall_ms": 50.969
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          103,
+          53,
+          1287,
+          964
+        ],
+        "iou": 0.97339686,
+        "edge_errors": {
+          "left": 22,
+          "top": 3,
+          "right": 2,
+          "bottom": 3,
+          "mean": 7.5,
+          "maximum": 22
+        },
+        "edge_error_mean_px": 7.5,
+        "edge_error_maximum_px": 22,
+        "elapsed_ms": 15.906,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            103,
+            53,
+            1287,
+            964
+          ],
+          "corners": [
+            [
+              103.0,
+              53.0
+            ],
+            [
+              1287.0,
+              53.0
+            ],
+            [
+              1287.0,
+              964.0
+            ],
+            [
+              103.0,
+              964.0
+            ]
+          ],
+          "confidence": 0.955939,
+          "score": 0.955939,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.0015,
+              "minimum_component_area_px": 25,
+              "merge_area_ratio": 0.02,
+              "merge_gap_fraction": 0.035,
+              "minimum_bbox_area_fraction": 0.12,
+              "minimum_selected_area_fraction": 0.04,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.008,
+              "morphology_dilate_fraction": 0.015
+            },
+            "component_count": 6,
+            "minimum_component_area": 2044,
+            "morphology_close_kernel_px": 9,
+            "morphology_dilate_kernel_px": 15,
+            "significant_components": 2,
+            "merged_components": 1,
+            "merge_area_floor": 19707,
+            "merge_gap_px": 35,
+            "selected_component_labels": [
+              2
+            ],
+            "bbox_area_fraction": 0.791562,
+            "component_area_fraction": 0.723113,
+            "fill_ratio": 0.913526,
+            "largest_component_fraction": 0.723113,
+            "largest_merged_fraction": 0.723113,
+            "envelope_fraction": 0.791562,
+            "text_density": 0.86652,
+            "mask_score": 0.932213,
+            "fill_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 15.869
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          169,
+          14,
+          758,
+          968
+        ],
+        "iou": 0.4973262,
+        "edge_errors": {
+          "left": 102,
+          "top": 6,
+          "right": 475,
+          "bottom": 9,
+          "mean": 148.0,
+          "maximum": 475
+        },
+        "edge_error_mean_px": 148.0,
+        "edge_error_maximum_px": 475,
+        "elapsed_ms": 9.581,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            169,
+            14,
+            758,
+            968
+          ],
+          "corners": [
+            [
+              169.0,
+              14.0
+            ],
+            [
+              758.0,
+              14.0
+            ],
+            [
+              758.0,
+              968.0
+            ],
+            [
+              169.0,
+              968.0
+            ]
+          ],
+          "confidence": 0.848692,
+          "score": 0.848692,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.0015,
+              "minimum_component_area_px": 25,
+              "merge_area_ratio": 0.02,
+              "merge_gap_fraction": 0.035,
+              "minimum_bbox_area_fraction": 0.12,
+              "minimum_selected_area_fraction": 0.04,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.008,
+              "morphology_dilate_fraction": 0.015
+            },
+            "component_count": 8,
+            "minimum_component_area": 1948,
+            "morphology_close_kernel_px": 9,
+            "morphology_dilate_kernel_px": 15,
+            "significant_components": 4,
+            "merged_components": 1,
+            "merge_area_floor": 9589,
+            "merge_gap_px": 35,
+            "selected_component_labels": [
+              2
+            ],
+            "bbox_area_fraction": 0.432604,
+            "component_area_fraction": 0.369125,
+            "fill_ratio": 0.853264,
+            "largest_component_fraction": 0.369125,
+            "largest_merged_fraction": 0.369125,
+            "envelope_fraction": 0.432604,
+            "text_density": 0.794496,
+            "mask_score": 0.831602,
+            "fill_score": 1.0,
+            "area_score": 0.721007,
+            "elapsed_ms": 9.546
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          395,
+          251,
+          1051,
+          618
+        ],
+        "iou": 0.24133652,
+        "edge_errors": {
+          "left": 380,
+          "top": 223,
+          "right": 23,
+          "bottom": 352,
+          "mean": 244.5,
+          "maximum": 380
+        },
+        "edge_error_mean_px": 244.5,
+        "edge_error_maximum_px": 380,
+        "elapsed_ms": 7.343,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            395,
+            251,
+            1051,
+            618
+          ],
+          "corners": [
+            [
+              395.0,
+              251.0
+            ],
+            [
+              1051.0,
+              251.0
+            ],
+            [
+              1051.0,
+              618.0
+            ],
+            [
+              395.0,
+              618.0
+            ]
+          ],
+          "confidence": 0.418075,
+          "score": 0.418075,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.0015,
+              "minimum_component_area_px": 25,
+              "merge_area_ratio": 0.02,
+              "merge_gap_fraction": 0.035,
+              "minimum_bbox_area_fraction": 0.12,
+              "minimum_selected_area_fraction": 0.04,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.008,
+              "morphology_dilate_fraction": 0.015
+            },
+            "component_count": 85,
+            "minimum_component_area": 1604,
+            "morphology_close_kernel_px": 9,
+            "morphology_dilate_kernel_px": 15,
+            "significant_components": 11,
+            "merged_components": 8,
+            "merge_area_floor": 1604,
+            "merge_gap_px": 34,
+            "selected_component_labels": [
+              24,
+              30,
+              28,
+              9,
+              8,
+              33,
+              19,
+              37
+            ],
+            "bbox_area_fraction": 0.225106,
+            "component_area_fraction": 0.065437,
+            "fill_ratio": 0.290693,
+            "largest_component_fraction": 0.036054,
+            "largest_merged_fraction": 0.065437,
+            "envelope_fraction": 0.225106,
+            "text_density": 0.150296,
+            "mask_score": 0.393988,
+            "fill_score": 0.528533,
+            "area_score": 0.375177,
+            "elapsed_ms": 7.316
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          66,
+          44,
+          1141,
+          948
+        ],
+        "iou": 0.93139535,
+        "edge_errors": {
+          "left": 18,
+          "top": 7,
+          "right": 40,
+          "bottom": 7,
+          "mean": 18.0,
+          "maximum": 40
+        },
+        "edge_error_mean_px": 18.0,
+        "edge_error_maximum_px": 40,
+        "elapsed_ms": 9.355,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            66,
+            44,
+            1141,
+            948
+          ],
+          "corners": [
+            [
+              66.0,
+              44.0
+            ],
+            [
+              1141.0,
+              44.0
+            ],
+            [
+              1141.0,
+              948.0
+            ],
+            [
+              66.0,
+              948.0
+            ]
+          ],
+          "confidence": 0.985134,
+          "score": 0.985134,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.0015,
+              "minimum_component_area_px": 25,
+              "merge_area_ratio": 0.02,
+              "merge_gap_fraction": 0.035,
+              "minimum_bbox_area_fraction": 0.12,
+              "minimum_selected_area_fraction": 0.04,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.008,
+              "morphology_dilate_fraction": 0.015
+            },
+            "component_count": 1,
+            "minimum_component_area": 1903,
+            "morphology_close_kernel_px": 9,
+            "morphology_dilate_kernel_px": 15,
+            "significant_components": 1,
+            "merged_components": 1,
+            "merge_area_floor": 19117,
+            "merge_gap_px": 34,
+            "selected_component_labels": [
+              1
+            ],
+            "bbox_area_fraction": 0.765993,
+            "component_area_fraction": 0.753411,
+            "fill_ratio": 0.983574,
+            "largest_component_fraction": 0.753411,
+            "largest_merged_fraction": 0.753411,
+            "envelope_fraction": 0.765993,
+            "text_density": 0.954257,
+            "mask_score": 0.977129,
+            "fill_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 9.331
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          74,
+          27,
+          1190,
+          968
+        ],
+        "iou": 0.94910661,
+        "edge_errors": {
+          "left": 14,
+          "top": 6,
+          "right": 36,
+          "bottom": 0,
+          "mean": 14.0,
+          "maximum": 36
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 36,
+        "elapsed_ms": 8.176,
+        "candidate": {
+          "method": "components",
+          "bbox": [
+            74,
+            27,
+            1190,
+            968
+          ],
+          "corners": [
+            [
+              74.0,
+              27.0
+            ],
+            [
+              1190.0,
+              27.0
+            ],
+            [
+              1190.0,
+              968.0
+            ],
+            [
+              74.0,
+              968.0
+            ]
+          ],
+          "confidence": 0.97929,
+          "score": 0.97929,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 0.0015,
+              "minimum_component_area_px": 25,
+              "merge_area_ratio": 0.02,
+              "merge_gap_fraction": 0.035,
+              "minimum_bbox_area_fraction": 0.12,
+              "minimum_selected_area_fraction": 0.04,
+              "bbox_padding_fraction": 0.0,
+              "morphology_close_fraction": 0.008,
+              "morphology_dilate_fraction": 0.015
+            },
+            "component_count": 3,
+            "minimum_component_area": 1883,
+            "morphology_close_kernel_px": 9,
+            "morphology_dilate_kernel_px": 15,
+            "significant_components": 1,
+            "merged_components": 1,
+            "merge_area_floor": 20302,
+            "merge_gap_px": 35,
+            "selected_component_labels": [
+              1
+            ],
+            "bbox_area_fraction": 0.836564,
+            "component_area_fraction": 0.80863,
+            "fill_ratio": 0.966609,
+            "largest_component_fraction": 0.80863,
+            "largest_merged_fraction": 0.80863,
+            "envelope_fraction": 0.836564,
+            "text_density": 0.936728,
+            "mask_score": 0.968139,
+            "fill_score": 1.0,
+            "area_score": 1.0,
+            "elapsed_ms": 8.153
+          },
+          "status": "ok",
+          "detector_name": "Connected Components",
+          "origin": "OpenCV",
+          "foundation": [
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenCV contributors"
+          ],
+          "version": "4.14.0",
+          "repository": "https://github.com/opencv/opencv"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260814-022126",
+    "rank": 10,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "7eb87978bb9a",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00075,
+        "minimum_component_area_px": 10,
+        "merge_area_ratio": 0.01,
+        "merge_gap_fraction": 0.02,
+        "minimum_bbox_area_fraction": 0.08,
+        "minimum_selected_area_fraction": 0.02,
+        "bbox_padding_fraction": 0.0,
+        "morphology_close_fraction": 0.004,
+        "morphology_dilate_fraction": 0.03
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.77943311,
+        "mean_iou_success": 0.77943311,
+        "minimum_iou": 0.55041009,
+        "stddev_iou": 0.17888878,
+        "mean_edge_error_px": 63.2,
+        "elapsed_ms_total": 89.354,
+        "wall_ms": 89.815
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            95,
+            45,
+            1295,
+            972
+          ],
+          "iou": 0.95325782,
+          "edge_errors": {
+            "left": 30,
+            "top": 11,
+            "right": 6,
+            "bottom": 5,
+            "mean": 13.0,
+            "maximum": 30
+          },
+          "edge_error_mean_px": 13.0,
+          "edge_error_maximum_px": 30,
+          "elapsed_ms": 28.389,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              95,
+              45,
+              1295,
+              972
+            ],
+            "corners": [
+              [
+                95.0,
+                45.0
+              ],
+              [
+                1295.0,
+                45.0
+              ],
+              [
+                1295.0,
+                972.0
+              ],
+              [
+                95.0,
+                972.0
+              ]
+            ],
+            "confidence": 0.947296,
+            "score": 0.947296,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 2,
+              "minimum_component_area": 1022,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10369,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.816349,
+              "component_area_fraction": 0.760917,
+              "fill_ratio": 0.932097,
+              "largest_component_fraction": 0.760917,
+              "largest_merged_fraction": 0.760917,
+              "envelope_fraction": 0.816349,
+              "text_density": 0.840209,
+              "mask_score": 0.918917,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 28.373
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            97,
+            6,
+            766,
+            976
+          ],
+          "iou": 0.57248637,
+          "edge_errors": {
+            "left": 30,
+            "top": 2,
+            "right": 467,
+            "bottom": 1,
+            "mean": 125.0,
+            "maximum": 467
+          },
+          "edge_error_mean_px": 125.0,
+          "edge_error_maximum_px": 467,
+          "elapsed_ms": 15.309,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              97,
+              6,
+              766,
+              976
+            ],
+            "corners": [
+              [
+                97.0,
+                6.0
+              ],
+              [
+                766.0,
+                6.0
+              ],
+              [
+                766.0,
+                976.0
+              ],
+              [
+                97.0,
+                976.0
+              ]
+            ],
+            "confidence": 0.858346,
+            "score": 0.858346,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 5,
+              "minimum_component_area": 974,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 5,
+              "merged_components": 1,
+              "merge_area_floor": 5321,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.499603,
+              "component_area_fraction": 0.409624,
+              "fill_ratio": 0.819899,
+              "largest_component_fraction": 0.409624,
+              "largest_merged_fraction": 0.409624,
+              "envelope_fraction": 0.499603,
+              "text_density": 0.696564,
+              "mask_score": 0.820685,
+              "fill_score": 1.0,
+              "area_score": 0.832671,
+              "elapsed_ms": 15.29
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            327,
+            159,
+            1066,
+            902
+          ],
+          "iou": 0.55041009,
+          "edge_errors": {
+            "left": 312,
+            "top": 131,
+            "right": 8,
+            "bottom": 68,
+            "mean": 129.75,
+            "maximum": 312
+          },
+          "edge_error_mean_px": 129.75,
+          "edge_error_maximum_px": 312,
+          "elapsed_ms": 11.797,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              327,
+              159,
+              1066,
+              902
+            ],
+            "corners": [
+              [
+                327.0,
+                159.0
+              ],
+              [
+                1066.0,
+                159.0
+              ],
+              [
+                1066.0,
+                902.0
+              ],
+              [
+                327.0,
+                902.0
+              ]
+            ],
+            "confidence": 0.628051,
+            "score": 0.628051,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 33,
+              "minimum_component_area": 802,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 29,
+              "significant_components": 33,
+              "merged_components": 20,
+              "merge_area_floor": 1429,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                5,
+                19,
+                6,
+                25,
+                28,
+                23,
+                16,
+                14,
+                29,
+                20,
+                12,
+                17,
+                8,
+                15,
+                13,
+                3,
+                31,
+                2,
+                24,
+                26
+              ],
+              "bbox_area_fraction": 0.513394,
+              "component_area_fraction": 0.221621,
+              "fill_ratio": 0.431679,
+              "largest_component_fraction": 0.133615,
+              "largest_merged_fraction": 0.221621,
+              "envelope_fraction": 0.513394,
+              "text_density": 0.094836,
+              "mask_score": 0.527274,
+              "fill_score": 0.784871,
+              "area_score": 0.855657,
+              "elapsed_ms": 11.778
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            58,
+            36,
+            1149,
+            956
+          ],
+          "iou": 0.9017754,
+          "edge_errors": {
+            "left": 26,
+            "top": 15,
+            "right": 48,
+            "bottom": 15,
+            "mean": 26.0,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 26.0,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 17.297,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              58,
+              36,
+              1149,
+              956
+            ],
+            "corners": [
+              [
+                58.0,
+                36.0
+              ],
+              [
+                1149.0,
+                36.0
+              ],
+              [
+                1149.0,
+                956.0
+              ],
+              [
+                58.0,
+                956.0
+              ]
+            ],
+            "confidence": 0.975271,
+            "score": 0.975271,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 1,
+              "minimum_component_area": 952,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 1,
+              "merged_components": 1,
+              "merge_area_floor": 9886,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.791153,
+              "component_area_fraction": 0.779241,
+              "fill_ratio": 0.984944,
+              "largest_component_fraction": 0.779241,
+              "largest_merged_fraction": 0.779241,
+              "envelope_fraction": 0.791153,
+              "text_density": 0.92391,
+              "mask_score": 0.961955,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 17.279
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            19,
+            1199,
+            976
+          ],
+          "iou": 0.91923588,
+          "edge_errors": {
+            "left": 22,
+            "top": 14,
+            "right": 45,
+            "bottom": 8,
+            "mean": 22.25,
+            "maximum": 45
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 45,
+          "elapsed_ms": 16.562,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              66,
+              19,
+              1199,
+              976
+            ],
+            "corners": [
+              [
+                66.0,
+                19.0
+              ],
+              [
+                1199.0,
+                19.0
+              ],
+              [
+                1199.0,
+                976.0
+              ],
+              [
+                66.0,
+                976.0
+              ]
+            ],
+            "confidence": 0.96968,
+            "score": 0.96968,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 2,
+              "minimum_component_area": 941,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10528,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.863749,
+              "component_area_fraction": 0.838633,
+              "fill_ratio": 0.970923,
+              "largest_component_fraction": 0.838633,
+              "largest_merged_fraction": 0.838633,
+              "envelope_fraction": 0.863749,
+              "text_density": 0.907247,
+              "mask_score": 0.953354,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 16.545
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.24967320799999015,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260814-022126",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "2a180d02de36",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00075,
+        "minimum_component_area_px": 10,
+        "merge_area_ratio": 0.01,
+        "merge_gap_fraction": 0.02,
+        "minimum_bbox_area_fraction": 0.08,
+        "minimum_selected_area_fraction": 0.02,
+        "bbox_padding_fraction": 0.0,
+        "morphology_close_fraction": 0.008,
+        "morphology_dilate_fraction": 0.03
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.77943311,
+        "mean_iou_success": 0.77943311,
+        "minimum_iou": 0.55041009,
+        "stddev_iou": 0.17888878,
+        "mean_edge_error_px": 63.2,
+        "elapsed_ms_total": 91.59,
+        "wall_ms": 92.086
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            95,
+            45,
+            1295,
+            972
+          ],
+          "iou": 0.95325782,
+          "edge_errors": {
+            "left": 30,
+            "top": 11,
+            "right": 6,
+            "bottom": 5,
+            "mean": 13.0,
+            "maximum": 30
+          },
+          "edge_error_mean_px": 13.0,
+          "edge_error_maximum_px": 30,
+          "elapsed_ms": 23.805,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              95,
+              45,
+              1295,
+              972
+            ],
+            "corners": [
+              [
+                95.0,
+                45.0
+              ],
+              [
+                1295.0,
+                45.0
+              ],
+              [
+                1295.0,
+                972.0
+              ],
+              [
+                95.0,
+                972.0
+              ]
+            ],
+            "confidence": 0.947296,
+            "score": 0.947296,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 2,
+              "minimum_component_area": 1022,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10369,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.816349,
+              "component_area_fraction": 0.760917,
+              "fill_ratio": 0.932097,
+              "largest_component_fraction": 0.760917,
+              "largest_merged_fraction": 0.760917,
+              "envelope_fraction": 0.816349,
+              "text_density": 0.840209,
+              "mask_score": 0.918917,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 23.789
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            97,
+            6,
+            766,
+            976
+          ],
+          "iou": 0.57248637,
+          "edge_errors": {
+            "left": 30,
+            "top": 2,
+            "right": 467,
+            "bottom": 1,
+            "mean": 125.0,
+            "maximum": 467
+          },
+          "edge_error_mean_px": 125.0,
+          "edge_error_maximum_px": 467,
+          "elapsed_ms": 15.122,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              97,
+              6,
+              766,
+              976
+            ],
+            "corners": [
+              [
+                97.0,
+                6.0
+              ],
+              [
+                766.0,
+                6.0
+              ],
+              [
+                766.0,
+                976.0
+              ],
+              [
+                97.0,
+                976.0
+              ]
+            ],
+            "confidence": 0.858346,
+            "score": 0.858346,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 5,
+              "minimum_component_area": 974,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 5,
+              "merged_components": 1,
+              "merge_area_floor": 5321,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.499603,
+              "component_area_fraction": 0.409624,
+              "fill_ratio": 0.819899,
+              "largest_component_fraction": 0.409624,
+              "largest_merged_fraction": 0.409624,
+              "envelope_fraction": 0.499603,
+              "text_density": 0.696564,
+              "mask_score": 0.820685,
+              "fill_score": 1.0,
+              "area_score": 0.832671,
+              "elapsed_ms": 15.104
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            327,
+            159,
+            1066,
+            902
+          ],
+          "iou": 0.55041009,
+          "edge_errors": {
+            "left": 312,
+            "top": 131,
+            "right": 8,
+            "bottom": 68,
+            "mean": 129.75,
+            "maximum": 312
+          },
+          "edge_error_mean_px": 129.75,
+          "edge_error_maximum_px": 312,
+          "elapsed_ms": 11.871,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              327,
+              159,
+              1066,
+              902
+            ],
+            "corners": [
+              [
+                327.0,
+                159.0
+              ],
+              [
+                1066.0,
+                159.0
+              ],
+              [
+                1066.0,
+                902.0
+              ],
+              [
+                327.0,
+                902.0
+              ]
+            ],
+            "confidence": 0.628051,
+            "score": 0.628051,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 33,
+              "minimum_component_area": 802,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 29,
+              "significant_components": 33,
+              "merged_components": 20,
+              "merge_area_floor": 1429,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                5,
+                19,
+                6,
+                25,
+                28,
+                23,
+                16,
+                14,
+                29,
+                20,
+                12,
+                17,
+                8,
+                15,
+                13,
+                3,
+                31,
+                2,
+                24,
+                26
+              ],
+              "bbox_area_fraction": 0.513394,
+              "component_area_fraction": 0.221621,
+              "fill_ratio": 0.431679,
+              "largest_component_fraction": 0.133615,
+              "largest_merged_fraction": 0.221621,
+              "envelope_fraction": 0.513394,
+              "text_density": 0.094836,
+              "mask_score": 0.527274,
+              "fill_score": 0.784871,
+              "area_score": 0.855657,
+              "elapsed_ms": 11.855
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            58,
+            36,
+            1149,
+            956
+          ],
+          "iou": 0.9017754,
+          "edge_errors": {
+            "left": 26,
+            "top": 15,
+            "right": 48,
+            "bottom": 15,
+            "mean": 26.0,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 26.0,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 17.075,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              58,
+              36,
+              1149,
+              956
+            ],
+            "corners": [
+              [
+                58.0,
+                36.0
+              ],
+              [
+                1149.0,
+                36.0
+              ],
+              [
+                1149.0,
+                956.0
+              ],
+              [
+                58.0,
+                956.0
+              ]
+            ],
+            "confidence": 0.975271,
+            "score": 0.975271,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 1,
+              "minimum_component_area": 952,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 1,
+              "merged_components": 1,
+              "merge_area_floor": 9886,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.791153,
+              "component_area_fraction": 0.779241,
+              "fill_ratio": 0.984944,
+              "largest_component_fraction": 0.779241,
+              "largest_merged_fraction": 0.779241,
+              "envelope_fraction": 0.791153,
+              "text_density": 0.92391,
+              "mask_score": 0.961955,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 17.058
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            19,
+            1199,
+            976
+          ],
+          "iou": 0.91923588,
+          "edge_errors": {
+            "left": 22,
+            "top": 14,
+            "right": 45,
+            "bottom": 8,
+            "mean": 22.25,
+            "maximum": 45
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 45,
+          "elapsed_ms": 23.717,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              66,
+              19,
+              1199,
+              976
+            ],
+            "corners": [
+              [
+                66.0,
+                19.0
+              ],
+              [
+                1199.0,
+                19.0
+              ],
+              [
+                1199.0,
+                976.0
+              ],
+              [
+                66.0,
+                976.0
+              ]
+            ],
+            "confidence": 0.96968,
+            "score": 0.96968,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 2,
+              "minimum_component_area": 941,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10528,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.863749,
+              "component_area_fraction": 0.838633,
+              "fill_ratio": 0.970923,
+              "largest_component_fraction": 0.838633,
+              "largest_merged_fraction": 0.838633,
+              "envelope_fraction": 0.863749,
+              "text_density": 0.907247,
+              "mask_score": 0.953354,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 23.699
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 0.36652482899995675,
+        "search_fraction": 0.7
+      },
+      "profile": null,
+      "run_id": "run-20260814-022126",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "b6a644d99d2e",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00075,
+        "minimum_component_area_px": 10,
+        "merge_area_ratio": 0.01,
+        "merge_gap_fraction": 0.02,
+        "minimum_bbox_area_fraction": 0.08,
+        "minimum_selected_area_fraction": 0.02,
+        "bbox_padding_fraction": 0.0,
+        "morphology_close_fraction": 0.016,
+        "morphology_dilate_fraction": 0.03
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.77943311,
+        "mean_iou_success": 0.77943311,
+        "minimum_iou": 0.55041009,
+        "stddev_iou": 0.17888878,
+        "mean_edge_error_px": 63.2,
+        "elapsed_ms_total": 95.897,
+        "wall_ms": 96.483
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            95,
+            45,
+            1295,
+            972
+          ],
+          "iou": 0.95325782,
+          "edge_errors": {
+            "left": 30,
+            "top": 11,
+            "right": 6,
+            "bottom": 5,
+            "mean": 13.0,
+            "maximum": 30
+          },
+          "edge_error_mean_px": 13.0,
+          "edge_error_maximum_px": 30,
+          "elapsed_ms": 20.068,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              95,
+              45,
+              1295,
+              972
+            ],
+            "corners": [
+              [
+                95.0,
+                45.0
+              ],
+              [
+                1295.0,
+                45.0
+              ],
+              [
+                1295.0,
+                972.0
+              ],
+              [
+                95.0,
+                972.0
+              ]
+            ],
+            "confidence": 0.947296,
+            "score": 0.947296,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.016,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 2,
+              "minimum_component_area": 1022,
+              "morphology_close_kernel_px": 17,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10369,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.816349,
+              "component_area_fraction": 0.760917,
+              "fill_ratio": 0.932097,
+              "largest_component_fraction": 0.760917,
+              "largest_merged_fraction": 0.760917,
+              "envelope_fraction": 0.816349,
+              "text_density": 0.840209,
+              "mask_score": 0.918917,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 20.049
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            97,
+            6,
+            766,
+            976
+          ],
+          "iou": 0.57248637,
+          "edge_errors": {
+            "left": 30,
+            "top": 2,
+            "right": 467,
+            "bottom": 1,
+            "mean": 125.0,
+            "maximum": 467
+          },
+          "edge_error_mean_px": 125.0,
+          "edge_error_maximum_px": 467,
+          "elapsed_ms": 18.519,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              97,
+              6,
+              766,
+              976
+            ],
+            "corners": [
+              [
+                97.0,
+                6.0
+              ],
+              [
+                766.0,
+                6.0
+              ],
+              [
+                766.0,
+                976.0
+              ],
+              [
+                97.0,
+                976.0
+              ]
+            ],
+            "confidence": 0.858346,
+            "score": 0.858346,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.016,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 5,
+              "minimum_component_area": 974,
+              "morphology_close_kernel_px": 17,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 5,
+              "merged_components": 1,
+              "merge_area_floor": 5321,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.499603,
+              "component_area_fraction": 0.409624,
+              "fill_ratio": 0.819899,
+              "largest_component_fraction": 0.409624,
+              "largest_merged_fraction": 0.409624,
+              "envelope_fraction": 0.499603,
+              "text_density": 0.696564,
+              "mask_score": 0.820685,
+              "fill_score": 1.0,
+              "area_score": 0.832671,
+              "elapsed_ms": 18.498
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            327,
+            159,
+            1066,
+            902
+          ],
+          "iou": 0.55041009,
+          "edge_errors": {
+            "left": 312,
+            "top": 131,
+            "right": 8,
+            "bottom": 68,
+            "mean": 129.75,
+            "maximum": 312
+          },
+          "edge_error_mean_px": 129.75,
+          "edge_error_maximum_px": 312,
+          "elapsed_ms": 17.393,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              327,
+              159,
+              1066,
+              902
+            ],
+            "corners": [
+              [
+                327.0,
+                159.0
+              ],
+              [
+                1066.0,
+                159.0
+              ],
+              [
+                1066.0,
+                902.0
+              ],
+              [
+                327.0,
+                902.0
+              ]
+            ],
+            "confidence": 0.628051,
+            "score": 0.628051,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.016,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 33,
+              "minimum_component_area": 802,
+              "morphology_close_kernel_px": 17,
+              "morphology_dilate_kernel_px": 29,
+              "significant_components": 33,
+              "merged_components": 20,
+              "merge_area_floor": 1429,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                5,
+                19,
+                6,
+                25,
+                28,
+                23,
+                16,
+                14,
+                29,
+                20,
+                12,
+                17,
+                8,
+                15,
+                13,
+                3,
+                31,
+                2,
+                24,
+                26
+              ],
+              "bbox_area_fraction": 0.513394,
+              "component_area_fraction": 0.221621,
+              "fill_ratio": 0.431679,
+              "largest_component_fraction": 0.133615,
+              "largest_merged_fraction": 0.221621,
+              "envelope_fraction": 0.513394,
+              "text_density": 0.094836,
+              "mask_score": 0.527274,
+              "fill_score": 0.784871,
+              "area_score": 0.855657,
+              "elapsed_ms": 17.372
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            58,
+            36,
+            1149,
+            956
+          ],
+          "iou": 0.9017754,
+          "edge_errors": {
+            "left": 26,
+            "top": 15,
+            "right": 48,
+            "bottom": 15,
+            "mean": 26.0,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 26.0,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 18.086,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              58,
+              36,
+              1149,
+              956
+            ],
+            "corners": [
+              [
+                58.0,
+                36.0
+              ],
+              [
+                1149.0,
+                36.0
+              ],
+              [
+                1149.0,
+                956.0
+              ],
+              [
+                58.0,
+                956.0
+              ]
+            ],
+            "confidence": 0.975271,
+            "score": 0.975271,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.016,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 1,
+              "minimum_component_area": 952,
+              "morphology_close_kernel_px": 17,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 1,
+              "merged_components": 1,
+              "merge_area_floor": 9886,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.791153,
+              "component_area_fraction": 0.779241,
+              "fill_ratio": 0.984944,
+              "largest_component_fraction": 0.779241,
+              "largest_merged_fraction": 0.779241,
+              "envelope_fraction": 0.791153,
+              "text_density": 0.92391,
+              "mask_score": 0.961955,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 18.065
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            19,
+            1199,
+            976
+          ],
+          "iou": 0.91923588,
+          "edge_errors": {
+            "left": 22,
+            "top": 14,
+            "right": 45,
+            "bottom": 8,
+            "mean": 22.25,
+            "maximum": 45
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 45,
+          "elapsed_ms": 21.831,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              66,
+              19,
+              1199,
+              976
+            ],
+            "corners": [
+              [
+                66.0,
+                19.0
+              ],
+              [
+                1199.0,
+                19.0
+              ],
+              [
+                1199.0,
+                976.0
+              ],
+              [
+                66.0,
+                976.0
+              ]
+            ],
+            "confidence": 0.96968,
+            "score": 0.96968,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.016,
+                "morphology_dilate_fraction": 0.03
+              },
+              "component_count": 2,
+              "minimum_component_area": 941,
+              "morphology_close_kernel_px": 17,
+              "morphology_dilate_kernel_px": 31,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10528,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.863749,
+              "component_area_fraction": 0.838633,
+              "fill_ratio": 0.970923,
+              "largest_component_fraction": 0.838633,
+              "largest_merged_fraction": 0.838633,
+              "envelope_fraction": 0.863749,
+              "text_density": 0.907247,
+              "mask_score": 0.953354,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 21.811
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 10,
+        "parameter_set_number": 10,
+        "elapsed_seconds": 0.5562069270000052,
+        "search_fraction": 1.0
+      },
+      "profile": null,
+      "run_id": "run-20260814-022126",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "04ff9a0c7a86",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00075,
+        "minimum_component_area_px": 10,
+        "merge_area_ratio": 0.01,
+        "merge_gap_fraction": 0.02,
+        "minimum_bbox_area_fraction": 0.08,
+        "minimum_selected_area_fraction": 0.02,
+        "bbox_padding_fraction": 0.0,
+        "morphology_close_fraction": 0.004,
+        "morphology_dilate_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.7733866,
+        "mean_iou_success": 0.7733866,
+        "minimum_iou": 0.46166916,
+        "stddev_iou": 0.22014074,
+        "mean_edge_error_px": 66.35,
+        "elapsed_ms_total": 98.973,
+        "wall_ms": 99.458
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            103,
+            53,
+            1287,
+            964
+          ],
+          "iou": 0.97339686,
+          "edge_errors": {
+            "left": 22,
+            "top": 3,
+            "right": 2,
+            "bottom": 3,
+            "mean": 7.5,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 7.5,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 33.485,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              103,
+              53,
+              1287,
+              964
+            ],
+            "corners": [
+              [
+                103.0,
+                53.0
+              ],
+              [
+                1287.0,
+                53.0
+              ],
+              [
+                1287.0,
+                964.0
+              ],
+              [
+                103.0,
+                964.0
+              ]
+            ],
+            "confidence": 0.955939,
+            "score": 0.955939,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 6,
+              "minimum_component_area": 1022,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 3,
+              "merged_components": 1,
+              "merge_area_floor": 9854,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.791562,
+              "component_area_fraction": 0.723113,
+              "fill_ratio": 0.913526,
+              "largest_component_fraction": 0.723113,
+              "largest_merged_fraction": 0.723113,
+              "envelope_fraction": 0.791562,
+              "text_density": 0.86652,
+              "mask_score": 0.932213,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 33.467
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            105,
+            14,
+            758,
+            968
+          ],
+          "iou": 0.55136504,
+          "edge_errors": {
+            "left": 38,
+            "top": 6,
+            "right": 475,
+            "bottom": 9,
+            "mean": 132.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 132.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 23.553,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              105,
+              14,
+              758,
+              968
+            ],
+            "corners": [
+              [
+                105.0,
+                14.0
+              ],
+              [
+                758.0,
+                14.0
+              ],
+              [
+                758.0,
+                968.0
+              ],
+              [
+                105.0,
+                968.0
+              ]
+            ],
+            "confidence": 0.855699,
+            "score": 0.855699,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 8,
+              "minimum_component_area": 974,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 4,
+              "merged_components": 2,
+              "merge_area_floor": 4795,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2,
+                3
+              ],
+              "bbox_area_fraction": 0.47961,
+              "component_area_fraction": 0.375484,
+              "fill_ratio": 0.782894,
+              "largest_component_fraction": 0.369125,
+              "largest_merged_fraction": 0.375484,
+              "envelope_fraction": 0.47961,
+              "text_density": 0.7256,
+              "mask_score": 0.824302,
+              "fill_score": 1.0,
+              "area_score": 0.799351,
+              "elapsed_ms": 23.533
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            336,
+            251,
+            1059,
+            888
+          ],
+          "iou": 0.46166916,
+          "edge_errors": {
+            "left": 321,
+            "top": 223,
+            "right": 15,
+            "bottom": 82,
+            "mean": 160.25,
+            "maximum": 321
+          },
+          "edge_error_mean_px": 160.25,
+          "edge_error_maximum_px": 321,
+          "elapsed_ms": 12.094,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              336,
+              251,
+              1059,
+              888
+            ],
+            "corners": [
+              [
+                336.0,
+                251.0
+              ],
+              [
+                1059.0,
+                251.0
+              ],
+              [
+                1059.0,
+                888.0
+              ],
+              [
+                336.0,
+                888.0
+              ]
+            ],
+            "confidence": 0.519567,
+            "score": 0.519567,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 85,
+              "minimum_component_area": 802,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 27,
+              "merged_components": 27,
+              "merge_area_floor": 802,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                24,
+                30,
+                28,
+                9,
+                8,
+                33,
+                39,
+                32,
+                51,
+                53,
+                23,
+                49,
+                42,
+                50,
+                52,
+                22,
+                54,
+                60,
+                19,
+                73,
+                76,
+                37,
+                78,
+                74,
+                79,
+                67,
+                72
+              ],
+              "bbox_area_fraction": 0.430621,
+              "component_area_fraction": 0.11008,
+              "fill_ratio": 0.255631,
+              "largest_component_fraction": 0.036054,
+              "largest_merged_fraction": 0.11008,
+              "envelope_fraction": 0.430621,
+              "text_density": 0.112196,
+              "mask_score": 0.490699,
+              "fill_score": 0.464783,
+              "area_score": 0.717702,
+              "elapsed_ms": 12.075
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            44,
+            1141,
+            948
+          ],
+          "iou": 0.93139535,
+          "edge_errors": {
+            "left": 18,
+            "top": 7,
+            "right": 40,
+            "bottom": 7,
+            "mean": 18.0,
+            "maximum": 40
+          },
+          "edge_error_mean_px": 18.0,
+          "edge_error_maximum_px": 40,
+          "elapsed_ms": 12.179,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              66,
+              44,
+              1141,
+              948
+            ],
+            "corners": [
+              [
+                66.0,
+                44.0
+              ],
+              [
+                1141.0,
+                44.0
+              ],
+              [
+                1141.0,
+                948.0
+              ],
+              [
+                66.0,
+                948.0
+              ]
+            ],
+            "confidence": 0.985134,
+            "score": 0.985134,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 1,
+              "minimum_component_area": 952,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 1,
+              "merged_components": 1,
+              "merge_area_floor": 9558,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.765993,
+              "component_area_fraction": 0.753411,
+              "fill_ratio": 0.983574,
+              "largest_component_fraction": 0.753411,
+              "largest_merged_fraction": 0.753411,
+              "envelope_fraction": 0.765993,
+              "text_density": 0.954257,
+              "mask_score": 0.977129,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 12.159
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            74,
+            27,
+            1190,
+            968
+          ],
+          "iou": 0.94910661,
+          "edge_errors": {
+            "left": 14,
+            "top": 6,
+            "right": 36,
+            "bottom": 0,
+            "mean": 14.0,
+            "maximum": 36
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 36,
+          "elapsed_ms": 17.662,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              74,
+              27,
+              1190,
+              968
+            ],
+            "corners": [
+              [
+                74.0,
+                27.0
+              ],
+              [
+                1190.0,
+                27.0
+              ],
+              [
+                1190.0,
+                968.0
+              ],
+              [
+                74.0,
+                968.0
+              ]
+            ],
+            "confidence": 0.97929,
+            "score": 0.97929,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.004,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 3,
+              "minimum_component_area": 941,
+              "morphology_close_kernel_px": 5,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10151,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.836564,
+              "component_area_fraction": 0.80863,
+              "fill_ratio": 0.966609,
+              "largest_component_fraction": 0.80863,
+              "largest_merged_fraction": 0.80863,
+              "envelope_fraction": 0.836564,
+              "text_density": 0.936728,
+              "mask_score": 0.968139,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 17.643
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.15980630600000723,
+        "search_fraction": 0.2
+      },
+      "profile": null,
+      "run_id": "run-20260814-022126",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "732d1fd40ae7",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00075,
+        "minimum_component_area_px": 10,
+        "merge_area_ratio": 0.01,
+        "merge_gap_fraction": 0.02,
+        "minimum_bbox_area_fraction": 0.08,
+        "minimum_selected_area_fraction": 0.02,
+        "bbox_padding_fraction": 0.0,
+        "morphology_close_fraction": 0.008,
+        "morphology_dilate_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.7733866,
+        "mean_iou_success": 0.7733866,
+        "minimum_iou": 0.46166916,
+        "stddev_iou": 0.22014074,
+        "mean_edge_error_px": 66.35,
+        "elapsed_ms_total": 104.094,
+        "wall_ms": 104.563
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            103,
+            53,
+            1287,
+            964
+          ],
+          "iou": 0.97339686,
+          "edge_errors": {
+            "left": 22,
+            "top": 3,
+            "right": 2,
+            "bottom": 3,
+            "mean": 7.5,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 7.5,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 18.748,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              103,
+              53,
+              1287,
+              964
+            ],
+            "corners": [
+              [
+                103.0,
+                53.0
+              ],
+              [
+                1287.0,
+                53.0
+              ],
+              [
+                1287.0,
+                964.0
+              ],
+              [
+                103.0,
+                964.0
+              ]
+            ],
+            "confidence": 0.955939,
+            "score": 0.955939,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 6,
+              "minimum_component_area": 1022,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 3,
+              "merged_components": 1,
+              "merge_area_floor": 9854,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2
+              ],
+              "bbox_area_fraction": 0.791562,
+              "component_area_fraction": 0.723113,
+              "fill_ratio": 0.913526,
+              "largest_component_fraction": 0.723113,
+              "largest_merged_fraction": 0.723113,
+              "envelope_fraction": 0.791562,
+              "text_density": 0.86652,
+              "mask_score": 0.932213,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 18.732
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            105,
+            14,
+            758,
+            968
+          ],
+          "iou": 0.55136504,
+          "edge_errors": {
+            "left": 38,
+            "top": 6,
+            "right": 475,
+            "bottom": 9,
+            "mean": 132.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 132.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 15.938,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              105,
+              14,
+              758,
+              968
+            ],
+            "corners": [
+              [
+                105.0,
+                14.0
+              ],
+              [
+                758.0,
+                14.0
+              ],
+              [
+                758.0,
+                968.0
+              ],
+              [
+                105.0,
+                968.0
+              ]
+            ],
+            "confidence": 0.855699,
+            "score": 0.855699,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 8,
+              "minimum_component_area": 974,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 4,
+              "merged_components": 2,
+              "merge_area_floor": 4795,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                2,
+                3
+              ],
+              "bbox_area_fraction": 0.47961,
+              "component_area_fraction": 0.375484,
+              "fill_ratio": 0.782894,
+              "largest_component_fraction": 0.369125,
+              "largest_merged_fraction": 0.375484,
+              "envelope_fraction": 0.47961,
+              "text_density": 0.7256,
+              "mask_score": 0.824302,
+              "fill_score": 1.0,
+              "area_score": 0.799351,
+              "elapsed_ms": 15.92
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            336,
+            251,
+            1059,
+            888
+          ],
+          "iou": 0.46166916,
+          "edge_errors": {
+            "left": 321,
+            "top": 223,
+            "right": 15,
+            "bottom": 82,
+            "mean": 160.25,
+            "maximum": 321
+          },
+          "edge_error_mean_px": 160.25,
+          "edge_error_maximum_px": 321,
+          "elapsed_ms": 17.008,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              336,
+              251,
+              1059,
+              888
+            ],
+            "corners": [
+              [
+                336.0,
+                251.0
+              ],
+              [
+                1059.0,
+                251.0
+              ],
+              [
+                1059.0,
+                888.0
+              ],
+              [
+                336.0,
+                888.0
+              ]
+            ],
+            "confidence": 0.519567,
+            "score": 0.519567,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 85,
+              "minimum_component_area": 802,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 27,
+              "merged_components": 27,
+              "merge_area_floor": 802,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                24,
+                30,
+                28,
+                9,
+                8,
+                33,
+                39,
+                32,
+                51,
+                53,
+                23,
+                49,
+                42,
+                50,
+                52,
+                22,
+                54,
+                60,
+                19,
+                73,
+                76,
+                37,
+                78,
+                74,
+                79,
+                67,
+                72
+              ],
+              "bbox_area_fraction": 0.430621,
+              "component_area_fraction": 0.11008,
+              "fill_ratio": 0.255631,
+              "largest_component_fraction": 0.036054,
+              "largest_merged_fraction": 0.11008,
+              "envelope_fraction": 0.430621,
+              "text_density": 0.112196,
+              "mask_score": 0.490699,
+              "fill_score": 0.464783,
+              "area_score": 0.717702,
+              "elapsed_ms": 16.99
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            44,
+            1141,
+            948
+          ],
+          "iou": 0.93139535,
+          "edge_errors": {
+            "left": 18,
+            "top": 7,
+            "right": 40,
+            "bottom": 7,
+            "mean": 18.0,
+            "maximum": 40
+          },
+          "edge_error_mean_px": 18.0,
+          "edge_error_maximum_px": 40,
+          "elapsed_ms": 29.086,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              66,
+              44,
+              1141,
+              948
+            ],
+            "corners": [
+              [
+                66.0,
+                44.0
+              ],
+              [
+                1141.0,
+                44.0
+              ],
+              [
+                1141.0,
+                948.0
+              ],
+              [
+                66.0,
+                948.0
+              ]
+            ],
+            "confidence": 0.985134,
+            "score": 0.985134,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 1,
+              "minimum_component_area": 952,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 1,
+              "merged_components": 1,
+              "merge_area_floor": 9558,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.765993,
+              "component_area_fraction": 0.753411,
+              "fill_ratio": 0.983574,
+              "largest_component_fraction": 0.753411,
+              "largest_merged_fraction": 0.753411,
+              "envelope_fraction": 0.765993,
+              "text_density": 0.954257,
+              "mask_score": 0.977129,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 29.068
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            74,
+            27,
+            1190,
+            968
+          ],
+          "iou": 0.94910661,
+          "edge_errors": {
+            "left": 14,
+            "top": 6,
+            "right": 36,
+            "bottom": 0,
+            "mean": 14.0,
+            "maximum": 36
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 36,
+          "elapsed_ms": 23.314,
+          "candidate": {
+            "method": "components",
+            "bbox": [
+              74,
+              27,
+              1190,
+              968
+            ],
+            "corners": [
+              [
+                74.0,
+                27.0
+              ],
+              [
+                1190.0,
+                27.0
+              ],
+              [
+                1190.0,
+                968.0
+              ],
+              [
+                74.0,
+                968.0
+              ]
+            ],
+            "confidence": 0.97929,
+            "score": 0.97929,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 0.00075,
+                "minimum_component_area_px": 10,
+                "merge_area_ratio": 0.01,
+                "merge_gap_fraction": 0.02,
+                "minimum_bbox_area_fraction": 0.08,
+                "minimum_selected_area_fraction": 0.02,
+                "bbox_padding_fraction": 0.0,
+                "morphology_close_fraction": 0.008,
+                "morphology_dilate_fraction": 0.015
+              },
+              "component_count": 3,
+              "minimum_component_area": 941,
+              "morphology_close_kernel_px": 9,
+              "morphology_dilate_kernel_px": 15,
+              "significant_components": 2,
+              "merged_components": 1,
+              "merge_area_floor": 10151,
+              "merge_gap_px": 20,
+              "selected_component_labels": [
+                1
+              ],
+              "bbox_area_fraction": 0.836564,
+              "component_area_fraction": 0.80863,
+              "fill_ratio": 0.966609,
+              "largest_component_fraction": 0.80863,
+              "largest_merged_fraction": 0.80863,
+              "envelope_fraction": 0.836564,
+              "text_density": 0.936728,
+              "mask_score": 0.968139,
+              "fill_score": 1.0,
+              "area_score": 1.0,
+              "elapsed_ms": 23.296
+            },
+            "status": "ok",
+            "detector_name": "Connected Components",
+            "origin": "OpenCV",
+            "foundation": [
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenCV contributors"
+            ],
+            "version": "4.14.0",
+            "repository": "https://github.com/opencv/opencv"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.3565431529999614,
+        "search_fraction": 0.6
+      },
+      "profile": null,
+      "run_id": "run-20260814-022126",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 3
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.97339686,
+        "winner_iou": 0.95325782,
+        "delta_iou": -0.02013904,
+        "status": "Regressed",
+        "parameter_set": "7eb87978bb9a",
+        "parameter_set_id": "7eb87978bb9a",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.94910661,
+        "winner_iou": 0.91923588,
+        "delta_iou": -0.02987073,
+        "status": "Regressed",
+        "parameter_set": "7eb87978bb9a",
+        "parameter_set_id": "7eb87978bb9a",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.93139535,
+        "winner_iou": 0.9017754,
+        "delta_iou": -0.02961995,
+        "status": "Regressed",
+        "parameter_set": "7eb87978bb9a",
+        "parameter_set_id": "7eb87978bb9a",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.4973262,
+        "winner_iou": 0.57248637,
+        "delta_iou": 0.07516017,
+        "status": "Improved",
+        "parameter_set": "7eb87978bb9a",
+        "parameter_set_id": "7eb87978bb9a",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.24133652,
+        "winner_iou": 0.55041009,
+        "delta_iou": 0.30907357,
+        "status": "Improved",
+        "parameter_set": "7eb87978bb9a",
+        "parameter_set_id": "7eb87978bb9a",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000563",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16765374464,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "997a19ffbebd353a97d776bf40e7f93f9b521109",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31763131937",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "af971da034b82139f650f8abf272c03c698ccbc4",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 172793856,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 17.652371626667424,
+    "failures": 0,
+    "best_mean_iou": 0.77943311,
+    "best_worst_page_iou": 0.55041009,
+    "best_stddev_iou": 0.17888878,
+    "mean_iou_improvements": 2,
+    "minimum_iou_improvements": 2,
+    "stddev_improvements": 2,
+    "total_metric_improvements": 6,
+    "parameter_sets_with_improvements": 2,
+    "winner_changes": 2,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 0.15980630600000723,
+    "winner_last_changed_elapsed_seconds": 0.24967320799999015,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "04ff9a0c7a86",
+        "parameter_short_name": "04ff9a0c",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.15980630600000723,
+        "search_fraction": 0.2
+      },
+      {
+        "change_number": 2,
+        "parameter_set_id": "7eb87978bb9a",
+        "parameter_short_name": "7eb87978",
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.24967320799999015,
+        "search_fraction": 0.4
+      }
+    ],
+    "last_improvement_elapsed_seconds": 0.24967320799999015,
+    "time_since_last_improvement_seconds": 0.31682290999998486
+  }
+}
