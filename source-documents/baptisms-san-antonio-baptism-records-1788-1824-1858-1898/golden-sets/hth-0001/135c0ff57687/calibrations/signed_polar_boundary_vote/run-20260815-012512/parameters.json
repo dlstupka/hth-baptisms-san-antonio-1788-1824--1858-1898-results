@@ -1,0 +1,143 @@
+{
+  "schema_version": "0.4",
+  "detector": "signed_polar_boundary_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/signed_polar_boundary_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "12.780",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "15",
+    "ranked_quality": "0.86676499",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "signed_polar_boundary_vote",
+    "description": "Generation-2 calibration space for polarity-aware Signed Polar Boundary Voting, expanded around the exhaustive winner and beyond the outer-radius, gradient-percentile, inner-radius, and zero-padding boundaries.",
+    "profiles": {
+      "baseline": {
+        "ray_count": 180,
+        "inner_radius_fraction": 0.12,
+        "outer_radius_fraction": 0.7,
+        "gradient_percentile": 82.0,
+        "minimum_support_fraction": 0.35,
+        "bbox_padding_fraction": 0.0,
+        "polarity": "bright_inside"
+      }
+    },
+    "parameters": {
+      "ray_count": {
+        "type": "integer",
+        "values": [
+          72,
+          90,
+          120,
+          144,
+          180,
+          224,
+          270,
+          360
+        ]
+      },
+      "inner_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.12,
+          0.14,
+          0.16,
+          0.18,
+          0.2,
+          0.22
+        ]
+      },
+      "outer_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.45,
+          0.5,
+          0.55,
+          0.575,
+          0.6,
+          0.625,
+          0.65,
+          0.7,
+          0.82
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          82.0,
+          86.0,
+          88.0,
+          89.0,
+          90.0,
+          91.0,
+          92.0,
+          93.0,
+          94.0,
+          95.0
+        ]
+      },
+      "minimum_support_fraction": {
+        "type": "float",
+        "values": [
+          0.2,
+          0.25,
+          0.3,
+          0.35,
+          0.4,
+          0.5
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.002,
+          0.004,
+          0.008,
+          0.016
+        ]
+      },
+      "polarity": {
+        "type": "string",
+        "values": [
+          "bright_inside",
+          "dark_inside",
+          "absolute"
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
