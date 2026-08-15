@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.4",
+  "detector": "gradient_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/gradient_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": null,
+  "threads": 42,
+  "debug_level": "verbose",
+  "debug_artifacts": "winner",
+  "detector_pipeline": {
+    "pipeline_count": 9,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "single-detector",
+    "queue_position": "1",
+    "ranked_quality": "unknown",
+    "execution_shape_source": "preferred-dispatch-optimizer",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "count": 9,
+    "assignment": "interleaved",
+    "source_run_ids": [
+      "run-20260815-145154"
+    ]
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "gradient_vote",
+    "description": "Focused lower-bound diagnostic refinement for HTH Gradient Boundary Voting. The prior 6,562-set exhaustive calibration produced a very broad near-best basin but placed both border_search_fraction and minimum_span_fraction at their lower tested boundary. This small two-dimensional sweep extends only those critical bounds while pinning every other parameter to the prior winning configuration, testing whether the clipped boundary hides meaningful improvement before spending a larger refinement budget.",
+    "profiles": {
+      "baseline": {
+        "gaussian_sigma": 1.2,
+        "border_search_fraction": 0.35,
+        "central_band_fraction": 1.0,
+        "gradient_percentile": 70.0,
+        "vote_smooth_fraction": 0.012,
+        "minimum_vote_support": 0.08,
+        "minimum_span_fraction": 0.35,
+        "minimum_area_fraction": 0.2,
+        "support_weight": 0.45,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2
+      }
+    },
+    "parameters": {
+      "border_search_fraction": {
+        "type": "float",
+        "values": [
+          0.15,
+          0.18,
+          0.21,
+          0.24,
+          0.27,
+          0.3,
+          0.32,
+          0.34,
+          0.35
+        ]
+      },
+      "minimum_span_fraction": {
+        "type": "float",
+        "values": [
+          0.15,
+          0.18,
+          0.21,
+          0.24,
+          0.27,
+          0.3,
+          0.32,
+          0.34,
+          0.35
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures"
+    }
+  }
+}
