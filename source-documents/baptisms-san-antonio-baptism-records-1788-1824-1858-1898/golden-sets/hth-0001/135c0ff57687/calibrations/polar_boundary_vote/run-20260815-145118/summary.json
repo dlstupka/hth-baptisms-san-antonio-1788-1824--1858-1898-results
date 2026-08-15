@@ -1,0 +1,3518 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260815-145118",
+  "detector": "polar_boundary_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 384,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 19635
+  },
+  "detector_pipeline": {
+    "pipeline_count": 1,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "single-detector",
+    "queue_position": "1",
+    "ranked_quality": "unknown",
+    "execution_shape_source": "auto-fallback-no-shape-history",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "384"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 19636,
+    "planned_parameter_sets": 19636,
+    "actual_parameter_sets": 19636,
+    "locally_evaluated_parameter_sets": 19636,
+    "locally_evaluated_page_evaluations": 98180,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 19635,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 98180,
+    "actual_page_evaluations": 98180
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 19636,
+  "page_evaluation_count": 98180,
+  "successful_page_evaluation_count": 98180,
+  "fully_successful_parameter_set_count": 19636,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "5fc41309f0292ed96d353078c6ecf464c692f23c2c48ee36a7585ed8c5d262a8",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "935369155754",
+    "parameters": {
+      "ray_count": 90,
+      "outer_radius_fraction": 0.6,
+      "gradient_percentile": 94.0,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.96910344,
+      "mean_iou_success": 0.96910344,
+      "minimum_iou": 0.95244559,
+      "stddev_iou": 0.01541111,
+      "mean_edge_error_px": 8.3,
+      "elapsed_ms_total": 20744.716,
+      "wall_ms": 20745.094
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          151,
+          54,
+          1283,
+          969
+        ],
+        "iou": 0.96837357,
+        "edge_errors": {
+          "left": 26,
+          "top": 2,
+          "right": 6,
+          "bottom": 2,
+          "mean": 9.0,
+          "maximum": 26
+        },
+        "edge_error_mean_px": 9.0,
+        "edge_error_maximum_px": 26,
+        "elapsed_ms": 3528.711,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            151,
+            54,
+            1283,
+            969
+          ],
+          "corners": [
+            [
+              1280.0257568359375,
+              968.3221435546875
+            ],
+            [
+              151.5065155029297,
+              965.8466186523438
+            ],
+            [
+              153.5047149658203,
+              54.9383544921875
+            ],
+            [
+              1282.0240478515625,
+              57.413909912109375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 90,
+              "inner_radius_fraction": 0.12,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 94.0,
+              "minimum_support_fraction": 0.35,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 90,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 3528.685
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          65,
+          11,
+          1233,
+          978
+        ],
+        "iou": 0.99417629,
+        "edge_errors": {
+          "left": 2,
+          "top": 3,
+          "right": 0,
+          "bottom": 1,
+          "mean": 1.5,
+          "maximum": 3
+        },
+        "edge_error_mean_px": 1.5,
+        "edge_error_maximum_px": 3,
+        "elapsed_ms": 4420.131,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            65,
+            11,
+            1233,
+            978
+          ],
+          "corners": [
+            [
+              71.7711181640625,
+              977.250244140625
+            ],
+            [
+              65.9063720703125,
+              18.738014221191406
+            ],
+            [
+              1226.2164306640625,
+              11.638572692871094
+            ],
+            [
+              1232.0811767578125,
+              970.1507568359375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 90,
+              "inner_radius_fraction": 0.12,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 94.0,
+              "minimum_support_fraction": 0.35,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 90,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 4420.088
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          13,
+          17,
+          1085,
+          970
+        ],
+        "iou": 0.97647061,
+        "edge_errors": {
+          "left": 2,
+          "top": 11,
+          "right": 11,
+          "bottom": 0,
+          "mean": 6.0,
+          "maximum": 11
+        },
+        "edge_error_mean_px": 6.0,
+        "edge_error_maximum_px": 11,
+        "elapsed_ms": 4288.075,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            13,
+            17,
+            1085,
+            970
+          ],
+          "corners": [
+            [
+              1081.2987060546875,
+              969.7880859375
+            ],
+            [
+              13.384991645812988,
+              965.92578125
+            ],
+            [
+              16.816789627075195,
+              17.055877685546875
+            ],
+            [
+              1084.7305908203125,
+              20.918243408203125
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 90,
+              "inner_radius_fraction": 0.12,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 94.0,
+              "minimum_support_fraction": 0.35,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 90,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 4288.051
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          72,
+          47,
+          1135,
+          941
+        ],
+        "iou": 0.95244559,
+        "edge_errors": {
+          "left": 12,
+          "top": 4,
+          "right": 34,
+          "bottom": 0,
+          "mean": 12.5,
+          "maximum": 34
+        },
+        "edge_error_mean_px": 12.5,
+        "edge_error_maximum_px": 34,
+        "elapsed_ms": 4397.984,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            72,
+            47,
+            1135,
+            941
+          ],
+          "corners": [
+            [
+              1131.3218994140625,
+              940.4044189453125
+            ],
+            [
+              72.45516204833984,
+              936.5289916992188
+            ],
+            [
+              75.71012115478516,
+              47.1953125
+            ],
+            [
+              1134.5767822265625,
+              51.07073974609375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 90,
+              "inner_radius_fraction": 0.12,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 94.0,
+              "minimum_support_fraction": 0.35,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 90,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 4397.961
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          75,
+          29,
+          1183,
+          964
+        ],
+        "iou": 0.95405116,
+        "edge_errors": {
+          "left": 13,
+          "top": 4,
+          "right": 29,
+          "bottom": 4,
+          "mean": 12.5,
+          "maximum": 29
+        },
+        "edge_error_mean_px": 12.5,
+        "edge_error_maximum_px": 29,
+        "elapsed_ms": 4109.815,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            75,
+            29,
+            1183,
+            964
+          ],
+          "corners": [
+            [
+              1182.3985595703125,
+              963.5675048828125
+            ],
+            [
+              75.9972915649414,
+              963.3458251953125
+            ],
+            [
+              76.1844711303711,
+              29.359344482421875
+            ],
+            [
+              1182.5858154296875,
+              29.581085205078125
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 90,
+              "inner_radius_fraction": 0.12,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 94.0,
+              "minimum_support_fraction": 0.35,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 90,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 4109.792
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 3885,
+      "parameter_set_number": 3885,
+      "elapsed_seconds": 201.3175872010179,
+      "search_fraction": 0.1978508861275209
+    },
+    "profile": null,
+    "run_id": "run-20260815-145118",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "cd967f93437d",
+    "parameters": {
+      "ray_count": 180,
+      "inner_radius_fraction": 0.06,
+      "outer_radius_fraction": 0.6,
+      "gradient_percentile": 90.0,
+      "minimum_support_fraction": 0.25,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.9677957,
+      "mean_iou_success": 0.9677957,
+      "minimum_iou": 0.9425492,
+      "stddev_iou": 0.01819233,
+      "mean_edge_error_px": 8.55,
+      "elapsed_ms_total": 48.578,
+      "wall_ms": 48.901
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          116,
+          54,
+          1283,
+          970
+        ],
+        "iou": 0.98185098,
+        "edge_errors": {
+          "left": 9,
+          "top": 2,
+          "right": 6,
+          "bottom": 3,
+          "mean": 5.0,
+          "maximum": 9
+        },
+        "edge_error_mean_px": 5.0,
+        "edge_error_maximum_px": 9,
+        "elapsed_ms": 12.24,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            116,
+            54,
+            1283,
+            970
+          ],
+          "corners": [
+            [
+              1279.9310302734375,
+              969.4320068359375
+            ],
+            [
+              116.62728881835938,
+              966.6728515625
+            ],
+            [
+              118.79055786132812,
+              54.59765625
+            ],
+            [
+              1282.0943603515625,
+              57.3568115234375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "inner_radius_fraction": 0.06,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 90.0,
+              "minimum_support_fraction": 0.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 180,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 12.208
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          64,
+          11,
+          1234,
+          978
+        ],
+        "iou": 0.99248208,
+        "edge_errors": {
+          "left": 3,
+          "top": 3,
+          "right": 1,
+          "bottom": 1,
+          "mean": 2.0,
+          "maximum": 3
+        },
+        "edge_error_mean_px": 2.0,
+        "edge_error_maximum_px": 3,
+        "elapsed_ms": 9.223,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            64,
+            11,
+            1234,
+            978
+          ],
+          "corners": [
+            [
+              69.9495849609375,
+              977.2614135742188
+            ],
+            [
+              64.08203125,
+              18.291553497314453
+            ],
+            [
+              1227.6082763671875,
+              11.17243480682373
+            ],
+            [
+              1233.475830078125,
+              970.1422729492188
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "inner_radius_fraction": 0.06,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 90.0,
+              "minimum_support_fraction": 0.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 180,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 9.205
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          10,
+          15,
+          1086,
+          972
+        ],
+        "iou": 0.9687744,
+        "edge_errors": {
+          "left": 5,
+          "top": 13,
+          "right": 12,
+          "bottom": 2,
+          "mean": 8.0,
+          "maximum": 13
+        },
+        "edge_error_mean_px": 8.0,
+        "edge_error_maximum_px": 13,
+        "elapsed_ms": 9.043,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            10,
+            15,
+            1086,
+            972
+          ],
+          "corners": [
+            [
+              1080.6263427734375,
+              971.285888671875
+            ],
+            [
+              10.772918701171875,
+              965.4102783203125
+            ],
+            [
+              15.990509033203125,
+              15.356964111328125
+            ],
+            [
+              1085.8438720703125,
+              21.232513427734375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "inner_radius_fraction": 0.06,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 90.0,
+              "minimum_support_fraction": 0.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 180,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 9.033
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          71,
+          44,
+          1138,
+          944
+        ],
+        "iou": 0.9425492,
+        "edge_errors": {
+          "left": 13,
+          "top": 7,
+          "right": 37,
+          "bottom": 3,
+          "mean": 15.0,
+          "maximum": 37
+        },
+        "edge_error_mean_px": 15.0,
+        "edge_error_maximum_px": 37,
+        "elapsed_ms": 9.105,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            71,
+            44,
+            1138,
+            944
+          ],
+          "corners": [
+            [
+              1132.05810546875,
+              943.09619140625
+            ],
+            [
+              71.60803985595703,
+              937.212890625
+            ],
+            [
+              76.55919647216797,
+              44.784454345703125
+            ],
+            [
+              1137.00927734375,
+              50.667755126953125
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "inner_radius_fraction": 0.06,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 90.0,
+              "minimum_support_fraction": 0.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 180,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 9.097
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          75,
+          29,
+          1185,
+          965
+        ],
+        "iou": 0.95332186,
+        "edge_errors": {
+          "left": 13,
+          "top": 4,
+          "right": 31,
+          "bottom": 3,
+          "mean": 12.75,
+          "maximum": 31
+        },
+        "edge_error_mean_px": 12.75,
+        "edge_error_maximum_px": 31,
+        "elapsed_ms": 8.967,
+        "candidate": {
+          "method": "polar_boundary_vote",
+          "bbox": [
+            75,
+            29,
+            1185,
+            965
+          ],
+          "corners": [
+            [
+              1184.5489501953125,
+              964.9766845703125
+            ],
+            [
+              75.96357727050781,
+              964.6353759765625
+            ],
+            [
+              76.25151062011719,
+              29.346649169921875
+            ],
+            [
+              1184.8367919921875,
+              29.687957763671875
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "inner_radius_fraction": 0.06,
+              "outer_radius_fraction": 0.6,
+              "gradient_percentile": 90.0,
+              "minimum_support_fraction": 0.25,
+              "bbox_padding_fraction": 0.0
+            },
+            "supported_rays": 180,
+            "ray_support_fraction": 1.0,
+            "evidence": "polar_gradient_boundary_votes",
+            "elapsed_ms": 8.96
+          },
+          "status": "ok",
+          "detector_name": "Polar Boundary Voting",
+          "origin": "HTH",
+          "foundation": [
+            "Polar gradient voting",
+            "OpenCV"
+          ],
+          "authors": [
+            "OpenAI ChatGPT"
+          ],
+          "version": "0.6.1",
+          "repository": "https://github.com/dlstupka/hth"
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260815-145118",
+    "rank": 4,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "935369155754",
+      "parameters": {
+        "ray_count": 90,
+        "outer_radius_fraction": 0.6,
+        "gradient_percentile": 94.0,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96910344,
+        "mean_iou_success": 0.96910344,
+        "minimum_iou": 0.95244559,
+        "stddev_iou": 0.01541111,
+        "mean_edge_error_px": 8.3,
+        "elapsed_ms_total": 20744.716,
+        "wall_ms": 20745.094
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            151,
+            54,
+            1283,
+            969
+          ],
+          "iou": 0.96837357,
+          "edge_errors": {
+            "left": 26,
+            "top": 2,
+            "right": 6,
+            "bottom": 2,
+            "mean": 9.0,
+            "maximum": 26
+          },
+          "edge_error_mean_px": 9.0,
+          "edge_error_maximum_px": 26,
+          "elapsed_ms": 3528.711,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              151,
+              54,
+              1283,
+              969
+            ],
+            "corners": [
+              [
+                1280.0257568359375,
+                968.3221435546875
+              ],
+              [
+                151.5065155029297,
+                965.8466186523438
+              ],
+              [
+                153.5047149658203,
+                54.9383544921875
+              ],
+              [
+                1282.0240478515625,
+                57.413909912109375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 94.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 90,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 3528.685
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            65,
+            11,
+            1233,
+            978
+          ],
+          "iou": 0.99417629,
+          "edge_errors": {
+            "left": 2,
+            "top": 3,
+            "right": 0,
+            "bottom": 1,
+            "mean": 1.5,
+            "maximum": 3
+          },
+          "edge_error_mean_px": 1.5,
+          "edge_error_maximum_px": 3,
+          "elapsed_ms": 4420.131,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              65,
+              11,
+              1233,
+              978
+            ],
+            "corners": [
+              [
+                71.7711181640625,
+                977.250244140625
+              ],
+              [
+                65.9063720703125,
+                18.738014221191406
+              ],
+              [
+                1226.2164306640625,
+                11.638572692871094
+              ],
+              [
+                1232.0811767578125,
+                970.1507568359375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 94.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 90,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 4420.088
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            13,
+            17,
+            1085,
+            970
+          ],
+          "iou": 0.97647061,
+          "edge_errors": {
+            "left": 2,
+            "top": 11,
+            "right": 11,
+            "bottom": 0,
+            "mean": 6.0,
+            "maximum": 11
+          },
+          "edge_error_mean_px": 6.0,
+          "edge_error_maximum_px": 11,
+          "elapsed_ms": 4288.075,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              13,
+              17,
+              1085,
+              970
+            ],
+            "corners": [
+              [
+                1081.2987060546875,
+                969.7880859375
+              ],
+              [
+                13.384991645812988,
+                965.92578125
+              ],
+              [
+                16.816789627075195,
+                17.055877685546875
+              ],
+              [
+                1084.7305908203125,
+                20.918243408203125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 94.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 90,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 4288.051
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            47,
+            1135,
+            941
+          ],
+          "iou": 0.95244559,
+          "edge_errors": {
+            "left": 12,
+            "top": 4,
+            "right": 34,
+            "bottom": 0,
+            "mean": 12.5,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.5,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 4397.984,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              72,
+              47,
+              1135,
+              941
+            ],
+            "corners": [
+              [
+                1131.3218994140625,
+                940.4044189453125
+              ],
+              [
+                72.45516204833984,
+                936.5289916992188
+              ],
+              [
+                75.71012115478516,
+                47.1953125
+              ],
+              [
+                1134.5767822265625,
+                51.07073974609375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 94.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 90,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 4397.961
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            29,
+            1183,
+            964
+          ],
+          "iou": 0.95405116,
+          "edge_errors": {
+            "left": 13,
+            "top": 4,
+            "right": 29,
+            "bottom": 4,
+            "mean": 12.5,
+            "maximum": 29
+          },
+          "edge_error_mean_px": 12.5,
+          "edge_error_maximum_px": 29,
+          "elapsed_ms": 4109.815,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              75,
+              29,
+              1183,
+              964
+            ],
+            "corners": [
+              [
+                1182.3985595703125,
+                963.5675048828125
+              ],
+              [
+                75.9972915649414,
+                963.3458251953125
+              ],
+              [
+                76.1844711303711,
+                29.359344482421875
+              ],
+              [
+                1182.5858154296875,
+                29.581085205078125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 94.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 90,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 4109.792
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3885,
+        "parameter_set_number": 3885,
+        "elapsed_seconds": 201.3175872010179,
+        "search_fraction": 0.1978508861275209
+      },
+      "profile": null,
+      "run_id": "run-20260815-145118",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "dd690ba558fc",
+      "parameters": {
+        "ray_count": 240,
+        "outer_radius_fraction": 0.59,
+        "gradient_percentile": 97.0,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96896656,
+        "mean_iou_success": 0.96896656,
+        "minimum_iou": 0.94868494,
+        "stddev_iou": 0.01536687,
+        "mean_edge_error_px": 8.2,
+        "elapsed_ms_total": 45226.616,
+        "wall_ms": 45226.919
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            141,
+            41,
+            1276,
+            978
+          ],
+          "iou": 0.94868494,
+          "edge_errors": {
+            "left": 16,
+            "top": 15,
+            "right": 13,
+            "bottom": 11,
+            "mean": 13.75,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 13.75,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 9368.215,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              141,
+              41,
+              1276,
+              978
+            ],
+            "corners": [
+              [
+                1252.8861083984375,
+                977.598876953125
+              ],
+              [
+                141.71176147460938,
+                950.07177734375
+              ],
+              [
+                164.22305297851562,
+                41.368865966796875
+              ],
+              [
+                1275.3973388671875,
+                68.89596557617188
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9368.193
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            74,
+            12,
+            1231,
+            977
+          ],
+          "iou": 0.9881852,
+          "edge_errors": {
+            "left": 7,
+            "top": 4,
+            "right": 2,
+            "bottom": 0,
+            "mean": 3.25,
+            "maximum": 7
+          },
+          "edge_error_mean_px": 3.25,
+          "edge_error_maximum_px": 7,
+          "elapsed_ms": 9664.154,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              74,
+              12,
+              1231,
+              977
+            ],
+            "corners": [
+              [
+                78.9256591796875,
+                976.6069946289062
+              ],
+              [
+                74.720458984375,
+                17.91614532470703
+              ],
+              [
+                1226.027587890625,
+                12.866021156311035
+              ],
+              [
+                1230.2327880859375,
+                971.5568237304688
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9664.131
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            13,
+            16,
+            1085,
+            969
+          ],
+          "iou": 0.97442394,
+          "edge_errors": {
+            "left": 2,
+            "top": 12,
+            "right": 11,
+            "bottom": 1,
+            "mean": 6.5,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 6.5,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 9648.872,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              13,
+              16,
+              1085,
+              969
+            ],
+            "corners": [
+              [
+                1080.4398193359375,
+                968.7742919921875
+              ],
+              [
+                13.177322387695312,
+                964.516845703125
+              ],
+              [
+                16.958786010742188,
+                16.584381103515625
+              ],
+              [
+                1084.2213134765625,
+                20.841888427734375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9648.852
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            47,
+            1135,
+            941
+          ],
+          "iou": 0.95334243,
+          "edge_errors": {
+            "left": 11,
+            "top": 4,
+            "right": 34,
+            "bottom": 0,
+            "mean": 12.25,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 9040.561,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              73,
+              47,
+              1135,
+              941
+            ],
+            "corners": [
+              [
+                1130.8199462890625,
+                940.74267578125
+              ],
+              [
+                73.91835021972656,
+                936.7108154296875
+              ],
+              [
+                77.31126403808594,
+                47.287078857421875
+              ],
+              [
+                1134.2127685546875,
+                51.318878173828125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9040.534
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            32,
+            1149,
+            966
+          ],
+          "iou": 0.98019631,
+          "edge_errors": {
+            "left": 13,
+            "top": 1,
+            "right": 5,
+            "bottom": 2,
+            "mean": 5.25,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.25,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 7504.814,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              75,
+              32,
+              1149,
+              966
+            ],
+            "corners": [
+              [
+                1146.09619140625,
+                965.2567138671875
+              ],
+              [
+                75.60015106201172,
+                962.4942626953125
+              ],
+              [
+                78.00055694580078,
+                32.324432373046875
+              ],
+              [
+                1148.49658203125,
+                35.086944580078125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 7504.792
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 19414,
+        "parameter_set_number": 19414,
+        "elapsed_seconds": 1596.835414718953,
+        "search_fraction": 0.9886942350784274
+      },
+      "profile": null,
+      "run_id": "run-20260815-145118",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "7cabafc75bc3",
+      "parameters": {
+        "ray_count": 240,
+        "outer_radius_fraction": 0.59,
+        "gradient_percentile": 97.0,
+        "bbox_padding_fraction": 0.001
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96809607,
+        "mean_iou_success": 0.96809607,
+        "minimum_iou": 0.94833278,
+        "stddev_iou": 0.01662384,
+        "mean_edge_error_px": 8.4,
+        "elapsed_ms_total": 45285.893,
+        "wall_ms": 45286.189
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            140,
+            40,
+            1277,
+            979
+          ],
+          "iou": 0.94833278,
+          "edge_errors": {
+            "left": 15,
+            "top": 16,
+            "right": 12,
+            "bottom": 12,
+            "mean": 13.75,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 13.75,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 9963.321,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              140,
+              40,
+              1277,
+              979
+            ],
+            "corners": [
+              [
+                1252.8861083984375,
+                977.598876953125
+              ],
+              [
+                141.71176147460938,
+                950.07177734375
+              ],
+              [
+                164.22305297851562,
+                41.368865966796875
+              ],
+              [
+                1275.3973388671875,
+                68.89596557617188
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.001
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9963.308
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            73,
+            11,
+            1232,
+            978
+          ],
+          "iou": 0.98990374,
+          "edge_errors": {
+            "left": 6,
+            "top": 3,
+            "right": 1,
+            "bottom": 1,
+            "mean": 2.75,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.75,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 10359.748,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              73,
+              11,
+              1232,
+              978
+            ],
+            "corners": [
+              [
+                78.9256591796875,
+                976.6069946289062
+              ],
+              [
+                74.720458984375,
+                17.91614532470703
+              ],
+              [
+                1226.027587890625,
+                12.866021156311035
+              ],
+              [
+                1230.2327880859375,
+                971.5568237304688
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.001
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 10359.724
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            12,
+            15,
+            1086,
+            970
+          ],
+          "iou": 0.97261107,
+          "edge_errors": {
+            "left": 3,
+            "top": 13,
+            "right": 12,
+            "bottom": 0,
+            "mean": 7.0,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 7.0,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 9494.331,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              12,
+              15,
+              1086,
+              970
+            ],
+            "corners": [
+              [
+                1080.4398193359375,
+                968.7742919921875
+              ],
+              [
+                13.177322387695312,
+                964.516845703125
+              ],
+              [
+                16.958786010742188,
+                16.584381103515625
+              ],
+              [
+                1084.2213134765625,
+                20.841888427734375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.001
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9494.308
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            46,
+            1136,
+            942
+          ],
+          "iou": 0.94942644,
+          "edge_errors": {
+            "left": 12,
+            "top": 5,
+            "right": 35,
+            "bottom": 1,
+            "mean": 13.25,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 13.25,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 8378.612,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              72,
+              46,
+              1136,
+              942
+            ],
+            "corners": [
+              [
+                1130.8199462890625,
+                940.74267578125
+              ],
+              [
+                73.91835021972656,
+                936.7108154296875
+              ],
+              [
+                77.31126403808594,
+                47.287078857421875
+              ],
+              [
+                1134.2127685546875,
+                51.318878173828125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.001
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 8378.589
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            74,
+            31,
+            1150,
+            967
+          ],
+          "iou": 0.9802063,
+          "edge_errors": {
+            "left": 14,
+            "top": 2,
+            "right": 4,
+            "bottom": 1,
+            "mean": 5.25,
+            "maximum": 14
+          },
+          "edge_error_mean_px": 5.25,
+          "edge_error_maximum_px": 14,
+          "elapsed_ms": 7089.881,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              74,
+              31,
+              1150,
+              967
+            ],
+            "corners": [
+              [
+                1146.09619140625,
+                965.2567138671875
+              ],
+              [
+                75.60015106201172,
+                962.4942626953125
+              ],
+              [
+                78.00055694580078,
+                32.324432373046875
+              ],
+              [
+                1148.49658203125,
+                35.086944580078125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 240,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.59,
+                "gradient_percentile": 97.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.001
+              },
+              "supported_rays": 240,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 7089.861
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 19418,
+        "parameter_set_number": 19418,
+        "elapsed_seconds": 1596.9003736110171,
+        "search_fraction": 0.9888979425544917
+      },
+      "profile": null,
+      "run_id": "run-20260815-145118",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "cd967f93437d",
+      "parameters": {
+        "ray_count": 180,
+        "inner_radius_fraction": 0.06,
+        "outer_radius_fraction": 0.6,
+        "gradient_percentile": 90.0,
+        "minimum_support_fraction": 0.25,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.9677957,
+        "mean_iou_success": 0.9677957,
+        "minimum_iou": 0.9425492,
+        "stddev_iou": 0.01819233,
+        "mean_edge_error_px": 8.55,
+        "elapsed_ms_total": 48.578,
+        "wall_ms": 48.901
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            116,
+            54,
+            1283,
+            970
+          ],
+          "iou": 0.98185098,
+          "edge_errors": {
+            "left": 9,
+            "top": 2,
+            "right": 6,
+            "bottom": 3,
+            "mean": 5.0,
+            "maximum": 9
+          },
+          "edge_error_mean_px": 5.0,
+          "edge_error_maximum_px": 9,
+          "elapsed_ms": 12.24,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              116,
+              54,
+              1283,
+              970
+            ],
+            "corners": [
+              [
+                1279.9310302734375,
+                969.4320068359375
+              ],
+              [
+                116.62728881835938,
+                966.6728515625
+              ],
+              [
+                118.79055786132812,
+                54.59765625
+              ],
+              [
+                1282.0943603515625,
+                57.3568115234375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.06,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 90.0,
+                "minimum_support_fraction": 0.25,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 12.208
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            64,
+            11,
+            1234,
+            978
+          ],
+          "iou": 0.99248208,
+          "edge_errors": {
+            "left": 3,
+            "top": 3,
+            "right": 1,
+            "bottom": 1,
+            "mean": 2.0,
+            "maximum": 3
+          },
+          "edge_error_mean_px": 2.0,
+          "edge_error_maximum_px": 3,
+          "elapsed_ms": 9.223,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              64,
+              11,
+              1234,
+              978
+            ],
+            "corners": [
+              [
+                69.9495849609375,
+                977.2614135742188
+              ],
+              [
+                64.08203125,
+                18.291553497314453
+              ],
+              [
+                1227.6082763671875,
+                11.17243480682373
+              ],
+              [
+                1233.475830078125,
+                970.1422729492188
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.06,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 90.0,
+                "minimum_support_fraction": 0.25,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9.205
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            10,
+            15,
+            1086,
+            972
+          ],
+          "iou": 0.9687744,
+          "edge_errors": {
+            "left": 5,
+            "top": 13,
+            "right": 12,
+            "bottom": 2,
+            "mean": 8.0,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 9.043,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              10,
+              15,
+              1086,
+              972
+            ],
+            "corners": [
+              [
+                1080.6263427734375,
+                971.285888671875
+              ],
+              [
+                10.772918701171875,
+                965.4102783203125
+              ],
+              [
+                15.990509033203125,
+                15.356964111328125
+              ],
+              [
+                1085.8438720703125,
+                21.232513427734375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.06,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 90.0,
+                "minimum_support_fraction": 0.25,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9.033
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            71,
+            44,
+            1138,
+            944
+          ],
+          "iou": 0.9425492,
+          "edge_errors": {
+            "left": 13,
+            "top": 7,
+            "right": 37,
+            "bottom": 3,
+            "mean": 15.0,
+            "maximum": 37
+          },
+          "edge_error_mean_px": 15.0,
+          "edge_error_maximum_px": 37,
+          "elapsed_ms": 9.105,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              71,
+              44,
+              1138,
+              944
+            ],
+            "corners": [
+              [
+                1132.05810546875,
+                943.09619140625
+              ],
+              [
+                71.60803985595703,
+                937.212890625
+              ],
+              [
+                76.55919647216797,
+                44.784454345703125
+              ],
+              [
+                1137.00927734375,
+                50.667755126953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.06,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 90.0,
+                "minimum_support_fraction": 0.25,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 9.097
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            29,
+            1185,
+            965
+          ],
+          "iou": 0.95332186,
+          "edge_errors": {
+            "left": 13,
+            "top": 4,
+            "right": 31,
+            "bottom": 3,
+            "mean": 12.75,
+            "maximum": 31
+          },
+          "edge_error_mean_px": 12.75,
+          "edge_error_maximum_px": 31,
+          "elapsed_ms": 8.967,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              75,
+              29,
+              1185,
+              965
+            ],
+            "corners": [
+              [
+                1184.5489501953125,
+                964.9766845703125
+              ],
+              [
+                75.96357727050781,
+                964.6353759765625
+              ],
+              [
+                76.25151062011719,
+                29.346649169921875
+              ],
+              [
+                1184.8367919921875,
+                29.687957763671875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.06,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 90.0,
+                "minimum_support_fraction": 0.25,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 8.96
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260815-145118",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "eb72c986992d",
+      "parameters": {
+        "ray_count": 180,
+        "outer_radius_fraction": 0.6,
+        "gradient_percentile": 93.0,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96763509,
+        "mean_iou_success": 0.96763509,
+        "minimum_iou": 0.94553458,
+        "stddev_iou": 0.01682497,
+        "mean_edge_error_px": 8.5,
+        "elapsed_ms_total": 38260.675,
+        "wall_ms": 38260.971
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            134,
+            47,
+            1289,
+            976
+          ],
+          "iou": 0.97318798,
+          "edge_errors": {
+            "left": 9,
+            "top": 9,
+            "right": 0,
+            "bottom": 9,
+            "mean": 6.75,
+            "maximum": 9
+          },
+          "edge_error_mean_px": 6.75,
+          "edge_error_maximum_px": 9,
+          "elapsed_ms": 6714.875,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              134,
+              47,
+              1289,
+              976
+            ],
+            "corners": [
+              [
+                147.0889892578125,
+                975.2164306640625
+              ],
+              [
+                134.281494140625,
+                63.69182205200195
+              ],
+              [
+                1275.4815673828125,
+                47.65729904174805
+              ],
+              [
+                1288.2890625,
+                959.181884765625
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 93.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 6714.856
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            64,
+            11,
+            1234,
+            978
+          ],
+          "iou": 0.99248208,
+          "edge_errors": {
+            "left": 3,
+            "top": 3,
+            "right": 1,
+            "bottom": 1,
+            "mean": 2.0,
+            "maximum": 3
+          },
+          "edge_error_mean_px": 2.0,
+          "edge_error_maximum_px": 3,
+          "elapsed_ms": 7753.297,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              64,
+              11,
+              1234,
+              978
+            ],
+            "corners": [
+              [
+                69.9495849609375,
+                977.2613525390625
+              ],
+              [
+                64.0848388671875,
+                18.749164581298828
+              ],
+              [
+                1227.611083984375,
+                11.630046844482422
+              ],
+              [
+                1233.475830078125,
+                970.1422119140625
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 93.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 7753.279
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            12,
+            16,
+            1085,
+            970
+          ],
+          "iou": 0.97453797,
+          "edge_errors": {
+            "left": 3,
+            "top": 12,
+            "right": 11,
+            "bottom": 0,
+            "mean": 6.5,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 6.5,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 8262.328,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              12,
+              16,
+              1085,
+              970
+            ],
+            "corners": [
+              [
+                1081.2271728515625,
+                969.908935546875
+              ],
+              [
+                12.57396411895752,
+                965.8355712890625
+              ],
+              [
+                16.190683364868164,
+                16.980682373046875
+              ],
+              [
+                1084.8438720703125,
+                21.054046630859375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 93.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 8262.311
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            71,
+            45,
+            1137,
+            943
+          ],
+          "iou": 0.94553458,
+          "edge_errors": {
+            "left": 13,
+            "top": 6,
+            "right": 36,
+            "bottom": 2,
+            "mean": 14.25,
+            "maximum": 36
+          },
+          "edge_error_mean_px": 14.25,
+          "edge_error_maximum_px": 36,
+          "elapsed_ms": 7888.017,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              71,
+              45,
+              1137,
+              943
+            ],
+            "corners": [
+              [
+                1132.220947265625,
+                942.8438720703125
+              ],
+              [
+                71.74247741699219,
+                937.269775390625
+              ],
+              [
+                76.42720031738281,
+                45.994354248046875
+              ],
+              [
+                1136.90576171875,
+                51.568450927734375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 93.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 7888.0
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            28,
+            1186,
+            966
+          ],
+          "iou": 0.95243285,
+          "edge_errors": {
+            "left": 13,
+            "top": 5,
+            "right": 32,
+            "bottom": 2,
+            "mean": 13.0,
+            "maximum": 32
+          },
+          "edge_error_mean_px": 13.0,
+          "edge_error_maximum_px": 32,
+          "elapsed_ms": 7642.158,
+          "candidate": {
+            "method": "polar_boundary_vote",
+            "bbox": [
+              75,
+              28,
+              1186,
+              966
+            ],
+            "corners": [
+              [
+                1183.3182373046875,
+                965.619140625
+              ],
+              [
+                75.1255874633789,
+                963.33447265625
+              ],
+              [
+                77.0536117553711,
+                28.170135498046875
+              ],
+              [
+                1185.2462158203125,
+                30.454864501953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "inner_radius_fraction": 0.12,
+                "outer_radius_fraction": 0.6,
+                "gradient_percentile": 93.0,
+                "minimum_support_fraction": 0.35,
+                "bbox_padding_fraction": 0.0
+              },
+              "supported_rays": 180,
+              "ray_support_fraction": 1.0,
+              "evidence": "polar_gradient_boundary_votes",
+              "elapsed_ms": 7642.136
+            },
+            "status": "ok",
+            "detector_name": "Polar Boundary Voting",
+            "origin": "HTH",
+            "foundation": [
+              "Polar gradient voting",
+              "OpenCV"
+            ],
+            "authors": [
+              "OpenAI ChatGPT"
+            ],
+            "version": "0.6.1",
+            "repository": "https://github.com/dlstupka/hth"
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 15629,
+        "parameter_set_number": 15629,
+        "elapsed_seconds": 1136.4848963549593,
+        "search_fraction": 0.7959360358525158
+      },
+      "profile": null,
+      "run_id": "run-20260815-145118",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 1
+    },
+    "pages": [
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.99248208,
+        "winner_iou": 0.99417629,
+        "delta_iou": 0.00169421,
+        "status": "Improved",
+        "parameter_set": "935369155754",
+        "parameter_set_id": "935369155754",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.9687744,
+        "winner_iou": 0.97647061,
+        "delta_iou": 0.00769621,
+        "status": "Improved",
+        "parameter_set": "935369155754",
+        "parameter_set_id": "935369155754",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.98185098,
+        "winner_iou": 0.96837357,
+        "delta_iou": -0.01347741,
+        "status": "Regressed",
+        "parameter_set": "935369155754",
+        "parameter_set_id": "935369155754",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.95332186,
+        "winner_iou": 0.95405116,
+        "delta_iou": 0.0007293,
+        "status": "Unchanged",
+        "parameter_set": "935369155754",
+        "parameter_set_id": "935369155754",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.9425492,
+        "winner_iou": 0.95244559,
+        "delta_iou": 0.00989639,
+        "status": "Improved",
+        "parameter_set": "935369155754",
+        "parameter_set_id": "935369155754",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-al317",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "atlhwe-lsf317",
+    "cpu_model": "AMD EPYC 9655 96-Core Processor",
+    "physical_core_count": 192,
+    "logical_cpu_count": 192,
+    "available_cpu_count": 192,
+    "smt_enabled": false,
+    "memory_bytes": 3246213582848,
+    "memory_gib": 3023.27,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.5.2",
+    "pipeline_commit": "77e4c24dea27f3097d7f6f7aafa75b3c3fb6bb7d",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31891034843",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "self-hosted",
+      "192t"
+    ]
+  },
+  "source_commit": "5bf7e5b7891c636518dde9fbb8379c93a7b3dfdd",
+  "performance": {
+    "sample_count": 28,
+    "configured_threads": 384,
+    "peak_rss_bytes": 9591009280,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 19636,
+    "completed_parameter_sets": 19636,
+    "average_eval_rate": 12.227814028622811,
+    "failures": 0,
+    "best_mean_iou": 0.96910344,
+    "best_worst_page_iou": 0.95244559,
+    "best_stddev_iou": 0.005281,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 4,
+    "stddev_improvements": 3,
+    "total_metric_improvements": 8,
+    "parameter_sets_with_improvements": 7,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 201.3175872010179,
+    "winner_last_changed_elapsed_seconds": 201.3175872010179,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "935369155754",
+        "parameter_short_name": "93536915",
+        "completion_index": 3885,
+        "parameter_set_number": 3885,
+        "elapsed_seconds": 201.3175872010179,
+        "search_fraction": 0.1978508861275209
+      }
+    ],
+    "last_improvement_elapsed_seconds": 201.3175872010179,
+    "time_since_last_improvement_seconds": 1404.5295375619316
+  }
+}
