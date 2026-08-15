@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.4",
+  "detector": "convex_hull",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/convex_hull.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 64,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 6,
+    "pipeline_number": 6,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "0.353",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set+runner:score=110",
+    "queue_position": "37",
+    "ranked_quality": "0.73245936",
+    "execution_shape_source": "auto-fallback-incompatible-workload",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "convex_hull",
+    "description": "Calibration space for the HTH Convex Hull document-envelope detector.",
+    "profiles": {
+      "baseline": {
+        "minimum_fragment_area_fraction": 0.0005,
+        "close_kernel_fraction": 0.008,
+        "close_iterations": 1,
+        "minimum_hull_area_fraction": 0.16,
+        "minimum_solidity": 0.55,
+        "polygon_epsilon_fraction": 0.025,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "minimum_fragment_area_fraction": {
+        "type": "float",
+        "values": [
+          0.0002,
+          0.0005,
+          0.0015
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      },
+      "close_iterations": {
+        "type": "integer",
+        "values": [
+          0,
+          1,
+          2
+        ]
+      },
+      "minimum_hull_area_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.16,
+          0.24
+        ]
+      },
+      "minimum_solidity": {
+        "type": "float",
+        "values": [
+          0.35,
+          0.55,
+          0.75
+        ]
+      },
+      "polygon_epsilon_fraction": {
+        "type": "float",
+        "values": [
+          0.012,
+          0.025,
+          0.05
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures"
+    }
+  }
+}
