@@ -1,0 +1,167 @@
+{
+  "schema_version": "0.4",
+  "detector": "page_background",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/page_background.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "10.710",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "18",
+    "ranked_quality": "0.96640590",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "page_background",
+    "description": "Generation-3 calibration space for Page Background, collapsing insensitive acceptance thresholds and using a focused exhaustive search to push the Lab color-distance boundary beyond the Generation-2 winner while resolving the local border-band and morphology basin.",
+    "profiles": {
+      "baseline": {
+        "border_band_fraction": 0.06,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 1.2,
+        "close_kernel_fraction": 0.008,
+        "open_kernel_fraction": 0.003,
+        "minimum_border_background_fraction": 0.5,
+        "minimum_page_area_fraction": 0.25,
+        "maximum_page_area_fraction": 0.98,
+        "minimum_rectangularity": 0.6
+      }
+    },
+    "parameters": {
+      "border_band_fraction": {
+        "type": "float",
+        "values": [
+          0.015,
+          0.02,
+          0.0225,
+          0.025,
+          0.0275,
+          0.03,
+          0.0325,
+          0.035,
+          0.0375,
+          0.04,
+          0.0425,
+          0.045,
+          0.0475,
+          0.05,
+          0.0525,
+          0.055,
+          0.0575,
+          0.06,
+          0.075,
+          0.09
+        ]
+      },
+      "color_distance_threshold": {
+        "type": "float",
+        "values": [
+          3.0,
+          6.0,
+          8.0,
+          8.5,
+          9.0,
+          9.5,
+          10.0,
+          10.5,
+          11.0,
+          11.5,
+          12.0,
+          12.5,
+          13.0,
+          13.5,
+          14.0,
+          14.5,
+          15.0,
+          15.5,
+          16.0,
+          16.5,
+          17.0,
+          18.0,
+          19.0,
+          20.0,
+          22.0
+        ]
+      },
+      "blur_sigma": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.2,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          1.0,
+          1.2,
+          1.8
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.0005,
+          0.001,
+          0.002,
+          0.008
+        ]
+      },
+      "open_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.0015,
+          0.002,
+          0.0025,
+          0.003,
+          0.0035,
+          0.0045,
+          0.006
+        ]
+      },
+      "minimum_border_background_fraction": {
+        "type": "float",
+        "values": [
+          0.15
+        ]
+      },
+      "minimum_page_area_fraction": {
+        "type": "float",
+        "values": [
+          0.15
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
