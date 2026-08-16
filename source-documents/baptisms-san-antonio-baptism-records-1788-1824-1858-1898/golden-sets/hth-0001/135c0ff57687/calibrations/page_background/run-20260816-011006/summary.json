@@ -1,0 +1,4026 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260816-011006",
+  "detector": "page_background",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 76,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "2.687",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set+runner:score=110",
+    "queue_position": "21",
+    "ranked_quality": "0.96640590",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 200001,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 49,
+  "fully_successful_parameter_set_count": 9,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "b8d9daa2315e1e357699e03faba8806f66d11de441a7ced13053bc6b338a142a",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "5ba735a3e4a4",
+    "parameters": {
+      "border_band_fraction": 0.015,
+      "color_distance_threshold": 3.0,
+      "blur_sigma": 0.0,
+      "close_kernel_fraction": 0.0,
+      "open_kernel_fraction": 0.006,
+      "minimum_border_background_fraction": 0.15,
+      "minimum_page_area_fraction": 0.15
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.9664059,
+      "mean_iou_success": 0.9664059,
+      "minimum_iou": 0.94764515,
+      "stddev_iou": 0.02120526,
+      "mean_edge_error_px": 9.4,
+      "elapsed_ms_total": 477.136,
+      "wall_ms": 477.692
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          66,
+          55,
+          1290,
+          968
+        ],
+        "iou": 0.94889719,
+        "edge_errors": {
+          "left": 59,
+          "top": 1,
+          "right": 1,
+          "bottom": 1,
+          "mean": 15.5,
+          "maximum": 59
+        },
+        "edge_error_mean_px": 15.5,
+        "edge_error_maximum_px": 59,
+        "elapsed_ms": 205.007,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            66,
+            55,
+            1290,
+            968
+          ],
+          "corners": [
+            [
+              1289.0,
+              967.0
+            ],
+            [
+              66.0,
+              967.0
+            ],
+            [
+              66.0,
+              55.0
+            ],
+            [
+              1289.0,
+              55.0
+            ]
+          ],
+          "confidence": 0.95341937588172,
+          "score": 0.95341937588172,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9911177644710579,
+            "border_band_pixels": 15,
+            "page_area_fraction": 0.7914984897097719,
+            "rectangularity": 0.9669716759191519,
+            "center_score": 0.9734932498674439,
+            "proposal_score": 0.9153079561485817,
+            "parameters": {
+              "border_band_fraction": 0.015,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.006,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9153079561485817,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          73,
+          10,
+          1230,
+          979
+        ],
+        "iou": 0.98820935,
+        "edge_errors": {
+          "left": 6,
+          "top": 2,
+          "right": 3,
+          "bottom": 2,
+          "mean": 3.25,
+          "maximum": 6
+        },
+        "edge_error_mean_px": 3.25,
+        "edge_error_maximum_px": 6,
+        "elapsed_ms": 94.918,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            73,
+            10,
+            1230,
+            979
+          ],
+          "corners": [
+            [
+              1227.4237060546875,
+              978.499267578125
+            ],
+            [
+              73.77861785888672,
+              975.5823974609375
+            ],
+            [
+              76.21784210205078,
+              10.856475830078125
+            ],
+            [
+              1229.8629150390625,
+              13.773345947265625
+            ]
+          ],
+          "confidence": 0.9200463789758454,
+          "score": 0.9200463789758454,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9728845871828714,
+            "border_band_pixels": 15,
+            "page_area_fraction": 0.7493244242015502,
+            "rectangularity": 0.874508471666527,
+            "center_score": 0.9923519551935167,
+            "proposal_score": 0.8546297799560825,
+            "parameters": {
+              "border_band_fraction": 0.015,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.006,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.8546297799560825,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          15,
+          28,
+          1071,
+          969
+        ],
+        "iou": 0.99610857,
+        "edge_errors": {
+          "left": 0,
+          "top": 0,
+          "right": 3,
+          "bottom": 1,
+          "mean": 1.0,
+          "maximum": 3
+        },
+        "edge_error_mean_px": 1.0,
+        "edge_error_maximum_px": 3,
+        "elapsed_ms": 54.291,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            15,
+            28,
+            1071,
+            969
+          ],
+          "corners": [
+            [
+              1070.999755859375,
+              968.9998779296875
+            ],
+            [
+              15.0,
+              968.9998779296875
+            ],
+            [
+              15.0,
+              28.0
+            ],
+            [
+              1070.999755859375,
+              28.0
+            ]
+          ],
+          "confidence": 0.983394244307743,
+          "score": 0.983394244307743,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9942838477870325,
+            "border_band_pixels": 15,
+            "page_area_fraction": 0.9207310117587219,
+            "rectangularity": 0.9909729488747703,
+            "center_score": 0.99035527676286,
+            "proposal_score": 0.9698077169231691,
+            "parameters": {
+              "border_band_fraction": 0.015,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.006,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9698077169231691,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          70,
+          47,
+          1136,
+          943
+        ],
+        "iou": 0.94764515,
+        "edge_errors": {
+          "left": 14,
+          "top": 4,
+          "right": 35,
+          "bottom": 2,
+          "mean": 13.75,
+          "maximum": 35
+        },
+        "edge_error_mean_px": 13.75,
+        "edge_error_maximum_px": 35,
+        "elapsed_ms": 66.754,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            70,
+            47,
+            1136,
+            943
+          ],
+          "corners": [
+            [
+              1132.96923828125,
+              942.46533203125
+            ],
+            [
+              70.77593994140625,
+              938.9088134765625
+            ],
+            [
+              73.75970458984375,
+              47.772613525390625
+            ],
+            [
+              1135.953125,
+              51.329132080078125
+            ]
+          ],
+          "confidence": 0.9476096179739547,
+          "score": 0.9476096179739547,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9842027047109526,
+            "border_band_pixels": 15,
+            "page_area_fraction": 0.7349666582589779,
+            "rectangularity": 0.9850702278887645,
+            "center_score": 0.949774247574206,
+            "proposal_score": 0.9047447599526448,
+            "parameters": {
+              "border_band_fraction": 0.015,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.006,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9047447599526448,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          73,
+          30,
+          1189,
+          967
+        ],
+        "iou": 0.95116923,
+        "edge_errors": {
+          "left": 15,
+          "top": 3,
+          "right": 35,
+          "bottom": 1,
+          "mean": 13.5,
+          "maximum": 35
+        },
+        "edge_error_mean_px": 13.5,
+        "edge_error_maximum_px": 35,
+        "elapsed_ms": 56.166,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            73,
+            30,
+            1189,
+            967
+          ],
+          "corners": [
+            [
+              74.0125732421875,
+              966.0484619140625
+            ],
+            [
+              73.1063232421875,
+              31.709888458251953
+            ],
+            [
+              1187.7115478515625,
+              30.628795623779297
+            ],
+            [
+              1188.6177978515625,
+              964.9674072265625
+            ]
+          ],
+          "confidence": 0.9638579838675463,
+          "score": 0.9638579838675463,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.9905745062836625,
+            "border_band_pixels": 15,
+            "page_area_fraction": 0.8153367268903546,
+            "rectangularity": 0.9828012239353059,
+            "center_score": 0.9943036810934259,
+            "proposal_score": 0.9342872433955385,
+            "parameters": {
+              "border_band_fraction": 0.015,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 0.0,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.006,
+              "minimum_border_background_fraction": 0.15,
+              "minimum_page_area_fraction": 0.15,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9342872433955385,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 3,
+      "parameter_set_number": 3,
+      "elapsed_seconds": 0.8609244509134442,
+      "search_fraction": 0.3
+    },
+    "profile": null,
+    "run_id": "run-20260816-011006",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "c81fb1ff4213",
+    "parameters": {
+      "border_band_fraction": 0.06,
+      "color_distance_threshold": 3.0,
+      "blur_sigma": 1.2,
+      "close_kernel_fraction": 0.008,
+      "open_kernel_fraction": 0.003,
+      "minimum_border_background_fraction": 0.5,
+      "minimum_page_area_fraction": 0.25,
+      "maximum_page_area_fraction": 0.98,
+      "minimum_rectangularity": 0.6
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.76184508,
+      "mean_iou_success": 0.95230635,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.38118323,
+      "mean_edge_error_px": 13.438,
+      "elapsed_ms_total": 244.273,
+      "wall_ms": 245.027
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          57,
+          54,
+          1291,
+          968
+        ],
+        "iou": 0.94017782,
+        "edge_errors": {
+          "left": 68,
+          "top": 2,
+          "right": 2,
+          "bottom": 1,
+          "mean": 18.25,
+          "maximum": 68
+        },
+        "edge_error_mean_px": 18.25,
+        "edge_error_maximum_px": 68,
+        "elapsed_ms": 54.839,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            57,
+            54,
+            1291,
+            968
+          ],
+          "corners": [
+            [
+              1290.0,
+              967.0
+            ],
+            [
+              57.0,
+              967.0
+            ],
+            [
+              57.0,
+              54.0
+            ],
+            [
+              1290.0,
+              54.0
+            ]
+          ],
+          "confidence": 0.9577362668494684,
+          "score": 0.9577362668494684,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.8203954802259887,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.8051017427780534,
+            "rectangularity": 0.9745449393237626,
+            "center_score": 0.9708440623715314,
+            "proposal_score": 0.9231568488172152,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9231568488172152,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          52,
+          9,
+          1232,
+          983
+        ],
+        "iou": 0.9793878,
+        "edge_errors": {
+          "left": 15,
+          "top": 1,
+          "right": 1,
+          "bottom": 6,
+          "mean": 5.75,
+          "maximum": 15
+        },
+        "edge_error_mean_px": 5.75,
+        "edge_error_maximum_px": 15,
+        "elapsed_ms": 51.781,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            52,
+            9,
+            1232,
+            983
+          ],
+          "corners": [
+            [
+              1224.74072265625,
+              982.95263671875
+            ],
+            [
+              52.815914154052734,
+              974.728515625
+            ],
+            [
+              59.589359283447266,
+              9.512908935546875
+            ],
+            [
+              1231.51416015625,
+              17.736968994140625
+            ]
+          ],
+          "confidence": 0.9338357405288751,
+          "score": 0.9338357405288751,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.7030407632936431,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.7864868672684103,
+            "rectangularity": 0.9030651083754777,
+            "center_score": 0.9804631775273378,
+            "proposal_score": 0.8797013464161365,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.8797013464161365,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 41.308,
+        "candidate": {
+          "method": "page_background",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "background_lab_median": [
+              176.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              29.652000427246094,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.6183403195431626,
+            "border_band_pixels": 59,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "reason": "no_plausible_non_background_page_region"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          67,
+          47,
+          1137,
+          943
+        ],
+        "iou": 0.94410255,
+        "edge_errors": {
+          "left": 17,
+          "top": 4,
+          "right": 36,
+          "bottom": 2,
+          "mean": 14.75,
+          "maximum": 36
+        },
+        "edge_error_mean_px": 14.75,
+        "edge_error_maximum_px": 36,
+        "elapsed_ms": 49.392,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            67,
+            47,
+            1137,
+            943
+          ],
+          "corners": [
+            [
+              1134.4661865234375,
+              942.6181640625
+            ],
+            [
+              67.90916442871094,
+              939.9214477539062
+            ],
+            [
+              70.16603088378906,
+              47.31646728515625
+            ],
+            [
+              1136.7230224609375,
+              50.01318359375
+            ]
+          ],
+          "confidence": 0.9470838929084164,
+          "score": 0.9470838929084164,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.8970034212906524,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.7372300343664281,
+            "rectangularity": 0.9824465839860996,
+            "center_score": 0.9484950979655826,
+            "proposal_score": 0.9037888961971207,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9037888961971207,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          72,
+          27,
+          1191,
+          969
+        ],
+        "iou": 0.94555724,
+        "edge_errors": {
+          "left": 16,
+          "top": 6,
+          "right": 37,
+          "bottom": 1,
+          "mean": 15.0,
+          "maximum": 37
+        },
+        "edge_error_mean_px": 15.0,
+        "edge_error_maximum_px": 37,
+        "elapsed_ms": 46.953,
+        "candidate": {
+          "method": "page_background",
+          "bbox": [
+            72,
+            27,
+            1191,
+            969
+          ],
+          "corners": [
+            [
+              1187.958740234375,
+              968.5653686523438
+            ],
+            [
+              72.85415649414062,
+              965.9385375976562
+            ],
+            [
+              75.06515502929688,
+              27.36297607421875
+            ],
+            [
+              1190.169677734375,
+              29.98980712890625
+            ]
+          ],
+          "confidence": 0.9644511844994803,
+          "score": 0.9644511844994803,
+          "diagnostics": {
+            "background_lab_median": [
+              0.0,
+              128.0,
+              128.0
+            ],
+            "background_lab_robust_scale": [
+              6.0,
+              3.0,
+              3.0
+            ],
+            "border_background_fraction": 0.7402502772057659,
+            "border_band_pixels": 59,
+            "page_area_fraction": 0.8191186311060128,
+            "rectangularity": 0.9824580026178514,
+            "center_score": 0.9951886615162193,
+            "proposal_score": 0.9353657899990551,
+            "parameters": {
+              "border_band_fraction": 0.06,
+              "color_distance_threshold": 3.0,
+              "blur_sigma": 1.2,
+              "close_kernel_fraction": 0.008,
+              "open_kernel_fraction": 0.003,
+              "minimum_border_background_fraction": 0.5,
+              "minimum_page_area_fraction": 0.25,
+              "maximum_page_area_fraction": 0.98,
+              "minimum_rectangularity": 0.6
+            },
+            "evidence": "robust_outer_border_background_model",
+            "score_components": {
+              "proposal": 0.9353657899990551,
+              "border_background": 1.0
+            }
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260816-011006",
+    "rank": 10,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "5ba735a3e4a4",
+      "parameters": {
+        "border_band_fraction": 0.015,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.006,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.9664059,
+        "mean_iou_success": 0.9664059,
+        "minimum_iou": 0.94764515,
+        "stddev_iou": 0.02120526,
+        "mean_edge_error_px": 9.4,
+        "elapsed_ms_total": 477.136,
+        "wall_ms": 477.692
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            66,
+            55,
+            1290,
+            968
+          ],
+          "iou": 0.94889719,
+          "edge_errors": {
+            "left": 59,
+            "top": 1,
+            "right": 1,
+            "bottom": 1,
+            "mean": 15.5,
+            "maximum": 59
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 59,
+          "elapsed_ms": 205.007,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              66,
+              55,
+              1290,
+              968
+            ],
+            "corners": [
+              [
+                1289.0,
+                967.0
+              ],
+              [
+                66.0,
+                967.0
+              ],
+              [
+                66.0,
+                55.0
+              ],
+              [
+                1289.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.95341937588172,
+            "score": 0.95341937588172,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9911177644710579,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7914984897097719,
+              "rectangularity": 0.9669716759191519,
+              "center_score": 0.9734932498674439,
+              "proposal_score": 0.9153079561485817,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.006,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9153079561485817,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            73,
+            10,
+            1230,
+            979
+          ],
+          "iou": 0.98820935,
+          "edge_errors": {
+            "left": 6,
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "mean": 3.25,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.25,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 94.918,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              73,
+              10,
+              1230,
+              979
+            ],
+            "corners": [
+              [
+                1227.4237060546875,
+                978.499267578125
+              ],
+              [
+                73.77861785888672,
+                975.5823974609375
+              ],
+              [
+                76.21784210205078,
+                10.856475830078125
+              ],
+              [
+                1229.8629150390625,
+                13.773345947265625
+              ]
+            ],
+            "confidence": 0.9200463789758454,
+            "score": 0.9200463789758454,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9728845871828714,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7493244242015502,
+              "rectangularity": 0.874508471666527,
+              "center_score": 0.9923519551935167,
+              "proposal_score": 0.8546297799560825,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.006,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8546297799560825,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            28,
+            1071,
+            969
+          ],
+          "iou": 0.99610857,
+          "edge_errors": {
+            "left": 0,
+            "top": 0,
+            "right": 3,
+            "bottom": 1,
+            "mean": 1.0,
+            "maximum": 3
+          },
+          "edge_error_mean_px": 1.0,
+          "edge_error_maximum_px": 3,
+          "elapsed_ms": 54.291,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              28,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                28.0
+              ],
+              [
+                1070.999755859375,
+                28.0
+              ]
+            ],
+            "confidence": 0.983394244307743,
+            "score": 0.983394244307743,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9942838477870325,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.9207310117587219,
+              "rectangularity": 0.9909729488747703,
+              "center_score": 0.99035527676286,
+              "proposal_score": 0.9698077169231691,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.006,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9698077169231691,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            70,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94764515,
+          "edge_errors": {
+            "left": 14,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 13.75,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 13.75,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 66.754,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              70,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                70.77593994140625,
+                938.9088134765625
+              ],
+              [
+                73.75970458984375,
+                47.772613525390625
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9476096179739547,
+            "score": 0.9476096179739547,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9842027047109526,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7349666582589779,
+              "rectangularity": 0.9850702278887645,
+              "center_score": 0.949774247574206,
+              "proposal_score": 0.9047447599526448,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.006,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9047447599526448,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            73,
+            30,
+            1189,
+            967
+          ],
+          "iou": 0.95116923,
+          "edge_errors": {
+            "left": 15,
+            "top": 3,
+            "right": 35,
+            "bottom": 1,
+            "mean": 13.5,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 13.5,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 56.166,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              73,
+              30,
+              1189,
+              967
+            ],
+            "corners": [
+              [
+                74.0125732421875,
+                966.0484619140625
+              ],
+              [
+                73.1063232421875,
+                31.709888458251953
+              ],
+              [
+                1187.7115478515625,
+                30.628795623779297
+              ],
+              [
+                1188.6177978515625,
+                964.9674072265625
+              ]
+            ],
+            "confidence": 0.9638579838675463,
+            "score": 0.9638579838675463,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9905745062836625,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.8153367268903546,
+              "rectangularity": 0.9828012239353059,
+              "center_score": 0.9943036810934259,
+              "proposal_score": 0.9342872433955385,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.006,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9342872433955385,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.8609244509134442,
+        "search_fraction": 0.3
+      },
+      "profile": null,
+      "run_id": "run-20260816-011006",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "39a3c9b2d5e8",
+      "parameters": {
+        "border_band_fraction": 0.015,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0045,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.9662033,
+        "mean_iou_success": 0.9662033,
+        "minimum_iou": 0.94764515,
+        "stddev_iou": 0.02135419,
+        "mean_edge_error_px": 9.45,
+        "elapsed_ms_total": 528.269,
+        "wall_ms": 528.757
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            66,
+            55,
+            1290,
+            968
+          ],
+          "iou": 0.94889719,
+          "edge_errors": {
+            "left": 59,
+            "top": 1,
+            "right": 1,
+            "bottom": 1,
+            "mean": 15.5,
+            "maximum": 59
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 59,
+          "elapsed_ms": 236.492,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              66,
+              55,
+              1290,
+              968
+            ],
+            "corners": [
+              [
+                1289.0,
+                967.0
+              ],
+              [
+                66.0,
+                967.0
+              ],
+              [
+                66.0,
+                55.0
+              ],
+              [
+                1289.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9553602623225588,
+            "score": 0.9553602623225588,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9911177644710579,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7951292773209888,
+              "rectangularity": 0.9714073998364677,
+              "center_score": 0.9734932498674439,
+              "proposal_score": 0.9188368405864705,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0045,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9188368405864705,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            73,
+            10,
+            1230,
+            979
+          ],
+          "iou": 0.98820935,
+          "edge_errors": {
+            "left": 6,
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "mean": 3.25,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.25,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 85.527,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              73,
+              10,
+              1230,
+              979
+            ],
+            "corners": [
+              [
+                1227.4237060546875,
+                978.4992065429688
+              ],
+              [
+                73.77861785888672,
+                975.5823364257812
+              ],
+              [
+                76.21784210205078,
+                10.85394287109375
+              ],
+              [
+                1229.8629150390625,
+                13.77081298828125
+              ]
+            ],
+            "confidence": 0.928581649692635,
+            "score": 0.928581649692635,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9728845871828714,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.765801929644651,
+              "rectangularity": 0.8937364328594739,
+              "center_score": 0.9923522468033532,
+              "proposal_score": 0.870148453986609,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0045,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.870148453986609,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            28,
+            1071,
+            969
+          ],
+          "iou": 0.99610857,
+          "edge_errors": {
+            "left": 0,
+            "top": 0,
+            "right": 3,
+            "bottom": 1,
+            "mean": 1.0,
+            "maximum": 3
+          },
+          "edge_error_mean_px": 1.0,
+          "edge_error_maximum_px": 3,
+          "elapsed_ms": 70.135,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              28,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                28.0
+              ],
+              [
+                1070.999755859375,
+                28.0
+              ]
+            ],
+            "confidence": 0.9836756544819425,
+            "score": 0.9836756544819425,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9942838477870325,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.921304642151876,
+              "rectangularity": 0.9915903411370146,
+              "center_score": 0.99035527676286,
+              "proposal_score": 0.9703193717853499,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0045,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9703193717853499,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            70,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94764515,
+          "edge_errors": {
+            "left": 14,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 13.75,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 13.75,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 76.878,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              70,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                70.77593994140625,
+                938.9088134765625
+              ],
+              [
+                73.75970458984375,
+                47.772613525390625
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9476404177295572,
+            "score": 0.9476404177295572,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9842027047109526,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7350206513856922,
+              "rectangularity": 0.9851425944662675,
+              "center_score": 0.949774247574206,
+              "proposal_score": 0.9048007595082856,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0045,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9048007595082856,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            73,
+            29,
+            1189,
+            967
+          ],
+          "iou": 0.95015622,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 1,
+            "mean": 13.75,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 13.75,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 59.237,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              73,
+              29,
+              1189,
+              967
+            ],
+            "corners": [
+              [
+                74.0125732421875,
+                966.0484619140625
+              ],
+              [
+                73.105224609375,
+                30.633289337158203
+              ],
+              [
+                1187.71044921875,
+                29.552196502685547
+              ],
+              [
+                1188.6177978515625,
+                964.9674072265625
+              ]
+            ],
+            "confidence": 0.9638599857665195,
+            "score": 0.9638599857665195,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9905745062836625,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.8159142688716822,
+              "rectangularity": 0.9823654511269179,
+              "center_score": 0.9947706962036276,
+              "proposal_score": 0.9342908832118537,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0045,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9342908832118537,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 0.8844126759795472,
+        "search_fraction": 0.8
+      },
+      "profile": null,
+      "run_id": "run-20260816-011006",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "156e30d9452e",
+      "parameters": {
+        "border_band_fraction": 0.015,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0015,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 639.191,
+        "wall_ms": 639.622
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 343.982,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9911177644710579,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0015,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 124.448,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9728845871828714,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0015,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 65.874,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9942838477870325,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0015,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 64.495,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9842027047109526,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0015,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 40.392,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9905745062836625,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0015,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 10,
+        "parameter_set_number": 10,
+        "elapsed_seconds": 0.8882651409367099,
+        "search_fraction": 1.0
+      },
+      "profile": null,
+      "run_id": "run-20260816-011006",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "7364bda565d2",
+      "parameters": {
+        "border_band_fraction": 0.015,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.002,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 623.256,
+        "wall_ms": 623.95
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 287.616,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9911177644710579,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.002,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 127.813,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9728845871828714,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.002,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 79.246,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9942838477870325,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.002,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 67.164,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9842027047109526,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.002,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 61.417,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9905745062836625,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.002,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.8797198799438775,
+        "search_fraction": 0.6
+      },
+      "profile": null,
+      "run_id": "run-20260816-011006",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "35244cae67e0",
+      "parameters": {
+        "border_band_fraction": 0.015,
+        "color_distance_threshold": 3.0,
+        "blur_sigma": 0.0,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0025,
+        "minimum_border_background_fraction": 0.15,
+        "minimum_page_area_fraction": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96376408,
+        "mean_iou_success": 0.96376408,
+        "minimum_iou": 0.94371118,
+        "stddev_iou": 0.02218281,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 603.897,
+        "wall_ms": 604.452
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            64,
+            55,
+            1291,
+            968
+          ],
+          "iou": 0.94657715,
+          "edge_errors": {
+            "left": 61,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 16.25,
+            "maximum": 61
+          },
+          "edge_error_mean_px": 16.25,
+          "edge_error_maximum_px": 61,
+          "elapsed_ms": 319.012,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              64,
+              55,
+              1291,
+              968
+            ],
+            "corners": [
+              [
+                1290.0,
+                967.0
+              ],
+              [
+                64.0,
+                967.0
+              ],
+              [
+                64.0,
+                55.0
+              ],
+              [
+                1290.0,
+                55.0
+              ]
+            ],
+            "confidence": 0.9554715461098584,
+            "score": 0.9554715461098584,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9911177644710579,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7967404737232984,
+              "rectangularity": 0.9709939612489625,
+              "center_score": 0.9731356929418532,
+              "proposal_score": 0.9190391747451969,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0025,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9190391747451969,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            72,
+            9,
+            1231,
+            978
+          ],
+          "iou": 0.99195323,
+          "edge_errors": {
+            "left": 5,
+            "top": 1,
+            "right": 2,
+            "bottom": 1,
+            "mean": 2.25,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 79.848,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              9,
+              1231,
+              978
+            ],
+            "corners": [
+              [
+                1229.1820068359375,
+                977.2440185546875
+              ],
+              [
+                72.92110443115234,
+                975.7913818359375
+              ],
+              [
+                74.13455963134766,
+                9.93231201171875
+              ],
+              [
+                1230.3953857421875,
+                11.38494873046875
+              ]
+            ],
+            "confidence": 0.9310032266494346,
+            "score": 0.9310032266494346,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9728845871828714,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7722893820271431,
+              "rectangularity": 0.8982203016133536,
+              "center_score": 0.9922889379020158,
+              "proposal_score": 0.8745513211807899,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0025,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.8745513211807899,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            22,
+            1071,
+            969
+          ],
+          "iou": 0.98982184,
+          "edge_errors": {
+            "left": 0,
+            "top": 6,
+            "right": 3,
+            "bottom": 1,
+            "mean": 2.5,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.5,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 40.9,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              15,
+              22,
+              1071,
+              969
+            ],
+            "corners": [
+              [
+                1070.999755859375,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                968.9998779296875
+              ],
+              [
+                15.0,
+                22.0
+              ],
+              [
+                1070.999755859375,
+                22.0
+              ]
+            ],
+            "confidence": 0.982381209595891,
+            "score": 0.982381209595891,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9942838477870325,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.9218661173777751,
+              "rectangularity": 0.9859083059670779,
+              "center_score": 0.9943762142244481,
+              "proposal_score": 0.9679658356288926,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0025,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9679658356288926,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            69,
+            47,
+            1136,
+            943
+          ],
+          "iou": 0.94675701,
+          "edge_errors": {
+            "left": 15,
+            "top": 4,
+            "right": 35,
+            "bottom": 2,
+            "mean": 14.0,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 86.52,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              69,
+              47,
+              1136,
+              943
+            ],
+            "corners": [
+              [
+                1132.96923828125,
+                942.46533203125
+              ],
+              [
+                69.86297607421875,
+                938.90576171875
+              ],
+              [
+                72.84674072265625,
+                47.769561767578125
+              ],
+              [
+                1135.953125,
+                51.329132080078125
+              ]
+            ],
+            "confidence": 0.9474131973331177,
+            "score": 0.9474131973331177,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9842027047109526,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.7351522842639594,
+              "rectangularity": 0.984472863311694,
+              "center_score": 0.9492124760942648,
+              "proposal_score": 0.9043876315147593,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0025,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.9043876315147593,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            27,
+            1192,
+            970
+          ],
+          "iou": 0.94371118,
+          "edge_errors": {
+            "left": 16,
+            "top": 6,
+            "right": 38,
+            "bottom": 2,
+            "mean": 15.5,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.5,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 77.617,
+          "candidate": {
+            "method": "page_background",
+            "bbox": [
+              72,
+              27,
+              1192,
+              970
+            ],
+            "corners": [
+              [
+                1187.9901123046875,
+                969.769775390625
+              ],
+              [
+                72.84422302246094,
+                965.9022216796875
+              ],
+              [
+                76.09864807128906,
+                27.555267333984375
+              ],
+              [
+                1191.2445068359375,
+                31.422882080078125
+              ]
+            ],
+            "confidence": 0.963137530342278,
+            "score": 0.963137530342278,
+            "diagnostics": {
+              "background_lab_median": [
+                0.0,
+                128.0,
+                128.0
+              ],
+              "background_lab_robust_scale": [
+                6.0,
+                3.0,
+                3.0
+              ],
+              "border_background_fraction": 0.9905745062836625,
+              "border_band_pixels": 15,
+              "page_area_fraction": 0.8165722684255807,
+              "rectangularity": 0.9795998650489806,
+              "center_score": 0.9948381439362495,
+              "proposal_score": 0.932977327895051,
+              "parameters": {
+                "border_band_fraction": 0.015,
+                "color_distance_threshold": 3.0,
+                "blur_sigma": 0.0,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0025,
+                "minimum_border_background_fraction": 0.15,
+                "minimum_page_area_fraction": 0.15,
+                "maximum_page_area_fraction": 0.98,
+                "minimum_rectangularity": 0.6
+              },
+              "evidence": "robust_outer_border_background_model",
+              "score_components": {
+                "proposal": 0.932977327895051,
+                "border_background": 1.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.8796850480139256,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260816-011006",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.99610857,
+        "delta_iou": 0.99610857,
+        "status": "Recovered",
+        "parameter_set": "5ba735a3e4a4",
+        "parameter_set_id": "5ba735a3e4a4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.9793878,
+        "winner_iou": 0.98820935,
+        "delta_iou": 0.00882155,
+        "status": "Improved",
+        "parameter_set": "5ba735a3e4a4",
+        "parameter_set_id": "5ba735a3e4a4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.94555724,
+        "winner_iou": 0.95116923,
+        "delta_iou": 0.00561199,
+        "status": "Improved",
+        "parameter_set": "5ba735a3e4a4",
+        "parameter_set_id": "5ba735a3e4a4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.94017782,
+        "winner_iou": 0.94889719,
+        "delta_iou": 0.00871937,
+        "status": "Improved",
+        "parameter_set": "5ba735a3e4a4",
+        "parameter_set_id": "5ba735a3e4a4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.94410255,
+        "winner_iou": 0.94764515,
+        "delta_iou": 0.0035426,
+        "status": "Improved",
+        "parameter_set": "5ba735a3e4a4",
+        "parameter_set_id": "5ba735a3e4a4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-al317",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "atlhwe-lsf317",
+    "cpu_model": "AMD EPYC 9655 96-Core Processor",
+    "physical_core_count": 192,
+    "logical_cpu_count": 192,
+    "available_cpu_count": 192,
+    "smt_enabled": false,
+    "memory_bytes": 3246213582848,
+    "memory_gib": 3023.27,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "0811a5622312d283f0deff8f1647b78f11d70479",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31918695730",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "self-hosted",
+      "192t"
+    ]
+  },
+  "source_commit": "a8d42bc0fbc11788979f2ead97185e7d49eb36e4",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 76,
+    "peak_rss_bytes": 729403392,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 11.179953963649771,
+    "failures": 1,
+    "best_mean_iou": 0.9664059,
+    "best_worst_page_iou": 0.94764515,
+    "best_stddev_iou": 0.01969477,
+    "mean_iou_improvements": 2,
+    "minimum_iou_improvements": 2,
+    "stddev_improvements": 3,
+    "total_metric_improvements": 7,
+    "parameter_sets_with_improvements": 3,
+    "winner_changes": 2,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 0.8469831990078092,
+    "winner_last_changed_elapsed_seconds": 0.8609244509134442,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "2859da9fe6e3",
+        "parameter_short_name": "2859da9f",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.8469831990078092,
+        "search_fraction": 0.2
+      },
+      {
+        "change_number": 2,
+        "parameter_set_id": "5ba735a3e4a4",
+        "parameter_short_name": "5ba735a3",
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.8609244509134442,
+        "search_fraction": 0.3
+      }
+    ],
+    "last_improvement_elapsed_seconds": 0.8797055379254743,
+    "time_since_last_improvement_seconds": 0.014752528048120439
+  }
+}
