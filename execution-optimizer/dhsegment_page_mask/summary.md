@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `dhsegment_page_mask`  
-Optimizer run: **31959818925** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **31967269409** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -24,7 +24,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
 | dhsegment_page_mask | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 32 | 12 | 32p/12t | adaptive | 1d 3h 48m 24s | 384 | 4.24 | 39m 18s | 1 |
 | dhsegment_page_mask | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 128 | 3 | 124p/3t, 125p/3t, 126p/3t, 127p/3t, 128p/3t | adaptive | 2h 47m 34s | 384 | 10.82 | 15m 24s | 1 |
-| dhsegment_page_mask | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 192 | 2 | 162p/2t, 163p/2t, 164p/2t, 165p/2t, 174p/2t, 192p/2t | adaptive | 2h 9m 17s | 384 | 11.90 | 14m | 1 |
+| dhsegment_page_mask | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 192 | 2 | 162p/2t, 163p/2t, 164p/2t, 165p/2t, 174p/2t, 192p/2t, 207p/1t, 215p/1t, 219p/1t, 220p/1t, 221p/1t, 222p/1t, 223p/1t | adaptive | 2h 9m 17s | 384 | 11.90 | 14m | 2 |
 | dhsegment_page_mask | e9k — rh8-al316 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 64 | 6 | 63p/6t, 64p/6t | adaptive | 3h 36m 33s | 384 | 7.13 | 23m 23s | 1 |
 
 **Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
@@ -59,15 +59,14 @@ This table contains measurements from this optimizer execution only. Bold identi
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al321 (192 vCPU) | 128 | 128 | 3 | 384 | 15m 32s | 10.73 | — | -9.87% | 166.2 | 188.9 | 73.1% | 152.8 GiB |
-| 192t — rh8-al321 (192 vCPU) | 157 | 157 | 2 | 314 | 14m 21s | 11.61 | — | -2.44% | 284.6 | 358.1 | 86.4% | 181.4 GiB |
-| 192t — rh8-al321 (192 vCPU) | 161 | 161 | 2 | 322 | 14m 18s | 11.66 | — | -2.10% | 327.9 | 398.3 | 88.5% | 186.3 GiB |
-| 192t — rh8-al321 (192 vCPU) | 162 | 162 | 2 | 324 | 14m 15s | 11.70 | — | -1.75% | 306.1 | 391.5 | 83.7% | 187.3 GiB |
-| 192t — rh8-al321 (192 vCPU) | 163 | 163 | 2 | 326 | 14m 15s | 11.70 | — | -1.75% | 309.0 | 392.3 | 89.1% | 188.0 GiB |
-| 192t — rh8-al321 (192 vCPU) | 164 | 164 | 2 | 328 | 14m 15s | 11.70 | — | -1.75% | 326.9 | 400.7 | 88.4% | 189.2 GiB |
-| 192t — rh8-al321 (192 vCPU) | 165 | 165 | 2 | 330 | 14m 12s | 11.74 | — | -1.41% | 325.7 | 412.2 | 85.1% | 190.3 GiB |
-| 192t — rh8-al321 (192 vCPU) | 174 | 174 | 2 | 348 | 14m 2s | 11.88 | — | -0.24% | 350.0 | 433.9 | 91.1% | 200.0 GiB |
-| **192t — rh8-al321 (192 vCPU)** | 192 | 192 | 2 | 384 | 14m | 11.90 | — | 0.00% | 427.6 | 532.2 | 92.9% | 219.6 GiB |
+| 192t — rh8-al321 (192 vCPU) | 192 | 192 | 2 | 384 | 14m 4s | 11.85 | — | 0.00% | 430.8 | 520.7 | 93.2% | 220.2 GiB |
+| **192t — rh8-al321 (192 vCPU)** | 207 | 207 | 1 | 207 | 14m 4s | 11.85 | — | 0.00% | 411.9 | 495.3 | 92.7% | 230.0 GiB |
+| 192t — rh8-al321 (192 vCPU) | 215 | 215 | 1 | 215 | 14m 6s | 11.82 | — | -0.24% | 392.9 | 452.9 | 92.4% | 238.6 GiB |
+| 192t — rh8-al321 (192 vCPU) | 219 | 219 | 1 | 219 | 14m 8s | 11.79 | — | -0.47% | 396.4 | 573.1 | 92.1% | 242.4 GiB |
+| 192t — rh8-al321 (192 vCPU) | 220 | 220 | 1 | 220 | 14m 10s | 11.76 | — | -0.71% | 412.9 | 492.5 | 91.6% | 243.2 GiB |
+| 192t — rh8-al321 (192 vCPU) | 221 | 221 | 1 | 221 | 14m 7s | 11.81 | — | -0.35% | 404.0 | 527.3 | 92.1% | 244.8 GiB |
+| 192t — rh8-al321 (192 vCPU) | 222 | 222 | 1 | 222 | 14m 8s | 11.79 | — | -0.47% | 450.6 | 567.2 | 92.2% | 245.3 GiB |
+| 192t — rh8-al321 (192 vCPU) | 223 | 223 | 1 | 223 | 14m 8s | 11.79 | — | -0.47% | 431.8 | 558.4 | 92.2% | 246.9 GiB |
 
 **Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 2.0% from the perceived maximum.
 
