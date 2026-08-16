@@ -1,0 +1,2153 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260816-175432",
+  "detector": "text_flow",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 76,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 5,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "0.493",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "36",
+    "ranked_quality": "0.15956047",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 729,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 7,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "161f74b6ff2e1336968d708b7a0a594d0b5db4ce3601736e99befd0289f7cc09",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "cd4fbe8ec7d8",
+    "parameters": {
+      "minimum_component_area_fraction": 2e-05,
+      "maximum_component_area_fraction": 0.01,
+      "line_join_fraction": 0.03,
+      "minimum_line_count": 3,
+      "minimum_text_coverage_fraction": 0.08,
+      "bbox_padding_fraction": 0.02
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 1,
+      "failure_count": 4,
+      "mean_iou": 0.15956047,
+      "mean_iou_success": 0.79780235,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.31912094,
+      "mean_edge_error_px": 55.25,
+      "elapsed_ms_total": 46.707,
+      "wall_ms": 47.203
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 14.897,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 14.738,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          199,
+          38,
+          1088,
+          983
+        ],
+        "iou": 0.79780235,
+        "edge_errors": {
+          "left": 184,
+          "top": 10,
+          "right": 14,
+          "bottom": 13,
+          "mean": 55.25,
+          "maximum": 184
+        },
+        "edge_error_mean_px": 55.25,
+        "edge_error_maximum_px": 184,
+        "elapsed_ms": 4.077,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": [
+            199,
+            38,
+            1088,
+            983
+          ],
+          "corners": [
+            [
+              558.425537109375,
+              964.1041259765625
+            ],
+            [
+              219.32101440429688,
+              672.2066650390625
+            ],
+            [
+              747.4168701171875,
+              58.7044677734375
+            ],
+            [
+              1086.5213623046875,
+              350.6019287109375
+            ]
+          ],
+          "confidence": 0.6,
+          "score": 0.6,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "line_count": 4,
+            "text_coverage": 0.10358883034666369,
+            "component_count": 134,
+            "evidence": "text_line_envelope"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 7.386,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.609,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "cd4fbe8ec7d8",
+    "parameter_identity_sha256": "7ff34114bce94aa0aa6894036425cae042d7bf377055553b9f7e76d9f0f7bfda",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 364,
+    "parameter_grid_sha256": "4ba1a84530cf9ff3ddd49fe60cdbcd5175403dce200ecd14c52805d4f0fcdf1a",
+    "profile": "baseline",
+    "run_id": "run-20260816-175432",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "cd4fbe8ec7d8",
+    "parameters": {
+      "minimum_component_area_fraction": 2e-05,
+      "maximum_component_area_fraction": 0.01,
+      "line_join_fraction": 0.03,
+      "minimum_line_count": 3,
+      "minimum_text_coverage_fraction": 0.08,
+      "bbox_padding_fraction": 0.02
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 1,
+      "failure_count": 4,
+      "mean_iou": 0.15956047,
+      "mean_iou_success": 0.79780235,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.31912094,
+      "mean_edge_error_px": 55.25,
+      "elapsed_ms_total": 46.707,
+      "wall_ms": 47.203
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 14.897,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 14.738,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          199,
+          38,
+          1088,
+          983
+        ],
+        "iou": 0.79780235,
+        "edge_errors": {
+          "left": 184,
+          "top": 10,
+          "right": 14,
+          "bottom": 13,
+          "mean": 55.25,
+          "maximum": 184
+        },
+        "edge_error_mean_px": 55.25,
+        "edge_error_maximum_px": 184,
+        "elapsed_ms": 4.077,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": [
+            199,
+            38,
+            1088,
+            983
+          ],
+          "corners": [
+            [
+              558.425537109375,
+              964.1041259765625
+            ],
+            [
+              219.32101440429688,
+              672.2066650390625
+            ],
+            [
+              747.4168701171875,
+              58.7044677734375
+            ],
+            [
+              1086.5213623046875,
+              350.6019287109375
+            ]
+          ],
+          "confidence": 0.6,
+          "score": 0.6,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "line_count": 4,
+            "text_coverage": 0.10358883034666369,
+            "component_count": 134,
+            "evidence": "text_line_envelope"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 7.386,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 5.609,
+        "candidate": {
+          "method": "text_flow",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_component_area_fraction": 2e-05,
+              "maximum_component_area_fraction": 0.01,
+              "line_join_fraction": 0.03,
+              "minimum_line_count": 3,
+              "minimum_text_coverage_fraction": 0.08,
+              "bbox_padding_fraction": 0.02
+            },
+            "reason": "insufficient_text_lines",
+            "line_count": 0
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "cd4fbe8ec7d8",
+    "parameter_identity_sha256": "7ff34114bce94aa0aa6894036425cae042d7bf377055553b9f7e76d9f0f7bfda",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 364,
+    "parameter_grid_sha256": "4ba1a84530cf9ff3ddd49fe60cdbcd5175403dce200ecd14c52805d4f0fcdf1a",
+    "profile": "baseline",
+    "run_id": "run-20260816-175432",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "cd4fbe8ec7d8",
+      "parameters": {
+        "minimum_component_area_fraction": 2e-05,
+        "maximum_component_area_fraction": 0.01,
+        "line_join_fraction": 0.03,
+        "minimum_line_count": 3,
+        "minimum_text_coverage_fraction": 0.08,
+        "bbox_padding_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.15956047,
+        "mean_iou_success": 0.79780235,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.31912094,
+        "mean_edge_error_px": 55.25,
+        "elapsed_ms_total": 46.707,
+        "wall_ms": 47.203
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 14.897,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 2e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 14.738,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 2e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            199,
+            38,
+            1088,
+            983
+          ],
+          "iou": 0.79780235,
+          "edge_errors": {
+            "left": 184,
+            "top": 10,
+            "right": 14,
+            "bottom": 13,
+            "mean": 55.25,
+            "maximum": 184
+          },
+          "edge_error_mean_px": 55.25,
+          "edge_error_maximum_px": 184,
+          "elapsed_ms": 4.077,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              199,
+              38,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                558.425537109375,
+                964.1041259765625
+              ],
+              [
+                219.32101440429688,
+                672.2066650390625
+              ],
+              [
+                747.4168701171875,
+                58.7044677734375
+              ],
+              [
+                1086.5213623046875,
+                350.6019287109375
+              ]
+            ],
+            "confidence": 0.6,
+            "score": 0.6,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 2e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "line_count": 4,
+              "text_coverage": 0.10358883034666369,
+              "component_count": 134,
+              "evidence": "text_line_envelope"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.386,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 2e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 5.609,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 2e-05,
+                "maximum_component_area_fraction": 0.01,
+                "line_join_fraction": 0.03,
+                "minimum_line_count": 3,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "legacy_parameter_set_id": "cd4fbe8ec7d8",
+      "parameter_identity_sha256": "7ff34114bce94aa0aa6894036425cae042d7bf377055553b9f7e76d9f0f7bfda",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 364,
+      "parameter_grid_sha256": "4ba1a84530cf9ff3ddd49fe60cdbcd5175403dce200ecd14c52805d4f0fcdf1a",
+      "profile": "baseline",
+      "run_id": "run-20260816-175432",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "00521cb468c7",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.018,
+        "minimum_line_count": 2,
+        "minimum_text_coverage_fraction": 0.04,
+        "bbox_padding_fraction": 0.04
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.11582199,
+        "mean_iou_success": 0.57910994,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.23164398,
+        "mean_edge_error_px": 123.0,
+        "elapsed_ms_total": 93.686,
+        "wall_ms": 93.966
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 36.699,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 27.396,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            304,
+            204,
+            1088,
+            983
+          ],
+          "iou": 0.57910994,
+          "edge_errors": {
+            "left": 289,
+            "top": 176,
+            "right": 14,
+            "bottom": 13,
+            "mean": 123.0,
+            "maximum": 289
+          },
+          "edge_error_mean_px": 123.0,
+          "edge_error_maximum_px": 289,
+          "elapsed_ms": 4.526,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              304,
+              204,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                504.8209228515625,
+                948.8157958984375
+              ],
+              [
+                343.4488525390625,
+                736.6085205078125
+              ],
+              [
+                991.5743408203125,
+                243.74427795410156
+              ],
+              [
+                1152.9464111328125,
+                455.9515380859375
+              ]
+            ],
+            "confidence": 0.55,
+            "score": 0.55,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "line_count": 3,
+              "text_coverage": 0.13265134823208477,
+              "component_count": 134,
+              "evidence": "text_line_envelope"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 17.526,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.539,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 0.14399777492508292,
+        "search_fraction": 0.9
+      },
+      "legacy_parameter_set_id": "00521cb468c7",
+      "parameter_identity_sha256": "efefe930f5829255b393ed71f0fc8698523f902f3a1d9508febec20dc356e99d",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "4ba1a84530cf9ff3ddd49fe60cdbcd5175403dce200ecd14c52805d4f0fcdf1a",
+      "profile": null,
+      "run_id": "run-20260816-175432",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "1c0b5b0e68d2",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.018,
+        "minimum_line_count": 2,
+        "minimum_text_coverage_fraction": 0.08,
+        "bbox_padding_fraction": 0.04
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.11582199,
+        "mean_iou_success": 0.57910994,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.23164398,
+        "mean_edge_error_px": 123.0,
+        "elapsed_ms_total": 87.388,
+        "wall_ms": 87.672
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 27.519,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 27.132,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            304,
+            204,
+            1088,
+            983
+          ],
+          "iou": 0.57910994,
+          "edge_errors": {
+            "left": 289,
+            "top": 176,
+            "right": 14,
+            "bottom": 13,
+            "mean": 123.0,
+            "maximum": 289
+          },
+          "edge_error_mean_px": 123.0,
+          "edge_error_maximum_px": 289,
+          "elapsed_ms": 11.8,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              304,
+              204,
+              1088,
+              983
+            ],
+            "corners": [
+              [
+                504.8209228515625,
+                948.8157958984375
+              ],
+              [
+                343.4488525390625,
+                736.6085205078125
+              ],
+              [
+                991.5743408203125,
+                243.74427795410156
+              ],
+              [
+                1152.9464111328125,
+                455.9515380859375
+              ]
+            ],
+            "confidence": 0.55,
+            "score": 0.55,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "line_count": 3,
+              "text_coverage": 0.13265134823208477,
+              "component_count": 134,
+              "evidence": "text_line_envelope"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9.824,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 11.113,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.04
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 0.1393160349689424,
+        "search_fraction": 0.7
+      },
+      "legacy_parameter_set_id": "1c0b5b0e68d2",
+      "parameter_identity_sha256": "68f91d7c4fd6dc463749c96318e338657c71a7d885348e706dc002022b791eea",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "4ba1a84530cf9ff3ddd49fe60cdbcd5175403dce200ecd14c52805d4f0fcdf1a",
+      "profile": null,
+      "run_id": "run-20260816-175432",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "755592f2b19d",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.018,
+        "minimum_line_count": 2,
+        "minimum_text_coverage_fraction": 0.04,
+        "bbox_padding_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.11115749,
+        "mean_iou_success": 0.55578747,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.22231499,
+        "mean_edge_error_px": 129.5,
+        "elapsed_ms_total": 97.572,
+        "wall_ms": 97.824
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 18.955,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 35.327,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            323,
+            223,
+            1088,
+            969
+          ],
+          "iou": 0.55578747,
+          "edge_errors": {
+            "left": 308,
+            "top": 195,
+            "right": 14,
+            "bottom": 1,
+            "mean": 129.5,
+            "maximum": 308
+          },
+          "edge_error_mean_px": 129.5,
+          "edge_error_maximum_px": 308,
+          "elapsed_ms": 24.791,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              323,
+              223,
+              1088,
+              969
+            ],
+            "corners": [
+              [
+                504.8209228515625,
+                948.8157958984375
+              ],
+              [
+                343.4488525390625,
+                736.6085205078125
+              ],
+              [
+                991.5743408203125,
+                243.74427795410156
+              ],
+              [
+                1152.9464111328125,
+                455.9515380859375
+              ]
+            ],
+            "confidence": 0.55,
+            "score": 0.55,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.02
+              },
+              "line_count": 3,
+              "text_coverage": 0.13265134823208477,
+              "component_count": 134,
+              "evidence": "text_line_envelope"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 12.353,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 6.146,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.04,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 10,
+        "parameter_set_number": 10,
+        "elapsed_seconds": 0.15153561695478857,
+        "search_fraction": 1.0
+      },
+      "legacy_parameter_set_id": "755592f2b19d",
+      "parameter_identity_sha256": "d24e2907ac92d21ffd5352a28abd1f07a55e499612da4c58b71a200c3253d1a0",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "4ba1a84530cf9ff3ddd49fe60cdbcd5175403dce200ecd14c52805d4f0fcdf1a",
+      "profile": null,
+      "run_id": "run-20260816-175432",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "aed529db32b1",
+      "parameters": {
+        "minimum_component_area_fraction": 1e-05,
+        "maximum_component_area_fraction": 0.005,
+        "line_join_fraction": 0.018,
+        "minimum_line_count": 2,
+        "minimum_text_coverage_fraction": 0.08,
+        "bbox_padding_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 1,
+        "failure_count": 4,
+        "mean_iou": 0.11115749,
+        "mean_iou_success": 0.55578747,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.22231499,
+        "mean_edge_error_px": 129.5,
+        "elapsed_ms_total": 88.359,
+        "wall_ms": 88.596
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 27.653,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 30.852,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            323,
+            223,
+            1088,
+            969
+          ],
+          "iou": 0.55578747,
+          "edge_errors": {
+            "left": 308,
+            "top": 195,
+            "right": 14,
+            "bottom": 1,
+            "mean": 129.5,
+            "maximum": 308
+          },
+          "edge_error_mean_px": 129.5,
+          "edge_error_maximum_px": 308,
+          "elapsed_ms": 12.373,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": [
+              323,
+              223,
+              1088,
+              969
+            ],
+            "corners": [
+              [
+                504.8209228515625,
+                948.8157958984375
+              ],
+              [
+                343.4488525390625,
+                736.6085205078125
+              ],
+              [
+                991.5743408203125,
+                243.74427795410156
+              ],
+              [
+                1152.9464111328125,
+                455.9515380859375
+              ]
+            ],
+            "confidence": 0.55,
+            "score": 0.55,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "line_count": 3,
+              "text_coverage": 0.13265134823208477,
+              "component_count": 134,
+              "evidence": "text_line_envelope"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9.63,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.851,
+          "candidate": {
+            "method": "text_flow",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_component_area_fraction": 1e-05,
+                "maximum_component_area_fraction": 0.005,
+                "line_join_fraction": 0.018,
+                "minimum_line_count": 2,
+                "minimum_text_coverage_fraction": 0.08,
+                "bbox_padding_fraction": 0.02
+              },
+              "reason": "insufficient_text_lines",
+              "line_count": 0
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 0.13956904597580433,
+        "search_fraction": 0.8
+      },
+      "legacy_parameter_set_id": "aed529db32b1",
+      "parameter_identity_sha256": "aeb73d85ced97e6dc695067df5f7cba133930828537bc603e6f4c417aeac5f3b",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "4ba1a84530cf9ff3ddd49fe60cdbcd5175403dce200ecd14c52805d4f0fcdf1a",
+      "profile": null,
+      "run_id": "run-20260816-175432",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 4,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.79780235,
+        "winner_iou": 0.79780235,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "cd4fbe8ec7d8",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "cd4fbe8ec7d8",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "cd4fbe8ec7d8",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "cd4fbe8ec7d8",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "baseline",
+        "parameter_set_id": "cd4fbe8ec7d8",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-al308",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "atlhwe-lsf308",
+    "cpu_model": "AMD EPYC 9655 96-Core Processor",
+    "physical_core_count": 192,
+    "logical_cpu_count": 192,
+    "available_cpu_count": 192,
+    "smt_enabled": false,
+    "memory_bytes": 6493206470656,
+    "memory_gib": 6047.27,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "4d7238d07489072de5cd64609bacbd4f9aec4b33",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31962656955",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "self-hosted",
+      "192t"
+    ]
+  },
+  "source_commit": "9b7849c3643d8d39cdd72db4c3c2bda6542b2ede",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 76,
+    "peak_rss_bytes": 324730880,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 61.67167997344884,
+    "failures": 43,
+    "best_mean_iou": 0.15956047,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.0,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 2,
+    "total_metric_improvements": 2,
+    "parameter_sets_with_improvements": 2,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": 0.1304146390175447,
+    "time_since_last_improvement_seconds": 0.031734340940602124
+  }
+}
