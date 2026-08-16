@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "gradient_vote",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "ccc52c4807b420ee814b0f627641df6fa92e721b9408bb146749a413ca4c5f29",
+    "parameter_order": [
+      "border_search_fraction"
+    ],
+    "values": {
+      "border_search_fraction": [
+        0.05,
+        0.055,
+        0.06,
+        0.065,
+        0.07,
+        0.075,
+        0.08,
+        0.085,
+        0.09,
+        0.095,
+        0.1,
+        0.105,
+        0.11,
+        0.115,
+        0.12,
+        0.125,
+        0.13,
+        0.135,
+        0.14,
+        0.145,
+        0.15
+      ]
+    },
+    "cartesian_count": 21,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 9,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "gaussian_sigma": 1.2,
+      "border_search_fraction": 0.15,
+      "central_band_fraction": 1.0,
+      "gradient_percentile": 70.0,
+      "vote_smooth_fraction": 0.012,
+      "minimum_vote_support": 0.08,
+      "minimum_span_fraction": 0.15,
+      "minimum_area_fraction": 0.2,
+      "support_weight": 0.45,
+      "area_weight": 0.25,
+      "rectangularity_weight": 0.2
+    }
+  },
+  "explicit_parameter_sets": {
+    "d0066daa3b05d35e3e42767dc6d82dbc18b7ab98a8ee574b27a7d21bacd84b2b": {
+      "sha256": "d0066daa3b05d35e3e42767dc6d82dbc18b7ab98a8ee574b27a7d21bacd84b2b",
+      "legacy_parameter_set_id": "1029318d5974",
+      "parameters": {
+        "gaussian_sigma": 1.2,
+        "border_search_fraction": 0.15,
+        "central_band_fraction": 1.0,
+        "gradient_percentile": 70.0,
+        "vote_smooth_fraction": 0.012,
+        "minimum_vote_support": 0.08,
+        "minimum_span_fraction": 0.15,
+        "minimum_area_fraction": 0.2,
+        "support_weight": 0.45,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}

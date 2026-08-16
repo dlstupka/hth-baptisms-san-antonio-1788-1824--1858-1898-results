@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "signed_polar_boundary_vote",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "cda7b595de91d69efe22306983a2d0f5d389bb87ae05c87ba79ba241aceab58c",
+    "parameter_order": [
+      "ray_count",
+      "inner_radius_fraction",
+      "outer_radius_fraction",
+      "gradient_percentile",
+      "minimum_support_fraction",
+      "bbox_padding_fraction",
+      "polarity"
+    ],
+    "values": {
+      "ray_count": [
+        72,
+        90,
+        120,
+        144,
+        180,
+        224,
+        270,
+        360
+      ],
+      "inner_radius_fraction": [
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18,
+        0.2,
+        0.22
+      ],
+      "outer_radius_fraction": [
+        0.45,
+        0.5,
+        0.55,
+        0.575,
+        0.6,
+        0.625,
+        0.65,
+        0.7,
+        0.82
+      ],
+      "gradient_percentile": [
+        82.0,
+        86.0,
+        88.0,
+        89.0,
+        90.0,
+        91.0,
+        92.0,
+        93.0,
+        94.0,
+        95.0
+      ],
+      "minimum_support_fraction": [
+        0.2,
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.5
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.002,
+        0.004,
+        0.008,
+        0.016
+      ],
+      "polarity": [
+        "bright_inside",
+        "dark_inside",
+        "absolute"
+      ]
+    },
+    "cartesian_count": 453600,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "ray_count": 180,
+      "inner_radius_fraction": 0.12,
+      "outer_radius_fraction": 0.7,
+      "gradient_percentile": 82.0,
+      "minimum_support_fraction": 0.35,
+      "bbox_padding_fraction": 0.0,
+      "polarity": "bright_inside"
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
