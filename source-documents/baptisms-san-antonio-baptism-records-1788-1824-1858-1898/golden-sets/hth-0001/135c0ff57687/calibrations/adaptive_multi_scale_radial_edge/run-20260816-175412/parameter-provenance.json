@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "adaptive_multi_scale_radial_edge",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "68e48d10ee23b4711e714ff04ed23d0143995259ff1cbe36fe6094c87b0e8e50",
+    "parameter_order": [
+      "coarse_angle_step_degrees",
+      "refined_angle_step_degrees",
+      "weak_side_support_fraction",
+      "side_assignment_tolerance_fraction",
+      "maximum_refined_sides"
+    ],
+    "values": {
+      "coarse_angle_step_degrees": [
+        1.85,
+        1.9,
+        1.95,
+        2.0,
+        2.025,
+        2.0454545454545454,
+        2.075,
+        2.1,
+        2.15,
+        2.2
+      ],
+      "refined_angle_step_degrees": [
+        0.25,
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        1.0
+      ],
+      "weak_side_support_fraction": [
+        0.3,
+        0.35,
+        0.4,
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        0.75
+      ],
+      "side_assignment_tolerance_fraction": [
+        0.0075,
+        0.01,
+        0.0125,
+        0.015,
+        0.0175,
+        0.02,
+        0.025,
+        0.03,
+        0.04,
+        0.05
+      ],
+      "maximum_refined_sides": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "cartesian_count": 50000,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 9,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "base_sigma": 1.0,
+      "scale_ratio": 3.5,
+      "scale_count": 4,
+      "minimum_radius_fraction": 0.16,
+      "maximum_radius_fraction": 0.78,
+      "gradient_percentile": 96.875,
+      "minimum_ray_support": 0.36,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "bbox_padding_fraction": 0.0,
+      "support_weight": 0.5,
+      "strength_weight": 0.3,
+      "area_weight": 0.2,
+      "coarse_angle_step_degrees": 2.0454545454545454,
+      "refined_angle_step_degrees": 0.35,
+      "weak_side_support_fraction": 0.45,
+      "side_assignment_tolerance_fraction": 0.015,
+      "maximum_refined_sides": 4
+    }
+  },
+  "explicit_parameter_sets": {
+    "ac8cee78be3cc59ef732f62780c0c3a2c46218731c29b485422f0f7a27f190ef": {
+      "sha256": "ac8cee78be3cc59ef732f62780c0c3a2c46218731c29b485422f0f7a27f190ef",
+      "legacy_parameter_set_id": "e8e8dc34f8fb",
+      "parameters": {
+        "base_sigma": 1.0,
+        "scale_ratio": 3.5,
+        "scale_count": 4,
+        "minimum_radius_fraction": 0.16,
+        "maximum_radius_fraction": 0.78,
+        "gradient_percentile": 96.875,
+        "minimum_ray_support": 0.36,
+        "minimum_area_fraction": 0.18,
+        "maximum_area_fraction": 0.98,
+        "bbox_padding_fraction": 0.0,
+        "support_weight": 0.5,
+        "strength_weight": 0.3,
+        "area_weight": 0.2,
+        "coarse_angle_step_degrees": 2.0454545454545454,
+        "refined_angle_step_degrees": 0.35,
+        "weak_side_support_fraction": 0.45,
+        "side_assignment_tolerance_fraction": 0.015,
+        "maximum_refined_sides": 4
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}

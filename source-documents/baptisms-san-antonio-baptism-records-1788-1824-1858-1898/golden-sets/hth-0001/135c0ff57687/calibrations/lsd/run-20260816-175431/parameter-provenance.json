@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "lsd",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "6e2c51ae3089ad7b2e3cbc67591e7965e2c3125df856be25b3ad306412915b46",
+    "parameter_order": [
+      "refine_mode",
+      "scale",
+      "minimum_length_fraction",
+      "axis_angle_tolerance_degrees",
+      "outer_percentile",
+      "minimum_bbox_area_fraction",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "refine_mode": [
+        "none",
+        "std",
+        "adv"
+      ],
+      "scale": [
+        0.6,
+        0.8,
+        1.0
+      ],
+      "minimum_length_fraction": [
+        0.08,
+        0.14,
+        0.22
+      ],
+      "axis_angle_tolerance_degrees": [
+        10.0,
+        18.0,
+        28.0
+      ],
+      "outer_percentile": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "minimum_bbox_area_fraction": [
+        0.08,
+        0.1,
+        0.15
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.005,
+        0.015
+      ]
+    },
+    "cartesian_count": 2187,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "refine_mode": "std",
+      "scale": 0.8,
+      "minimum_length_fraction": 0.14,
+      "axis_angle_tolerance_degrees": 18.0,
+      "outer_percentile": 10.0,
+      "minimum_bbox_area_fraction": 0.1,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
