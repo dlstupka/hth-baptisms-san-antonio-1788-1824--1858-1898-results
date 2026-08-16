@@ -1,0 +1,4977 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260816-020819",
+  "detector": "adaptive_multi_scale_radial_edge",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 76,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "5.993",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "12",
+    "ranked_quality": "0.97674924",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 50001,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 50,
+  "fully_successful_parameter_set_count": 10,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "fbe222668f999e2f2fc53c229a4d9c05c1a93a4a8a2b5b1be835afa2f9ce5f97",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "e8e8dc34f8fb",
+    "parameters": {
+      "base_sigma": 1.0,
+      "scale_ratio": 3.5,
+      "scale_count": 4,
+      "minimum_radius_fraction": 0.16,
+      "maximum_radius_fraction": 0.78,
+      "gradient_percentile": 96.875,
+      "minimum_ray_support": 0.36,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "bbox_padding_fraction": 0.0,
+      "support_weight": 0.5,
+      "strength_weight": 0.3,
+      "area_weight": 0.2,
+      "coarse_angle_step_degrees": 2.0454545454545454,
+      "refined_angle_step_degrees": 0.35,
+      "weak_side_support_fraction": 0.45,
+      "side_assignment_tolerance_fraction": 0.015,
+      "maximum_refined_sides": 4
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.97674924,
+      "mean_iou_success": 0.97674924,
+      "minimum_iou": 0.95659668,
+      "stddev_iou": 0.01773059,
+      "mean_edge_error_px": 6.2,
+      "elapsed_ms_total": 1457.448,
+      "wall_ms": 1458.067
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          136,
+          49,
+          1289,
+          973
+        ],
+        "iou": 0.97674339,
+        "edge_errors": {
+          "left": 11,
+          "top": 7,
+          "right": 0,
+          "bottom": 6,
+          "mean": 6.0,
+          "maximum": 11
+        },
+        "edge_error_mean_px": 6.0,
+        "edge_error_maximum_px": 11,
+        "elapsed_ms": 774.581,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            136,
+            49,
+            1289,
+            973
+          ],
+          "corners": [
+            [
+              135.57147216796875,
+              61.816349029541016
+            ],
+            [
+              1277.91796875,
+              48.695125579833984
+            ],
+            [
+              1288.378173828125,
+              959.3646240234375
+            ],
+            [
+              146.03155517578125,
+              972.48583984375
+            ]
+          ],
+          "confidence": 0.8546114718692549,
+          "score": 0.8546114718692549,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 170,
+            "refined_supported_rays": 226,
+            "total_supported_rays": 396,
+            "ray_support": 0.9659090909090909,
+            "mean_fused_strength": 0.7298306822776794,
+            "side_eligible_rays": [
+              51,
+              37,
+              49,
+              39
+            ],
+            "side_support_counts": [
+              42,
+              25,
+              29,
+              1
+            ],
+            "side_support_fractions": [
+              0.8235294117647058,
+              0.6756756756756757,
+              0.5918367346938775,
+              0.02564102564102564
+            ],
+            "weak_sides": [
+              3
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.7635386086570279
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          66,
+          9,
+          1234,
+          977
+        ],
+        "iou": 0.99725921,
+        "edge_errors": {
+          "left": 1,
+          "top": 1,
+          "right": 1,
+          "bottom": 0,
+          "mean": 0.75,
+          "maximum": 1
+        },
+        "edge_error_mean_px": 0.75,
+        "edge_error_maximum_px": 1,
+        "elapsed_ms": 182.599,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            66,
+            9,
+            1234,
+            977
+          ],
+          "corners": [
+            [
+              65.50347900390625,
+              18.4512882232666
+            ],
+            [
+              1225.268798828125,
+              9.255498886108398
+            ],
+            [
+              1232.862548828125,
+              966.9932861328125
+            ],
+            [
+              73.09735107421875,
+              976.1890869140625
+            ]
+          ],
+          "confidence": 0.8713143896586413,
+          "score": 0.8713143896586413,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 151,
+            "refined_supported_rays": 612,
+            "total_supported_rays": 763,
+            "ray_support": 0.8579545454545454,
+            "mean_fused_strength": 0.9043194055557251,
+            "side_eligible_rays": [
+              50,
+              39,
+              49,
+              38
+            ],
+            "side_support_counts": [
+              11,
+              3,
+              25,
+              3
+            ],
+            "side_support_fractions": [
+              0.22,
+              0.07692307692307693,
+              0.5102040816326531,
+              0.07894736842105263
+            ],
+            "weak_sides": [
+              1,
+              3,
+              0
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.8552064763232551
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          15,
+          28,
+          1073,
+          967
+        ],
+        "iou": 0.99587401,
+        "edge_errors": {
+          "left": 0,
+          "top": 0,
+          "right": 1,
+          "bottom": 3,
+          "mean": 1.0,
+          "maximum": 3
+        },
+        "edge_error_mean_px": 1.0,
+        "edge_error_maximum_px": 3,
+        "elapsed_ms": 191.515,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            15,
+            28,
+            1073,
+            967
+          ],
+          "corners": [
+            [
+              15.638002395629883,
+              27.727294921875
+            ],
+            [
+              1071.618408203125,
+              28.01300048828125
+            ],
+            [
+              1071.364501953125,
+              966.4161987304688
+            ],
+            [
+              15.384092330932617,
+              966.1304931640625
+            ]
+          ],
+          "confidence": 0.872633066566633,
+          "score": 0.872633066566633,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 176,
+            "refined_supported_rays": 1022,
+            "total_supported_rays": 1198,
+            "ray_support": 1.0,
+            "mean_fused_strength": 0.6244186162948608,
+            "side_eligible_rays": [
+              47,
+              41,
+              47,
+              41
+            ],
+            "side_support_counts": [
+              19,
+              17,
+              10,
+              4
+            ],
+            "side_support_fractions": [
+              0.40425531914893614,
+              0.4146341463414634,
+              0.2127659574468085,
+              0.0975609756097561
+            ],
+            "weak_sides": [
+              3,
+              2,
+              0,
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.9265374083908732
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          52,
+          1135,
+          941
+        ],
+        "iou": 0.95659668,
+        "edge_errors": {
+          "left": 11,
+          "top": 1,
+          "right": 34,
+          "bottom": 0,
+          "mean": 11.5,
+          "maximum": 34
+        },
+        "edge_error_mean_px": 11.5,
+        "edge_error_maximum_px": 34,
+        "elapsed_ms": 166.254,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            73,
+            52,
+            1135,
+            941
+          ],
+          "corners": [
+            [
+              74.62295532226562,
+              51.61212158203125
+            ],
+            [
+              1134.1390380859375,
+              53.60125732421875
+            ],
+            [
+              1132.4754638671875,
+              939.739990234375
+            ],
+            [
+              72.95932006835938,
+              937.7508544921875
+            ]
+          ],
+          "confidence": 0.9153320717110853,
+          "score": 0.9153320717110853,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 172,
+            "refined_supported_rays": 0,
+            "total_supported_rays": 172,
+            "ray_support": 0.9772727272727273,
+            "mean_fused_strength": 0.9289550185203552,
+            "side_eligible_rays": [
+              49,
+              41,
+              49,
+              37
+            ],
+            "side_support_counts": [
+              45,
+              32,
+              45,
+              26
+            ],
+            "side_support_fractions": [
+              0.9183673469387755,
+              0.7804878048780488,
+              0.9183673469387755,
+              0.7027027027027027
+            ],
+            "weak_sides": [],
+            "refinement_triggered": false,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.740046012593075
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          77,
+          34,
+          1186,
+          965
+        ],
+        "iou": 0.95727292,
+        "edge_errors": {
+          "left": 11,
+          "top": 1,
+          "right": 32,
+          "bottom": 3,
+          "mean": 11.75,
+          "maximum": 32
+        },
+        "edge_error_mean_px": 11.75,
+        "edge_error_maximum_px": 32,
+        "elapsed_ms": 142.499,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            77,
+            34,
+            1186,
+            965
+          ],
+          "corners": [
+            [
+              76.53118896484375,
+              33.5802001953125
+            ],
+            [
+              1185.370361328125,
+              33.5802001953125
+            ],
+            [
+              1185.370361328125,
+              964.174560546875
+            ],
+            [
+              76.53118896484375,
+              964.174560546875
+            ]
+          ],
+          "confidence": 0.9101728562773914,
+          "score": 0.9101728562773914,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 169,
+            "refined_supported_rays": 0,
+            "total_supported_rays": 169,
+            "ray_support": 0.9602272727272727,
+            "mean_fused_strength": 0.8855273127555847,
+            "side_eligible_rays": [
+              49,
+              39,
+              49,
+              39
+            ],
+            "side_support_counts": [
+              43,
+              20,
+              41,
+              26
+            ],
+            "side_support_fractions": [
+              0.8775510204081632,
+              0.5128205128205128,
+              0.8367346938775511,
+              0.6666666666666666
+            ],
+            "weak_sides": [],
+            "refinement_triggered": false,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.8220051304353979
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260816-020819",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "e8e8dc34f8fb",
+    "parameters": {
+      "base_sigma": 1.0,
+      "scale_ratio": 3.5,
+      "scale_count": 4,
+      "minimum_radius_fraction": 0.16,
+      "maximum_radius_fraction": 0.78,
+      "gradient_percentile": 96.875,
+      "minimum_ray_support": 0.36,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "bbox_padding_fraction": 0.0,
+      "support_weight": 0.5,
+      "strength_weight": 0.3,
+      "area_weight": 0.2,
+      "coarse_angle_step_degrees": 2.0454545454545454,
+      "refined_angle_step_degrees": 0.35,
+      "weak_side_support_fraction": 0.45,
+      "side_assignment_tolerance_fraction": 0.015,
+      "maximum_refined_sides": 4
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.97674924,
+      "mean_iou_success": 0.97674924,
+      "minimum_iou": 0.95659668,
+      "stddev_iou": 0.01773059,
+      "mean_edge_error_px": 6.2,
+      "elapsed_ms_total": 1457.448,
+      "wall_ms": 1458.067
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          136,
+          49,
+          1289,
+          973
+        ],
+        "iou": 0.97674339,
+        "edge_errors": {
+          "left": 11,
+          "top": 7,
+          "right": 0,
+          "bottom": 6,
+          "mean": 6.0,
+          "maximum": 11
+        },
+        "edge_error_mean_px": 6.0,
+        "edge_error_maximum_px": 11,
+        "elapsed_ms": 774.581,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            136,
+            49,
+            1289,
+            973
+          ],
+          "corners": [
+            [
+              135.57147216796875,
+              61.816349029541016
+            ],
+            [
+              1277.91796875,
+              48.695125579833984
+            ],
+            [
+              1288.378173828125,
+              959.3646240234375
+            ],
+            [
+              146.03155517578125,
+              972.48583984375
+            ]
+          ],
+          "confidence": 0.8546114718692549,
+          "score": 0.8546114718692549,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 170,
+            "refined_supported_rays": 226,
+            "total_supported_rays": 396,
+            "ray_support": 0.9659090909090909,
+            "mean_fused_strength": 0.7298306822776794,
+            "side_eligible_rays": [
+              51,
+              37,
+              49,
+              39
+            ],
+            "side_support_counts": [
+              42,
+              25,
+              29,
+              1
+            ],
+            "side_support_fractions": [
+              0.8235294117647058,
+              0.6756756756756757,
+              0.5918367346938775,
+              0.02564102564102564
+            ],
+            "weak_sides": [
+              3
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.7635386086570279
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          66,
+          9,
+          1234,
+          977
+        ],
+        "iou": 0.99725921,
+        "edge_errors": {
+          "left": 1,
+          "top": 1,
+          "right": 1,
+          "bottom": 0,
+          "mean": 0.75,
+          "maximum": 1
+        },
+        "edge_error_mean_px": 0.75,
+        "edge_error_maximum_px": 1,
+        "elapsed_ms": 182.599,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            66,
+            9,
+            1234,
+            977
+          ],
+          "corners": [
+            [
+              65.50347900390625,
+              18.4512882232666
+            ],
+            [
+              1225.268798828125,
+              9.255498886108398
+            ],
+            [
+              1232.862548828125,
+              966.9932861328125
+            ],
+            [
+              73.09735107421875,
+              976.1890869140625
+            ]
+          ],
+          "confidence": 0.8713143896586413,
+          "score": 0.8713143896586413,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 151,
+            "refined_supported_rays": 612,
+            "total_supported_rays": 763,
+            "ray_support": 0.8579545454545454,
+            "mean_fused_strength": 0.9043194055557251,
+            "side_eligible_rays": [
+              50,
+              39,
+              49,
+              38
+            ],
+            "side_support_counts": [
+              11,
+              3,
+              25,
+              3
+            ],
+            "side_support_fractions": [
+              0.22,
+              0.07692307692307693,
+              0.5102040816326531,
+              0.07894736842105263
+            ],
+            "weak_sides": [
+              1,
+              3,
+              0
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.8552064763232551
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          15,
+          28,
+          1073,
+          967
+        ],
+        "iou": 0.99587401,
+        "edge_errors": {
+          "left": 0,
+          "top": 0,
+          "right": 1,
+          "bottom": 3,
+          "mean": 1.0,
+          "maximum": 3
+        },
+        "edge_error_mean_px": 1.0,
+        "edge_error_maximum_px": 3,
+        "elapsed_ms": 191.515,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            15,
+            28,
+            1073,
+            967
+          ],
+          "corners": [
+            [
+              15.638002395629883,
+              27.727294921875
+            ],
+            [
+              1071.618408203125,
+              28.01300048828125
+            ],
+            [
+              1071.364501953125,
+              966.4161987304688
+            ],
+            [
+              15.384092330932617,
+              966.1304931640625
+            ]
+          ],
+          "confidence": 0.872633066566633,
+          "score": 0.872633066566633,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 176,
+            "refined_supported_rays": 1022,
+            "total_supported_rays": 1198,
+            "ray_support": 1.0,
+            "mean_fused_strength": 0.6244186162948608,
+            "side_eligible_rays": [
+              47,
+              41,
+              47,
+              41
+            ],
+            "side_support_counts": [
+              19,
+              17,
+              10,
+              4
+            ],
+            "side_support_fractions": [
+              0.40425531914893614,
+              0.4146341463414634,
+              0.2127659574468085,
+              0.0975609756097561
+            ],
+            "weak_sides": [
+              3,
+              2,
+              0,
+              1
+            ],
+            "refinement_triggered": true,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.9265374083908732
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          52,
+          1135,
+          941
+        ],
+        "iou": 0.95659668,
+        "edge_errors": {
+          "left": 11,
+          "top": 1,
+          "right": 34,
+          "bottom": 0,
+          "mean": 11.5,
+          "maximum": 34
+        },
+        "edge_error_mean_px": 11.5,
+        "edge_error_maximum_px": 34,
+        "elapsed_ms": 166.254,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            73,
+            52,
+            1135,
+            941
+          ],
+          "corners": [
+            [
+              74.62295532226562,
+              51.61212158203125
+            ],
+            [
+              1134.1390380859375,
+              53.60125732421875
+            ],
+            [
+              1132.4754638671875,
+              939.739990234375
+            ],
+            [
+              72.95932006835938,
+              937.7508544921875
+            ]
+          ],
+          "confidence": 0.9153320717110853,
+          "score": 0.9153320717110853,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 172,
+            "refined_supported_rays": 0,
+            "total_supported_rays": 172,
+            "ray_support": 0.9772727272727273,
+            "mean_fused_strength": 0.9289550185203552,
+            "side_eligible_rays": [
+              49,
+              41,
+              49,
+              37
+            ],
+            "side_support_counts": [
+              45,
+              32,
+              45,
+              26
+            ],
+            "side_support_fractions": [
+              0.9183673469387755,
+              0.7804878048780488,
+              0.9183673469387755,
+              0.7027027027027027
+            ],
+            "weak_sides": [],
+            "refinement_triggered": false,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.740046012593075
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          77,
+          34,
+          1186,
+          965
+        ],
+        "iou": 0.95727292,
+        "edge_errors": {
+          "left": 11,
+          "top": 1,
+          "right": 32,
+          "bottom": 3,
+          "mean": 11.75,
+          "maximum": 32
+        },
+        "edge_error_mean_px": 11.75,
+        "edge_error_maximum_px": 32,
+        "elapsed_ms": 142.499,
+        "candidate": {
+          "method": "adaptive_multi_scale_radial_edge",
+          "bbox": [
+            77,
+            34,
+            1186,
+            965
+          ],
+          "corners": [
+            [
+              76.53118896484375,
+              33.5802001953125
+            ],
+            [
+              1185.370361328125,
+              33.5802001953125
+            ],
+            [
+              1185.370361328125,
+              964.174560546875
+            ],
+            [
+              76.53118896484375,
+              964.174560546875
+            ]
+          ],
+          "confidence": 0.9101728562773914,
+          "score": 0.9101728562773914,
+          "diagnostics": {
+            "parameters": {
+              "base_sigma": 1.0,
+              "scale_ratio": 3.5,
+              "scale_count": 4,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.78,
+              "gradient_percentile": 96.875,
+              "minimum_ray_support": 0.36,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.5,
+              "strength_weight": 0.3,
+              "area_weight": 0.2,
+              "coarse_angle_step_degrees": 2.0454545454545454,
+              "refined_angle_step_degrees": 0.35,
+              "weak_side_support_fraction": 0.45,
+              "side_assignment_tolerance_fraction": 0.015,
+              "maximum_refined_sides": 4
+            },
+            "parent_detector": "multi_scale_radial_edge",
+            "parent_parameter_set_id": "ddb7623ebb92",
+            "scale_sigmas": [
+              1.0,
+              3.5,
+              12.25,
+              42.875
+            ],
+            "requested_coarse_rays": 176,
+            "coarse_supported_rays": 169,
+            "refined_supported_rays": 0,
+            "total_supported_rays": 169,
+            "ray_support": 0.9602272727272727,
+            "mean_fused_strength": 0.8855273127555847,
+            "side_eligible_rays": [
+              49,
+              39,
+              49,
+              39
+            ],
+            "side_support_counts": [
+              43,
+              20,
+              41,
+              26
+            ],
+            "side_support_fractions": [
+              0.8775510204081632,
+              0.5128205128205128,
+              0.8367346938775511,
+              0.6666666666666666
+            ],
+            "weak_sides": [],
+            "refinement_triggered": false,
+            "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+            "area_fraction": 0.8220051304353979
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "profile": "baseline",
+    "run_id": "run-20260816-020819",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "e8e8dc34f8fb",
+      "parameters": {
+        "base_sigma": 1.0,
+        "scale_ratio": 3.5,
+        "scale_count": 4,
+        "minimum_radius_fraction": 0.16,
+        "maximum_radius_fraction": 0.78,
+        "gradient_percentile": 96.875,
+        "minimum_ray_support": 0.36,
+        "minimum_area_fraction": 0.18,
+        "maximum_area_fraction": 0.98,
+        "bbox_padding_fraction": 0.0,
+        "support_weight": 0.5,
+        "strength_weight": 0.3,
+        "area_weight": 0.2,
+        "coarse_angle_step_degrees": 2.0454545454545454,
+        "refined_angle_step_degrees": 0.35,
+        "weak_side_support_fraction": 0.45,
+        "side_assignment_tolerance_fraction": 0.015,
+        "maximum_refined_sides": 4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.97674924,
+        "mean_iou_success": 0.97674924,
+        "minimum_iou": 0.95659668,
+        "stddev_iou": 0.01773059,
+        "mean_edge_error_px": 6.2,
+        "elapsed_ms_total": 1457.448,
+        "wall_ms": 1458.067
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            136,
+            49,
+            1289,
+            973
+          ],
+          "iou": 0.97674339,
+          "edge_errors": {
+            "left": 11,
+            "top": 7,
+            "right": 0,
+            "bottom": 6,
+            "mean": 6.0,
+            "maximum": 11
+          },
+          "edge_error_mean_px": 6.0,
+          "edge_error_maximum_px": 11,
+          "elapsed_ms": 774.581,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              136,
+              49,
+              1289,
+              973
+            ],
+            "corners": [
+              [
+                135.57147216796875,
+                61.816349029541016
+              ],
+              [
+                1277.91796875,
+                48.695125579833984
+              ],
+              [
+                1288.378173828125,
+                959.3646240234375
+              ],
+              [
+                146.03155517578125,
+                972.48583984375
+              ]
+            ],
+            "confidence": 0.8546114718692549,
+            "score": 0.8546114718692549,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 2.0454545454545454,
+                "refined_angle_step_degrees": 0.35,
+                "weak_side_support_fraction": 0.45,
+                "side_assignment_tolerance_fraction": 0.015,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 176,
+              "coarse_supported_rays": 170,
+              "refined_supported_rays": 226,
+              "total_supported_rays": 396,
+              "ray_support": 0.9659090909090909,
+              "mean_fused_strength": 0.7298306822776794,
+              "side_eligible_rays": [
+                51,
+                37,
+                49,
+                39
+              ],
+              "side_support_counts": [
+                42,
+                25,
+                29,
+                1
+              ],
+              "side_support_fractions": [
+                0.8235294117647058,
+                0.6756756756756757,
+                0.5918367346938775,
+                0.02564102564102564
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.7635386086570279
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            66,
+            9,
+            1234,
+            977
+          ],
+          "iou": 0.99725921,
+          "edge_errors": {
+            "left": 1,
+            "top": 1,
+            "right": 1,
+            "bottom": 0,
+            "mean": 0.75,
+            "maximum": 1
+          },
+          "edge_error_mean_px": 0.75,
+          "edge_error_maximum_px": 1,
+          "elapsed_ms": 182.599,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              66,
+              9,
+              1234,
+              977
+            ],
+            "corners": [
+              [
+                65.50347900390625,
+                18.4512882232666
+              ],
+              [
+                1225.268798828125,
+                9.255498886108398
+              ],
+              [
+                1232.862548828125,
+                966.9932861328125
+              ],
+              [
+                73.09735107421875,
+                976.1890869140625
+              ]
+            ],
+            "confidence": 0.8713143896586413,
+            "score": 0.8713143896586413,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 2.0454545454545454,
+                "refined_angle_step_degrees": 0.35,
+                "weak_side_support_fraction": 0.45,
+                "side_assignment_tolerance_fraction": 0.015,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 176,
+              "coarse_supported_rays": 151,
+              "refined_supported_rays": 612,
+              "total_supported_rays": 763,
+              "ray_support": 0.8579545454545454,
+              "mean_fused_strength": 0.9043194055557251,
+              "side_eligible_rays": [
+                50,
+                39,
+                49,
+                38
+              ],
+              "side_support_counts": [
+                11,
+                3,
+                25,
+                3
+              ],
+              "side_support_fractions": [
+                0.22,
+                0.07692307692307693,
+                0.5102040816326531,
+                0.07894736842105263
+              ],
+              "weak_sides": [
+                1,
+                3,
+                0
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.8552064763232551
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            28,
+            1073,
+            967
+          ],
+          "iou": 0.99587401,
+          "edge_errors": {
+            "left": 0,
+            "top": 0,
+            "right": 1,
+            "bottom": 3,
+            "mean": 1.0,
+            "maximum": 3
+          },
+          "edge_error_mean_px": 1.0,
+          "edge_error_maximum_px": 3,
+          "elapsed_ms": 191.515,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              15,
+              28,
+              1073,
+              967
+            ],
+            "corners": [
+              [
+                15.638002395629883,
+                27.727294921875
+              ],
+              [
+                1071.618408203125,
+                28.01300048828125
+              ],
+              [
+                1071.364501953125,
+                966.4161987304688
+              ],
+              [
+                15.384092330932617,
+                966.1304931640625
+              ]
+            ],
+            "confidence": 0.872633066566633,
+            "score": 0.872633066566633,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 2.0454545454545454,
+                "refined_angle_step_degrees": 0.35,
+                "weak_side_support_fraction": 0.45,
+                "side_assignment_tolerance_fraction": 0.015,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 176,
+              "coarse_supported_rays": 176,
+              "refined_supported_rays": 1022,
+              "total_supported_rays": 1198,
+              "ray_support": 1.0,
+              "mean_fused_strength": 0.6244186162948608,
+              "side_eligible_rays": [
+                47,
+                41,
+                47,
+                41
+              ],
+              "side_support_counts": [
+                19,
+                17,
+                10,
+                4
+              ],
+              "side_support_fractions": [
+                0.40425531914893614,
+                0.4146341463414634,
+                0.2127659574468085,
+                0.0975609756097561
+              ],
+              "weak_sides": [
+                3,
+                2,
+                0,
+                1
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.9265374083908732
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            52,
+            1135,
+            941
+          ],
+          "iou": 0.95659668,
+          "edge_errors": {
+            "left": 11,
+            "top": 1,
+            "right": 34,
+            "bottom": 0,
+            "mean": 11.5,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 166.254,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              73,
+              52,
+              1135,
+              941
+            ],
+            "corners": [
+              [
+                74.62295532226562,
+                51.61212158203125
+              ],
+              [
+                1134.1390380859375,
+                53.60125732421875
+              ],
+              [
+                1132.4754638671875,
+                939.739990234375
+              ],
+              [
+                72.95932006835938,
+                937.7508544921875
+              ]
+            ],
+            "confidence": 0.9153320717110853,
+            "score": 0.9153320717110853,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 2.0454545454545454,
+                "refined_angle_step_degrees": 0.35,
+                "weak_side_support_fraction": 0.45,
+                "side_assignment_tolerance_fraction": 0.015,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 176,
+              "coarse_supported_rays": 172,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 172,
+              "ray_support": 0.9772727272727273,
+              "mean_fused_strength": 0.9289550185203552,
+              "side_eligible_rays": [
+                49,
+                41,
+                49,
+                37
+              ],
+              "side_support_counts": [
+                45,
+                32,
+                45,
+                26
+              ],
+              "side_support_fractions": [
+                0.9183673469387755,
+                0.7804878048780488,
+                0.9183673469387755,
+                0.7027027027027027
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.740046012593075
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            77,
+            34,
+            1186,
+            965
+          ],
+          "iou": 0.95727292,
+          "edge_errors": {
+            "left": 11,
+            "top": 1,
+            "right": 32,
+            "bottom": 3,
+            "mean": 11.75,
+            "maximum": 32
+          },
+          "edge_error_mean_px": 11.75,
+          "edge_error_maximum_px": 32,
+          "elapsed_ms": 142.499,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              77,
+              34,
+              1186,
+              965
+            ],
+            "corners": [
+              [
+                76.53118896484375,
+                33.5802001953125
+              ],
+              [
+                1185.370361328125,
+                33.5802001953125
+              ],
+              [
+                1185.370361328125,
+                964.174560546875
+              ],
+              [
+                76.53118896484375,
+                964.174560546875
+              ]
+            ],
+            "confidence": 0.9101728562773914,
+            "score": 0.9101728562773914,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 2.0454545454545454,
+                "refined_angle_step_degrees": 0.35,
+                "weak_side_support_fraction": 0.45,
+                "side_assignment_tolerance_fraction": 0.015,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 176,
+              "coarse_supported_rays": 169,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 169,
+              "ray_support": 0.9602272727272727,
+              "mean_fused_strength": 0.8855273127555847,
+              "side_eligible_rays": [
+                49,
+                39,
+                49,
+                39
+              ],
+              "side_support_counts": [
+                43,
+                20,
+                41,
+                26
+              ],
+              "side_support_fractions": [
+                0.8775510204081632,
+                0.5128205128205128,
+                0.8367346938775511,
+                0.6666666666666666
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.8220051304353979
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "profile": "baseline",
+      "run_id": "run-20260816-020819",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "06a6f380f2b1",
+      "parameters": {
+        "coarse_angle_step_degrees": 1.85,
+        "refined_angle_step_degrees": 0.25,
+        "weak_side_support_fraction": 0.3,
+        "side_assignment_tolerance_fraction": 0.0075,
+        "maximum_refined_sides": 3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.97229691,
+        "mean_iou_success": 0.97229691,
+        "minimum_iou": 0.95569774,
+        "stddev_iou": 0.01518743,
+        "mean_edge_error_px": 7.45,
+        "elapsed_ms_total": 3938.174,
+        "wall_ms": 3938.63
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            136,
+            49,
+            1289,
+            973
+          ],
+          "iou": 0.97674339,
+          "edge_errors": {
+            "left": 11,
+            "top": 7,
+            "right": 0,
+            "bottom": 6,
+            "mean": 6.0,
+            "maximum": 11
+          },
+          "edge_error_mean_px": 6.0,
+          "edge_error_maximum_px": 11,
+          "elapsed_ms": 1216.978,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              136,
+              49,
+              1289,
+              973
+            ],
+            "corners": [
+              [
+                136.026611328125,
+                61.149391174316406
+              ],
+              [
+                1278.1514892578125,
+                48.943687438964844
+              ],
+              [
+                1287.8804931640625,
+                959.3213500976562
+              ],
+              [
+                145.755615234375,
+                971.5270385742188
+              ]
+            ],
+            "confidence": 0.8607640316606162,
+            "score": 0.8607640316606162,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 309,
+              "total_supported_rays": 500,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.7279799580574036,
+              "side_eligible_rays": [
+                57,
+                41,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                34,
+                27,
+                35,
+                1
+              ],
+              "side_support_fractions": [
+                0.5964912280701754,
+                0.6585365853658537,
+                0.6481481481481481,
+                0.023255813953488372
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.763132272499027
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            60,
+            17,
+            1241,
+            978
+          ],
+          "iou": 0.97723572,
+          "edge_errors": {
+            "left": 7,
+            "top": 9,
+            "right": 8,
+            "bottom": 1,
+            "mean": 6.25,
+            "maximum": 9
+          },
+          "edge_error_mean_px": 6.25,
+          "edge_error_maximum_px": 9,
+          "elapsed_ms": 1034.984,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              60,
+              17,
+              1241,
+              978
+            ],
+            "corners": [
+              [
+                61.92584991455078,
+                16.958648681640625
+              ],
+              [
+                1239.56982421875,
+                19.779266357421875
+              ],
+              [
+                1237.2783203125,
+                976.5235595703125
+              ],
+              [
+                59.63433074951172,
+                973.7030029296875
+              ]
+            ],
+            "confidence": 0.8675372725349817,
+            "score": 0.8675372725349817,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 165,
+              "refined_supported_rays": 842,
+              "total_supported_rays": 1007,
+              "ray_support": 0.8461538461538461,
+              "mean_fused_strength": 0.9032412767410278,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                10,
+                4,
+                29,
+                6
+              ],
+              "side_support_fractions": [
+                0.18181818181818182,
+                0.09302325581395349,
+                0.5370370370370371,
+                0.13953488372093023
+              ],
+              "weak_sides": [
+                1,
+                3,
+                0
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.8674398321787514
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            14,
+            27,
+            1073,
+            969
+          ],
+          "iou": 0.99599831,
+          "edge_errors": {
+            "left": 1,
+            "top": 1,
+            "right": 1,
+            "bottom": 1,
+            "mean": 1.0,
+            "maximum": 1
+          },
+          "edge_error_mean_px": 1.0,
+          "edge_error_maximum_px": 1,
+          "elapsed_ms": 1127.476,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              14,
+              27,
+              1073,
+              969
+            ],
+            "corners": [
+              [
+                16.250368118286133,
+                26.7984619140625
+              ],
+              [
+                1072.391357421875,
+                29.0067138671875
+              ],
+              [
+                1070.428955078125,
+                967.5157470703125
+              ],
+              [
+                14.288084983825684,
+                965.3074951171875
+              ]
+            ],
+            "confidence": 0.8691345867731509,
+            "score": 0.8691345867731509,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 194,
+              "refined_supported_rays": 1079,
+              "total_supported_rays": 1273,
+              "ray_support": 0.9948717948717949,
+              "mean_fused_strength": 0.621137797832489,
+              "side_eligible_rays": [
+                53,
+                45,
+                52,
+                45
+              ],
+              "side_support_counts": [
+                13,
+                18,
+                7,
+                2
+              ],
+              "side_support_fractions": [
+                0.24528301886792453,
+                0.4,
+                0.1346153846153846,
+                0.044444444444444446
+              ],
+              "weak_sides": [
+                3,
+                2,
+                0
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.9267867499375336
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            52,
+            1136,
+            941
+          ],
+          "iou": 0.95569774,
+          "edge_errors": {
+            "left": 11,
+            "top": 1,
+            "right": 35,
+            "bottom": 0,
+            "mean": 11.75,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 11.75,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 205.17,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              73,
+              52,
+              1136,
+              941
+            ],
+            "corners": [
+              [
+                75.03264617919922,
+                51.53155517578125
+              ],
+              [
+                1134.550048828125,
+                53.59661865234375
+              ],
+              [
+                1132.822998046875,
+                939.6927490234375
+              ],
+              [
+                73.30561065673828,
+                937.627685546875
+              ]
+            ],
+            "confidence": 0.913560649733784,
+            "score": 0.913560649733784,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 190,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 190,
+              "ray_support": 0.9743589743589743,
+              "mean_fused_strength": 0.9279295206069946,
+              "side_eligible_rays": [
+                55,
+                45,
+                54,
+                41
+              ],
+              "side_support_counts": [
+                51,
+                34,
+                49,
+                28
+              ],
+              "side_support_fractions": [
+                0.9272727272727272,
+                0.7555555555555555,
+                0.9074074074074074,
+                0.6829268292682927
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.7400115318609922
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            33,
+            1188,
+            966
+          ],
+          "iou": 0.95580941,
+          "edge_errors": {
+            "left": 13,
+            "top": 0,
+            "right": 34,
+            "bottom": 2,
+            "mean": 12.25,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 353.566,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              75,
+              33,
+              1188,
+              966
+            ],
+            "corners": [
+              [
+                75.131103515625,
+                35.317779541015625
+              ],
+              [
+                1184.9063720703125,
+                32.637847900390625
+              ],
+              [
+                1187.152099609375,
+                962.616455078125
+              ],
+              [
+                77.3768310546875,
+                965.29638671875
+              ]
+            ],
+            "confidence": 0.9186369913290349,
+            "score": 0.9186369913290349,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 191,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.8815383315086365,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                47,
+                22,
+                46,
+                27
+              ],
+              "side_support_fractions": [
+                0.8545454545454545,
+                0.5116279069767442,
+                0.8518518518518519,
+                0.627906976744186
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.822159510664271
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 5.42330004402902,
+        "search_fraction": 0.9
+      },
+      "profile": null,
+      "run_id": "run-20260816-020819",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "4b0617f73ec2",
+      "parameters": {
+        "coarse_angle_step_degrees": 1.85,
+        "refined_angle_step_degrees": 0.25,
+        "weak_side_support_fraction": 0.3,
+        "side_assignment_tolerance_fraction": 0.0075,
+        "maximum_refined_sides": 4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.97229691,
+        "mean_iou_success": 0.97229691,
+        "minimum_iou": 0.95569774,
+        "stddev_iou": 0.01518743,
+        "mean_edge_error_px": 7.45,
+        "elapsed_ms_total": 3553.845,
+        "wall_ms": 3554.39
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            136,
+            49,
+            1289,
+            973
+          ],
+          "iou": 0.97674339,
+          "edge_errors": {
+            "left": 11,
+            "top": 7,
+            "right": 0,
+            "bottom": 6,
+            "mean": 6.0,
+            "maximum": 11
+          },
+          "edge_error_mean_px": 6.0,
+          "edge_error_maximum_px": 11,
+          "elapsed_ms": 1121.235,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              136,
+              49,
+              1289,
+              973
+            ],
+            "corners": [
+              [
+                136.026611328125,
+                61.149391174316406
+              ],
+              [
+                1278.1514892578125,
+                48.943687438964844
+              ],
+              [
+                1287.8804931640625,
+                959.3213500976562
+              ],
+              [
+                145.755615234375,
+                971.5270385742188
+              ]
+            ],
+            "confidence": 0.8607640316606162,
+            "score": 0.8607640316606162,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 309,
+              "total_supported_rays": 500,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.7279799580574036,
+              "side_eligible_rays": [
+                57,
+                41,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                34,
+                27,
+                35,
+                1
+              ],
+              "side_support_fractions": [
+                0.5964912280701754,
+                0.6585365853658537,
+                0.6481481481481481,
+                0.023255813953488372
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.763132272499027
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            60,
+            17,
+            1241,
+            978
+          ],
+          "iou": 0.97723572,
+          "edge_errors": {
+            "left": 7,
+            "top": 9,
+            "right": 8,
+            "bottom": 1,
+            "mean": 6.25,
+            "maximum": 9
+          },
+          "edge_error_mean_px": 6.25,
+          "edge_error_maximum_px": 9,
+          "elapsed_ms": 1080.331,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              60,
+              17,
+              1241,
+              978
+            ],
+            "corners": [
+              [
+                61.92584991455078,
+                16.958648681640625
+              ],
+              [
+                1239.56982421875,
+                19.779266357421875
+              ],
+              [
+                1237.2783203125,
+                976.5235595703125
+              ],
+              [
+                59.63433074951172,
+                973.7030029296875
+              ]
+            ],
+            "confidence": 0.8675372725349817,
+            "score": 0.8675372725349817,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 165,
+              "refined_supported_rays": 842,
+              "total_supported_rays": 1007,
+              "ray_support": 0.8461538461538461,
+              "mean_fused_strength": 0.9032412767410278,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                10,
+                4,
+                29,
+                6
+              ],
+              "side_support_fractions": [
+                0.18181818181818182,
+                0.09302325581395349,
+                0.5370370370370371,
+                0.13953488372093023
+              ],
+              "weak_sides": [
+                1,
+                3,
+                0
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.8674398321787514
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            14,
+            27,
+            1073,
+            969
+          ],
+          "iou": 0.99599831,
+          "edge_errors": {
+            "left": 1,
+            "top": 1,
+            "right": 1,
+            "bottom": 1,
+            "mean": 1.0,
+            "maximum": 1
+          },
+          "edge_error_mean_px": 1.0,
+          "edge_error_maximum_px": 1,
+          "elapsed_ms": 654.75,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              14,
+              27,
+              1073,
+              969
+            ],
+            "corners": [
+              [
+                16.250368118286133,
+                26.7984619140625
+              ],
+              [
+                1072.391357421875,
+                29.0067138671875
+              ],
+              [
+                1070.428955078125,
+                967.5157470703125
+              ],
+              [
+                14.288084983825684,
+                965.3074951171875
+              ]
+            ],
+            "confidence": 0.8691345867731509,
+            "score": 0.8691345867731509,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 194,
+              "refined_supported_rays": 1079,
+              "total_supported_rays": 1273,
+              "ray_support": 0.9948717948717949,
+              "mean_fused_strength": 0.621137797832489,
+              "side_eligible_rays": [
+                53,
+                45,
+                52,
+                45
+              ],
+              "side_support_counts": [
+                13,
+                18,
+                7,
+                2
+              ],
+              "side_support_fractions": [
+                0.24528301886792453,
+                0.4,
+                0.1346153846153846,
+                0.044444444444444446
+              ],
+              "weak_sides": [
+                3,
+                2,
+                0
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.9267867499375336
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            52,
+            1136,
+            941
+          ],
+          "iou": 0.95569774,
+          "edge_errors": {
+            "left": 11,
+            "top": 1,
+            "right": 35,
+            "bottom": 0,
+            "mean": 11.75,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 11.75,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 438.148,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              73,
+              52,
+              1136,
+              941
+            ],
+            "corners": [
+              [
+                75.03264617919922,
+                51.53155517578125
+              ],
+              [
+                1134.550048828125,
+                53.59661865234375
+              ],
+              [
+                1132.822998046875,
+                939.6927490234375
+              ],
+              [
+                73.30561065673828,
+                937.627685546875
+              ]
+            ],
+            "confidence": 0.913560649733784,
+            "score": 0.913560649733784,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 190,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 190,
+              "ray_support": 0.9743589743589743,
+              "mean_fused_strength": 0.9279295206069946,
+              "side_eligible_rays": [
+                55,
+                45,
+                54,
+                41
+              ],
+              "side_support_counts": [
+                51,
+                34,
+                49,
+                28
+              ],
+              "side_support_fractions": [
+                0.9272727272727272,
+                0.7555555555555555,
+                0.9074074074074074,
+                0.6829268292682927
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.7400115318609922
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            33,
+            1188,
+            966
+          ],
+          "iou": 0.95580941,
+          "edge_errors": {
+            "left": 13,
+            "top": 0,
+            "right": 34,
+            "bottom": 2,
+            "mean": 12.25,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 259.381,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              75,
+              33,
+              1188,
+              966
+            ],
+            "corners": [
+              [
+                75.131103515625,
+                35.317779541015625
+              ],
+              [
+                1184.9063720703125,
+                32.637847900390625
+              ],
+              [
+                1187.152099609375,
+                962.616455078125
+              ],
+              [
+                77.3768310546875,
+                965.29638671875
+              ]
+            ],
+            "confidence": 0.9186369913290349,
+            "score": 0.9186369913290349,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 4
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 191,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.8815383315086365,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                47,
+                22,
+                46,
+                27
+              ],
+              "side_support_fractions": [
+                0.8545454545454545,
+                0.5116279069767442,
+                0.8518518518518519,
+                0.627906976744186
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.822159510664271
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 5.040515225031413,
+        "search_fraction": 0.5
+      },
+      "profile": null,
+      "run_id": "run-20260816-020819",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "e634d8ca1523",
+      "parameters": {
+        "coarse_angle_step_degrees": 1.85,
+        "refined_angle_step_degrees": 0.25,
+        "weak_side_support_fraction": 0.3,
+        "side_assignment_tolerance_fraction": 0.01,
+        "maximum_refined_sides": 3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.97208475,
+        "mean_iou_success": 0.97208475,
+        "minimum_iou": 0.95569774,
+        "stddev_iou": 0.01485869,
+        "mean_edge_error_px": 7.5,
+        "elapsed_ms_total": 3801.202,
+        "wall_ms": 3801.678
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            136,
+            49,
+            1289,
+            973
+          ],
+          "iou": 0.97674339,
+          "edge_errors": {
+            "left": 11,
+            "top": 7,
+            "right": 0,
+            "bottom": 6,
+            "mean": 6.0,
+            "maximum": 11
+          },
+          "edge_error_mean_px": 6.0,
+          "edge_error_maximum_px": 11,
+          "elapsed_ms": 806.478,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              136,
+              49,
+              1289,
+              973
+            ],
+            "corners": [
+              [
+                136.026611328125,
+                61.149391174316406
+              ],
+              [
+                1278.1514892578125,
+                48.943687438964844
+              ],
+              [
+                1287.8804931640625,
+                959.3213500976562
+              ],
+              [
+                145.755615234375,
+                971.5270385742188
+              ]
+            ],
+            "confidence": 0.8607640316606162,
+            "score": 0.8607640316606162,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.01,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 309,
+              "total_supported_rays": 500,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.7279799580574036,
+              "side_eligible_rays": [
+                57,
+                41,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                44,
+                27,
+                35,
+                1
+              ],
+              "side_support_fractions": [
+                0.7719298245614035,
+                0.6585365853658537,
+                0.6481481481481481,
+                0.023255813953488372
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.763132272499027
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            60,
+            17,
+            1241,
+            978
+          ],
+          "iou": 0.97723572,
+          "edge_errors": {
+            "left": 7,
+            "top": 9,
+            "right": 8,
+            "bottom": 1,
+            "mean": 6.25,
+            "maximum": 9
+          },
+          "edge_error_mean_px": 6.25,
+          "edge_error_maximum_px": 9,
+          "elapsed_ms": 1328.344,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              60,
+              17,
+              1241,
+              978
+            ],
+            "corners": [
+              [
+                61.92584991455078,
+                16.958648681640625
+              ],
+              [
+                1239.56982421875,
+                19.779266357421875
+              ],
+              [
+                1237.2783203125,
+                976.5235595703125
+              ],
+              [
+                59.63433074951172,
+                973.7030029296875
+              ]
+            ],
+            "confidence": 0.8675372725349817,
+            "score": 0.8675372725349817,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.01,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 165,
+              "refined_supported_rays": 842,
+              "total_supported_rays": 1007,
+              "ray_support": 0.8461538461538461,
+              "mean_fused_strength": 0.9032412767410278,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                10,
+                4,
+                30,
+                8
+              ],
+              "side_support_fractions": [
+                0.18181818181818182,
+                0.09302325581395349,
+                0.5555555555555556,
+                0.18604651162790697
+              ],
+              "weak_sides": [
+                1,
+                0,
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.8674398321787514
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            14,
+            30,
+            1073,
+            969
+          ],
+          "iou": 0.99493749,
+          "edge_errors": {
+            "left": 1,
+            "top": 2,
+            "right": 1,
+            "bottom": 1,
+            "mean": 1.25,
+            "maximum": 2
+          },
+          "edge_error_mean_px": 1.25,
+          "edge_error_maximum_px": 2,
+          "elapsed_ms": 1051.812,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              14,
+              30,
+              1073,
+              969
+            ],
+            "corners": [
+              [
+                16.24462890625,
+                29.5439453125
+              ],
+              [
+                1072.385498046875,
+                31.752197265625
+              ],
+              [
+                1070.428955078125,
+                967.5156860351562
+              ],
+              [
+                14.288086891174316,
+                965.3074340820312
+              ]
+            ],
+            "confidence": 0.8653494456240215,
+            "score": 0.8653494456240215,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.01,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 194,
+              "refined_supported_rays": 695,
+              "total_supported_rays": 889,
+              "ray_support": 0.9948717948717949,
+              "mean_fused_strength": 0.610328197479248,
+              "side_eligible_rays": [
+                53,
+                45,
+                52,
+                45
+              ],
+              "side_support_counts": [
+                16,
+                18,
+                7,
+                2
+              ],
+              "side_support_fractions": [
+                0.3018867924528302,
+                0.4,
+                0.1346153846153846,
+                0.044444444444444446
+              ],
+              "weak_sides": [
+                3,
+                2
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.9240754447217482
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            52,
+            1136,
+            941
+          ],
+          "iou": 0.95569774,
+          "edge_errors": {
+            "left": 11,
+            "top": 1,
+            "right": 35,
+            "bottom": 0,
+            "mean": 11.75,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 11.75,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 353.058,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              73,
+              52,
+              1136,
+              941
+            ],
+            "corners": [
+              [
+                75.03264617919922,
+                51.53155517578125
+              ],
+              [
+                1134.550048828125,
+                53.59661865234375
+              ],
+              [
+                1132.822998046875,
+                939.6927490234375
+              ],
+              [
+                73.30561065673828,
+                937.627685546875
+              ]
+            ],
+            "confidence": 0.913560649733784,
+            "score": 0.913560649733784,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.01,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 190,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 190,
+              "ray_support": 0.9743589743589743,
+              "mean_fused_strength": 0.9279295206069946,
+              "side_eligible_rays": [
+                55,
+                45,
+                54,
+                41
+              ],
+              "side_support_counts": [
+                51,
+                34,
+                49,
+                28
+              ],
+              "side_support_fractions": [
+                0.9272727272727272,
+                0.7555555555555555,
+                0.9074074074074074,
+                0.6829268292682927
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.7400115318609922
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            33,
+            1188,
+            966
+          ],
+          "iou": 0.95580941,
+          "edge_errors": {
+            "left": 13,
+            "top": 0,
+            "right": 34,
+            "bottom": 2,
+            "mean": 12.25,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 261.51,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              75,
+              33,
+              1188,
+              966
+            ],
+            "corners": [
+              [
+                75.131103515625,
+                35.317779541015625
+              ],
+              [
+                1184.9063720703125,
+                32.637847900390625
+              ],
+              [
+                1187.152099609375,
+                962.616455078125
+              ],
+              [
+                77.3768310546875,
+                965.29638671875
+              ]
+            ],
+            "confidence": 0.9186369913290349,
+            "score": 0.9186369913290349,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.01,
+                "maximum_refined_sides": 3
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 191,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.8815383315086365,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                47,
+                22,
+                46,
+                27
+              ],
+              "side_support_fractions": [
+                0.8545454545454545,
+                0.5116279069767442,
+                0.8518518518518519,
+                0.627906976744186
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.822159510664271
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 5.387970735086128,
+        "search_fraction": 0.8
+      },
+      "profile": null,
+      "run_id": "run-20260816-020819",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "b45c5ee0f5fa",
+      "parameters": {
+        "coarse_angle_step_degrees": 1.85,
+        "refined_angle_step_degrees": 0.25,
+        "weak_side_support_fraction": 0.3,
+        "side_assignment_tolerance_fraction": 0.0075,
+        "maximum_refined_sides": 2
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.9720476,
+        "mean_iou_success": 0.9720476,
+        "minimum_iou": 0.95569774,
+        "stddev_iou": 0.014846,
+        "mean_edge_error_px": 7.5,
+        "elapsed_ms_total": 3354.105,
+        "wall_ms": 3354.694
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            136,
+            49,
+            1289,
+            973
+          ],
+          "iou": 0.97674339,
+          "edge_errors": {
+            "left": 11,
+            "top": 7,
+            "right": 0,
+            "bottom": 6,
+            "mean": 6.0,
+            "maximum": 11
+          },
+          "edge_error_mean_px": 6.0,
+          "edge_error_maximum_px": 11,
+          "elapsed_ms": 1296.438,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              136,
+              49,
+              1289,
+              973
+            ],
+            "corners": [
+              [
+                136.026611328125,
+                61.149391174316406
+              ],
+              [
+                1278.1514892578125,
+                48.943687438964844
+              ],
+              [
+                1287.8804931640625,
+                959.3213500976562
+              ],
+              [
+                145.755615234375,
+                971.5270385742188
+              ]
+            ],
+            "confidence": 0.8607640316606162,
+            "score": 0.8607640316606162,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 2
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 309,
+              "total_supported_rays": 500,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.7279799580574036,
+              "side_eligible_rays": [
+                57,
+                41,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                34,
+                27,
+                35,
+                1
+              ],
+              "side_support_fractions": [
+                0.5964912280701754,
+                0.6585365853658537,
+                0.6481481481481481,
+                0.023255813953488372
+              ],
+              "weak_sides": [
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.763132272499027
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            60,
+            18,
+            1240,
+            976
+          ],
+          "iou": 0.97704996,
+          "edge_errors": {
+            "left": 7,
+            "top": 10,
+            "right": 7,
+            "bottom": 1,
+            "mean": 6.25,
+            "maximum": 10
+          },
+          "edge_error_mean_px": 6.25,
+          "edge_error_maximum_px": 10,
+          "elapsed_ms": 727.003,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              60,
+              18,
+              1240,
+              976
+            ],
+            "corners": [
+              [
+                61.50101089477539,
+                17.7696533203125
+              ],
+              [
+                1239.1497802734375,
+                19.20416259765625
+              ],
+              [
+                1237.9849853515625,
+                975.3754272460938
+              ],
+              [
+                60.33626937866211,
+                973.94091796875
+              ]
+            ],
+            "confidence": 0.8570858964565071,
+            "score": 0.8570858964565071,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 2
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 165,
+              "refined_supported_rays": 447,
+              "total_supported_rays": 612,
+              "ray_support": 0.8461538461538461,
+              "mean_fused_strength": 0.8687498569488525,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                10,
+                4,
+                29,
+                6
+              ],
+              "side_support_fractions": [
+                0.18181818181818182,
+                0.09302325581395349,
+                0.5370370370370371,
+                0.13953488372093023
+              ],
+              "weak_sides": [
+                1,
+                3
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.8669200814746416
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            14,
+            30,
+            1073,
+            969
+          ],
+          "iou": 0.99493749,
+          "edge_errors": {
+            "left": 1,
+            "top": 2,
+            "right": 1,
+            "bottom": 1,
+            "mean": 1.25,
+            "maximum": 2
+          },
+          "edge_error_mean_px": 1.25,
+          "edge_error_maximum_px": 2,
+          "elapsed_ms": 676.209,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              14,
+              30,
+              1073,
+              969
+            ],
+            "corners": [
+              [
+                16.24462890625,
+                29.5439453125
+              ],
+              [
+                1072.385498046875,
+                31.752197265625
+              ],
+              [
+                1070.428955078125,
+                967.5156860351562
+              ],
+              [
+                14.288086891174316,
+                965.3074340820312
+              ]
+            ],
+            "confidence": 0.8653494456240215,
+            "score": 0.8653494456240215,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 2
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 194,
+              "refined_supported_rays": 695,
+              "total_supported_rays": 889,
+              "ray_support": 0.9948717948717949,
+              "mean_fused_strength": 0.610328197479248,
+              "side_eligible_rays": [
+                53,
+                45,
+                52,
+                45
+              ],
+              "side_support_counts": [
+                13,
+                18,
+                7,
+                2
+              ],
+              "side_support_fractions": [
+                0.24528301886792453,
+                0.4,
+                0.1346153846153846,
+                0.044444444444444446
+              ],
+              "weak_sides": [
+                3,
+                2
+              ],
+              "refinement_triggered": true,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.9240754447217482
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            52,
+            1136,
+            941
+          ],
+          "iou": 0.95569774,
+          "edge_errors": {
+            "left": 11,
+            "top": 1,
+            "right": 35,
+            "bottom": 0,
+            "mean": 11.75,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 11.75,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 460.425,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              73,
+              52,
+              1136,
+              941
+            ],
+            "corners": [
+              [
+                75.03264617919922,
+                51.53155517578125
+              ],
+              [
+                1134.550048828125,
+                53.59661865234375
+              ],
+              [
+                1132.822998046875,
+                939.6927490234375
+              ],
+              [
+                73.30561065673828,
+                937.627685546875
+              ]
+            ],
+            "confidence": 0.913560649733784,
+            "score": 0.913560649733784,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 2
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 190,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 190,
+              "ray_support": 0.9743589743589743,
+              "mean_fused_strength": 0.9279295206069946,
+              "side_eligible_rays": [
+                55,
+                45,
+                54,
+                41
+              ],
+              "side_support_counts": [
+                51,
+                34,
+                49,
+                28
+              ],
+              "side_support_fractions": [
+                0.9272727272727272,
+                0.7555555555555555,
+                0.9074074074074074,
+                0.6829268292682927
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.7400115318609922
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            33,
+            1188,
+            966
+          ],
+          "iou": 0.95580941,
+          "edge_errors": {
+            "left": 13,
+            "top": 0,
+            "right": 34,
+            "bottom": 2,
+            "mean": 12.25,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 194.03,
+          "candidate": {
+            "method": "adaptive_multi_scale_radial_edge",
+            "bbox": [
+              75,
+              33,
+              1188,
+              966
+            ],
+            "corners": [
+              [
+                75.131103515625,
+                35.317779541015625
+              ],
+              [
+                1184.9063720703125,
+                32.637847900390625
+              ],
+              [
+                1187.152099609375,
+                962.616455078125
+              ],
+              [
+                77.3768310546875,
+                965.29638671875
+              ]
+            ],
+            "confidence": 0.9186369913290349,
+            "score": 0.9186369913290349,
+            "diagnostics": {
+              "parameters": {
+                "base_sigma": 1.0,
+                "scale_ratio": 3.5,
+                "scale_count": 4,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.78,
+                "gradient_percentile": 96.875,
+                "minimum_ray_support": 0.36,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.5,
+                "strength_weight": 0.3,
+                "area_weight": 0.2,
+                "coarse_angle_step_degrees": 1.85,
+                "refined_angle_step_degrees": 0.25,
+                "weak_side_support_fraction": 0.3,
+                "side_assignment_tolerance_fraction": 0.0075,
+                "maximum_refined_sides": 2
+              },
+              "parent_detector": "multi_scale_radial_edge",
+              "parent_parameter_set_id": "ddb7623ebb92",
+              "scale_sigmas": [
+                1.0,
+                3.5,
+                12.25,
+                42.875
+              ],
+              "requested_coarse_rays": 195,
+              "coarse_supported_rays": 191,
+              "refined_supported_rays": 0,
+              "total_supported_rays": 191,
+              "ray_support": 0.9794871794871794,
+              "mean_fused_strength": 0.8815383315086365,
+              "side_eligible_rays": [
+                55,
+                43,
+                54,
+                43
+              ],
+              "side_support_counts": [
+                47,
+                22,
+                46,
+                27
+              ],
+              "side_support_fractions": [
+                0.8545454545454545,
+                0.5116279069767442,
+                0.8518518518518519,
+                0.627906976744186
+              ],
+              "weak_sides": [],
+              "refinement_triggered": false,
+              "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+              "area_fraction": 0.822159510664271
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 4.840807373053394,
+        "search_fraction": 0.4
+      },
+      "profile": null,
+      "run_id": "run-20260816-020819",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.99725921,
+        "winner_iou": 0.99725921,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "e8e8dc34f8fb",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.99587401,
+        "winner_iou": 0.99587401,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "e8e8dc34f8fb",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.97674339,
+        "winner_iou": 0.97674339,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "e8e8dc34f8fb",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.95727292,
+        "winner_iou": 0.95727292,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "e8e8dc34f8fb",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.95659668,
+        "winner_iou": 0.95659668,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "e8e8dc34f8fb",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-al321",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "atlhwe-lsf321",
+    "cpu_model": "AMD EPYC 9655 96-Core Processor",
+    "physical_core_count": 192,
+    "logical_cpu_count": 192,
+    "available_cpu_count": 192,
+    "smt_enabled": false,
+    "memory_bytes": 1622717120512,
+    "memory_gib": 1511.27,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "206c8319811dd428cfcf893b7efcdf29803529fb",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31920859947",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "self-hosted",
+      "192t"
+    ]
+  },
+  "source_commit": "32f2f8dfe02f2ebf815ae20100a02b9fd58def67",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 76,
+    "peak_rss_bytes": 884686848,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 1.8219494536194418,
+    "failures": 0,
+    "best_mean_iou": 0.97674924,
+    "best_worst_page_iou": 0.95659668,
+    "best_stddev_iou": 0.01393048,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 1,
+    "total_metric_improvements": 1,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": 4.5345829090802,
+    "time_since_last_improvement_seconds": 0.9540435619419441
+  }
+}
