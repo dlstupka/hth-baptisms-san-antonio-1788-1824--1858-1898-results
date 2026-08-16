@@ -1,0 +1,79 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "radon_boundary",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "ecff96c32abd5f50e2fbbb8fd4ac1d0fc0890e57db208c6bf2dad3c47c281c8f",
+    "parameter_order": [
+      "angle_limit_degrees",
+      "angle_step_degrees",
+      "edge_percentile",
+      "projection_smooth_fraction",
+      "minimum_peak_prominence",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "angle_limit_degrees": [
+        4.0,
+        8.0,
+        12.0
+      ],
+      "angle_step_degrees": [
+        0.5,
+        1.0,
+        2.0
+      ],
+      "edge_percentile": [
+        75.0,
+        82.0,
+        90.0
+      ],
+      "projection_smooth_fraction": [
+        0.006,
+        0.012,
+        0.024
+      ],
+      "minimum_peak_prominence": [
+        1.05,
+        1.25,
+        1.6
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.008,
+        0.016
+      ]
+    },
+    "cartesian_count": 729,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "angle_limit_degrees": 8.0,
+      "angle_step_degrees": 1.0,
+      "edge_percentile": 82.0,
+      "projection_smooth_fraction": 0.012,
+      "minimum_peak_prominence": 1.25,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}

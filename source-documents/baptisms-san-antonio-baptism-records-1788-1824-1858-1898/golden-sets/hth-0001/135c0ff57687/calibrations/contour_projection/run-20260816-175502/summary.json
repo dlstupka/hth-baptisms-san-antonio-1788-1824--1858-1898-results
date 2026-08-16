@@ -1,0 +1,4149 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260816-175502",
+  "detector": "contour_projection",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "13.582",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "17",
+    "ranked_quality": "0.87682013",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 6562,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 50,
+  "fully_successful_parameter_set_count": 10,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "133852cd89497eca0af3a11e0d8b85523059520aa30c15097eaadbc3dfa491d0",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "0cd13eb1a471",
+    "parameters": {
+      "minimum_contour_area_fraction": 0.12,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "epsilon_min_fraction": 0.008,
+      "epsilon_max_fraction": 0.04,
+      "epsilon_steps": 9,
+      "minimum_rectangularity": 0.55,
+      "projection_margin_fraction": 0.06,
+      "projection_threshold_block_fraction": 0.08,
+      "projection_threshold_c": 9.0,
+      "minimum_projection_score": 0.08,
+      "area_weight": 0.25,
+      "rectangularity_weight": 0.25,
+      "angle_weight": 0.2,
+      "projection_weight": 0.3,
+      "merge_fragmented_contours": true
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.87682013,
+      "mean_iou_success": 0.87682013,
+      "minimum_iou": 0.75890607,
+      "stddev_iou": 0.07335619,
+      "mean_edge_error_px": 34.8,
+      "elapsed_ms_total": 1727.077,
+      "wall_ms": 1727.796
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          111,
+          18,
+          1382,
+          939
+        ],
+        "iou": 0.85424412,
+        "edge_errors": {
+          "left": 14,
+          "top": 38,
+          "right": 93,
+          "bottom": 28,
+          "mean": 43.25,
+          "maximum": 93
+        },
+        "edge_error_mean_px": 43.25,
+        "edge_error_maximum_px": 93,
+        "elapsed_ms": 519.457,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "corners": [
+            [
+              111.0,
+              90.0
+            ],
+            [
+              1381.0,
+              18.0
+            ],
+            [
+              1257.0,
+              938.0
+            ],
+            [
+              235.0,
+              917.0
+            ]
+          ],
+          "confidence": 0.745349,
+          "score": 0.745349,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 8,
+            "contour_hypothesis_count": 9,
+            "quadrilateral_count": 13,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.016,
+            "area_score": 0.7346197,
+            "rectangularity": 1.0,
+            "angle_score": 0.85918058,
+            "projection_score": 0.46619184,
+            "horizontal_band_score": 0.25166229,
+            "vertical_coverage_score": 0.84761905,
+            "ink_fraction": 0.24160867
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          119,
+          15,
+          1316,
+          949
+        ],
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52,
+          "top": 7,
+          "right": 83,
+          "bottom": 28,
+          "mean": 42.5,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 171.995,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "corners": [
+            [
+              119.0,
+              36.0
+            ],
+            [
+              1315.0,
+              15.0
+            ],
+            [
+              739.0,
+              948.0
+            ],
+            [
+              137.0,
+              771.0
+            ]
+          ],
+          "confidence": 0.700517,
+          "score": 0.700517,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 14,
+            "contour_hypothesis_count": 15,
+            "quadrilateral_count": 7,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.032,
+            "area_score": 0.59398934,
+            "rectangularity": 1.0,
+            "angle_score": 0.72086268,
+            "projection_score": 0.5261578,
+            "horizontal_band_score": 0.24963631,
+            "vertical_coverage_score": 0.86692015,
+            "ink_fraction": 0.18263276
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          140,
+          44,
+          1037,
+          888
+        ],
+        "iou": 0.75890607,
+        "edge_errors": {
+          "left": 125,
+          "top": 16,
+          "right": 37,
+          "bottom": 82,
+          "mean": 65.0,
+          "maximum": 125
+        },
+        "edge_error_mean_px": 65.0,
+        "edge_error_maximum_px": 125,
+        "elapsed_ms": 138.022,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "corners": [
+            [
+              140.0,
+              44.0
+            ],
+            [
+              1036.0,
+              223.0
+            ],
+            [
+              1021.0,
+              886.0
+            ],
+            [
+              424.0,
+              887.0
+            ]
+          ],
+          "confidence": 0.785786,
+          "score": 0.785786,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 125,
+            "contour_hypothesis_count": 126,
+            "quadrilateral_count": 6,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.02,
+            "area_score": 0.51439172,
+            "rectangularity": 1.0,
+            "angle_score": 0.74640746,
+            "projection_score": 0.85968993,
+            "horizontal_band_score": 0.86409615,
+            "vertical_coverage_score": 0.86567164,
+            "ink_fraction": 0.13305126
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          56,
+          1119,
+          938
+        ],
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11,
+          "top": 5,
+          "right": 18,
+          "bottom": 3,
+          "mean": 9.25,
+          "maximum": 18
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18,
+        "elapsed_ms": 425.606,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "corners": [
+            [
+              77.0,
+              56.0
+            ],
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              1118.0,
+              937.0
+            ],
+            [
+              73.0,
+              932.0
+            ]
+          ],
+          "confidence": 0.848879,
+          "score": 0.848879,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 1,
+            "contour_hypothesis_count": 2,
+            "quadrilateral_count": 18,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "area_score": 0.72118974,
+            "rectangularity": 1.0,
+            "angle_score": 0.9959051,
+            "projection_score": 0.73133618,
+            "horizontal_band_score": 0.66518888,
+            "vertical_coverage_score": 0.86470802,
+            "ink_fraction": 0.20685879
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          81,
+          44,
+          1172,
+          948
+        ],
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7,
+          "top": 11,
+          "right": 18,
+          "bottom": 20,
+          "mean": 14.0,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 471.997,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "corners": [
+            [
+              84.0,
+              44.0
+            ],
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              1171.0,
+              947.0
+            ],
+            [
+              81.0,
+              945.0
+            ]
+          ],
+          "confidence": 0.858635,
+          "score": 0.858635,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 3,
+            "contour_hypothesis_count": 4,
+            "quadrilateral_count": 18,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "area_score": 0.77242297,
+            "rectangularity": 1.0,
+            "angle_score": 0.98339192,
+            "projection_score": 0.72950154,
+            "horizontal_band_score": 0.66222622,
+            "vertical_coverage_score": 0.85972222,
+            "ink_fraction": 0.20548218
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "0cd13eb1a471",
+    "parameter_identity_sha256": "36d705551505b46c54b4407c7708373a5529e88a69afa087f3365f8699ce3a9b",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": null,
+    "parameter_grid_sha256": null,
+    "profile": "baseline",
+    "run_id": "run-20260816-175502",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "0cd13eb1a471",
+    "parameters": {
+      "minimum_contour_area_fraction": 0.12,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "epsilon_min_fraction": 0.008,
+      "epsilon_max_fraction": 0.04,
+      "epsilon_steps": 9,
+      "minimum_rectangularity": 0.55,
+      "projection_margin_fraction": 0.06,
+      "projection_threshold_block_fraction": 0.08,
+      "projection_threshold_c": 9.0,
+      "minimum_projection_score": 0.08,
+      "area_weight": 0.25,
+      "rectangularity_weight": 0.25,
+      "angle_weight": 0.2,
+      "projection_weight": 0.3,
+      "merge_fragmented_contours": true
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.87682013,
+      "mean_iou_success": 0.87682013,
+      "minimum_iou": 0.75890607,
+      "stddev_iou": 0.07335619,
+      "mean_edge_error_px": 34.8,
+      "elapsed_ms_total": 1727.077,
+      "wall_ms": 1727.796
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          111,
+          18,
+          1382,
+          939
+        ],
+        "iou": 0.85424412,
+        "edge_errors": {
+          "left": 14,
+          "top": 38,
+          "right": 93,
+          "bottom": 28,
+          "mean": 43.25,
+          "maximum": 93
+        },
+        "edge_error_mean_px": 43.25,
+        "edge_error_maximum_px": 93,
+        "elapsed_ms": 519.457,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "corners": [
+            [
+              111.0,
+              90.0
+            ],
+            [
+              1381.0,
+              18.0
+            ],
+            [
+              1257.0,
+              938.0
+            ],
+            [
+              235.0,
+              917.0
+            ]
+          ],
+          "confidence": 0.745349,
+          "score": 0.745349,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 8,
+            "contour_hypothesis_count": 9,
+            "quadrilateral_count": 13,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.016,
+            "area_score": 0.7346197,
+            "rectangularity": 1.0,
+            "angle_score": 0.85918058,
+            "projection_score": 0.46619184,
+            "horizontal_band_score": 0.25166229,
+            "vertical_coverage_score": 0.84761905,
+            "ink_fraction": 0.24160867
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          119,
+          15,
+          1316,
+          949
+        ],
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52,
+          "top": 7,
+          "right": 83,
+          "bottom": 28,
+          "mean": 42.5,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 171.995,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "corners": [
+            [
+              119.0,
+              36.0
+            ],
+            [
+              1315.0,
+              15.0
+            ],
+            [
+              739.0,
+              948.0
+            ],
+            [
+              137.0,
+              771.0
+            ]
+          ],
+          "confidence": 0.700517,
+          "score": 0.700517,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 14,
+            "contour_hypothesis_count": 15,
+            "quadrilateral_count": 7,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.032,
+            "area_score": 0.59398934,
+            "rectangularity": 1.0,
+            "angle_score": 0.72086268,
+            "projection_score": 0.5261578,
+            "horizontal_band_score": 0.24963631,
+            "vertical_coverage_score": 0.86692015,
+            "ink_fraction": 0.18263276
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          140,
+          44,
+          1037,
+          888
+        ],
+        "iou": 0.75890607,
+        "edge_errors": {
+          "left": 125,
+          "top": 16,
+          "right": 37,
+          "bottom": 82,
+          "mean": 65.0,
+          "maximum": 125
+        },
+        "edge_error_mean_px": 65.0,
+        "edge_error_maximum_px": 125,
+        "elapsed_ms": 138.022,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "corners": [
+            [
+              140.0,
+              44.0
+            ],
+            [
+              1036.0,
+              223.0
+            ],
+            [
+              1021.0,
+              886.0
+            ],
+            [
+              424.0,
+              887.0
+            ]
+          ],
+          "confidence": 0.785786,
+          "score": 0.785786,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 125,
+            "contour_hypothesis_count": 126,
+            "quadrilateral_count": 6,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "merged_convex_hull",
+            "epsilon_fraction": 0.02,
+            "area_score": 0.51439172,
+            "rectangularity": 1.0,
+            "angle_score": 0.74640746,
+            "projection_score": 0.85968993,
+            "horizontal_band_score": 0.86409615,
+            "vertical_coverage_score": 0.86567164,
+            "ink_fraction": 0.13305126
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          56,
+          1119,
+          938
+        ],
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11,
+          "top": 5,
+          "right": 18,
+          "bottom": 3,
+          "mean": 9.25,
+          "maximum": 18
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18,
+        "elapsed_ms": 425.606,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "corners": [
+            [
+              77.0,
+              56.0
+            ],
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              1118.0,
+              937.0
+            ],
+            [
+              73.0,
+              932.0
+            ]
+          ],
+          "confidence": 0.848879,
+          "score": 0.848879,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 1,
+            "contour_hypothesis_count": 2,
+            "quadrilateral_count": 18,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "area_score": 0.72118974,
+            "rectangularity": 1.0,
+            "angle_score": 0.9959051,
+            "projection_score": 0.73133618,
+            "horizontal_band_score": 0.66518888,
+            "vertical_coverage_score": 0.86470802,
+            "ink_fraction": 0.20685879
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          81,
+          44,
+          1172,
+          948
+        ],
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7,
+          "top": 11,
+          "right": 18,
+          "bottom": 20,
+          "mean": 14.0,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 471.997,
+        "candidate": {
+          "method": "contour_projection",
+          "bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "corners": [
+            [
+              84.0,
+              44.0
+            ],
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              1171.0,
+              947.0
+            ],
+            [
+              81.0,
+              945.0
+            ]
+          ],
+          "confidence": 0.858635,
+          "score": 0.858635,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "close_kernel_fraction": 0.008,
+              "close_iterations": 1,
+              "epsilon_min_fraction": 0.008,
+              "epsilon_max_fraction": 0.04,
+              "epsilon_steps": 9,
+              "minimum_rectangularity": 0.55,
+              "projection_margin_fraction": 0.06,
+              "projection_threshold_block_fraction": 0.08,
+              "projection_threshold_c": 9.0,
+              "minimum_projection_score": 0.08,
+              "area_weight": 0.25,
+              "rectangularity_weight": 0.25,
+              "angle_weight": 0.2,
+              "projection_weight": 0.3,
+              "merge_fragmented_contours": true
+            },
+            "external_contour_count": 3,
+            "contour_hypothesis_count": 4,
+            "quadrilateral_count": 18,
+            "rejected_rectangularity": 0,
+            "rejected_projection": 0,
+            "close_kernel_size": 9,
+            "contour_source": "external_contour",
+            "epsilon_fraction": 0.008,
+            "area_score": 0.77242297,
+            "rectangularity": 1.0,
+            "angle_score": 0.98339192,
+            "projection_score": 0.72950154,
+            "horizontal_band_score": 0.66222622,
+            "vertical_coverage_score": 0.85972222,
+            "ink_fraction": 0.20548218
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "0cd13eb1a471",
+    "parameter_identity_sha256": "36d705551505b46c54b4407c7708373a5529e88a69afa087f3365f8699ce3a9b",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": null,
+    "parameter_grid_sha256": null,
+    "profile": "baseline",
+    "run_id": "run-20260816-175502",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "0cd13eb1a471",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.12,
+        "close_kernel_fraction": 0.008,
+        "close_iterations": 1,
+        "epsilon_min_fraction": 0.008,
+        "epsilon_max_fraction": 0.04,
+        "epsilon_steps": 9,
+        "minimum_rectangularity": 0.55,
+        "projection_margin_fraction": 0.06,
+        "projection_threshold_block_fraction": 0.08,
+        "projection_threshold_c": 9.0,
+        "minimum_projection_score": 0.08,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.25,
+        "angle_weight": 0.2,
+        "projection_weight": 0.3,
+        "merge_fragmented_contours": true
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87682013,
+        "mean_iou_success": 0.87682013,
+        "minimum_iou": 0.75890607,
+        "stddev_iou": 0.07335619,
+        "mean_edge_error_px": 34.8,
+        "elapsed_ms_total": 1727.077,
+        "wall_ms": 1727.796
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 519.457,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.745349,
+            "score": 0.745349,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "projection_margin_fraction": 0.06,
+                "projection_threshold_block_fraction": 0.08,
+                "projection_threshold_c": 9.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 8,
+              "contour_hypothesis_count": 9,
+              "quadrilateral_count": 13,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.016,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "projection_score": 0.46619184,
+              "horizontal_band_score": 0.25166229,
+              "vertical_coverage_score": 0.84761905,
+              "ink_fraction": 0.24160867
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 171.995,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.700517,
+            "score": 0.700517,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "projection_margin_fraction": 0.06,
+                "projection_threshold_block_fraction": 0.08,
+                "projection_threshold_c": 9.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 14,
+              "contour_hypothesis_count": 15,
+              "quadrilateral_count": 7,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.032,
+              "area_score": 0.59398934,
+              "rectangularity": 1.0,
+              "angle_score": 0.72086268,
+              "projection_score": 0.5261578,
+              "horizontal_band_score": 0.24963631,
+              "vertical_coverage_score": 0.86692015,
+              "ink_fraction": 0.18263276
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 138.022,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.785786,
+            "score": 0.785786,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "projection_margin_fraction": 0.06,
+                "projection_threshold_block_fraction": 0.08,
+                "projection_threshold_c": 9.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 125,
+              "contour_hypothesis_count": 126,
+              "quadrilateral_count": 6,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.02,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "projection_score": 0.85968993,
+              "horizontal_band_score": 0.86409615,
+              "vertical_coverage_score": 0.86567164,
+              "ink_fraction": 0.13305126
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 425.606,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.848879,
+            "score": 0.848879,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "projection_margin_fraction": 0.06,
+                "projection_threshold_block_fraction": 0.08,
+                "projection_threshold_c": 9.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "projection_score": 0.73133618,
+              "horizontal_band_score": 0.66518888,
+              "vertical_coverage_score": 0.86470802,
+              "ink_fraction": 0.20685879
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 471.997,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.858635,
+            "score": 0.858635,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.04,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.55,
+                "projection_margin_fraction": 0.06,
+                "projection_threshold_block_fraction": 0.08,
+                "projection_threshold_c": 9.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "projection_score": 0.72950154,
+              "horizontal_band_score": 0.66222622,
+              "vertical_coverage_score": 0.85972222,
+              "ink_fraction": 0.20548218
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "legacy_parameter_set_id": "0cd13eb1a471",
+      "parameter_identity_sha256": "36d705551505b46c54b4407c7708373a5529e88a69afa087f3365f8699ce3a9b",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": null,
+      "parameter_grid_sha256": null,
+      "profile": "baseline",
+      "run_id": "run-20260816-175502",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "172304831b2e",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "projection_margin_fraction": 0.03,
+        "projection_threshold_block_fraction": 0.05,
+        "projection_threshold_c": 5.0,
+        "minimum_projection_score": 0.05,
+        "projection_weight": 0.2
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87682013,
+        "mean_iou_success": 0.87682013,
+        "minimum_iou": 0.75890607,
+        "stddev_iou": 0.07335619,
+        "mean_edge_error_px": 34.8,
+        "elapsed_ms_total": 2519.499,
+        "wall_ms": 2520.138
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 615.961,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.771232,
+            "score": 0.771232,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 8,
+              "contour_hypothesis_count": 9,
+              "quadrilateral_count": 13,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0135,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "projection_score": 0.44308945,
+              "horizontal_band_score": 0.22819046,
+              "vertical_coverage_score": 0.85507246,
+              "ink_fraction": 0.25486618
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 74.899,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.694904,
+            "score": 0.694904,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 14,
+              "contour_hypothesis_count": 15,
+              "quadrilateral_count": 3,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.03,
+              "area_score": 0.59398934,
+              "rectangularity": 1.0,
+              "angle_score": 0.72086268,
+              "projection_score": 0.4137179,
+              "horizontal_band_score": 0.17767954,
+              "vertical_coverage_score": 0.86476868,
+              "ink_fraction": 0.25966555
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 208.114,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.767899,
+            "score": 0.767899,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 125,
+              "contour_hypothesis_count": 126,
+              "quadrilateral_count": 5,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.019,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "projection_score": 0.81614948,
+              "horizontal_band_score": 0.78039863,
+              "vertical_coverage_score": 0.86356589,
+              "ink_fraction": 0.1363845
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 809.235,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.858757,
+            "score": 0.858757,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "projection_score": 0.71701602,
+              "horizontal_band_score": 0.65500048,
+              "vertical_coverage_score": 0.86130892,
+              "ink_fraction": 0.21506871
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 811.29,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.867197,
+            "score": 0.867197,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "projection_score": 0.70346631,
+              "horizontal_band_score": 0.63826144,
+              "vertical_coverage_score": 0.85286458,
+              "ink_fraction": 0.21699932
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 4.255605621999962,
+        "search_fraction": 0.2
+      },
+      "legacy_parameter_set_id": "172304831b2e",
+      "parameter_identity_sha256": "fe62109509fe3625284cc02bc063da643396cee13b53d5a7da4c295bf658baaa",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "149e8c6a92ffd1294241a96d1709a656649b0e95e5ec95df4f1b520b559c501a",
+      "profile": null,
+      "run_id": "run-20260816-175502",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "06593bf5afce",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "projection_margin_fraction": 0.03,
+        "projection_threshold_block_fraction": 0.05,
+        "projection_threshold_c": 5.0,
+        "minimum_projection_score": 0.05,
+        "projection_weight": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87682013,
+        "mean_iou_success": 0.87682013,
+        "minimum_iou": 0.75890607,
+        "stddev_iou": 0.07335619,
+        "mean_edge_error_px": 34.8,
+        "elapsed_ms_total": 2735.038,
+        "wall_ms": 2735.648
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 560.938,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.738418,
+            "score": 0.738418,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 8,
+              "contour_hypothesis_count": 9,
+              "quadrilateral_count": 13,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0135,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "projection_score": 0.44308945,
+              "horizontal_band_score": 0.22819046,
+              "vertical_coverage_score": 0.85507246,
+              "ink_fraction": 0.25486618
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 132.768,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.666785,
+            "score": 0.666785,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 14,
+              "contour_hypothesis_count": 15,
+              "quadrilateral_count": 3,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.03,
+              "area_score": 0.59398934,
+              "rectangularity": 1.0,
+              "angle_score": 0.72086268,
+              "projection_score": 0.4137179,
+              "horizontal_band_score": 0.17767954,
+              "vertical_coverage_score": 0.86476868,
+              "ink_fraction": 0.25966555
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 262.668,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.772724,
+            "score": 0.772724,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 125,
+              "contour_hypothesis_count": 126,
+              "quadrilateral_count": 5,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.019,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "projection_score": 0.81614948,
+              "horizontal_band_score": 0.78039863,
+              "vertical_coverage_score": 0.86356589,
+              "ink_fraction": 0.1363845
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 920.501,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.844583,
+            "score": 0.844583,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "projection_score": 0.71701602,
+              "horizontal_band_score": 0.65500048,
+              "vertical_coverage_score": 0.86130892,
+              "ink_fraction": 0.21506871
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 858.163,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.850824,
+            "score": 0.850824,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.3,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "projection_score": 0.70346631,
+              "horizontal_band_score": 0.63826144,
+              "vertical_coverage_score": 0.85286458,
+              "ink_fraction": 0.21699932
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 4.468207398000004,
+        "search_fraction": 0.3
+      },
+      "legacy_parameter_set_id": "06593bf5afce",
+      "parameter_identity_sha256": "62faf803c21b67ef1957460b42dde186c4c0b87df52ef224239c4715f8abbcc5",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "149e8c6a92ffd1294241a96d1709a656649b0e95e5ec95df4f1b520b559c501a",
+      "profile": null,
+      "run_id": "run-20260816-175502",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "07cc1ff1c71c",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "projection_margin_fraction": 0.03,
+        "projection_threshold_block_fraction": 0.05,
+        "projection_threshold_c": 5.0,
+        "minimum_projection_score": 0.05,
+        "projection_weight": 0.4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87682013,
+        "mean_iou_success": 0.87682013,
+        "minimum_iou": 0.75890607,
+        "stddev_iou": 0.07335619,
+        "mean_edge_error_px": 34.8,
+        "elapsed_ms_total": 2562.205,
+        "wall_ms": 2562.881
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 639.916,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.71157,
+            "score": 0.71157,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.4,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 8,
+              "contour_hypothesis_count": 9,
+              "quadrilateral_count": 13,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0135,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "projection_score": 0.44308945,
+              "horizontal_band_score": 0.22819046,
+              "vertical_coverage_score": 0.85507246,
+              "ink_fraction": 0.25486618
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 103.067,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.643779,
+            "score": 0.643779,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.4,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 14,
+              "contour_hypothesis_count": 15,
+              "quadrilateral_count": 3,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.03,
+              "area_score": 0.59398934,
+              "rectangularity": 1.0,
+              "angle_score": 0.72086268,
+              "projection_score": 0.4137179,
+              "horizontal_band_score": 0.17767954,
+              "vertical_coverage_score": 0.86476868,
+              "ink_fraction": 0.25966555
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 181.046,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.776672,
+            "score": 0.776672,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.4,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 125,
+              "contour_hypothesis_count": 126,
+              "quadrilateral_count": 5,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.019,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "projection_score": 0.81614948,
+              "horizontal_band_score": 0.78039863,
+              "vertical_coverage_score": 0.86356589,
+              "ink_fraction": 0.1363845
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 806.345,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.832986,
+            "score": 0.832986,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.4,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "projection_score": 0.71701602,
+              "horizontal_band_score": 0.65500048,
+              "vertical_coverage_score": 0.86130892,
+              "ink_fraction": 0.21506871
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 831.831,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.837428,
+            "score": 0.837428,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.05,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.4,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "projection_score": 0.70346631,
+              "horizontal_band_score": 0.63826144,
+              "vertical_coverage_score": 0.85286458,
+              "ink_fraction": 0.21699932
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 6.81760374199996,
+        "search_fraction": 0.4
+      },
+      "legacy_parameter_set_id": "07cc1ff1c71c",
+      "parameter_identity_sha256": "2200f4a6c80136efa0d9d106f52adfcb0be07c7431a7500ca87999478170746e",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "149e8c6a92ffd1294241a96d1709a656649b0e95e5ec95df4f1b520b559c501a",
+      "profile": null,
+      "run_id": "run-20260816-175502",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "8d75cf39600c",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "projection_margin_fraction": 0.03,
+        "projection_threshold_block_fraction": 0.05,
+        "projection_threshold_c": 5.0,
+        "minimum_projection_score": 0.08,
+        "projection_weight": 0.2
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.87682013,
+        "mean_iou_success": 0.87682013,
+        "minimum_iou": 0.75890607,
+        "stddev_iou": 0.07335619,
+        "mean_edge_error_px": 34.8,
+        "elapsed_ms_total": 2798.795,
+        "wall_ms": 2799.516
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 545.355,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.771232,
+            "score": 0.771232,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 8,
+              "contour_hypothesis_count": 9,
+              "quadrilateral_count": 13,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.0135,
+              "area_score": 0.7346197,
+              "rectangularity": 1.0,
+              "angle_score": 0.85918058,
+              "projection_score": 0.44308945,
+              "horizontal_band_score": 0.22819046,
+              "vertical_coverage_score": 0.85507246,
+              "ink_fraction": 0.25486618
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 116.1,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.694904,
+            "score": 0.694904,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 14,
+              "contour_hypothesis_count": 15,
+              "quadrilateral_count": 3,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.03,
+              "area_score": 0.59398934,
+              "rectangularity": 1.0,
+              "angle_score": 0.72086268,
+              "projection_score": 0.4137179,
+              "horizontal_band_score": 0.17767954,
+              "vertical_coverage_score": 0.86476868,
+              "ink_fraction": 0.25966555
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            140,
+            44,
+            1037,
+            888
+          ],
+          "iou": 0.75890607,
+          "edge_errors": {
+            "left": 125,
+            "top": 16,
+            "right": 37,
+            "bottom": 82,
+            "mean": 65.0,
+            "maximum": 125
+          },
+          "edge_error_mean_px": 65.0,
+          "edge_error_maximum_px": 125,
+          "elapsed_ms": 148.182,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              140,
+              44,
+              1037,
+              888
+            ],
+            "corners": [
+              [
+                140.0,
+                44.0
+              ],
+              [
+                1036.0,
+                223.0
+              ],
+              [
+                1021.0,
+                886.0
+              ],
+              [
+                424.0,
+                887.0
+              ]
+            ],
+            "confidence": 0.767899,
+            "score": 0.767899,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 125,
+              "contour_hypothesis_count": 126,
+              "quadrilateral_count": 5,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "merged_convex_hull",
+              "epsilon_fraction": 0.019,
+              "area_score": 0.51439172,
+              "rectangularity": 1.0,
+              "angle_score": 0.74640746,
+              "projection_score": 0.81614948,
+              "horizontal_band_score": 0.78039863,
+              "vertical_coverage_score": 0.86356589,
+              "ink_fraction": 0.1363845
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 941.809,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.858757,
+            "score": 0.858757,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 1,
+              "contour_hypothesis_count": 2,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.72118974,
+              "rectangularity": 1.0,
+              "angle_score": 0.9959051,
+              "projection_score": 0.71701602,
+              "horizontal_band_score": 0.65500048,
+              "vertical_coverage_score": 0.86130892,
+              "ink_fraction": 0.21506871
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 1047.349,
+          "candidate": {
+            "method": "contour_projection",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.867197,
+            "score": 0.867197,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "close_kernel_fraction": 0.008,
+                "close_iterations": 1,
+                "epsilon_min_fraction": 0.008,
+                "epsilon_max_fraction": 0.03,
+                "epsilon_steps": 9,
+                "minimum_rectangularity": 0.45,
+                "projection_margin_fraction": 0.03,
+                "projection_threshold_block_fraction": 0.05,
+                "projection_threshold_c": 5.0,
+                "minimum_projection_score": 0.08,
+                "area_weight": 0.25,
+                "rectangularity_weight": 0.25,
+                "angle_weight": 0.2,
+                "projection_weight": 0.2,
+                "merge_fragmented_contours": true
+              },
+              "external_contour_count": 3,
+              "contour_hypothesis_count": 4,
+              "quadrilateral_count": 18,
+              "rejected_rectangularity": 0,
+              "rejected_projection": 0,
+              "close_kernel_size": 9,
+              "contour_source": "external_contour",
+              "epsilon_fraction": 0.008,
+              "area_score": 0.77242297,
+              "rectangularity": 1.0,
+              "angle_score": 0.98339192,
+              "projection_score": 0.70346631,
+              "horizontal_band_score": 0.63826144,
+              "vertical_coverage_score": 0.85286458,
+              "ink_fraction": 0.21699932
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 7.2716435090000004,
+        "search_fraction": 0.5
+      },
+      "legacy_parameter_set_id": "8d75cf39600c",
+      "parameter_identity_sha256": "9e61aa2995a39028c7a161a86c378a3e27a5c0da0cfa9c20a3662e3945c4e52d",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "149e8c6a92ffd1294241a96d1709a656649b0e95e5ec95df4f1b520b559c501a",
+      "profile": null,
+      "run_id": "run-20260816-175502",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.96377596,
+        "winner_iou": 0.96377596,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "0cd13eb1a471",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.94540817,
+        "winner_iou": 0.94540817,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "0cd13eb1a471",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.86176634,
+        "winner_iou": 0.86176634,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "0cd13eb1a471",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.85424412,
+        "winner_iou": 0.85424412,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "0cd13eb1a471",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.75890607,
+        "winner_iou": 0.75890607,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "baseline",
+        "parameter_set_id": "0cd13eb1a471",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000701",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "4d7238d07489072de5cd64609bacbd4f9aec4b33",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31962353092",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "9b7849c3643d8d39cdd72db4c3c2bda6542b2ede",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 187101184,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 0.6863895482682653,
+    "failures": 0,
+    "best_mean_iou": 0.87682013,
+    "best_worst_page_iou": 0.75890607,
+    "best_stddev_iou": 0.07335619,
+    "mean_iou_improvements": 0,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 0,
+    "parameter_sets_with_improvements": 0,
+    "winner_changes": 0,
+    "baseline_surpassed": false,
+    "winner_first_changed_elapsed_seconds": null,
+    "winner_last_changed_elapsed_seconds": null,
+    "winner_history": [],
+    "last_improvement_elapsed_seconds": null,
+    "time_since_last_improvement_seconds": null
+  }
+}
