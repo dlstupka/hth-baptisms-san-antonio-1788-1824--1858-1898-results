@@ -1,0 +1,3786 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260816-174543",
+  "detector": "dhsegment_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "416.445",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "2",
+    "ranked_quality": "0.97288909",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 10000,
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 50,
+  "fully_successful_parameter_set_count": 10,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "9cb0b223675c5ea900c5fd9ca840230a35b639eb9e53dc423bfdc1f043103de0",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "28199c1dee3e",
+    "parameters": {
+      "probability_threshold": -1.0,
+      "minimum_page_area_fraction": 0.1,
+      "close_kernel_fraction": 0.0,
+      "open_kernel_fraction": 0.0,
+      "contour_offset_fraction": 0.008,
+      "fill_holes": 0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.97288909,
+      "mean_iou_success": 0.97288909,
+      "minimum_iou": 0.95712366,
+      "stddev_iou": 0.01196577,
+      "mean_edge_error_px": 7.3,
+      "elapsed_ms_total": 112996.627,
+      "wall_ms": 112997.241
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          108,
+          59,
+          1285,
+          966
+        ],
+        "iou": 0.97796757,
+        "edge_errors": {
+          "left": 17,
+          "top": 3,
+          "right": 4,
+          "bottom": 1,
+          "mean": 6.25,
+          "maximum": 17
+        },
+        "edge_error_mean_px": 6.25,
+        "edge_error_maximum_px": 17,
+        "elapsed_ms": 25511.939,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            108,
+            59,
+            1285,
+            966
+          ],
+          "corners": [
+            [
+              110.26520538330078,
+              965.24169921875
+            ],
+            [
+              108.18441772460938,
+              61.786537170410156
+            ],
+            [
+              1282.2958984375,
+              59.08002471923828
+            ],
+            [
+              1284.376708984375,
+              962.5352783203125
+            ]
+          ],
+          "confidence": 0.9688167095184326,
+          "score": 0.9688167095184326,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.1,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.008,
+              "fill_holes": 0
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.0005268296226859093,
+            "probability_max": 1.0,
+            "probability_mean": 0.7326322197914124,
+            "thresholded_fraction": 0.7596819426205791,
+            "postprocess_resolution": "1004x716",
+            "mask_area_fraction": 0.7576259208974159,
+            "mean_page_probability": 0.9554524421691895,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          84,
+          16,
+          1214,
+          973
+        ],
+        "iou": 0.95712366,
+        "edge_errors": {
+          "left": 17,
+          "top": 8,
+          "right": 19,
+          "bottom": 4,
+          "mean": 12.0,
+          "maximum": 19
+        },
+        "edge_error_mean_px": 12.0,
+        "edge_error_maximum_px": 19,
+        "elapsed_ms": 31393.541,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            84,
+            16,
+            1214,
+            973
+          ],
+          "corners": [
+            [
+              1211.09765625,
+              972.0618286132812
+            ],
+            [
+              84.09400939941406,
+              969.4461669921875
+            ],
+            [
+              86.30538940429688,
+              16.002748489379883
+            ],
+            [
+              1213.30908203125,
+              18.618419647216797
+            ]
+          ],
+          "confidence": 0.9399036645889283,
+          "score": 0.9399036645889283,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.1,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.008,
+              "fill_holes": 0
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.0006972888368181884,
+            "probability_max": 1.0,
+            "probability_mean": 0.6983548998832703,
+            "thresholded_fraction": 0.7516901247728177,
+            "postprocess_resolution": "979x734",
+            "mask_area_fraction": 0.7496639233160679,
+            "mean_page_probability": 0.9141480922698975,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          13,
+          24,
+          1074,
+          969
+        ],
+        "iou": 0.99284152,
+        "edge_errors": {
+          "left": 2,
+          "top": 4,
+          "right": 0,
+          "bottom": 1,
+          "mean": 1.75,
+          "maximum": 4
+        },
+        "edge_error_mean_px": 1.75,
+        "edge_error_maximum_px": 4,
+        "elapsed_ms": 23981.607,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            13,
+            24,
+            1074,
+            969
+          ],
+          "corners": [
+            [
+              1073.36328125,
+              968.36474609375
+            ],
+            [
+              13.417040824890137,
+              968.36474609375
+            ],
+            [
+              13.417040824890137,
+              24.392059326171875
+            ],
+            [
+              1073.36328125,
+              24.392059326171875
+            ]
+          ],
+          "confidence": 0.9026050806045531,
+          "score": 0.9026050806045531,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.1,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.008,
+              "fill_holes": 0
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 1.0319529337721178e-06,
+            "probability_max": 1.0,
+            "probability_mean": 0.7860230803489685,
+            "thresholded_fraction": 0.9012340184045666,
+            "postprocess_resolution": "892x806",
+            "mask_area_fraction": 0.921291685675817,
+            "mean_page_probability": 0.8608644008636475,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          80,
+          54,
+          1124,
+          938
+        ],
+        "iou": 0.96773944,
+        "edge_errors": {
+          "left": 4,
+          "top": 3,
+          "right": 23,
+          "bottom": 3,
+          "mean": 8.25,
+          "maximum": 23
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 23,
+        "elapsed_ms": 16672.029,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            80,
+            54,
+            1124,
+            938
+          ],
+          "corners": [
+            [
+              1121.5255126953125,
+              937.3294067382812
+            ],
+            [
+              80.80885314941406,
+              935.3699951171875
+            ],
+            [
+              82.468505859375,
+              54.327484130859375
+            ],
+            [
+              1123.18505859375,
+              56.28688430786133
+            ]
+          ],
+          "confidence": 0.969474309682846,
+          "score": 0.969474309682846,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.1,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.008,
+              "fill_holes": 0
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.00033759893267415464,
+            "probability_max": 1.0,
+            "probability_mean": 0.6866343021392822,
+            "thresholded_fraction": 0.7076805513101954,
+            "postprocess_resolution": "970x742",
+            "mask_area_fraction": 0.7057013643815823,
+            "mean_page_probability": 0.9563918709754944,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          79,
+          35,
+          1169,
+          961
+        ],
+        "iou": 0.96877325,
+        "edge_errors": {
+          "left": 9,
+          "top": 2,
+          "right": 15,
+          "bottom": 7,
+          "mean": 8.25,
+          "maximum": 15
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 15,
+        "elapsed_ms": 15437.511,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            79,
+            35,
+            1169,
+            961
+          ],
+          "corners": [
+            [
+              1168.9375,
+              960.9212036132812
+            ],
+            [
+              79.25,
+              960.9212036132812
+            ],
+            [
+              79.25,
+              35.687583923339844
+            ],
+            [
+              1168.9375,
+              35.687583923339844
+            ]
+          ],
+          "confidence": 0.9686484813690186,
+          "score": 0.9686484813690186,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.1,
+              "close_kernel_fraction": 0.0,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.008,
+              "fill_holes": 0
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.0007062668446451426,
+            "probability_max": 1.0,
+            "probability_mean": 0.7585993409156799,
+            "thresholded_fraction": 0.7866252225189141,
+            "postprocess_resolution": "960x749",
+            "mask_area_fraction": 0.7845425845571874,
+            "mean_page_probability": 0.9552121162414551,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 8,
+      "parameter_set_number": 8,
+      "elapsed_seconds": 382.57412804500007,
+      "search_fraction": 0.8
+    },
+    "legacy_parameter_set_id": "28199c1dee3e",
+    "parameter_identity_sha256": "cfb67dec9a5fc33db4e5ccc56fe68f944f267d1ee51d765fae914950fa93f91a",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 6,
+    "parameter_grid_sha256": "09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb",
+    "profile": null,
+    "run_id": "run-20260816-174543",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "013084b6c0e9",
+    "parameters": {
+      "probability_threshold": -1.0,
+      "minimum_page_area_fraction": 0.2,
+      "close_kernel_fraction": 0.005,
+      "open_kernel_fraction": 0.0,
+      "contour_offset_fraction": 0.0,
+      "fill_holes": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.96697567,
+      "mean_iou_success": 0.96697567,
+      "minimum_iou": 0.94240318,
+      "stddev_iou": 0.01481643,
+      "mean_edge_error_px": 8.7,
+      "elapsed_ms_total": 31818.182,
+      "wall_ms": 31818.877
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          112,
+          63,
+          1281,
+          962
+        ],
+        "iou": 0.96936174,
+        "edge_errors": {
+          "left": 13,
+          "top": 7,
+          "right": 8,
+          "bottom": 5,
+          "mean": 8.25,
+          "maximum": 13
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 13,
+        "elapsed_ms": 10809.673,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            112,
+            63,
+            1281,
+            962
+          ],
+          "corners": [
+            [
+              114.38805389404297,
+              961.1009521484375
+            ],
+            [
+              112.32633209228516,
+              65.90829467773438
+            ],
+            [
+              1278.1727294921875,
+              63.22084045410156
+            ],
+            [
+              1280.234375,
+              958.4134521484375
+            ]
+          ],
+          "confidence": 0.9760937452316283,
+          "score": 0.9760937452316283,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.2,
+              "close_kernel_fraction": 0.005,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.0,
+              "fill_holes": 1
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.0005268296226859093,
+            "probability_max": 1.0,
+            "probability_mean": 0.7326322197914124,
+            "thresholded_fraction": 0.7470592490373701,
+            "postprocess_resolution": "1004x716",
+            "mask_area_fraction": 0.7450087916490463,
+            "mean_page_probability": 0.9658482074737549,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          88,
+          20,
+          1210,
+          969
+        ],
+        "iou": 0.94240318,
+        "edge_errors": {
+          "left": 21,
+          "top": 12,
+          "right": 23,
+          "bottom": 8,
+          "mean": 16.0,
+          "maximum": 23
+        },
+        "edge_error_mean_px": 16.0,
+        "edge_error_maximum_px": 23,
+        "elapsed_ms": 5273.41,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            88,
+            20,
+            1210,
+            969
+          ],
+          "corners": [
+            [
+              1207.0711669921875,
+              968.0184326171875
+            ],
+            [
+              88.13916778564453,
+              965.4214477539062
+            ],
+            [
+              90.33182525634766,
+              20.04616355895996
+            ],
+            [
+              1209.263916015625,
+              22.64312171936035
+            ]
+          ],
+          "confidence": 0.946731799840927,
+          "score": 0.946731799840927,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.2,
+              "close_kernel_fraction": 0.005,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.0,
+              "fill_holes": 1
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.0006972888368181884,
+            "probability_max": 1.0,
+            "probability_mean": 0.6983548998832703,
+            "thresholded_fraction": 0.7385601723384536,
+            "postprocess_resolution": "979x734",
+            "mask_area_fraction": 0.7363586265248697,
+            "mean_page_probability": 0.9239025712013245,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          17,
+          28,
+          1070,
+          965
+        ],
+        "iou": 0.98905649,
+        "edge_errors": {
+          "left": 2,
+          "top": 0,
+          "right": 4,
+          "bottom": 5,
+          "mean": 2.75,
+          "maximum": 5
+        },
+        "edge_error_mean_px": 2.75,
+        "edge_error_maximum_px": 5,
+        "elapsed_ms": 5510.859,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            17,
+            28,
+            1070,
+            965
+          ],
+          "corners": [
+            [
+              1069.7041015625,
+              964.7059326171875
+            ],
+            [
+              17.07623291015625,
+              964.7059326171875
+            ],
+            [
+              17.07623291015625,
+              28.050867080688477
+            ],
+            [
+              1069.7041015625,
+              28.050867080688477
+            ]
+          ],
+          "confidence": 0.9008004665374756,
+          "score": 0.9008004665374756,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.2,
+              "close_kernel_fraction": 0.005,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.0,
+              "fill_holes": 1
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 1.0319529337721178e-06,
+            "probability_max": 1.0,
+            "probability_mean": 0.7860230803489685,
+            "thresholded_fraction": 0.9099717366388855,
+            "postprocess_resolution": "892x806",
+            "mask_area_fraction": 0.907728193259077,
+            "mean_page_probability": 0.8582863807678223,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          84,
+          58,
+          1120,
+          934
+        ],
+        "iou": 0.96649721,
+        "edge_errors": {
+          "left": 0,
+          "top": 7,
+          "right": 19,
+          "bottom": 7,
+          "mean": 8.25,
+          "maximum": 19
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 19,
+        "elapsed_ms": 5167.966,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            84,
+            58,
+            1120,
+            934
+          ],
+          "corners": [
+            [
+              1117.546875,
+              933.3394775390625
+            ],
+            [
+              84.80233001708984,
+              931.39501953125
+            ],
+            [
+              86.44698333740234,
+              58.31745910644531
+            ],
+            [
+              1119.191650390625,
+              60.26186752319336
+            ]
+          ],
+          "confidence": 0.9767775893211363,
+          "score": 0.9767775893211363,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.2,
+              "close_kernel_fraction": 0.005,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.0,
+              "fill_holes": 1
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.00033759893267415464,
+            "probability_max": 1.0,
+            "probability_mean": 0.6866343021392822,
+            "thresholded_fraction": 0.6954664184288771,
+            "postprocess_resolution": "970x742",
+            "mask_area_fraction": 0.6934844527190375,
+            "mean_page_probability": 0.9668251276016235,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          83,
+          39,
+          1165,
+          957
+        ],
+        "iou": 0.96755975,
+        "edge_errors": {
+          "left": 5,
+          "top": 6,
+          "right": 11,
+          "bottom": 11,
+          "mean": 8.25,
+          "maximum": 11
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 11,
+        "elapsed_ms": 5056.274,
+        "candidate": {
+          "method": "dhsegment_page_mask",
+          "bbox": [
+            83,
+            39,
+            1165,
+            957
+          ],
+          "corners": [
+            [
+              1164.9749755859375,
+              956.9559326171875
+            ],
+            [
+              83.2125015258789,
+              956.9559326171875
+            ],
+            [
+              83.2125015258789,
+              39.652870178222656
+            ],
+            [
+              1164.9749755859375,
+              39.652870178222656
+            ]
+          ],
+          "confidence": 0.975602787733078,
+          "score": 0.975602787733078,
+          "diagnostics": {
+            "parameters": {
+              "probability_threshold": -1.0,
+              "minimum_page_area_fraction": 0.2,
+              "close_kernel_fraction": 0.005,
+              "open_kernel_fraction": 0.0,
+              "contour_offset_fraction": 0.0,
+              "fill_holes": 1
+            },
+            "model_id": "dhsegment-page-v0.2",
+            "model_family": "dhSegment",
+            "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+            "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+            "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+            "upstream_license": "GPL-3.0",
+            "inference_backend": "tensorflow-savedmodel",
+            "probability_min": 0.0007062668446451426,
+            "probability_max": 1.0,
+            "probability_mean": 0.7585993409156799,
+            "thresholded_fraction": 0.7738429016466399,
+            "postprocess_resolution": "960x749",
+            "mask_area_fraction": 0.7717644359145527,
+            "mean_page_probability": 0.9651468396186829,
+            "evidence": "dhsegment_resnet50_page_segmentation"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "013084b6c0e9",
+    "parameter_identity_sha256": "df0c0434a423d6d264130e371df2c65253c1d13606d49c50165ebe24d6264e9c",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 483,
+    "parameter_grid_sha256": "09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb",
+    "profile": "baseline",
+    "run_id": "run-20260816-174543",
+    "rank": 5,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "28199c1dee3e",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.008,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.97288909,
+        "mean_iou_success": 0.97288909,
+        "minimum_iou": 0.95712366,
+        "stddev_iou": 0.01196577,
+        "mean_edge_error_px": 7.3,
+        "elapsed_ms_total": 112996.627,
+        "wall_ms": 112997.241
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            108,
+            59,
+            1285,
+            966
+          ],
+          "iou": 0.97796757,
+          "edge_errors": {
+            "left": 17,
+            "top": 3,
+            "right": 4,
+            "bottom": 1,
+            "mean": 6.25,
+            "maximum": 17
+          },
+          "edge_error_mean_px": 6.25,
+          "edge_error_maximum_px": 17,
+          "elapsed_ms": 25511.939,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              108,
+              59,
+              1285,
+              966
+            ],
+            "corners": [
+              [
+                110.26520538330078,
+                965.24169921875
+              ],
+              [
+                108.18441772460938,
+                61.786537170410156
+              ],
+              [
+                1282.2958984375,
+                59.08002471923828
+              ],
+              [
+                1284.376708984375,
+                962.5352783203125
+              ]
+            ],
+            "confidence": 0.9688167095184326,
+            "score": 0.9688167095184326,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0005268296226859093,
+              "probability_max": 1.0,
+              "probability_mean": 0.7326322197914124,
+              "thresholded_fraction": 0.7596819426205791,
+              "postprocess_resolution": "1004x716",
+              "mask_area_fraction": 0.7576259208974159,
+              "mean_page_probability": 0.9554524421691895,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            84,
+            16,
+            1214,
+            973
+          ],
+          "iou": 0.95712366,
+          "edge_errors": {
+            "left": 17,
+            "top": 8,
+            "right": 19,
+            "bottom": 4,
+            "mean": 12.0,
+            "maximum": 19
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 19,
+          "elapsed_ms": 31393.541,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              84,
+              16,
+              1214,
+              973
+            ],
+            "corners": [
+              [
+                1211.09765625,
+                972.0618286132812
+              ],
+              [
+                84.09400939941406,
+                969.4461669921875
+              ],
+              [
+                86.30538940429688,
+                16.002748489379883
+              ],
+              [
+                1213.30908203125,
+                18.618419647216797
+              ]
+            ],
+            "confidence": 0.9399036645889283,
+            "score": 0.9399036645889283,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0006972888368181884,
+              "probability_max": 1.0,
+              "probability_mean": 0.6983548998832703,
+              "thresholded_fraction": 0.7516901247728177,
+              "postprocess_resolution": "979x734",
+              "mask_area_fraction": 0.7496639233160679,
+              "mean_page_probability": 0.9141480922698975,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            13,
+            24,
+            1074,
+            969
+          ],
+          "iou": 0.99284152,
+          "edge_errors": {
+            "left": 2,
+            "top": 4,
+            "right": 0,
+            "bottom": 1,
+            "mean": 1.75,
+            "maximum": 4
+          },
+          "edge_error_mean_px": 1.75,
+          "edge_error_maximum_px": 4,
+          "elapsed_ms": 23981.607,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              13,
+              24,
+              1074,
+              969
+            ],
+            "corners": [
+              [
+                1073.36328125,
+                968.36474609375
+              ],
+              [
+                13.417040824890137,
+                968.36474609375
+              ],
+              [
+                13.417040824890137,
+                24.392059326171875
+              ],
+              [
+                1073.36328125,
+                24.392059326171875
+              ]
+            ],
+            "confidence": 0.9026050806045531,
+            "score": 0.9026050806045531,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 1.0319529337721178e-06,
+              "probability_max": 1.0,
+              "probability_mean": 0.7860230803489685,
+              "thresholded_fraction": 0.9012340184045666,
+              "postprocess_resolution": "892x806",
+              "mask_area_fraction": 0.921291685675817,
+              "mean_page_probability": 0.8608644008636475,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            54,
+            1124,
+            938
+          ],
+          "iou": 0.96773944,
+          "edge_errors": {
+            "left": 4,
+            "top": 3,
+            "right": 23,
+            "bottom": 3,
+            "mean": 8.25,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 16672.029,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              80,
+              54,
+              1124,
+              938
+            ],
+            "corners": [
+              [
+                1121.5255126953125,
+                937.3294067382812
+              ],
+              [
+                80.80885314941406,
+                935.3699951171875
+              ],
+              [
+                82.468505859375,
+                54.327484130859375
+              ],
+              [
+                1123.18505859375,
+                56.28688430786133
+              ]
+            ],
+            "confidence": 0.969474309682846,
+            "score": 0.969474309682846,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.00033759893267415464,
+              "probability_max": 1.0,
+              "probability_mean": 0.6866343021392822,
+              "thresholded_fraction": 0.7076805513101954,
+              "postprocess_resolution": "970x742",
+              "mask_area_fraction": 0.7057013643815823,
+              "mean_page_probability": 0.9563918709754944,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            79,
+            35,
+            1169,
+            961
+          ],
+          "iou": 0.96877325,
+          "edge_errors": {
+            "left": 9,
+            "top": 2,
+            "right": 15,
+            "bottom": 7,
+            "mean": 8.25,
+            "maximum": 15
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 15,
+          "elapsed_ms": 15437.511,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              79,
+              35,
+              1169,
+              961
+            ],
+            "corners": [
+              [
+                1168.9375,
+                960.9212036132812
+              ],
+              [
+                79.25,
+                960.9212036132812
+              ],
+              [
+                79.25,
+                35.687583923339844
+              ],
+              [
+                1168.9375,
+                35.687583923339844
+              ]
+            ],
+            "confidence": 0.9686484813690186,
+            "score": 0.9686484813690186,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0007062668446451426,
+              "probability_max": 1.0,
+              "probability_mean": 0.7585993409156799,
+              "thresholded_fraction": 0.7866252225189141,
+              "postprocess_resolution": "960x749",
+              "mask_area_fraction": 0.7845425845571874,
+              "mean_page_probability": 0.9552121162414551,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 382.57412804500007,
+        "search_fraction": 0.8
+      },
+      "legacy_parameter_set_id": "28199c1dee3e",
+      "parameter_identity_sha256": "cfb67dec9a5fc33db4e5ccc56fe68f944f267d1ee51d765fae914950fa93f91a",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6,
+      "parameter_grid_sha256": "09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb",
+      "profile": null,
+      "run_id": "run-20260816-174543",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "eaa0fe25898d",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.008,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.97288909,
+        "mean_iou_success": 0.97288909,
+        "minimum_iou": 0.95712366,
+        "stddev_iou": 0.01196577,
+        "mean_edge_error_px": 7.3,
+        "elapsed_ms_total": 110566.457,
+        "wall_ms": 110567.071
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            108,
+            59,
+            1285,
+            966
+          ],
+          "iou": 0.97796757,
+          "edge_errors": {
+            "left": 17,
+            "top": 3,
+            "right": 4,
+            "bottom": 1,
+            "mean": 6.25,
+            "maximum": 17
+          },
+          "edge_error_mean_px": 6.25,
+          "edge_error_maximum_px": 17,
+          "elapsed_ms": 29418.059,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              108,
+              59,
+              1285,
+              966
+            ],
+            "corners": [
+              [
+                110.26520538330078,
+                965.24169921875
+              ],
+              [
+                108.18441772460938,
+                61.786537170410156
+              ],
+              [
+                1282.2958984375,
+                59.08002471923828
+              ],
+              [
+                1284.376708984375,
+                962.5352783203125
+              ]
+            ],
+            "confidence": 0.9688167095184326,
+            "score": 0.9688167095184326,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0005268296226859093,
+              "probability_max": 1.0,
+              "probability_mean": 0.7326322197914124,
+              "thresholded_fraction": 0.7596819426205791,
+              "postprocess_resolution": "1004x716",
+              "mask_area_fraction": 0.7576259208974159,
+              "mean_page_probability": 0.9554524421691895,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            84,
+            16,
+            1214,
+            973
+          ],
+          "iou": 0.95712366,
+          "edge_errors": {
+            "left": 17,
+            "top": 8,
+            "right": 19,
+            "bottom": 4,
+            "mean": 12.0,
+            "maximum": 19
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 19,
+          "elapsed_ms": 29452.146,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              84,
+              16,
+              1214,
+              973
+            ],
+            "corners": [
+              [
+                1211.09765625,
+                972.0618286132812
+              ],
+              [
+                84.09400939941406,
+                969.4461669921875
+              ],
+              [
+                86.30538940429688,
+                16.002748489379883
+              ],
+              [
+                1213.30908203125,
+                18.618419647216797
+              ]
+            ],
+            "confidence": 0.93985555768013,
+            "score": 0.93985555768013,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0006972888368181884,
+              "probability_max": 1.0,
+              "probability_mean": 0.6983548998832703,
+              "thresholded_fraction": 0.7517875383043923,
+              "postprocess_resolution": "979x734",
+              "mask_area_fraction": 0.7496639233160679,
+              "mean_page_probability": 0.9140793681144714,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            13,
+            24,
+            1074,
+            969
+          ],
+          "iou": 0.99284152,
+          "edge_errors": {
+            "left": 2,
+            "top": 4,
+            "right": 0,
+            "bottom": 1,
+            "mean": 1.75,
+            "maximum": 4
+          },
+          "edge_error_mean_px": 1.75,
+          "edge_error_maximum_px": 4,
+          "elapsed_ms": 18071.993,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              13,
+              24,
+              1074,
+              969
+            ],
+            "corners": [
+              [
+                1073.36328125,
+                968.36474609375
+              ],
+              [
+                13.417040824890137,
+                968.36474609375
+              ],
+              [
+                13.417040824890137,
+                24.392059326171875
+              ],
+              [
+                1073.36328125,
+                24.392059326171875
+              ]
+            ],
+            "confidence": 0.8948100507259369,
+            "score": 0.8948100507259369,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 1.0319529337721178e-06,
+              "probability_max": 1.0,
+              "probability_mean": 0.7860230803489685,
+              "thresholded_fraction": 0.9235428790795491,
+              "postprocess_resolution": "892x806",
+              "mask_area_fraction": 0.921291685675817,
+              "mean_page_probability": 0.8497286438941956,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            54,
+            1124,
+            938
+          ],
+          "iou": 0.96773944,
+          "edge_errors": {
+            "left": 4,
+            "top": 3,
+            "right": 23,
+            "bottom": 3,
+            "mean": 8.25,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 17080.211,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              80,
+              54,
+              1124,
+              938
+            ],
+            "corners": [
+              [
+                1121.5255126953125,
+                937.3294067382812
+              ],
+              [
+                80.80885314941406,
+                935.3699951171875
+              ],
+              [
+                82.468505859375,
+                54.327484130859375
+              ],
+              [
+                1123.18505859375,
+                56.28688430786133
+              ]
+            ],
+            "confidence": 0.969474309682846,
+            "score": 0.969474309682846,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.00033759893267415464,
+              "probability_max": 1.0,
+              "probability_mean": 0.6866343021392822,
+              "thresholded_fraction": 0.7076805513101954,
+              "postprocess_resolution": "970x742",
+              "mask_area_fraction": 0.7057013643815823,
+              "mean_page_probability": 0.9563918709754944,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            79,
+            35,
+            1169,
+            961
+          ],
+          "iou": 0.96877325,
+          "edge_errors": {
+            "left": 9,
+            "top": 2,
+            "right": 15,
+            "bottom": 7,
+            "mean": 8.25,
+            "maximum": 15
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 15,
+          "elapsed_ms": 16544.048,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              79,
+              35,
+              1169,
+              961
+            ],
+            "corners": [
+              [
+                1168.9375,
+                960.9212036132812
+              ],
+              [
+                79.25,
+                960.9212036132812
+              ],
+              [
+                79.25,
+                35.687583923339844
+              ],
+              [
+                1168.9375,
+                35.687583923339844
+              ]
+            ],
+            "confidence": 0.9686484813690186,
+            "score": 0.9686484813690186,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.008,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0007062668446451426,
+              "probability_max": 1.0,
+              "probability_mean": 0.7585993409156799,
+              "thresholded_fraction": 0.7866252225189141,
+              "postprocess_resolution": "960x749",
+              "mask_area_fraction": 0.7845425845571874,
+              "mean_page_probability": 0.9552121162414551,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 391.780105414,
+        "search_fraction": 0.9
+      },
+      "legacy_parameter_set_id": "eaa0fe25898d",
+      "parameter_identity_sha256": "2e26cfc4133259af400f18e43d035e370252c94629d61fc10a03d95208d3d40a",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 7,
+      "parameter_grid_sha256": "09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb",
+      "profile": null,
+      "run_id": "run-20260816-174543",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "171496d5337d",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.004,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96911338,
+        "mean_iou_success": 0.96911338,
+        "minimum_iou": 0.94791008,
+        "stddev_iou": 0.01366581,
+        "mean_edge_error_px": 8.2,
+        "elapsed_ms_total": 83098.149,
+        "wall_ms": 83098.76
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            110,
+            61,
+            1282,
+            963
+          ],
+          "iou": 0.97176735,
+          "edge_errors": {
+            "left": 15,
+            "top": 5,
+            "right": 7,
+            "bottom": 4,
+            "mean": 7.75,
+            "maximum": 15
+          },
+          "edge_error_mean_px": 7.75,
+          "edge_error_maximum_px": 15,
+          "elapsed_ms": 16372.93,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              110,
+              61,
+              1282,
+              963
+            ],
+            "corners": [
+              [
+                113.0147476196289,
+                962.481201171875
+              ],
+              [
+                110.94664764404297,
+                64.53440856933594
+              ],
+              [
+                1279.5460205078125,
+                61.840614318847656
+              ],
+              [
+                1281.6141357421875,
+                959.787353515625
+              ]
+            ],
+            "confidence": 0.974143099784851,
+            "score": 0.974143099784851,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0005268296226859093,
+              "probability_max": 1.0,
+              "probability_mean": 0.7326322197914124,
+              "thresholded_fraction": 0.7510405306149703,
+              "postprocess_resolution": "1004x716",
+              "mask_area_fraction": 0.7489893776847916,
+              "mean_page_probability": 0.9630615711212158,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            86,
+            18,
+            1211,
+            970
+          ],
+          "iou": 0.94791008,
+          "edge_errors": {
+            "left": 19,
+            "top": 10,
+            "right": 22,
+            "bottom": 7,
+            "mean": 14.5,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 14.5,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 15772.795,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              86,
+              18,
+              1211,
+              970
+            ],
+            "corners": [
+              [
+                1208.4122314453125,
+                969.3662109375
+              ],
+              [
+                86.79182434082031,
+                966.7630615234375
+              ],
+              [
+                88.99071502685547,
+                18.6983585357666
+              ],
+              [
+                1210.6112060546875,
+                21.301555633544922
+              ]
+            ],
+            "confidence": 0.945420479774475,
+            "score": 0.945420479774475,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0006972888368181884,
+              "probability_max": 1.0,
+              "probability_mean": 0.6983548998832703,
+              "thresholded_fraction": 0.7414951028826056,
+              "postprocess_resolution": "979x734",
+              "mask_area_fraction": 0.7401264427639838,
+              "mean_page_probability": 0.9220292568206787,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            26,
+            1071,
+            966
+          ],
+          "iou": 0.99083516,
+          "edge_errors": {
+            "left": 0,
+            "top": 2,
+            "right": 3,
+            "bottom": 4,
+            "mean": 2.25,
+            "maximum": 4
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 4,
+          "elapsed_ms": 15968.974,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              15,
+              26,
+              1071,
+              966
+            ],
+            "corners": [
+              [
+                1070.923828125,
+                965.925537109375
+              ],
+              [
+                15.856502532958984,
+                965.925537109375
+              ],
+              [
+                15.856502532958984,
+                26.83126449584961
+              ],
+              [
+                1070.923828125,
+                26.83126449584961
+              ]
+            ],
+            "confidence": 0.909039682149887,
+            "score": 0.909039682149887,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 1.0319529337721178e-06,
+              "probability_max": 1.0,
+              "probability_mean": 0.7860230803489685,
+              "thresholded_fraction": 0.8863957538194484,
+              "postprocess_resolution": "892x806",
+              "mask_area_fraction": 0.9121506025437025,
+              "mean_page_probability": 0.870056688785553,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            83,
+            56,
+            1121,
+            935
+          ],
+          "iou": 0.96790131,
+          "edge_errors": {
+            "left": 1,
+            "top": 5,
+            "right": 20,
+            "bottom": 6,
+            "mean": 8.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 11707.31,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              83,
+              56,
+              1121,
+              935
+            ],
+            "corners": [
+              [
+                1118.872314453125,
+                934.66943359375
+              ],
+              [
+                83.47199249267578,
+                932.7200317382812
+              ],
+              [
+                85.12165069580078,
+                56.98749542236328
+              ],
+              [
+                1120.5218505859375,
+                58.936927795410156
+              ]
+            ],
+            "confidence": 0.9748179316520691,
+            "score": 0.9748179316520691,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.00033759893267415464,
+              "probability_max": 1.0,
+              "probability_mean": 0.6866343021392822,
+              "thresholded_fraction": 0.6992705699280296,
+              "postprocess_resolution": "970x742",
+              "mask_area_fraction": 0.6972997193430961,
+              "mean_page_probability": 0.964025616645813,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            38,
+            1167,
+            959
+          ],
+          "iou": 0.96715298,
+          "edge_errors": {
+            "left": 7,
+            "top": 5,
+            "right": 13,
+            "bottom": 9,
+            "mean": 8.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 23276.14,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              81,
+              38,
+              1167,
+              959
+            ],
+            "corners": [
+              [
+                1166.2957763671875,
+                958.2777099609375
+              ],
+              [
+                81.89166259765625,
+                958.2777099609375
+              ],
+              [
+                81.89166259765625,
+                38.33110809326172
+              ],
+              [
+                1166.2957763671875,
+                38.33110809326172
+              ]
+            ],
+            "confidence": 0.9737381756305694,
+            "score": 0.9737381756305694,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 0
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0007062668446451426,
+              "probability_max": 1.0,
+              "probability_mean": 0.7585993409156799,
+              "thresholded_fraction": 0.7778565865598576,
+              "postprocess_resolution": "960x749",
+              "mask_area_fraction": 0.7757802069425901,
+              "mean_page_probability": 0.9624831080436707,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 269.56908977800003,
+        "search_fraction": 0.6
+      },
+      "legacy_parameter_set_id": "171496d5337d",
+      "parameter_identity_sha256": "7931a591ada5bcfc1fcc8c1cf637e3ef0c37c5fec606d53aab649219abbcc973",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb",
+      "profile": null,
+      "run_id": "run-20260816-174543",
+      "rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "3ac283e1a83c",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.1,
+        "close_kernel_fraction": 0.0,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.004,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96911338,
+        "mean_iou_success": 0.96911338,
+        "minimum_iou": 0.94791008,
+        "stddev_iou": 0.01366581,
+        "mean_edge_error_px": 8.2,
+        "elapsed_ms_total": 87086.98,
+        "wall_ms": 87087.613
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            110,
+            61,
+            1282,
+            963
+          ],
+          "iou": 0.97176735,
+          "edge_errors": {
+            "left": 15,
+            "top": 5,
+            "right": 7,
+            "bottom": 4,
+            "mean": 7.75,
+            "maximum": 15
+          },
+          "edge_error_mean_px": 7.75,
+          "edge_error_maximum_px": 15,
+          "elapsed_ms": 15436.439,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              110,
+              61,
+              1282,
+              963
+            ],
+            "corners": [
+              [
+                113.0147476196289,
+                962.481201171875
+              ],
+              [
+                110.94664764404297,
+                64.53440856933594
+              ],
+              [
+                1279.5460205078125,
+                61.840614318847656
+              ],
+              [
+                1281.6141357421875,
+                959.787353515625
+              ]
+            ],
+            "confidence": 0.974143099784851,
+            "score": 0.974143099784851,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0005268296226859093,
+              "probability_max": 1.0,
+              "probability_mean": 0.7326322197914124,
+              "thresholded_fraction": 0.7510405306149703,
+              "postprocess_resolution": "1004x716",
+              "mask_area_fraction": 0.7489893776847916,
+              "mean_page_probability": 0.9630615711212158,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            86,
+            18,
+            1211,
+            970
+          ],
+          "iou": 0.94791008,
+          "edge_errors": {
+            "left": 19,
+            "top": 10,
+            "right": 22,
+            "bottom": 7,
+            "mean": 14.5,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 14.5,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 17735.429,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              86,
+              18,
+              1211,
+              970
+            ],
+            "corners": [
+              [
+                1208.4122314453125,
+                969.3662109375
+              ],
+              [
+                86.79182434082031,
+                966.7630615234375
+              ],
+              [
+                88.99071502685547,
+                18.6983585357666
+              ],
+              [
+                1210.6112060546875,
+                21.301555633544922
+              ]
+            ],
+            "confidence": 0.9451028406620026,
+            "score": 0.9451028406620026,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0006972888368181884,
+              "probability_max": 1.0,
+              "probability_mean": 0.6983548998832703,
+              "thresholded_fraction": 0.7421602981410715,
+              "postprocess_resolution": "979x734",
+              "mask_area_fraction": 0.7401264427639838,
+              "mean_page_probability": 0.9215754866600037,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            15,
+            26,
+            1071,
+            966
+          ],
+          "iou": 0.99083516,
+          "edge_errors": {
+            "left": 0,
+            "top": 2,
+            "right": 3,
+            "bottom": 4,
+            "mean": 2.25,
+            "maximum": 4
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 4,
+          "elapsed_ms": 13206.588,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              15,
+              26,
+              1071,
+              966
+            ],
+            "corners": [
+              [
+                1070.923828125,
+                965.925537109375
+              ],
+              [
+                15.856502532958984,
+                965.925537109375
+              ],
+              [
+                15.856502532958984,
+                26.83126449584961
+              ],
+              [
+                1070.923828125,
+                26.83126449584961
+              ]
+            ],
+            "confidence": 0.8992797791957854,
+            "score": 0.8992797791957854,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 1.0319529337721178e-06,
+              "probability_max": 1.0,
+              "probability_mean": 0.7860230803489685,
+              "thresholded_fraction": 0.9143976232071126,
+              "postprocess_resolution": "892x806",
+              "mask_area_fraction": 0.9121506025437025,
+              "mean_page_probability": 0.8561139702796936,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            83,
+            56,
+            1121,
+            935
+          ],
+          "iou": 0.96790131,
+          "edge_errors": {
+            "left": 1,
+            "top": 5,
+            "right": 20,
+            "bottom": 6,
+            "mean": 8.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 14118.127,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              83,
+              56,
+              1121,
+              935
+            ],
+            "corners": [
+              [
+                1118.872314453125,
+                934.66943359375
+              ],
+              [
+                83.47199249267578,
+                932.7200317382812
+              ],
+              [
+                85.12165069580078,
+                56.98749542236328
+              ],
+              [
+                1120.5218505859375,
+                58.936927795410156
+              ]
+            ],
+            "confidence": 0.9748179316520691,
+            "score": 0.9748179316520691,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.00033759893267415464,
+              "probability_max": 1.0,
+              "probability_mean": 0.6866343021392822,
+              "thresholded_fraction": 0.6992705699280296,
+              "postprocess_resolution": "970x742",
+              "mask_area_fraction": 0.6972997193430961,
+              "mean_page_probability": 0.964025616645813,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            38,
+            1167,
+            959
+          ],
+          "iou": 0.96715298,
+          "edge_errors": {
+            "left": 7,
+            "top": 5,
+            "right": 13,
+            "bottom": 9,
+            "mean": 8.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 26590.397,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              81,
+              38,
+              1167,
+              959
+            ],
+            "corners": [
+              [
+                1166.2957763671875,
+                958.2777099609375
+              ],
+              [
+                81.89166259765625,
+                958.2777099609375
+              ],
+              [
+                81.89166259765625,
+                38.33110809326172
+              ],
+              [
+                1166.2957763671875,
+                38.33110809326172
+              ]
+            ],
+            "confidence": 0.9737349629402161,
+            "score": 0.9737349629402161,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.1,
+                "close_kernel_fraction": 0.0,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.004,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0007062668446451426,
+              "probability_max": 1.0,
+              "probability_mean": 0.7585993409156799,
+              "thresholded_fraction": 0.7778635402759234,
+              "postprocess_resolution": "960x749",
+              "mask_area_fraction": 0.7757802069425901,
+              "mean_page_probability": 0.962478518486023,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 281.20599261300003,
+        "search_fraction": 0.7
+      },
+      "legacy_parameter_set_id": "3ac283e1a83c",
+      "parameter_identity_sha256": "8e70186cd37870a8a1eef5dd615713b02551801dcc4bfbbb5df4881b026742e1",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb",
+      "profile": null,
+      "run_id": "run-20260816-174543",
+      "rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "013084b6c0e9",
+      "parameters": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.2,
+        "close_kernel_fraction": 0.005,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96697567,
+        "mean_iou_success": 0.96697567,
+        "minimum_iou": 0.94240318,
+        "stddev_iou": 0.01481643,
+        "mean_edge_error_px": 8.7,
+        "elapsed_ms_total": 31818.182,
+        "wall_ms": 31818.877
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            112,
+            63,
+            1281,
+            962
+          ],
+          "iou": 0.96936174,
+          "edge_errors": {
+            "left": 13,
+            "top": 7,
+            "right": 8,
+            "bottom": 5,
+            "mean": 8.25,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 10809.673,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              112,
+              63,
+              1281,
+              962
+            ],
+            "corners": [
+              [
+                114.38805389404297,
+                961.1009521484375
+              ],
+              [
+                112.32633209228516,
+                65.90829467773438
+              ],
+              [
+                1278.1727294921875,
+                63.22084045410156
+              ],
+              [
+                1280.234375,
+                958.4134521484375
+              ]
+            ],
+            "confidence": 0.9760937452316283,
+            "score": 0.9760937452316283,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.2,
+                "close_kernel_fraction": 0.005,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.0,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0005268296226859093,
+              "probability_max": 1.0,
+              "probability_mean": 0.7326322197914124,
+              "thresholded_fraction": 0.7470592490373701,
+              "postprocess_resolution": "1004x716",
+              "mask_area_fraction": 0.7450087916490463,
+              "mean_page_probability": 0.9658482074737549,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            88,
+            20,
+            1210,
+            969
+          ],
+          "iou": 0.94240318,
+          "edge_errors": {
+            "left": 21,
+            "top": 12,
+            "right": 23,
+            "bottom": 8,
+            "mean": 16.0,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 16.0,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 5273.41,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              88,
+              20,
+              1210,
+              969
+            ],
+            "corners": [
+              [
+                1207.0711669921875,
+                968.0184326171875
+              ],
+              [
+                88.13916778564453,
+                965.4214477539062
+              ],
+              [
+                90.33182525634766,
+                20.04616355895996
+              ],
+              [
+                1209.263916015625,
+                22.64312171936035
+              ]
+            ],
+            "confidence": 0.946731799840927,
+            "score": 0.946731799840927,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.2,
+                "close_kernel_fraction": 0.005,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.0,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0006972888368181884,
+              "probability_max": 1.0,
+              "probability_mean": 0.6983548998832703,
+              "thresholded_fraction": 0.7385601723384536,
+              "postprocess_resolution": "979x734",
+              "mask_area_fraction": 0.7363586265248697,
+              "mean_page_probability": 0.9239025712013245,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            17,
+            28,
+            1070,
+            965
+          ],
+          "iou": 0.98905649,
+          "edge_errors": {
+            "left": 2,
+            "top": 0,
+            "right": 4,
+            "bottom": 5,
+            "mean": 2.75,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 2.75,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 5510.859,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              17,
+              28,
+              1070,
+              965
+            ],
+            "corners": [
+              [
+                1069.7041015625,
+                964.7059326171875
+              ],
+              [
+                17.07623291015625,
+                964.7059326171875
+              ],
+              [
+                17.07623291015625,
+                28.050867080688477
+              ],
+              [
+                1069.7041015625,
+                28.050867080688477
+              ]
+            ],
+            "confidence": 0.9008004665374756,
+            "score": 0.9008004665374756,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.2,
+                "close_kernel_fraction": 0.005,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.0,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 1.0319529337721178e-06,
+              "probability_max": 1.0,
+              "probability_mean": 0.7860230803489685,
+              "thresholded_fraction": 0.9099717366388855,
+              "postprocess_resolution": "892x806",
+              "mask_area_fraction": 0.907728193259077,
+              "mean_page_probability": 0.8582863807678223,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            84,
+            58,
+            1120,
+            934
+          ],
+          "iou": 0.96649721,
+          "edge_errors": {
+            "left": 0,
+            "top": 7,
+            "right": 19,
+            "bottom": 7,
+            "mean": 8.25,
+            "maximum": 19
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 19,
+          "elapsed_ms": 5167.966,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              84,
+              58,
+              1120,
+              934
+            ],
+            "corners": [
+              [
+                1117.546875,
+                933.3394775390625
+              ],
+              [
+                84.80233001708984,
+                931.39501953125
+              ],
+              [
+                86.44698333740234,
+                58.31745910644531
+              ],
+              [
+                1119.191650390625,
+                60.26186752319336
+              ]
+            ],
+            "confidence": 0.9767775893211363,
+            "score": 0.9767775893211363,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.2,
+                "close_kernel_fraction": 0.005,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.0,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.00033759893267415464,
+              "probability_max": 1.0,
+              "probability_mean": 0.6866343021392822,
+              "thresholded_fraction": 0.6954664184288771,
+              "postprocess_resolution": "970x742",
+              "mask_area_fraction": 0.6934844527190375,
+              "mean_page_probability": 0.9668251276016235,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            83,
+            39,
+            1165,
+            957
+          ],
+          "iou": 0.96755975,
+          "edge_errors": {
+            "left": 5,
+            "top": 6,
+            "right": 11,
+            "bottom": 11,
+            "mean": 8.25,
+            "maximum": 11
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 11,
+          "elapsed_ms": 5056.274,
+          "candidate": {
+            "method": "dhsegment_page_mask",
+            "bbox": [
+              83,
+              39,
+              1165,
+              957
+            ],
+            "corners": [
+              [
+                1164.9749755859375,
+                956.9559326171875
+              ],
+              [
+                83.2125015258789,
+                956.9559326171875
+              ],
+              [
+                83.2125015258789,
+                39.652870178222656
+              ],
+              [
+                1164.9749755859375,
+                39.652870178222656
+              ]
+            ],
+            "confidence": 0.975602787733078,
+            "score": 0.975602787733078,
+            "diagnostics": {
+              "parameters": {
+                "probability_threshold": -1.0,
+                "minimum_page_area_fraction": 0.2,
+                "close_kernel_fraction": 0.005,
+                "open_kernel_fraction": 0.0,
+                "contour_offset_fraction": 0.0,
+                "fill_holes": 1
+              },
+              "model_id": "dhsegment-page-v0.2",
+              "model_family": "dhSegment",
+              "model_archive_sha256": "92b1e58d19c6f5278b0ebd38efbddd1861dd599ed00d8e775c2c5530dcb3f900",
+              "model_source": "https://github.com/dhlab-epfl/dhSegment/releases/download/v0.2/model.zip",
+              "upstream_repository": "https://github.com/dhlab-epfl/dhSegment",
+              "upstream_license": "GPL-3.0",
+              "inference_backend": "tensorflow-savedmodel",
+              "probability_min": 0.0007062668446451426,
+              "probability_max": 1.0,
+              "probability_mean": 0.7585993409156799,
+              "thresholded_fraction": 0.7738429016466399,
+              "postprocess_resolution": "960x749",
+              "mask_area_fraction": 0.7717644359145527,
+              "mean_page_probability": 0.9651468396186829,
+              "evidence": "dhsegment_resnet50_page_segmentation"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "legacy_parameter_set_id": "013084b6c0e9",
+      "parameter_identity_sha256": "df0c0434a423d6d264130e371df2c65253c1d13606d49c50165ebe24d6264e9c",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 483,
+      "parameter_grid_sha256": "09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb",
+      "profile": "baseline",
+      "run_id": "run-20260816-174543",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.98905649,
+        "winner_iou": 0.99284152,
+        "delta_iou": 0.00378503,
+        "status": "Improved",
+        "parameter_set": "28199c1dee3e",
+        "parameter_set_id": "28199c1dee3e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.96936174,
+        "winner_iou": 0.97796757,
+        "delta_iou": 0.00860583,
+        "status": "Improved",
+        "parameter_set": "28199c1dee3e",
+        "parameter_set_id": "28199c1dee3e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.96755975,
+        "winner_iou": 0.96877325,
+        "delta_iou": 0.0012135,
+        "status": "Improved",
+        "parameter_set": "28199c1dee3e",
+        "parameter_set_id": "28199c1dee3e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.96649721,
+        "winner_iou": 0.96773944,
+        "delta_iou": 0.00124223,
+        "status": "Improved",
+        "parameter_set": "28199c1dee3e",
+        "parameter_set_id": "28199c1dee3e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.94240318,
+        "winner_iou": 0.95712366,
+        "delta_iou": 0.01472048,
+        "status": "Improved",
+        "parameter_set": "28199c1dee3e",
+        "parameter_set_id": "28199c1dee3e",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000701",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "4d7238d07489072de5cd64609bacbd4f9aec4b33",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31962353092",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "9b7849c3643d8d39cdd72db4c3c2bda6542b2ede",
+  "performance": {
+    "sample_count": 8,
+    "configured_threads": 2,
+    "peak_rss_bytes": 1336078336,
+    "samples_file": "logs/runner-performance.jsonl"
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 0.02315032713019342,
+    "failures": 0,
+    "best_mean_iou": 0.97288909,
+    "best_worst_page_iou": 0.95712366,
+    "best_stddev_iou": 0.01196577,
+    "mean_iou_improvements": 2,
+    "minimum_iou_improvements": 2,
+    "stddev_improvements": 2,
+    "total_metric_improvements": 6,
+    "parameter_sets_with_improvements": 2,
+    "winner_changes": 2,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 269.56908977800003,
+    "winner_last_changed_elapsed_seconds": 382.57412804500007,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "171496d5337d",
+        "parameter_short_name": "171496d5",
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 269.56908977800003,
+        "search_fraction": 0.6
+      },
+      {
+        "change_number": 2,
+        "parameter_set_id": "28199c1dee3e",
+        "parameter_short_name": "28199c1d",
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 382.57412804500007,
+        "search_fraction": 0.8
+      }
+    ],
+    "last_improvement_elapsed_seconds": 382.57412804500007,
+    "time_since_last_improvement_seconds": 49.38521074799996
+  }
+}
