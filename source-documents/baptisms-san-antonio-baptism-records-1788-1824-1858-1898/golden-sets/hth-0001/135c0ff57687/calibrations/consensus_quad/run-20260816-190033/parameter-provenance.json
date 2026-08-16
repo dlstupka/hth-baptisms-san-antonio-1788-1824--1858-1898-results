@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "consensus_quad",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "81788627a94a597617d4c1d68c25b039bf43d33e16345a520f4e42219f352a5e",
+    "parameter_order": [
+      "minimum_polygon_iou",
+      "maximum_mean_corner_distance_fraction",
+      "contour_quad_weight",
+      "edge_contour_weight",
+      "minimum_consensus_confidence"
+    ],
+    "values": {
+      "minimum_polygon_iou": [
+        0.8,
+        0.9,
+        0.95
+      ],
+      "maximum_mean_corner_distance_fraction": [
+        0.015,
+        0.025,
+        0.04
+      ],
+      "contour_quad_weight": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "edge_contour_weight": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "minimum_consensus_confidence": [
+        0.1,
+        0.2,
+        0.35
+      ]
+    },
+    "cartesian_count": 243,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 11,
+    "evaluated_grid_parameter_sets": 11,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "minimum_polygon_iou": 0.9,
+      "maximum_mean_corner_distance_fraction": 0.025,
+      "contour_quad_weight": 0.5,
+      "edge_contour_weight": 0.5,
+      "minimum_consensus_confidence": 0.2
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
