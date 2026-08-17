@@ -1,0 +1,6380 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260817-040329",
+  "detector": "kraken_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "279.260",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "3",
+    "ranked_quality": "0.75135437",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 10000,
+    "planned_parameter_sets": 11,
+    "actual_parameter_sets": 11,
+    "locally_evaluated_parameter_sets": 11,
+    "locally_evaluated_page_evaluations": 55,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 55,
+    "actual_page_evaluations": 55
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 11,
+  "page_evaluation_count": 55,
+  "successful_page_evaluation_count": 45,
+  "fully_successful_parameter_set_count": 1,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "62a79fe93159ce18d08fa712e64194a6754ac4ef6c7311cf5cfdca274a28ee18",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "9ea087074324",
+    "parameters": {
+      "close_kernel_fraction": 0.012,
+      "dilation_fraction": 0.0075,
+      "fill_holes": 0,
+      "include_lines": 1,
+      "minimum_page_area_fraction": 0.08,
+      "page_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.75135437,
+      "mean_iou_success": 0.75135437,
+      "minimum_iou": 0.10846977,
+      "stddev_iou": 0.32941578,
+      "mean_edge_error_px": 82.65,
+      "elapsed_ms_total": 211.177,
+      "wall_ms": 211.771
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          119,
+          57,
+          1293,
+          983
+        ],
+        "iou": 0.97330854,
+        "edge_errors": {
+          "left": 6,
+          "top": 1,
+          "right": 4,
+          "bottom": 16,
+          "mean": 6.75,
+          "maximum": 16
+        },
+        "edge_error_mean_px": 6.75,
+        "edge_error_maximum_px": 16,
+        "elapsed_ms": 68.417,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            119,
+            57,
+            1293,
+            983
+          ],
+          "corners": [
+            [
+              119.0179443359375,
+              69.8436279296875
+            ],
+            [
+              1282.332275390625,
+              57.226318359375
+            ],
+            [
+              1292.2353515625,
+              970.2945556640625
+            ],
+            [
+              128.9210205078125,
+              982.911865234375
+            ]
+          ],
+          "confidence": 0.9520364650784017,
+          "score": 0.9520364650784017,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 2,
+            "line_polygon_count": 123,
+            "baseline_count": 123,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.7795903252372169,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 1,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [
+              "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+            ],
+            "evidence_mask_fraction": 0.704806509659106
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          127,
+          10,
+          762,
+          203
+        ],
+        "iou": 0.10846977,
+        "edge_errors": {
+          "left": 60,
+          "top": 2,
+          "right": 471,
+          "bottom": 774,
+          "mean": 326.75,
+          "maximum": 774
+        },
+        "edge_error_mean_px": 326.75,
+        "edge_error_maximum_px": 774,
+        "elapsed_ms": 50.085,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            127,
+            10,
+            762,
+            203
+          ],
+          "corners": [
+            [
+              127.7161865234375,
+              25.078170776367188
+            ],
+            [
+              756.88330078125,
+              10.098007202148438
+            ],
+            [
+              761.1133422851562,
+              187.7592010498047
+            ],
+            [
+              131.94622802734375,
+              202.73936462402344
+            ]
+          ],
+          "confidence": 0.994917169321551,
+          "score": 0.994917169321551,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 15,
+            "line_polygon_count": 11,
+            "baseline_count": 11,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.08610565571454899,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.08523033477764125
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          22,
+          74,
+          1065,
+          814
+        ],
+        "iou": 0.77369389,
+        "edge_errors": {
+          "left": 7,
+          "top": 46,
+          "right": 9,
+          "bottom": 156,
+          "mean": 54.5,
+          "maximum": 156
+        },
+        "edge_error_mean_px": 54.5,
+        "edge_error_maximum_px": 156,
+        "elapsed_ms": 30.692,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            22,
+            74,
+            1065,
+            814
+          ],
+          "corners": [
+            [
+              27.56146240234375,
+              74.74786376953125
+            ],
+            [
+              1064.649658203125,
+              81.82696533203125
+            ],
+            [
+              1059.656005859375,
+              813.400390625
+            ],
+            [
+              22.56781005859375,
+              806.3212890625
+            ]
+          ],
+          "confidence": 0.7966840429262629,
+          "score": 0.7966840429262629,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 15,
+            "baseline_count": 15,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.7094330776743162,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.4209549473400754
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          79,
+          60,
+          1121,
+          950
+        ],
+        "iou": 0.9566956,
+        "edge_errors": {
+          "left": 5,
+          "top": 9,
+          "right": 20,
+          "bottom": 9,
+          "mean": 10.75,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 10.75,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 37.184,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            79,
+            60,
+            1121,
+            950
+          ],
+          "corners": [
+            [
+              79.0,
+              60.0
+            ],
+            [
+              1120.0,
+              60.0
+            ],
+            [
+              1120.0,
+              949.0
+            ],
+            [
+              79.0,
+              949.0
+            ]
+          ],
+          "confidence": 0.9496498456424936,
+          "score": 0.9496498456424936,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 110,
+            "baseline_count": 110,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.7294581770028691,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.6560015133839897
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          77,
+          44,
+          1175,
+          983
+        ],
+        "iou": 0.94460407,
+        "edge_errors": {
+          "left": 11,
+          "top": 11,
+          "right": 21,
+          "bottom": 15,
+          "mean": 14.5,
+          "maximum": 21
+        },
+        "edge_error_mean_px": 14.5,
+        "edge_error_maximum_px": 21,
+        "elapsed_ms": 24.799,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            77,
+            44,
+            1175,
+            983
+          ],
+          "corners": [
+            [
+              77.9393310546875,
+              56.582061767578125
+            ],
+            [
+              1163.7069091796875,
+              44.205413818359375
+            ],
+            [
+              1174.2669677734375,
+              970.606201171875
+            ],
+            [
+              88.4993896484375,
+              982.9827880859375
+            ]
+          ],
+          "confidence": 0.957515038672277,
+          "score": 0.957515038672277,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 101,
+            "baseline_count": 101,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.8013786157539061,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.7332855367555683
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "historic_reference": {
+      "detector": "kraken_page_mask",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "445",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31950761584",
+      "historic_calibration_id": "run-20260816-145010",
+      "historic_created_at_utc": "2026-08-16T13:49:59.795369+00:00",
+      "parameter_identity_sha256": "b93bda1258e3bd9aa9b5dd0bca69a5e967291b1a141b022fbcb84bffc177024b",
+      "parameter_set_id": "9ea087074324",
+      "parameters": {
+        "close_kernel_fraction": 0.012,
+        "dilation_fraction": 0.0075,
+        "fill_holes": 0,
+        "include_lines": 1,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0
+      },
+      "provenance_source": "parameter-provenance"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.564400133999925,
+      "search_fraction": 0.18181818181818182
+    },
+    "legacy_parameter_set_id": "9ea087074324",
+    "parameter_identity_sha256": "b93bda1258e3bd9aa9b5dd0bca69a5e967291b1a141b022fbcb84bffc177024b",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 6800,
+    "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+    "profile": null,
+    "run_id": "run-20260817-040329",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "d75b76f301e6",
+    "parameters": {
+      "include_lines": 1,
+      "dilation_fraction": 0.01,
+      "close_kernel_fraction": 0.006,
+      "page_padding_fraction": 0.05,
+      "minimum_page_area_fraction": 0.12,
+      "fill_holes": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.68281848,
+      "mean_iou_success": 0.8535231,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.34177017,
+      "mean_edge_error_px": 40.188,
+      "elapsed_ms_total": 333.981,
+      "wall_ms": 340.705
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          77,
+          24,
+          1334,
+          986
+        ],
+        "iou": 0.87692208,
+        "edge_errors": {
+          "left": 48,
+          "top": 32,
+          "right": 45,
+          "bottom": 19,
+          "mean": 36.0,
+          "maximum": 48
+        },
+        "edge_error_mean_px": 36.0,
+        "edge_error_maximum_px": 48,
+        "elapsed_ms": 64.447,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            77,
+            24,
+            1334,
+            986
+          ],
+          "corners": [
+            [
+              77.8902587890625,
+              37.83184814453125
+            ],
+            [
+              1322.7559814453125,
+              24.330047607421875
+            ],
+            [
+              1333.363037109375,
+              985.0
+            ],
+            [
+              88.49737548828125,
+              985.0
+            ]
+          ],
+          "confidence": 0.9080095446395008,
+          "score": 0.9080095446395008,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.01,
+              "close_kernel_fraction": 0.006,
+              "page_padding_fraction": 0.05,
+              "minimum_page_area_fraction": 0.12,
+              "fill_holes": 1
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 2,
+            "line_polygon_count": 123,
+            "baseline_count": 123,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.8715157710461588,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 1,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [
+              "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+            ],
+            "evidence_mask_fraction": 0.7111735057813734
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 56.856,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.01,
+              "close_kernel_fraction": 0.006,
+              "page_padding_fraction": 0.05,
+              "minimum_page_area_fraction": 0.12,
+              "fill_holes": 1
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 15,
+            "line_polygon_count": 11,
+            "baseline_count": 11,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.10357658268077799,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "reason": "page_area_below_minimum"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          0,
+          44,
+          1088,
+          845
+        ],
+        "iou": 0.83096903,
+        "edge_errors": {
+          "left": 15,
+          "top": 16,
+          "right": 14,
+          "bottom": 125,
+          "mean": 42.5,
+          "maximum": 125
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 125,
+        "elapsed_ms": 60.823,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            0,
+            44,
+            1088,
+            845
+          ],
+          "corners": [
+            [
+              0.0,
+              44.099456787109375
+            ],
+            [
+              1087.0,
+              51.75396728515625
+            ],
+            [
+              1087.0,
+              844.0487060546875
+            ],
+            [
+              0.0,
+              836.3942260742188
+            ]
+          ],
+          "confidence": 0.7669855854444909,
+          "score": 0.7669855854444909,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.01,
+              "close_kernel_fraction": 0.006,
+              "page_padding_fraction": 0.05,
+              "minimum_page_area_fraction": 0.12,
+              "fill_holes": 1
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 15,
+            "baseline_count": 15,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.8052558921039885,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.4299834315720184
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          39,
+          26,
+          1160,
+          983
+        ],
+        "iou": 0.84371041,
+        "edge_errors": {
+          "left": 45,
+          "top": 25,
+          "right": 59,
+          "bottom": 42,
+          "mean": 42.75,
+          "maximum": 59
+        },
+        "edge_error_mean_px": 42.75,
+        "edge_error_maximum_px": 59,
+        "elapsed_ms": 72.807,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            39,
+            26,
+            1160,
+            983
+          ],
+          "corners": [
+            [
+              39.55865478515625,
+              26.004638671875
+            ],
+            [
+              1159.44140625,
+              26.004638671875
+            ],
+            [
+              1159.44140625,
+              982.995361328125
+            ],
+            [
+              39.55865478515625,
+              982.995361328125
+            ]
+          ],
+          "confidence": 0.8924985248735073,
+          "score": 0.8924985248735073,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.01,
+              "close_kernel_fraction": 0.006,
+              "page_padding_fraction": 0.05,
+              "minimum_page_area_fraction": 0.12,
+              "fill_holes": 1
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 110,
+            "baseline_count": 110,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.8447499792024864,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.663126241447804
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          37,
+          9,
+          1215,
+          990
+        ],
+        "iou": 0.86249089,
+        "edge_errors": {
+          "left": 51,
+          "top": 24,
+          "right": 61,
+          "bottom": 22,
+          "mean": 39.5,
+          "maximum": 61
+        },
+        "edge_error_mean_px": 39.5,
+        "edge_error_maximum_px": 61,
+        "elapsed_ms": 79.048,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            37,
+            9,
+            1215,
+            990
+          ],
+          "corners": [
+            [
+              37.8951416015625,
+              22.896087646484375
+            ],
+            [
+              1202.9727783203125,
+              9.615386962890625
+            ],
+            [
+              1214.31103515625,
+              989.0
+            ],
+            [
+              49.2333984375,
+              989.0
+            ]
+          ],
+          "confidence": 0.9116943481086235,
+          "score": 0.9116943481086235,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.01,
+              "close_kernel_fraction": 0.006,
+              "page_padding_fraction": 0.05,
+              "minimum_page_area_fraction": 0.12,
+              "fill_holes": 1
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 101,
+            "baseline_count": 101,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.9028756625485402,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.7434176146321256
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "d75b76f301e6",
+    "parameter_identity_sha256": "6435c09f7b7f38b8b1c24977ab8d23b2d666a7007bc31acfb0e5c57e414079b9",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 7253,
+    "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "profile": "baseline",
+    "run_id": "run-20260817-040329",
+    "rank": 11,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": {
+    "parameter_set_id": "9ea087074324",
+    "parameters": {
+      "close_kernel_fraction": 0.012,
+      "dilation_fraction": 0.0075,
+      "fill_holes": 0,
+      "include_lines": 1,
+      "minimum_page_area_fraction": 0.08,
+      "page_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.75135437,
+      "mean_iou_success": 0.75135437,
+      "minimum_iou": 0.10846977,
+      "stddev_iou": 0.32941578,
+      "mean_edge_error_px": 82.65,
+      "elapsed_ms_total": 211.177,
+      "wall_ms": 211.771
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          119,
+          57,
+          1293,
+          983
+        ],
+        "iou": 0.97330854,
+        "edge_errors": {
+          "left": 6,
+          "top": 1,
+          "right": 4,
+          "bottom": 16,
+          "mean": 6.75,
+          "maximum": 16
+        },
+        "edge_error_mean_px": 6.75,
+        "edge_error_maximum_px": 16,
+        "elapsed_ms": 68.417,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            119,
+            57,
+            1293,
+            983
+          ],
+          "corners": [
+            [
+              119.0179443359375,
+              69.8436279296875
+            ],
+            [
+              1282.332275390625,
+              57.226318359375
+            ],
+            [
+              1292.2353515625,
+              970.2945556640625
+            ],
+            [
+              128.9210205078125,
+              982.911865234375
+            ]
+          ],
+          "confidence": 0.9520364650784017,
+          "score": 0.9520364650784017,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 2,
+            "line_polygon_count": 123,
+            "baseline_count": 123,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.7795903252372169,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 1,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [
+              "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+            ],
+            "evidence_mask_fraction": 0.704806509659106
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          127,
+          10,
+          762,
+          203
+        ],
+        "iou": 0.10846977,
+        "edge_errors": {
+          "left": 60,
+          "top": 2,
+          "right": 471,
+          "bottom": 774,
+          "mean": 326.75,
+          "maximum": 774
+        },
+        "edge_error_mean_px": 326.75,
+        "edge_error_maximum_px": 774,
+        "elapsed_ms": 50.085,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            127,
+            10,
+            762,
+            203
+          ],
+          "corners": [
+            [
+              127.7161865234375,
+              25.078170776367188
+            ],
+            [
+              756.88330078125,
+              10.098007202148438
+            ],
+            [
+              761.1133422851562,
+              187.7592010498047
+            ],
+            [
+              131.94622802734375,
+              202.73936462402344
+            ]
+          ],
+          "confidence": 0.994917169321551,
+          "score": 0.994917169321551,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 15,
+            "line_polygon_count": 11,
+            "baseline_count": 11,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.08610565571454899,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.08523033477764125
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          22,
+          74,
+          1065,
+          814
+        ],
+        "iou": 0.77369389,
+        "edge_errors": {
+          "left": 7,
+          "top": 46,
+          "right": 9,
+          "bottom": 156,
+          "mean": 54.5,
+          "maximum": 156
+        },
+        "edge_error_mean_px": 54.5,
+        "edge_error_maximum_px": 156,
+        "elapsed_ms": 30.692,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            22,
+            74,
+            1065,
+            814
+          ],
+          "corners": [
+            [
+              27.56146240234375,
+              74.74786376953125
+            ],
+            [
+              1064.649658203125,
+              81.82696533203125
+            ],
+            [
+              1059.656005859375,
+              813.400390625
+            ],
+            [
+              22.56781005859375,
+              806.3212890625
+            ]
+          ],
+          "confidence": 0.7966840429262629,
+          "score": 0.7966840429262629,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 15,
+            "baseline_count": 15,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.7094330776743162,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.4209549473400754
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          79,
+          60,
+          1121,
+          950
+        ],
+        "iou": 0.9566956,
+        "edge_errors": {
+          "left": 5,
+          "top": 9,
+          "right": 20,
+          "bottom": 9,
+          "mean": 10.75,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 10.75,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 37.184,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            79,
+            60,
+            1121,
+            950
+          ],
+          "corners": [
+            [
+              79.0,
+              60.0
+            ],
+            [
+              1120.0,
+              60.0
+            ],
+            [
+              1120.0,
+              949.0
+            ],
+            [
+              79.0,
+              949.0
+            ]
+          ],
+          "confidence": 0.9496498456424936,
+          "score": 0.9496498456424936,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 110,
+            "baseline_count": 110,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.7294581770028691,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.6560015133839897
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          77,
+          44,
+          1175,
+          983
+        ],
+        "iou": 0.94460407,
+        "edge_errors": {
+          "left": 11,
+          "top": 11,
+          "right": 21,
+          "bottom": 15,
+          "mean": 14.5,
+          "maximum": 21
+        },
+        "edge_error_mean_px": 14.5,
+        "edge_error_maximum_px": 21,
+        "elapsed_ms": 24.799,
+        "candidate": {
+          "method": "kraken_page_mask",
+          "bbox": [
+            77,
+            44,
+            1175,
+            983
+          ],
+          "corners": [
+            [
+              77.9393310546875,
+              56.582061767578125
+            ],
+            [
+              1163.7069091796875,
+              44.205413818359375
+            ],
+            [
+              1174.2669677734375,
+              970.606201171875
+            ],
+            [
+              88.4993896484375,
+              982.9827880859375
+            ]
+          ],
+          "confidence": 0.957515038672277,
+          "score": 0.957515038672277,
+          "diagnostics": {
+            "parameters": {
+              "include_lines": 1,
+              "dilation_fraction": 0.0075,
+              "close_kernel_fraction": 0.012,
+              "page_padding_fraction": 0.0,
+              "minimum_page_area_fraction": 0.08,
+              "fill_holes": 0
+            },
+            "evidence": "kraken_default_blla_regions_and_lines",
+            "region_count": 1,
+            "line_polygon_count": 101,
+            "baseline_count": 101,
+            "text_direction": "horizontal-lr",
+            "page_area_fraction": 0.8013786157539061,
+            "model": "kraken-blla-default-7.0.2",
+            "canonical_quad": true,
+            "kraken_polygonizer_warnings": 0,
+            "lightning_srun_advisories": 0,
+            "kraken_filtered_messages": [],
+            "evidence_mask_fraction": 0.7332855367555683
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "historic_reference": {
+      "detector": "kraken_page_mask",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "445",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31950761584",
+      "historic_calibration_id": "run-20260816-145010",
+      "historic_created_at_utc": "2026-08-16T13:49:59.795369+00:00",
+      "parameter_identity_sha256": "b93bda1258e3bd9aa9b5dd0bca69a5e967291b1a141b022fbcb84bffc177024b",
+      "parameter_set_id": "9ea087074324",
+      "parameters": {
+        "close_kernel_fraction": 0.012,
+        "dilation_fraction": 0.0075,
+        "fill_holes": 0,
+        "include_lines": 1,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0
+      },
+      "provenance_source": "parameter-provenance"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.564400133999925,
+      "search_fraction": 0.18181818181818182
+    },
+    "legacy_parameter_set_id": "9ea087074324",
+    "parameter_identity_sha256": "b93bda1258e3bd9aa9b5dd0bca69a5e967291b1a141b022fbcb84bffc177024b",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 6800,
+    "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+    "profile": null,
+    "run_id": "run-20260817-040329",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "9ea087074324",
+      "parameters": {
+        "close_kernel_fraction": 0.012,
+        "dilation_fraction": 0.0075,
+        "fill_holes": 0,
+        "include_lines": 1,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.75135437,
+        "mean_iou_success": 0.75135437,
+        "minimum_iou": 0.10846977,
+        "stddev_iou": 0.32941578,
+        "mean_edge_error_px": 82.65,
+        "elapsed_ms_total": 211.177,
+        "wall_ms": 211.771
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            119,
+            57,
+            1293,
+            983
+          ],
+          "iou": 0.97330854,
+          "edge_errors": {
+            "left": 6,
+            "top": 1,
+            "right": 4,
+            "bottom": 16,
+            "mean": 6.75,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 6.75,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 68.417,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              119,
+              57,
+              1293,
+              983
+            ],
+            "corners": [
+              [
+                119.0179443359375,
+                69.8436279296875
+              ],
+              [
+                1282.332275390625,
+                57.226318359375
+              ],
+              [
+                1292.2353515625,
+                970.2945556640625
+              ],
+              [
+                128.9210205078125,
+                982.911865234375
+              ]
+            ],
+            "confidence": 0.9520364650784017,
+            "score": 0.9520364650784017,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 1,
+                "dilation_fraction": 0.0075,
+                "close_kernel_fraction": 0.012,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7795903252372169,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.704806509659106
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            127,
+            10,
+            762,
+            203
+          ],
+          "iou": 0.10846977,
+          "edge_errors": {
+            "left": 60,
+            "top": 2,
+            "right": 471,
+            "bottom": 774,
+            "mean": 326.75,
+            "maximum": 774
+          },
+          "edge_error_mean_px": 326.75,
+          "edge_error_maximum_px": 774,
+          "elapsed_ms": 50.085,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              127,
+              10,
+              762,
+              203
+            ],
+            "corners": [
+              [
+                127.7161865234375,
+                25.078170776367188
+              ],
+              [
+                756.88330078125,
+                10.098007202148438
+              ],
+              [
+                761.1133422851562,
+                187.7592010498047
+              ],
+              [
+                131.94622802734375,
+                202.73936462402344
+              ]
+            ],
+            "confidence": 0.994917169321551,
+            "score": 0.994917169321551,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 1,
+                "dilation_fraction": 0.0075,
+                "close_kernel_fraction": 0.012,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.08610565571454899,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.08523033477764125
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            22,
+            74,
+            1065,
+            814
+          ],
+          "iou": 0.77369389,
+          "edge_errors": {
+            "left": 7,
+            "top": 46,
+            "right": 9,
+            "bottom": 156,
+            "mean": 54.5,
+            "maximum": 156
+          },
+          "edge_error_mean_px": 54.5,
+          "edge_error_maximum_px": 156,
+          "elapsed_ms": 30.692,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              22,
+              74,
+              1065,
+              814
+            ],
+            "corners": [
+              [
+                27.56146240234375,
+                74.74786376953125
+              ],
+              [
+                1064.649658203125,
+                81.82696533203125
+              ],
+              [
+                1059.656005859375,
+                813.400390625
+              ],
+              [
+                22.56781005859375,
+                806.3212890625
+              ]
+            ],
+            "confidence": 0.7966840429262629,
+            "score": 0.7966840429262629,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 1,
+                "dilation_fraction": 0.0075,
+                "close_kernel_fraction": 0.012,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7094330776743162,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4209549473400754
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            79,
+            60,
+            1121,
+            950
+          ],
+          "iou": 0.9566956,
+          "edge_errors": {
+            "left": 5,
+            "top": 9,
+            "right": 20,
+            "bottom": 9,
+            "mean": 10.75,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 10.75,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 37.184,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              79,
+              60,
+              1121,
+              950
+            ],
+            "corners": [
+              [
+                79.0,
+                60.0
+              ],
+              [
+                1120.0,
+                60.0
+              ],
+              [
+                1120.0,
+                949.0
+              ],
+              [
+                79.0,
+                949.0
+              ]
+            ],
+            "confidence": 0.9496498456424936,
+            "score": 0.9496498456424936,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 1,
+                "dilation_fraction": 0.0075,
+                "close_kernel_fraction": 0.012,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7294581770028691,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6560015133839897
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            77,
+            44,
+            1175,
+            983
+          ],
+          "iou": 0.94460407,
+          "edge_errors": {
+            "left": 11,
+            "top": 11,
+            "right": 21,
+            "bottom": 15,
+            "mean": 14.5,
+            "maximum": 21
+          },
+          "edge_error_mean_px": 14.5,
+          "edge_error_maximum_px": 21,
+          "elapsed_ms": 24.799,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              77,
+              44,
+              1175,
+              983
+            ],
+            "corners": [
+              [
+                77.9393310546875,
+                56.582061767578125
+              ],
+              [
+                1163.7069091796875,
+                44.205413818359375
+              ],
+              [
+                1174.2669677734375,
+                970.606201171875
+              ],
+              [
+                88.4993896484375,
+                982.9827880859375
+              ]
+            ],
+            "confidence": 0.957515038672277,
+            "score": 0.957515038672277,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 1,
+                "dilation_fraction": 0.0075,
+                "close_kernel_fraction": 0.012,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.8013786157539061,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7332855367555683
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "reference_roles": [
+        "historic_best"
+      ],
+      "requested_search_member": true,
+      "historic_reference": {
+        "detector": "kraken_page_mask",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "historic_build_number": "445",
+        "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31950761584",
+        "historic_calibration_id": "run-20260816-145010",
+        "historic_created_at_utc": "2026-08-16T13:49:59.795369+00:00",
+        "parameter_identity_sha256": "b93bda1258e3bd9aa9b5dd0bca69a5e967291b1a141b022fbcb84bffc177024b",
+        "parameter_set_id": "9ea087074324",
+        "parameters": {
+          "close_kernel_fraction": 0.012,
+          "dilation_fraction": 0.0075,
+          "fill_holes": 0,
+          "include_lines": 1,
+          "minimum_page_area_fraction": 0.08,
+          "page_padding_fraction": 0.0
+        },
+        "provenance_source": "parameter-provenance"
+      },
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.564400133999925,
+        "search_fraction": 0.18181818181818182
+      },
+      "legacy_parameter_set_id": "9ea087074324",
+      "parameter_identity_sha256": "b93bda1258e3bd9aa9b5dd0bca69a5e967291b1a141b022fbcb84bffc177024b",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6800,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "8e7329ed85d1",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.08,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 187.229,
+        "wall_ms": 188.477
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 54.818,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 46.336,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 25.079,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 30.604,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 30.392,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.7608559440000136,
+        "search_fraction": 0.2727272727272727
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "8e7329ed85d1",
+      "parameter_identity_sha256": "55b08bb144373bd9db2ed61714b6f5ddd92b12de85c1d9c07927d8ea1b1a2922",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "172a631f5c19",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.08,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 200.286,
+        "wall_ms": 200.815
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 38.0,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 26.388,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 33.399,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 53.181,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 49.318,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.7691078709999601,
+        "search_fraction": 0.36363636363636365
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "172a631f5c19",
+      "parameter_identity_sha256": "f757519e2731c63170ee07441d113f3a300a4f52dbc3635a38c824603ec823b8",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "8161375b5ba2",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.12,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 154.411,
+        "wall_ms": 157.956
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 37.253,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 31.117,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 25.612,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 30.472,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 29.957,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.9158437679999452,
+        "search_fraction": 0.45454545454545453
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "8161375b5ba2",
+      "parameter_identity_sha256": "72e4d16c0539438b95b7b3fc546e1f5593662d6eae4e9b0a587e5720935c897f",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bd78177097cd",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.12,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 226.838,
+        "wall_ms": 227.346
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 61.159,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 49.406,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 40.464,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 37.825,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 37.984,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.9975384549999262,
+        "search_fraction": 0.5454545454545454
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "bd78177097cd",
+      "parameter_identity_sha256": "75705096ee3a075c6dfa9cb62f62c52029d040d67c267bbd98f37d6ea565a1df",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "8e7329ed85d1",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.08,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 187.229,
+        "wall_ms": 188.477
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 54.818,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 46.336,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 25.079,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 30.604,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 30.392,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.7608559440000136,
+        "search_fraction": 0.2727272727272727
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "8e7329ed85d1",
+      "parameter_identity_sha256": "55b08bb144373bd9db2ed61714b6f5ddd92b12de85c1d9c07927d8ea1b1a2922",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "172a631f5c19",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.08,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 200.286,
+        "wall_ms": 200.815
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 38.0,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 26.388,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 33.399,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 53.181,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 49.318,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.08,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.7691078709999601,
+        "search_fraction": 0.36363636363636365
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "172a631f5c19",
+      "parameter_identity_sha256": "f757519e2731c63170ee07441d113f3a300a4f52dbc3635a38c824603ec823b8",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "8161375b5ba2",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.12,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 154.411,
+        "wall_ms": 157.956
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 37.253,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 31.117,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 25.612,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 30.472,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 29.957,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.9158437679999452,
+        "search_fraction": 0.45454545454545453
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "8161375b5ba2",
+      "parameter_identity_sha256": "72e4d16c0539438b95b7b3fc546e1f5593662d6eae4e9b0a587e5720935c897f",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bd78177097cd",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.12,
+        "fill_holes": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 226.838,
+        "wall_ms": 227.346
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 61.159,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 49.406,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 40.464,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 37.825,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 37.984,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.12,
+                "fill_holes": 1
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.9975384549999262,
+        "search_fraction": 0.5454545454545454
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "bd78177097cd",
+      "parameter_identity_sha256": "75705096ee3a075c6dfa9cb62f62c52029d040d67c267bbd98f37d6ea565a1df",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "4c073e72c58a",
+      "parameters": {
+        "include_lines": 0,
+        "dilation_fraction": 0.0,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0,
+        "minimum_page_area_fraction": 0.16,
+        "fill_holes": 0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72912837,
+        "mean_iou_success": 0.91141046,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37337487,
+        "mean_edge_error_px": 21.812,
+        "elapsed_ms_total": 159.317,
+        "wall_ms": 159.796
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            121,
+            60,
+            1290,
+            954
+          ],
+          "iou": 0.97721984,
+          "edge_errors": {
+            "left": 4,
+            "top": 4,
+            "right": 1,
+            "bottom": 13,
+            "mean": 5.5,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 5.5,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 35.455,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              121,
+              60,
+              1290,
+              954
+            ],
+            "corners": [
+              [
+                121.3526611328125,
+                73.76931762695312
+              ],
+              [
+                1279.220947265625,
+                60.200531005859375
+              ],
+              [
+                1289.5321044921875,
+                940.0836181640625
+              ],
+              [
+                131.663818359375,
+                953.65234375
+              ]
+            ],
+            "confidence": 0.9644049658504321,
+            "score": 0.9644049658504321,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.16,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 2,
+              "line_polygon_count": 123,
+              "baseline_count": 123,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.747754082749912,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 1,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [
+                "Polygonizer failed on line 0: TopologyException: side location conflict at 343.80691642651294 1413.0201729106627. This can occur if the input geometry is invalid."
+              ],
+              "evidence_mask_fraction": 0.6945214185279881
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 31.109,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.16,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 15,
+              "line_polygon_count": 11,
+              "baseline_count": 11,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.06968750083872957,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "reason": "page_area_below_minimum"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            26,
+            78,
+            1062,
+            806
+          ],
+          "iou": 0.75603913,
+          "edge_errors": {
+            "left": 11,
+            "top": 50,
+            "right": 12,
+            "bottom": 164,
+            "mean": 59.25,
+            "maximum": 164
+          },
+          "edge_error_mean_px": 59.25,
+          "edge_error_maximum_px": 164,
+          "elapsed_ms": 28.804,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              26,
+              78,
+              1062,
+              806
+            ],
+            "corners": [
+              [
+                29.96502685546875,
+                78.94879150390625
+              ],
+              [
+                1061.48388671875,
+                84.39691162109375
+              ],
+              [
+                1057.673828125,
+                805.7605590820312
+              ],
+              [
+                26.15509033203125,
+                800.3124389648438
+              ]
+            ],
+            "confidence": 0.7913767024082701,
+            "score": 0.7913767024082701,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.16,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 15,
+              "baseline_count": 15,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.6957626343347258,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.4054580441026869
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            72,
+            62,
+            1121,
+            946
+          ],
+          "iou": 0.95252013,
+          "edge_errors": {
+            "left": 12,
+            "top": 11,
+            "right": 20,
+            "bottom": 5,
+            "mean": 12.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 33.77,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              72,
+              62,
+              1121,
+              946
+            ],
+            "corners": [
+              [
+                72.41851806640625,
+                76.6385498046875
+              ],
+              [
+                1108.162353515625,
+                62.12921142578125
+              ],
+              [
+                1120.328369140625,
+                930.6052856445312
+              ],
+              [
+                84.58465576171875,
+                945.1146850585938
+              ]
+            ],
+            "confidence": 0.9514423124410465,
+            "score": 0.9514423124410465,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.16,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 110,
+              "baseline_count": 110,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.709158527605316,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.6402883311788631
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            47,
+            1172,
+            970
+          ],
+          "iou": 0.95986274,
+          "edge_errors": {
+            "left": 8,
+            "top": 14,
+            "right": 18,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 30.179,
+          "candidate": {
+            "method": "kraken_page_mask",
+            "bbox": [
+              80,
+              47,
+              1172,
+              970
+            ],
+            "corners": [
+              [
+                80.984619140625,
+                59.547332763671875
+              ],
+              [
+                1160.730224609375,
+                47.239349365234375
+              ],
+              [
+                1171.1082763671875,
+                957.6732788085938
+              ],
+              [
+                91.3626708984375,
+                969.9812622070312
+              ]
+            ],
+            "confidence": 0.9568374650415389,
+            "score": 0.9568374650415389,
+            "diagnostics": {
+              "parameters": {
+                "include_lines": 0,
+                "dilation_fraction": 0.0,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0,
+                "minimum_page_area_fraction": 0.16,
+                "fill_holes": 0
+              },
+              "evidence": "kraken_default_blla_regions_and_lines",
+              "region_count": 1,
+              "line_polygon_count": 101,
+              "baseline_count": 101,
+              "text_direction": "horizontal-lr",
+              "page_area_fraction": 0.7831985209148715,
+              "model": "kraken-blla-default-7.0.2",
+              "canonical_quad": true,
+              "kraken_polygonizer_warnings": 0,
+              "lightning_srun_advisories": 0,
+              "kraken_filtered_messages": [],
+              "evidence_mask_fraction": 0.7155888538380651
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 1.0758523229999355,
+        "search_fraction": 0.6363636363636364
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "4c073e72c58a",
+      "parameter_identity_sha256": "59493c58c3071f3fd3561cc6e911946e65f7757a19c8759d565432442840e1f7",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+      "profile": null,
+      "run_id": "run-20260817-040329",
+      "rank": 6,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 1,
+      "regressions": 1
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.87692208,
+        "winner_iou": 0.97330854,
+        "delta_iou": 0.09638646,
+        "status": "Improved",
+        "parameter_set": "9ea087074324",
+        "parameter_set_id": "9ea087074324",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.84371041,
+        "winner_iou": 0.9566956,
+        "delta_iou": 0.11298519,
+        "status": "Improved",
+        "parameter_set": "9ea087074324",
+        "parameter_set_id": "9ea087074324",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.86249089,
+        "winner_iou": 0.94460407,
+        "delta_iou": 0.08211318,
+        "status": "Improved",
+        "parameter_set": "9ea087074324",
+        "parameter_set_id": "9ea087074324",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.83096903,
+        "winner_iou": 0.77369389,
+        "delta_iou": -0.05727514,
+        "status": "Regressed",
+        "parameter_set": "9ea087074324",
+        "parameter_set_id": "9ea087074324",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.10846977,
+        "delta_iou": 0.10846977,
+        "status": "Recovered",
+        "parameter_set": "9ea087074324",
+        "parameter_set_id": "9ea087074324",
+        "problem": true,
+        "problem_reasons": [
+          "Poor match"
+        ],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000713",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16770748416,
+    "memory_gib": 15.62,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "556f8567f5d59cf568f0dd87dec3b19f131de553",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31992910237",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "050fce978398b9dc28b22222c22e3904276f8490",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 3126636544,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": true,
+    "evidence_precompute_seconds": 309.822312
+  },
+  "progress": {
+    "estimated_parameter_sets": 11,
+    "completed_parameter_sets": 11,
+    "average_eval_rate": 7.837257400734268,
+    "failures": 10,
+    "best_mean_iou": 0.75135437,
+    "best_worst_page_iou": 0.10846977,
+    "best_stddev_iou": 0.32941578,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 1,
+    "stddev_improvements": 1,
+    "total_metric_improvements": 3,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 0.564400133999925,
+    "winner_last_changed_elapsed_seconds": 0.564400133999925,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "9ea087074324",
+        "parameter_short_name": "historic-best",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.564400133999925,
+        "search_fraction": 0.18181818181818182
+      }
+    ],
+    "last_improvement_elapsed_seconds": 0.564400133999925,
+    "time_since_last_improvement_seconds": 0.8391520830000445
+  }
+}
