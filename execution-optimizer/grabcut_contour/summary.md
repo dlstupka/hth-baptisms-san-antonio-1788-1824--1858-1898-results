@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `grabcut_contour`  
-Optimizer run: **31533984821** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **32081095080** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -38,7 +38,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 <summary><strong>2. Detector Run Profile Plot</strong></summary>
 
 Compatible completed measurements are plotted as detector pipelines versus parameter sets/second; thread count is annotated at each measured shape.
-**Search method:** `adaptive`
+**Search method:** `exhaustive`
 
 ![Detector Run Profile Plot](heatmap.svg)
 
@@ -52,15 +52,12 @@ Compatible completed measurements are plotted as detector pipelines versus param
 
 Shapes completed in this execution are shown below.
 
-| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| **192t — rh8-al320 (192 vCPU)** | 2 | 2 | 192 | 384 | 19h 13m 32s | 5.12 | — | 0.00% | 562.0 | 655.0 | 96.0% | 87.2 GiB |
-| 192t — rh8-al320 (192 vCPU) | 3 | 3 | 128 | 384 | 19h 36m 35s | 5.02 | — | -1.96% | 654.1 | 760.0 | 96.9% | 82.4 GiB |
-| 192t — rh8-al320 (192 vCPU) | 4 | 4 | 96 | 384 | 19h 48m 5s | 4.97 | — | -2.91% | 730.8 | 876.6 | 97.7% | 86.8 GiB |
-| 192t — rh8-al320 (192 vCPU) | 6 | 6 | 64 | 384 | 20h 17m 30s | 4.85 | — | -5.25% | 850.5 | 996.8 | 99.0% | 90.8 GiB |
-| 192t — rh8-al320 (192 vCPU) | 16 | 16 | 24 | 384 | 22h 30m 47s | 4.37 | — | -14.60% | 1237.1 | 1552.0 | 99.7% | 100.7 GiB |
+This table contains measurements from this optimizer execution only. Bold identifies this run’s measured throughput winner; the preferred configuration above is selected from all compatible coalesced optimizer evidence.
 
-**Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 2.0% from the perceived maximum.
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+
+**Stop reason:** `shape_range_complete`
 
 </details>
 
