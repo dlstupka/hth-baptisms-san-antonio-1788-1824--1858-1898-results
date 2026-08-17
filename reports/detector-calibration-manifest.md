@@ -36,13 +36,13 @@
     - [Contour + Components (`contour_components`)](#contour-components-contourcomponents)
     - [Contour Envelope (`contour`)](#contour-envelope-contour)
     - [Distance Transform Detector (`distance_transform`)](#distance-transform-detector-distancetransform)
-    - [Star-Convex Boundary Optimization (`star_convex`)](#star-convex-boundary-optimization-starconvex)
     - [GrabCut + Contour (`grabcut_contour`)](#grabcut-contour-grabcutcontour)
+    - [Star-Convex Boundary Optimization (`star_convex`)](#star-convex-boundary-optimization-starconvex)
     - [Connected Components (`components`)](#connected-components-components)
     - [RANSAC Border Fit (`ransac`)](#ransac-border-fit-ransac)
+    - [Kraken Page Mask (`kraken_page_mask`)](#kraken-page-mask-krakenpagemask)
     - [Line Segment Detector (`lsd`)](#line-segment-detector-lsd)
     - [Convex Hull Detector (`convex_hull`)](#convex-hull-detector-convexhull)
-    - [Kraken Page Mask (`kraken_page_mask`)](#kraken-page-mask-krakenpagemask)
     - [Border Energy Validator (`border_energy`)](#border-energy-validator-borderenergy)
     - [Distance-Transform Rectangle Proposal (`distance_transform_rect`)](#distance-transform-rectangle-proposal-distancetransformrect)
     - [Hough Line Borders (`hough`)](#hough-line-borders-hough)
@@ -145,7 +145,7 @@ This recommendation is specific to the evaluated Golden Set and parameter grid a
 | 2 | Multi-Scale Radial Edge Search | `multi_scale_radial_edge` | Generator | `HTH-0001` | complete | `ddb7623ebb92` | `ddb7623ebb92` | 0.9765 | 0.9566 | 0.0175 | 0.9765 | 0 | 384077 | 5.216 pg/s | 2m 58s | 3h 50m 18s |
 | 3 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background | `msre_bfq_spbv_pbg` | Hybrid (MSRE + BFQ + SPBV + Page Background) | `HTH-0001` | complete | `7b7dbac43ea6` | `7b7dbac43ea6` | 0.9747 | 0.9638 | 0.0101 | 0.9747 | 0 | 50176 | 0.2677 pg/s | 57m 50s | 1h 8m 47s |
 | 4 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background | `amsre_bfq_spbv_pbg` | Hybrid (AMSRE + BFQ + SPBV + Page Background) | `HTH-0001` | complete | `156ff0241cc1` | `baseline` | 0.9743 | 0.9638 | 0.0103 | 0.9743 | 0 | 50177 | 2.734 pg/s | 5m 40s | 1h 18m 41s |
-| 5 | dhSegment Page-Mask Detector | `dhsegment_page_mask` | Generator | `HTH-0001` | complete | `15434712cddf` | `15434712cddf` | 0.9735 | 0.9634 | 0.0100 | 0.9735 | 0 | 10000 | 0.0154 pg/s | 16h 46m 36s | 2h 22m 49s |
+| 5 | dhSegment Page-Mask Detector | `dhsegment_page_mask` | Generator | `HTH-0001` | complete | `15434712cddf` | `15434712cddf` | 0.9735 | 0.9634 | 0.0100 | 0.9735 | 0 | 10000 | 0.2909 pg/s | 53m 14s | 13m 37s |
 | 6 | Adaptive Radial Edge Search | `adaptive_radial_edge` | Generator | `HTH-0001` | complete | `bcd9a1d083cf` | `bcd9a1d083cf` | 0.9726 | 0.9557 | 0.0159 | 0.9726 | 0 | 750001 | 2.707 pg/s | 5m 43s | 1h 8m 48s |
 | 7 | Signed Polar Boundary Voting | `signed_polar_boundary_vote` | Generator | `HTH-0001` | complete | `8ddbe5f468cd` | `8ddbe5f468cd` | 0.9717 | 0.9506 | 0.0193 | 0.9717 | 0 | 453600 | 27.85 pg/s | 33.4s | 4h 1m 25s |
 | 8 | Border Fusion Quad | `border_fusion_quad` | Hybrid (Radial + Polar + Gradient) | `HTH-0001` | complete | `2370e6cea486` | `2370e6cea486` | 0.9707 | 0.9588 | 0.0112 | 0.9707 | 0 | 539001 | 4.537 pg/s | 3m 25s | 11h 28m 47s |
@@ -154,7 +154,7 @@ This recommendation is specific to the evaluated Golden Set and parameter grid a
 | 11 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | complete | `cf581d27715b` | `cf581d27715b` | 0.9622 | 0.9384 | 0.0160 | 0.9622 | 0 | 22 | 502.61 pg/s | 1.8s | 809 ms |
 | 12 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | complete | `837321a04ccf` | `837321a04ccf` | 0.9571 | 0.9261 | 0.0183 | 0.9571 | 0 | 400001 | 6.470 pg/s | 2m 24s | 13m 28s |
 | 13 | Segment-Supported Polar Voting | `segment_supported_polar_vote` | Hybrid (Polar + LSD) | `HTH-0001` | complete | `4546643c94a4` | `4546643c94a4` | 0.9470 | 0.8447 | 0.0536 | 0.9470 | 0 | 180001 | 2.286 pg/s | 6m 46s | 22m 54s |
-| 14 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | complete | `1df07d89c21d` | `1df07d89c21d` | 0.9071 | 0.7249 | 0.0912 | 0.9071 | 0 | 13122 | 0.0498 pg/s | 5h 10m 49s | 46m 1s |
+| 14 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | complete | `110867d137a9` | `110867d137a9` | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | 13122 | 0.0489 pg/s | 5h 16m 39s | 46m 8s |
 | 15 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | complete | `49095b866d0d` | `49095b866d0d` | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | 1062882 | 12.52 pg/s | 1m 14s | 10h 40m 34s |
 | 16 | Learned Page-Mask Detector | `learned_page_mask` | Generator | `HTH-0001` | complete | `275078578cee` | `275078578cee` | 0.8868 | 0.8122 | 0.0470 | 0.8868 | 0 | 50000 | 0.1360 pg/s | 1h 53m 52s | 1h 19m 22s |
 | 17 | Cross-Edge Contour | `cross_edge_contour` | Hybrid (Contour Quad + Cross-Edge Validation) | `HTH-0001` | complete | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 6562 | 23.42 pg/s | 39.7s | 3m 28s |
@@ -164,13 +164,13 @@ This recommendation is specific to the evaluated Golden Set and parameter grid a
 | 21 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | complete | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | 19684 | 83.60 pg/s | 11.1s | 3m 48s |
 | 22 | Contour Envelope | `contour` | Generator | `HTH-0001` | complete | `7aed2fc501c5` | `7aed2fc501c5` | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | 1458 | 145.59 pg/s | 6.4s | 4.6s |
 | 23 | Distance Transform Detector | `distance_transform` | Generator | `HTH-0001` | complete | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | 2187 | 2.026 pg/s | 7m 39s | 28.6s |
-| 24 | Star-Convex Boundary Optimization | `star_convex` | Generator | `HTH-0001` | complete | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | 729 | 1.314 pg/s | 11m 47s | 7.2s |
-| 25 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | complete | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 10 | 0.1658 pg/s | 1h 33m 22s | 44.9s |
+| 24 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | complete | `9c90917e5b48` | `9c90917e5b48` | 0.8217 | 0.5699 | 0.1596 | 0.8217 | 0 | 11 | 0.0582 pg/s | 4h 26m 16s | 10m 28s |
+| 25 | Star-Convex Boundary Optimization | `star_convex` | Generator | `HTH-0001` | complete | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | 729 | 1.314 pg/s | 11m 47s | 7.2s |
 | 26 | Connected Components | `components` | Generator | `HTH-0001` | complete | `f1929c8e2655` | `f1929c8e2655` | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | 19683 | 237.69 pg/s | 3.9s | 40.8s |
 | 27 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | complete | `9647b030702e` | `9647b030702e` | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | 1458 | 4.771 pg/s | 3m 15s | 1m 31s |
-| 28 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | complete | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | 2187 | 13.20 pg/s | 1m 10s | 59s |
-| 29 | Convex Hull Detector | `convex_hull` | Generator | `HTH-0001` | complete | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | 2187 | 28.47 pg/s | 32.6s | 2s |
-| 30 | Kraken Page Mask | `kraken_page_mask` | Unknown | `HTH-0001` | complete | `8e7329ed85d1` | `8e7329ed85d1` | 0.7291 | 0.0000 | 0.3734 | 0.9114 | 1 | 10 | 140.33 pg/s | 6.6s | 2m 14s |
+| 28 | Kraken Page Mask | `kraken_page_mask` | Unknown | `HTH-0001` | complete | `9ea087074324` | `9ea087074324` | 0.7514 | 0.1085 | 0.3294 | 0.7514 | 0 | 10000 | 116.92 pg/s | 7.9s | 9.1s |
+| 29 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | complete | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | 2187 | 13.20 pg/s | 1m 10s | 59s |
+| 30 | Convex Hull Detector | `convex_hull` | Generator | `HTH-0001` | complete | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | 2187 | 28.47 pg/s | 32.6s | 2s |
 | 31 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | complete | `74e2112aac01` | `74e2112aac01` | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | 6562 | 9.159 pg/s | 1m 41s | 3m 59s |
 | 32 | Distance-Transform Rectangle Proposal | `distance_transform_rect` | Generator | `HTH-0001` | complete | `0a8482550c35` | `0a8482550c35` | 0.7243 | 0.4499 | 0.2245 | 0.7243 | 0 | 729 | 12.21 pg/s | 1m 16s | 1.2s |
 | 33 | Hough Line Borders | `hough` | Generator | `HTH-0001` | complete | `c2c117479e3f` | `c2c117479e3f` | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | 2188 | 3.685 pg/s | 4m 12s | 3m 4s |
@@ -221,7 +221,7 @@ This table prefers compatible full calibrations when available and falls back to
 | 2 | Multi-Scale Radial Edge Search | `multi_scale_radial_edge` | Generator | `HTH-0001` | 2026-08-13 | [#371](https://github.com/dlstupka/hth/actions/runs/31748488486) | 3h 50m 18s | `ddb7623ebb92` | 384077 | exhaustive | 100.0% | 0.9765 | 0.9566 | 0.0175 | 0.9765 | 0 | +0.3245 | 0.0% | 0.0% | Medium | Recommended |
 | 3 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background | `msre_bfq_spbv_pbg` | Hybrid (MSRE + BFQ + SPBV + Page Background) | `HTH-0001` | 2026-08-14 | [#387](https://github.com/dlstupka/hth/actions/runs/31824453163) | 1h 8m 47s | `7b7dbac43ea6` | 50176 | exhaustive | 84.5% | 0.9747 | 0.9638 | 0.0101 | 0.9747 | 0 | +0.0009 | 31.0% | 0.0% | Medium | Recommended |
 | 4 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background | `amsre_bfq_spbv_pbg` | Hybrid (AMSRE + BFQ + SPBV + Page Background) | `HTH-0001` | 2026-08-15 | [#428](https://github.com/dlstupka/hth/actions/runs/31899010020) | 1h 18m 41s | `156ff0241cc1` | 50177 | exhaustive | 99.4% | 0.9743 | 0.9638 | 0.0103 | 0.9743 | 0 | +0.0000 | 90.2% | 61.6% | High | Approved |
-| 5 | dhSegment Page-Mask Detector | `dhsegment_page_mask` | Generator | `HTH-0001` | 2026-08-15 | [#407](https://github.com/dlstupka/hth/actions/runs/31856065283) | 2h 22m 49s | `15434712cddf` | 10000 | exhaustive | 100.0% | 0.9735 | 0.9634 | 0.0100 | 0.9735 | 0 | +0.0065 | 7.7% | 1.3% | High | Approved |
+| 5 | dhSegment Page-Mask Detector | `dhsegment_page_mask` | Generator | `HTH-0001` | 2026-08-16 | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | 13m 37s | `15434712cddf` | 10000 | exhaustive | 100.0% | 0.9735 | 0.9634 | 0.0100 | 0.9735 | 0 | +0.0065 | 7.7% | 1.3% | High | Approved |
 | 6 | Adaptive Radial Edge Search | `adaptive_radial_edge` | Generator | `HTH-0001` | 2026-08-13 | [#370](https://github.com/dlstupka/hth/actions/runs/31748441601) | 1h 8m 48s | `bcd9a1d083cf` | 750001 | exhaustive | 100.0% | 0.9726 | 0.9557 | 0.0159 | 0.9726 | 0 | +0.0397 | 0.0% | 0.0% | Medium | Recommended |
 | 7 | Signed Polar Boundary Voting | `signed_polar_boundary_vote` | Generator | `HTH-0001` | 2026-08-13 | [#374](https://github.com/dlstupka/hth/actions/runs/31748657986) | 4h 1m 25s | `8ddbe5f468cd` | 453600 | exhaustive | 100.0% | 0.9717 | 0.9506 | 0.0193 | 0.9717 | 0 | +0.1235 | 0.0% | 0.0% | Medium | Recommended |
 | 8 | Border Fusion Quad | `border_fusion_quad` | Hybrid (Radial + Polar + Gradient) | `HTH-0001` | 2026-08-13 | [#372](https://github.com/dlstupka/hth/actions/runs/31748550347) | 11h 28m 47s | `2370e6cea486` | 539001 | exhaustive | 99.1% | 0.9707 | 0.9588 | 0.0112 | 0.9707 | 0 | +0.0817 | 5.4% | 0.8% | High | Approved |
@@ -230,7 +230,7 @@ This table prefers compatible full calibrations when available and falls back to
 | 11 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | 2026-08-15 | [#421](https://github.com/dlstupka/hth/actions/runs/31891526961) | 809 ms | `cf581d27715b` | 22 | exhaustive | 54.5% | 0.9622 | 0.9384 | 0.0160 | 0.9622 | 0 | +0.0155 | 18.2% | 13.6% | Medium | Recommended |
 | 12 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | 2026-08-13 | [#369](https://github.com/dlstupka/hth/actions/runs/31748401024) | 13m 28s | `837321a04ccf` | 400001 | exhaustive | 100.0% | 0.9571 | 0.9261 | 0.0183 | 0.9571 | 0 | +0.0068 | 0.1% | 0.0% | Medium | Recommended |
 | 13 | Segment-Supported Polar Voting | `segment_supported_polar_vote` | Hybrid (Polar + LSD) | `HTH-0001` | 2026-08-14 | [#382](https://github.com/dlstupka/hth/actions/runs/31806152306) | 22m 54s | `4546643c94a4` | 180001 | exhaustive | 80.0% | 0.9470 | 0.8447 | 0.0536 | 0.9470 | 0 | +0.2496 | 0.0% | 0.0% | Medium | Recommended |
-| 14 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | 2026-08-10 | [#290](https://github.com/dlstupka/hth/actions/runs/31424169237) | 6h 23m 40s | `f33aa4421393` | 13122 | exhaustive | 95.7% | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | +0.1006 | 0.0% | 0.0% | Medium | Recommended |
+| 14 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | 2026-08-16 | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | 46m 8s | `110867d137a9` | 13122 | exhaustive | 95.4% | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | +0.1006 | 0.0% | 0.0% | Medium | Recommended |
 | 15 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | 2026-08-10 | [#287](https://github.com/dlstupka/hth/actions/runs/31424165043) | 10h 40m 34s | `49095b866d0d` | 1062882 | exhaustive | 33.3% | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | +0.0105 | 15.5% | 5.3% | Medium | Recommended |
 | 16 | Learned Page-Mask Detector | `learned_page_mask` | Generator | `HTH-0001` | 2026-08-13 | [#355](https://github.com/dlstupka/hth/actions/runs/31711919948) | 1h 19m 22s | `275078578cee` | 50000 | exhaustive | 100.0% | 0.8868 | 0.8122 | 0.0470 | 0.8868 | 0 | +0.0494 | 1.0% | 0.1% | High | Approved |
 | 17 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | 2026-08-10 | [#285](https://github.com/dlstupka/hth/actions/runs/31424162073) | 3h 9m 30s | `3eec8a03f1de` | 6562 | exhaustive | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
@@ -240,13 +240,13 @@ This table prefers compatible full calibrations when available and falls back to
 | 21 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | 2026-08-10 | [#284](https://github.com/dlstupka/hth/actions/runs/31424160561) | 3m 48s | `14818b491952` | 19684 | exhaustive | 100.0% | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
 | 22 | Contour Envelope | `contour` | Generator | `HTH-0001` | 2026-08-10 | [#283](https://github.com/dlstupka/hth/actions/runs/31424159190) | 4.6s | `7aed2fc501c5` | 1458 | exhaustive | 50.0% | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | +0.1776 | 1.9% | 1.9% | Medium | Recommended |
 | 23 | Distance Transform Detector | `distance_transform` | Generator | `HTH-0001` | 2026-08-12 | [#322](https://github.com/dlstupka/hth/actions/runs/31606269618) | 28.6s | `e66a7546e1a7` | 2187 | exhaustive | 51.2% | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | +0.0795 | 6.6% | 6.6% | Medium | Recommended |
-| 24 | Star-Convex Boundary Optimization | `star_convex` | Generator | `HTH-0001` | 2026-08-12 | [#328](https://github.com/dlstupka/hth/actions/runs/31614832224) | 7.2s | `024732f5e631` | 729 | exhaustive | 100.0% | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | +0.0422 | 0.4% | 0.4% | Medium | Recommended |
-| 25 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-15 | [#433](https://github.com/dlstupka/hth/actions/runs/31902921758) | 44.9s | `3817f226228a` | 10 | smoke | 100.0% | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
+| 24 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-17 | [#484](https://github.com/dlstupka/hth/actions/runs/32050140632) | 10m 28s | `9c90917e5b48` | 11 | smoke | 100.0% | 0.8217 | 0.5699 | 0.1596 | 0.8217 | 0 | +0.0086 | 9.1% | 9.1% | Medium | Provisional |
+| 25 | Star-Convex Boundary Optimization | `star_convex` | Generator | `HTH-0001` | 2026-08-12 | [#328](https://github.com/dlstupka/hth/actions/runs/31614832224) | 7.2s | `024732f5e631` | 729 | exhaustive | 100.0% | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | +0.0422 | 0.4% | 0.4% | Medium | Recommended |
 | 26 | Connected Components | `components` | Generator | `HTH-0001` | 2026-08-10 | [#281](https://github.com/dlstupka/hth/actions/runs/31424156590) | 40.8s | `f1929c8e2655` | 19683 | exhaustive | 75.8% | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | +0.0712 | 0.8% | 0.8% | Medium | Recommended |
 | 27 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | 2026-08-10 | [#296](https://github.com/dlstupka/hth/actions/runs/31424177450) | 1m 31s | `9647b030702e` | 1458 | exhaustive | 5.3% | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | +0.0710 | 0.4% | 0.4% | Medium | Recommended |
-| 28 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | 2026-08-10 | [#294](https://github.com/dlstupka/hth/actions/runs/31424174875) | 59s | `7546c5067527` | 2187 | exhaustive | 0.0% | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | +0.1964 | 1.2% | 0.4% | Medium | Recommended |
-| 29 | Convex Hull Detector | `convex_hull` | Generator | `HTH-0001` | 2026-08-12 | [#321](https://github.com/dlstupka/hth/actions/runs/31606215160) | 2s | `04fd0a6e4bc2` | 2187 | exhaustive | 0.0% | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | +0.0692 | 6.6% | 6.6% | Medium | Recommended |
-| 30 | Kraken Page Mask | `kraken_page_mask` | Unknown | `HTH-0001` | 2026-08-15 | [#433](https://github.com/dlstupka/hth/actions/runs/31902921758) | 2m 14s | `8e7329ed85d1` | 10 | smoke | 0.0% | 0.7291 | 0.0000 | 0.3734 | 0.9114 | 1 | +0.0463 | 90.0% | 90.0% | Low | Provisional |
+| 28 | Kraken Page Mask | `kraken_page_mask` | Unknown | `HTH-0001` | 2026-08-17 | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | 9.1s | `9ea087074324` | 10000 | exhaustive | 28.2% | 0.7514 | 0.1085 | 0.3294 | 0.7514 | 0 | +0.0685 | 0.3% | 0.1% | Medium | Recommended |
+| 29 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | 2026-08-10 | [#294](https://github.com/dlstupka/hth/actions/runs/31424174875) | 59s | `7546c5067527` | 2187 | exhaustive | 0.0% | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | +0.1964 | 1.2% | 0.4% | Medium | Recommended |
+| 30 | Convex Hull Detector | `convex_hull` | Generator | `HTH-0001` | 2026-08-12 | [#321](https://github.com/dlstupka/hth/actions/runs/31606215160) | 2s | `04fd0a6e4bc2` | 2187 | exhaustive | 0.0% | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | +0.0692 | 6.6% | 6.6% | Medium | Recommended |
 | 31 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | 2026-08-10 | [#278](https://github.com/dlstupka/hth/actions/runs/31423513220) | 3m 59s | `74e2112aac01` | 6562 | exhaustive | 0.0% | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | +0.1708 | 19.8% | 19.8% | Medium | Recommended |
 | 32 | Distance-Transform Rectangle Proposal | `distance_transform_rect` | Generator | `HTH-0001` | 2026-08-12 | [#326](https://github.com/dlstupka/hth/actions/runs/31614704921) | 1.2s | `0a8482550c35` | 729 | exhaustive | 9.9% | 0.7243 | 0.4499 | 0.2245 | 0.7243 | 0 | +0.0896 | 0.8% | 0.8% | Medium | Recommended |
 | 33 | Hough Line Borders | `hough` | Generator | `HTH-0001` | 2026-08-10 | [#293](https://github.com/dlstupka/hth/actions/runs/31424173458) | 3m 4s | `c2c117479e3f` | 2188 | exhaustive | 0.0% | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | +0.1266 | 0.0% | 0.0% | Medium | Recommended |
@@ -271,7 +271,7 @@ This table prefers compatible full calibrations when available and falls back to
 - **Calibration Evidence:** deterministic evidence score for how completely this run characterizes the evaluated Golden Set and parameter grid. Score 2 points for complete exhaustive coverage, 1 point when at least 90% of parameter sets succeed on every page, and 1 point when at least 1% of tested sets are within 0.001 Avg IoU of the winner. **Low** = 0–1 points, **Medium** = 2–3 points, and **High** = 4 points. This is not confidence that the detector generalizes beyond this Golden Set and grid.
 - **Approval Level:** automatic Golden Set-scoped engineering status derived from Search Type and Calibration Evidence. **Provisional** = smoke or unavailable evidence; **Candidate** = any reduced search or exhaustive search with Low evidence; **Recommended** = exhaustive search with Medium evidence; **Approved** = exhaustive search with High evidence. A different Golden Set requires its own calibration and approval.
 - **Evidence tables:** identify what each detector actually observes and whether that evidence generates, validates, filters, or scores a page hypothesis.
-- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/dbab05196c0aee8b6efe52b7b544fd863452475f/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_multi_scale_radial_edge/run-20260815-155156/calibration-intelligence.json).
+- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/ab355a9c7cfd4f36f759d56f58b20ff755a6bae5/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_multi_scale_radial_edge/run-20260815-155156/calibration-intelligence.json).
 - **Est. Serial Runtime\*\*:** Estimated single-detector serial runtime derived from recorded regression evidence; actual wall time varies with parallelism and scheduling.
 
 [↑ Back to Navigation](#table-of-contents)
@@ -716,8 +716,8 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 | Best Avg IoU | 0.9735 |
 | Minimum Avg IoU | 0.9581 |
 | Avg IoU StdDev | 0.0034 |
-| Winner stabilized after | 3073 parameter sets |
-| Winner stabilized | 47m 58s (31% of search) |
+| Winner stabilized after | 1 parameter set |
+| Winner stabilized | 28.4s (0% of search) |
 | Near-best coverage (basin; within 0.0010) | 770 (7.7%) |
 | Equivalent-best configurations (within 0.0001) | 130 (1.3%) |
 | Calibration Evidence | High |
@@ -728,12 +728,12 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 10000 | 100.0% | 37d 14h 56m 10s | 1.0× |
-| Non-dormant | 200 | 2.0% | 18h 3m 31s | 50.0× |
-| Low+ | 200 | 2.0% | 18h 3m 31s | 50.0× |
-| Moderate+ | 40 | 0.4% | 3h 36m 42s | 250.0× |
-| Important+ | 40 | 0.4% | 3h 36m 42s | 250.0× |
-| Critical | 4 | 0.0% | 21m 40s | 2500.0× |
+| Exhaustive | 10000 | 100.0% | 1d 23h 44m 42s | 1.0× |
+| Non-dormant | 200 | 2.0% | 57m 18s | 50.0× |
+| Low+ | 200 | 2.0% | 57m 18s | 50.0× |
+| Moderate+ | 40 | 0.4% | 11m 28s | 250.0× |
+| Important+ | 40 | 0.4% | 11m 28s | 250.0× |
+| Critical | 4 | 0.0% | 1m 9s | 2500.0× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
@@ -1619,14 +1619,14 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 | Parameter sets evaluated | 13122 |
 | Evaluated sets (% of all possible parameter sets) | 100.0% |
 | Est. serial runtime for full parameter set evaluation* | complete |
-| Fully successful parameter sets | 12559 (95.7%) |
-| Best Avg IoU | 0.9071 |
+| Fully successful parameter sets | 12515 (95.4%) |
+| Best Avg IoU | 0.9137 |
 | Minimum Avg IoU | 0.4353 |
-| Avg IoU StdDev | 0.0698 |
-| Winner stabilized after | 5302 parameter sets |
-| Winner stabilized | 20m 42s (40% of search) |
-| Near-best coverage (basin; within 0.0010) | 52 (0.4%) |
-| Equivalent-best configurations (within 0.0001) | 14 (0.1%) |
+| Avg IoU StdDev | 0.0712 |
+| Winner stabilized after | 1355 parameter sets |
+| Winner stabilized | 6m 3s (10% of search) |
+| Near-best coverage (basin; within 0.0010) | 1 (0.0%) |
+| Equivalent-best configurations (within 0.0001) | 1 (0.0%) |
 | Calibration Evidence | Medium |
 
 \* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
@@ -1635,11 +1635,11 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 13122 | 100.0% | 15d 5h 51m 5s | 1.0× |
-| Non-dormant | 486 | 3.7% | 13h 33m | 27.0× |
-| Low+ | 486 | 3.7% | 13h 33m | 27.0× |
-| Moderate+ | 81 | 0.6% | 2h 15m 30s | 162.0× |
-| Important+ | 27 | 0.2% | 45m 10s | 486.0× |
+| Exhaustive | 13122 | 100.0% | 15d 12h 43m 31s | 1.0× |
+| Non-dormant | 486 | 3.7% | 13h 48m 17s | 27.0× |
+| Low+ | 486 | 3.7% | 13h 48m 17s | 27.0× |
+| Moderate+ | 81 | 0.6% | 2h 18m 3s | 162.0× |
+| Important+ | 27 | 0.2% | 46m 1s | 486.0× |
 | Critical | 0 | 0.0% | 0 ms | unavailable |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
@@ -1652,21 +1652,21 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 | Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
 |---|---|---:|---:|---:|---|
-| `erosion_iterations` | Important | 0.2045 | 0.0746 | 33.3% | `1` (0.7948), `2` (0.7751), `0` (0.7202) |
-| `border_fraction` | Important | 0.1556 | 0.0604 | 33.3% | `0.01` (0.8022), `0.03` (0.7460), `0.02` (0.7419) |
-| `grabcut_iterations` | Important | 0.1248 | 0.0552 | 33.3% | `5` (0.7839), `3` (0.7775), `1` (0.7287) |
-| `erosion_kernel_fraction` | Moderate | 0.0332 | 0.0311 | 33.3% | `0.0075` (0.7796), `0.015` (0.7619), `0.025` (0.7485) |
-| `close_kernel_fraction` | Low | 0.0175 | 0.0210 | 100.0% | `0.01` (0.7714), `0.02` (0.7682), `0.035` (0.7505) |
-| `close_iterations` | Low | 0.0091 | 0.0133 | 100.0% | `1` (0.7700), `2` (0.7567) |
-| `polygon_epsilon_fraction` | Dormant | 0.0001 | 0.0021 | 100.0% | `0.018` (0.7644), `0.01` (0.7633), `0.03` (0.7623) |
-| `minimum_bbox_area_fraction` | Dormant | 0.0000 | 0.0010 | 100.0% | `0.1` (0.7638), `0.07` (0.7635), `0.15` (0.7628) |
-| `minimum_contour_area_fraction` | Dormant | 0.0000 | 0.0006 | 100.0% | `0.02` (0.7636), `0.04` (0.7634), `0.07` (0.7631) |
+| `erosion_iterations` | Important | 0.2068 | 0.0763 | 33.3% | `1` (0.7946), `2` (0.7753), `0` (0.7183) |
+| `border_fraction` | Important | 0.1542 | 0.0611 | 33.3% | `0.01` (0.8022), `0.03` (0.7449), `0.02` (0.7411) |
+| `grabcut_iterations` | Important | 0.1207 | 0.0547 | 33.3% | `5` (0.7825), `3` (0.7778), `1` (0.7279) |
+| `erosion_kernel_fraction` | Moderate | 0.0329 | 0.0316 | 33.3% | `0.0075` (0.7789), `0.015` (0.7620), `0.025` (0.7473) |
+| `close_kernel_fraction` | Low | 0.0162 | 0.0209 | 33.3% | `0.01` (0.7711), `0.02` (0.7670), `0.035` (0.7501) |
+| `close_iterations` | Low | 0.0107 | 0.0147 | 50.0% | `1` (0.7701), `2` (0.7554) |
+| `minimum_bbox_area_fraction` | Dormant | 0.0000 | 0.0009 | 33.3% | `0.15` (0.7633), `0.07` (0.7626), `0.1` (0.7624) |
+| `polygon_epsilon_fraction` | Dormant | 0.0000 | 0.0006 | 33.3% | `0.03` (0.7630), `0.018` (0.7627), `0.01` (0.7624) |
+| `minimum_contour_area_fraction` | Dormant | 0.0000 | 0.0002 | 33.3% | `0.02` (0.7629), `0.04` (0.7627), `0.07` (0.7626) |
 
 #### Dormant Parameters
 
 These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
 
-`polygon_epsilon_fraction`, `minimum_bbox_area_fraction`, `minimum_contour_area_fraction`.
+`minimum_bbox_area_fraction`, `polygon_epsilon_fraction`, `minimum_contour_area_fraction`.
 
 Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
 
@@ -1676,19 +1676,19 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Parameters | Pair η² | Incremental importance | Sample size |
 |---|---:|---:|---:|
-| `erosion_iterations` × `border_fraction` | 0.4085 | 0.2040 | 13122 |
-| `border_fraction` × `grabcut_iterations` | 0.2885 | 0.1330 | 13122 |
-| `erosion_iterations` × `grabcut_iterations` | 0.3369 | 0.1324 | 13122 |
-| `erosion_iterations` × `erosion_kernel_fraction` | 0.3044 | 0.0999 | 13122 |
-| `border_fraction` × `erosion_kernel_fraction` | 0.1995 | 0.0439 | 13122 |
+| `erosion_iterations` × `border_fraction` | 0.4096 | 0.2028 | 13122 |
+| `erosion_iterations` × `grabcut_iterations` | 0.3374 | 0.1306 | 13122 |
+| `border_fraction` × `grabcut_iterations` | 0.2832 | 0.1291 | 13122 |
+| `erosion_iterations` × `erosion_kernel_fraction` | 0.3027 | 0.0959 | 13122 |
+| `border_fraction` × `erosion_kernel_fraction` | 0.1964 | 0.0422 | 13122 |
 
 #### Page Sensitivity
 
 | Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
 |---:|---:|---:|---:|---:|---:|
-| 1 | 0.8972 | 0.0000 | 0.9904 | 0.1982 | 96.3% |
-| 5 | 0.5499 | 0.2980 | 0.9685 | 0.1037 | 100.0% |
-| 6 | 0.5053 | 0.0000 | 0.8217 | 0.1758 | 99.2% |
+| 1 | 0.8946 | 0.0000 | 0.9904 | 0.2046 | 95.9% |
+| 5 | 0.5491 | 0.2980 | 0.9755 | 0.1047 | 100.0% |
+| 6 | 0.5056 | 0.0000 | 0.8217 | 0.1758 | 99.2% |
 | 9 | 0.9307 | 0.8522 | 0.9433 | 0.0288 | 100.0% |
 | 10 | 0.9336 | 0.8355 | 0.9661 | 0.0228 | 100.0% |
 
@@ -2591,6 +2591,111 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 [↑ Back to Navigation](#table-of-contents)
 
+<a id="grabcut-contour-grabcutcontour"></a>
+<details>
+<summary><strong>GrabCut + Contour (`grabcut_contour`)</strong></summary>
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The detector has a measurable but not singular near-best coverage (basin) within the evaluated grid.
+- 10 of 17 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Most parameter sets evaluated every Golden Set page successfully.
+- Avg IoU varies very little across the tested parameter sets.
+
+#### Evidence of ROI
+
+Some calibration ROI may remain, but it should be justified by page-level failures or a plausible untested parameter region.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | partial / adaptive |
+| All possible parameter sets | 46657 |
+| Parameter sets evaluated | 11 |
+| Evaluated sets (% of all possible parameter sets) | 0.0% |
+| Est. serial runtime for full parameter set evaluation* | 46d 10h 6m 47s |
+| Fully successful parameter sets | 11 (100.0%) |
+| Best Avg IoU | 0.8217 |
+| Minimum Avg IoU | 0.8130 |
+| Avg IoU StdDev | 0.0028 |
+| Winner stabilized after | 11 parameter sets |
+| Winner stabilized | 10m 24s (100% of search) |
+| Near-best coverage (basin; within 0.0010) | 1 (9.1%) |
+| Equivalent-best configurations (within 0.0001) | 1 (9.1%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 46657 | 100.0% | 46d 10h 22m 33s | 1.0× |
+| Non-dormant | 192 | 0.4% | 4h 35m 9s | 243.0× |
+| Low+ | 192 | 0.4% | 4h 35m 9s | 243.0× |
+| Moderate+ | 48 | 0.1% | 1h 8m 47s | 972.0× |
+| Important+ | 3 | 0.0% | 4m 18s | 15552.3× |
+| Critical | 3 | 0.0% | 4m 18s | 15552.3× |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: partial or adaptive search, high fully-successful-set rate, broad near-best basin, small calibration sample.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `agreement_weight` | Critical | 0.5528 | 0.0054 | 33.3% | `0.35` (0.8185), `0.25` (0.8168), `0.15` (0.8131) |
+| `contour_minimum_area_fraction` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.08` (0.8160), `0.12` (0.8130) |
+| `contour_minimum_rectangularity` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.45` (0.8160), `0.55` (0.8130) |
+| `grabcut_polygon_epsilon_fraction` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.01` (0.8160), `0.018` (0.8130) |
+| `minimum_agreement_iou` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.05` (0.8160), `0.15` (0.8130) |
+| `contour_epsilon_max_fraction` | Dormant | 0.0864 | 0.0000 | 0.0% | `0.04` (0.8130) |
+| `contour_weight` | Dormant | 0.0864 | 0.0000 | 0.0% | `0.2` (0.8130) |
+| `grabcut_close_iterations` | Dormant | 0.0864 | 0.0000 | 0.0% | `1` (0.8130) |
+| `grabcut_erosion_iterations` | Dormant | 0.0864 | 0.0000 | 0.0% | `1` (0.8130) |
+| `grabcut_minimum_bbox_area_fraction` | Dormant | 0.0864 | 0.0000 | 0.0% | `0.1` (0.8130) |
+| `require_contour` | Low | 0.0071 | 0.0005 | 50.0% | `false` (0.8160), `true` (0.8155) |
+| `grabcut_weight` | Low | 0.0066 | 0.0005 | 50.0% | `0.45` (0.8160), `0.55` (0.8155) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`contour_epsilon_max_fraction`, `contour_weight`, `grabcut_close_iterations`, `grabcut_erosion_iterations`, `grabcut_minimum_bbox_area_fraction`, `grabcut_border_fraction`, `grabcut_close_kernel_fraction`, `grabcut_erosion_kernel_fraction`, `grabcut_iterations`, `grabcut_minimum_contour_area_fraction`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `agreement_weight` × `contour_minimum_area_fraction` | 0.7547 | 0.2019 | 11 |
+| `agreement_weight` × `contour_minimum_rectangularity` | 0.7547 | 0.2019 | 11 |
+| `agreement_weight` × `grabcut_polygon_epsilon_fraction` | 0.7547 | 0.2019 | 11 |
+| `agreement_weight` × `minimum_agreement_iou` | 0.7547 | 0.2019 | 11 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.9568 | 0.9568 | 0.9568 | 0.0000 | 100.0% |
+| 5 | 0.5587 | 0.5532 | 0.5699 | 0.0067 | 100.0% |
+| 6 | 0.6759 | 0.6683 | 0.6947 | 0.0081 | 100.0% |
+| 9 | 0.9427 | 0.9422 | 0.9433 | 0.0005 | 100.0% |
+| 10 | 0.9447 | 0.9447 | 0.9447 | 0.0000 | 100.0% |
+
+</details>
+
+[↑ Back to Navigation](#table-of-contents)
+
 <a id="star-convex-boundary-optimization-starconvex"></a>
 <details>
 <summary><strong>Star-Convex Boundary Optimization (`star_convex`)</strong></summary>
@@ -2685,100 +2790,6 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | 6 | 0.5139 | 0.3465 | 0.8804 | 0.1373 | 100.0% |
 | 9 | 0.9260 | 0.8888 | 0.9601 | 0.0244 | 100.0% |
 | 10 | 0.9235 | 0.8454 | 0.9738 | 0.0386 | 100.0% |
-
-</details>
-
-[↑ Back to Navigation](#table-of-contents)
-
-<a id="grabcut-contour-grabcutcontour"></a>
-<details>
-<summary><strong>GrabCut + Contour (`grabcut_contour`)</strong></summary>
-
-All conclusions are specific to the evaluated Golden Set and configured parameter grid.
-
-#### Detector Summary
-
-- The detector has a measurable but not singular near-best coverage (basin) within the evaluated grid.
-- 5 of 17 measured parameters were dormant and may be omitted from a source-specific follow-up search.
-- Most parameter sets evaluated every Golden Set page successfully.
-- Avg IoU varies very little across the tested parameter sets.
-
-#### Evidence of ROI
-
-Some calibration ROI may remain, but it should be justified by page-level failures or a plausible untested parameter region.
-
-#### Calibration Landscape
-
-| Measure | Value |
-|---|---:|
-| Search coverage | partial / adaptive |
-| All possible parameter sets | 354295 |
-| Parameter sets evaluated | 10 |
-| Evaluated sets (% of all possible parameter sets) | 0.0% |
-| Est. serial runtime for full parameter set evaluation* | 123d 15h 3m 19s |
-| Fully successful parameter sets | 10 (100.0%) |
-| Best Avg IoU | 0.8130 |
-| Minimum Avg IoU | 0.7986 |
-| Avg IoU StdDev | 0.0043 |
-| Winner stabilized after | unknown parameter sets |
-| Winner stabilized | unknown (unknown of search) |
-| Near-best coverage (basin; within 0.0010) | 1 (10.0%) |
-| Equivalent-best configurations (within 0.0001) | 1 (10.0%) |
-| Calibration Evidence | Medium |
-
-\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
-
-#### Parameter Set Domain Space Reduction
-
-| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
-|---|---:|---:|---:|---:|
-| Exhaustive | 354295 | 100.0% | 123d 15h 8m 21s | 1.0× |
-| Non-dormant | 6144 | 1.7% | 2d 3h 27m 17s | 57.7× |
-| Low+ | 6144 | 1.7% | 2d 3h 27m 17s | 57.7× |
-| Moderate+ | 6144 | 1.7% | 2d 3h 27m 17s | 57.7× |
-| Important+ | 3072 | 0.9% | 1d 1h 43m 38s | 115.3× |
-| Critical | 512 | 0.1% | 4h 17m 16s | 692.0× |
-
-\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
-
-Calibration evidence basis: partial or adaptive search, high fully-successful-set rate, broad near-best basin, small calibration sample.
-
-#### Parameter Influence
-
-Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
-
-| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
-|---|---|---:|---:|---:|---|
-| `contour_minimum_area_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.12` (0.8130), `0.08` (0.7986) |
-| `contour_minimum_rectangularity` | Critical | 1.0000 | 0.0144 | 50.0% | `0.55` (0.8130), `0.45` (0.7986) |
-| `grabcut_border_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.02` (0.8130), `0.01` (0.7986) |
-| `grabcut_close_kernel_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.02` (0.8130), `0.01` (0.7986) |
-| `grabcut_erosion_kernel_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.015` (0.8130), `0.008` (0.7986) |
-| `grabcut_iterations` | Critical | 1.0000 | 0.0144 | 50.0% | `3` (0.8130), `1` (0.7986) |
-| `grabcut_minimum_contour_area_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.04` (0.8130), `0.02` (0.7986) |
-| `grabcut_polygon_epsilon_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.018` (0.8130), `0.01` (0.7986) |
-| `minimum_agreement_iou` | Critical | 1.0000 | 0.0144 | 50.0% | `0.15` (0.8130), `0.05` (0.7986) |
-| `contour_epsilon_max_fraction` | Dormant | 0.9000 | 0.0000 | 100.0% | `0.04` (0.8130) |
-| `contour_weight` | Dormant | 0.9000 | 0.0000 | 100.0% | `0.2` (0.8130) |
-| `grabcut_close_iterations` | Dormant | 0.9000 | 0.0000 | 100.0% | `1` (0.8130) |
-
-#### Dormant Parameters
-
-These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
-
-`contour_epsilon_max_fraction`, `contour_weight`, `grabcut_close_iterations`, `grabcut_erosion_iterations`, `grabcut_minimum_bbox_area_fraction`.
-
-Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
-
-#### Page Sensitivity
-
-| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
-|---:|---:|---:|---:|---:|---:|
-| 1 | 0.9506 | 0.9499 | 0.9568 | 0.0020 | 100.0% |
-| 5 | 0.5490 | 0.5486 | 0.5532 | 0.0014 | 100.0% |
-| 6 | 0.6045 | 0.5974 | 0.6683 | 0.0213 | 100.0% |
-| 9 | 0.9432 | 0.9422 | 0.9433 | 0.0003 | 100.0% |
-| 10 | 0.9530 | 0.9447 | 0.9540 | 0.0028 | 100.0% |
 
 </details>
 
@@ -2984,6 +2995,105 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 [↑ Back to Navigation](#table-of-contents)
 
+<a id="kraken-page-mask-krakenpagemask"></a>
+<details>
+<summary><strong>Kraken Page Mask (`kraken_page_mask`)</strong></summary>
+
+All conclusions are specific to the evaluated Golden Set and configured parameter grid.
+
+#### Detector Summary
+
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 1 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Detector failed on at least one Golden Set page for 7182 of 10000 parameter configurations.
+
+#### Evidence of ROI
+
+Additional tuning may improve reliability, but detector-level ROI should be weighed against stronger alternatives before expanding the search.
+
+#### Calibration Landscape
+
+| Measure | Value |
+|---|---:|
+| Search coverage | complete exhaustive |
+| All possible parameter sets | 10000 |
+| Parameter sets evaluated | 10000 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 2818 (28.2%) |
+| Best Avg IoU | 0.7514 |
+| Minimum Avg IoU | 0.6384 |
+| Avg IoU StdDev | 0.0277 |
+| Winner stabilized after | 147 parameter sets |
+| Winner stabilized | 266 ms (1% of search) |
+| Near-best coverage (basin; within 0.0010) | 34 (0.3%) |
+| Equivalent-best configurations (within 0.0001) | 6 (0.1%) |
+| Calibration Evidence | Medium |
+
+\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
+
+#### Parameter Set Domain Space Reduction
+
+| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
+|---|---:|---:|---:|---:|
+| Exhaustive | 10000 | 100.0% | 7m 8s | 1.0× |
+| Non-dormant | 5000 | 50.0% | 3m 34s | 2.0× |
+| Low+ | 5000 | 50.0% | 3m 34s | 2.0× |
+| Moderate+ | 50 | 0.5% | 2.1s | 200.0× |
+| Important+ | 50 | 0.5% | 2.1s | 200.0× |
+| Critical | 10 | 0.1% | 428 ms | 1000.0× |
+
+\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
+
+Calibration evidence basis: complete exhaustive coverage, many parameter sets failed at least one page, narrow near-best basin.
+
+#### Parameter Influence
+
+Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
+
+| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
+|---|---|---:|---:|---:|---|
+| `page_padding_fraction` | Critical | 0.7318 | 0.0706 | 10.0% | `0` (0.7264), `0.01` (0.7209), `0.02` (0.7120) |
+| `minimum_page_area_fraction` | Important | 0.1203 | 0.0250 | 20.0% | `0.08` (0.7071), `0.12` (0.6944), `0.16` (0.6841) |
+| `dilation_fraction` | Low | 0.0268 | 0.0126 | 60.0% | `0` (0.6953), `0.0025` (0.6945), `0.005` (0.6940) |
+| `close_kernel_fraction` | Low | 0.0036 | 0.0043 | 100.0% | `0.024` (0.6934), `0.012` (0.6898), `0.006` (0.6893) |
+| `include_lines` | Low | 0.0019 | 0.0024 | 100.0% | `1` (0.6913), `0` (0.6889) |
+| `fill_holes` | Dormant | 0.0000 | 0.0000 | 100.0% | `0` (0.6901), `1` (0.6901) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`fill_holes`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `page_padding_fraction` × `minimum_page_area_fraction` | 0.8734 | 0.1416 | 10000 |
+| `page_padding_fraction` × `dilation_fraction` | 0.7920 | 0.0602 | 10000 |
+| `minimum_page_area_fraction` × `dilation_fraction` | 0.1583 | 0.0380 | 10000 |
+| `dilation_fraction` × `close_kernel_fraction` | 0.0442 | 0.0175 | 10000 |
+| `page_padding_fraction` × `close_kernel_fraction` | 0.7359 | 0.0041 | 10000 |
+
+#### Page Sensitivity
+
+| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 0.8743 | 0.7782 | 0.9788 | 0.0598 | 100.0% |
+| 5 | 0.0422 | 0.0000 | 0.3211 | 0.0708 | 28.2% |
+| 6 | 0.8293 | 0.7560 | 0.8855 | 0.0306 | 100.0% |
+| 9 | 0.8410 | 0.7399 | 0.9622 | 0.0647 | 100.0% |
+| 10 | 0.8637 | 0.7940 | 0.9599 | 0.0505 | 100.0% |
+
+</details>
+
+[↑ Back to Navigation](#table-of-contents)
+
 <a id="line-segment-detector-lsd"></a>
 <details>
 <summary><strong>Line Segment Detector (`lsd`)</strong></summary>
@@ -3178,93 +3288,6 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | 6 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0% |
 | 9 | 0.9281 | 0.8982 | 0.9585 | 0.0246 | 100.0% |
 | 10 | 0.9403 | 0.9157 | 0.9593 | 0.0178 | 100.0% |
-
-</details>
-
-[↑ Back to Navigation](#table-of-contents)
-
-<a id="kraken-page-mask-krakenpagemask"></a>
-<details>
-<summary><strong>Kraken Page Mask (`kraken_page_mask`)</strong></summary>
-
-All conclusions are specific to the evaluated Golden Set and configured parameter grid.
-
-#### Detector Summary
-
-- The evaluated calibration landscape is flat: nearly all tested parameter sets are equivalent or near-equivalent.
-- No measured parameter was dormant in this calibration sample.
-- Detector failed on at least one Golden Set page for 10 of 10 parameter configurations.
-
-#### Evidence of ROI
-
-Additional tuning may improve reliability, but detector-level ROI should be weighed against stronger alternatives before expanding the search.
-
-#### Calibration Landscape
-
-| Measure | Value |
-|---|---:|
-| Search coverage | partial / adaptive |
-| All possible parameter sets | 10000 |
-| Parameter sets evaluated | 10 |
-| Evaluated sets (% of all possible parameter sets) | 0.1% |
-| Est. serial runtime for full parameter set evaluation* | 5m 56s |
-| Fully successful parameter sets | 0 (0.0%) |
-| Best Avg IoU | 0.7291 |
-| Minimum Avg IoU | 0.6828 |
-| Avg IoU StdDev | 0.0139 |
-| Winner stabilized after | 3 parameter sets |
-| Winner stabilized | 2m 14s (30% of search) |
-| Near-best coverage (basin; within 0.0010) | 9 (90.0%) |
-| Equivalent-best configurations (within 0.0001) | 9 (90.0%) |
-| Calibration Evidence | Low |
-
-\* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
-
-#### Parameter Set Domain Space Reduction
-
-| Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
-|---|---:|---:|---:|---:|
-| Exhaustive | 10000 | 100.0% | 5m 56s | 1.0× |
-| Non-dormant | 160 | 1.6% | 5.7s | 62.5× |
-| Low+ | 160 | 1.6% | 5.7s | 62.5× |
-| Moderate+ | 160 | 1.6% | 5.7s | 62.5× |
-| Important+ | 160 | 1.6% | 5.7s | 62.5× |
-| Critical | 80 | 0.8% | 2.9s | 125.0× |
-
-\* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
-
-Calibration evidence basis: partial or adaptive search, many parameter sets failed at least one page, broad near-best basin, small calibration sample.
-
-#### Parameter Influence
-
-Influence uses one-way η² over Avg IoU. It measures association within this configured grid; it does not establish causation.
-
-| Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
-|---|---|---:|---:|---:|---|
-| `close_kernel_fraction` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `0.006` (0.6828) |
-| `dilation_fraction` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `0.01` (0.6828) |
-| `include_lines` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `1` (0.6828) |
-| `page_padding_fraction` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `0.05` (0.6828) |
-| `minimum_page_area_fraction` | Critical | 0.2593 | 0.0154 | 100.0% | `0.08` (0.7291), `0.16` (0.7291), `0.2` (0.7291) |
-| `fill_holes` | Important | 0.1111 | 0.0093 | 100.0% | `0` (0.7291), `1` (0.7199) |
-
-#### Parameter Interactions
-
-Pairwise interaction importance is exploratory and estimated from a deterministic sample.
-
-| Parameters | Pair η² | Incremental importance | Sample size |
-|---|---:|---:|---:|
-| `minimum_page_area_fraction` × `fill_holes` | 0.4444 | 0.1852 | 10 |
-
-#### Page Sensitivity
-
-| Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
-|---:|---:|---:|---:|---:|---:|
-| 1 | 0.9672 | 0.8769 | 0.9772 | 0.0301 | 100.0% |
-| 5 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0% |
-| 6 | 0.7635 | 0.7560 | 0.8310 | 0.0225 | 100.0% |
-| 9 | 0.9416 | 0.8437 | 0.9525 | 0.0326 | 100.0% |
-| 10 | 0.9501 | 0.8625 | 0.9599 | 0.0292 | 100.0% |
 
 </details>
 
@@ -4173,12 +4196,12 @@ Dormant parameters may be omitted from future searches for this Golden Set, but 
 | Measure | Value | Notes |
 |---|---:|---|
 | Detector runs completed | 39 of 39 | Successful detector regressions completed out of those scheduled. |
-| Parameter sets evaluated | 4309927 | Total detector parameter configurations evaluated across all runs. |
-| Golden Set page evaluations | 21549635 | Parameter sets multiplied by evaluated Golden Set pages. |
-| Aggregate detector runtime | 1d 19h 38m 31s | Sum of detector wall-clock runtimes; this is not the elapsed time experienced by the user. |
-| Regression wall-clock span | 4d 23h 51m 57s | Earliest detector start through latest detector finish. |
-| Effective detector concurrency | 0.36× | Aggregate detector runtime divided by regression wall-clock span. |
-| Detector pipelines | 6 | Maximum concurrent detector regressions used by this build. |
+| Parameter sets evaluated | 4319918 | Total detector parameter configurations evaluated across all runs. |
+| Golden Set page evaluations | 21599590 | Parameter sets multiplied by evaluated Golden Set pages. |
+| Aggregate detector runtime | 1d 17h 37m 3s | Sum of detector wall-clock runtimes; this is not the elapsed time experienced by the user. |
+| Regression wall-clock span | 6d 22h 56m | Earliest detector start through latest detector finish. |
+| Effective detector concurrency | 0.25× | Aggregate detector runtime divided by regression wall-clock span. |
+| Detector pipelines | 4 | Maximum concurrent detector regressions used by this build. |
 | Loading strategy | LPT (Longest Processing Time first) | Strategy used to order the shared detector queue. |
 | Pipeline stagger | 0m | Delay between initial pipeline starts; replacement loads begin immediately. |
 | Source-document images | 929 | Total images recorded for the source document. |
@@ -4190,10 +4213,10 @@ Dormant parameters may be omitted from future searches for this Golden Set, but 
 
 | Setting | Value |
 |---|---|
-| Detector pipelines | 6 |
+| Detector pipelines | 4 |
 | Detector loading strategy | LPT (Longest Processing Time first) |
-| Threads per detector regression | 64 |
-| Execution recommendation basis | runtime-index coherent build 31902921758 (39/39 detectors) |
+| Threads per detector regression | 2 |
+| Execution recommendation basis | runtime-index coherent build 32050140632 (39/39 detectors) |
 | Pipeline start stagger | 0m |
 | Runtime intelligence | `runtime-index.json` |
 | Parallelism intelligence | `parallelism-index.json` |
@@ -4203,45 +4226,66 @@ Detector pipelines pull continuously from one shared queue. Once a detector fini
 
 | Queue | Detector | Pipeline | Estimated Runtime | Scheduling Basis |
 |---:|---|---:|---:|---|
-| 1 | Kraken Page Mask (`kraken_page_mask`) | 1 | 2m 14s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 2 | dhSegment Page-Mask Detector (`dhsegment_page_mask`) | 2 | 1m 15s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 3 | GrabCut Segmentation (`grabcut`) | 3 | 55.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 4 | GrabCut + Contour (`grabcut_contour`) | 4 | 44.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 5 | Contour + GrabCut (`contour_grabcut`) | 5 | 42.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 6 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background (`amsre_bfq_spbv_pbg`) | 6 | 17.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 7 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background (`msre_bfq_spbv_pbg`) | 6 | 14.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 8 | Contour Quadrilateral (`contour_quad`) | 6 | 13.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 9 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 5 | 10.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 10 | Learned Page-Mask Detector (`learned_page_mask`) | 4 | 9.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 11 | Border Fusion Quad (`border_fusion_quad`) | 6 | 7.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 12 | Adaptive Multi-Scale Radial Edge Search (`adaptive_multi_scale_radial_edge`) | 5 | 6.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 13 | Segment-Supported Polar Voting (`segment_supported_polar_vote`) | 6 | 5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 14 | Signed Polar Boundary Voting (`signed_polar_boundary_vote`) | 4 | 5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 15 | Multi-Scale Radial Edge Search (`multi_scale_radial_edge`) | 3 | 4.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 16 | Radial Edge Search (`radial_edge`) | 6 | 4.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 17 | Consensus Quadrilateral (`consensus_quad`) | 5 | 3.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 18 | Contour + Projection (`contour_projection`) | 4 | 3.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 19 | Hough Line Borders (`hough`) | 3 | 3.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 20 | Joint Rectangle Voting (`joint_rectangle_vote`) | 6 | 2.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 21 | Page Background (`page_background`) | 5 | 2.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 22 | Cross-Edge Contour (`cross_edge_contour`) | 3 | 2.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 23 | Border Energy Validator (`border_energy`) | 4 | 2.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 24 | Edge-Supported Contour (`edge_contour`) | 6 | 1.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 25 | Projective Gradient Vote (`projective_gradient_vote`) | 3 | 1.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 26 | Distance Transform Detector (`distance_transform`) | 5 | 1.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 27 | Line Segment Detector (`lsd`) | 4 | 1.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 28 | Contour + Components (`contour_components`) | 6 | 1.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 29 | Radon Boundary Projection (`radon_boundary`) | 3 | 1.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 30 | Polar Boundary Voting (`polar_boundary_vote`) | 4 | 1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 31 | Connected Components (`components`) | 5 | 798 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 32 | Star-Convex Boundary Optimization (`star_convex`) | 6 | 764 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 33 | RANSAC Border Fit (`ransac`) | 5 | 754 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 34 | Text Flow Envelope (`text_flow`) | 4 | 599 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 35 | Distance-Transform Rectangle Proposal (`distance_transform_rect`) | 3 | 535 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 36 | Whitespace Frame (`whitespace_frame`) | 6 | 534 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 37 | Contour Envelope (`contour`) | 5 | 498 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 38 | Convex Hull Detector (`convex_hull`) | 4 | 488 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 39 | Gradient Boundary Voting (`gradient_vote`) | 3 | 373 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 1 | GrabCut Segmentation (`grabcut`) | 1 | 10m 41s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 2 | GrabCut + Contour (`grabcut_contour`) | 2 | 10m 28s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 3 | Kraken Page Mask (`kraken_page_mask`) | 3 | 4m 59s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 4 | Contour + GrabCut (`contour_grabcut`) | 4 | 3m 47s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 5 | Learned Page-Mask Detector (`learned_page_mask`) | 4 | 2m 9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 6 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background (`amsre_bfq_spbv_pbg`) | 3 | 1m 41s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 7 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background (`msre_bfq_spbv_pbg`) | 4 | 1m 36s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 8 | dhSegment Page-Mask Detector (`dhsegment_page_mask`) | 3 | 1m 12s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 9 | Hough Line Borders (`hough`) | 4 | 47s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 10 | Adaptive Multi-Scale Radial Edge Search (`adaptive_multi_scale_radial_edge`) | 3 | 35.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 11 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 4 | 19.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 12 | Contour + Projection (`contour_projection`) | 3 | 19.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 13 | Segment-Supported Polar Voting (`segment_supported_polar_vote`) | 4 | 18.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 14 | Consensus Quadrilateral (`consensus_quad`) | 3 | 17.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 15 | Border Energy Validator (`border_energy`) | 4 | 15.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 16 | Border Fusion Quad (`border_fusion_quad`) | 3 | 11.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 17 | Contour Quadrilateral (`contour_quad`) | 4 | 11.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 18 | Multi-Scale Radial Edge Search (`multi_scale_radial_edge`) | 3 | 9.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 19 | Joint Rectangle Voting (`joint_rectangle_vote`) | 4 | 9.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 20 | Cross-Edge Contour (`cross_edge_contour`) | 3 | 8.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 21 | Edge-Supported Contour (`edge_contour`) | 4 | 6.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 22 | Page Background (`page_background`) | 3 | 6.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 23 | Projective Gradient Vote (`projective_gradient_vote`) | 3 | 6.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 24 | Distance Transform Detector (`distance_transform`) | 4 | 5.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 25 | Line Segment Detector (`lsd`) | 4 | 5.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 26 | Radial Edge Search (`radial_edge`) | 3 | 4.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 27 | Radon Boundary Projection (`radon_boundary`) | 3 | 4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 28 | Contour + Components (`contour_components`) | 4 | 3.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 29 | Polar Boundary Voting (`polar_boundary_vote`) | 3 | 2.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 30 | Signed Polar Boundary Voting (`signed_polar_boundary_vote`) | 4 | 2.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 31 | RANSAC Border Fit (`ransac`) | 3 | 2.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 32 | Connected Components (`components`) | 4 | 1.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 33 | Star-Convex Boundary Optimization (`star_convex`) | 4 | 1.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 34 | Distance-Transform Rectangle Proposal (`distance_transform_rect`) | 3 | 954 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 35 | Contour Envelope (`contour`) | 3 | 950 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 36 | Text Flow Envelope (`text_flow`) | 4 | 931 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 37 | Whitespace Frame (`whitespace_frame`) | 3 | 744 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 38 | Convex Hull Detector (`convex_hull`) | 4 | 742 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 39 | Gradient Boundary Voting (`gradient_vote`) | 3 | 648 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+
+#### Execution Optimization — Next Run Claim Strategy
+
+| Setting | Preferred next run |
+|---|---|
+| Claim strategy | 10s LPT claim batches |
+| Batch target | 10.0s estimated work |
+| Scheduling estimate floor | 0.1s |
+| Initial-wave claims | parent pre-batched |
+| Refill strategy | one serialized claim per >=10s LPT batch |
+| Claim-wait objective | amortized per batch |
+| Optimization basis | current LPT runtime intelligence + persisted short-run occupation |
+
+| Pipeline | Initial LPT claim batch | Estimated Work | Threads |
+|---:|---|---:|---:|
+| 1 | GrabCut Segmentation (`grabcut`) | 10m 41s | 2 |
+| 2 | GrabCut + Contour (`grabcut_contour`) | 10m 28s | 2 |
+| 3 | Kraken Page Mask (`kraken_page_mask`) | 4m 59s | 2 |
+| 4 | Contour + GrabCut (`contour_grabcut`) | 3m 47s | 2 |
+
+Each short-run claim atomically removes consecutive work from the LPT queue until the batch contains at least 10 seconds of estimated work, using a 0.1-second scheduling floor. The parent constructs the initial batches before workers start; refill batches use one serialized queue transaction each. The final claimant drains whatever work remains—there is no special tail-mode reversion.
 
 Queue order reflects the selected loading strategy. LPT (Longest Processing Time first) schedules the longest estimated detector work first, FIFO preserves configured detector order, and Ranked uses historical detector quality.
 
@@ -4256,16 +4300,16 @@ Queue order reflects the selected loading strategy. LPT (Longest Processing Time
 |---|---|---|
 | Detector pipelines | 4 | Current HTH default for multi-detector regressions. |
 | Detector loading | LPT (Longest Processing Time first) | Reduces the slow-detector tail by loading historically longest regressions first. |
-| Threads per detector regression | 64 | Preserve the current measured setting until runtime history supports a different thread recommendation. |
+| Threads per detector regression | 2 | Preserve the current measured setting until runtime history supports a different thread recommendation. |
 | Startup stagger | 0m | Avoids idle startup time unless runner contention requires a stagger. |
 
 #### Estimated Runtime
 
 | All-Detector Regression Scope | Estimated Wall Time* |
 |---|---:|
-| Exhaustive | 10d 14h 31m 34s |
-| Non-dormant | 21h 51m 19s |
-| Critical only | 9h 7m 45s |
+| Exhaustive | 28d 2h 29m 55s |
+| Non-dormant | 6d 2h 32m 55s |
+| Critical only | 3d 5h 26m 10s |
 
 \* Estimates scale each detector's measured runtime to the selected effect-size domain, apply the normal bounded shard plan, and simulate shard-level LPT placement across the recommended detector pipelines. Effect-group fallback remains active when a detector has no parameter sets in the requested group.
 
@@ -4336,6 +4380,38 @@ The reports below preserve the complete manifest, winner, baseline, calibration 
 | Winner | `21ea516c3c5a` | `21ea516c3c5a` | 0.9781 | 0.9564 | 0.0182 | 0.9781 | 0 | 13.5s |
 | Baseline | `e8e8dc34f8fb` | `baseline` | 0.9767 | 0.9566 | 0.0177 | 0.9767 | 0 | 740 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `21ea516c3c5a` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `coarse_angle_step_degrees` | `2.0454545454545454` |
+| `maximum_refined_sides` | `3` |
+| `refined_angle_step_degrees` | `0.35` |
+| `side_assignment_tolerance_fraction` | `0.0075` |
+| `weak_side_support_fraction` | `0.65` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -4369,13 +4445,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `21ea516c3c5a` | `21ea516c3c5a` | 0.9781 | 0.9564 | 0.0182 | +0.0000 | 0.9781 | 0 | 16m 31s | 52.95% |
-| 2 | `280a60430236` | `280a60430236` | 0.9779 | 0.9556 | 0.0184 | -0.0002 | 0.9779 | 0 | 16m 39s | 53.39% |
-| 3 | `32f1940975eb` | `32f1940975eb` | 0.9779 | 0.9556 | 0.0184 | -0.0002 | 0.9779 | 0 | 16m 38s | 53.34% |
-| 4 | `a0c558c619bd` | `a0c558c619bd` | 0.9774 | 0.9564 | 0.0176 | -0.0006 | 0.9774 | 0 | 19m 41s | 63.88% |
-| 5 | `98ac77058f43` | `98ac77058f43` | 0.9771 | 0.9556 | 0.0177 | -0.0010 | 0.9771 | 0 | 19m 44s | 64.00% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `e8e8dc34f8fb` | `baseline` | 0.9767 | 0.9566 | 0.0177 | -0.0013 | 0.9767 | 0 | reference | reference |
+| 1 | unknown | `21ea516c3c5a` | `21ea516c3c5a` | 0.9781 | 0.9564 | 0.0182 | +0.0000 | 0.9781 | 0 | 16m 31s | 52.95% |
+| 2 | unknown | `280a60430236` | `280a60430236` | 0.9779 | 0.9556 | 0.0184 | -0.0002 | 0.9779 | 0 | 16m 39s | 53.39% |
+| 3 | unknown | `32f1940975eb` | `32f1940975eb` | 0.9779 | 0.9556 | 0.0184 | -0.0002 | 0.9779 | 0 | 16m 38s | 53.34% |
+| 4 | unknown | `a0c558c619bd` | `a0c558c619bd` | 0.9774 | 0.9564 | 0.0176 | -0.0006 | 0.9774 | 0 | 19m 41s | 63.88% |
+| 5 | unknown | `98ac77058f43` | `98ac77058f43` | 0.9771 | 0.9556 | 0.0177 | -0.0010 | 0.9771 | 0 | 19m 44s | 64.00% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — adaptive_multi_scale_radial_edge
 
@@ -4613,6 +4697,41 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `bcd9a1d083cf` | `bcd9a1d083cf` | 0.9726 | 0.9557 | 0.0159 | 0.9726 | 0 | 1.8s |
 | Baseline | `a132c2ac5e87` | `baseline` | 0.9329 | 0.8817 | 0.0344 | 0.9329 | 0 | 170 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `bcd9a1d083cf` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `gaussian_sigma` | `2.2` |
+| `gradient_percentile` | `74.0` |
+| `maximum_radius_fraction` | `0.78` |
+| `maximum_refined_sides` | `4` |
+| `minimum_radius_fraction` | `0.26` |
+| `refined_angle_step_degrees` | `0.35` |
+| `side_assignment_tolerance_fraction` | `0.035` |
+| `weak_side_support_fraction` | `0.35` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -4646,13 +4765,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `bcd9a1d083cf` | `bcd9a1d083cf` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 27s | 91.55% |
-| 2 | `1b92c2c685f9` | `1b92c2c685f9` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 28s | 91.58% |
-| 3 | `139d5c2364e5` | `139d5c2364e5` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 29s | 91.61% |
-| 4 | `e56e2cf13b6e` | `e56e2cf13b6e` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 31s | 91.64% |
-| 5 | `82ecfe7cbae0` | `82ecfe7cbae0` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 31s | 91.66% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `a132c2ac5e87` | `baseline` | 0.9329 | 0.8817 | 0.0344 | -0.0397 | 0.9329 | 0 | reference | reference |
+| 1 | unknown | `bcd9a1d083cf` | `bcd9a1d083cf` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 27s | 91.55% |
+| 2 | unknown | `1b92c2c685f9` | `1b92c2c685f9` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 28s | 91.58% |
+| 3 | unknown | `139d5c2364e5` | `139d5c2364e5` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 29s | 91.61% |
+| 4 | unknown | `e56e2cf13b6e` | `e56e2cf13b6e` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 31s | 91.64% |
+| 5 | unknown | `82ecfe7cbae0` | `82ecfe7cbae0` | 0.9726 | 0.9557 | 0.0159 | +0.0000 | 0.9726 | 0 | 55m 31s | 91.66% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — adaptive_radial_edge
 
@@ -4896,6 +5023,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 |---|---|---|---:|---:|---:|---:|---:|---:|
 | Winner | `156ff0241cc1` | `baseline` | 0.9743 | 0.9638 | 0.0103 | 0.9743 | 0 | 1.8s |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `156ff0241cc1` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `consensus_tolerance_fraction` | `0.012664` |
+| `consensus_weight` | `0.6` |
+| `gradient_percentile` | `76.0` |
+| `gradient_weight` | `0.25` |
+| `minimum_side_consensus` | `0.1` |
+| `minimum_side_gradient_support` | `0.03` |
+| `source_diversity_weight` | `0.15` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (AMSRE + BFQ + SPBV + Page Background)
@@ -4929,13 +5090,20 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `156ff0241cc1` | `baseline` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | unknown | unknown |
-| 2 | `04e26e43dccf` | `04e26e43dccf` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 45.5s | 0.71% |
-| 3 | `e356abfa1acb` | `e356abfa1acb` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 43.5s | 0.67% |
-| 4 | `9ee30c2d1f2b` | `9ee30c2d1f2b` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 39.7s | 0.46% |
-| 5 | `06d18ff8f106` | `06d18ff8f106` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 42.9s | 0.65% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `156ff0241cc1` | `baseline` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | reference | reference |
+| 1 | unknown | `04e26e43dccf` | `04e26e43dccf` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 45.5s | 0.71% |
+| 2 | unknown | `e356abfa1acb` | `e356abfa1acb` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 43.5s | 0.67% |
+| 3 | unknown | `9ee30c2d1f2b` | `9ee30c2d1f2b` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 39.7s | 0.46% |
+| 4 | unknown | `06d18ff8f106` | `06d18ff8f106` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | 42.9s | 0.65% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — amsre_bfq_spbv_pbg
 
@@ -5163,6 +5331,41 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `74e2112aac01` | `74e2112aac01` | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | 546 ms |
 | Baseline | `e38a975d1436` | `baseline` | 0.5542 | 0.0000 | 0.4538 | 0.9237 | 2 | 257 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `74e2112aac01` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `band_fraction` | `0.015` |
+| `energy_weight` | `0.3` |
+| `epsilon_max_fraction` | `0.03` |
+| `gaussian_sigma` | `0.8` |
+| `minimum_border_energy` | `0.05` |
+| `minimum_contour_area_fraction` | `0.08` |
+| `minimum_rectangularity` | `0.45` |
+| `minimum_side_consistency` | `0.3` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Contour Quad + Border Energy)
@@ -5196,13 +5399,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `74e2112aac01` | `74e2112aac01` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 2.5s | 0.87% |
-| 2 | `e6a92aa03adc` | `e6a92aa03adc` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 2.5s | 0.94% |
-| 3 | `10122ecc688c` | `10122ecc688c` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 3s | 1.11% |
-| 4 | `495c895fab0e` | `495c895fab0e` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 4.3s | 1.69% |
-| 5 | `20154950810f` | `20154950810f` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 4.1s | 1.60% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `e38a975d1436` | `baseline` | 0.5542 | 0.0000 | 0.4538 | -0.1708 | 0.9237 | 2 | reference | reference |
+| 1 | unknown | `74e2112aac01` | `74e2112aac01` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 2.5s | 0.87% |
+| 2 | unknown | `e6a92aa03adc` | `e6a92aa03adc` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 2.5s | 0.94% |
+| 3 | unknown | `10122ecc688c` | `10122ecc688c` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 3s | 1.11% |
+| 4 | unknown | `495c895fab0e` | `495c895fab0e` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 4.3s | 1.69% |
+| 5 | unknown | `20154950810f` | `20154950810f` | 0.7250 | 0.0000 | 0.3651 | +0.0000 | 0.9063 | 1 | 4.1s | 1.60% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — border_energy
 
@@ -5442,6 +5653,39 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `2370e6cea486` | `2370e6cea486` | 0.9707 | 0.9588 | 0.0112 | 0.9707 | 0 | 1.1s |
 | Baseline | `17b4a7b30cd9` | `baseline` | 0.8890 | 0.5825 | 0.1538 | 0.8890 | 0 | 237 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `2370e6cea486` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `gradient_percentile` | `68` |
+| `gradient_weight` | `0.15` |
+| `minimum_area_fraction` | `0.08` |
+| `minimum_side_gradient_support` | `0.06` |
+| `source_confidence_weight` | `0.4` |
+| `source_diversity_weight` | `0.0` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Radial + Polar + Gradient)
@@ -5475,13 +5719,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `2370e6cea486` | `2370e6cea486` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 9.6s | 0.02% |
-| 2 | `b3f274ef2780` | `b3f274ef2780` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 10.6s | 0.02% |
-| 3 | `5ad0dc18eb89` | `5ad0dc18eb89` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 11.8s | 0.03% |
-| 4 | `66b8224f5bc3` | `66b8224f5bc3` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 17.1s | 0.04% |
-| 5 | `0f8997774e99` | `0f8997774e99` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 17.9s | 0.04% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `17b4a7b30cd9` | `baseline` | 0.8890 | 0.5825 | 0.1538 | -0.0817 | 0.8890 | 0 | reference | reference |
+| 1 | unknown | `2370e6cea486` | `2370e6cea486` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 9.6s | 0.02% |
+| 2 | unknown | `b3f274ef2780` | `b3f274ef2780` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 10.6s | 0.02% |
+| 3 | unknown | `5ad0dc18eb89` | `5ad0dc18eb89` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 11.8s | 0.03% |
+| 4 | unknown | `66b8224f5bc3` | `66b8224f5bc3` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 17.1s | 0.04% |
+| 5 | unknown | `0f8997774e99` | `0f8997774e99` | 0.9707 | 0.9588 | 0.0112 | +0.0000 | 0.9707 | 0 | 17.9s | 0.04% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — border_fusion_quad
 
@@ -5722,6 +5974,42 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `f1929c8e2655` | `f1929c8e2655` | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | 21 ms |
 | Baseline | `4e09dc84fa8a` | `baseline` | 0.7185 | 0.2413 | 0.2967 | 0.7185 | 0 | 17 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `f1929c8e2655` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.0` |
+| `merge_area_ratio` | `0.01` |
+| `merge_gap_fraction` | `0.035` |
+| `minimum_bbox_area_fraction` | `0.08` |
+| `minimum_component_area_fraction` | `0.00075` |
+| `minimum_component_area_px` | `10` |
+| `minimum_selected_area_fraction` | `0.02` |
+| `morphology_close_fraction` | `0.008` |
+| `morphology_dilate_fraction` | `0.03` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -5753,13 +6041,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `f1929c8e2655` | `f1929c8e2655` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 578 ms | 1.27% |
-| 2 | `6a55e49277e7` | `6a55e49277e7` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 630 ms | 1.40% |
-| 3 | `62e19d69cdf6` | `62e19d69cdf6` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 660 ms | 1.46% |
-| 4 | `966b20b76507` | `966b20b76507` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 688 ms | 1.53% |
-| 5 | `9230a0393357` | `9230a0393357` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 741 ms | 1.68% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `4e09dc84fa8a` | `baseline` | 0.7185 | 0.2413 | 0.2967 | -0.0712 | 0.7185 | 0 | reference | reference |
+| 1 | unknown | `f1929c8e2655` | `f1929c8e2655` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 578 ms | 1.27% |
+| 2 | unknown | `6a55e49277e7` | `6a55e49277e7` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 630 ms | 1.40% |
+| 3 | unknown | `62e19d69cdf6` | `62e19d69cdf6` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 660 ms | 1.46% |
+| 4 | unknown | `966b20b76507` | `966b20b76507` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 688 ms | 1.53% |
+| 5 | unknown | `9230a0393357` | `9230a0393357` | 0.7897 | 0.5725 | 0.1665 | +0.0000 | 0.7897 | 0 | 741 ms | 1.68% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — components
 
@@ -6001,6 +6297,38 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `f387da7ebb7e` | `f387da7ebb7e` | 0.5528 | 0.0000 | 0.4526 | 0.9213 | 2 | 1.4s |
 | Baseline | `dce471449373` | `baseline` | 0.5513 | 0.0000 | 0.4513 | 0.9188 | 2 | 571 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `f387da7ebb7e` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `contour_quad_weight` | `0.75` |
+| `edge_contour_weight` | `0.25` |
+| `maximum_mean_corner_distance_fraction` | `0.025` |
+| `minimum_consensus_confidence` | `0.1` |
+| `minimum_polygon_iou` | `0.8` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Contour Quad + Edge Contour)
@@ -6033,13 +6361,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `f387da7ebb7e` | `f387da7ebb7e` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 4.9s | 16.53% |
-| 2 | `d3afdfd96e35` | `d3afdfd96e35` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 4.9s | 15.70% |
-| 3 | `a00dcf94f01e` | `a00dcf94f01e` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 4.9s | 17.36% |
-| 4 | `855195437d31` | `855195437d31` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 7.7s | 32.23% |
-| 5 | `99d0beb98285` | `99d0beb98285` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 7.7s | 33.88% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `dce471449373` | `baseline` | 0.5513 | 0.0000 | 0.4513 | -0.0015 | 0.9188 | 2 | reference | reference |
+| 1 | unknown | `f387da7ebb7e` | `f387da7ebb7e` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 4.9s | 16.53% |
+| 2 | unknown | `d3afdfd96e35` | `d3afdfd96e35` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 4.9s | 15.70% |
+| 3 | unknown | `a00dcf94f01e` | `a00dcf94f01e` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 4.9s | 17.36% |
+| 4 | unknown | `855195437d31` | `855195437d31` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 7.7s | 32.23% |
+| 5 | unknown | `99d0beb98285` | `99d0beb98285` | 0.5528 | 0.0000 | 0.4526 | +0.0000 | 0.9213 | 2 | 7.7s | 33.88% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — consensus_quad
 
@@ -6273,6 +6609,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `7aed2fc501c5` | `7aed2fc501c5` | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | 34 ms |
 | Baseline | `6019a18e4c4e` | `baseline` | 0.6722 | 0.0000 | 0.3846 | 0.8403 | 1 | 9 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `7aed2fc501c5` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.005` |
+| `close_iterations` | `2` |
+| `close_kernel_fraction` | `0.018` |
+| `merge_fragmented_contours` | `true` |
+| `minimum_contour_area_fraction` | `0.06` |
+| `polygon_epsilon_fraction` | `0.008` |
+| `rectangularity_weight` | `0.1` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -6304,13 +6674,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `7aed2fc501c5` | `7aed2fc501c5` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 468 ms | 10.30% |
-| 2 | `fe1e051ea449` | `fe1e051ea449` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 478 ms | 10.64% |
-| 3 | `bf0386f44c6e` | `bf0386f44c6e` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 492 ms | 11.05% |
-| 4 | `2cbcf16dd63a` | `2cbcf16dd63a` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 890 ms | 21.28% |
-| 5 | `3fe11d0f3e41` | `3fe11d0f3e41` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 907 ms | 21.69% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `6019a18e4c4e` | `baseline` | 0.6722 | 0.0000 | 0.3846 | -0.1776 | 0.8403 | 1 | reference | reference |
+| 1 | unknown | `7aed2fc501c5` | `7aed2fc501c5` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 468 ms | 10.30% |
+| 2 | unknown | `fe1e051ea449` | `fe1e051ea449` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 478 ms | 10.64% |
+| 3 | unknown | `bf0386f44c6e` | `bf0386f44c6e` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 492 ms | 11.05% |
+| 4 | unknown | `2cbcf16dd63a` | `2cbcf16dd63a` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 890 ms | 21.28% |
+| 5 | unknown | `3fe11d0f3e41` | `3fe11d0f3e41` | 0.8498 | 0.5457 | 0.1589 | +0.0000 | 0.8498 | 0 | 907 ms | 21.69% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — contour
 
@@ -6545,6 +6923,55 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 |---|---|---|---:|---:|---:|---:|---:|---:|
 | Winner | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | 60 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `14818b491952` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `angle_weight` | `0.15` |
+| `area_weight` | `0.25` |
+| `close_iterations` | `1` |
+| `close_kernel_fraction` | `0.008` |
+| `component_bbox_padding_fraction` | `0.0` |
+| `component_close_fraction` | `0.008` |
+| `component_dilate_fraction` | `0.015` |
+| `component_merge_area_ratio` | `0.02` |
+| `component_merge_gap_fraction` | `0.035` |
+| `component_minimum_area_fraction` | `0.0015` |
+| `component_minimum_area_px` | `25` |
+| `component_minimum_bbox_area_fraction` | `0.12` |
+| `component_minimum_selected_area_fraction` | `0.04` |
+| `component_weight` | `0.4` |
+| `epsilon_max_fraction` | `0.04` |
+| `epsilon_min_fraction` | `0.008` |
+| `epsilon_steps` | `9` |
+| `merge_fragmented_contours` | `true` |
+| `minimum_component_score` | `0.05` |
+| `minimum_contour_area_fraction` | `0.12` |
+| `minimum_rectangularity` | `0.55` |
+| `rectangularity_weight` | `0.2` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Contour Quad + Components)
@@ -6578,13 +7005,20 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | unknown | unknown |
-| 2 | `6931e3aea38a` | `6931e3aea38a` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 255 ms | 0.01% |
-| 3 | `4339c3f69581` | `4339c3f69581` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 258 ms | 0.02% |
-| 4 | `91d7206d1476` | `91d7206d1476` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 287 ms | 0.05% |
-| 5 | `81a0687b7bc1` | `81a0687b7bc1` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 264 ms | 0.02% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | reference | reference |
+| 1 | unknown | `6931e3aea38a` | `6931e3aea38a` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 255 ms | 0.01% |
+| 2 | unknown | `4339c3f69581` | `4339c3f69581` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 258 ms | 0.02% |
+| 3 | unknown | `91d7206d1476` | `91d7206d1476` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 287 ms | 0.05% |
+| 4 | unknown | `81a0687b7bc1` | `81a0687b7bc1` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 264 ms | 0.02% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — contour_components
 
@@ -6809,6 +7243,44 @@ Dormant parameters may be omitted from future searches for this Golden Set, but 
 |---|---|---|---:|---:|---:|---:|---:|---:|
 | Winner | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 28.3s |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `3eec8a03f1de` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `agreement_weight` | `0.3` |
+| `contour_epsilon_max_fraction` | `0.04` |
+| `contour_minimum_area_fraction` | `0.12` |
+| `contour_minimum_rectangularity` | `0.55` |
+| `contour_weight` | `0.45` |
+| `grabcut_border_fraction` | `0.02` |
+| `grabcut_erosion_kernel_fraction` | `0.015` |
+| `grabcut_iterations` | `3` |
+| `grabcut_weight` | `0.25` |
+| `minimum_agreement_iou` | `0.3` |
+| `require_grabcut` | `false` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Contour Quad + GrabCut)
@@ -6842,13 +7314,20 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | unknown | unknown |
-| 2 | `42fc63229bb3` | `42fc63229bb3` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 38.7s | 0.08% |
-| 3 | `72f0d747f696` | `72f0d747f696` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 53.5s | 0.20% |
-| 4 | `d4633ac4cc93` | `d4633ac4cc93` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 38.2s | 0.02% |
-| 5 | `e35f2d10bf3d` | `e35f2d10bf3d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 56.9s | 0.26% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
+| 1 | unknown | `42fc63229bb3` | `42fc63229bb3` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 38.7s | 0.08% |
+| 2 | unknown | `72f0d747f696` | `72f0d747f696` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 53.5s | 0.20% |
+| 3 | unknown | `d4633ac4cc93` | `d4633ac4cc93` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 38.2s | 0.02% |
+| 4 | unknown | `e35f2d10bf3d` | `e35f2d10bf3d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 56.9s | 0.26% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — contour_grabcut
 
@@ -7072,6 +7551,49 @@ Dormant parameters may be omitted from future searches for this Golden Set, but 
 |---|---|---|---:|---:|---:|---:|---:|---:|
 | Winner | `0cd13eb1a471` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 458 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `0cd13eb1a471` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `angle_weight` | `0.2` |
+| `area_weight` | `0.25` |
+| `close_iterations` | `1` |
+| `close_kernel_fraction` | `0.008` |
+| `epsilon_max_fraction` | `0.04` |
+| `epsilon_min_fraction` | `0.008` |
+| `epsilon_steps` | `9` |
+| `merge_fragmented_contours` | `true` |
+| `minimum_contour_area_fraction` | `0.12` |
+| `minimum_projection_score` | `0.08` |
+| `minimum_rectangularity` | `0.55` |
+| `projection_margin_fraction` | `0.06` |
+| `projection_threshold_block_fraction` | `0.08` |
+| `projection_threshold_c` | `9.0` |
+| `projection_weight` | `0.3` |
+| `rectangularity_weight` | `0.25` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Contour Quad + Projection)
@@ -7105,13 +7627,20 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `0cd13eb1a471` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | unknown | unknown |
-| 2 | `172304831b2e` | `172304831b2e` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 0.18% |
-| 3 | `b71b6267963a` | `b71b6267963a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.14% |
-| 4 | `8c229faefd09` | `8c229faefd09` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 0.17% |
-| 5 | `3315664f787d` | `3315664f787d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.15% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `0cd13eb1a471` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
+| 1 | unknown | `172304831b2e` | `172304831b2e` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 0.18% |
+| 2 | unknown | `b71b6267963a` | `b71b6267963a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.14% |
+| 3 | unknown | `8c229faefd09` | `8c229faefd09` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 0.17% |
+| 4 | unknown | `3315664f787d` | `3315664f787d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.15% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — contour_projection
 
@@ -7348,6 +7877,46 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `49095b866d0d` | `49095b866d0d` | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | 399 ms |
 | Baseline | `bea942a4969a` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 206 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `49095b866d0d` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `angle_weight` | `0.2` |
+| `area_weight` | `0.25` |
+| `close_iterations` | `0` |
+| `close_kernel_fraction` | `0.018` |
+| `edge_support_dilation_fraction` | `0.008` |
+| `edge_support_weight` | `0.15` |
+| `epsilon_max_fraction` | `0.04` |
+| `epsilon_min_fraction` | `0.004` |
+| `epsilon_steps` | `5` |
+| `merge_fragmented_contours` | `true` |
+| `minimum_contour_area_fraction` | `0.12` |
+| `minimum_rectangularity` | `0.55` |
+| `rectangularity_weight` | `0.3` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -7381,13 +7950,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `49095b866d0d` | `49095b866d0d` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 57.3s | 0.16% |
-| 2 | `fe0372f03bb1` | `fe0372f03bb1` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 58.5s | 0.16% |
-| 3 | `b75e8d4f5261` | `b75e8d4f5261` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 58.7s | 0.16% |
-| 4 | `1d74604d7956` | `1d74604d7956` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 59.2s | 0.16% |
-| 5 | `c542268fe001` | `c542268fe001` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 59.4s | 0.16% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `bea942a4969a` | `baseline` | 0.8768 | 0.7589 | 0.0734 | -0.0105 | 0.8768 | 0 | reference | reference |
+| 1 | unknown | `49095b866d0d` | `49095b866d0d` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 57.3s | 0.16% |
+| 2 | unknown | `fe0372f03bb1` | `fe0372f03bb1` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 58.5s | 0.16% |
+| 3 | unknown | `b75e8d4f5261` | `b75e8d4f5261` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 58.7s | 0.16% |
+| 4 | unknown | `1d74604d7956` | `1d74604d7956` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 59.2s | 0.16% |
+| 5 | unknown | `c542268fe001` | `c542268fe001` | 0.8874 | 0.7589 | 0.0731 | +0.0000 | 0.8874 | 0 | 59.4s | 0.16% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — contour_quad
 
@@ -7621,6 +8198,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | 176 ms |
 | Baseline | `74f5cad7945a` | `baseline` | 0.6633 | 0.0000 | 0.3670 | 0.8291 | 1 | 12 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `04fd0a6e4bc2` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.0` |
+| `close_iterations` | `0` |
+| `close_kernel_fraction` | `0.0` |
+| `minimum_fragment_area_fraction` | `0.0002` |
+| `minimum_hull_area_fraction` | `0.1` |
+| `minimum_solidity` | `0.35` |
+| `polygon_epsilon_fraction` | `0.012` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -7654,13 +8265,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 280 ms | 7.69% |
-| 2 | `7fe4e99339c2` | `7fe4e99339c2` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 320 ms | 10.93% |
-| 3 | `58b1b96bcfa4` | `58b1b96bcfa4` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 340 ms | 12.26% |
-| 4 | `f9049ebaa534` | `f9049ebaa534` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 327 ms | 11.21% |
-| 5 | `ae8e0d8d384d` | `ae8e0d8d384d` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 337 ms | 11.85% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `74f5cad7945a` | `baseline` | 0.6633 | 0.0000 | 0.3670 | -0.0692 | 0.8291 | 1 | reference | reference |
+| 1 | unknown | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 280 ms | 7.69% |
+| 2 | unknown | `7fe4e99339c2` | `7fe4e99339c2` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 320 ms | 10.93% |
+| 3 | unknown | `58b1b96bcfa4` | `58b1b96bcfa4` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 340 ms | 12.26% |
+| 4 | unknown | `f9049ebaa534` | `f9049ebaa534` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 327 ms | 11.21% |
+| 5 | unknown | `ae8e0d8d384d` | `ae8e0d8d384d` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 337 ms | 11.85% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — convex_hull
 
@@ -7893,6 +8512,43 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 |---|---|---|---:|---:|---:|---:|---:|---:|
 | Winner | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 214 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `a5450e58ec9e` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `contour_weight` | `0.45` |
+| `contrast_weight` | `0.4` |
+| `epsilon_max_fraction` | `0.04` |
+| `minimum_contour_area_fraction` | `0.12` |
+| `minimum_cross_edge_contrast` | `0.045` |
+| `minimum_polarity_consistency` | `0.55` |
+| `minimum_rectangularity` | `0.55` |
+| `polarity_weight` | `0.15` |
+| `sample_offset_fraction` | `0.008` |
+| `samples_per_edge` | `48` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Contour Quad + Cross-Edge Validation)
@@ -7926,13 +8582,20 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | unknown | unknown |
-| 2 | `0bd97323ddd6` | `0bd97323ddd6` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 679 ms | 0.08% |
-| 3 | `491385b9c30f` | `491385b9c30f` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 722 ms | 0.14% |
-| 4 | `3f36d70252ce` | `3f36d70252ce` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 661 ms | 0.05% |
-| 5 | `ebfb7feac827` | `ebfb7feac827` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.2s | 0.40% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
+| 1 | unknown | `0bd97323ddd6` | `0bd97323ddd6` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 679 ms | 0.08% |
+| 2 | unknown | `491385b9c30f` | `491385b9c30f` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 722 ms | 0.14% |
+| 3 | unknown | `3f36d70252ce` | `3f36d70252ce` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 661 ms | 0.05% |
+| 4 | unknown | `ebfb7feac827` | `ebfb7feac827` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.2s | 0.40% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — cross_edge_contour
 
@@ -8121,17 +8784,17 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: `run-20260815-034028`
+- Run ID: `run-20260816-222324`
 - Detector: `dhsegment_page_mask`
 - Strategy: `exhaustive`
-- Pipeline commit: `06073dbc0d7d`
+- Pipeline commit: `15b8530db9c2`
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
-- Started: `2026-08-15T01:17:37.715886+00:00`
-- Finished: `2026-08-15T03:40:26.743219+00:00`
-- Wall-clock elapsed: `2h 22m 49s`
-- Est. serial runtime: `37d 16h 12m 37s`
-- Effective acceleration: `379.87×`
+- Started: `2026-08-16T22:09:44.550911+00:00`
+- Finished: `2026-08-16T22:23:21.320469+00:00`
+- Wall-clock elapsed: `13m 37s`
+- Est. serial runtime: `3d 10h 12m 20s`
+- Effective acceleration: `362.33×`
 
 ### Golden Set
 
@@ -8151,6 +8814,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 - `RUN-INFO.json` — present
 - `parameters.json` — present
+- `parameter-provenance.json` — missing
 - `raw/results.csv` — missing
 - `reports/summary.json` — present
 - `reports/winner-pages.json` — present
@@ -8164,8 +8828,41 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Winner | `15434712cddf` | `15434712cddf` | 0.9735 | 0.9634 | 0.0100 | 0.9735 | 0 | 5m 25s |
-| Baseline | `013084b6c0e9` | `baseline` | 0.9670 | 0.9424 | 0.0148 | 0.9670 | 0 | 9s |
+| Winner | `15434712cddf` | `15434712cddf` | 0.9735 | 0.9634 | 0.0100 | 0.9735 | 0 | 17.2s |
+| Baseline | `013084b6c0e9` | `baseline` | 0.9670 | 0.9424 | 0.0148 | 0.9670 | 0 | 11.3s |
+
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `15434712cddf` |
+| Absolute parameter SHA-256 | `841ec32f19eff2147663f902e8102b233de1e5623c43b017ac56933750266e6a` |
+| Identity schema | `1` |
+| Parameter schema | `1` |
+| Grid SHA-256 | `09e95ccbad8b282cca50d6ba800bdd49440c3d31ad399deba82b8cf85902bacb` |
+| Grid ordinal | `3078` |
+| Reproducibility | **Fully reproducible** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `close_kernel_fraction` | `0.0025` |
+| `contour_offset_fraction` | `0.008` |
+| `fill_holes` | `0` |
+| `minimum_page_area_fraction` | `0.1` |
+| `open_kernel_fraction` | `0.006` |
+| `probability_threshold` | `0.35` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | 2026-08-16 | authoritative |
 
 ### Detector Evidence
 
@@ -8188,7 +8885,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | StdDev improvements | 0 |
 | Total metric improvements | 0 |
 | Parameter sets with improvements | 0 |
-| Winner changes | 4 |
+| Winner changes | 1 |
 | Baseline surpassed | yes |
 
 ### Preferred Execution Shape
@@ -8197,17 +8894,26 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
 |---|---:|---:|---:|---|---:|
-| `manual` | 8 | 48 | 384 | `rh8-al319` | 384 |
+| `preferred-dispatch-optimizer` | 192 | 2 | 384 | `rh8-al307` | 384 |
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `15434712cddf` | `15434712cddf` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 47m 58s | 30.73% |
-| 2 | `2ac98c16bd62` | `2ac98c16bd62` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 48m 32s | 31.83% |
-| 3 | `d64258f10461` | `d64258f10461` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 53m 29s | 34.60% |
-| 4 | `701c112785f6` | `701c112785f6` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 54m 3s | 35.84% |
-| 5 | `509535c79775` | `509535c79775` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 58m 58s | 38.49% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | `013084b6c0e9` | `baseline` | 0.9670 | 0.9424 | 0.0148 | -0.0065 | 0.9670 | 0 | reference | reference |
+| Best** | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | `15434712cddf` | `15434712cddf` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | reference | reference |
+| 1 | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | `d111a018eb16` | `d111a018eb16` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 4m 45s | 33.03% |
+| 2 | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | `2ac98c16bd62` | `2ac98c16bd62` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 4m 35s | 31.19% |
+| 3 | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | `9b960d695eea` | `9b960d695eea` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 4m 45s | 32.92% |
+| 4 | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | `d64258f10461` | `d64258f10461` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 5m 12s | 36.30% |
+| 5 | [#455](https://github.com/dlstupka/hth/actions/runs/31975517634) | `7486e3797400` | `7486e3797400` | 0.9735 | 0.9634 | 0.0100 | +0.0000 | 0.9735 | 0 | 5m 17s | 37.20% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — dhsegment_page_mask
 
@@ -8225,15 +8931,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Discovery Order | Parameter Set ID | Search Time | % Search |
 |---:|---|---:|---:|
-| 1 | `5447dced8ff8` | 4m 33s | 0.02% |
-| 2 | `83d33cb60a63` | 4m 36s | 0.09% |
-| 3 | `4a79fc275c49` | 4m 37s | 0.13% |
-| 4 (final) | `15434712cddf` | 47m 58s | 30.73% |
+| 1 (final) | `15434712cddf` | 28.4s | 0.01% |
 
-Total winner changes: **4**.
-Search completed in **2h 22m 49s** wall-clock time.
+Total winner changes: **1**.
+Search completed in **13m 37s** wall-clock time.
 
-**Stabilization Interpretation:** Moderate exploration — the final winner emerged after 10–40% of the evaluated search.
+**Stabilization Interpretation:** Early convergence — the final winner emerged within the first 10% of the evaluated search.
 
 ### Status Definitions
 
@@ -8262,18 +8965,18 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: `run-20260815-034028`
+- Calibration run ID: `run-20260816-222324`
 - Calibration schema: `1.1`
 - Detector: `dhsegment_page_mask`
 - Detector configuration: `hth-pipeline/config/detectors/dhsegment_page_mask.json`
 - Golden Set configuration: `hth-pipeline/config/golden_set.json`
 - Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
-- Pipeline commit: `06073dbc0d7dbfeb3f0043271110c202fbc24284`
-- Source commit: `0deb8cd4d9d8907f3c0146111cc4d2283b1ff595`
+- Pipeline commit: `15b8530db9c26a6967776f4ef9797f35718d5422`
+- Source commit: `62bb83b3054ae869862c683d6174fcf6d772536a`
 - Requested search strategy: `exhaustive`
 - Resolved search strategy: `exhaustive`
 - Strategy fallback: `none`
-- Configured threads: `48`
+- Configured threads: `2`
 
 ### Detector-Selection Intelligence
 
@@ -8315,8 +9018,8 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 | Best Avg IoU | 0.9735 |
 | Minimum Avg IoU | 0.9581 |
 | Avg IoU StdDev | 0.0034 |
-| Winner stabilized after | 3073 parameter sets |
-| Winner stabilized | 47m 58s (31% of search) |
+| Winner stabilized after | 1 parameter set |
+| Winner stabilized | 28.4s (0% of search) |
 | Near-best coverage (basin; within 0.0010) | 770 (7.7%) |
 | Equivalent-best configurations (within 0.0001) | 130 (1.3%) |
 | Calibration Evidence | High |
@@ -8327,12 +9030,12 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 10000 | 100.0% | 37d 14h 56m 10s | 1.0× |
-| Non-dormant | 200 | 2.0% | 18h 3m 31s | 50.0× |
-| Low+ | 200 | 2.0% | 18h 3m 31s | 50.0× |
-| Moderate+ | 40 | 0.4% | 3h 36m 42s | 250.0× |
-| Important+ | 40 | 0.4% | 3h 36m 42s | 250.0× |
-| Critical | 4 | 0.0% | 21m 40s | 2500.0× |
+| Exhaustive | 10000 | 100.0% | 1d 23h 44m 42s | 1.0× |
+| Non-dormant | 200 | 2.0% | 57m 18s | 50.0× |
+| Low+ | 200 | 2.0% | 57m 18s | 50.0× |
+| Moderate+ | 40 | 0.4% | 11m 28s | 250.0× |
+| Important+ | 40 | 0.4% | 11m 28s | 250.0× |
+| Critical | 4 | 0.0% | 1m 9s | 2500.0× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
@@ -8442,6 +9145,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | 2.5s |
 | Baseline | `8b59bc493e1f` | `baseline` | 0.7593 | 0.4357 | 0.2472 | 0.7593 | 0 | 283 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `e66a7546e1a7` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.008` |
+| `close_kernel_fraction` | `0.0` |
+| `distance_threshold_fraction` | `0.1` |
+| `minimum_bbox_area_fraction` | `0.1` |
+| `minimum_component_core_overlap` | `0.03` |
+| `minimum_core_area_fraction` | `0.004` |
+| `minimum_rectangularity` | `0.35` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -8475,13 +9212,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 2.15% |
-| 2 | `8e57ff70b94c` | `8e57ff70b94c` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 4.39% |
-| 3 | `d0c1acdb2940` | `d0c1acdb2940` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 2.70% |
-| 4 | `9e2cea4f0e56` | `9e2cea4f0e56` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 4.85% |
-| 5 | `ae46f8953bd6` | `ae46f8953bd6` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 3.71% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `8b59bc493e1f` | `baseline` | 0.7593 | 0.4357 | 0.2472 | -0.0795 | 0.7593 | 0 | reference | reference |
+| 1 | unknown | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 2.15% |
+| 2 | unknown | `8e57ff70b94c` | `8e57ff70b94c` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 4.39% |
+| 3 | unknown | `d0c1acdb2940` | `d0c1acdb2940` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 2.70% |
+| 4 | unknown | `9e2cea4f0e56` | `9e2cea4f0e56` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 4.85% |
+| 5 | unknown | `ae46f8953bd6` | `ae46f8953bd6` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 5.1s | 3.71% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — distance_transform
 
@@ -8718,6 +9463,39 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `0a8482550c35` | `0a8482550c35` | 0.7243 | 0.4499 | 0.2245 | 0.7243 | 0 | 410 ms |
 | Baseline | `e04459bcb474` | `baseline` | 0.6347 | 0.0000 | 0.3534 | 0.7933 | 1 | 32 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `0a8482550c35` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.016` |
+| `distance_threshold_fraction` | `0.3` |
+| `minimum_bbox_area_fraction` | `0.22` |
+| `minimum_core_area_fraction` | `0.002` |
+| `minimum_mask_coverage` | `0.06` |
+| `proposal_expansion_fraction` | `0.12` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -8751,13 +9529,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `0a8482550c35` | `0a8482550c35` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 836 ms | 82.01% |
-| 2 | `43eedb6484a7` | `43eedb6484a7` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 881 ms | 98.21% |
-| 3 | `b42ab476afc9` | `b42ab476afc9` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 844 ms | 84.75% |
-| 4 | `1ce89ec0c98a` | `1ce89ec0c98a` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 810 ms | 74.45% |
-| 5 | `7e13cb642dbe` | `7e13cb642dbe` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 791 ms | 70.47% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `e04459bcb474` | `baseline` | 0.6347 | 0.0000 | 0.3534 | -0.0896 | 0.7933 | 1 | reference | reference |
+| 1 | unknown | `0a8482550c35` | `0a8482550c35` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 836 ms | 82.01% |
+| 2 | unknown | `43eedb6484a7` | `43eedb6484a7` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 881 ms | 98.21% |
+| 3 | unknown | `b42ab476afc9` | `b42ab476afc9` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 844 ms | 84.75% |
+| 4 | unknown | `1ce89ec0c98a` | `1ce89ec0c98a` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 810 ms | 74.45% |
+| 5 | unknown | `7e13cb642dbe` | `7e13cb642dbe` | 0.7243 | 0.4499 | 0.2245 | +0.0000 | 0.7243 | 0 | 791 ms | 70.47% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — distance_transform_rect
 
@@ -8999,6 +9785,42 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `4e5bc37a649a` | `4e5bc37a649a` | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | 1s |
 | Baseline | `cc91b22426bb` | `baseline` | 0.5392 | 0.0000 | 0.4417 | 0.8986 | 2 | 392 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `4e5bc37a649a` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `edge_support_dilation_fraction` | `0.003` |
+| `edge_support_weight` | `0.2` |
+| `epsilon_max_fraction` | `0.03` |
+| `lsd_refine_mode` | `"none"` |
+| `lsd_scale` | `0.6` |
+| `minimum_contour_area_fraction` | `0.08` |
+| `minimum_edge_support` | `0.05` |
+| `minimum_rectangularity` | `0.45` |
+| `minimum_segment_length_fraction` | `0.03` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Contour Quad + LSD)
@@ -9032,13 +9854,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `4e5bc37a649a` | `4e5bc37a649a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.21% |
-| 2 | `723797320a20` | `723797320a20` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.15% |
-| 3 | `45f853e88afb` | `45f853e88afb` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2s | 1.14% |
-| 4 | `d3cfbe72a64d` | `d3cfbe72a64d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 7s | 8.53% |
-| 5 | `79f1c310cb10` | `79f1c310cb10` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 8s | 10.11% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `cc91b22426bb` | `baseline` | 0.5392 | 0.0000 | 0.4417 | -0.3377 | 0.8986 | 2 | reference | reference |
+| 1 | unknown | `4e5bc37a649a` | `4e5bc37a649a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.21% |
+| 2 | unknown | `723797320a20` | `723797320a20` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.5s | 0.15% |
+| 3 | unknown | `45f853e88afb` | `45f853e88afb` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2s | 1.14% |
+| 4 | unknown | `d3cfbe72a64d` | `d3cfbe72a64d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 7s | 8.53% |
+| 5 | unknown | `79f1c310cb10` | `79f1c310cb10` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 8s | 10.11% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — edge_contour
 
@@ -9231,17 +10061,17 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: `run-20260815-183809`
+- Run ID: `run-20260816-161000`
 - Detector: `grabcut`
 - Strategy: `exhaustive`
-- Pipeline commit: `fffeed69fec4`
+- Pipeline commit: `7067fdc5b522`
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
-- Started: `2026-08-15T17:52:05.685779+00:00`
-- Finished: `2026-08-15T18:38:06.851779+00:00`
-- Wall-clock elapsed: `46m 1s`
-- Est. serial runtime: `11d 19h 41m 53s`
-- Effective acceleration: `369.88×`
+- Started: `2026-08-16T15:23:49.376404+00:00`
+- Finished: `2026-08-16T16:09:57.615252+00:00`
+- Wall-clock elapsed: `46m 8s`
+- Est. serial runtime: `11d 20h 30m 32s`
+- Effective acceleration: `369.99×`
 
 ### Golden Set
 
@@ -9261,6 +10091,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 - `RUN-INFO.json` — present
 - `parameters.json` — present
+- `parameter-provenance.json` — missing
 - `raw/results.csv` — missing
 - `reports/summary.json` — present
 - `reports/winner-pages.json` — present
@@ -9274,8 +10105,45 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Winner | `1df07d89c21d` | `1df07d89c21d` | 0.9071 | 0.7249 | 0.0912 | 0.9071 | 0 | 1m 40s |
-| Baseline | `018d128420cb` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 27.9s |
+| Winner | `110867d137a9` | `110867d137a9` | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | 1m 42s |
+| Baseline | `018d128420cb` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 27.7s |
+
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `110867d137a9` |
+| Absolute parameter SHA-256 | `0457f33a3ddc4db1b62c2ea856666a8575ec33a160f1a29e3e7fef585df5219a` |
+| Identity schema | `1` |
+| Parameter schema | `1` |
+| Grid SHA-256 | `92d52112a9eed7ca91666e56bc46767b4ed8ed7afdc8c26d9b8f77f16f061327` |
+| Grid ordinal | `1315` |
+| Reproducibility | **Fully reproducible** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `border_fraction` | `0.01` |
+| `close_iterations` | `1` |
+| `close_kernel_fraction` | `0.01` |
+| `erosion_iterations` | `2` |
+| `erosion_kernel_fraction` | `0.0075` |
+| `grabcut_iterations` | `5` |
+| `minimum_bbox_area_fraction` | `0.15` |
+| `minimum_contour_area_fraction` | `0.02` |
+| `polygon_epsilon_fraction` | `0.018` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | 2026-08-16 | authoritative |
+| [#444](https://github.com/dlstupka/hth/actions/runs/31927181414) | 2026-08-16 | authoritative |
 
 ### Detector Evidence
 
@@ -9305,17 +10173,25 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
 |---|---:|---:|---:|---|---:|
-| `preferred-dispatch-optimizer` | 2 | 192 | 384 | `rh8-al307` | 384 |
+| `preferred-dispatch-optimizer` | 2 | 192 | 384 | `rh8-al308` | 384 |
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `1df07d89c21d` | `1df07d89c21d` | 0.9071 | 0.7249 | 0.0912 | +0.0000 | 0.9071 | 0 | 20m 42s | 40.41% |
-| 2 | `3784a76b67a0` | `3784a76b67a0` | 0.9071 | 0.7249 | 0.0912 | +0.0000 | 0.9071 | 0 | 20m 42s | 40.52% |
-| 3 | `922bb3bd6ac0` | `922bb3bd6ac0` | 0.9071 | 0.7249 | 0.0912 | +0.0000 | 0.9071 | 0 | 20m 42s | 40.54% |
-| 4 | `7de1564ea01e` | `7de1564ea01e` | 0.9071 | 0.7249 | 0.0912 | +0.0000 | 0.9071 | 0 | 20m 50s | 40.79% |
-| 5 | `ea0a7db41a44` | `ea0a7db41a44` | 0.9071 | 0.7249 | 0.0912 | +0.0000 | 0.9071 | 0 | 20m 52s | 40.91% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | `018d128420cb` | `baseline` | 0.8130 | 0.5532 | 0.1692 | -0.1006 | 0.8130 | 0 | reference | reference |
+| 1 | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | `110867d137a9` | `110867d137a9` | 0.9137 | 0.7378 | 0.0886 | +0.0000 | 0.9137 | 0 | 6m 3s | 10.33% |
+| 2 | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | `1262b0b433bf` | `1262b0b433bf` | 0.9084 | 0.7378 | 0.0859 | -0.0052 | 0.9084 | 0 | 6m 12s | 11.01% |
+| 3 | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | `3784a76b67a0` | `3784a76b67a0` | 0.9071 | 0.7249 | 0.0912 | -0.0066 | 0.9071 | 0 | 21m 2s | 41.19% |
+| 4 | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | `7de1564ea01e` | `7de1564ea01e` | 0.9071 | 0.7249 | 0.0912 | -0.0066 | 0.9071 | 0 | 21m 5s | 41.40% |
+| 5 | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | `114948776d31` | `114948776d31` | 0.9071 | 0.7249 | 0.0912 | -0.0066 | 0.9071 | 0 | 21m 7s | 41.48% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — grabcut
 
@@ -9323,26 +10199,26 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Golden Set Page | Parameter Set ID | Baseline | Winner | Δ IoU | Status |
 |---:|---|---:|---:|---:|---|
-| 1 | `1df07d89c21d` | 0.9568 | 0.9568 | +0.0000 | Unchanged |
-| 5 | `1df07d89c21d` | 0.5532 | 0.9563 | +0.4032 | Improved |
-| 6 | `1df07d89c21d` | 0.6683 | 0.7249 | +0.0567 | Improved |
-| 9 | `1df07d89c21d` | 0.9422 | 0.9433 | +0.0010 | Improved |
-| 10 | `1df07d89c21d` | 0.9447 | 0.9540 | +0.0093 | Improved |
+| 1 | `110867d137a9` | 0.9568 | 0.9578 | +0.0010 | Improved |
+| 5 | `110867d137a9` | 0.5532 | 0.9755 | +0.4223 | Improved |
+| 6 | `110867d137a9` | 0.6683 | 0.7378 | +0.0695 | Improved |
+| 9 | `110867d137a9` | 0.9422 | 0.9433 | +0.0010 | Improved |
+| 10 | `110867d137a9` | 0.9447 | 0.9540 | +0.0093 | Improved |
 
 #### Winner History
 
 | Discovery Order | Parameter Set ID | Search Time | % Search |
 |---:|---|---:|---:|
-| 5 | `cea146951412` | 3m 31s | 4.17% |
-| 6 | `837e40d6fbe4` | 5m 54s | 10.04% |
-| 7 | `fb23127396e4` | 9m 57s | 18.95% |
-| 8 | `edb5c033dbcf` | 20m 40s | 40.29% |
-| 9 (final) | `1df07d89c21d` | 20m 42s | 40.41% |
+| 5 | `573c302bd551` | 2m 40s | 2.92% |
+| 6 | `e08577fea107` | 3m 24s | 4.17% |
+| 7 | `1aa5ff7fa09b` | 3m 30s | 4.20% |
+| 8 | `06713f658536` | 5m 50s | 10.01% |
+| 9 (final) | `110867d137a9` | 6m 3s | 10.33% |
 
 Total winner changes: **9**.
-Search completed in **46m 1s** wall-clock time.
+Search completed in **46m 8s** wall-clock time.
 
-**Stabilization Interpretation:** Late convergence — the final winner emerged after 40–80% of the evaluated search.
+**Stabilization Interpretation:** Moderate exploration — the final winner emerged after 10–40% of the evaluated search.
 
 ### Status Definitions
 
@@ -9371,14 +10247,14 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: `run-20260815-183809`
+- Calibration run ID: `run-20260816-161000`
 - Calibration schema: `1.1`
 - Detector: `grabcut`
 - Detector configuration: `hth-pipeline/config/detectors/grabcut.json`
 - Golden Set configuration: `hth-pipeline/config/golden_set.json`
 - Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
-- Pipeline commit: `fffeed69fec4c7de6236b51c9d1bc562d28a4b1b`
-- Source commit: `45ec2543963ce9ef27f60718827a34da455fb17a`
+- Pipeline commit: `7067fdc5b522fbe4bb195f18bccf5f1123d8a87f`
+- Source commit: `22e63f5eb5e6514e09228c827fcfc44d13e14e82`
 - Requested search strategy: `exhaustive`
 - Resolved search strategy: `exhaustive`
 - Strategy fallback: `none`
@@ -9386,14 +10262,14 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: `1df07d89c21d`
-- Recommended parameter short name: `1df07d89c21d`
-- Best observed Avg IoU: `0.9071`
-- Avg IoU Success: `0.9071`
-- Worst Golden Set page (Min IoU): `0.7249`
-- Page-to-page StdDev: `0.0912`
+- Recommended parameter set: `110867d137a9`
+- Recommended parameter short name: `110867d137a9`
+- Best observed Avg IoU: `0.9137`
+- Avg IoU Success: `0.9137`
+- Worst Golden Set page (Min IoU): `0.7378`
+- Page-to-page StdDev: `0.0886`
 - Calibration evidence: `Medium`
-- Dormant parameters: `polygon_epsilon_fraction, minimum_bbox_area_fraction, minimum_contour_area_fraction`
+- Dormant parameters: `minimum_bbox_area_fraction, polygon_epsilon_fraction, minimum_contour_area_fraction`
 - Available domain spaces: `exhaustive, important_plus, low_plus, moderate_plus, non_dormant`
 
 ### Calibration Analysis
@@ -9419,14 +10295,14 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 | Parameter sets evaluated | 13122 |
 | Evaluated sets (% of all possible parameter sets) | 100.0% |
 | Est. serial runtime for full parameter set evaluation* | complete |
-| Fully successful parameter sets | 12559 (95.7%) |
-| Best Avg IoU | 0.9071 |
+| Fully successful parameter sets | 12515 (95.4%) |
+| Best Avg IoU | 0.9137 |
 | Minimum Avg IoU | 0.4353 |
-| Avg IoU StdDev | 0.0698 |
-| Winner stabilized after | 5302 parameter sets |
-| Winner stabilized | 20m 42s (40% of search) |
-| Near-best coverage (basin; within 0.0010) | 52 (0.4%) |
-| Equivalent-best configurations (within 0.0001) | 14 (0.1%) |
+| Avg IoU StdDev | 0.0712 |
+| Winner stabilized after | 1355 parameter sets |
+| Winner stabilized | 6m 3s (10% of search) |
+| Near-best coverage (basin; within 0.0010) | 1 (0.0%) |
+| Equivalent-best configurations (within 0.0001) | 1 (0.0%) |
 | Calibration Evidence | Medium |
 
 \* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
@@ -9435,11 +10311,11 @@ The configured grid is fully characterized for this Golden Set; continue detecto
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 13122 | 100.0% | 15d 5h 51m 5s | 1.0× |
-| Non-dormant | 486 | 3.7% | 13h 33m | 27.0× |
-| Low+ | 486 | 3.7% | 13h 33m | 27.0× |
-| Moderate+ | 81 | 0.6% | 2h 15m 30s | 162.0× |
-| Important+ | 27 | 0.2% | 45m 10s | 486.0× |
+| Exhaustive | 13122 | 100.0% | 15d 12h 43m 31s | 1.0× |
+| Non-dormant | 486 | 3.7% | 13h 48m 17s | 27.0× |
+| Low+ | 486 | 3.7% | 13h 48m 17s | 27.0× |
+| Moderate+ | 81 | 0.6% | 2h 18m 3s | 162.0× |
+| Important+ | 27 | 0.2% | 46m 1s | 486.0× |
 | Critical | 0 | 0.0% | 0 ms | unavailable |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
@@ -9452,21 +10328,21 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 | Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
 |---|---|---:|---:|---:|---|
-| `erosion_iterations` | Important | 0.2045 | 0.0746 | 33.3% | `1` (0.7948), `2` (0.7751), `0` (0.7202) |
-| `border_fraction` | Important | 0.1556 | 0.0604 | 33.3% | `0.01` (0.8022), `0.03` (0.7460), `0.02` (0.7419) |
-| `grabcut_iterations` | Important | 0.1248 | 0.0552 | 33.3% | `5` (0.7839), `3` (0.7775), `1` (0.7287) |
-| `erosion_kernel_fraction` | Moderate | 0.0332 | 0.0311 | 33.3% | `0.0075` (0.7796), `0.015` (0.7619), `0.025` (0.7485) |
-| `close_kernel_fraction` | Low | 0.0175 | 0.0210 | 100.0% | `0.01` (0.7714), `0.02` (0.7682), `0.035` (0.7505) |
-| `close_iterations` | Low | 0.0091 | 0.0133 | 100.0% | `1` (0.7700), `2` (0.7567) |
-| `polygon_epsilon_fraction` | Dormant | 0.0001 | 0.0021 | 100.0% | `0.018` (0.7644), `0.01` (0.7633), `0.03` (0.7623) |
-| `minimum_bbox_area_fraction` | Dormant | 0.0000 | 0.0010 | 100.0% | `0.1` (0.7638), `0.07` (0.7635), `0.15` (0.7628) |
-| `minimum_contour_area_fraction` | Dormant | 0.0000 | 0.0006 | 100.0% | `0.02` (0.7636), `0.04` (0.7634), `0.07` (0.7631) |
+| `erosion_iterations` | Important | 0.2068 | 0.0763 | 33.3% | `1` (0.7946), `2` (0.7753), `0` (0.7183) |
+| `border_fraction` | Important | 0.1542 | 0.0611 | 33.3% | `0.01` (0.8022), `0.03` (0.7449), `0.02` (0.7411) |
+| `grabcut_iterations` | Important | 0.1207 | 0.0547 | 33.3% | `5` (0.7825), `3` (0.7778), `1` (0.7279) |
+| `erosion_kernel_fraction` | Moderate | 0.0329 | 0.0316 | 33.3% | `0.0075` (0.7789), `0.015` (0.7620), `0.025` (0.7473) |
+| `close_kernel_fraction` | Low | 0.0162 | 0.0209 | 33.3% | `0.01` (0.7711), `0.02` (0.7670), `0.035` (0.7501) |
+| `close_iterations` | Low | 0.0107 | 0.0147 | 50.0% | `1` (0.7701), `2` (0.7554) |
+| `minimum_bbox_area_fraction` | Dormant | 0.0000 | 0.0009 | 33.3% | `0.15` (0.7633), `0.07` (0.7626), `0.1` (0.7624) |
+| `polygon_epsilon_fraction` | Dormant | 0.0000 | 0.0006 | 33.3% | `0.03` (0.7630), `0.018` (0.7627), `0.01` (0.7624) |
+| `minimum_contour_area_fraction` | Dormant | 0.0000 | 0.0002 | 33.3% | `0.02` (0.7629), `0.04` (0.7627), `0.07` (0.7626) |
 
 #### Dormant Parameters
 
 These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
 
-`polygon_epsilon_fraction`, `minimum_bbox_area_fraction`, `minimum_contour_area_fraction`.
+`minimum_bbox_area_fraction`, `polygon_epsilon_fraction`, `minimum_contour_area_fraction`.
 
 Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
 
@@ -9476,19 +10352,19 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Parameters | Pair η² | Incremental importance | Sample size |
 |---|---:|---:|---:|
-| `erosion_iterations` × `border_fraction` | 0.4085 | 0.2040 | 13122 |
-| `border_fraction` × `grabcut_iterations` | 0.2885 | 0.1330 | 13122 |
-| `erosion_iterations` × `grabcut_iterations` | 0.3369 | 0.1324 | 13122 |
-| `erosion_iterations` × `erosion_kernel_fraction` | 0.3044 | 0.0999 | 13122 |
-| `border_fraction` × `erosion_kernel_fraction` | 0.1995 | 0.0439 | 13122 |
+| `erosion_iterations` × `border_fraction` | 0.4096 | 0.2028 | 13122 |
+| `erosion_iterations` × `grabcut_iterations` | 0.3374 | 0.1306 | 13122 |
+| `border_fraction` × `grabcut_iterations` | 0.2832 | 0.1291 | 13122 |
+| `erosion_iterations` × `erosion_kernel_fraction` | 0.3027 | 0.0959 | 13122 |
+| `border_fraction` × `erosion_kernel_fraction` | 0.1964 | 0.0422 | 13122 |
 
 #### Page Sensitivity
 
 | Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
 |---:|---:|---:|---:|---:|---:|
-| 1 | 0.8972 | 0.0000 | 0.9904 | 0.1982 | 96.3% |
-| 5 | 0.5499 | 0.2980 | 0.9685 | 0.1037 | 100.0% |
-| 6 | 0.5053 | 0.0000 | 0.8217 | 0.1758 | 99.2% |
+| 1 | 0.8946 | 0.0000 | 0.9904 | 0.2046 | 95.9% |
+| 5 | 0.5491 | 0.2980 | 0.9755 | 0.1047 | 100.0% |
+| 6 | 0.5056 | 0.0000 | 0.8217 | 0.1758 | 99.2% |
 | 9 | 0.9307 | 0.8522 | 0.9433 | 0.0288 | 100.0% |
 | 10 | 0.9336 | 0.8355 | 0.9661 | 0.0228 | 100.0% |
 
@@ -9507,15 +10383,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: `run-20260815-190932`
+- Run ID: `run-20260817-172747`
 - Detector: `grabcut_contour`
 - Strategy: `exhaustive`
-- Pipeline commit: `a175813c9c40`
-- Python: `3.12.0`
+- Pipeline commit: `b7ed71b428c6`
+- Python: `3.12.13`
 - OpenCV: `4.14.0`
-- Started: `2026-08-15T19:09:32.523521+00:00`
-- Finished: `2026-08-15T19:10:17.374378+00:00`
-- Wall-clock elapsed: `44.9s`
+- Started: `2026-08-17T17:27:47.292279+00:00`
+- Finished: `2026-08-17T17:38:14.932783+00:00`
+- Wall-clock elapsed: `10m 28s`
 - Est. serial runtime: `unknown`
 - Effective acceleration: `unknown`
 
@@ -9528,15 +10404,16 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Parameter Space
 
-- All possible parameter sets: `354295`
-- Parameter sets evaluated: `10`
-- Evaluated sets (% of all possible parameter sets): `0.00%`
+- All possible parameter sets: `46657`
+- Parameter sets evaluated: `11`
+- Evaluated sets (% of all possible parameter sets): `0.02%`
 - Configured named profiles: `baseline`
 
 ### Outputs
 
 - `RUN-INFO.json` — present
 - `parameters.json` — present
+- `parameter-provenance.json` — missing
 - `raw/results.csv` — missing
 - `logs/runner-performance.jsonl` — missing
 - `reports/summary.json` — present
@@ -9551,7 +10428,47 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Winner | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 30.2s |
+| Winner | `9c90917e5b48` | `9c90917e5b48` | 0.8217 | 0.5699 | 0.1596 | 0.8217 | 0 | 1m 26s |
+| Baseline | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | 1m 3s |
+
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `9c90917e5b48` |
+| Absolute parameter SHA-256 | `9b68cba11944b817279f650735a0719fa5488be5f92a8b28b1213b930dbbb792` |
+| Identity schema | `1` |
+| Parameter schema | `1` |
+| Grid SHA-256 | `22f4aa58310d079c7f92395261d8891ef8cd13346470c080af1540870ee9ca46` |
+| Grid ordinal | `8` |
+| Reproducibility | **Fully reproducible** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `agreement_weight` | `0.25` |
+| `contour_minimum_area_fraction` | `0.08` |
+| `contour_minimum_rectangularity` | `0.45` |
+| `grabcut_border_fraction` | `0.02` |
+| `grabcut_close_kernel_fraction` | `0.02` |
+| `grabcut_erosion_kernel_fraction` | `0.015` |
+| `grabcut_iterations` | `3` |
+| `grabcut_minimum_contour_area_fraction` | `0.04` |
+| `grabcut_polygon_epsilon_fraction` | `0.01` |
+| `grabcut_weight` | `0.55` |
+| `minimum_agreement_iou` | `0.05` |
+| `require_contour` | `false` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
 
 ### Detector Evidence
 
@@ -9569,13 +10486,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Statistic | Count |
 |---|---:|
-| Avg IoU improvements | 0 |
-| Minimum IoU improvements | 0 |
-| StdDev improvements | 0 |
-| Total metric improvements | 0 |
-| Parameter sets with improvements | 0 |
-| Winner changes | 0 |
-| Baseline surpassed | no |
+| Avg IoU improvements | 3 |
+| Minimum IoU improvements | 3 |
+| StdDev improvements | 3 |
+| Total metric improvements | 9 |
+| Parameter sets with improvements | 3 |
+| Winner changes | 3 |
+| Baseline surpassed | yes |
 
 ### Preferred Execution Shape
 
@@ -9583,17 +10500,26 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
 |---|---:|---:|---:|---|---:|
-| `auto-fallback-incompatible-workload` | 6 | 64 | 384 | `rh8-al307` | 384 |
+| `auto` | 4 | 2 | 8 | `GitHub Actions 1000000759` | 8 |
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | +0.0000 | 0.8130 | 0 | unknown | unknown |
-| 2 | `eb15b53c103b` | `eb15b53c103b` | 0.7986 | 0.5486 | 0.1849 | -0.0144 | 0.7986 | 0 | 40.1s | 70.00% |
-| 3 | `ed5312e42ce6` | `ed5312e42ce6` | 0.7986 | 0.5486 | 0.1849 | -0.0144 | 0.7986 | 0 | 40s | 30.00% |
-| 4 | `2a39748afbe3` | `2a39748afbe3` | 0.7986 | 0.5486 | 0.1849 | -0.0144 | 0.7986 | 0 | 40.1s | 80.00% |
-| 5 | `ea911909ef98` | `ea911909ef98` | 0.7986 | 0.5486 | 0.1849 | -0.0144 | 0.7986 | 0 | 40.1s | 90.00% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | — | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | -0.0086 | 0.8130 | 0 | reference | reference |
+| Best** | — | `45a2660cc96b` | `45a2660cc96b` | 0.8164 | 0.5574 | 0.1661 | -0.0053 | 0.8164 | 0 | reference | reference |
+| 1 | — | `9c90917e5b48` | `9c90917e5b48` | 0.8217 | 0.5699 | 0.1596 | +0.0000 | 0.8217 | 0 | 10m 24s | 100.00% |
+| 2 | — | `a8c2142a0236` | `a8c2142a0236` | 0.8185 | 0.5691 | 0.1624 | -0.0032 | 0.8185 | 0 | 7m 3s | 63.64% |
+| 3 | — | `b09065090626` | `b09065090626` | 0.8185 | 0.5691 | 0.1624 | -0.0032 | 0.8185 | 0 | 7m 25s | 72.73% |
+| 4 | — | `5129f68f30d3` | `5129f68f30d3` | 0.8164 | 0.5574 | 0.1661 | -0.0053 | 0.8164 | 0 | 5m 30s | 45.45% |
+| 5 | — | `5809567183b8` | `5809567183b8` | 0.8164 | 0.5574 | 0.1661 | -0.0053 | 0.8164 | 0 | 5m 40s | 54.55% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — grabcut_contour
 
@@ -9601,22 +10527,24 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Golden Set Page | Parameter Set ID | Baseline | Winner | Δ IoU | Status |
 |---:|---|---:|---:|---:|---|
-| 1 | `baseline` | 0.9568 | 0.9568 | +0.0000 | Unchanged |
-| 5 | `baseline` | 0.5532 | 0.5532 | +0.0000 | Unchanged |
-| 6 | `baseline` | 0.6683 | 0.6683 | +0.0000 | Unchanged |
-| 9 | `baseline` | 0.9422 | 0.9422 | +0.0000 | Unchanged |
-| 10 | `baseline` | 0.9447 | 0.9447 | +0.0000 | Unchanged |
+| 1 | `9c90917e5b48` | 0.9568 | 0.9568 | +0.0000 | Unchanged |
+| 5 | `9c90917e5b48` | 0.5532 | 0.5699 | +0.0168 | Improved |
+| 6 | `9c90917e5b48` | 0.6683 | 0.6947 | +0.0264 | Improved |
+| 9 | `9c90917e5b48` | 0.9422 | 0.9422 | +0.0000 | Unchanged |
+| 10 | `9c90917e5b48` | 0.9447 | 0.9447 | +0.0000 | Unchanged |
 
 #### Winner History
 
 | Discovery Order | Parameter Set ID | Search Time | % Search |
 |---:|---|---:|---:|
-| — | no history | no history | no history |
+| 1 | `45a2660cc96b` | 2m 22s | 18.18% |
+| 2 | `a8c2142a0236` | 7m 3s | 63.64% |
+| 3 (final) | `9c90917e5b48` | 10m 24s | 100.00% |
 
-Total winner changes: **0**.
-Search completed in **44.9s** wall-clock time.
+Total winner changes: **3**.
+Search completed in **10m 28s** wall-clock time.
 
-**Stabilization Interpretation:** Unavailable because the completed-search fraction was not recorded.
+**Stabilization Interpretation:** No stable optimum — the final winner did not emerge until more than 80% of the evaluated search.
 
 ### Status Definitions
 
@@ -9645,29 +10573,29 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: `run-20260815-190932`
+- Calibration run ID: `run-20260817-172747`
 - Calibration schema: `1.1`
 - Detector: `grabcut_contour`
 - Detector configuration: `hth-pipeline/config/detectors/grabcut_contour.json`
 - Golden Set configuration: `hth-pipeline/config/golden_set.json`
 - Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
-- Pipeline commit: `a175813c9c4028f95fd790e7f4209b9950586ca9`
-- Source commit: `52cc39e94566de32ed81759e518c4fd3b881fa55`
+- Pipeline commit: `b7ed71b428c6c05a78282996006c3d26c568216e`
+- Source commit: `f369131387beafc2a457daac5fa4034bb9f77267`
 - Requested search strategy: `exhaustive`
 - Resolved search strategy: `exhaustive`
 - Strategy fallback: `none`
-- Configured threads: `64`
+- Configured threads: `2`
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: `3817f226228a`
-- Recommended parameter short name: `baseline`
-- Best observed Avg IoU: `0.8130`
-- Avg IoU Success: `0.8130`
-- Worst Golden Set page (Min IoU): `0.5532`
-- Page-to-page StdDev: `0.1692`
+- Recommended parameter set: `9c90917e5b48`
+- Recommended parameter short name: `9c90917e5b48`
+- Best observed Avg IoU: `0.8217`
+- Avg IoU Success: `0.8217`
+- Worst Golden Set page (Min IoU): `0.5699`
+- Page-to-page StdDev: `0.1596`
 - Calibration evidence: `Medium`
-- Dormant parameters: `contour_epsilon_max_fraction, contour_weight, grabcut_close_iterations, grabcut_erosion_iterations, grabcut_minimum_bbox_area_fraction`
+- Dormant parameters: `contour_epsilon_max_fraction, contour_weight, grabcut_close_iterations, grabcut_erosion_iterations, grabcut_minimum_bbox_area_fraction, grabcut_border_fraction, grabcut_close_kernel_fraction, grabcut_erosion_kernel_fraction, grabcut_iterations, grabcut_minimum_contour_area_fraction`
 - Available domain spaces: `critical, exhaustive, important_plus, low_plus, moderate_plus, non_dormant`
 
 ### Calibration Analysis
@@ -9677,7 +10605,7 @@ All conclusions are specific to the evaluated Golden Set and configured paramete
 #### Detector Summary
 
 - The detector has a measurable but not singular near-best coverage (basin) within the evaluated grid.
-- 5 of 17 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- 10 of 17 measured parameters were dormant and may be omitted from a source-specific follow-up search.
 - Most parameter sets evaluated every Golden Set page successfully.
 - Avg IoU varies very little across the tested parameter sets.
 
@@ -9690,18 +10618,18 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 | Measure | Value |
 |---|---:|
 | Search coverage | partial / adaptive |
-| All possible parameter sets | 354295 |
-| Parameter sets evaluated | 10 |
+| All possible parameter sets | 46657 |
+| Parameter sets evaluated | 11 |
 | Evaluated sets (% of all possible parameter sets) | 0.0% |
-| Est. serial runtime for full parameter set evaluation* | 123d 15h 3m 19s |
-| Fully successful parameter sets | 10 (100.0%) |
-| Best Avg IoU | 0.8130 |
-| Minimum Avg IoU | 0.7986 |
-| Avg IoU StdDev | 0.0043 |
-| Winner stabilized after | unknown parameter sets |
-| Winner stabilized | unknown (unknown of search) |
-| Near-best coverage (basin; within 0.0010) | 1 (10.0%) |
-| Equivalent-best configurations (within 0.0001) | 1 (10.0%) |
+| Est. serial runtime for full parameter set evaluation* | 46d 10h 6m 47s |
+| Fully successful parameter sets | 11 (100.0%) |
+| Best Avg IoU | 0.8217 |
+| Minimum Avg IoU | 0.8130 |
+| Avg IoU StdDev | 0.0028 |
+| Winner stabilized after | 11 parameter sets |
+| Winner stabilized | 10m 24s (100% of search) |
+| Near-best coverage (basin; within 0.0010) | 1 (9.1%) |
+| Equivalent-best configurations (within 0.0001) | 1 (9.1%) |
 | Calibration Evidence | Medium |
 
 \* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
@@ -9710,12 +10638,12 @@ Some calibration ROI may remain, but it should be justified by page-level failur
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 354295 | 100.0% | 123d 15h 8m 21s | 1.0× |
-| Non-dormant | 6144 | 1.7% | 2d 3h 27m 17s | 57.7× |
-| Low+ | 6144 | 1.7% | 2d 3h 27m 17s | 57.7× |
-| Moderate+ | 6144 | 1.7% | 2d 3h 27m 17s | 57.7× |
-| Important+ | 3072 | 0.9% | 1d 1h 43m 38s | 115.3× |
-| Critical | 512 | 0.1% | 4h 17m 16s | 692.0× |
+| Exhaustive | 46657 | 100.0% | 46d 10h 22m 33s | 1.0× |
+| Non-dormant | 192 | 0.4% | 4h 35m 9s | 243.0× |
+| Low+ | 192 | 0.4% | 4h 35m 9s | 243.0× |
+| Moderate+ | 48 | 0.1% | 1h 8m 47s | 972.0× |
+| Important+ | 3 | 0.0% | 4m 18s | 15552.3× |
+| Critical | 3 | 0.0% | 4m 18s | 15552.3× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
@@ -9727,36 +10655,47 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 | Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
 |---|---|---:|---:|---:|---|
-| `contour_minimum_area_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.12` (0.8130), `0.08` (0.7986) |
-| `contour_minimum_rectangularity` | Critical | 1.0000 | 0.0144 | 50.0% | `0.55` (0.8130), `0.45` (0.7986) |
-| `grabcut_border_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.02` (0.8130), `0.01` (0.7986) |
-| `grabcut_close_kernel_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.02` (0.8130), `0.01` (0.7986) |
-| `grabcut_erosion_kernel_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.015` (0.8130), `0.008` (0.7986) |
-| `grabcut_iterations` | Critical | 1.0000 | 0.0144 | 50.0% | `3` (0.8130), `1` (0.7986) |
-| `grabcut_minimum_contour_area_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.04` (0.8130), `0.02` (0.7986) |
-| `grabcut_polygon_epsilon_fraction` | Critical | 1.0000 | 0.0144 | 50.0% | `0.018` (0.8130), `0.01` (0.7986) |
-| `minimum_agreement_iou` | Critical | 1.0000 | 0.0144 | 50.0% | `0.15` (0.8130), `0.05` (0.7986) |
-| `contour_epsilon_max_fraction` | Dormant | 0.9000 | 0.0000 | 100.0% | `0.04` (0.8130) |
-| `contour_weight` | Dormant | 0.9000 | 0.0000 | 100.0% | `0.2` (0.8130) |
-| `grabcut_close_iterations` | Dormant | 0.9000 | 0.0000 | 100.0% | `1` (0.8130) |
+| `agreement_weight` | Critical | 0.5528 | 0.0054 | 33.3% | `0.35` (0.8185), `0.25` (0.8168), `0.15` (0.8131) |
+| `contour_minimum_area_fraction` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.08` (0.8160), `0.12` (0.8130) |
+| `contour_minimum_rectangularity` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.45` (0.8160), `0.55` (0.8130) |
+| `grabcut_polygon_epsilon_fraction` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.01` (0.8160), `0.018` (0.8130) |
+| `minimum_agreement_iou` | Moderate | 0.0951 | 0.0030 | 50.0% | `0.05` (0.8160), `0.15` (0.8130) |
+| `contour_epsilon_max_fraction` | Dormant | 0.0864 | 0.0000 | 0.0% | `0.04` (0.8130) |
+| `contour_weight` | Dormant | 0.0864 | 0.0000 | 0.0% | `0.2` (0.8130) |
+| `grabcut_close_iterations` | Dormant | 0.0864 | 0.0000 | 0.0% | `1` (0.8130) |
+| `grabcut_erosion_iterations` | Dormant | 0.0864 | 0.0000 | 0.0% | `1` (0.8130) |
+| `grabcut_minimum_bbox_area_fraction` | Dormant | 0.0864 | 0.0000 | 0.0% | `0.1` (0.8130) |
+| `require_contour` | Low | 0.0071 | 0.0005 | 50.0% | `false` (0.8160), `true` (0.8155) |
+| `grabcut_weight` | Low | 0.0066 | 0.0005 | 50.0% | `0.45` (0.8160), `0.55` (0.8155) |
 
 #### Dormant Parameters
 
 These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
 
-`contour_epsilon_max_fraction`, `contour_weight`, `grabcut_close_iterations`, `grabcut_erosion_iterations`, `grabcut_minimum_bbox_area_fraction`.
+`contour_epsilon_max_fraction`, `contour_weight`, `grabcut_close_iterations`, `grabcut_erosion_iterations`, `grabcut_minimum_bbox_area_fraction`, `grabcut_border_fraction`, `grabcut_close_kernel_fraction`, `grabcut_erosion_kernel_fraction`, `grabcut_iterations`, `grabcut_minimum_contour_area_fraction`.
 
 Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
+
+#### Parameter Interactions
+
+Pairwise interaction importance is exploratory and estimated from a deterministic sample.
+
+| Parameters | Pair η² | Incremental importance | Sample size |
+|---|---:|---:|---:|
+| `agreement_weight` × `contour_minimum_area_fraction` | 0.7547 | 0.2019 | 11 |
+| `agreement_weight` × `contour_minimum_rectangularity` | 0.7547 | 0.2019 | 11 |
+| `agreement_weight` × `grabcut_polygon_epsilon_fraction` | 0.7547 | 0.2019 | 11 |
+| `agreement_weight` × `minimum_agreement_iou` | 0.7547 | 0.2019 | 11 |
 
 #### Page Sensitivity
 
 | Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
 |---:|---:|---:|---:|---:|---:|
-| 1 | 0.9506 | 0.9499 | 0.9568 | 0.0020 | 100.0% |
-| 5 | 0.5490 | 0.5486 | 0.5532 | 0.0014 | 100.0% |
-| 6 | 0.6045 | 0.5974 | 0.6683 | 0.0213 | 100.0% |
-| 9 | 0.9432 | 0.9422 | 0.9433 | 0.0003 | 100.0% |
-| 10 | 0.9530 | 0.9447 | 0.9540 | 0.0028 | 100.0% |
+| 1 | 0.9568 | 0.9568 | 0.9568 | 0.0000 | 100.0% |
+| 5 | 0.5587 | 0.5532 | 0.5699 | 0.0067 | 100.0% |
+| 6 | 0.6759 | 0.6683 | 0.6947 | 0.0081 | 100.0% |
+| 9 | 0.9427 | 0.9422 | 0.9433 | 0.0005 | 100.0% |
+| 10 | 0.9447 | 0.9447 | 0.9447 | 0.0000 | 100.0% |
 
 </details>
 
@@ -9819,6 +10758,34 @@ Dormant parameters may be omitted from future searches for this Golden Set, but 
 | Winner | `cf581d27715b` | `cf581d27715b` | 0.9622 | 0.9384 | 0.0160 | 0.9622 | 0 | 10 ms |
 | Baseline | `1029318d5974` | `baseline` | 0.9467 | 0.8611 | 0.0442 | 0.9467 | 0 | 10 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `cf581d27715b` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `border_search_fraction` | `0.14` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -9852,13 +10819,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `cf581d27715b` | `cf581d27715b` | 0.9622 | 0.9384 | 0.0160 | +0.0000 | 0.9622 | 0 | 118 ms | 66.67% |
-| 2 | `a445f6a76753` | `a445f6a76753` | 0.9622 | 0.9384 | 0.0160 | +0.0000 | 0.9622 | 0 | 43 ms | 28.57% |
-| 3 | `a69dfc686c7c` | `a69dfc686c7c` | 0.9622 | 0.9384 | 0.0160 | +0.0000 | 0.9622 | 0 | 144 ms | 100.00% |
-| 4 | `ea16ebcdc2f7` | `ea16ebcdc2f7` | 0.9620 | 0.9384 | 0.0161 | -0.0002 | 0.9620 | 0 | 99 ms | 52.38% |
-| 5 | `a8558e4ecf4c` | `a8558e4ecf4c` | 0.9469 | 0.8618 | 0.0439 | -0.0153 | 0.9469 | 0 | 87 ms | 42.86% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `1029318d5974` | `baseline` | 0.9467 | 0.8611 | 0.0442 | -0.0155 | 0.9467 | 0 | reference | reference |
+| 1 | unknown | `cf581d27715b` | `cf581d27715b` | 0.9622 | 0.9384 | 0.0160 | +0.0000 | 0.9622 | 0 | 118 ms | 66.67% |
+| 2 | unknown | `a445f6a76753` | `a445f6a76753` | 0.9622 | 0.9384 | 0.0160 | +0.0000 | 0.9622 | 0 | 43 ms | 28.57% |
+| 3 | unknown | `a69dfc686c7c` | `a69dfc686c7c` | 0.9622 | 0.9384 | 0.0160 | +0.0000 | 0.9622 | 0 | 144 ms | 100.00% |
+| 4 | unknown | `ea16ebcdc2f7` | `ea16ebcdc2f7` | 0.9620 | 0.9384 | 0.0161 | -0.0002 | 0.9620 | 0 | 99 ms | 52.38% |
+| 5 | unknown | `a8558e4ecf4c` | `a8558e4ecf4c` | 0.9469 | 0.8618 | 0.0439 | -0.0153 | 0.9469 | 0 | 87 ms | 42.86% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — gradient_vote
 
@@ -10082,6 +11057,40 @@ Dormant parameters may be omitted from future searches for this Golden Set, but 
 | Winner | `c2c117479e3f` | `c2c117479e3f` | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | 1.4s |
 | Baseline | `7078053f309d` | `baseline` | 0.4784 | 0.0000 | 0.2851 | 0.5981 | 1 | 1.4s |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `c2c117479e3f` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `axis_angle_tolerance_degrees` | `12.0` |
+| `bbox_padding_fraction` | `0.015` |
+| `canny_low_threshold` | `65` |
+| `hough_threshold_fraction` | `0.055` |
+| `maximum_gap_fraction` | `0.055` |
+| `minimum_length_fraction` | `0.12` |
+| `outer_percentile` | `5.0` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -10114,13 +11123,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `c2c117479e3f` | `c2c117479e3f` | 0.6050 | 0.0000 | 0.3217 | +0.0000 | 0.7563 | 1 | 2m 28s | 79.33% |
-| 2 | `d2207b5c0b61` | `d2207b5c0b61` | 0.6040 | 0.0000 | 0.3210 | -0.0010 | 0.7550 | 1 | 2m 12s | 67.95% |
-| 3 | `16967597e3b6` | `16967597e3b6` | 0.6039 | 0.0000 | 0.3215 | -0.0011 | 0.7549 | 1 | 2m 28s | 79.38% |
-| 4 | `bf183b1707fd` | `bf183b1707fd` | 0.6038 | 0.0000 | 0.3209 | -0.0012 | 0.7547 | 1 | 2m 13s | 68.54% |
-| 5 | `7a75b3e87104` | `7a75b3e87104` | 0.6022 | 0.0000 | 0.3206 | -0.0028 | 0.7528 | 1 | 2m 13s | 68.72% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `7078053f309d` | `baseline` | 0.4784 | 0.0000 | 0.2851 | -0.1266 | 0.5981 | 1 | reference | reference |
+| 1 | unknown | `c2c117479e3f` | `c2c117479e3f` | 0.6050 | 0.0000 | 0.3217 | +0.0000 | 0.7563 | 1 | 2m 28s | 79.33% |
+| 2 | unknown | `d2207b5c0b61` | `d2207b5c0b61` | 0.6040 | 0.0000 | 0.3210 | -0.0010 | 0.7550 | 1 | 2m 12s | 67.95% |
+| 3 | unknown | `16967597e3b6` | `16967597e3b6` | 0.6039 | 0.0000 | 0.3215 | -0.0011 | 0.7549 | 1 | 2m 28s | 79.38% |
+| 4 | unknown | `bf183b1707fd` | `bf183b1707fd` | 0.6038 | 0.0000 | 0.3209 | -0.0012 | 0.7547 | 1 | 2m 13s | 68.54% |
+| 5 | unknown | `7a75b3e87104` | `7a75b3e87104` | 0.6022 | 0.0000 | 0.3206 | -0.0028 | 0.7528 | 1 | 2m 13s | 68.72% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — hough
 
@@ -10362,6 +11379,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `5c9509e05f14` | `5c9509e05f14` | 0.1980 | 0.0000 | 0.3960 | 0.9899 | 4 | 2.4s |
 | Baseline | `697c22dd549f` | `baseline` | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 5 | 352 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `5c9509e05f14` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `axis_tolerance_degrees` | `6.0` |
+| `bbox_padding_fraction` | `0.0` |
+| `canny_high` | `220.0` |
+| `canny_low` | `80.0` |
+| `hough_threshold` | `120` |
+| `minimum_area_fraction` | `0.16` |
+| `minimum_side_support` | `0.18` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -10395,13 +11446,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `5c9509e05f14` | `5c9509e05f14` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 21.1s | 98.03% |
-| 2 | `3d84cd0a9026` | `3d84cd0a9026` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 7.7s | 26.67% |
-| 3 | `d2dea9b84b6e` | `d2dea9b84b6e` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 15.6s | 65.69% |
-| 4 | `1e66b0603099` | `1e66b0603099` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 7.3s | 23.47% |
-| 5 | `951741938aa2` | `951741938aa2` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 20.8s | 92.91% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `697c22dd549f` | `baseline` | 0.0000 | 0.0000 | 0.0000 | -0.1980 | 0.0000 | 5 | reference | reference |
+| 1 | unknown | `5c9509e05f14` | `5c9509e05f14` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 21.1s | 98.03% |
+| 2 | unknown | `3d84cd0a9026` | `3d84cd0a9026` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 7.7s | 26.67% |
+| 3 | unknown | `d2dea9b84b6e` | `d2dea9b84b6e` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 15.6s | 65.69% |
+| 4 | unknown | `1e66b0603099` | `1e66b0603099` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 7.3s | 23.47% |
+| 5 | unknown | `951741938aa2` | `951741938aa2` | 0.1980 | 0.0000 | 0.3960 | +0.0000 | 0.9899 | 4 | 20.8s | 92.91% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — joint_rectangle_vote
 
@@ -10597,17 +11656,17 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: `run-20260815-190932`
+- Run ID: `run-20260817-181551`
 - Detector: `kraken_page_mask`
 - Strategy: `exhaustive`
-- Pipeline commit: `a175813c9c40`
+- Pipeline commit: `b7ed71b428c6`
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
-- Started: `2026-08-15T19:09:32.592285+00:00`
-- Finished: `2026-08-15T19:11:47.037975+00:00`
-- Wall-clock elapsed: `2m 14s`
-- Est. serial runtime: `unknown`
-- Effective acceleration: `unknown`
+- Started: `2026-08-17T18:15:41.026738+00:00`
+- Finished: `2026-08-17T18:15:50.144367+00:00`
+- Wall-clock elapsed: `9.1s`
+- Est. serial runtime: `46m 49s`
+- Effective acceleration: `308.10×`
 
 ### Golden Set
 
@@ -10619,16 +11678,16 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 ### Parameter Space
 
 - All possible parameter sets: `10000`
-- Parameter sets evaluated: `10`
-- Evaluated sets (% of all possible parameter sets): `0.10%`
+- Parameter sets evaluated: `10000`
+- Evaluated sets (% of all possible parameter sets): `100.00%`
 - Configured named profiles: `baseline`
 
 ### Outputs
 
 - `RUN-INFO.json` — present
 - `parameters.json` — present
+- `parameter-provenance.json` — missing
 - `raw/results.csv` — missing
-- `logs/runner-performance.jsonl` — missing
 - `reports/summary.json` — present
 - `reports/winner-pages.json` — present
 - `reports/calibration-intelligence.json` — present
@@ -10641,8 +11700,44 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Result | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Evaluation Time |
 |---|---|---|---:|---:|---:|---:|---:|---:|
-| Winner | `8e7329ed85d1` | `8e7329ed85d1` | 0.7291 | 0.0000 | 0.3734 | 0.9114 | 1 | 36 ms |
-| Baseline | `d75b76f301e6` | `baseline` | 0.6828 | 0.0000 | 0.3418 | 0.8535 | 1 | 2m 14s |
+| Winner | `9ea087074324` | `9ea087074324` | 0.7514 | 0.1085 | 0.3294 | 0.7514 | 0 | 43 ms |
+| Baseline | `d75b76f301e6` | `baseline` | 0.6828 | 0.0000 | 0.3418 | 0.8535 | 1 | 42 ms |
+
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `9ea087074324` |
+| Absolute parameter SHA-256 | `b93bda1258e3bd9aa9b5dd0bca69a5e967291b1a141b022fbcb84bffc177024b` |
+| Identity schema | `1` |
+| Parameter schema | `1` |
+| Grid SHA-256 | `1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6` |
+| Grid ordinal | `6800` |
+| Reproducibility | **Fully reproducible** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `close_kernel_fraction` | `0.012` |
+| `dilation_fraction` | `0.0075` |
+| `fill_holes` | `0` |
+| `include_lines` | `1` |
+| `minimum_page_area_fraction` | `0.08` |
+| `page_padding_fraction` | `0.0` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | 2026-08-17 | authoritative |
+| [#474](https://github.com/dlstupka/hth/actions/runs/32039467795) | 2026-08-17 | authoritative |
+| [#463](https://github.com/dlstupka/hth/actions/runs/31995106044) | 2026-08-17 | authoritative |
+| [#445](https://github.com/dlstupka/hth/actions/runs/31950761584) | 2026-08-16 | authoritative |
 
 ### Detector Evidence
 
@@ -10656,12 +11751,12 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Statistic | Count |
 |---|---:|
-| Avg IoU improvements | 1 |
+| Avg IoU improvements | 0 |
 | Minimum IoU improvements | 0 |
 | StdDev improvements | 0 |
-| Total metric improvements | 1 |
-| Parameter sets with improvements | 1 |
-| Winner changes | 1 |
+| Total metric improvements | 0 |
+| Parameter sets with improvements | 0 |
+| Winner changes | 5 |
 | Baseline surpassed | yes |
 
 ### Preferred Execution Shape
@@ -10670,17 +11765,26 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Source | Pipelines | Threads / pipeline | Allocated | Runner | Runner budget |
 |---|---:|---:|---:|---|---:|
-| `auto-fallback-incompatible-workload` | 6 | 64 | 384 | `rh8-al307` | 384 |
+| `preferred-dispatch-optimizer` | 17 | 22 | 374 | `rh8-al317` | 384 |
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `8e7329ed85d1` | `8e7329ed85d1` | 0.7291 | 0.0000 | 0.3734 | +0.0000 | 0.9114 | 1 | 2m 14s | 30.00% |
-| 2 | `172a631f5c19` | `172a631f5c19` | 0.7291 | 0.0000 | 0.3734 | +0.0000 | 0.9114 | 1 | 2m 14s | 70.00% |
-| 3 | `8161375b5ba2` | `8161375b5ba2` | 0.7291 | 0.0000 | 0.3734 | +0.0000 | 0.9114 | 1 | 2m 14s | 20.00% |
-| 4 | `bd78177097cd` | `bd78177097cd` | 0.7291 | 0.0000 | 0.3734 | +0.0000 | 0.9114 | 1 | 2m 14s | 80.00% |
-| 5 | `4c073e72c58a` | `4c073e72c58a` | 0.7291 | 0.0000 | 0.3734 | +0.0000 | 0.9114 | 1 | 2m 14s | 50.00% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | `d75b76f301e6` | `baseline` | 0.6828 | 0.0000 | 0.3418 | -0.0685 | 0.8535 | 1 | reference | reference |
+| Best** | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | `9ea087074324` | `9ea087074324` | 0.7514 | 0.1085 | 0.3294 | +0.0000 | 0.7514 | 0 | reference | reference |
+| 1 | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | `9c0100d37732` | `9c0100d37732` | 0.7514 | 0.1085 | 0.3294 | +0.0000 | 0.7514 | 0 | 4.9s | 68.89% |
+| 2 | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | `5132605c9a1d` | `5132605c9a1d` | 0.7513 | 0.1114 | 0.3279 | -0.0000 | 0.7513 | 0 | 1.3s | 18.83% |
+| 3 | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | `f8f0e5eac52c` | `f8f0e5eac52c` | 0.7513 | 0.1114 | 0.3279 | -0.0000 | 0.7513 | 0 | 1.5s | 23.08% |
+| 4 | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | `66f5c80b9aa3` | `66f5c80b9aa3` | 0.7513 | 0.1114 | 0.3279 | -0.0000 | 0.7513 | 0 | 1.4s | 21.19% |
+| 5 | [#486](https://github.com/dlstupka/hth/actions/runs/32053811014) | `d08ef9241df3` | `d08ef9241df3` | 0.7513 | 0.1114 | 0.3279 | -0.0000 | 0.7513 | 0 | 1.4s | 21.20% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — kraken_page_mask
 
@@ -10688,22 +11792,26 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Golden Set Page | Parameter Set ID | Baseline | Winner | Δ IoU | Status |
 |---:|---|---:|---:|---:|---|
-| 1 | `8e7329ed85d1` | 0.8769 | 0.9772 | +0.1003 | Improved |
-| 5 | `8e7329ed85d1` | 0.0000 | 0.0000 | +0.0000 | No polygon found |
-| 6 | `8e7329ed85d1` | 0.8310 | 0.7560 | -0.0749 | Regressed |
-| 9 | `8e7329ed85d1` | 0.8437 | 0.9525 | +0.1088 | Improved |
-| 10 | `8e7329ed85d1` | 0.8625 | 0.9599 | +0.0974 | Improved |
+| 1 | `9ea087074324` | 0.8769 | 0.9733 | +0.0964 | Improved |
+| 5 | `9ea087074324` | 0.0000 | 0.1085 | +0.1085 | Recovered |
+| 6 | `9ea087074324` | 0.8310 | 0.7737 | -0.0573 | Regressed |
+| 9 | `9ea087074324` | 0.8437 | 0.9567 | +0.1130 | Improved |
+| 10 | `9ea087074324` | 0.8625 | 0.9446 | +0.0821 | Improved |
 
 #### Winner History
 
 | Discovery Order | Parameter Set ID | Search Time | % Search |
 |---:|---|---:|---:|
-| 1 (final) | `8161375b5ba2` | 2m 14s | 20.00% |
+| 1 | `36832fb78b2d` | 80 ms | 0.01% |
+| 2 | `d20e8b667d94` | 86 ms | 0.03% |
+| 3 | `cb5fac20d3fd` | 102 ms | 0.09% |
+| 4 | `f3cba8a94b28` | 193 ms | 0.47% |
+| 5 (final) | `9ea087074324` | 266 ms | 1.47% |
 
-Total winner changes: **1**.
-Search completed in **2m 14s** wall-clock time.
+Total winner changes: **5**.
+Search completed in **9.1s** wall-clock time.
 
-**Stabilization Interpretation:** Moderate exploration — the final winner emerged after 10–40% of the evaluated search.
+**Stabilization Interpretation:** Early convergence — the final winner emerged within the first 10% of the evaluated search.
 
 ### Status Definitions
 
@@ -10719,17 +11827,17 @@ Search completed in **2m 14s** wall-clock time.
 ### Golden Set Page Issues
 
 - Unprocessed pages: `0`
-- No polygon found: `1`
+- No polygon found: `0`
 - Zero overlap: `0`
-- Poor matches (Winner IoU < 0.5000): `0`
+- Poor matches (Winner IoU < 0.5000): `1`
 - Regressed pages (Δ IoU < -0.0010): `1`
 
 #### Affected Pages
 
 | Golden Set Page | Parameter Set ID | Winner IoU | Problem |
 |---:|---|---:|---|
-| 5 | `8e7329ed85d1` | 0.0000 | No polygon found |
-| 6 | `8e7329ed85d1` | 0.7560 | Regressed |
+| 5 | `9ea087074324` | 0.1085 | Poor match |
+| 6 | `9ea087074324` | 0.7737 | Regressed |
 
 ## Calibration Intelligence — kraken_page_mask
 
@@ -10737,29 +11845,29 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: `run-20260815-190932`
+- Calibration run ID: `run-20260817-181551`
 - Calibration schema: `1.1`
 - Detector: `kraken_page_mask`
 - Detector configuration: `hth-pipeline/config/detectors/kraken_page_mask.json`
 - Golden Set configuration: `hth-pipeline/config/golden_set.json`
 - Golden Set SHA-256: `135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e`
-- Pipeline commit: `a175813c9c4028f95fd790e7f4209b9950586ca9`
-- Source commit: `52cc39e94566de32ed81759e518c4fd3b881fa55`
+- Pipeline commit: `b7ed71b428c6c05a78282996006c3d26c568216e`
+- Source commit: `562c985b7cc036034bb814c56f987ff2acc2a171`
 - Requested search strategy: `exhaustive`
 - Resolved search strategy: `exhaustive`
 - Strategy fallback: `none`
-- Configured threads: `64`
+- Configured threads: `22`
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: `8e7329ed85d1`
-- Recommended parameter short name: `8e7329ed85d1`
-- Best observed Avg IoU: `0.7291`
-- Avg IoU Success: `0.9114`
-- Worst Golden Set page (Min IoU): `0.0000`
-- Page-to-page StdDev: `0.3734`
-- Calibration evidence: `Low`
-- Dormant parameters: `none`
+- Recommended parameter set: `9ea087074324`
+- Recommended parameter short name: `9ea087074324`
+- Best observed Avg IoU: `0.7514`
+- Avg IoU Success: `0.7514`
+- Worst Golden Set page (Min IoU): `0.1085`
+- Page-to-page StdDev: `0.3294`
+- Calibration evidence: `Medium`
+- Dormant parameters: `fill_holes`
 - Available domain spaces: `critical, exhaustive, important_plus, low_plus, moderate_plus, non_dormant`
 
 ### Calibration Analysis
@@ -10768,9 +11876,9 @@ All conclusions are specific to the evaluated Golden Set and configured paramete
 
 #### Detector Summary
 
-- The evaluated calibration landscape is flat: nearly all tested parameter sets are equivalent or near-equivalent.
-- No measured parameter was dormant in this calibration sample.
-- Detector failed on at least one Golden Set page for 10 of 10 parameter configurations.
+- The near-best coverage (basin) is narrow, so detector quality depends strongly on selecting a small part of the configured grid.
+- 1 of 6 measured parameters were dormant and may be omitted from a source-specific follow-up search.
+- Detector failed on at least one Golden Set page for 7182 of 10000 parameter configurations.
 
 #### Evidence of ROI
 
@@ -10780,20 +11888,20 @@ Additional tuning may improve reliability, but detector-level ROI should be weig
 
 | Measure | Value |
 |---|---:|
-| Search coverage | partial / adaptive |
+| Search coverage | complete exhaustive |
 | All possible parameter sets | 10000 |
-| Parameter sets evaluated | 10 |
-| Evaluated sets (% of all possible parameter sets) | 0.1% |
-| Est. serial runtime for full parameter set evaluation* | 5m 56s |
-| Fully successful parameter sets | 0 (0.0%) |
-| Best Avg IoU | 0.7291 |
-| Minimum Avg IoU | 0.6828 |
-| Avg IoU StdDev | 0.0139 |
-| Winner stabilized after | 3 parameter sets |
-| Winner stabilized | 2m 14s (30% of search) |
-| Near-best coverage (basin; within 0.0010) | 9 (90.0%) |
-| Equivalent-best configurations (within 0.0001) | 9 (90.0%) |
-| Calibration Evidence | Low |
+| Parameter sets evaluated | 10000 |
+| Evaluated sets (% of all possible parameter sets) | 100.0% |
+| Est. serial runtime for full parameter set evaluation* | complete |
+| Fully successful parameter sets | 2818 (28.2%) |
+| Best Avg IoU | 0.7514 |
+| Minimum Avg IoU | 0.6384 |
+| Avg IoU StdDev | 0.0277 |
+| Winner stabilized after | 147 parameter sets |
+| Winner stabilized | 266 ms (1% of search) |
+| Near-best coverage (basin; within 0.0010) | 34 (0.3%) |
+| Equivalent-best configurations (within 0.0001) | 6 (0.1%) |
+| Calibration Evidence | Medium |
 
 \* **Serial-runtime note:** Long parameter-set estimates assume a single-threaded serial run at the measured detector page rate. Actual wall time varies with parallelization, worker count, scheduling overhead, and parameter-dependent runtime.
 
@@ -10801,16 +11909,16 @@ Additional tuning may improve reliability, but detector-level ROI should be weig
 
 | Effect Size Group | Parameter Sets | % All Sets | New Time Est* | Set Reduction Factor |
 |---|---:|---:|---:|---:|
-| Exhaustive | 10000 | 100.0% | 5m 56s | 1.0× |
-| Non-dormant | 160 | 1.6% | 5.7s | 62.5× |
-| Low+ | 160 | 1.6% | 5.7s | 62.5× |
-| Moderate+ | 160 | 1.6% | 5.7s | 62.5× |
-| Important+ | 160 | 1.6% | 5.7s | 62.5× |
-| Critical | 80 | 0.8% | 2.9s | 125.0× |
+| Exhaustive | 10000 | 100.0% | 7m 8s | 1.0× |
+| Non-dormant | 5000 | 50.0% | 3m 34s | 2.0× |
+| Low+ | 5000 | 50.0% | 3m 34s | 2.0× |
+| Moderate+ | 50 | 0.5% | 2.1s | 200.0× |
+| Important+ | 50 | 0.5% | 2.1s | 200.0× |
+| Critical | 10 | 0.1% | 428 ms | 1000.0× |
 
 \* Uses the same serial measured-page-rate assumptions as the Calibration Landscape serial-runtime estimate.
 
-Calibration evidence basis: partial or adaptive search, many parameter sets failed at least one page, broad near-best basin, small calibration sample.
+Calibration evidence basis: complete exhaustive coverage, many parameter sets failed at least one page, narrow near-best basin.
 
 #### Parameter Influence
 
@@ -10818,12 +11926,20 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 | Parameter | Classification | η² | Avg-IoU range | Near-best value coverage | Best observed values |
 |---|---|---:|---:|---:|---|
-| `close_kernel_fraction` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `0.006` (0.6828) |
-| `dilation_fraction` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `0.01` (0.6828) |
-| `include_lines` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `1` (0.6828) |
-| `page_padding_fraction` | Critical | 1.0000 | 0.0463 | 50.0% | `0` (0.7291), `0.05` (0.6828) |
-| `minimum_page_area_fraction` | Critical | 0.2593 | 0.0154 | 100.0% | `0.08` (0.7291), `0.16` (0.7291), `0.2` (0.7291) |
-| `fill_holes` | Important | 0.1111 | 0.0093 | 100.0% | `0` (0.7291), `1` (0.7199) |
+| `page_padding_fraction` | Critical | 0.7318 | 0.0706 | 10.0% | `0` (0.7264), `0.01` (0.7209), `0.02` (0.7120) |
+| `minimum_page_area_fraction` | Important | 0.1203 | 0.0250 | 20.0% | `0.08` (0.7071), `0.12` (0.6944), `0.16` (0.6841) |
+| `dilation_fraction` | Low | 0.0268 | 0.0126 | 60.0% | `0` (0.6953), `0.0025` (0.6945), `0.005` (0.6940) |
+| `close_kernel_fraction` | Low | 0.0036 | 0.0043 | 100.0% | `0.024` (0.6934), `0.012` (0.6898), `0.006` (0.6893) |
+| `include_lines` | Low | 0.0019 | 0.0024 | 100.0% | `1` (0.6913), `0` (0.6889) |
+| `fill_holes` | Dormant | 0.0000 | 0.0000 | 100.0% | `0` (0.6901), `1` (0.6901) |
+
+#### Dormant Parameters
+
+These parameters had no material measured effect on Avg IoU for this Golden Set and grid:
+
+`fill_holes`.
+
+Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.
 
 #### Parameter Interactions
 
@@ -10831,17 +11947,21 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 | Parameters | Pair η² | Incremental importance | Sample size |
 |---|---:|---:|---:|
-| `minimum_page_area_fraction` × `fill_holes` | 0.4444 | 0.1852 | 10 |
+| `page_padding_fraction` × `minimum_page_area_fraction` | 0.8734 | 0.1416 | 10000 |
+| `page_padding_fraction` × `dilation_fraction` | 0.7920 | 0.0602 | 10000 |
+| `minimum_page_area_fraction` × `dilation_fraction` | 0.1583 | 0.0380 | 10000 |
+| `dilation_fraction` × `close_kernel_fraction` | 0.0442 | 0.0175 | 10000 |
+| `page_padding_fraction` × `close_kernel_fraction` | 0.7359 | 0.0041 | 10000 |
 
 #### Page Sensitivity
 
 | Golden Set Page | Avg IoU | Min IoU | Max IoU | StdDev | Success rate |
 |---:|---:|---:|---:|---:|---:|
-| 1 | 0.9672 | 0.8769 | 0.9772 | 0.0301 | 100.0% |
-| 5 | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 0.0% |
-| 6 | 0.7635 | 0.7560 | 0.8310 | 0.0225 | 100.0% |
-| 9 | 0.9416 | 0.8437 | 0.9525 | 0.0326 | 100.0% |
-| 10 | 0.9501 | 0.8625 | 0.9599 | 0.0292 | 100.0% |
+| 1 | 0.8743 | 0.7782 | 0.9788 | 0.0598 | 100.0% |
+| 5 | 0.0422 | 0.0000 | 0.3211 | 0.0708 | 28.2% |
+| 6 | 0.8293 | 0.7560 | 0.8855 | 0.0306 | 100.0% |
+| 9 | 0.8410 | 0.7399 | 0.9622 | 0.0647 | 100.0% |
+| 10 | 0.8637 | 0.7940 | 0.9599 | 0.0505 | 100.0% |
 
 </details>
 
@@ -10904,6 +12024,38 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `275078578cee` | `275078578cee` | 0.8868 | 0.8122 | 0.0470 | 0.8868 | 0 | 36.8s |
 | Baseline | `04e0ef2b5787` | `baseline` | 0.8374 | 0.7029 | 0.0740 | 0.8374 | 0 | 701 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `275078578cee` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.029` |
+| `close_kernel_fraction` | `0.0` |
+| `mask_threshold` | `0.226` |
+| `minimum_mask_area_fraction` | `0.04` |
+| `polygon_epsilon_fraction` | `0.0185` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -10937,13 +12089,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `275078578cee` | `275078578cee` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 35m 56s | 44.78% |
-| 2 | `3d8095986d9a` | `3d8095986d9a` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 36m 6s | 44.97% |
-| 3 | `d5e117ddf813` | `d5e117ddf813` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 36m 55s | 46.03% |
-| 4 | `11e7cbc6f848` | `11e7cbc6f848` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 37m 30s | 46.77% |
-| 5 | `7a323edb562e` | `7a323edb562e` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 37m 42s | 47.02% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `04e0ef2b5787` | `baseline` | 0.8374 | 0.7029 | 0.0740 | -0.0494 | 0.8374 | 0 | reference | reference |
+| 1 | unknown | `275078578cee` | `275078578cee` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 35m 56s | 44.78% |
+| 2 | unknown | `3d8095986d9a` | `3d8095986d9a` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 36m 6s | 44.97% |
+| 3 | unknown | `d5e117ddf813` | `d5e117ddf813` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 36m 55s | 46.03% |
+| 4 | unknown | `11e7cbc6f848` | `11e7cbc6f848` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 37m 30s | 46.77% |
+| 5 | unknown | `7a323edb562e` | `7a323edb562e` | 0.8868 | 0.8122 | 0.0470 | +0.0000 | 0.8868 | 0 | 37m 42s | 47.02% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — learned_page_mask
 
@@ -11178,6 +12338,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | 379 ms |
 | Baseline | `b2df04f4e947` | `baseline` | 0.5414 | 0.0000 | 0.4436 | 0.9023 | 2 | 332 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `7546c5067527` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `axis_angle_tolerance_degrees` | `10.0` |
+| `bbox_padding_fraction` | `0.005` |
+| `minimum_bbox_area_fraction` | `0.08` |
+| `minimum_length_fraction` | `0.22` |
+| `outer_percentile` | `5.0` |
+| `refine_mode` | `"none"` |
+| `scale` | `0.8` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -11210,13 +12404,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 7.9s | 18.57% |
-| 2 | `05a653fabdd0` | `05a653fabdd0` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.1s | 18.76% |
-| 3 | `497528ffc236` | `497528ffc236` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.2s | 18.89% |
-| 4 | `24a5a18c61f3` | `24a5a18c61f3` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.7s | 19.76% |
-| 5 | `97f5383e66cd` | `97f5383e66cd` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.7s | 19.99% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `b2df04f4e947` | `baseline` | 0.5414 | 0.0000 | 0.4436 | -0.1964 | 0.9023 | 2 | reference | reference |
+| 1 | unknown | `7546c5067527` | `7546c5067527` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 7.9s | 18.57% |
+| 2 | unknown | `05a653fabdd0` | `05a653fabdd0` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.1s | 18.76% |
+| 3 | unknown | `497528ffc236` | `497528ffc236` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.2s | 18.89% |
+| 4 | unknown | `24a5a18c61f3` | `24a5a18c61f3` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.7s | 19.76% |
+| 5 | unknown | `97f5383e66cd` | `97f5383e66cd` | 0.7378 | 0.0000 | 0.3721 | +0.0000 | 0.9222 | 1 | 8.7s | 19.99% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — lsd
 
@@ -11457,6 +12659,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `7b7dbac43ea6` | `7b7dbac43ea6` | 0.9747 | 0.9638 | 0.0101 | 0.9747 | 0 | 18.7s |
 | Baseline | `54d4e56ee0fc` | `baseline` | 0.9738 | 0.9638 | 0.0103 | 0.9738 | 0 | 1.6s |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `7b7dbac43ea6` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `consensus_tolerance_fraction` | `0.031641` |
+| `consensus_weight` | `0.6` |
+| `gradient_percentile` | `76.0` |
+| `gradient_weight` | `0.25` |
+| `minimum_side_consensus` | `0.867713` |
+| `minimum_side_gradient_support` | `0.03` |
+| `source_diversity_weight` | `0.15` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (MSRE + BFQ + SPBV + Page Background)
@@ -11490,13 +12726,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `7b7dbac43ea6` | `7b7dbac43ea6` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 7m 13s | 99.20% |
-| 2 | `a4620024015d` | `a4620024015d` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 6m 58s | 98.86% |
-| 3 | `092c820ce756` | `092c820ce756` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 5m 19s | 96.73% |
-| 4 | `8ca9228b4d29` | `8ca9228b4d29` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 4m 16s | 95.39% |
-| 5 | `b22a7446bcc1` | `b22a7446bcc1` | 0.9743 | 0.9638 | 0.0103 | -0.0004 | 0.9743 | 0 | 1h 1m 45s | 91.57% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `54d4e56ee0fc` | `baseline` | 0.9738 | 0.9638 | 0.0103 | -0.0009 | 0.9738 | 0 | reference | reference |
+| 1 | unknown | `7b7dbac43ea6` | `7b7dbac43ea6` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 7m 13s | 99.20% |
+| 2 | unknown | `a4620024015d` | `a4620024015d` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 6m 58s | 98.86% |
+| 3 | unknown | `092c820ce756` | `092c820ce756` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 5m 19s | 96.73% |
+| 4 | unknown | `8ca9228b4d29` | `8ca9228b4d29` | 0.9747 | 0.9638 | 0.0101 | +0.0000 | 0.9747 | 0 | 1h 4m 16s | 95.39% |
+| 5 | unknown | `b22a7446bcc1` | `b22a7446bcc1` | 0.9743 | 0.9638 | 0.0103 | -0.0004 | 0.9743 | 0 | 1h 1m 45s | 91.57% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — msre_bfq_spbv_pbg
 
@@ -11725,6 +12969,38 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `ddb7623ebb92` | `ddb7623ebb92` | 0.9765 | 0.9566 | 0.0175 | 0.9765 | 0 | 959 ms |
 | Baseline | `e732fc5165fb` | `baseline` | 0.6520 | 0.3544 | 0.1762 | 0.6520 | 0 | 184 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `ddb7623ebb92` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `base_sigma` | `1.0` |
+| `gradient_percentile` | `96.875` |
+| `ray_count` | `176` |
+| `scale_count` | `4` |
+| `scale_ratio` | `3.5` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -11758,13 +13034,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `ddb7623ebb92` | `ddb7623ebb92` | 0.9765 | 0.9566 | 0.0175 | +0.0000 | 0.9765 | 0 | 3h 34m 22s | 94.50% |
-| 2 | `271c2530e085` | `271c2530e085` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 1h 33m 40s | 41.49% |
-| 3 | `af4c8beeb0eb` | `af4c8beeb0eb` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 1h 33m 59s | 41.63% |
-| 4 | `7afcc292a6ad` | `7afcc292a6ad` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 2h 51m 51s | 75.88% |
-| 5 | `f68d6528fbdf` | `f68d6528fbdf` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 2h 51m 50s | 75.87% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `e732fc5165fb` | `baseline` | 0.6520 | 0.3544 | 0.1762 | -0.3245 | 0.6520 | 0 | reference | reference |
+| 1 | unknown | `ddb7623ebb92` | `ddb7623ebb92` | 0.9765 | 0.9566 | 0.0175 | +0.0000 | 0.9765 | 0 | 3h 34m 22s | 94.50% |
+| 2 | unknown | `271c2530e085` | `271c2530e085` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 1h 33m 40s | 41.49% |
+| 3 | unknown | `af4c8beeb0eb` | `af4c8beeb0eb` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 1h 33m 59s | 41.63% |
+| 4 | unknown | `7afcc292a6ad` | `7afcc292a6ad` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 2h 51m 51s | 75.88% |
+| 5 | unknown | `f68d6528fbdf` | `f68d6528fbdf` | 0.9764 | 0.9562 | 0.0164 | -0.0002 | 0.9764 | 0 | 2h 51m 50s | 75.87% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — multi_scale_radial_edge
 
@@ -12005,6 +13289,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `afbe81a796a1` | `afbe81a796a1` | 0.9692 | 0.9498 | 0.0171 | 0.9692 | 0 | 2.5s |
 | Baseline | `c81fb1ff4213` | `baseline` | 0.7618 | 0.0000 | 0.3812 | 0.9523 | 1 | 196 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `afbe81a796a1` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `blur_sigma` | `0.0` |
+| `border_band_fraction` | `0.015` |
+| `close_kernel_fraction` | `0.0` |
+| `color_distance_threshold` | `11.5` |
+| `minimum_border_background_fraction` | `0.15` |
+| `minimum_page_area_fraction` | `0.15` |
+| `open_kernel_fraction` | `0.0035` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -12038,13 +13356,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `afbe81a796a1` | `afbe81a796a1` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 18.6s | 2.01% |
-| 2 | `e4fff2a19df5` | `e4fff2a19df5` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 18.8s | 2.03% |
-| 3 | `c083c4c84edd` | `c083c4c84edd` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 19.1s | 2.08% |
-| 4 | `b4cfb123b850` | `b4cfb123b850` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 1m 2s | 7.44% |
-| 5 | `4be5e4c505c3` | `4be5e4c505c3` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 1m 2s | 7.46% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `c81fb1ff4213` | `baseline` | 0.7618 | 0.0000 | 0.3812 | -0.2074 | 0.9523 | 1 | reference | reference |
+| 1 | unknown | `afbe81a796a1` | `afbe81a796a1` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 18.6s | 2.01% |
+| 2 | unknown | `e4fff2a19df5` | `e4fff2a19df5` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 18.8s | 2.03% |
+| 3 | unknown | `c083c4c84edd` | `c083c4c84edd` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 19.1s | 2.08% |
+| 4 | unknown | `b4cfb123b850` | `b4cfb123b850` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 1m 2s | 7.44% |
+| 5 | unknown | `4be5e4c505c3` | `4be5e4c505c3` | 0.9692 | 0.9498 | 0.0171 | +0.0000 | 0.9692 | 0 | 1m 2s | 7.46% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — page_background
 
@@ -12284,6 +13610,37 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `935369155754` | `935369155754` | 0.9691 | 0.9524 | 0.0154 | 0.9691 | 0 | 20.7s |
 | Baseline | `cd967f93437d` | `baseline` | 0.9678 | 0.9425 | 0.0182 | 0.9678 | 0 | 49 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `935369155754` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.0` |
+| `gradient_percentile` | `94.0` |
+| `outer_radius_fraction` | `0.6` |
+| `ray_count` | `90` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -12317,13 +13674,20 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `935369155754` | `935369155754` | 0.9691 | 0.9524 | 0.0154 | +0.0000 | 0.9691 | 0 | 3m 21s | 19.79% |
-| 2 | `dd690ba558fc` | `dd690ba558fc` | 0.9690 | 0.9487 | 0.0154 | -0.0001 | 0.9690 | 0 | 26m 37s | 98.87% |
-| 3 | `7cabafc75bc3` | `7cabafc75bc3` | 0.9681 | 0.9483 | 0.0166 | -0.0010 | 0.9681 | 0 | 26m 37s | 98.89% |
-| 4 | `cd967f93437d` | `baseline` | 0.9678 | 0.9425 | 0.0182 | -0.0013 | 0.9678 | 0 | unknown | unknown |
-| 5 | `eb72c986992d` | `eb72c986992d` | 0.9676 | 0.9455 | 0.0168 | -0.0015 | 0.9676 | 0 | 18m 56s | 79.59% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `cd967f93437d` | `baseline` | 0.9678 | 0.9425 | 0.0182 | -0.0013 | 0.9678 | 0 | reference | reference |
+| 1 | unknown | `935369155754` | `935369155754` | 0.9691 | 0.9524 | 0.0154 | +0.0000 | 0.9691 | 0 | 3m 21s | 19.79% |
+| 2 | unknown | `dd690ba558fc` | `dd690ba558fc` | 0.9690 | 0.9487 | 0.0154 | -0.0001 | 0.9690 | 0 | 26m 37s | 98.87% |
+| 3 | unknown | `7cabafc75bc3` | `7cabafc75bc3` | 0.9681 | 0.9483 | 0.0166 | -0.0010 | 0.9681 | 0 | 26m 37s | 98.89% |
+| 4 | unknown | `eb72c986992d` | `eb72c986992d` | 0.9676 | 0.9455 | 0.0168 | -0.0015 | 0.9676 | 0 | 18m 56s | 79.59% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — polar_boundary_vote
 
@@ -12558,6 +13922,39 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `e536a07cca54` | `e536a07cca54` | 0.5541 | 0.0000 | 0.4546 | 0.9235 | 2 | 2s |
 | Baseline | `c6d5d9271464` | `baseline` | 0.4474 | 0.0000 | 0.3917 | 0.7457 | 2 | 353 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `e536a07cca54` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `family_tolerance_degrees` | `10.0` |
+| `gaussian_sigma` | `1.8` |
+| `gradient_percentile` | `82.0` |
+| `minimum_segment_fraction` | `0.24` |
+| `minimum_side_support` | `0.08` |
+| `orthogonality_tolerance_degrees` | `22.0` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -12591,13 +13988,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `e536a07cca54` | `e536a07cca54` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.2s | 75.03% |
-| 2 | `ae1b6cb6726e` | `ae1b6cb6726e` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.3s | 78.05% |
-| 3 | `6bc5449b490b` | `6bc5449b490b` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.3s | 76.82% |
-| 4 | `336356f67c6a` | `336356f67c6a` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.4s | 84.22% |
-| 5 | `608d1c2f6dcd` | `608d1c2f6dcd` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.6s | 96.30% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `c6d5d9271464` | `baseline` | 0.4474 | 0.0000 | 0.3917 | -0.1067 | 0.7457 | 2 | reference | reference |
+| 1 | unknown | `e536a07cca54` | `e536a07cca54` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.2s | 75.03% |
+| 2 | unknown | `ae1b6cb6726e` | `ae1b6cb6726e` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.3s | 78.05% |
+| 3 | unknown | `6bc5449b490b` | `6bc5449b490b` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.3s | 76.82% |
+| 4 | unknown | `336356f67c6a` | `336356f67c6a` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.4s | 84.22% |
+| 5 | unknown | `608d1c2f6dcd` | `608d1c2f6dcd` | 0.5541 | 0.0000 | 0.4546 | +0.0000 | 0.9235 | 2 | 5.6s | 96.30% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — projective_gradient_vote
 
@@ -12839,6 +14244,41 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `837321a04ccf` | `837321a04ccf` | 0.9571 | 0.9261 | 0.0183 | 0.9571 | 0 | 773 ms |
 | Baseline | `d593fad7aeea` | `baseline` | 0.9503 | 0.9340 | 0.0145 | 0.9503 | 0 | 56 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `837321a04ccf` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `gaussian_sigma` | `2.4` |
+| `gradient_percentile` | `78.0` |
+| `maximum_radius_fraction` | `0.78` |
+| `minimum_radius_fraction` | `0.22` |
+| `minimum_ray_support` | `0.25` |
+| `ray_count` | `144` |
+| `rectangularity_weight` | `0.2` |
+| `support_weight` | `0.45` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -12872,13 +14312,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `837321a04ccf` | `837321a04ccf` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
-| 2 | `b619ceda35ed` | `b619ceda35ed` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
-| 3 | `6db979d1e8c1` | `6db979d1e8c1` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
-| 4 | `4e2961cac062` | `4e2961cac062` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
-| 5 | `90610600ab17` | `90610600ab17` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `d593fad7aeea` | `baseline` | 0.9503 | 0.9340 | 0.0145 | -0.0068 | 0.9503 | 0 | reference | reference |
+| 1 | unknown | `837321a04ccf` | `837321a04ccf` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
+| 2 | unknown | `b619ceda35ed` | `b619ceda35ed` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
+| 3 | unknown | `6db979d1e8c1` | `6db979d1e8c1` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
+| 4 | unknown | `4e2961cac062` | `4e2961cac062` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
+| 5 | unknown | `90610600ab17` | `90610600ab17` | 0.9571 | 0.9261 | 0.0183 | +0.0000 | 0.9571 | 0 | 12m 42s | 98.78% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — radial_edge
 
@@ -13123,6 +14571,39 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `dd6b2601d568` | `dd6b2601d568` | 0.4983 | 0.2028 | 0.2509 | 0.4983 | 0 | 2.4s |
 | Baseline | `f26bbb16c7b6` | `baseline` | 0.4227 | 0.2130 | 0.2863 | 0.4227 | 0 | 181 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `dd6b2601d568` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `angle_limit_degrees` | `4.0` |
+| `angle_step_degrees` | `1.0` |
+| `bbox_padding_fraction` | `0.016` |
+| `edge_percentile` | `90.0` |
+| `minimum_peak_prominence` | `1.25` |
+| `projection_smooth_fraction` | `0.006` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -13155,13 +14636,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `dd6b2601d568` | `dd6b2601d568` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 2.9s | 6.46% |
-| 2 | `2576db79d995` | `2576db79d995` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 7.4s | 64.84% |
-| 3 | `7e45c62ce0a0` | `7e45c62ce0a0` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 5.7s | 49.04% |
-| 4 | `75b9c212c0c0` | `75b9c212c0c0` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 8.7s | 83.10% |
-| 5 | `bd0668adeb01` | `bd0668adeb01` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 4.5s | 30.22% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `f26bbb16c7b6` | `baseline` | 0.4227 | 0.2130 | 0.2863 | -0.0756 | 0.4227 | 0 | reference | reference |
+| 1 | unknown | `dd6b2601d568` | `dd6b2601d568` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 2.9s | 6.46% |
+| 2 | unknown | `2576db79d995` | `2576db79d995` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 7.4s | 64.84% |
+| 3 | unknown | `7e45c62ce0a0` | `7e45c62ce0a0` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 5.7s | 49.04% |
+| 4 | unknown | `75b9c212c0c0` | `75b9c212c0c0` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 8.7s | 83.10% |
+| 5 | unknown | `bd0668adeb01` | `bd0668adeb01` | 0.4983 | 0.2028 | 0.2509 | +0.0000 | 0.4983 | 0 | 4.5s | 30.22% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — radon_boundary
 
@@ -13404,6 +14893,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `9647b030702e` | `9647b030702e` | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | 1s |
 | Baseline | `7e367fe3bfd5` | `baseline` | 0.6831 | 0.0000 | 0.3806 | 0.8539 | 1 | 42 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `9647b030702e` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.008` |
+| `max_trials` | `200` |
+| `minimum_bbox_area_fraction` | `0.1` |
+| `minimum_mean_inlier_ratio` | `0.25` |
+| `minimum_scan_foreground_fraction` | `0.0125` |
+| `residual_threshold_fraction` | `0.014` |
+| `scan_samples` | `320` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -13436,13 +14959,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `9647b030702e` | `9647b030702e` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 16s | 85.31% |
-| 2 | `d212abf22eb8` | `d212abf22eb8` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 16s | 85.52% |
-| 3 | `90823a3ef18b` | `90823a3ef18b` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 16s | 85.72% |
-| 4 | `4375bb0ee3a5` | `4375bb0ee3a5` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 17s | 86.82% |
-| 5 | `7352e2e44471` | `7352e2e44471` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 17s | 87.30% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `7e367fe3bfd5` | `baseline` | 0.6831 | 0.0000 | 0.3806 | -0.0710 | 0.8539 | 1 | reference | reference |
+| 1 | unknown | `9647b030702e` | `9647b030702e` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 16s | 85.31% |
+| 2 | unknown | `d212abf22eb8` | `d212abf22eb8` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 16s | 85.52% |
+| 3 | unknown | `90823a3ef18b` | `90823a3ef18b` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 16s | 85.72% |
+| 4 | unknown | `4375bb0ee3a5` | `4375bb0ee3a5` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 17s | 86.82% |
+| 5 | unknown | `7352e2e44471` | `7352e2e44471` | 0.7541 | 0.3558 | 0.2541 | +0.0000 | 0.7541 | 0 | 1m 17s | 87.30% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — ransac
 
@@ -13683,6 +15214,42 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `4546643c94a4` | `4546643c94a4` | 0.9470 | 0.8447 | 0.0536 | 0.9470 | 0 | 2.2s |
 | Baseline | `92e0158634c3` | `baseline` | 0.6974 | 0.0000 | 0.3602 | 0.8717 | 1 | 501 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `4546643c94a4` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.0` |
+| `gradient_percentile` | `92.0` |
+| `inner_radius_fraction` | `0.1` |
+| `minimum_segment_length_fraction` | `0.03` |
+| `minimum_segment_support_fraction` | `0.1` |
+| `minimum_support_fraction` | `0.2` |
+| `outer_radius_fraction` | `0.68` |
+| `ray_count` | `48` |
+| `segment_distance_fraction` | `0.0025` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Hybrid (Polar + LSD)
@@ -13716,13 +15283,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `4546643c94a4` | `4546643c94a4` | 0.9470 | 0.8447 | 0.0536 | +0.0000 | 0.9470 | 0 | 22.6s | 1.95% |
-| 2 | `25ac83637ef3` | `25ac83637ef3` | 0.9470 | 0.8447 | 0.0536 | +0.0000 | 0.9470 | 0 | 22.5s | 1.94% |
-| 3 | `b2dafb5231b7` | `b2dafb5231b7` | 0.9470 | 0.8447 | 0.0536 | +0.0000 | 0.9470 | 0 | 21.1s | 1.80% |
-| 4 | `0806c90bfc1d` | `0806c90bfc1d` | 0.9467 | 0.8421 | 0.0548 | -0.0003 | 0.9467 | 0 | 12m 26s | 66.96% |
-| 5 | `7bf6dee90187` | `7bf6dee90187` | 0.9467 | 0.8421 | 0.0548 | -0.0003 | 0.9467 | 0 | 12m 28s | 67.16% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `92e0158634c3` | `baseline` | 0.6974 | 0.0000 | 0.3602 | -0.2496 | 0.8717 | 1 | reference | reference |
+| 1 | unknown | `4546643c94a4` | `4546643c94a4` | 0.9470 | 0.8447 | 0.0536 | +0.0000 | 0.9470 | 0 | 22.6s | 1.95% |
+| 2 | unknown | `25ac83637ef3` | `25ac83637ef3` | 0.9470 | 0.8447 | 0.0536 | +0.0000 | 0.9470 | 0 | 22.5s | 1.94% |
+| 3 | unknown | `b2dafb5231b7` | `b2dafb5231b7` | 0.9470 | 0.8447 | 0.0536 | +0.0000 | 0.9470 | 0 | 21.1s | 1.80% |
+| 4 | unknown | `0806c90bfc1d` | `0806c90bfc1d` | 0.9467 | 0.8421 | 0.0548 | -0.0003 | 0.9467 | 0 | 12m 26s | 66.96% |
+| 5 | unknown | `7bf6dee90187` | `7bf6dee90187` | 0.9467 | 0.8421 | 0.0548 | -0.0003 | 0.9467 | 0 | 12m 28s | 67.16% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — segment_supported_polar_vote
 
@@ -13963,6 +15538,40 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `8ddbe5f468cd` | `8ddbe5f468cd` | 0.9717 | 0.9506 | 0.0193 | 0.9717 | 0 | 180 ms |
 | Baseline | `839015ab653d` | `baseline` | 0.8483 | 0.7473 | 0.0746 | 0.8483 | 0 | 63 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `8ddbe5f468cd` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.0` |
+| `gradient_percentile` | `95.0` |
+| `inner_radius_fraction` | `0.2` |
+| `minimum_support_fraction` | `0.35` |
+| `outer_radius_fraction` | `0.6` |
+| `polarity` | `"absolute"` |
+| `ray_count` | `72` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -13996,13 +15605,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `8ddbe5f468cd` | `8ddbe5f468cd` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 6m 28s | 3.02% |
-| 2 | `15bd2a879a92` | `15bd2a879a92` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 30m 17s | 13.26% |
-| 3 | `4a506ba2e980` | `4a506ba2e980` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 54m 12s | 23.24% |
-| 4 | `8f86c9091425` | `8f86c9091425` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 2h 58m 38s | 75.06% |
-| 5 | `3523918cd50d` | `3523918cd50d` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 3h 22m 35s | 85.07% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `839015ab653d` | `baseline` | 0.8483 | 0.7473 | 0.0746 | -0.1235 | 0.8483 | 0 | reference | reference |
+| 1 | unknown | `8ddbe5f468cd` | `8ddbe5f468cd` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 6m 28s | 3.02% |
+| 2 | unknown | `15bd2a879a92` | `15bd2a879a92` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 30m 17s | 13.26% |
+| 3 | unknown | `4a506ba2e980` | `4a506ba2e980` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 54m 12s | 23.24% |
+| 4 | unknown | `8f86c9091425` | `8f86c9091425` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 2h 58m 38s | 75.06% |
+| 5 | unknown | `3523918cd50d` | `3523918cd50d` | 0.9717 | 0.9506 | 0.0193 | +0.0000 | 0.9717 | 0 | 3h 22m 35s | 85.07% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — signed_polar_boundary_vote
 
@@ -14238,6 +15855,39 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | 3.8s |
 | Baseline | `f914375ada78` | `baseline` | 0.7756 | 0.3969 | 0.2448 | 0.7756 | 0 | 46 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `024732f5e631` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.0` |
+| `maximum_radius_fraction` | `0.6` |
+| `minimum_radius_fraction` | `0.16` |
+| `minimum_support_fraction` | `0.7` |
+| `ray_count` | `360` |
+| `smoothing_window` | `1` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -14271,13 +15921,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 6.8s | 98.76% |
-| 2 | `d1a67626e1a7` | `d1a67626e1a7` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 5.7s | 74.31% |
-| 3 | `fa97b23311b2` | `fa97b23311b2` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 6.6s | 95.88% |
-| 4 | `9e7c1f9b7e79` | `9e7c1f9b7e79` | 0.8166 | 0.5344 | 0.1825 | -0.0013 | 0.8166 | 0 | 6.2s | 82.97% |
-| 5 | `ef8cc5554d87` | `ef8cc5554d87` | 0.8166 | 0.5344 | 0.1825 | -0.0013 | 0.8166 | 0 | 6.4s | 86.81% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `f914375ada78` | `baseline` | 0.7756 | 0.3969 | 0.2448 | -0.0422 | 0.7756 | 0 | reference | reference |
+| 1 | unknown | `024732f5e631` | `024732f5e631` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 6.8s | 98.76% |
+| 2 | unknown | `d1a67626e1a7` | `d1a67626e1a7` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 5.7s | 74.31% |
+| 3 | unknown | `fa97b23311b2` | `fa97b23311b2` | 0.8179 | 0.5367 | 0.1827 | +0.0000 | 0.8179 | 0 | 6.6s | 95.88% |
+| 4 | unknown | `9e7c1f9b7e79` | `9e7c1f9b7e79` | 0.8166 | 0.5344 | 0.1825 | -0.0013 | 0.8166 | 0 | 6.2s | 82.97% |
+| 5 | unknown | `ef8cc5554d87` | `ef8cc5554d87` | 0.8166 | 0.5344 | 0.1825 | -0.0013 | 0.8166 | 0 | 6.4s | 86.81% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — star_convex
 
@@ -14520,6 +16178,39 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 | Winner | `a2bbfc162f9e` | `a2bbfc162f9e` | 0.1634 | 0.0000 | 0.3268 | 0.8170 | 4 | 382 ms |
 | Baseline | `cd4fbe8ec7d8` | `baseline` | 0.1596 | 0.0000 | 0.3191 | 0.7978 | 4 | 19 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `a2bbfc162f9e` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `bbox_padding_fraction` | `0.04` |
+| `line_join_fraction` | `0.03` |
+| `maximum_component_area_fraction` | `0.005` |
+| `minimum_component_area_fraction` | `1e-05` |
+| `minimum_line_count` | `2` |
+| `minimum_text_coverage_fraction` | `0.04` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -14552,13 +16243,21 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `a2bbfc162f9e` | `a2bbfc162f9e` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 20.47% |
-| 2 | `919f35cbc4af` | `919f35cbc4af` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 17.86% |
-| 3 | `e127c712c18d` | `e127c712c18d` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 14.84% |
-| 4 | `a83d7e03757b` | `a83d7e03757b` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 1.37% |
-| 5 | `5caa04c23d75` | `5caa04c23d75` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 44.37% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `cd4fbe8ec7d8` | `baseline` | 0.1596 | 0.0000 | 0.3191 | -0.0038 | 0.7978 | 4 | reference | reference |
+| 1 | unknown | `a2bbfc162f9e` | `a2bbfc162f9e` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 20.47% |
+| 2 | unknown | `919f35cbc4af` | `919f35cbc4af` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 17.86% |
+| 3 | unknown | `e127c712c18d` | `e127c712c18d` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 14.84% |
+| 4 | unknown | `a83d7e03757b` | `a83d7e03757b` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 1.37% |
+| 5 | unknown | `5caa04c23d75` | `5caa04c23d75` | 0.1634 | 0.0000 | 0.3268 | +0.0000 | 0.8170 | 4 | 2.4s | 44.37% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — text_flow
 
@@ -14796,6 +16495,39 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 |---|---|---|---:|---:|---:|---:|---:|---:|
 | Winner | `9ef715dda063` | `baseline` | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 5 | 7 ms |
 
+### Parameter Set Details
+
+This is the exact winning parameter configuration. The short Parameter Set ID is a legacy convenience alias; the full SHA-256 identity is authoritative.
+
+| Identity field | Value |
+|---|---|
+| Parameter Set ID (legacy alias) | `9ef715dda063` |
+| Absolute parameter SHA-256 | `unavailable (legacy record)` |
+| Identity schema | `unknown` |
+| Parameter schema | `unknown` |
+| Grid SHA-256 | `not a grid member` |
+| Grid ordinal | `not a grid member` |
+| Reproducibility | **Legacy identity only / exact configuration unavailable** |
+
+#### Exact Parameter Settings
+
+| Parameter | Value |
+|---|---|
+| `background_threshold` | `245` |
+| `bbox_padding_fraction` | `0.0` |
+| `close_kernel_fraction` | `0.01` |
+| `maximum_page_area_fraction` | `0.98` |
+| `minimum_border_background_fraction` | `0.55` |
+| `minimum_page_area_fraction` | `0.18` |
+
+#### Known Builds Using This Exact Parameter Set
+
+Builds known at the time this report was generated; matching is by the authoritative full parameter identity.
+
+| Build | Date | Evidence |
+|---|---|---|
+| current/unknown | unknown | No build provenance was available. |
+
 ### Detector Evidence
 
 **Role:** Generator
@@ -14828,13 +16560,20 @@ The regression execution shape selected for this detector run is recorded here s
 
 ### Top Parameter Sets
 
-| Rank | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
-|---:|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 1 | `9ef715dda063` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | unknown | unknown |
-| 2 | `f7e0d706deeb` | `f7e0d706deeb` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 826 ms | 64.75% |
-| 3 | `93f2d7e9ecfa` | `93f2d7e9ecfa` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 826 ms | 68.45% |
-| 4 | `f2b82f6c9e72` | `f2b82f6c9e72` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 826 ms | 72.02% |
-| 5 | `051f77f76305` | `051f77f76305` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 823 ms | 62.14% |
+| Rank | Last Build | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
+|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Baseline* | unknown | `9ef715dda063` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | reference | reference |
+| 1 | unknown | `f7e0d706deeb` | `f7e0d706deeb` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 826 ms | 64.75% |
+| 2 | unknown | `93f2d7e9ecfa` | `93f2d7e9ecfa` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 826 ms | 68.45% |
+| 3 | unknown | `f2b82f6c9e72` | `f2b82f6c9e72` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 826 ms | 72.02% |
+| 4 | unknown | `051f77f76305` | `051f77f76305` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 823 ms | 62.14% |
+
+\* **Baseline** is the detector's default parameter-set configuration.
+\*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
+
+**Last Build** is the most recent known prior build that evaluated the exact absolute parameter identity; the current manifest build is intentionally excluded.
+
+Baseline and Best are mandatory evaluated references in every regression and are not assigned numeric search ranks. If either exact reference parameter set is also present in the requested search, it is evaluated once and shown only as the reference row.
 
 ## Page Analysis — whitespace_frame
 
@@ -15021,12 +16760,12 @@ Every completed regression contributes reusable quality and runtime evidence so 
 
 - `calibration-index.json` retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata.
 - Compatible authoritative calibrations remain preferred over provisional smoke observations.
-- Results commit: [dbab05196c0aee8b6efe52b7b544fd863452475f](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/dbab05196c0aee8b6efe52b7b544fd863452475f).
-- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/31908933172).
+- Results commit: [ab355a9c7cfd4f36f759d56f58b20ff755a6bae5](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/ab355a9c7cfd4f36f759d56f58b20ff755a6bae5).
+- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/32053972947).
 - Pipeline repository: [dlstupka/hth](https://github.com/dlstupka/hth).
 - Results repository: [dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results).
-- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/dbab05196c0aee8b6efe52b7b544fd863452475f/calibration-index.json).
-- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/dbab05196c0aee8b6efe52b7b544fd863452475f/runtime-index.json).
+- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/ab355a9c7cfd4f36f759d56f58b20ff755a6bae5/calibration-index.json).
+- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/ab355a9c7cfd4f36f759d56f58b20ff755a6bae5/runtime-index.json).
 - Smoke records are provisional; complete exhaustive full regressions are authoritative.
 
 [↑ Back to Navigation](#table-of-contents)
