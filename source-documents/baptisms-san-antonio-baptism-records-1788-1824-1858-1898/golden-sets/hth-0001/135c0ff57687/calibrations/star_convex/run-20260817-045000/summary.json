@@ -1,0 +1,6384 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260817-045000",
+  "detector": "star_convex",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "2.036",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "32",
+    "ranked_quality": "0.81787625",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 729,
+    "planned_parameter_sets": 11,
+    "actual_parameter_sets": 11,
+    "locally_evaluated_parameter_sets": 11,
+    "locally_evaluated_page_evaluations": 55,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 55,
+    "actual_page_evaluations": 55
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 11,
+  "page_evaluation_count": 55,
+  "successful_page_evaluation_count": 55,
+  "fully_successful_parameter_set_count": 11,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "360d0d12e0abe2191f5be6f80c9668c4eaceba6aff6b711b6ba667663b2e255b",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "024732f5e631",
+    "parameters": {
+      "bbox_padding_fraction": 0.0,
+      "maximum_radius_fraction": 0.6,
+      "minimum_radius_fraction": 0.16,
+      "minimum_support_fraction": 0.7,
+      "ray_count": 360,
+      "smoothing_window": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.81787625,
+      "mean_iou_success": 0.81787625,
+      "minimum_iou": 0.53666137,
+      "stddev_iou": 0.1827383,
+      "mean_edge_error_px": 52.45,
+      "elapsed_ms_total": 267.588,
+      "wall_ms": 268.368
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          137,
+          56,
+          1282,
+          960
+        ],
+        "iou": 0.97611854,
+        "edge_errors": {
+          "left": 12,
+          "top": 0,
+          "right": 7,
+          "bottom": 7,
+          "mean": 6.5,
+          "maximum": 12
+        },
+        "edge_error_mean_px": 6.5,
+        "edge_error_maximum_px": 12,
+        "elapsed_ms": 58.488,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            137,
+            56,
+            1282,
+            960
+          ],
+          "corners": [
+            [
+              142.70556640625,
+              959.46484375
+            ],
+            [
+              137.45556640625,
+              63.197139739990234
+            ],
+            [
+              1276.1571044921875,
+              56.526981353759766
+            ],
+            [
+              1281.4071044921875,
+              952.794677734375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              730.9439311637744,
+              493.00481447654454
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          111,
+          20,
+          754,
+          963
+        ],
+        "iou": 0.53666137,
+        "edge_errors": {
+          "left": 44,
+          "top": 12,
+          "right": 479,
+          "bottom": 14,
+          "mean": 137.25,
+          "maximum": 479
+        },
+        "edge_error_mean_px": 137.25,
+        "edge_error_maximum_px": 479,
+        "elapsed_ms": 52.216,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            111,
+            20,
+            754,
+            963
+          ],
+          "corners": [
+            [
+              115.803955078125,
+              962.3042602539062
+            ],
+            [
+              111.868408203125,
+              23.61310386657715
+            ],
+            [
+              749.5640869140625,
+              20.93950843811035
+            ],
+            [
+              753.4996337890625,
+              959.6306762695312
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              495.9190730617126,
+              476.3536897811752
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          264,
+          139,
+          1088,
+          978
+        ],
+        "iou": 0.66263767,
+        "edge_errors": {
+          "left": 249,
+          "top": 111,
+          "right": 14,
+          "bottom": 8,
+          "mean": 95.5,
+          "maximum": 249
+        },
+        "edge_error_mean_px": 95.5,
+        "edge_error_maximum_px": 249,
+        "elapsed_ms": 41.097,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            264,
+            139,
+            1088,
+            978
+          ],
+          "corners": [
+            [
+              352.8662109375,
+              977.0372314453125
+            ],
+            [
+              264.449951171875,
+              229.69424438476562
+            ],
+            [
+              1027.53759765625,
+              139.41525268554688
+            ],
+            [
+              1115.953857421875,
+              886.75830078125
+            ]
+          ],
+          "confidence": 0.7138888888888889,
+          "score": 0.7138888888888889,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              658.6443188091295,
+              549.0669483943426
+            ],
+            "ray_support_fraction": 0.7138888888888889,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          48,
+          1135,
+          943
+        ],
+        "iou": 0.95227725,
+        "edge_errors": {
+          "left": 11,
+          "top": 3,
+          "right": 34,
+          "bottom": 2,
+          "mean": 12.5,
+          "maximum": 34
+        },
+        "edge_error_mean_px": 12.5,
+        "edge_error_maximum_px": 34,
+        "elapsed_ms": 57.586,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            73,
+            48,
+            1135,
+            943
+          ],
+          "corners": [
+            [
+              1130.5426025390625,
+              942.074951171875
+            ],
+            [
+              73.3584213256836,
+              937.2130126953125
+            ],
+            [
+              77.4472427368164,
+              48.128509521484375
+            ],
+            [
+              1134.6314697265625,
+              52.990386962890625
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              601.8877938894502,
+              495.16681350131074
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          82,
+          32,
+          1187,
+          966
+        ],
+        "iou": 0.9616864,
+        "edge_errors": {
+          "left": 6,
+          "top": 1,
+          "right": 33,
+          "bottom": 2,
+          "mean": 10.5,
+          "maximum": 33
+        },
+        "edge_error_mean_px": 10.5,
+        "edge_error_maximum_px": 33,
+        "elapsed_ms": 58.201,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            82,
+            32,
+            1187,
+            966
+          ],
+          "corners": [
+            [
+              88.364013671875,
+              965.8836669921875
+            ],
+            [
+              82.6387939453125,
+              38.92196273803711
+            ],
+            [
+              1180.7041015625,
+              32.13998794555664
+            ],
+            [
+              1186.4293212890625,
+              959.1016845703125
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              630.8134646147842,
+              496.8713775811989
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "historic_reference": {
+      "detector": "star_convex",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "328",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31614832224",
+      "historic_calibration_id": "run-20260812-155453",
+      "historic_created_at_utc": "2026-08-12T15:54:45.430152+00:00",
+      "parameter_identity_sha256": "afe359fabb847fffccd2d958ad2a40549c3fa8ea16a39b11c5e76362e4805906",
+      "parameter_set_id": "024732f5e631",
+      "parameters": {
+        "bbox_padding_fraction": 0.0,
+        "maximum_radius_fraction": 0.6,
+        "minimum_radius_fraction": 0.16,
+        "minimum_support_fraction": 0.7,
+        "ray_count": 360,
+        "smoothing_window": 1
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.4788865059999807,
+      "search_fraction": 0.18181818181818182
+    },
+    "legacy_parameter_set_id": "024732f5e631",
+    "parameter_identity_sha256": "afe359fabb847fffccd2d958ad2a40549c3fa8ea16a39b11c5e76362e4805906",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 666,
+    "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+    "profile": null,
+    "run_id": "run-20260817-045000",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "f914375ada78",
+    "parameters": {
+      "ray_count": 180,
+      "minimum_radius_fraction": 0.1,
+      "maximum_radius_fraction": 0.72,
+      "minimum_support_fraction": 0.55,
+      "smoothing_window": 5,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.77562638,
+      "mean_iou_success": 0.77562638,
+      "minimum_iou": 0.39690029,
+      "stddev_iou": 0.24480294,
+      "mean_edge_error_px": 67.25,
+      "elapsed_ms_total": 206.433,
+      "wall_ms": 207.242
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          124,
+          54,
+          1285,
+          962
+        ],
+        "iou": 0.9880861,
+        "edge_errors": {
+          "left": 1,
+          "top": 2,
+          "right": 4,
+          "bottom": 5,
+          "mean": 3.0,
+          "maximum": 5
+        },
+        "edge_error_mean_px": 3.0,
+        "edge_error_maximum_px": 5,
+        "elapsed_ms": 49.671,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            124,
+            54,
+            1285,
+            962
+          ],
+          "corners": [
+            [
+              133.57373046875,
+              961.0517578125
+            ],
+            [
+              124.021484375,
+              66.98573303222656
+            ],
+            [
+              1275.2784423828125,
+              54.68565368652344
+            ],
+            [
+              1284.8306884765625,
+              948.751708984375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "minimum_radius_fraction": 0.1,
+              "maximum_radius_fraction": 0.72,
+              "minimum_support_fraction": 0.55,
+              "smoothing_window": 5,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              730.9439311637744,
+              493.00481447654454
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          115,
+          21,
+          793,
+          986
+        ],
+        "iou": 0.57059252,
+        "edge_errors": {
+          "left": 48,
+          "top": 13,
+          "right": 440,
+          "bottom": 9,
+          "mean": 127.5,
+          "maximum": 440
+        },
+        "edge_error_mean_px": 127.5,
+        "edge_error_maximum_px": 440,
+        "elapsed_ms": 37.517,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            115,
+            21,
+            793,
+            986
+          ],
+          "corners": [
+            [
+              168.1737060546875,
+              985.1248168945312
+            ],
+            [
+              115.43280029296875,
+              56.811954498291016
+            ],
+            [
+              739.7586669921875,
+              21.341670989990234
+            ],
+            [
+              792.4995727539062,
+              949.6544799804688
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "minimum_radius_fraction": 0.1,
+              "maximum_radius_fraction": 0.72,
+              "minimum_support_fraction": 0.55,
+              "smoothing_window": 5,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              495.9190730617126,
+              476.3536897811752
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          370,
+          272,
+          1031,
+          871
+        ],
+        "iou": 0.39690029,
+        "edge_errors": {
+          "left": 355,
+          "top": 244,
+          "right": 43,
+          "bottom": 99,
+          "mean": 185.25,
+          "maximum": 355
+        },
+        "edge_error_mean_px": 185.25,
+        "edge_error_maximum_px": 355,
+        "elapsed_ms": 30.119,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            370,
+            272,
+            1031,
+            871
+          ],
+          "corners": [
+            [
+              376.39764404296875,
+              870.9285888671875
+            ],
+            [
+              370.20233154296875,
+              279.6133728027344
+            ],
+            [
+              1023.8760375976562,
+              272.7648010253906
+            ],
+            [
+              1030.0712890625,
+              864.0799560546875
+            ]
+          ],
+          "confidence": 0.8333333333333334,
+          "score": 0.8333333333333334,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "minimum_radius_fraction": 0.1,
+              "maximum_radius_fraction": 0.72,
+              "minimum_support_fraction": 0.55,
+              "smoothing_window": 5,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              658.6443188091295,
+              549.0669483943426
+            ],
+            "ray_support_fraction": 0.8333333333333334,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          49,
+          1134,
+          943
+        ],
+        "iou": 0.95424097,
+        "edge_errors": {
+          "left": 11,
+          "top": 2,
+          "right": 33,
+          "bottom": 2,
+          "mean": 12.0,
+          "maximum": 33
+        },
+        "edge_error_mean_px": 12.0,
+        "edge_error_maximum_px": 33,
+        "elapsed_ms": 43.66,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            73,
+            49,
+            1134,
+            943
+          ],
+          "corners": [
+            [
+              1129.0540771484375,
+              942.521484375
+            ],
+            [
+              73.83197021484375,
+              937.2479248046875
+            ],
+            [
+              78.27081298828125,
+              49.052825927734375
+            ],
+            [
+              1133.4927978515625,
+              54.326385498046875
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "minimum_radius_fraction": 0.1,
+              "maximum_radius_fraction": 0.72,
+              "minimum_support_fraction": 0.55,
+              "smoothing_window": 5,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              601.8877938894502,
+              495.16681350131074
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          84,
+          34,
+          1178,
+          963
+        ],
+        "iou": 0.96831201,
+        "edge_errors": {
+          "left": 4,
+          "top": 1,
+          "right": 24,
+          "bottom": 5,
+          "mean": 8.5,
+          "maximum": 24
+        },
+        "edge_error_mean_px": 8.5,
+        "edge_error_maximum_px": 24,
+        "elapsed_ms": 45.466,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            84,
+            34,
+            1178,
+            963
+          ],
+          "corners": [
+            [
+              86.537353515625,
+              962.4605102539062
+            ],
+            [
+              84.238037109375,
+              37.12053298950195
+            ],
+            [
+              1175.0938720703125,
+              34.4099235534668
+            ],
+            [
+              1177.3931884765625,
+              959.7499389648438
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 180,
+              "minimum_radius_fraction": 0.1,
+              "maximum_radius_fraction": 0.72,
+              "minimum_support_fraction": 0.55,
+              "smoothing_window": 5,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              630.8134646147842,
+              496.8713775811989
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "f914375ada78",
+    "parameter_identity_sha256": "c85473f8cc12609f86bd432a4d0b845391e1e6191658a0d430b46427bfe7e8b6",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 363,
+    "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "profile": "baseline",
+    "run_id": "run-20260817-045000",
+    "rank": 5,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": {
+    "parameter_set_id": "024732f5e631",
+    "parameters": {
+      "bbox_padding_fraction": 0.0,
+      "maximum_radius_fraction": 0.6,
+      "minimum_radius_fraction": 0.16,
+      "minimum_support_fraction": 0.7,
+      "ray_count": 360,
+      "smoothing_window": 1
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.81787625,
+      "mean_iou_success": 0.81787625,
+      "minimum_iou": 0.53666137,
+      "stddev_iou": 0.1827383,
+      "mean_edge_error_px": 52.45,
+      "elapsed_ms_total": 267.588,
+      "wall_ms": 268.368
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          137,
+          56,
+          1282,
+          960
+        ],
+        "iou": 0.97611854,
+        "edge_errors": {
+          "left": 12,
+          "top": 0,
+          "right": 7,
+          "bottom": 7,
+          "mean": 6.5,
+          "maximum": 12
+        },
+        "edge_error_mean_px": 6.5,
+        "edge_error_maximum_px": 12,
+        "elapsed_ms": 58.488,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            137,
+            56,
+            1282,
+            960
+          ],
+          "corners": [
+            [
+              142.70556640625,
+              959.46484375
+            ],
+            [
+              137.45556640625,
+              63.197139739990234
+            ],
+            [
+              1276.1571044921875,
+              56.526981353759766
+            ],
+            [
+              1281.4071044921875,
+              952.794677734375
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              730.9439311637744,
+              493.00481447654454
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          111,
+          20,
+          754,
+          963
+        ],
+        "iou": 0.53666137,
+        "edge_errors": {
+          "left": 44,
+          "top": 12,
+          "right": 479,
+          "bottom": 14,
+          "mean": 137.25,
+          "maximum": 479
+        },
+        "edge_error_mean_px": 137.25,
+        "edge_error_maximum_px": 479,
+        "elapsed_ms": 52.216,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            111,
+            20,
+            754,
+            963
+          ],
+          "corners": [
+            [
+              115.803955078125,
+              962.3042602539062
+            ],
+            [
+              111.868408203125,
+              23.61310386657715
+            ],
+            [
+              749.5640869140625,
+              20.93950843811035
+            ],
+            [
+              753.4996337890625,
+              959.6306762695312
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              495.9190730617126,
+              476.3536897811752
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          264,
+          139,
+          1088,
+          978
+        ],
+        "iou": 0.66263767,
+        "edge_errors": {
+          "left": 249,
+          "top": 111,
+          "right": 14,
+          "bottom": 8,
+          "mean": 95.5,
+          "maximum": 249
+        },
+        "edge_error_mean_px": 95.5,
+        "edge_error_maximum_px": 249,
+        "elapsed_ms": 41.097,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            264,
+            139,
+            1088,
+            978
+          ],
+          "corners": [
+            [
+              352.8662109375,
+              977.0372314453125
+            ],
+            [
+              264.449951171875,
+              229.69424438476562
+            ],
+            [
+              1027.53759765625,
+              139.41525268554688
+            ],
+            [
+              1115.953857421875,
+              886.75830078125
+            ]
+          ],
+          "confidence": 0.7138888888888889,
+          "score": 0.7138888888888889,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              658.6443188091295,
+              549.0669483943426
+            ],
+            "ray_support_fraction": 0.7138888888888889,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          48,
+          1135,
+          943
+        ],
+        "iou": 0.95227725,
+        "edge_errors": {
+          "left": 11,
+          "top": 3,
+          "right": 34,
+          "bottom": 2,
+          "mean": 12.5,
+          "maximum": 34
+        },
+        "edge_error_mean_px": 12.5,
+        "edge_error_maximum_px": 34,
+        "elapsed_ms": 57.586,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            73,
+            48,
+            1135,
+            943
+          ],
+          "corners": [
+            [
+              1130.5426025390625,
+              942.074951171875
+            ],
+            [
+              73.3584213256836,
+              937.2130126953125
+            ],
+            [
+              77.4472427368164,
+              48.128509521484375
+            ],
+            [
+              1134.6314697265625,
+              52.990386962890625
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              601.8877938894502,
+              495.16681350131074
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          82,
+          32,
+          1187,
+          966
+        ],
+        "iou": 0.9616864,
+        "edge_errors": {
+          "left": 6,
+          "top": 1,
+          "right": 33,
+          "bottom": 2,
+          "mean": 10.5,
+          "maximum": 33
+        },
+        "edge_error_mean_px": 10.5,
+        "edge_error_maximum_px": 33,
+        "elapsed_ms": 58.201,
+        "candidate": {
+          "method": "star_convex",
+          "bbox": [
+            82,
+            32,
+            1187,
+            966
+          ],
+          "corners": [
+            [
+              88.364013671875,
+              965.8836669921875
+            ],
+            [
+              82.6387939453125,
+              38.92196273803711
+            ],
+            [
+              1180.7041015625,
+              32.13998794555664
+            ],
+            [
+              1186.4293212890625,
+              959.1016845703125
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "ray_count": 360,
+              "minimum_radius_fraction": 0.16,
+              "maximum_radius_fraction": 0.6,
+              "minimum_support_fraction": 0.7,
+              "smoothing_window": 1,
+              "bbox_padding_fraction": 0.0
+            },
+            "center": [
+              630.8134646147842,
+              496.8713775811989
+            ],
+            "ray_support_fraction": 1.0,
+            "evidence": "star_convex_mask_boundary"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "historic_reference": {
+      "detector": "star_convex",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "328",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31614832224",
+      "historic_calibration_id": "run-20260812-155453",
+      "historic_created_at_utc": "2026-08-12T15:54:45.430152+00:00",
+      "parameter_identity_sha256": "afe359fabb847fffccd2d958ad2a40549c3fa8ea16a39b11c5e76362e4805906",
+      "parameter_set_id": "024732f5e631",
+      "parameters": {
+        "bbox_padding_fraction": 0.0,
+        "maximum_radius_fraction": 0.6,
+        "minimum_radius_fraction": 0.16,
+        "minimum_support_fraction": 0.7,
+        "ray_count": 360,
+        "smoothing_window": 1
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.4788865059999807,
+      "search_fraction": 0.18181818181818182
+    },
+    "legacy_parameter_set_id": "024732f5e631",
+    "parameter_identity_sha256": "afe359fabb847fffccd2d958ad2a40549c3fa8ea16a39b11c5e76362e4805906",
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 666,
+    "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+    "profile": null,
+    "run_id": "run-20260817-045000",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "024732f5e631",
+      "parameters": {
+        "bbox_padding_fraction": 0.0,
+        "maximum_radius_fraction": 0.6,
+        "minimum_radius_fraction": 0.16,
+        "minimum_support_fraction": 0.7,
+        "ray_count": 360,
+        "smoothing_window": 1
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.81787625,
+        "mean_iou_success": 0.81787625,
+        "minimum_iou": 0.53666137,
+        "stddev_iou": 0.1827383,
+        "mean_edge_error_px": 52.45,
+        "elapsed_ms_total": 267.588,
+        "wall_ms": 268.368
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            137,
+            56,
+            1282,
+            960
+          ],
+          "iou": 0.97611854,
+          "edge_errors": {
+            "left": 12,
+            "top": 0,
+            "right": 7,
+            "bottom": 7,
+            "mean": 6.5,
+            "maximum": 12
+          },
+          "edge_error_mean_px": 6.5,
+          "edge_error_maximum_px": 12,
+          "elapsed_ms": 58.488,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              137,
+              56,
+              1282,
+              960
+            ],
+            "corners": [
+              [
+                142.70556640625,
+                959.46484375
+              ],
+              [
+                137.45556640625,
+                63.197139739990234
+              ],
+              [
+                1276.1571044921875,
+                56.526981353759766
+              ],
+              [
+                1281.4071044921875,
+                952.794677734375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 360,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.7,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            111,
+            20,
+            754,
+            963
+          ],
+          "iou": 0.53666137,
+          "edge_errors": {
+            "left": 44,
+            "top": 12,
+            "right": 479,
+            "bottom": 14,
+            "mean": 137.25,
+            "maximum": 479
+          },
+          "edge_error_mean_px": 137.25,
+          "edge_error_maximum_px": 479,
+          "elapsed_ms": 52.216,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              111,
+              20,
+              754,
+              963
+            ],
+            "corners": [
+              [
+                115.803955078125,
+                962.3042602539062
+              ],
+              [
+                111.868408203125,
+                23.61310386657715
+              ],
+              [
+                749.5640869140625,
+                20.93950843811035
+              ],
+              [
+                753.4996337890625,
+                959.6306762695312
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 360,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.7,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            264,
+            139,
+            1088,
+            978
+          ],
+          "iou": 0.66263767,
+          "edge_errors": {
+            "left": 249,
+            "top": 111,
+            "right": 14,
+            "bottom": 8,
+            "mean": 95.5,
+            "maximum": 249
+          },
+          "edge_error_mean_px": 95.5,
+          "edge_error_maximum_px": 249,
+          "elapsed_ms": 41.097,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              264,
+              139,
+              1088,
+              978
+            ],
+            "corners": [
+              [
+                352.8662109375,
+                977.0372314453125
+              ],
+              [
+                264.449951171875,
+                229.69424438476562
+              ],
+              [
+                1027.53759765625,
+                139.41525268554688
+              ],
+              [
+                1115.953857421875,
+                886.75830078125
+              ]
+            ],
+            "confidence": 0.7138888888888889,
+            "score": 0.7138888888888889,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 360,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.7,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.7138888888888889,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            48,
+            1135,
+            943
+          ],
+          "iou": 0.95227725,
+          "edge_errors": {
+            "left": 11,
+            "top": 3,
+            "right": 34,
+            "bottom": 2,
+            "mean": 12.5,
+            "maximum": 34
+          },
+          "edge_error_mean_px": 12.5,
+          "edge_error_maximum_px": 34,
+          "elapsed_ms": 57.586,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              73,
+              48,
+              1135,
+              943
+            ],
+            "corners": [
+              [
+                1130.5426025390625,
+                942.074951171875
+              ],
+              [
+                73.3584213256836,
+                937.2130126953125
+              ],
+              [
+                77.4472427368164,
+                48.128509521484375
+              ],
+              [
+                1134.6314697265625,
+                52.990386962890625
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 360,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.7,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            82,
+            32,
+            1187,
+            966
+          ],
+          "iou": 0.9616864,
+          "edge_errors": {
+            "left": 6,
+            "top": 1,
+            "right": 33,
+            "bottom": 2,
+            "mean": 10.5,
+            "maximum": 33
+          },
+          "edge_error_mean_px": 10.5,
+          "edge_error_maximum_px": 33,
+          "elapsed_ms": 58.201,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              82,
+              32,
+              1187,
+              966
+            ],
+            "corners": [
+              [
+                88.364013671875,
+                965.8836669921875
+              ],
+              [
+                82.6387939453125,
+                38.92196273803711
+              ],
+              [
+                1180.7041015625,
+                32.13998794555664
+              ],
+              [
+                1186.4293212890625,
+                959.1016845703125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 360,
+                "minimum_radius_fraction": 0.16,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.7,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "reference_roles": [
+        "historic_best"
+      ],
+      "requested_search_member": true,
+      "historic_reference": {
+        "detector": "star_convex",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "historic_build_number": "328",
+        "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31614832224",
+        "historic_calibration_id": "run-20260812-155453",
+        "historic_created_at_utc": "2026-08-12T15:54:45.430152+00:00",
+        "parameter_identity_sha256": "afe359fabb847fffccd2d958ad2a40549c3fa8ea16a39b11c5e76362e4805906",
+        "parameter_set_id": "024732f5e631",
+        "parameters": {
+          "bbox_padding_fraction": 0.0,
+          "maximum_radius_fraction": 0.6,
+          "minimum_radius_fraction": 0.16,
+          "minimum_support_fraction": 0.7,
+          "ray_count": 360,
+          "smoothing_window": 1
+        },
+        "provenance_source": "legacy-parameters"
+      },
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.4788865059999807,
+        "search_fraction": 0.18181818181818182
+      },
+      "legacy_parameter_set_id": "024732f5e631",
+      "parameter_identity_sha256": "afe359fabb847fffccd2d958ad2a40549c3fa8ea16a39b11c5e76362e4805906",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 666,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "095537f3b0cd",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 1,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.79805615,
+        "mean_iou_success": 0.79805615,
+        "minimum_iou": 0.54137258,
+        "stddev_iou": 0.19353897,
+        "mean_edge_error_px": 58.55,
+        "elapsed_ms_total": 195.244,
+        "wall_ms": 195.836
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            131,
+            51,
+            1287,
+            965
+          ],
+          "iou": 0.98557472,
+          "edge_errors": {
+            "left": 6,
+            "top": 5,
+            "right": 2,
+            "bottom": 2,
+            "mean": 3.75,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.75,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 36.537,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              131,
+              51,
+              1287,
+              965
+            ],
+            "corners": [
+              [
+                141.2188720703125,
+                956.5289306640625
+              ],
+              [
+                139.3734130859375,
+                61.7166748046875
+              ],
+              [
+                1276.5948486328125,
+                59.37127685546875
+              ],
+              [
+                1278.4403076171875,
+                954.1834716796875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            101,
+            13,
+            790,
+            987
+          ],
+          "iou": 0.5842969,
+          "edge_errors": {
+            "left": 34,
+            "top": 5,
+            "right": 443,
+            "bottom": 10,
+            "mean": 123.0,
+            "maximum": 443
+          },
+          "edge_error_mean_px": 123.0,
+          "edge_error_maximum_px": 443,
+          "elapsed_ms": 30.885,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              101,
+              13,
+              790,
+              987
+            ],
+            "corners": [
+              [
+                149.302734375,
+                982.7767944335938
+              ],
+              [
+                109.7767333984375,
+                48.20970153808594
+              ],
+              [
+                741.7305908203125,
+                21.48225212097168
+              ],
+              [
+                781.256591796875,
+                956.0493774414062
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            319,
+            179,
+            1085,
+            900
+          ],
+          "iou": 0.54137258,
+          "edge_errors": {
+            "left": 304,
+            "top": 151,
+            "right": 11,
+            "bottom": 70,
+            "mean": 134.0,
+            "maximum": 304
+          },
+          "edge_error_mean_px": 134.0,
+          "edge_error_maximum_px": 304,
+          "elapsed_ms": 24.774,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              319,
+              179,
+              1085,
+              900
+            ],
+            "corners": [
+              [
+                365.8203430175781,
+                891.541015625
+              ],
+              [
+                327.8706359863281,
+                227.7874298095703
+              ],
+              [
+                1038.086669921875,
+                187.18125915527344
+              ],
+              [
+                1076.036376953125,
+                850.934814453125
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            65,
+            40,
+            1141,
+            951
+          ],
+          "iou": 0.92337968,
+          "edge_errors": {
+            "left": 19,
+            "top": 11,
+            "right": 40,
+            "bottom": 10,
+            "mean": 20.0,
+            "maximum": 40
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 40,
+          "elapsed_ms": 54.642,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              65,
+              40,
+              1141,
+              951
+            ],
+            "corners": [
+              [
+                1127.973876953125,
+                942.4622802734375
+              ],
+              [
+                73.30693817138672,
+                936.6680297851562
+              ],
+              [
+                78.18744659423828,
+                48.3155517578125
+              ],
+              [
+                1132.8544921875,
+                54.10980224609375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            79,
+            26,
+            1185,
+            969
+          ],
+          "iou": 0.95565689,
+          "edge_errors": {
+            "left": 9,
+            "top": 7,
+            "right": 31,
+            "bottom": 1,
+            "mean": 12.0,
+            "maximum": 31
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 31,
+          "elapsed_ms": 48.406,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              79,
+              26,
+              1185,
+              969
+            ],
+            "corners": [
+              [
+                1175.614990234375,
+                960.6621704101562
+              ],
+              [
+                87.49591064453125,
+                959.624755859375
+              ],
+              [
+                88.37762451171875,
+                34.81982421875
+              ],
+              [
+                1176.496826171875,
+                35.85723876953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.6773206310000432,
+        "search_fraction": 0.2727272727272727
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "095537f3b0cd",
+      "parameter_identity_sha256": "9a3cf4158766ad96065c5911ecdbded6ed438dabb62ee8cb276712be9e299a9d",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "0d7165269fe3",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 1,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.79669771,
+        "mean_iou_success": 0.79669771,
+        "minimum_iou": 0.52679673,
+        "stddev_iou": 0.2042595,
+        "mean_edge_error_px": 59.05,
+        "elapsed_ms_total": 224.298,
+        "wall_ms": 227.922
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            139,
+            59,
+            1279,
+            957
+          ],
+          "iou": 0.96540564,
+          "edge_errors": {
+            "left": 14,
+            "top": 3,
+            "right": 10,
+            "bottom": 10,
+            "mean": 9.25,
+            "maximum": 14
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 14,
+          "elapsed_ms": 65.448,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              139,
+              59,
+              1279,
+              957
+            ],
+            "corners": [
+              [
+                141.2188720703125,
+                956.5289306640625
+              ],
+              [
+                139.3734130859375,
+                61.7166748046875
+              ],
+              [
+                1276.5948486328125,
+                59.37127685546875
+              ],
+              [
+                1278.4403076171875,
+                954.1834716796875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            109,
+            21,
+            782,
+            983
+          ],
+          "iou": 0.56741559,
+          "edge_errors": {
+            "left": 42,
+            "top": 13,
+            "right": 451,
+            "bottom": 6,
+            "mean": 128.0,
+            "maximum": 451
+          },
+          "edge_error_mean_px": 128.0,
+          "edge_error_maximum_px": 451,
+          "elapsed_ms": 35.188,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              109,
+              21,
+              782,
+              983
+            ],
+            "corners": [
+              [
+                149.302734375,
+                982.7767944335938
+              ],
+              [
+                109.7767333984375,
+                48.20970153808594
+              ],
+              [
+                741.7305908203125,
+                21.48225212097168
+              ],
+              [
+                781.256591796875,
+                956.0493774414062
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            327,
+            187,
+            1077,
+            892
+          ],
+          "iou": 0.52679673,
+          "edge_errors": {
+            "left": 312,
+            "top": 159,
+            "right": 3,
+            "bottom": 78,
+            "mean": 138.0,
+            "maximum": 312
+          },
+          "edge_error_mean_px": 138.0,
+          "edge_error_maximum_px": 312,
+          "elapsed_ms": 27.832,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              327,
+              187,
+              1077,
+              892
+            ],
+            "corners": [
+              [
+                365.8203430175781,
+                891.541015625
+              ],
+              [
+                327.8706359863281,
+                227.7874298095703
+              ],
+              [
+                1038.086669921875,
+                187.18125915527344
+              ],
+              [
+                1076.036376953125,
+                850.934814453125
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            48,
+            1133,
+            943
+          ],
+          "iou": 0.954074,
+          "edge_errors": {
+            "left": 11,
+            "top": 3,
+            "right": 32,
+            "bottom": 2,
+            "mean": 12.0,
+            "maximum": 32
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 32,
+          "elapsed_ms": 47.767,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              73,
+              48,
+              1133,
+              943
+            ],
+            "corners": [
+              [
+                1127.973876953125,
+                942.4622802734375
+              ],
+              [
+                73.30693817138672,
+                936.6680297851562
+              ],
+              [
+                78.18744659423828,
+                48.3155517578125
+              ],
+              [
+                1132.8544921875,
+                54.10980224609375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            34,
+            1177,
+            961
+          ],
+          "iou": 0.9697966,
+          "edge_errors": {
+            "left": 1,
+            "top": 1,
+            "right": 23,
+            "bottom": 7,
+            "mean": 8.0,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 48.063,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              87,
+              34,
+              1177,
+              961
+            ],
+            "corners": [
+              [
+                1175.614990234375,
+                960.6621704101562
+              ],
+              [
+                87.49591064453125,
+                959.624755859375
+              ],
+              [
+                88.37762451171875,
+                34.81982421875
+              ],
+              [
+                1176.496826171875,
+                35.85723876953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.7103023860000803,
+        "search_fraction": 0.36363636363636365
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "0d7165269fe3",
+      "parameter_identity_sha256": "2912a8f23da7d39ba1d1e78ff63f4eae289f950bd4b8d3c6e3e87a8e6b755e03",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "ba17416e0dda",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 1,
+        "bbox_padding_fraction": 0.016
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.79020672,
+        "mean_iou_success": 0.79020672,
+        "minimum_iou": 0.55792562,
+        "stddev_iou": 0.17488341,
+        "mean_edge_error_px": 60.4,
+        "elapsed_ms_total": 189.96,
+        "wall_ms": 191.059
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            123,
+            43,
+            1295,
+            973
+          ],
+          "iou": 0.97288341,
+          "edge_errors": {
+            "left": 2,
+            "top": 13,
+            "right": 6,
+            "bottom": 6,
+            "mean": 6.75,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 6.75,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 58.484,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              123,
+              43,
+              1295,
+              973
+            ],
+            "corners": [
+              [
+                141.2188720703125,
+                956.5289306640625
+              ],
+              [
+                139.3734130859375,
+                61.7166748046875
+              ],
+              [
+                1276.5948486328125,
+                59.37127685546875
+              ],
+              [
+                1278.4403076171875,
+                954.1834716796875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            93,
+            5,
+            798,
+            987
+          ],
+          "iou": 0.59976611,
+          "edge_errors": {
+            "left": 26,
+            "top": 3,
+            "right": 435,
+            "bottom": 10,
+            "mean": 118.5,
+            "maximum": 435
+          },
+          "edge_error_mean_px": 118.5,
+          "edge_error_maximum_px": 435,
+          "elapsed_ms": 40.2,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              93,
+              5,
+              798,
+              987
+            ],
+            "corners": [
+              [
+                149.302734375,
+                982.7767944335938
+              ],
+              [
+                109.7767333984375,
+                48.20970153808594
+              ],
+              [
+                741.7305908203125,
+                21.48225212097168
+              ],
+              [
+                781.256591796875,
+                956.0493774414062
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            311,
+            171,
+            1088,
+            908
+          ],
+          "iou": 0.55792562,
+          "edge_errors": {
+            "left": 296,
+            "top": 143,
+            "right": 14,
+            "bottom": 62,
+            "mean": 128.75,
+            "maximum": 296
+          },
+          "edge_error_mean_px": 128.75,
+          "edge_error_maximum_px": 296,
+          "elapsed_ms": 12.223,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              311,
+              171,
+              1088,
+              908
+            ],
+            "corners": [
+              [
+                365.8203430175781,
+                891.541015625
+              ],
+              [
+                327.8706359863281,
+                227.7874298095703
+              ],
+              [
+                1038.086669921875,
+                187.18125915527344
+              ],
+              [
+                1076.036376953125,
+                850.934814453125
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            57,
+            32,
+            1149,
+            959
+          ],
+          "iou": 0.89414631,
+          "edge_errors": {
+            "left": 27,
+            "top": 19,
+            "right": 48,
+            "bottom": 18,
+            "mean": 28.0,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 28.0,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 29.825,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              57,
+              32,
+              1149,
+              959
+            ],
+            "corners": [
+              [
+                1127.973876953125,
+                942.4622802734375
+              ],
+              [
+                73.30693817138672,
+                936.6680297851562
+              ],
+              [
+                78.18744659423828,
+                48.3155517578125
+              ],
+              [
+                1132.8544921875,
+                54.10980224609375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            71,
+            18,
+            1193,
+            977
+          ],
+          "iou": 0.92631213,
+          "edge_errors": {
+            "left": 17,
+            "top": 15,
+            "right": 39,
+            "bottom": 9,
+            "mean": 20.0,
+            "maximum": 39
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 39,
+          "elapsed_ms": 49.228,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              71,
+              18,
+              1193,
+              977
+            ],
+            "corners": [
+              [
+                1175.614990234375,
+                960.6621704101562
+              ],
+              [
+                87.49591064453125,
+                959.624755859375
+              ],
+              [
+                88.37762451171875,
+                34.81982421875
+              ],
+              [
+                1176.496826171875,
+                35.85723876953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.8693028810000669,
+        "search_fraction": 0.45454545454545453
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "ba17416e0dda",
+      "parameter_identity_sha256": "6975052c315a097ad983f5a4599c5715d161ca48fc4670e2e77b74dbe8889f1b",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "f914375ada78",
+      "parameters": {
+        "ray_count": 180,
+        "minimum_radius_fraction": 0.1,
+        "maximum_radius_fraction": 0.72,
+        "minimum_support_fraction": 0.55,
+        "smoothing_window": 5,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.77562638,
+        "mean_iou_success": 0.77562638,
+        "minimum_iou": 0.39690029,
+        "stddev_iou": 0.24480294,
+        "mean_edge_error_px": 67.25,
+        "elapsed_ms_total": 206.433,
+        "wall_ms": 207.242
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            124,
+            54,
+            1285,
+            962
+          ],
+          "iou": 0.9880861,
+          "edge_errors": {
+            "left": 1,
+            "top": 2,
+            "right": 4,
+            "bottom": 5,
+            "mean": 3.0,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 49.671,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              124,
+              54,
+              1285,
+              962
+            ],
+            "corners": [
+              [
+                133.57373046875,
+                961.0517578125
+              ],
+              [
+                124.021484375,
+                66.98573303222656
+              ],
+              [
+                1275.2784423828125,
+                54.68565368652344
+              ],
+              [
+                1284.8306884765625,
+                948.751708984375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "minimum_radius_fraction": 0.1,
+                "maximum_radius_fraction": 0.72,
+                "minimum_support_fraction": 0.55,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            115,
+            21,
+            793,
+            986
+          ],
+          "iou": 0.57059252,
+          "edge_errors": {
+            "left": 48,
+            "top": 13,
+            "right": 440,
+            "bottom": 9,
+            "mean": 127.5,
+            "maximum": 440
+          },
+          "edge_error_mean_px": 127.5,
+          "edge_error_maximum_px": 440,
+          "elapsed_ms": 37.517,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              115,
+              21,
+              793,
+              986
+            ],
+            "corners": [
+              [
+                168.1737060546875,
+                985.1248168945312
+              ],
+              [
+                115.43280029296875,
+                56.811954498291016
+              ],
+              [
+                739.7586669921875,
+                21.341670989990234
+              ],
+              [
+                792.4995727539062,
+                949.6544799804688
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "minimum_radius_fraction": 0.1,
+                "maximum_radius_fraction": 0.72,
+                "minimum_support_fraction": 0.55,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            370,
+            272,
+            1031,
+            871
+          ],
+          "iou": 0.39690029,
+          "edge_errors": {
+            "left": 355,
+            "top": 244,
+            "right": 43,
+            "bottom": 99,
+            "mean": 185.25,
+            "maximum": 355
+          },
+          "edge_error_mean_px": 185.25,
+          "edge_error_maximum_px": 355,
+          "elapsed_ms": 30.119,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              370,
+              272,
+              1031,
+              871
+            ],
+            "corners": [
+              [
+                376.39764404296875,
+                870.9285888671875
+              ],
+              [
+                370.20233154296875,
+                279.6133728027344
+              ],
+              [
+                1023.8760375976562,
+                272.7648010253906
+              ],
+              [
+                1030.0712890625,
+                864.0799560546875
+              ]
+            ],
+            "confidence": 0.8333333333333334,
+            "score": 0.8333333333333334,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "minimum_radius_fraction": 0.1,
+                "maximum_radius_fraction": 0.72,
+                "minimum_support_fraction": 0.55,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.8333333333333334,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            49,
+            1134,
+            943
+          ],
+          "iou": 0.95424097,
+          "edge_errors": {
+            "left": 11,
+            "top": 2,
+            "right": 33,
+            "bottom": 2,
+            "mean": 12.0,
+            "maximum": 33
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 33,
+          "elapsed_ms": 43.66,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              73,
+              49,
+              1134,
+              943
+            ],
+            "corners": [
+              [
+                1129.0540771484375,
+                942.521484375
+              ],
+              [
+                73.83197021484375,
+                937.2479248046875
+              ],
+              [
+                78.27081298828125,
+                49.052825927734375
+              ],
+              [
+                1133.4927978515625,
+                54.326385498046875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "minimum_radius_fraction": 0.1,
+                "maximum_radius_fraction": 0.72,
+                "minimum_support_fraction": 0.55,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            84,
+            34,
+            1178,
+            963
+          ],
+          "iou": 0.96831201,
+          "edge_errors": {
+            "left": 4,
+            "top": 1,
+            "right": 24,
+            "bottom": 5,
+            "mean": 8.5,
+            "maximum": 24
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 24,
+          "elapsed_ms": 45.466,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              84,
+              34,
+              1178,
+              963
+            ],
+            "corners": [
+              [
+                86.537353515625,
+                962.4605102539062
+              ],
+              [
+                84.238037109375,
+                37.12053298950195
+              ],
+              [
+                1175.0938720703125,
+                34.4099235534668
+              ],
+              [
+                1177.3931884765625,
+                959.7499389648438
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 180,
+                "minimum_radius_fraction": 0.1,
+                "maximum_radius_fraction": 0.72,
+                "minimum_support_fraction": 0.55,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "legacy_parameter_set_id": "f914375ada78",
+      "parameter_identity_sha256": "c85473f8cc12609f86bd432a4d0b845391e1e6191658a0d430b46427bfe7e8b6",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 363,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "reference_roles": [
+        "baseline"
+      ],
+      "requested_search_member": false,
+      "profile": "baseline",
+      "run_id": "run-20260817-045000",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "095537f3b0cd",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 1,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.79805615,
+        "mean_iou_success": 0.79805615,
+        "minimum_iou": 0.54137258,
+        "stddev_iou": 0.19353897,
+        "mean_edge_error_px": 58.55,
+        "elapsed_ms_total": 195.244,
+        "wall_ms": 195.836
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            131,
+            51,
+            1287,
+            965
+          ],
+          "iou": 0.98557472,
+          "edge_errors": {
+            "left": 6,
+            "top": 5,
+            "right": 2,
+            "bottom": 2,
+            "mean": 3.75,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.75,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 36.537,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              131,
+              51,
+              1287,
+              965
+            ],
+            "corners": [
+              [
+                141.2188720703125,
+                956.5289306640625
+              ],
+              [
+                139.3734130859375,
+                61.7166748046875
+              ],
+              [
+                1276.5948486328125,
+                59.37127685546875
+              ],
+              [
+                1278.4403076171875,
+                954.1834716796875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            101,
+            13,
+            790,
+            987
+          ],
+          "iou": 0.5842969,
+          "edge_errors": {
+            "left": 34,
+            "top": 5,
+            "right": 443,
+            "bottom": 10,
+            "mean": 123.0,
+            "maximum": 443
+          },
+          "edge_error_mean_px": 123.0,
+          "edge_error_maximum_px": 443,
+          "elapsed_ms": 30.885,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              101,
+              13,
+              790,
+              987
+            ],
+            "corners": [
+              [
+                149.302734375,
+                982.7767944335938
+              ],
+              [
+                109.7767333984375,
+                48.20970153808594
+              ],
+              [
+                741.7305908203125,
+                21.48225212097168
+              ],
+              [
+                781.256591796875,
+                956.0493774414062
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            319,
+            179,
+            1085,
+            900
+          ],
+          "iou": 0.54137258,
+          "edge_errors": {
+            "left": 304,
+            "top": 151,
+            "right": 11,
+            "bottom": 70,
+            "mean": 134.0,
+            "maximum": 304
+          },
+          "edge_error_mean_px": 134.0,
+          "edge_error_maximum_px": 304,
+          "elapsed_ms": 24.774,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              319,
+              179,
+              1085,
+              900
+            ],
+            "corners": [
+              [
+                365.8203430175781,
+                891.541015625
+              ],
+              [
+                327.8706359863281,
+                227.7874298095703
+              ],
+              [
+                1038.086669921875,
+                187.18125915527344
+              ],
+              [
+                1076.036376953125,
+                850.934814453125
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            65,
+            40,
+            1141,
+            951
+          ],
+          "iou": 0.92337968,
+          "edge_errors": {
+            "left": 19,
+            "top": 11,
+            "right": 40,
+            "bottom": 10,
+            "mean": 20.0,
+            "maximum": 40
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 40,
+          "elapsed_ms": 54.642,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              65,
+              40,
+              1141,
+              951
+            ],
+            "corners": [
+              [
+                1127.973876953125,
+                942.4622802734375
+              ],
+              [
+                73.30693817138672,
+                936.6680297851562
+              ],
+              [
+                78.18744659423828,
+                48.3155517578125
+              ],
+              [
+                1132.8544921875,
+                54.10980224609375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            79,
+            26,
+            1185,
+            969
+          ],
+          "iou": 0.95565689,
+          "edge_errors": {
+            "left": 9,
+            "top": 7,
+            "right": 31,
+            "bottom": 1,
+            "mean": 12.0,
+            "maximum": 31
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 31,
+          "elapsed_ms": 48.406,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              79,
+              26,
+              1185,
+              969
+            ],
+            "corners": [
+              [
+                1175.614990234375,
+                960.6621704101562
+              ],
+              [
+                87.49591064453125,
+                959.624755859375
+              ],
+              [
+                88.37762451171875,
+                34.81982421875
+              ],
+              [
+                1176.496826171875,
+                35.85723876953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 0.6773206310000432,
+        "search_fraction": 0.2727272727272727
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "095537f3b0cd",
+      "parameter_identity_sha256": "9a3cf4158766ad96065c5911ecdbded6ed438dabb62ee8cb276712be9e299a9d",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "0d7165269fe3",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 1,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.79669771,
+        "mean_iou_success": 0.79669771,
+        "minimum_iou": 0.52679673,
+        "stddev_iou": 0.2042595,
+        "mean_edge_error_px": 59.05,
+        "elapsed_ms_total": 224.298,
+        "wall_ms": 227.922
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            139,
+            59,
+            1279,
+            957
+          ],
+          "iou": 0.96540564,
+          "edge_errors": {
+            "left": 14,
+            "top": 3,
+            "right": 10,
+            "bottom": 10,
+            "mean": 9.25,
+            "maximum": 14
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 14,
+          "elapsed_ms": 65.448,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              139,
+              59,
+              1279,
+              957
+            ],
+            "corners": [
+              [
+                141.2188720703125,
+                956.5289306640625
+              ],
+              [
+                139.3734130859375,
+                61.7166748046875
+              ],
+              [
+                1276.5948486328125,
+                59.37127685546875
+              ],
+              [
+                1278.4403076171875,
+                954.1834716796875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            109,
+            21,
+            782,
+            983
+          ],
+          "iou": 0.56741559,
+          "edge_errors": {
+            "left": 42,
+            "top": 13,
+            "right": 451,
+            "bottom": 6,
+            "mean": 128.0,
+            "maximum": 451
+          },
+          "edge_error_mean_px": 128.0,
+          "edge_error_maximum_px": 451,
+          "elapsed_ms": 35.188,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              109,
+              21,
+              782,
+              983
+            ],
+            "corners": [
+              [
+                149.302734375,
+                982.7767944335938
+              ],
+              [
+                109.7767333984375,
+                48.20970153808594
+              ],
+              [
+                741.7305908203125,
+                21.48225212097168
+              ],
+              [
+                781.256591796875,
+                956.0493774414062
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            327,
+            187,
+            1077,
+            892
+          ],
+          "iou": 0.52679673,
+          "edge_errors": {
+            "left": 312,
+            "top": 159,
+            "right": 3,
+            "bottom": 78,
+            "mean": 138.0,
+            "maximum": 312
+          },
+          "edge_error_mean_px": 138.0,
+          "edge_error_maximum_px": 312,
+          "elapsed_ms": 27.832,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              327,
+              187,
+              1077,
+              892
+            ],
+            "corners": [
+              [
+                365.8203430175781,
+                891.541015625
+              ],
+              [
+                327.8706359863281,
+                227.7874298095703
+              ],
+              [
+                1038.086669921875,
+                187.18125915527344
+              ],
+              [
+                1076.036376953125,
+                850.934814453125
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            48,
+            1133,
+            943
+          ],
+          "iou": 0.954074,
+          "edge_errors": {
+            "left": 11,
+            "top": 3,
+            "right": 32,
+            "bottom": 2,
+            "mean": 12.0,
+            "maximum": 32
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 32,
+          "elapsed_ms": 47.767,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              73,
+              48,
+              1133,
+              943
+            ],
+            "corners": [
+              [
+                1127.973876953125,
+                942.4622802734375
+              ],
+              [
+                73.30693817138672,
+                936.6680297851562
+              ],
+              [
+                78.18744659423828,
+                48.3155517578125
+              ],
+              [
+                1132.8544921875,
+                54.10980224609375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            34,
+            1177,
+            961
+          ],
+          "iou": 0.9697966,
+          "edge_errors": {
+            "left": 1,
+            "top": 1,
+            "right": 23,
+            "bottom": 7,
+            "mean": 8.0,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 48.063,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              87,
+              34,
+              1177,
+              961
+            ],
+            "corners": [
+              [
+                1175.614990234375,
+                960.6621704101562
+              ],
+              [
+                87.49591064453125,
+                959.624755859375
+              ],
+              [
+                88.37762451171875,
+                34.81982421875
+              ],
+              [
+                1176.496826171875,
+                35.85723876953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.0
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.7103023860000803,
+        "search_fraction": 0.36363636363636365
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "0d7165269fe3",
+      "parameter_identity_sha256": "2912a8f23da7d39ba1d1e78ff63f4eae289f950bd4b8d3c6e3e87a8e6b755e03",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "ba17416e0dda",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 1,
+        "bbox_padding_fraction": 0.016
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.79020672,
+        "mean_iou_success": 0.79020672,
+        "minimum_iou": 0.55792562,
+        "stddev_iou": 0.17488341,
+        "mean_edge_error_px": 60.4,
+        "elapsed_ms_total": 189.96,
+        "wall_ms": 191.059
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            123,
+            43,
+            1295,
+            973
+          ],
+          "iou": 0.97288341,
+          "edge_errors": {
+            "left": 2,
+            "top": 13,
+            "right": 6,
+            "bottom": 6,
+            "mean": 6.75,
+            "maximum": 13
+          },
+          "edge_error_mean_px": 6.75,
+          "edge_error_maximum_px": 13,
+          "elapsed_ms": 58.484,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              123,
+              43,
+              1295,
+              973
+            ],
+            "corners": [
+              [
+                141.2188720703125,
+                956.5289306640625
+              ],
+              [
+                139.3734130859375,
+                61.7166748046875
+              ],
+              [
+                1276.5948486328125,
+                59.37127685546875
+              ],
+              [
+                1278.4403076171875,
+                954.1834716796875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            93,
+            5,
+            798,
+            987
+          ],
+          "iou": 0.59976611,
+          "edge_errors": {
+            "left": 26,
+            "top": 3,
+            "right": 435,
+            "bottom": 10,
+            "mean": 118.5,
+            "maximum": 435
+          },
+          "edge_error_mean_px": 118.5,
+          "edge_error_maximum_px": 435,
+          "elapsed_ms": 40.2,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              93,
+              5,
+              798,
+              987
+            ],
+            "corners": [
+              [
+                149.302734375,
+                982.7767944335938
+              ],
+              [
+                109.7767333984375,
+                48.20970153808594
+              ],
+              [
+                741.7305908203125,
+                21.48225212097168
+              ],
+              [
+                781.256591796875,
+                956.0493774414062
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            311,
+            171,
+            1088,
+            908
+          ],
+          "iou": 0.55792562,
+          "edge_errors": {
+            "left": 296,
+            "top": 143,
+            "right": 14,
+            "bottom": 62,
+            "mean": 128.75,
+            "maximum": 296
+          },
+          "edge_error_mean_px": 128.75,
+          "edge_error_maximum_px": 296,
+          "elapsed_ms": 12.223,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              311,
+              171,
+              1088,
+              908
+            ],
+            "corners": [
+              [
+                365.8203430175781,
+                891.541015625
+              ],
+              [
+                327.8706359863281,
+                227.7874298095703
+              ],
+              [
+                1038.086669921875,
+                187.18125915527344
+              ],
+              [
+                1076.036376953125,
+                850.934814453125
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            57,
+            32,
+            1149,
+            959
+          ],
+          "iou": 0.89414631,
+          "edge_errors": {
+            "left": 27,
+            "top": 19,
+            "right": 48,
+            "bottom": 18,
+            "mean": 28.0,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 28.0,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 29.825,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              57,
+              32,
+              1149,
+              959
+            ],
+            "corners": [
+              [
+                1127.973876953125,
+                942.4622802734375
+              ],
+              [
+                73.30693817138672,
+                936.6680297851562
+              ],
+              [
+                78.18744659423828,
+                48.3155517578125
+              ],
+              [
+                1132.8544921875,
+                54.10980224609375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            71,
+            18,
+            1193,
+            977
+          ],
+          "iou": 0.92631213,
+          "edge_errors": {
+            "left": 17,
+            "top": 15,
+            "right": 39,
+            "bottom": 9,
+            "mean": 20.0,
+            "maximum": 39
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 39,
+          "elapsed_ms": 49.228,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              71,
+              18,
+              1193,
+              977
+            ],
+            "corners": [
+              [
+                1175.614990234375,
+                960.6621704101562
+              ],
+              [
+                87.49591064453125,
+                959.624755859375
+              ],
+              [
+                88.37762451171875,
+                34.81982421875
+              ],
+              [
+                1176.496826171875,
+                35.85723876953125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 1,
+                "bbox_padding_fraction": 0.016
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.8693028810000669,
+        "search_fraction": 0.45454545454545453
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "ba17416e0dda",
+      "parameter_identity_sha256": "6975052c315a097ad983f5a4599c5715d161ca48fc4670e2e77b74dbe8889f1b",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "53cf691df4c6",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 9,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.76615084,
+        "mean_iou_success": 0.76615084,
+        "minimum_iou": 0.39002464,
+        "stddev_iou": 0.23637131,
+        "mean_edge_error_px": 69.65,
+        "elapsed_ms_total": 174.547,
+        "wall_ms": 175.103
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            144,
+            59,
+            1288,
+            960
+          ],
+          "iou": 0.97202953,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 1,
+            "bottom": 7,
+            "mean": 7.5,
+            "maximum": 19
+          },
+          "edge_error_mean_px": 7.5,
+          "edge_error_maximum_px": 19,
+          "elapsed_ms": 40.572,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              144,
+              59,
+              1288,
+              960
+            ],
+            "corners": [
+              [
+                1276.552490234375,
+                951.5267944335938
+              ],
+              [
+                152.6006317138672,
+                948.3024291992188
+              ],
+              [
+                155.1286163330078,
+                67.08770751953125
+              ],
+              [
+                1279.08056640625,
+                70.31207275390625
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 9,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            117,
+            16,
+            808,
+            987
+          ],
+          "iou": 0.58415907,
+          "edge_errors": {
+            "left": 50,
+            "top": 8,
+            "right": 425,
+            "bottom": 10,
+            "mean": 123.25,
+            "maximum": 425
+          },
+          "edge_error_mean_px": 123.25,
+          "edge_error_maximum_px": 425,
+          "elapsed_ms": 41.955,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              117,
+              16,
+              808,
+              987
+            ],
+            "corners": [
+              [
+                193.63238525390625,
+                981.3603515625
+              ],
+              [
+                125.6741943359375,
+                70.18977355957031
+              ],
+              [
+                731.7520751953125,
+                24.98643684387207
+              ],
+              [
+                799.7102661132812,
+                936.156982421875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 9,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            388,
+            281,
+            1073,
+            849
+          ],
+          "iou": 0.39002464,
+          "edge_errors": {
+            "left": 373,
+            "top": 253,
+            "right": 1,
+            "bottom": 121,
+            "mean": 187.0,
+            "maximum": 373
+          },
+          "edge_error_mean_px": 187.0,
+          "edge_error_maximum_px": 373,
+          "elapsed_ms": 27.648,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              388,
+              281,
+              1073,
+              849
+            ],
+            "corners": [
+              [
+                439.9237365722656,
+                840.8287963867188
+              ],
+              [
+                396.9436340332031,
+                343.04132080078125
+              ],
+              [
+                1021.28955078125,
+                289.13385009765625
+              ],
+              [
+                1064.2696533203125,
+                786.9213256835938
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 9,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            41,
+            1140,
+            948
+          ],
+          "iou": 0.92917901,
+          "edge_errors": {
+            "left": 18,
+            "top": 10,
+            "right": 39,
+            "bottom": 7,
+            "mean": 18.5,
+            "maximum": 39
+          },
+          "edge_error_mean_px": 18.5,
+          "edge_error_maximum_px": 39,
+          "elapsed_ms": 27.999,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              66,
+              41,
+              1140,
+              948
+            ],
+            "corners": [
+              [
+                1127.059326171875,
+                939.3658447265625
+              ],
+              [
+                74.57164001464844,
+                933.685546875
+              ],
+              [
+                79.34156799316406,
+                49.867095947265625
+              ],
+              [
+                1131.829345703125,
+                55.547332763671875
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 9,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            82,
+            24,
+            1186,
+            969
+          ],
+          "iou": 0.95536194,
+          "edge_errors": {
+            "left": 6,
+            "top": 9,
+            "right": 32,
+            "bottom": 1,
+            "mean": 12.0,
+            "maximum": 32
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 32,
+          "elapsed_ms": 36.373,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              82,
+              24,
+              1186,
+              969
+            ],
+            "corners": [
+              [
+                1173.0706787109375,
+                960.5863037109375
+              ],
+              [
+                90.21866607666016,
+                955.111083984375
+              ],
+              [
+                94.88558197021484,
+                32.124298095703125
+              ],
+              [
+                1177.7376708984375,
+                37.599517822265625
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 9,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 1.2946501139999782,
+        "search_fraction": 0.8181818181818182
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "53cf691df4c6",
+      "parameter_identity_sha256": "02ee5919558b15f49091c456e11d821b98c265b4a34550bea6673150cba274db",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 7,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 6,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "6f61e79a4b7e",
+      "parameters": {
+        "ray_count": 90,
+        "minimum_radius_fraction": 0.05,
+        "maximum_radius_fraction": 0.6,
+        "minimum_support_fraction": 0.4,
+        "smoothing_window": 5,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.7649611,
+        "mean_iou_success": 0.7649611,
+        "minimum_iou": 0.39603921,
+        "stddev_iou": 0.2415555,
+        "mean_edge_error_px": 69.9,
+        "elapsed_ms_total": 231.951,
+        "wall_ms": 232.519
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            133,
+            55,
+            1286,
+            963
+          ],
+          "iou": 0.98512939,
+          "edge_errors": {
+            "left": 8,
+            "top": 1,
+            "right": 3,
+            "bottom": 4,
+            "mean": 4.0,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 4.0,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 54.331,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              133,
+              55,
+              1286,
+              963
+            ],
+            "corners": [
+              [
+                1275.9176025390625,
+                954.5318603515625
+              ],
+              [
+                141.70693969726562,
+                952.8045654296875
+              ],
+              [
+                143.06161499023438,
+                63.28912353515625
+              ],
+              [
+                1277.2723388671875,
+                65.01641845703125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                730.9439311637744,
+                493.00481447654454
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            122,
+            17,
+            778,
+            978
+          ],
+          "iou": 0.55705832,
+          "edge_errors": {
+            "left": 55,
+            "top": 9,
+            "right": 455,
+            "bottom": 1,
+            "mean": 130.0,
+            "maximum": 455
+          },
+          "edge_error_mean_px": 130.0,
+          "edge_error_maximum_px": 455,
+          "elapsed_ms": 45.539,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              122,
+              17,
+              778,
+              978
+            ],
+            "corners": [
+              [
+                159.67974853515625,
+                969.9149169921875
+              ],
+              [
+                130.6822509765625,
+                45.085655212402344
+              ],
+              [
+                740.4201049804688,
+                25.967687606811523
+              ],
+              [
+                769.4176025390625,
+                950.7969970703125
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                495.9190730617126,
+                476.3536897811752
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            387,
+            268,
+            1051,
+            863
+          ],
+          "iou": 0.39603921,
+          "edge_errors": {
+            "left": 372,
+            "top": 240,
+            "right": 23,
+            "bottom": 107,
+            "mean": 185.5,
+            "maximum": 372
+          },
+          "edge_error_mean_px": 185.5,
+          "edge_error_maximum_px": 372,
+          "elapsed_ms": 26.626,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              387,
+              268,
+              1051,
+              863
+            ],
+            "corners": [
+              [
+                416.1362609863281,
+                854.1776123046875
+              ],
+              [
+                395.1671447753906,
+                300.44268798828125
+              ],
+              [
+                1021.30322265625,
+                276.7318115234375
+              ],
+              [
+                1042.2723388671875,
+                830.4666748046875
+              ]
+            ],
+            "confidence": 0.9222222222222223,
+            "score": 0.9222222222222223,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                658.6443188091295,
+                549.0669483943426
+              ],
+              "ray_support_fraction": 0.9222222222222223,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            66,
+            42,
+            1140,
+            948
+          ],
+          "iou": 0.9302046,
+          "edge_errors": {
+            "left": 18,
+            "top": 9,
+            "right": 39,
+            "bottom": 7,
+            "mean": 18.25,
+            "maximum": 39
+          },
+          "edge_error_mean_px": 18.25,
+          "edge_error_maximum_px": 39,
+          "elapsed_ms": 51.887,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              66,
+              42,
+              1140,
+              948
+            ],
+            "corners": [
+              [
+                1127.6612548828125,
+                939.7518310546875
+              ],
+              [
+                74.98177337646484,
+                935.2401123046875
+              ],
+              [
+                78.77481842041016,
+                50.250823974609375
+              ],
+              [
+                1131.4542236328125,
+                54.762603759765625
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                601.8877938894502,
+                495.16681350131074
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            80,
+            26,
+            1184,
+            970
+          ],
+          "iou": 0.95637397,
+          "edge_errors": {
+            "left": 8,
+            "top": 7,
+            "right": 30,
+            "bottom": 2,
+            "mean": 11.75,
+            "maximum": 30
+          },
+          "edge_error_mean_px": 11.75,
+          "edge_error_maximum_px": 30,
+          "elapsed_ms": 53.568,
+          "candidate": {
+            "method": "star_convex",
+            "bbox": [
+              80,
+              26,
+              1184,
+              970
+            ],
+            "corners": [
+              [
+                90.3310546875,
+                961.348388671875
+              ],
+              [
+                88.1912841796875,
+                37.25089645385742
+              ],
+              [
+                1173.2415771484375,
+                34.73842239379883
+              ],
+              [
+                1175.38134765625,
+                958.8359375
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "ray_count": 90,
+                "minimum_radius_fraction": 0.05,
+                "maximum_radius_fraction": 0.6,
+                "minimum_support_fraction": 0.4,
+                "smoothing_window": 5,
+                "bbox_padding_fraction": 0.008
+              },
+              "center": [
+                630.8134646147842,
+                496.8713775811989
+              ],
+              "ray_support_fraction": 1.0,
+              "evidence": "star_convex_mask_boundary"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 1.099795853000046,
+        "search_fraction": 0.6363636363636364
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "legacy_parameter_set_id": "6f61e79a4b7e",
+      "parameter_identity_sha256": "600cab21b6987b99e87c709df5ab2ab88e331d4eb45765e6e310322ee0135935",
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "cd0f10a566e7e5d6041a22105b54596ba9376cec24b532b3c72458adec6768cc",
+      "profile": null,
+      "run_id": "run-20260817-045000",
+      "rank": 7,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 4
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.9880861,
+        "winner_iou": 0.97611854,
+        "delta_iou": -0.01196756,
+        "status": "Regressed",
+        "parameter_set": "024732f5e631",
+        "parameter_set_id": "024732f5e631",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.96831201,
+        "winner_iou": 0.9616864,
+        "delta_iou": -0.00662561,
+        "status": "Regressed",
+        "parameter_set": "024732f5e631",
+        "parameter_set_id": "024732f5e631",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.95424097,
+        "winner_iou": 0.95227725,
+        "delta_iou": -0.00196372,
+        "status": "Regressed",
+        "parameter_set": "024732f5e631",
+        "parameter_set_id": "024732f5e631",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.39690029,
+        "winner_iou": 0.66263767,
+        "delta_iou": 0.26573738,
+        "status": "Improved",
+        "parameter_set": "024732f5e631",
+        "parameter_set_id": "024732f5e631",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.57059252,
+        "winner_iou": 0.53666137,
+        "delta_iou": -0.03393115,
+        "status": "Regressed",
+        "parameter_set": "024732f5e631",
+        "parameter_set_id": "024732f5e631",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000000720",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16765374464,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "da067f626f3d27305c12eb202359612cbee3ba4b",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "31995021264",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "73e6f6f3b89d9aad99c1303cb24bd751503af508",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 195153920,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": false,
+    "evidence_source": null,
+    "evidence_precompute_seconds": null
+  },
+  "progress": {
+    "estimated_parameter_sets": 11,
+    "completed_parameter_sets": 11,
+    "average_eval_rate": 7.806297791064007,
+    "failures": 0,
+    "best_mean_iou": 0.81787625,
+    "best_worst_page_iou": 0.55792562,
+    "best_stddev_iou": 0.17488341,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 3,
+    "stddev_improvements": 2,
+    "total_metric_improvements": 6,
+    "parameter_sets_with_improvements": 3,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 0.4788865059999807,
+    "winner_last_changed_elapsed_seconds": 0.4788865059999807,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "024732f5e631",
+        "parameter_short_name": "historic-best",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.4788865059999807,
+        "search_fraction": 0.18181818181818182
+      }
+    ],
+    "last_improvement_elapsed_seconds": 0.8693028810000669,
+    "time_since_last_improvement_seconds": 0.5398157939999919
+  }
+}
