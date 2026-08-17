@@ -1,0 +1,385 @@
+{
+  "available": true,
+  "calibration_confidence": {
+    "rating": "Low",
+    "reasons": [
+      "partial or adaptive search",
+      "many parameter sets failed at least one page",
+      "broad near-best basin",
+      "small calibration sample"
+    ]
+  },
+  "calibration_identity": {
+    "build": {
+      "event": "workflow_dispatch",
+      "github_run_attempt": "1",
+      "github_run_id": "32061864190",
+      "github_run_number": "496",
+      "mode": "smoke",
+      "pipeline_commit": "87778a0b83761c87615c1528c761500b492ca1f1",
+      "ref": "refs/heads/main",
+      "repository": "dlstupka/hth",
+      "run_time_seconds": 0.288,
+      "run_url": "https://github.com/dlstupka/hth/actions/runs/32061864190",
+      "workflow": "HTH detector regression"
+    },
+    "calibration_run_id": "run-20260817-194747",
+    "calibration_schema_version": "1.1",
+    "created_at_utc": "2026-08-17T19:47:47.422496+00:00",
+    "detector_configuration": {
+      "configuration": "hth-pipeline/config/detectors/whitespace_frame.json",
+      "detector_id": "whitespace_frame",
+      "sha256": "485dbaeaff38b95721203f27a54c3f9d70c0db07ce36a07001869c6cb9b1a8f9"
+    },
+    "golden_set": {
+      "collection_id": "HTH-0001",
+      "configuration": "hth-pipeline/config/golden_set.json",
+      "description": "Manually approved representative pages for Stage 2 regression testing.",
+      "page_count": 5,
+      "page_ordinals": [
+        1,
+        5,
+        6,
+        9,
+        10
+      ],
+      "schema_version": "0.1",
+      "sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e"
+    },
+    "pipeline": {
+      "commit": "87778a0b83761c87615c1528c761500b492ca1f1",
+      "opencv": "4.14.0",
+      "python": "3.12.0",
+      "source_commit": "c40dd8599f2263d6af877084d20b9a13769e8c2b"
+    },
+    "source_document": {
+      "image_count": 929,
+      "title": "Baptisms: San Antonio. Baptism Records 1788\u20131824, 1858\u20131898"
+    }
+  },
+  "calibration_status": "provisional",
+  "detector": "whitespace_frame",
+  "detector_evidence": {
+    "detector_id": "whitespace_frame",
+    "evidence_sources": [
+      {
+        "function": "Primary",
+        "interpretation": "Measures whether the image perimeter is dominated by background.",
+        "source": "Border whitespace"
+      },
+      {
+        "function": "Generator",
+        "interpretation": "Inverts the surrounding whitespace to isolate the enclosed page region.",
+        "source": "Negative-space segmentation"
+      },
+      {
+        "function": "Geometry",
+        "interpretation": "Fits an oriented rectangle to the dominant non-background region.",
+        "source": "Page envelope"
+      }
+    ],
+    "friendly_name": "Whitespace Frame",
+    "role": "Generator",
+    "short_name": "Whitespace Frame"
+  },
+  "detector_selection_intelligence": {
+    "applicability": {
+      "detector_configuration": {
+        "configuration": "hth-pipeline/config/detectors/whitespace_frame.json",
+        "detector_id": "whitespace_frame",
+        "sha256": "485dbaeaff38b95721203f27a54c3f9d70c0db07ce36a07001869c6cb9b1a8f9"
+      },
+      "golden_set": {
+        "collection_id": "HTH-0001",
+        "configuration": "hth-pipeline/config/golden_set.json",
+        "description": "Manually approved representative pages for Stage 2 regression testing.",
+        "page_count": 5,
+        "page_ordinals": [
+          1,
+          5,
+          6,
+          9,
+          10
+        ],
+        "schema_version": "0.1",
+        "sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e"
+      },
+      "revalidate_when": [
+        "source document changes",
+        "Golden Set changes",
+        "detector configuration changes",
+        "effect-size policy changes"
+      ],
+      "source_document": {
+        "image_count": 929,
+        "title": "Baptisms: San Antonio. Baptism Records 1788\u20131824, 1858\u20131898"
+      }
+    },
+    "avg_iou_success": 0.0,
+    "best_avg_iou": 0.0,
+    "calibration_evidence": {
+      "rating": "Low",
+      "reasons": [
+        "partial or adaptive search",
+        "many parameter sets failed at least one page",
+        "broad near-best basin",
+        "small calibration sample"
+      ]
+    },
+    "equivalent_best_coverage": 1.0,
+    "failure_count": 5,
+    "minimum_iou": 0.0,
+    "near_best_coverage": 1.0,
+    "recommended_detector_id": "whitespace_frame",
+    "recommended_parameter_set_id": "9ef715dda063",
+    "recommended_parameters": {
+      "background_threshold": 245,
+      "bbox_padding_fraction": 0.0,
+      "close_kernel_fraction": 0.01,
+      "maximum_page_area_fraction": 0.98,
+      "minimum_border_background_fraction": 0.55,
+      "minimum_page_area_fraction": 0.18
+    },
+    "recommended_search_domains": [],
+    "stddev_iou": 0.0
+  },
+  "domain_space": {},
+  "domain_space_intelligence": {
+    "available_domains": [],
+    "default_strategy": "exhaustive",
+    "domains": {},
+    "fallback_order": [
+      "critical",
+      "important_plus",
+      "moderate_plus",
+      "low_plus",
+      "non_dormant",
+      "exhaustive"
+    ],
+    "scope": "Golden Set and detector configuration specific"
+  },
+  "interaction_method": {
+    "note": "Pairwise interaction importance is estimated from a deterministic sample and is exploratory, not causal.",
+    "parameters_considered": [],
+    "sample_size": 10,
+    "sample_step": 1
+  },
+  "interactions": [],
+  "landscape": {
+    "best_mean_iou": 0.0,
+    "equivalent_tolerance": 0.0001,
+    "equivalent_winner_count": 10,
+    "equivalent_winner_share": 1.0,
+    "mean_mean_iou": 0.0,
+    "median_mean_iou": 0.0,
+    "minimum_mean_iou": 0.0,
+    "near_best_count": 10,
+    "near_best_share": 1.0,
+    "near_best_tolerance": 0.001,
+    "p90_mean_iou": 0.0,
+    "p95_mean_iou": 0.0,
+    "p99_mean_iou": 0.0,
+    "stddev_mean_iou": 0.0
+  },
+  "measurement_state": {
+    "failure_reason_counts": {
+      "border_not_background": 50
+    },
+    "informative": false,
+    "page_evaluations": 50,
+    "positive_iou_page_evaluations": 0,
+    "reason": "No page evaluation produced a valid detector candidate.",
+    "status": "no_valid_measurements",
+    "successful_page_evaluations": 0
+  },
+  "page_sensitivity": [
+    {
+      "global_ordinal": 1,
+      "maximum_iou": 0.0,
+      "mean_iou": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "success_rate": 0.0
+    },
+    {
+      "global_ordinal": 5,
+      "maximum_iou": 0.0,
+      "mean_iou": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "success_rate": 0.0
+    },
+    {
+      "global_ordinal": 6,
+      "maximum_iou": 0.0,
+      "mean_iou": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "success_rate": 0.0
+    },
+    {
+      "global_ordinal": 9,
+      "maximum_iou": 0.0,
+      "mean_iou": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "success_rate": 0.0
+    },
+    {
+      "global_ordinal": 10,
+      "maximum_iou": 0.0,
+      "mean_iou": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "success_rate": 0.0
+    }
+  ],
+  "parameter_influence": [],
+  "parameter_intelligence": {
+    "active_parameters": [],
+    "classification_thresholds": {
+      "critical": {
+        "eta_squared_minimum": 0.25
+      },
+      "dormant": {
+        "eta_squared_below": 0.001,
+        "or_avg_iou_range_below": 0.0001
+      },
+      "important": {
+        "eta_squared_minimum": 0.1
+      },
+      "low": {
+        "eta_squared_minimum": 0.001
+      },
+      "moderate": {
+        "eta_squared_minimum": 0.03
+      }
+    },
+    "dormant_parameters": [],
+    "effect_size_method": "one-way eta-squared over Avg IoU",
+    "interaction_method": {
+      "note": "Pairwise interaction importance is estimated from a deterministic sample and is exploratory, not causal.",
+      "parameters_considered": [],
+      "sample_size": 10,
+      "sample_step": 1
+    },
+    "interactions": [],
+    "page_sensitivity": [
+      {
+        "global_ordinal": 1,
+        "maximum_iou": 0.0,
+        "mean_iou": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "success_rate": 0.0
+      },
+      {
+        "global_ordinal": 5,
+        "maximum_iou": 0.0,
+        "mean_iou": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "success_rate": 0.0
+      },
+      {
+        "global_ordinal": 6,
+        "maximum_iou": 0.0,
+        "mean_iou": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "success_rate": 0.0
+      },
+      {
+        "global_ordinal": 9,
+        "maximum_iou": 0.0,
+        "mean_iou": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "success_rate": 0.0
+      },
+      {
+        "global_ordinal": 10,
+        "maximum_iou": 0.0,
+        "mean_iou": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "success_rate": 0.0
+      }
+    ],
+    "parameters": []
+  },
+  "persistence": {
+    "index": "calibration-index.json",
+    "published_at_utc": "2026-08-17T19:48:58.232307Z",
+    "record_path": "source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/whitespace_frame/run-20260817-194747",
+    "store": "results-repository"
+  },
+  "recommendations": {
+    "dormant_parameters": [],
+    "note": "Dormant parameters may be omitted from future searches for this Golden Set, but should be re-evaluated when the Golden Set changes.",
+    "retain_for_revalidation": false
+  },
+  "regression_metadata": {
+    "average_eval_rate": 357.8948461520626,
+    "configured_threads": 76,
+    "detector_pipeline": {
+      "exact_execution_shape": true,
+      "execution_shape_source": "preferred-multidetector-short-occupancy",
+      "execution_thread_budget": "384",
+      "loading_strategy": "lpt",
+      "pipeline_count": 5,
+      "pipeline_number": 3,
+      "queue_position": "38",
+      "ranked_quality": "0.00000000",
+      "runtime_estimate_seconds": "0.321",
+      "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+      "stagger_minutes": 0
+    },
+    "evaluated_parameter_sets": 10,
+    "execution_environment": {
+      "available_cpu_count": 192,
+      "cpu_model": "AMD EPYC 9655 96-Core Processor",
+      "execution_target": "GitHub Hosted",
+      "github_repository": "dlstupka/hth",
+      "github_run_attempt": "1",
+      "github_run_id": "32061864190",
+      "github_runner_labels": [
+        "self-hosted",
+        "192t"
+      ],
+      "logical_cpu_count": 192,
+      "machine_name": "atlhwe-lsf321",
+      "memory_bytes": 1622717120512,
+      "memory_gib": 1511.27,
+      "numpy_version": "2.4.6",
+      "opencv_version": "4.14.0",
+      "physical_core_count": 192,
+      "pipeline_commit": "87778a0b83761c87615c1528c761500b492ca1f1",
+      "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+      "python_version": "3.12.0",
+      "runner_arch": "X64",
+      "runner_environment": "self-hosted",
+      "runner_name": "rh8-al321",
+      "runner_os": "Linux",
+      "smt_enabled": false
+    },
+    "failed_page_evaluations": 50,
+    "golden_set_pages": 5,
+    "page_evaluations": 50,
+    "planned_parameter_sets": 10,
+    "possible_parameter_sets": 730,
+    "requested_strategy": "exhaustive",
+    "resolved_strategy": "exhaustive",
+    "strategy_fallback_reason": null
+  },
+  "schema_version": "1.1",
+  "scope_note": "All conclusions are specific to the evaluated Golden Set and configured parameter grid.",
+  "search": {
+    "exhaustive_complete": false,
+    "fully_successful_parameter_sets": 0,
+    "fully_successful_rate": 0.0,
+    "parameter_sets": 10,
+    "possible_parameter_sets": 730,
+    "strategy": "exhaustive"
+  }
+}
