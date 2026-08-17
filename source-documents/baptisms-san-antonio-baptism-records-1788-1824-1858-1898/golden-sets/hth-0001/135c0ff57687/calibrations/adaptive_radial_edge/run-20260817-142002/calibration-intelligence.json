@@ -11,21 +11,21 @@
   },
   "calibration_identity": {
     "build": {
-      "event": "workflow_dispatch",
+      "event": "push",
       "github_run_attempt": "1",
-      "github_run_id": "32038376525",
-      "github_run_number": "471",
+      "github_run_id": "32035828539",
+      "github_run_number": "468",
       "mode": "smoke",
-      "pipeline_commit": "238d1eb534ba99d978918c53f0386b27e654e3d2",
+      "pipeline_commit": "a9a101a2d89616d1be42770260bb792d777cc282",
       "ref": "refs/heads/main",
       "repository": "dlstupka/hth",
-      "run_time_seconds": 4.926,
-      "run_url": "https://github.com/dlstupka/hth/actions/runs/32038376525",
+      "run_time_seconds": 17.197,
+      "run_url": "https://github.com/dlstupka/hth/actions/runs/32035828539",
       "workflow": "HTH detector regression"
     },
     "calibration_run_id": "run-20260817-142002",
     "calibration_schema_version": "1.1",
-    "created_at_utc": "2026-08-17T14:20:02.374050+00:00",
+    "created_at_utc": "2026-08-17T14:20:02.539029+00:00",
     "detector_configuration": {
       "configuration": "hth-pipeline/config/detectors/adaptive_radial_edge.json",
       "detector_id": "adaptive_radial_edge",
@@ -47,9 +47,9 @@
       "sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e"
     },
     "pipeline": {
-      "commit": "238d1eb534ba99d978918c53f0386b27e654e3d2",
+      "commit": "a9a101a2d89616d1be42770260bb792d777cc282",
       "opencv": "4.14.0",
-      "python": "3.12.0",
+      "python": "3.12.13",
       "source_commit": "208ee10c0cb78adb9ba024cc8b7affb06b777cf4"
     },
     "source_document": {
@@ -1345,7 +1345,7 @@
   },
   "persistence": {
     "index": "calibration-index.json",
-    "published_at_utc": "2026-08-17T14:22:04.352664Z",
+    "published_at_utc": "2026-08-17T14:22:28.846988Z",
     "record_path": "source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_radial_edge/run-20260817-142002",
     "store": "results-repository"
   },
@@ -1364,48 +1364,47 @@
     "retain_for_revalidation": true
   },
   "regression_metadata": {
-    "average_eval_rate": 2.9443445231294567,
-    "configured_threads": 76,
+    "average_eval_rate": 0.8760334223535428,
+    "configured_threads": 2,
     "detector_pipeline": {
-      "exact_execution_shape": true,
-      "execution_shape_source": "preferred-multidetector-short-occupancy",
-      "execution_thread_budget": "384",
+      "exact_execution_shape": false,
+      "execution_shape_source": "auto",
+      "execution_thread_budget": "8",
       "loading_strategy": "lpt",
-      "pipeline_count": 5,
+      "pipeline_count": 4,
       "pipeline_number": 4,
-      "queue_position": "12",
+      "queue_position": "14",
       "ranked_quality": "0.97261920",
-      "runtime_estimate_seconds": "4.914",
-      "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+      "runtime_estimate_seconds": "9.500",
+      "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
       "stagger_minutes": 0
     },
     "evaluated_parameter_sets": 11,
     "execution_environment": {
-      "available_cpu_count": 192,
-      "cpu_model": "AMD EPYC 9655 96-Core Processor",
+      "available_cpu_count": 4,
+      "cpu_model": "AMD EPYC 9V74 80-Core Processor",
       "execution_target": "GitHub Hosted",
       "github_repository": "dlstupka/hth",
       "github_run_attempt": "1",
-      "github_run_id": "32038376525",
+      "github_run_id": "32035828539",
       "github_runner_labels": [
-        "self-hosted",
-        "192t"
+        "ubuntu-latest"
       ],
-      "logical_cpu_count": 192,
-      "machine_name": "atlhwe-lsf318",
-      "memory_bytes": 1622717140992,
-      "memory_gib": 1511.27,
+      "logical_cpu_count": 4,
+      "machine_name": "runnervmzvulz",
+      "memory_bytes": 16766414848,
+      "memory_gib": 15.61,
       "numpy_version": "2.4.6",
       "opencv_version": "4.14.0",
-      "physical_core_count": 192,
-      "pipeline_commit": "238d1eb534ba99d978918c53f0386b27e654e3d2",
-      "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
-      "python_version": "3.12.0",
+      "physical_core_count": 2,
+      "pipeline_commit": "a9a101a2d89616d1be42770260bb792d777cc282",
+      "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+      "python_version": "3.12.13",
       "runner_arch": "X64",
-      "runner_environment": "self-hosted",
-      "runner_name": "rh8-al318",
+      "runner_environment": "github-hosted",
+      "runner_name": "GitHub Actions 1000000734",
       "runner_os": "Linux",
-      "smt_enabled": false
+      "smt_enabled": true
     },
     "failed_page_evaluations": 0,
     "golden_set_pages": 5,
