@@ -5,7 +5,7 @@
   "strategy": "exhaustive",
   "requested_strategy": "exhaustive",
   "strategy_fallback_reason": null,
-  "threads": 76,
+  "threads": 2,
   "shard": {
     "index": 0,
     "count": 1,
@@ -13,17 +13,17 @@
     "full_candidate_count": 9
   },
   "detector_pipeline": {
-    "pipeline_count": 5,
+    "pipeline_count": 4,
     "pipeline_number": 4,
     "stagger_minutes": 0,
     "loading_strategy": "lpt",
     "runtime_estimate_seconds": "42.924",
-    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
     "queue_position": "4",
     "ranked_quality": "0.87682013",
-    "execution_shape_source": "preferred-multidetector-short-occupancy",
-    "exact_execution_shape": true,
-    "execution_thread_budget": "384"
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
   },
   "parameter_space": {
     "possible_parameter_sets": 6562,
@@ -77,8 +77,8 @@
       "minimum_iou": 0.75890607,
       "stddev_iou": 0.07335619,
       "mean_edge_error_px": 34.8,
-      "elapsed_ms_total": 30340.168,
-      "wall_ms": 30341.403
+      "elapsed_ms_total": 59868.205,
+      "wall_ms": 59878.263
     },
     "pages": [
       {
@@ -109,7 +109,7 @@
         },
         "edge_error_mean_px": 43.25,
         "edge_error_maximum_px": 93,
-        "elapsed_ms": 1884.0,
+        "elapsed_ms": 4382.054,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -239,7 +239,7 @@
         },
         "edge_error_mean_px": 42.5,
         "edge_error_maximum_px": 83,
-        "elapsed_ms": 2586.876,
+        "elapsed_ms": 5605.278,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -369,7 +369,7 @@
         },
         "edge_error_mean_px": 65.0,
         "edge_error_maximum_px": 125,
-        "elapsed_ms": 23577.095,
+        "elapsed_ms": 45608.432,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -499,7 +499,7 @@
         },
         "edge_error_mean_px": 9.25,
         "edge_error_maximum_px": 18,
-        "elapsed_ms": 1166.766,
+        "elapsed_ms": 2174.408,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -629,7 +629,7 @@
         },
         "edge_error_mean_px": 14.0,
         "edge_error_maximum_px": 20,
-        "elapsed_ms": 1125.431,
+        "elapsed_ms": 2098.033,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -773,8 +773,8 @@
       "minimum_iou": 0.75890607,
       "stddev_iou": 0.07335619,
       "mean_edge_error_px": 34.8,
-      "elapsed_ms_total": 30340.168,
-      "wall_ms": 30341.403
+      "elapsed_ms_total": 59868.205,
+      "wall_ms": 59878.263
     },
     "pages": [
       {
@@ -805,7 +805,7 @@
         },
         "edge_error_mean_px": 43.25,
         "edge_error_maximum_px": 93,
-        "elapsed_ms": 1884.0,
+        "elapsed_ms": 4382.054,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -935,7 +935,7 @@
         },
         "edge_error_mean_px": 42.5,
         "edge_error_maximum_px": 83,
-        "elapsed_ms": 2586.876,
+        "elapsed_ms": 5605.278,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -1065,7 +1065,7 @@
         },
         "edge_error_mean_px": 65.0,
         "edge_error_maximum_px": 125,
-        "elapsed_ms": 23577.095,
+        "elapsed_ms": 45608.432,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -1195,7 +1195,7 @@
         },
         "edge_error_mean_px": 9.25,
         "edge_error_maximum_px": 18,
-        "elapsed_ms": 1166.766,
+        "elapsed_ms": 2174.408,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -1325,7 +1325,7 @@
         },
         "edge_error_mean_px": 14.0,
         "edge_error_maximum_px": 20,
-        "elapsed_ms": 1125.431,
+        "elapsed_ms": 2098.033,
         "candidate": {
           "method": "contour_grabcut",
           "bbox": [
@@ -1471,8 +1471,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 30340.168,
-        "wall_ms": 30341.403
+        "elapsed_ms_total": 59868.205,
+        "wall_ms": 59878.263
       },
       "pages": [
         {
@@ -1503,7 +1503,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1884.0,
+          "elapsed_ms": 4382.054,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -1633,7 +1633,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 2586.876,
+          "elapsed_ms": 5605.278,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -1763,7 +1763,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 23577.095,
+          "elapsed_ms": 45608.432,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -1893,7 +1893,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 1166.766,
+          "elapsed_ms": 2174.408,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -2023,7 +2023,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 1125.431,
+          "elapsed_ms": 2098.033,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -2164,8 +2164,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11734.862,
-        "wall_ms": 11735.33
+        "elapsed_ms_total": 29744.927,
+        "wall_ms": 29745.673
       },
       "pages": [
         {
@@ -2196,7 +2196,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1763.279,
+          "elapsed_ms": 4015.29,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -2326,7 +2326,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1217.08,
+          "elapsed_ms": 3747.005,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -2456,7 +2456,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7411.122,
+          "elapsed_ms": 18941.599,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -2586,7 +2586,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 715.532,
+          "elapsed_ms": 1667.845,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -2716,7 +2716,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 627.849,
+          "elapsed_ms": 1373.188,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -2820,10 +2820,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 10,
-        "parameter_set_number": 10,
-        "elapsed_seconds": 42.09174769895617,
-        "search_fraction": 1.0
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 89.62978086300004,
+        "search_fraction": 0.2
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -2862,8 +2862,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11551.542,
-        "wall_ms": 11552.066
+        "elapsed_ms_total": 31274.153,
+        "wall_ms": 31274.898
       },
       "pages": [
         {
@@ -2894,7 +2894,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1840.292,
+          "elapsed_ms": 4642.28,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3024,7 +3024,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1189.705,
+          "elapsed_ms": 2398.083,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3154,7 +3154,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7082.806,
+          "elapsed_ms": 20538.216,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3284,7 +3284,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 757.057,
+          "elapsed_ms": 1695.484,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3414,7 +3414,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 681.682,
+          "elapsed_ms": 2000.09,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3518,10 +3518,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 4,
-        "parameter_set_number": 4,
-        "elapsed_seconds": 41.91804662591312,
-        "search_fraction": 0.4
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 91.160825647,
+        "search_fraction": 0.3
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -3560,8 +3560,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11538.27,
-        "wall_ms": 11538.737
+        "elapsed_ms_total": 33044.864,
+        "wall_ms": 33045.52
       },
       "pages": [
         {
@@ -3592,7 +3592,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1827.357,
+          "elapsed_ms": 5335.306,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3619,8 +3619,8 @@
                 917.0
               ]
             ],
-            "confidence": 0.836857,
-            "score": 0.836857,
+            "confidence": 0.836875,
+            "score": 0.836875,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -3638,7 +3638,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.79374,
-              "grabcut_score": 0.95058,
+              "grabcut_score": 0.950698,
               "contour_corners": [
                 [
                   111.0,
@@ -3722,7 +3722,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1190.006,
+          "elapsed_ms": 2973.775,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3852,7 +3852,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7039.072,
+          "elapsed_ms": 21293.436,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -3879,8 +3879,8 @@
                 887.0
               ]
             ],
-            "confidence": 0.687735,
-            "score": 0.687735,
+            "confidence": 0.682782,
+            "score": 0.682782,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -3898,7 +3898,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.662027,
-              "grabcut_score": 0.724424,
+              "grabcut_score": 0.723834,
               "contour_corners": [
                 [
                   140.0,
@@ -3923,11 +3923,11 @@
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   147.0
                 ],
                 [
@@ -3937,7 +3937,7 @@
               ],
               "contour_reason": null,
               "grabcut_reason": null,
-              "agreement_iou": 0.70289934,
+              "agreement_iou": 0.69073611,
               "fusion_mode": "contour_generated_grabcut_validated",
               "selected_geometry": "contour_quad",
               "reason": "accepted"
@@ -3982,7 +3982,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 719.549,
+          "elapsed_ms": 1736.152,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -4028,7 +4028,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.879702,
-              "grabcut_score": 0.98024,
+              "grabcut_score": 0.980241,
               "contour_corners": [
                 [
                   77.0,
@@ -4112,7 +4112,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 762.286,
+          "elapsed_ms": 1706.195,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -4139,8 +4139,8 @@
                 945.0
               ]
             ],
-            "confidence": 0.91717,
-            "score": 0.91717,
+            "confidence": 0.917167,
+            "score": 0.917167,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -4158,7 +4158,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.856308,
-              "grabcut_score": 0.978053,
+              "grabcut_score": 0.978032,
               "contour_corners": [
                 [
                   84.0,
@@ -4216,10 +4216,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 3,
-        "parameter_set_number": 3,
-        "elapsed_seconds": 41.909031281014904,
-        "search_fraction": 0.3
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 122.67542353799999,
+        "search_fraction": 0.4
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -4258,8 +4258,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11581.889,
-        "wall_ms": 11582.364
+        "elapsed_ms_total": 31738.695,
+        "wall_ms": 31739.378
       },
       "pages": [
         {
@@ -4290,7 +4290,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1835.069,
+          "elapsed_ms": 5219.259,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -4317,8 +4317,8 @@
                 917.0
               ]
             ],
-            "confidence": 0.84819,
-            "score": 0.84819,
+            "confidence": 0.848223,
+            "score": 0.848223,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -4336,7 +4336,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.79374,
-              "grabcut_score": 0.95058,
+              "grabcut_score": 0.950698,
               "contour_corners": [
                 [
                   111.0,
@@ -4420,7 +4420,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1184.658,
+          "elapsed_ms": 4039.479,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -4550,7 +4550,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7157.477,
+          "elapsed_ms": 19189.23,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -4577,8 +4577,8 @@
                 887.0
               ]
             ],
-            "confidence": 0.688442,
-            "score": 0.688442,
+            "confidence": 0.685575,
+            "score": 0.685575,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -4596,7 +4596,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.662027,
-              "grabcut_score": 0.724424,
+              "grabcut_score": 0.723834,
               "contour_corners": [
                 [
                   140.0,
@@ -4621,11 +4621,11 @@
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   147.0
                 ],
                 [
@@ -4635,7 +4635,7 @@
               ],
               "contour_reason": null,
               "grabcut_reason": null,
-              "agreement_iou": 0.70289934,
+              "agreement_iou": 0.69073611,
               "fusion_mode": "contour_generated_grabcut_validated",
               "selected_geometry": "contour_quad",
               "reason": "accepted"
@@ -4680,7 +4680,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 706.644,
+          "elapsed_ms": 1365.269,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -4726,7 +4726,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.879702,
-              "grabcut_score": 0.98024,
+              "grabcut_score": 0.980241,
               "contour_corners": [
                 [
                   77.0,
@@ -4810,7 +4810,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 698.041,
+          "elapsed_ms": 1925.458,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -4837,8 +4837,8 @@
                 945.0
               ]
             ],
-            "confidence": 0.913793,
-            "score": 0.913793,
+            "confidence": 0.913787,
+            "score": 0.913787,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -4856,7 +4856,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.856308,
-              "grabcut_score": 0.978053,
+              "grabcut_score": 0.978032,
               "contour_corners": [
                 [
                   84.0,
@@ -4914,10 +4914,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 6,
-        "parameter_set_number": 6,
-        "elapsed_seconds": 41.95490787795279,
-        "search_fraction": 0.6
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 122.89935830200002,
+        "search_fraction": 0.5
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -4958,8 +4958,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11734.862,
-        "wall_ms": 11735.33
+        "elapsed_ms_total": 29744.927,
+        "wall_ms": 29745.673
       },
       "pages": [
         {
@@ -4990,7 +4990,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1763.279,
+          "elapsed_ms": 4015.29,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -5120,7 +5120,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1217.08,
+          "elapsed_ms": 3747.005,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -5250,7 +5250,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7411.122,
+          "elapsed_ms": 18941.599,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -5380,7 +5380,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 715.532,
+          "elapsed_ms": 1667.845,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -5510,7 +5510,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 627.849,
+          "elapsed_ms": 1373.188,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -5614,10 +5614,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 10,
-        "parameter_set_number": 10,
-        "elapsed_seconds": 42.09174769895617,
-        "search_fraction": 1.0
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 89.62978086300004,
+        "search_fraction": 0.2
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -5656,8 +5656,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11551.542,
-        "wall_ms": 11552.066
+        "elapsed_ms_total": 31274.153,
+        "wall_ms": 31274.898
       },
       "pages": [
         {
@@ -5688,7 +5688,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1840.292,
+          "elapsed_ms": 4642.28,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -5818,7 +5818,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1189.705,
+          "elapsed_ms": 2398.083,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -5948,7 +5948,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7082.806,
+          "elapsed_ms": 20538.216,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6078,7 +6078,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 757.057,
+          "elapsed_ms": 1695.484,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6208,7 +6208,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 681.682,
+          "elapsed_ms": 2000.09,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6312,10 +6312,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 4,
-        "parameter_set_number": 4,
-        "elapsed_seconds": 41.91804662591312,
-        "search_fraction": 0.4
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 91.160825647,
+        "search_fraction": 0.3
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -6354,8 +6354,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11538.27,
-        "wall_ms": 11538.737
+        "elapsed_ms_total": 33044.864,
+        "wall_ms": 33045.52
       },
       "pages": [
         {
@@ -6386,7 +6386,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1827.357,
+          "elapsed_ms": 5335.306,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6413,8 +6413,8 @@
                 917.0
               ]
             ],
-            "confidence": 0.836857,
-            "score": 0.836857,
+            "confidence": 0.836875,
+            "score": 0.836875,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -6432,7 +6432,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.79374,
-              "grabcut_score": 0.95058,
+              "grabcut_score": 0.950698,
               "contour_corners": [
                 [
                   111.0,
@@ -6516,7 +6516,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1190.006,
+          "elapsed_ms": 2973.775,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6646,7 +6646,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7039.072,
+          "elapsed_ms": 21293.436,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6673,8 +6673,8 @@
                 887.0
               ]
             ],
-            "confidence": 0.687735,
-            "score": 0.687735,
+            "confidence": 0.682782,
+            "score": 0.682782,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -6692,7 +6692,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.662027,
-              "grabcut_score": 0.724424,
+              "grabcut_score": 0.723834,
               "contour_corners": [
                 [
                   140.0,
@@ -6717,11 +6717,11 @@
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   147.0
                 ],
                 [
@@ -6731,7 +6731,7 @@
               ],
               "contour_reason": null,
               "grabcut_reason": null,
-              "agreement_iou": 0.70289934,
+              "agreement_iou": 0.69073611,
               "fusion_mode": "contour_generated_grabcut_validated",
               "selected_geometry": "contour_quad",
               "reason": "accepted"
@@ -6776,7 +6776,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 719.549,
+          "elapsed_ms": 1736.152,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6822,7 +6822,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.879702,
-              "grabcut_score": 0.98024,
+              "grabcut_score": 0.980241,
               "contour_corners": [
                 [
                   77.0,
@@ -6906,7 +6906,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 762.286,
+          "elapsed_ms": 1706.195,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -6933,8 +6933,8 @@
                 945.0
               ]
             ],
-            "confidence": 0.91717,
-            "score": 0.91717,
+            "confidence": 0.917167,
+            "score": 0.917167,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -6952,7 +6952,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.856308,
-              "grabcut_score": 0.978053,
+              "grabcut_score": 0.978032,
               "contour_corners": [
                 [
                   84.0,
@@ -7010,10 +7010,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 3,
-        "parameter_set_number": 3,
-        "elapsed_seconds": 41.909031281014904,
-        "search_fraction": 0.3
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 122.67542353799999,
+        "search_fraction": 0.4
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -7052,8 +7052,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11581.889,
-        "wall_ms": 11582.364
+        "elapsed_ms_total": 31738.695,
+        "wall_ms": 31739.378
       },
       "pages": [
         {
@@ -7084,7 +7084,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1835.069,
+          "elapsed_ms": 5219.259,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -7111,8 +7111,8 @@
                 917.0
               ]
             ],
-            "confidence": 0.84819,
-            "score": 0.84819,
+            "confidence": 0.848223,
+            "score": 0.848223,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -7130,7 +7130,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.79374,
-              "grabcut_score": 0.95058,
+              "grabcut_score": 0.950698,
               "contour_corners": [
                 [
                   111.0,
@@ -7214,7 +7214,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1184.658,
+          "elapsed_ms": 4039.479,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -7344,7 +7344,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7157.477,
+          "elapsed_ms": 19189.23,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -7371,8 +7371,8 @@
                 887.0
               ]
             ],
-            "confidence": 0.688442,
-            "score": 0.688442,
+            "confidence": 0.685575,
+            "score": 0.685575,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -7390,7 +7390,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.662027,
-              "grabcut_score": 0.724424,
+              "grabcut_score": 0.723834,
               "contour_corners": [
                 [
                   140.0,
@@ -7415,11 +7415,11 @@
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   967.9998779296875
                 ],
                 [
-                  386.0,
+                  401.0,
                   147.0
                 ],
                 [
@@ -7429,7 +7429,7 @@
               ],
               "contour_reason": null,
               "grabcut_reason": null,
-              "agreement_iou": 0.70289934,
+              "agreement_iou": 0.69073611,
               "fusion_mode": "contour_generated_grabcut_validated",
               "selected_geometry": "contour_quad",
               "reason": "accepted"
@@ -7474,7 +7474,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 706.644,
+          "elapsed_ms": 1365.269,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -7520,7 +7520,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.879702,
-              "grabcut_score": 0.98024,
+              "grabcut_score": 0.980241,
               "contour_corners": [
                 [
                   77.0,
@@ -7604,7 +7604,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 698.041,
+          "elapsed_ms": 1925.458,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -7631,8 +7631,8 @@
                 945.0
               ]
             ],
-            "confidence": 0.913793,
-            "score": 0.913793,
+            "confidence": 0.913787,
+            "score": 0.913787,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -7650,7 +7650,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.856308,
-              "grabcut_score": 0.978053,
+              "grabcut_score": 0.978032,
               "contour_corners": [
                 [
                   84.0,
@@ -7708,10 +7708,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 6,
-        "parameter_set_number": 6,
-        "elapsed_seconds": 41.95490787795279,
-        "search_fraction": 0.6
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 122.89935830200002,
+        "search_fraction": 0.5
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -7750,8 +7750,8 @@
         "minimum_iou": 0.75890607,
         "stddev_iou": 0.07335619,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 11657.752,
-        "wall_ms": 11658.317
+        "elapsed_ms_total": 32124.694,
+        "wall_ms": 32125.391
       },
       "pages": [
         {
@@ -7782,7 +7782,7 @@
           },
           "edge_error_mean_px": 43.25,
           "edge_error_maximum_px": 93,
-          "elapsed_ms": 1824.266,
+          "elapsed_ms": 4065.031,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -7809,8 +7809,8 @@
                 917.0
               ]
             ],
-            "confidence": 0.847643,
-            "score": 0.847643,
+            "confidence": 0.857372,
+            "score": 0.857372,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -7828,7 +7828,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.79374,
-              "grabcut_score": 0.95058,
+              "grabcut_score": 0.957708,
               "contour_corners": [
                 [
                   111.0,
@@ -7849,25 +7849,25 @@
               ],
               "grabcut_corners": [
                 [
-                  82.344482421875,
-                  967.158935546875
+                  107.0,
+                  63.0
                 ],
                 [
-                  80.5924072265625,
-                  56.07579803466797
+                  115.0,
+                  955.0
                 ],
                 [
-                  1287.4630126953125,
-                  53.75489044189453
+                  1283.0,
+                  950.0
                 ],
                 [
-                  1289.215087890625,
-                  964.8380126953125
+                  1272.0,
+                  60.0
                 ]
               ],
               "contour_reason": null,
               "grabcut_reason": null,
-              "agreement_iou": 0.84271714,
+              "agreement_iou": 0.86920722,
               "fusion_mode": "contour_generated_grabcut_validated",
               "selected_geometry": "contour_quad",
               "reason": "accepted"
@@ -7912,7 +7912,7 @@
           },
           "edge_error_mean_px": 42.5,
           "edge_error_maximum_px": 83,
-          "elapsed_ms": 1201.317,
+          "elapsed_ms": 2484.944,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -7939,8 +7939,8 @@
                 771.0
               ]
             ],
-            "confidence": 0.737836,
-            "score": 0.737836,
+            "confidence": 0.737903,
+            "score": 0.737903,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -7958,7 +7958,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.749072,
-              "grabcut_score": 0.884309,
+              "grabcut_score": 0.884577,
               "contour_corners": [
                 [
                   119.0,
@@ -8042,7 +8042,7 @@
           },
           "edge_error_mean_px": 65.0,
           "edge_error_maximum_px": 125,
-          "elapsed_ms": 7246.192,
+          "elapsed_ms": 21696.401,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -8069,8 +8069,8 @@
                 887.0
               ]
             ],
-            "confidence": 0.689888,
-            "score": 0.689888,
+            "confidence": 0.689988,
+            "score": 0.689988,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -8088,7 +8088,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.662027,
-              "grabcut_score": 0.724424,
+              "grabcut_score": 0.724823,
               "contour_corners": [
                 [
                   140.0,
@@ -8172,7 +8172,7 @@
           },
           "edge_error_mean_px": 9.25,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 682.243,
+          "elapsed_ms": 1923.47,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -8302,7 +8302,7 @@
           },
           "edge_error_mean_px": 14.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 703.734,
+          "elapsed_ms": 1954.848,
           "candidate": {
             "method": "contour_grabcut",
             "bbox": [
@@ -8329,8 +8329,8 @@
                 945.0
               ]
             ],
-            "confidence": 0.918695,
-            "score": 0.918695,
+            "confidence": 0.918767,
+            "score": 0.918767,
             "diagnostics": {
               "parameters": {
                 "contour_minimum_area_fraction": 0.08,
@@ -8348,7 +8348,7 @@
               "contour_status": "ok",
               "grabcut_status": "ok",
               "contour_score": 0.856308,
-              "grabcut_score": 0.978053,
+              "grabcut_score": 0.978341,
               "contour_corners": [
                 [
                   84.0,
@@ -8406,10 +8406,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 8,
-        "parameter_set_number": 8,
-        "elapsed_seconds": 42.033198899938725,
-        "search_fraction": 0.8
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 154.803814382,
+        "search_fraction": 0.6
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -8506,36 +8506,35 @@
   },
   "runner": {
     "execution_target": "GitHub Hosted",
-    "runner_name": "rh8-al320",
-    "runner_environment": "self-hosted",
+    "runner_name": "GitHub Actions 1000000759",
+    "runner_environment": "github-hosted",
     "runner_os": "Linux",
     "runner_arch": "X64",
-    "machine_name": "atlhwe-lsf320",
-    "cpu_model": "AMD EPYC 9655 96-Core Processor",
-    "physical_core_count": 192,
-    "logical_cpu_count": 192,
-    "available_cpu_count": 192,
-    "smt_enabled": false,
-    "memory_bytes": 1622717149184,
-    "memory_gib": 1511.27,
-    "python_version": "3.12.0",
-    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
     "opencv_version": "4.14.0",
     "numpy_version": "2.4.6",
     "pipeline_commit": "b7ed71b428c6c05a78282996006c3d26c568216e",
     "github_repository": "dlstupka/hth",
-    "github_run_id": "32050213065",
+    "github_run_id": "32050140632",
     "github_run_attempt": "1",
     "github_runner_labels": [
-      "self-hosted",
-      "192t"
+      "ubuntu-latest"
     ]
   },
   "source_commit": "f369131387beafc2a457daac5fa4034bb9f77267",
   "performance": {
-    "sample_count": 2,
-    "configured_threads": 76,
-    "peak_rss_bytes": 2733707264,
+    "sample_count": 4,
+    "configured_threads": 2,
+    "peak_rss_bytes": 741289984,
     "samples_file": "logs/runner-performance.jsonl",
     "precomputed_evidence": false,
     "evidence_source": null,
@@ -8544,7 +8543,7 @@
   "progress": {
     "estimated_parameter_sets": 10,
     "completed_parameter_sets": 10,
-    "average_eval_rate": 0.23755040262726007,
+    "average_eval_rate": 0.04416902089090986,
     "failures": 0,
     "best_mean_iou": 0.87682013,
     "best_worst_page_iou": 0.75890607,

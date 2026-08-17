@@ -5,7 +5,7 @@
   "strategy": "exhaustive",
   "requested_strategy": "exhaustive",
   "strategy_fallback_reason": null,
-  "threads": 76,
+  "threads": 2,
   "shard": {
     "index": 0,
     "count": 1,
@@ -13,17 +13,17 @@
     "full_candidate_count": 9
   },
   "detector_pipeline": {
-    "pipeline_count": 5,
-    "pipeline_number": 1,
+    "pipeline_count": 4,
+    "pipeline_number": 2,
     "stagger_minutes": 0,
     "loading_strategy": "lpt",
     "runtime_estimate_seconds": "170.496",
-    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
-    "queue_position": "1",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "2",
     "ranked_quality": "0.75135437",
-    "execution_shape_source": "preferred-multidetector-short-occupancy",
-    "exact_execution_shape": true,
-    "execution_thread_budget": "384"
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
   },
   "parameter_space": {
     "possible_parameter_sets": 10000,
@@ -72,8 +72,8 @@
       "minimum_iou": 0.10846977,
       "stddev_iou": 0.32941578,
       "mean_edge_error_px": 82.65,
-      "elapsed_ms_total": 37.122,
-      "wall_ms": 37.361
+      "elapsed_ms_total": 100.388,
+      "wall_ms": 100.948
     },
     "pages": [
       {
@@ -104,7 +104,7 @@
         },
         "edge_error_mean_px": 6.75,
         "edge_error_maximum_px": 16,
-        "elapsed_ms": 8.61,
+        "elapsed_ms": 23.985,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -197,7 +197,7 @@
         },
         "edge_error_mean_px": 326.75,
         "edge_error_maximum_px": 774,
-        "elapsed_ms": 6.745,
+        "elapsed_ms": 17.988,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -288,7 +288,7 @@
         },
         "edge_error_mean_px": 54.5,
         "edge_error_maximum_px": 156,
-        "elapsed_ms": 5.662,
+        "elapsed_ms": 15.385,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -379,7 +379,7 @@
         },
         "edge_error_mean_px": 10.75,
         "edge_error_maximum_px": 20,
-        "elapsed_ms": 8.105,
+        "elapsed_ms": 21.413,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -470,7 +470,7 @@
         },
         "edge_error_mean_px": 14.5,
         "edge_error_maximum_px": 21,
-        "elapsed_ms": 8.0,
+        "elapsed_ms": 21.617,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -560,7 +560,7 @@
     "search_observation": {
       "completion_index": 2,
       "parameter_set_number": 2,
-      "elapsed_seconds": 0.0840907720848918,
+      "elapsed_seconds": 0.2129909499999485,
       "search_fraction": 0.18181818181818182
     },
     "legacy_parameter_set_id": "9ea087074324",
@@ -595,8 +595,8 @@
       "minimum_iou": 0.0,
       "stddev_iou": 0.34177017,
       "mean_edge_error_px": 40.188,
-      "elapsed_ms_total": 44.594,
-      "wall_ms": 44.955
+      "elapsed_ms_total": 107.929,
+      "wall_ms": 108.538
     },
     "pages": [
       {
@@ -627,7 +627,7 @@
         },
         "edge_error_mean_px": 36.0,
         "edge_error_maximum_px": 48,
-        "elapsed_ms": 11.375,
+        "elapsed_ms": 24.788,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -700,7 +700,7 @@
         "iou": 0.0,
         "edge_error_mean_px": null,
         "edge_error_maximum_px": null,
-        "elapsed_ms": 8.192,
+        "elapsed_ms": 20.007,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": null,
@@ -769,7 +769,7 @@
         },
         "edge_error_mean_px": 42.5,
         "edge_error_maximum_px": 125,
-        "elapsed_ms": 6.615,
+        "elapsed_ms": 16.527,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -860,7 +860,7 @@
         },
         "edge_error_mean_px": 42.75,
         "edge_error_maximum_px": 59,
-        "elapsed_ms": 9.306,
+        "elapsed_ms": 23.329,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -951,7 +951,7 @@
         },
         "edge_error_mean_px": 39.5,
         "edge_error_maximum_px": 61,
-        "elapsed_ms": 9.106,
+        "elapsed_ms": 23.278,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -1051,8 +1051,8 @@
       "minimum_iou": 0.10846977,
       "stddev_iou": 0.32941578,
       "mean_edge_error_px": 82.65,
-      "elapsed_ms_total": 37.122,
-      "wall_ms": 37.361
+      "elapsed_ms_total": 100.388,
+      "wall_ms": 100.948
     },
     "pages": [
       {
@@ -1083,7 +1083,7 @@
         },
         "edge_error_mean_px": 6.75,
         "edge_error_maximum_px": 16,
-        "elapsed_ms": 8.61,
+        "elapsed_ms": 23.985,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -1176,7 +1176,7 @@
         },
         "edge_error_mean_px": 326.75,
         "edge_error_maximum_px": 774,
-        "elapsed_ms": 6.745,
+        "elapsed_ms": 17.988,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -1267,7 +1267,7 @@
         },
         "edge_error_mean_px": 54.5,
         "edge_error_maximum_px": 156,
-        "elapsed_ms": 5.662,
+        "elapsed_ms": 15.385,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -1358,7 +1358,7 @@
         },
         "edge_error_mean_px": 10.75,
         "edge_error_maximum_px": 20,
-        "elapsed_ms": 8.105,
+        "elapsed_ms": 21.413,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -1449,7 +1449,7 @@
         },
         "edge_error_mean_px": 14.5,
         "edge_error_maximum_px": 21,
-        "elapsed_ms": 8.0,
+        "elapsed_ms": 21.617,
         "candidate": {
           "method": "kraken_page_mask",
           "bbox": [
@@ -1539,7 +1539,7 @@
     "search_observation": {
       "completion_index": 2,
       "parameter_set_number": 2,
-      "elapsed_seconds": 0.0840907720848918,
+      "elapsed_seconds": 0.2129909499999485,
       "search_fraction": 0.18181818181818182
     },
     "legacy_parameter_set_id": "9ea087074324",
@@ -1575,8 +1575,8 @@
         "minimum_iou": 0.10846977,
         "stddev_iou": 0.32941578,
         "mean_edge_error_px": 82.65,
-        "elapsed_ms_total": 37.122,
-        "wall_ms": 37.361
+        "elapsed_ms_total": 100.388,
+        "wall_ms": 100.948
       },
       "pages": [
         {
@@ -1607,7 +1607,7 @@
           },
           "edge_error_mean_px": 6.75,
           "edge_error_maximum_px": 16,
-          "elapsed_ms": 8.61,
+          "elapsed_ms": 23.985,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -1700,7 +1700,7 @@
           },
           "edge_error_mean_px": 326.75,
           "edge_error_maximum_px": 774,
-          "elapsed_ms": 6.745,
+          "elapsed_ms": 17.988,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -1791,7 +1791,7 @@
           },
           "edge_error_mean_px": 54.5,
           "edge_error_maximum_px": 156,
-          "elapsed_ms": 5.662,
+          "elapsed_ms": 15.385,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -1882,7 +1882,7 @@
           },
           "edge_error_mean_px": 10.75,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 8.105,
+          "elapsed_ms": 21.413,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -1973,7 +1973,7 @@
           },
           "edge_error_mean_px": 14.5,
           "edge_error_maximum_px": 21,
-          "elapsed_ms": 8.0,
+          "elapsed_ms": 21.617,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2063,7 +2063,7 @@
       "search_observation": {
         "completion_index": 2,
         "parameter_set_number": 2,
-        "elapsed_seconds": 0.0840907720848918,
+        "elapsed_seconds": 0.2129909499999485,
         "search_fraction": 0.18181818181818182
       },
       "legacy_parameter_set_id": "9ea087074324",
@@ -2098,8 +2098,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 32.486,
-        "wall_ms": 32.777
+        "elapsed_ms_total": 82.3,
+        "wall_ms": 82.811
       },
       "pages": [
         {
@@ -2130,7 +2130,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 8.767,
+          "elapsed_ms": 22.462,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2203,7 +2203,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.396,
+          "elapsed_ms": 15.443,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -2272,7 +2272,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.141,
+          "elapsed_ms": 13.357,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2363,7 +2363,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.15,
+          "elapsed_ms": 15.729,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2454,7 +2454,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 6.032,
+          "elapsed_ms": 15.309,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2521,7 +2521,7 @@
       "search_observation": {
         "completion_index": 3,
         "parameter_set_number": 3,
-        "elapsed_seconds": 0.11756834608968347,
+        "elapsed_seconds": 0.29681425299997954,
         "search_fraction": 0.2727272727272727
       },
       "reference_roles": [],
@@ -2559,8 +2559,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 35.686,
-        "wall_ms": 35.984
+        "elapsed_ms_total": 188.112,
+        "wall_ms": 189.207
       },
       "pages": [
         {
@@ -2591,7 +2591,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 10.142,
+          "elapsed_ms": 48.004,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2664,7 +2664,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.833,
+          "elapsed_ms": 39.71,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -2733,7 +2733,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.541,
+          "elapsed_ms": 30.309,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2824,7 +2824,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.454,
+          "elapsed_ms": 35.335,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2915,7 +2915,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 6.716,
+          "elapsed_ms": 34.754,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -2980,10 +2980,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 7,
-        "parameter_set_number": 7,
-        "elapsed_seconds": 0.12113960599526763,
-        "search_fraction": 0.6363636363636364
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.4090008289999787,
+        "search_fraction": 0.45454545454545453
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -3020,8 +3020,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 32.143,
-        "wall_ms": 32.445
+        "elapsed_ms_total": 78.026,
+        "wall_ms": 78.508
       },
       "pages": [
         {
@@ -3052,7 +3052,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 8.31,
+          "elapsed_ms": 17.689,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3125,7 +3125,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.323,
+          "elapsed_ms": 16.143,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -3194,7 +3194,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.297,
+          "elapsed_ms": 13.082,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3285,7 +3285,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.062,
+          "elapsed_ms": 15.483,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3376,7 +3376,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 6.151,
+          "elapsed_ms": 15.629,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3443,7 +3443,7 @@
       "search_observation": {
         "completion_index": 4,
         "parameter_set_number": 4,
-        "elapsed_seconds": 0.11805322510190308,
+        "elapsed_seconds": 0.37528134999990925,
         "search_fraction": 0.36363636363636365
       },
       "reference_roles": [],
@@ -3481,8 +3481,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 36.528,
-        "wall_ms": 36.827
+        "elapsed_ms_total": 88.031,
+        "wall_ms": 88.502
       },
       "pages": [
         {
@@ -3513,7 +3513,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 10.13,
+          "elapsed_ms": 23.8,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3586,7 +3586,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.951,
+          "elapsed_ms": 17.197,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -3655,7 +3655,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.746,
+          "elapsed_ms": 14.206,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3746,7 +3746,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.457,
+          "elapsed_ms": 16.683,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3837,7 +3837,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 7.244,
+          "elapsed_ms": 16.145,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -3902,10 +3902,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 9,
-        "parameter_set_number": 9,
-        "elapsed_seconds": 0.12277995201293379,
-        "search_fraction": 0.8181818181818182
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.4639009200000146,
+        "search_fraction": 0.5454545454545454
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -3944,8 +3944,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 32.486,
-        "wall_ms": 32.777
+        "elapsed_ms_total": 82.3,
+        "wall_ms": 82.811
       },
       "pages": [
         {
@@ -3976,7 +3976,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 8.767,
+          "elapsed_ms": 22.462,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4049,7 +4049,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.396,
+          "elapsed_ms": 15.443,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -4118,7 +4118,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.141,
+          "elapsed_ms": 13.357,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4209,7 +4209,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.15,
+          "elapsed_ms": 15.729,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4300,7 +4300,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 6.032,
+          "elapsed_ms": 15.309,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4367,7 +4367,7 @@
       "search_observation": {
         "completion_index": 3,
         "parameter_set_number": 3,
-        "elapsed_seconds": 0.11756834608968347,
+        "elapsed_seconds": 0.29681425299997954,
         "search_fraction": 0.2727272727272727
       },
       "reference_roles": [],
@@ -4405,8 +4405,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 35.686,
-        "wall_ms": 35.984
+        "elapsed_ms_total": 188.112,
+        "wall_ms": 189.207
       },
       "pages": [
         {
@@ -4437,7 +4437,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 10.142,
+          "elapsed_ms": 48.004,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4510,7 +4510,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.833,
+          "elapsed_ms": 39.71,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -4579,7 +4579,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.541,
+          "elapsed_ms": 30.309,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4670,7 +4670,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.454,
+          "elapsed_ms": 35.335,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4761,7 +4761,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 6.716,
+          "elapsed_ms": 34.754,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4826,10 +4826,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 7,
-        "parameter_set_number": 7,
-        "elapsed_seconds": 0.12113960599526763,
-        "search_fraction": 0.6363636363636364
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.4090008289999787,
+        "search_fraction": 0.45454545454545453
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -4866,8 +4866,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 32.143,
-        "wall_ms": 32.445
+        "elapsed_ms_total": 78.026,
+        "wall_ms": 78.508
       },
       "pages": [
         {
@@ -4898,7 +4898,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 8.31,
+          "elapsed_ms": 17.689,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -4971,7 +4971,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.323,
+          "elapsed_ms": 16.143,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -5040,7 +5040,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.297,
+          "elapsed_ms": 13.082,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5131,7 +5131,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.062,
+          "elapsed_ms": 15.483,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5222,7 +5222,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 6.151,
+          "elapsed_ms": 15.629,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5289,7 +5289,7 @@
       "search_observation": {
         "completion_index": 4,
         "parameter_set_number": 4,
-        "elapsed_seconds": 0.11805322510190308,
+        "elapsed_seconds": 0.37528134999990925,
         "search_fraction": 0.36363636363636365
       },
       "reference_roles": [],
@@ -5327,8 +5327,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 36.528,
-        "wall_ms": 36.827
+        "elapsed_ms_total": 88.031,
+        "wall_ms": 88.502
       },
       "pages": [
         {
@@ -5359,7 +5359,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 10.13,
+          "elapsed_ms": 23.8,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5432,7 +5432,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.951,
+          "elapsed_ms": 17.197,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -5501,7 +5501,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.746,
+          "elapsed_ms": 14.206,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5592,7 +5592,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.457,
+          "elapsed_ms": 16.683,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5683,7 +5683,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 7.244,
+          "elapsed_ms": 16.145,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5748,10 +5748,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 9,
-        "parameter_set_number": 9,
-        "elapsed_seconds": 0.12277995201293379,
-        "search_fraction": 0.8181818181818182
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.4639009200000146,
+        "search_fraction": 0.5454545454545454
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -5788,8 +5788,8 @@
         "minimum_iou": 0.0,
         "stddev_iou": 0.37337487,
         "mean_edge_error_px": 21.812,
-        "elapsed_ms_total": 31.737,
-        "wall_ms": 32.027
+        "elapsed_ms_total": 155.703,
+        "wall_ms": 156.175
       },
       "pages": [
         {
@@ -5820,7 +5820,7 @@
           },
           "edge_error_mean_px": 5.5,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 8.197,
+          "elapsed_ms": 36.041,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -5893,7 +5893,7 @@
           "iou": 0.0,
           "edge_error_mean_px": null,
           "edge_error_maximum_px": null,
-          "elapsed_ms": 6.253,
+          "elapsed_ms": 33.869,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": null,
@@ -5962,7 +5962,7 @@
           },
           "edge_error_mean_px": 59.25,
           "edge_error_maximum_px": 164,
-          "elapsed_ms": 5.226,
+          "elapsed_ms": 24.345,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -6053,7 +6053,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 20,
-          "elapsed_ms": 6.08,
+          "elapsed_ms": 29.983,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -6144,7 +6144,7 @@
           },
           "edge_error_mean_px": 10.5,
           "edge_error_maximum_px": 18,
-          "elapsed_ms": 5.981,
+          "elapsed_ms": 31.465,
           "candidate": {
             "method": "kraken_page_mask",
             "bbox": [
@@ -6209,10 +6209,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 5,
-        "parameter_set_number": 5,
-        "elapsed_seconds": 0.1187978150555864,
-        "search_fraction": 0.45454545454545453
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 0.5649800649999861,
+        "search_fraction": 0.6363636363636364
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -6313,45 +6313,44 @@
   },
   "runner": {
     "execution_target": "GitHub Hosted",
-    "runner_name": "rh8-al320",
-    "runner_environment": "self-hosted",
+    "runner_name": "GitHub Actions 1000000759",
+    "runner_environment": "github-hosted",
     "runner_os": "Linux",
     "runner_arch": "X64",
-    "machine_name": "atlhwe-lsf320",
-    "cpu_model": "AMD EPYC 9655 96-Core Processor",
-    "physical_core_count": 192,
-    "logical_cpu_count": 192,
-    "available_cpu_count": 192,
-    "smt_enabled": false,
-    "memory_bytes": 1622717149184,
-    "memory_gib": 1511.27,
-    "python_version": "3.12.0",
-    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
     "opencv_version": "4.14.0",
     "numpy_version": "2.4.6",
     "pipeline_commit": "b7ed71b428c6c05a78282996006c3d26c568216e",
     "github_repository": "dlstupka/hth",
-    "github_run_id": "32050213065",
+    "github_run_id": "32050140632",
     "github_run_attempt": "1",
     "github_runner_labels": [
-      "self-hosted",
-      "192t"
+      "ubuntu-latest"
     ]
   },
   "source_commit": "f369131387beafc2a457daac5fa4034bb9f77267",
   "performance": {
     "sample_count": 2,
-    "configured_threads": 76,
-    "peak_rss_bytes": 3172835328,
+    "configured_threads": 2,
+    "peak_rss_bytes": 2771689472,
     "samples_file": "logs/runner-performance.jsonl",
     "precomputed_evidence": true,
     "evidence_source": "process-local-fallback",
-    "evidence_precompute_seconds": 156.33132
+    "evidence_precompute_seconds": 296.740322
   },
   "progress": {
     "estimated_parameter_sets": 11,
     "completed_parameter_sets": 11,
-    "average_eval_rate": 88.56845070880168,
+    "average_eval_rate": 14.862286137716318,
     "failures": 10,
     "best_mean_iou": 0.75135437,
     "best_worst_page_iou": 0.10846977,
@@ -6363,8 +6362,8 @@
     "parameter_sets_with_improvements": 1,
     "winner_changes": 1,
     "baseline_surpassed": true,
-    "winner_first_changed_elapsed_seconds": 0.0840907720848918,
-    "winner_last_changed_elapsed_seconds": 0.0840907720848918,
+    "winner_first_changed_elapsed_seconds": 0.2129909499999485,
+    "winner_last_changed_elapsed_seconds": 0.2129909499999485,
     "winner_history": [
       {
         "change_number": 1,
@@ -6372,11 +6371,11 @@
         "parameter_short_name": "historic-best",
         "completion_index": 2,
         "parameter_set_number": 2,
-        "elapsed_seconds": 0.0840907720848918,
+        "elapsed_seconds": 0.2129909499999485,
         "search_fraction": 0.18181818181818182
       }
     ],
-    "last_improvement_elapsed_seconds": 0.0840907720848918,
-    "time_since_last_improvement_seconds": 0.040106951957568526
+    "last_improvement_elapsed_seconds": 0.2129909499999485,
+    "time_since_last_improvement_seconds": 0.5271374459999834
   }
 }
