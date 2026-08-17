@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "contour_quad",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "bef511d0c9d0e5fb6c7fc2d50f2055cad502491a1236f92deafcc0373446050d",
+    "parameter_order": [
+      "minimum_contour_area_fraction",
+      "close_kernel_fraction",
+      "close_iterations",
+      "epsilon_min_fraction",
+      "epsilon_max_fraction",
+      "epsilon_steps",
+      "minimum_rectangularity",
+      "area_weight",
+      "rectangularity_weight",
+      "angle_weight",
+      "edge_support_weight",
+      "edge_support_dilation_fraction",
+      "merge_fragmented_contours"
+    ],
+    "values": {
+      "minimum_contour_area_fraction": [
+        0.12,
+        0.2
+      ],
+      "close_kernel_fraction": [
+        0.008,
+        0.018
+      ],
+      "close_iterations": [
+        1,
+        2
+      ],
+      "epsilon_min_fraction": [
+        0.008,
+        0.012
+      ],
+      "epsilon_max_fraction": [
+        0.04,
+        0.06
+      ],
+      "epsilon_steps": [
+        9,
+        13
+      ],
+      "minimum_rectangularity": [
+        0.55,
+        0.7
+      ],
+      "area_weight": [
+        0.35,
+        0.45
+      ],
+      "rectangularity_weight": [
+        0.2,
+        0.3,
+        0.4
+      ],
+      "angle_weight": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "edge_support_weight": [
+        0.1,
+        0.15,
+        0.25
+      ],
+      "edge_support_dilation_fraction": [
+        0.002,
+        0.004,
+        0.008
+      ],
+      "merge_fragmented_contours": [
+        false,
+        true
+      ]
+    },
+    "cartesian_count": 41472,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 11,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "minimum_contour_area_fraction": 0.12,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "epsilon_min_fraction": 0.008,
+      "epsilon_max_fraction": 0.04,
+      "epsilon_steps": 9,
+      "minimum_rectangularity": 0.55,
+      "area_weight": 0.35,
+      "rectangularity_weight": 0.3,
+      "angle_weight": 0.2,
+      "edge_support_weight": 0.15,
+      "edge_support_dilation_fraction": 0.004,
+      "merge_fragmented_contours": true
+    }
+  },
+  "explicit_parameter_sets": {
+    "70d7a855c27c6bc821055d21c6d2ecfc7924e9546be1777c6a2c55fc5d15098c": {
+      "sha256": "70d7a855c27c6bc821055d21c6d2ecfc7924e9546be1777c6a2c55fc5d15098c",
+      "legacy_parameter_set_id": "49095b866d0d",
+      "parameters": {
+        "angle_weight": 0.2,
+        "area_weight": 0.25,
+        "close_iterations": 0,
+        "close_kernel_fraction": 0.018,
+        "edge_support_dilation_fraction": 0.008,
+        "edge_support_weight": 0.15,
+        "epsilon_max_fraction": 0.04,
+        "epsilon_min_fraction": 0.004,
+        "epsilon_steps": 5,
+        "merge_fragmented_contours": true,
+        "minimum_contour_area_fraction": 0.12,
+        "minimum_rectangularity": 0.55,
+        "rectangularity_weight": 0.3
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
