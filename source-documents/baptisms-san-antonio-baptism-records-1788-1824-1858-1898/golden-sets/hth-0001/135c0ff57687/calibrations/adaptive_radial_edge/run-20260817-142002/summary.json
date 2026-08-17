@@ -5,7 +5,7 @@
   "strategy": "exhaustive",
   "requested_strategy": "exhaustive",
   "strategy_fallback_reason": null,
-  "threads": 76,
+  "threads": 2,
   "shard": {
     "index": 0,
     "count": 1,
@@ -13,17 +13,17 @@
     "full_candidate_count": 9
   },
   "detector_pipeline": {
-    "pipeline_count": 5,
+    "pipeline_count": 4,
     "pipeline_number": 4,
     "stagger_minutes": 0,
     "loading_strategy": "lpt",
-    "runtime_estimate_seconds": "4.914",
-    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
-    "queue_position": "12",
+    "runtime_estimate_seconds": "9.500",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "14",
     "ranked_quality": "0.97261920",
-    "execution_shape_source": "preferred-multidetector-short-occupancy",
-    "exact_execution_shape": true,
-    "execution_thread_budget": "384"
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
   },
   "parameter_space": {
     "possible_parameter_sets": 49153,
@@ -74,8 +74,8 @@
       "minimum_iou": 0.95565248,
       "stddev_iou": 0.01588729,
       "mean_edge_error_px": 7.45,
-      "elapsed_ms_total": 261.806,
-      "wall_ms": 262.22
+      "elapsed_ms_total": 736.083,
+      "wall_ms": 736.717
     },
     "pages": [
       {
@@ -106,7 +106,7 @@
         },
         "edge_error_mean_px": 5.0,
         "edge_error_maximum_px": 13,
-        "elapsed_ms": 63.126,
+        "elapsed_ms": 240.819,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -225,7 +225,7 @@
         },
         "edge_error_mean_px": 8.0,
         "edge_error_maximum_px": 26,
-        "elapsed_ms": 69.011,
+        "elapsed_ms": 170.071,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -344,7 +344,7 @@
         },
         "edge_error_mean_px": 0.5,
         "edge_error_maximum_px": 1,
-        "elapsed_ms": 76.535,
+        "elapsed_ms": 197.912,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -465,7 +465,7 @@
         },
         "edge_error_mean_px": 11.75,
         "edge_error_maximum_px": 35,
-        "elapsed_ms": 26.287,
+        "elapsed_ms": 54.839,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -582,7 +582,7 @@
         },
         "edge_error_mean_px": 12.0,
         "edge_error_maximum_px": 33,
-        "elapsed_ms": 26.847,
+        "elapsed_ms": 72.442,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -700,7 +700,7 @@
     "search_observation": {
       "completion_index": 2,
       "parameter_set_number": 2,
-      "elapsed_seconds": 0.46824745496269315,
+      "elapsed_seconds": 1.3365605449999975,
       "search_fraction": 0.18181818181818182
     },
     "legacy_parameter_set_id": "bcd9a1d083cf",
@@ -745,8 +745,8 @@
       "minimum_iou": 0.88172875,
       "stddev_iou": 0.03440783,
       "mean_edge_error_px": 18.35,
-      "elapsed_ms_total": 201.284,
-      "wall_ms": 201.786
+      "elapsed_ms_total": 589.907,
+      "wall_ms": 590.624
     },
     "pages": [
       {
@@ -777,7 +777,7 @@
         },
         "edge_error_mean_px": 32.75,
         "edge_error_maximum_px": 56,
-        "elapsed_ms": 49.556,
+        "elapsed_ms": 183.975,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -897,7 +897,7 @@
         },
         "edge_error_mean_px": 7.0,
         "edge_error_maximum_px": 22,
-        "elapsed_ms": 40.508,
+        "elapsed_ms": 106.485,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1017,7 +1017,7 @@
         },
         "edge_error_mean_px": 25.75,
         "edge_error_maximum_px": 48,
-        "elapsed_ms": 32.763,
+        "elapsed_ms": 80.371,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1137,7 +1137,7 @@
         },
         "edge_error_mean_px": 13.75,
         "edge_error_maximum_px": 38,
-        "elapsed_ms": 42.556,
+        "elapsed_ms": 81.833,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1257,7 +1257,7 @@
         },
         "edge_error_mean_px": 12.5,
         "edge_error_maximum_px": 34,
-        "elapsed_ms": 35.901,
+        "elapsed_ms": 137.243,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1388,8 +1388,8 @@
       "minimum_iou": 0.95565248,
       "stddev_iou": 0.01588729,
       "mean_edge_error_px": 7.45,
-      "elapsed_ms_total": 261.806,
-      "wall_ms": 262.22
+      "elapsed_ms_total": 736.083,
+      "wall_ms": 736.717
     },
     "pages": [
       {
@@ -1420,7 +1420,7 @@
         },
         "edge_error_mean_px": 5.0,
         "edge_error_maximum_px": 13,
-        "elapsed_ms": 63.126,
+        "elapsed_ms": 240.819,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1539,7 +1539,7 @@
         },
         "edge_error_mean_px": 8.0,
         "edge_error_maximum_px": 26,
-        "elapsed_ms": 69.011,
+        "elapsed_ms": 170.071,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1658,7 +1658,7 @@
         },
         "edge_error_mean_px": 0.5,
         "edge_error_maximum_px": 1,
-        "elapsed_ms": 76.535,
+        "elapsed_ms": 197.912,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1779,7 +1779,7 @@
         },
         "edge_error_mean_px": 11.75,
         "edge_error_maximum_px": 35,
-        "elapsed_ms": 26.287,
+        "elapsed_ms": 54.839,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -1896,7 +1896,7 @@
         },
         "edge_error_mean_px": 12.0,
         "edge_error_maximum_px": 33,
-        "elapsed_ms": 26.847,
+        "elapsed_ms": 72.442,
         "candidate": {
           "method": "adaptive_radial_edge",
           "bbox": [
@@ -2014,7 +2014,7 @@
     "search_observation": {
       "completion_index": 2,
       "parameter_set_number": 2,
-      "elapsed_seconds": 0.46824745496269315,
+      "elapsed_seconds": 1.3365605449999975,
       "search_fraction": 0.18181818181818182
     },
     "legacy_parameter_set_id": "bcd9a1d083cf",
@@ -2052,8 +2052,8 @@
         "minimum_iou": 0.95565248,
         "stddev_iou": 0.01588729,
         "mean_edge_error_px": 7.45,
-        "elapsed_ms_total": 261.806,
-        "wall_ms": 262.22
+        "elapsed_ms_total": 736.083,
+        "wall_ms": 736.717
       },
       "pages": [
         {
@@ -2084,7 +2084,7 @@
           },
           "edge_error_mean_px": 5.0,
           "edge_error_maximum_px": 13,
-          "elapsed_ms": 63.126,
+          "elapsed_ms": 240.819,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -2203,7 +2203,7 @@
           },
           "edge_error_mean_px": 8.0,
           "edge_error_maximum_px": 26,
-          "elapsed_ms": 69.011,
+          "elapsed_ms": 170.071,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -2322,7 +2322,7 @@
           },
           "edge_error_mean_px": 0.5,
           "edge_error_maximum_px": 1,
-          "elapsed_ms": 76.535,
+          "elapsed_ms": 197.912,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -2443,7 +2443,7 @@
           },
           "edge_error_mean_px": 11.75,
           "edge_error_maximum_px": 35,
-          "elapsed_ms": 26.287,
+          "elapsed_ms": 54.839,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -2560,7 +2560,7 @@
           },
           "edge_error_mean_px": 12.0,
           "edge_error_maximum_px": 33,
-          "elapsed_ms": 26.847,
+          "elapsed_ms": 72.442,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -2678,7 +2678,7 @@
       "search_observation": {
         "completion_index": 2,
         "parameter_set_number": 2,
-        "elapsed_seconds": 0.46824745496269315,
+        "elapsed_seconds": 1.3365605449999975,
         "search_fraction": 0.18181818181818182
       },
       "legacy_parameter_set_id": "bcd9a1d083cf",
@@ -2723,8 +2723,8 @@
         "minimum_iou": 0.88172875,
         "stddev_iou": 0.03440783,
         "mean_edge_error_px": 18.35,
-        "elapsed_ms_total": 201.284,
-        "wall_ms": 201.786
+        "elapsed_ms_total": 589.907,
+        "wall_ms": 590.624
       },
       "pages": [
         {
@@ -2755,7 +2755,7 @@
           },
           "edge_error_mean_px": 32.75,
           "edge_error_maximum_px": 56,
-          "elapsed_ms": 49.556,
+          "elapsed_ms": 183.975,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -2875,7 +2875,7 @@
           },
           "edge_error_mean_px": 7.0,
           "edge_error_maximum_px": 22,
-          "elapsed_ms": 40.508,
+          "elapsed_ms": 106.485,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -2995,7 +2995,7 @@
           },
           "edge_error_mean_px": 25.75,
           "edge_error_maximum_px": 48,
-          "elapsed_ms": 32.763,
+          "elapsed_ms": 80.371,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3115,7 +3115,7 @@
           },
           "edge_error_mean_px": 13.75,
           "edge_error_maximum_px": 38,
-          "elapsed_ms": 42.556,
+          "elapsed_ms": 81.833,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3235,7 +3235,7 @@
           },
           "edge_error_mean_px": 12.5,
           "edge_error_maximum_px": 34,
-          "elapsed_ms": 35.901,
+          "elapsed_ms": 137.243,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3366,8 +3366,8 @@
         "minimum_iou": 0.81247896,
         "stddev_iou": 0.03617482,
         "mean_edge_error_px": 32.85,
-        "elapsed_ms_total": 2845.091,
-        "wall_ms": 2845.513
+        "elapsed_ms_total": 2692.587,
+        "wall_ms": 2699.208
       },
       "pages": [
         {
@@ -3398,7 +3398,7 @@
           },
           "edge_error_mean_px": 24.75,
           "edge_error_maximum_px": 56,
-          "elapsed_ms": 1383.42,
+          "elapsed_ms": 395.736,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3518,7 +3518,7 @@
           },
           "edge_error_mean_px": 37.0,
           "edge_error_maximum_px": 74,
-          "elapsed_ms": 483.464,
+          "elapsed_ms": 656.946,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3638,7 +3638,7 @@
           },
           "edge_error_mean_px": 24.25,
           "edge_error_maximum_px": 44,
-          "elapsed_ms": 414.852,
+          "elapsed_ms": 644.89,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3758,7 +3758,7 @@
           },
           "edge_error_mean_px": 52.25,
           "edge_error_maximum_px": 78,
-          "elapsed_ms": 375.668,
+          "elapsed_ms": 521.138,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3878,7 +3878,7 @@
           },
           "edge_error_mean_px": 26.0,
           "edge_error_maximum_px": 41,
-          "elapsed_ms": 187.687,
+          "elapsed_ms": 473.877,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -3972,10 +3972,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 8,
-        "parameter_set_number": 8,
-        "elapsed_seconds": 3.366156431962736,
-        "search_fraction": 0.7272727272727273
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 9.012655653000024,
+        "search_fraction": 0.6363636363636364
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -4014,8 +4014,8 @@
         "minimum_iou": 0.81247896,
         "stddev_iou": 0.03461158,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 2668.036,
-        "wall_ms": 2668.588
+        "elapsed_ms_total": 2804.088,
+        "wall_ms": 2804.693
       },
       "pages": [
         {
@@ -4046,7 +4046,7 @@
           },
           "edge_error_mean_px": 24.75,
           "edge_error_maximum_px": 56,
-          "elapsed_ms": 752.814,
+          "elapsed_ms": 864.406,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -4166,7 +4166,7 @@
           },
           "edge_error_mean_px": 39.0,
           "edge_error_maximum_px": 71,
-          "elapsed_ms": 506.819,
+          "elapsed_ms": 514.494,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -4286,7 +4286,7 @@
           },
           "edge_error_mean_px": 24.25,
           "edge_error_maximum_px": 44,
-          "elapsed_ms": 411.835,
+          "elapsed_ms": 432.847,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -4406,7 +4406,7 @@
           },
           "edge_error_mean_px": 52.25,
           "edge_error_maximum_px": 78,
-          "elapsed_ms": 684.103,
+          "elapsed_ms": 413.061,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -4526,7 +4526,7 @@
           },
           "edge_error_mean_px": 33.75,
           "edge_error_maximum_px": 49,
-          "elapsed_ms": 312.465,
+          "elapsed_ms": 579.28,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -4620,10 +4620,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 7,
-        "parameter_set_number": 7,
-        "elapsed_seconds": 3.145465892041102,
-        "search_fraction": 0.6363636363636364
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 4.147648970999967,
+        "search_fraction": 0.36363636363636365
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -4662,8 +4662,8 @@
         "minimum_iou": 0.85828639,
         "stddev_iou": 0.02036502,
         "mean_edge_error_px": 35.05,
-        "elapsed_ms_total": 2271.735,
-        "wall_ms": 2272.186
+        "elapsed_ms_total": 2160.999,
+        "wall_ms": 2163.624
       },
       "pages": [
         {
@@ -4694,7 +4694,7 @@
           },
           "edge_error_mean_px": 41.0,
           "edge_error_maximum_px": 76,
-          "elapsed_ms": 722.311,
+          "elapsed_ms": 531.524,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -4813,7 +4813,7 @@
           },
           "edge_error_mean_px": 37.0,
           "edge_error_maximum_px": 74,
-          "elapsed_ms": 280.911,
+          "elapsed_ms": 419.723,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -4932,7 +4932,7 @@
           },
           "edge_error_mean_px": 37.75,
           "edge_error_maximum_px": 79,
-          "elapsed_ms": 100.015,
+          "elapsed_ms": 381.398,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5051,7 +5051,7 @@
           },
           "edge_error_mean_px": 36.25,
           "edge_error_maximum_px": 49,
-          "elapsed_ms": 484.395,
+          "elapsed_ms": 366.008,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5170,7 +5170,7 @@
           },
           "edge_error_mean_px": 23.25,
           "edge_error_maximum_px": 33,
-          "elapsed_ms": 684.103,
+          "elapsed_ms": 462.346,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5265,7 +5265,7 @@
       "search_observation": {
         "completion_index": 5,
         "parameter_set_number": 5,
-        "elapsed_seconds": 2.7760186849627644,
+        "elapsed_seconds": 6.311454323000021,
         "search_fraction": 0.45454545454545453
       },
       "reference_roles": [],
@@ -5307,8 +5307,8 @@
         "minimum_iou": 0.81247896,
         "stddev_iou": 0.03617482,
         "mean_edge_error_px": 32.85,
-        "elapsed_ms_total": 2845.091,
-        "wall_ms": 2845.513
+        "elapsed_ms_total": 2692.587,
+        "wall_ms": 2699.208
       },
       "pages": [
         {
@@ -5339,7 +5339,7 @@
           },
           "edge_error_mean_px": 24.75,
           "edge_error_maximum_px": 56,
-          "elapsed_ms": 1383.42,
+          "elapsed_ms": 395.736,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5459,7 +5459,7 @@
           },
           "edge_error_mean_px": 37.0,
           "edge_error_maximum_px": 74,
-          "elapsed_ms": 483.464,
+          "elapsed_ms": 656.946,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5579,7 +5579,7 @@
           },
           "edge_error_mean_px": 24.25,
           "edge_error_maximum_px": 44,
-          "elapsed_ms": 414.852,
+          "elapsed_ms": 644.89,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5699,7 +5699,7 @@
           },
           "edge_error_mean_px": 52.25,
           "edge_error_maximum_px": 78,
-          "elapsed_ms": 375.668,
+          "elapsed_ms": 521.138,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5819,7 +5819,7 @@
           },
           "edge_error_mean_px": 26.0,
           "edge_error_maximum_px": 41,
-          "elapsed_ms": 187.687,
+          "elapsed_ms": 473.877,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -5913,10 +5913,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 8,
-        "parameter_set_number": 8,
-        "elapsed_seconds": 3.366156431962736,
-        "search_fraction": 0.7272727272727273
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 9.012655653000024,
+        "search_fraction": 0.6363636363636364
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -5955,8 +5955,8 @@
         "minimum_iou": 0.81247896,
         "stddev_iou": 0.03461158,
         "mean_edge_error_px": 34.8,
-        "elapsed_ms_total": 2668.036,
-        "wall_ms": 2668.588
+        "elapsed_ms_total": 2804.088,
+        "wall_ms": 2804.693
       },
       "pages": [
         {
@@ -5987,7 +5987,7 @@
           },
           "edge_error_mean_px": 24.75,
           "edge_error_maximum_px": 56,
-          "elapsed_ms": 752.814,
+          "elapsed_ms": 864.406,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6107,7 +6107,7 @@
           },
           "edge_error_mean_px": 39.0,
           "edge_error_maximum_px": 71,
-          "elapsed_ms": 506.819,
+          "elapsed_ms": 514.494,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6227,7 +6227,7 @@
           },
           "edge_error_mean_px": 24.25,
           "edge_error_maximum_px": 44,
-          "elapsed_ms": 411.835,
+          "elapsed_ms": 432.847,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6347,7 +6347,7 @@
           },
           "edge_error_mean_px": 52.25,
           "edge_error_maximum_px": 78,
-          "elapsed_ms": 684.103,
+          "elapsed_ms": 413.061,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6467,7 +6467,7 @@
           },
           "edge_error_mean_px": 33.75,
           "edge_error_maximum_px": 49,
-          "elapsed_ms": 312.465,
+          "elapsed_ms": 579.28,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6561,10 +6561,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 7,
-        "parameter_set_number": 7,
-        "elapsed_seconds": 3.145465892041102,
-        "search_fraction": 0.6363636363636364
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 4.147648970999967,
+        "search_fraction": 0.36363636363636365
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -6603,8 +6603,8 @@
         "minimum_iou": 0.85828639,
         "stddev_iou": 0.02036502,
         "mean_edge_error_px": 35.05,
-        "elapsed_ms_total": 2271.735,
-        "wall_ms": 2272.186
+        "elapsed_ms_total": 2160.999,
+        "wall_ms": 2163.624
       },
       "pages": [
         {
@@ -6635,7 +6635,7 @@
           },
           "edge_error_mean_px": 41.0,
           "edge_error_maximum_px": 76,
-          "elapsed_ms": 722.311,
+          "elapsed_ms": 531.524,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6754,7 +6754,7 @@
           },
           "edge_error_mean_px": 37.0,
           "edge_error_maximum_px": 74,
-          "elapsed_ms": 280.911,
+          "elapsed_ms": 419.723,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6873,7 +6873,7 @@
           },
           "edge_error_mean_px": 37.75,
           "edge_error_maximum_px": 79,
-          "elapsed_ms": 100.015,
+          "elapsed_ms": 381.398,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -6992,7 +6992,7 @@
           },
           "edge_error_mean_px": 36.25,
           "edge_error_maximum_px": 49,
-          "elapsed_ms": 484.395,
+          "elapsed_ms": 366.008,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -7111,7 +7111,7 @@
           },
           "edge_error_mean_px": 23.25,
           "edge_error_maximum_px": 33,
-          "elapsed_ms": 684.103,
+          "elapsed_ms": 462.346,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -7206,7 +7206,7 @@
       "search_observation": {
         "completion_index": 5,
         "parameter_set_number": 5,
-        "elapsed_seconds": 2.7760186849627644,
+        "elapsed_seconds": 6.311454323000021,
         "search_fraction": 0.45454545454545453
       },
       "reference_roles": [],
@@ -7246,8 +7246,8 @@
         "minimum_iou": 0.80157466,
         "stddev_iou": 0.04765814,
         "mean_edge_error_px": 37.6,
-        "elapsed_ms_total": 3172.658,
-        "wall_ms": 3173.071
+        "elapsed_ms_total": 3293.573,
+        "wall_ms": 3294.174
       },
       "pages": [
         {
@@ -7278,7 +7278,7 @@
           },
           "edge_error_mean_px": 24.0,
           "edge_error_maximum_px": 56,
-          "elapsed_ms": 920.029,
+          "elapsed_ms": 718.895,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -7400,7 +7400,7 @@
           },
           "edge_error_mean_px": 28.25,
           "edge_error_maximum_px": 62,
-          "elapsed_ms": 1354.145,
+          "elapsed_ms": 671.274,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -7522,7 +7522,7 @@
           },
           "edge_error_mean_px": 24.0,
           "edge_error_maximum_px": 36,
-          "elapsed_ms": 428.341,
+          "elapsed_ms": 645.946,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -7644,7 +7644,7 @@
           },
           "edge_error_mean_px": 50.5,
           "edge_error_maximum_px": 94,
-          "elapsed_ms": 293.377,
+          "elapsed_ms": 578.523,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -7766,7 +7766,7 @@
           },
           "edge_error_mean_px": 61.25,
           "edge_error_maximum_px": 114,
-          "elapsed_ms": 176.766,
+          "elapsed_ms": 678.935,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -7862,10 +7862,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 10,
-        "parameter_set_number": 10,
-        "elapsed_seconds": 3.657693407032639,
-        "search_fraction": 0.9090909090909091
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 6.699236326000005,
+        "search_fraction": 0.5454545454545454
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -7904,8 +7904,8 @@
         "minimum_iou": 0.80157466,
         "stddev_iou": 0.04765814,
         "mean_edge_error_px": 37.6,
-        "elapsed_ms_total": 3099.773,
-        "wall_ms": 3100.198
+        "elapsed_ms_total": 3369.697,
+        "wall_ms": 3370.298
       },
       "pages": [
         {
@@ -7936,7 +7936,7 @@
           },
           "edge_error_mean_px": 24.0,
           "edge_error_maximum_px": 56,
-          "elapsed_ms": 1370.971,
+          "elapsed_ms": 710.6,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -8058,7 +8058,7 @@
           },
           "edge_error_mean_px": 28.25,
           "edge_error_maximum_px": 62,
-          "elapsed_ms": 821.015,
+          "elapsed_ms": 869.128,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -8180,7 +8180,7 @@
           },
           "edge_error_mean_px": 24.0,
           "edge_error_maximum_px": 36,
-          "elapsed_ms": 439.784,
+          "elapsed_ms": 690.049,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -8302,7 +8302,7 @@
           },
           "edge_error_mean_px": 50.5,
           "edge_error_maximum_px": 94,
-          "elapsed_ms": 280.7,
+          "elapsed_ms": 496.307,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -8424,7 +8424,7 @@
           },
           "edge_error_mean_px": 61.25,
           "edge_error_maximum_px": 114,
-          "elapsed_ms": 187.303,
+          "elapsed_ms": 603.613,
           "candidate": {
             "method": "adaptive_radial_edge",
             "bbox": [
@@ -8520,10 +8520,10 @@
         }
       ],
       "search_observation": {
-        "completion_index": 9,
-        "parameter_set_number": 9,
-        "elapsed_seconds": 3.6476127830101177,
-        "search_fraction": 0.8181818181818182
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 10.069588586999998,
+        "search_fraction": 0.7272727272727273
       },
       "reference_roles": [],
       "requested_search_member": true,
@@ -8622,36 +8622,35 @@
   },
   "runner": {
     "execution_target": "GitHub Hosted",
-    "runner_name": "rh8-al318",
-    "runner_environment": "self-hosted",
+    "runner_name": "GitHub Actions 1000000734",
+    "runner_environment": "github-hosted",
     "runner_os": "Linux",
     "runner_arch": "X64",
-    "machine_name": "atlhwe-lsf318",
-    "cpu_model": "AMD EPYC 9655 96-Core Processor",
-    "physical_core_count": 192,
-    "logical_cpu_count": 192,
-    "available_cpu_count": 192,
-    "smt_enabled": false,
-    "memory_bytes": 1622717140992,
-    "memory_gib": 1511.27,
-    "python_version": "3.12.0",
-    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "machine_name": "runnervmzvulz",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.13",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
     "opencv_version": "4.14.0",
     "numpy_version": "2.4.6",
-    "pipeline_commit": "238d1eb534ba99d978918c53f0386b27e654e3d2",
+    "pipeline_commit": "a9a101a2d89616d1be42770260bb792d777cc282",
     "github_repository": "dlstupka/hth",
-    "github_run_id": "32038376525",
+    "github_run_id": "32035828539",
     "github_run_attempt": "1",
     "github_runner_labels": [
-      "self-hosted",
-      "192t"
+      "ubuntu-latest"
     ]
   },
   "source_commit": "208ee10c0cb78adb9ba024cc8b7affb06b777cf4",
   "performance": {
     "sample_count": 2,
-    "configured_threads": 76,
-    "peak_rss_bytes": 468848640,
+    "configured_threads": 2,
+    "peak_rss_bytes": 253710336,
     "samples_file": "logs/runner-performance.jsonl",
     "precomputed_evidence": false,
     "evidence_source": null,
@@ -8660,7 +8659,7 @@
   "progress": {
     "estimated_parameter_sets": 11,
     "completed_parameter_sets": 11,
-    "average_eval_rate": 2.9443445231294567,
+    "average_eval_rate": 0.8760334223535428,
     "failures": 0,
     "best_mean_iou": 0.9726192,
     "best_worst_page_iou": 0.95565248,
@@ -8672,8 +8671,8 @@
     "parameter_sets_with_improvements": 1,
     "winner_changes": 1,
     "baseline_surpassed": true,
-    "winner_first_changed_elapsed_seconds": 0.46824745496269315,
-    "winner_last_changed_elapsed_seconds": 0.46824745496269315,
+    "winner_first_changed_elapsed_seconds": 1.3365605449999975,
+    "winner_last_changed_elapsed_seconds": 1.3365605449999975,
     "winner_history": [
       {
         "change_number": 1,
@@ -8681,11 +8680,11 @@
         "parameter_short_name": "historic-best",
         "completion_index": 2,
         "parameter_set_number": 2,
-        "elapsed_seconds": 0.46824745496269315,
+        "elapsed_seconds": 1.3365605449999975,
         "search_fraction": 0.18181818181818182
       }
     ],
-    "last_improvement_elapsed_seconds": 0.46824745496269315,
-    "time_since_last_improvement_seconds": 3.267728384002112
+    "last_improvement_elapsed_seconds": 1.3365605449999975,
+    "time_since_last_improvement_seconds": 11.220038004000003
   }
 }
