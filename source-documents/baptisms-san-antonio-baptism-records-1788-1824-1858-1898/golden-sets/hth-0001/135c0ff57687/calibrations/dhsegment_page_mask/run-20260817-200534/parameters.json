@@ -1,0 +1,136 @@
+{
+  "schema_version": "0.4",
+  "detector": "dhsegment_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/dhsegment_page_mask.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "58.950",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "8",
+    "ranked_quality": "0.97351210",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "dhsegment_page_mask",
+    "description": "Initial exhaustive calibration for the dhSegment v0.2 page-extraction model. The network remains fixed while HTH calibrates only page-mask post-processing and minimum-area geometry.",
+    "profiles": {
+      "baseline": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.2,
+        "close_kernel_fraction": 0.005,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 1
+      }
+    },
+    "parameters": {
+      "probability_threshold": {
+        "type": "float",
+        "values": [
+          -1.0,
+          0.25,
+          0.3,
+          0.35,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6,
+          0.65
+        ]
+      },
+      "minimum_page_area_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.0025,
+          0.005,
+          0.0075,
+          0.01
+        ]
+      },
+      "open_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.0015,
+          0.003,
+          0.0045,
+          0.006
+        ]
+      },
+      "contour_offset_fraction": {
+        "type": "float",
+        "values": [
+          -0.004,
+          0.0,
+          0.004,
+          0.008
+        ]
+      },
+      "fill_holes": {
+        "type": "int",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    },
+    "lifecycle": {
+      "prepare": "dhsegment_page_mask",
+      "model_policy": "reuse",
+      "finalize": "dhsegment_page_mask"
+    },
+    "model": {
+      "family": "dhSegment",
+      "variant": "v0.2-page-extraction",
+      "source": "dhlab-epfl/dhSegment",
+      "release_asset": "model.zip",
+      "runtime": "TensorFlow SavedModel"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
