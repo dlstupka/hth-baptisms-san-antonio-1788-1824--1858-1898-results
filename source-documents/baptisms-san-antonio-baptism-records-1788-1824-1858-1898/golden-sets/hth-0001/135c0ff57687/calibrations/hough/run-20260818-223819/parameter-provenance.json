@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "hough",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+    "parameter_order": [
+      "canny_low_threshold",
+      "hough_threshold_fraction",
+      "minimum_length_fraction",
+      "maximum_gap_fraction",
+      "axis_angle_tolerance_degrees",
+      "outer_percentile",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "canny_low_threshold": [
+        25,
+        40,
+        65
+      ],
+      "hough_threshold_fraction": [
+        0.035,
+        0.055,
+        0.08
+      ],
+      "minimum_length_fraction": [
+        0.12,
+        0.2,
+        0.3
+      ],
+      "maximum_gap_fraction": [
+        0.025,
+        0.055,
+        0.09
+      ],
+      "axis_angle_tolerance_degrees": [
+        12.0,
+        22.0,
+        32.0
+      ],
+      "outer_percentile": [
+        5.0,
+        10.0,
+        20.0
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.005,
+        0.015
+      ]
+    },
+    "cartesian_count": 2187,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 11,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "canny_low_threshold": 40,
+      "hough_threshold_fraction": 0.055,
+      "minimum_length_fraction": 0.2,
+      "maximum_gap_fraction": 0.055,
+      "axis_angle_tolerance_degrees": 22.0,
+      "outer_percentile": 10.0,
+      "minimum_bbox_area_fraction": 0.1,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "e1fe506cad92d612c312fe3cf38d73e6fec6f08f92290902de2c3a91a9d0a983": {
+      "sha256": "e1fe506cad92d612c312fe3cf38d73e6fec6f08f92290902de2c3a91a9d0a983",
+      "legacy_parameter_set_id": "7078053f309d",
+      "parameters": {
+        "canny_low_threshold": 40,
+        "hough_threshold_fraction": 0.055,
+        "minimum_length_fraction": 0.2,
+        "maximum_gap_fraction": 0.055,
+        "axis_angle_tolerance_degrees": 22.0,
+        "outer_percentile": 10.0,
+        "minimum_bbox_area_fraction": 0.1,
+        "bbox_padding_fraction": 0.0
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
