@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.4",
+  "detector": "projective_gradient_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/projective_gradient_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "8.849",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "20",
+    "ranked_quality": "0.55411904",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "projective_gradient_vote",
+    "description": "Calibration space for the HTH Projective Gradient Vote detector.",
+    "profiles": {
+      "baseline": {
+        "gaussian_sigma": 1.2,
+        "gradient_percentile": 82.0,
+        "minimum_segment_fraction": 0.16,
+        "angle_bin_degrees": 4.0,
+        "family_tolerance_degrees": 16.0,
+        "orthogonality_tolerance_degrees": 22.0,
+        "minimum_side_support": 0.18,
+        "minimum_area_fraction": 0.18,
+        "maximum_area_fraction": 0.98,
+        "maximum_corner_overshoot_fraction": 0.08,
+        "bbox_padding_fraction": 0.0,
+        "support_weight": 0.55,
+        "geometry_weight": 0.3,
+        "area_weight": 0.15
+      }
+    },
+    "parameters": {
+      "gaussian_sigma": {
+        "type": "float",
+        "values": [
+          0.8,
+          1.2,
+          1.8
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          74.0,
+          82.0,
+          90.0
+        ]
+      },
+      "minimum_segment_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.16,
+          0.24
+        ]
+      },
+      "family_tolerance_degrees": {
+        "type": "float",
+        "values": [
+          10.0,
+          16.0,
+          24.0
+        ]
+      },
+      "orthogonality_tolerance_degrees": {
+        "type": "float",
+        "values": [
+          12.0,
+          22.0,
+          32.0
+        ]
+      },
+      "minimum_side_support": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.18,
+          0.3
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
