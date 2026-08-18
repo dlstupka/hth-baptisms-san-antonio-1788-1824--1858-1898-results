@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `orli_page_mask`  
-Optimizer run: **32152806852** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **32160375460** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -22,7 +22,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
-| orli_page_mask | 192t — rh8-al307 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 14 | 27 | 14p/27t | legacy | 10m 20s | 378 | 303.03 | 33s | 1 |
+| orli_page_mask | 192t — rh8-al316 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 12 | 32 | 12p/32t | legacy | 7m 51s | 384 | 303.03 | 33s | 1 |
 
 **Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
 
@@ -38,7 +38,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 <summary><strong>2. Detector Run Profile Plot</strong></summary>
 
 Compatible completed measurements are plotted as detector pipelines versus parameter sets/second; thread count is annotated at each measured shape.
-**Search method:** `adaptive`
+**Search method:** `exhaustive`
 
 ![Detector Run Profile Plot](heatmap.svg)
 
@@ -56,16 +56,16 @@ This table contains measurements from this optimizer execution only. Bold identi
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al307 (192 vCPU) | 2 | 2 | 192 | 384 | 6m 4s | 27.47 | — | -90.93% | 2.2 | 6.7 | 1.4% | 27.8 GiB |
-| 192t — rh8-al307 (192 vCPU) | 10 | 10 | 38 | 380 | 35s | 285.71 | — | -5.71% | 77.6 | 77.6 | 18.9% | 28.8 GiB |
-| 192t — rh8-al307 (192 vCPU) | 11 | 11 | 34 | 374 | 34s | 294.12 | — | -2.94% | — | — | — | — |
-| 192t — rh8-al307 (192 vCPU) | 12 | 12 | 32 | 384 | 34s | 294.12 | — | -2.94% | — | — | — | — |
-| 192t — rh8-al307 (192 vCPU) | 13 | 13 | 29 | 377 | 34s | 294.12 | — | -2.94% | 83.7 | 83.7 | 17.5% | 29.0 GiB |
-| **192t — rh8-al307 (192 vCPU)** | 14 | 14 | 27 | 378 | 33s | 303.03 | — | 0.00% | — | — | — | — |
-| 192t — rh8-al307 (192 vCPU) | 15 | 15 | 25 | 375 | 34s | 294.12 | — | -2.94% | 76.0 | 76.0 | 14.9% | 24.3 GiB |
-| 192t — rh8-al307 (192 vCPU) | 64 | 64 | 6 | 384 | 52s | 192.31 | — | -36.54% | 42.3 | 42.3 | 15.8% | 24.1 GiB |
+| 192t — rh8-al316 (192 vCPU) | 8 | 8 | 48 | 384 | 3m 48s | 43.86 | — | -85.53% | 0.2 | 0.3 | 0.1% | 16.3 GiB |
+| 192t — rh8-al316 (192 vCPU) | 9 | 9 | 42 | 378 | 37s | 270.27 | — | -10.81% | 6.8 | 6.8 | 10.4% | 16.4 GiB |
+| 192t — rh8-al316 (192 vCPU) | 10 | 10 | 38 | 380 | 36s | 277.78 | — | -8.33% | 18.4 | 18.4 | 18.9% | 16.4 GiB |
+| 192t — rh8-al316 (192 vCPU) | 11 | 11 | 34 | 374 | 35s | 285.71 | — | -5.71% | — | — | — | — |
+| **192t — rh8-al316 (192 vCPU)** | 12 | 12 | 32 | 384 | 33s | 303.03 | — | 0.00% | 81.4 | 81.4 | 18.7% | 21.3 GiB |
+| 192t — rh8-al316 (192 vCPU) | 13 | 13 | 29 | 377 | 34s | 294.12 | — | -2.94% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 14 | 14 | 27 | 378 | 34s | 294.12 | — | -2.94% | 64.8 | 64.8 | 16.3% | 20.3 GiB |
+| 192t — rh8-al316 (192 vCPU) | 15 | 15 | 25 | 375 | 34s | 294.12 | — | -2.94% | 63.7 | 63.7 | 17.9% | 16.4 GiB |
 
-**Stop reason:** `adaptive_search_complete`
+**Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 2.0% from the perceived maximum.
 
 </details>
 
