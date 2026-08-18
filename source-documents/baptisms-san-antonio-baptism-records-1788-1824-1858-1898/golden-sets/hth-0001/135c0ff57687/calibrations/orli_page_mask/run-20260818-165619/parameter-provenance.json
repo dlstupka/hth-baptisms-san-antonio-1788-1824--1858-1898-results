@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "orli_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "1c25ef2a0d8ab414b36636e41d1f7eb955c1610e5540d4ac49f3ef61c294a4d6",
+    "parameter_order": [
+      "include_lines",
+      "dilation_fraction",
+      "close_kernel_fraction",
+      "page_padding_fraction",
+      "minimum_page_area_fraction",
+      "fill_holes"
+    ],
+    "values": {
+      "include_lines": [
+        0,
+        1
+      ],
+      "dilation_fraction": [
+        0.0,
+        0.0025,
+        0.005,
+        0.0075,
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.06
+      ],
+      "close_kernel_fraction": [
+        0.0,
+        0.003,
+        0.006,
+        0.012,
+        0.024
+      ],
+      "page_padding_fraction": [
+        0.0,
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.08,
+        0.1,
+        0.12
+      ],
+      "minimum_page_area_fraction": [
+        0.08,
+        0.12,
+        0.16,
+        0.2,
+        0.25
+      ],
+      "fill_holes": [
+        0,
+        1
+      ]
+    },
+    "cartesian_count": 10000,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": true,
+    "evaluated_parameter_sets": 10000,
+    "evaluated_grid_parameter_sets": 10000,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "include_lines": 1,
+      "dilation_fraction": 0.01,
+      "close_kernel_fraction": 0.006,
+      "page_padding_fraction": 0.05,
+      "minimum_page_area_fraction": 0.12,
+      "fill_holes": 1
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
