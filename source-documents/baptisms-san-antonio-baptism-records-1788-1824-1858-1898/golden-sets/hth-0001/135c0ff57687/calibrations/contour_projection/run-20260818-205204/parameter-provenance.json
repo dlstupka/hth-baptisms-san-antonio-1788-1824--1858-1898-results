@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "contour_projection",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]"
+  },
+  "grid": {
+    "sha256": "149e8c6a92ffd1294241a96d1709a656649b0e95e5ec95df4f1b520b559c501a",
+    "parameter_order": [
+      "minimum_contour_area_fraction",
+      "epsilon_max_fraction",
+      "minimum_rectangularity",
+      "projection_margin_fraction",
+      "projection_threshold_block_fraction",
+      "projection_threshold_c",
+      "minimum_projection_score",
+      "projection_weight"
+    ],
+    "values": {
+      "minimum_contour_area_fraction": [
+        0.08,
+        0.12,
+        0.18
+      ],
+      "epsilon_max_fraction": [
+        0.03,
+        0.04,
+        0.06
+      ],
+      "minimum_rectangularity": [
+        0.45,
+        0.55,
+        0.7
+      ],
+      "projection_margin_fraction": [
+        0.03,
+        0.06,
+        0.1
+      ],
+      "projection_threshold_block_fraction": [
+        0.05,
+        0.08,
+        0.12
+      ],
+      "projection_threshold_c": [
+        5.0,
+        9.0,
+        13.0
+      ],
+      "minimum_projection_score": [
+        0.05,
+        0.08,
+        0.15
+      ],
+      "projection_weight": [
+        0.2,
+        0.3,
+        0.4
+      ]
+    },
+    "cartesian_count": 6561,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 9,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "minimum_contour_area_fraction": 0.12,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "epsilon_min_fraction": 0.008,
+      "epsilon_max_fraction": 0.04,
+      "epsilon_steps": 9,
+      "minimum_rectangularity": 0.55,
+      "projection_margin_fraction": 0.06,
+      "projection_threshold_block_fraction": 0.08,
+      "projection_threshold_c": 9.0,
+      "minimum_projection_score": 0.08,
+      "area_weight": 0.25,
+      "rectangularity_weight": 0.25,
+      "angle_weight": 0.2,
+      "projection_weight": 0.3,
+      "merge_fragmented_contours": true
+    }
+  },
+  "explicit_parameter_sets": {
+    "36d705551505b46c54b4407c7708373a5529e88a69afa087f3365f8699ce3a9b": {
+      "sha256": "36d705551505b46c54b4407c7708373a5529e88a69afa087f3365f8699ce3a9b",
+      "legacy_parameter_set_id": "0cd13eb1a471",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.12,
+        "close_kernel_fraction": 0.008,
+        "close_iterations": 1,
+        "epsilon_min_fraction": 0.008,
+        "epsilon_max_fraction": 0.04,
+        "epsilon_steps": 9,
+        "minimum_rectangularity": 0.55,
+        "projection_margin_fraction": 0.06,
+        "projection_threshold_block_fraction": 0.08,
+        "projection_threshold_c": 9.0,
+        "minimum_projection_score": 0.08,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.25,
+        "angle_weight": 0.2,
+        "projection_weight": 0.3,
+        "merge_fragmented_contours": true
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
