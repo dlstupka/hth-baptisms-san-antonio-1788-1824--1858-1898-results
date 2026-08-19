@@ -1,0 +1,142 @@
+{
+  "schema_version": "0.4",
+  "detector": "radial_edge",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/radial_edge.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "2.136",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set:score=124",
+    "queue_position": "30",
+    "ranked_quality": "0.95028923",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "radial_edge",
+    "description": "Generation-2 calibration space for HTH Radial Edge Search, broadening the original coarse 6,562-set grid with denser radius, gradient, ray-density, smoothing, and scoring probes before the radial family is considered mature.",
+    "profiles": {
+      "baseline": {
+        "gaussian_sigma": 1.2,
+        "ray_count": 96,
+        "minimum_radius_fraction": 0.18,
+        "maximum_radius_fraction": 0.72,
+        "gradient_percentile": 82.0,
+        "minimum_ray_support": 0.45,
+        "minimum_area_fraction": 0.18,
+        "maximum_area_fraction": 0.98,
+        "area_weight": 0.35,
+        "support_weight": 0.45,
+        "rectangularity_weight": 0.2
+      }
+    },
+    "parameters": {
+      "gaussian_sigma": {
+        "type": "float",
+        "values": [
+          0.6,
+          1.2,
+          1.8,
+          2.4
+        ]
+      },
+      "ray_count": {
+        "type": "int",
+        "values": [
+          64,
+          96,
+          128,
+          144,
+          224
+        ]
+      },
+      "minimum_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.14,
+          0.18,
+          0.22,
+          0.26
+        ]
+      },
+      "maximum_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.6,
+          0.66,
+          0.72,
+          0.78,
+          0.84
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          74.0,
+          82.0,
+          84.0,
+          90.0,
+          94.0
+        ]
+      },
+      "minimum_ray_support": {
+        "type": "float",
+        "values": [
+          0.25,
+          0.35,
+          0.45,
+          0.55,
+          0.65
+        ]
+      },
+      "support_weight": {
+        "type": "float",
+        "values": [
+          0.35,
+          0.45
+        ]
+      },
+      "rectangularity_weight": {
+        "type": "float",
+        "values": [
+          0.2,
+          0.3
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "bounded-cartesian-v1",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact",
+      "previous_declared_parameter_sets": 400000
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
