@@ -1,0 +1,110 @@
+{
+  "schema_version": "0.4",
+  "detector": "radon_boundary",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/radon_boundary.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 96,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "1.470",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "28",
+    "ranked_quality": "0.49825553",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "radon_boundary",
+    "description": "Calibration space for projection-angle (Radon-style) document boundary integration.",
+    "profiles": {
+      "baseline": {
+        "angle_limit_degrees": 8.0,
+        "angle_step_degrees": 1.0,
+        "edge_percentile": 82.0,
+        "projection_smooth_fraction": 0.012,
+        "minimum_peak_prominence": 1.25,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "angle_limit_degrees": {
+        "type": "float",
+        "values": [
+          4.0,
+          8.0,
+          12.0
+        ]
+      },
+      "angle_step_degrees": {
+        "type": "float",
+        "values": [
+          0.5,
+          1.0,
+          2.0
+        ]
+      },
+      "edge_percentile": {
+        "type": "float",
+        "values": [
+          75.0,
+          82.0,
+          90.0
+        ]
+      },
+      "projection_smooth_fraction": {
+        "type": "float",
+        "values": [
+          0.006,
+          0.012,
+          0.024
+        ]
+      },
+      "minimum_peak_prominence": {
+        "type": "float",
+        "values": [
+          1.05,
+          1.25,
+          1.6
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
