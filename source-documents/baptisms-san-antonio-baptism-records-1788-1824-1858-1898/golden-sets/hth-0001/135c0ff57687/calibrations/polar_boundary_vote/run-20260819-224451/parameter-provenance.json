@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "polar_boundary_vote",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "33ebf4c17649a430f2bb362be7e2b13c30508a7d61b7abb2b3146de89e4c3fc9",
+    "parameter_order": [
+      "ray_count",
+      "outer_radius_fraction",
+      "gradient_percentile",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "ray_count": [
+        90,
+        120,
+        150,
+        180,
+        240
+      ],
+      "outer_radius_fraction": [
+        0.4,
+        0.41,
+        0.42,
+        0.43,
+        0.44,
+        0.45,
+        0.46,
+        0.47,
+        0.48,
+        0.49,
+        0.5,
+        0.51,
+        0.52,
+        0.53,
+        0.54,
+        0.55,
+        0.56,
+        0.57,
+        0.58,
+        0.59,
+        0.6
+      ],
+      "gradient_percentile": [
+        84.0,
+        85.0,
+        86.0,
+        87.0,
+        88.0,
+        89.0,
+        90.0,
+        91.0,
+        92.0,
+        93.0,
+        94.0,
+        95.0,
+        96.0,
+        97.0,
+        98.0,
+        99.0,
+        100.0
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.001,
+        0.002,
+        0.003,
+        0.004,
+        0.005,
+        0.006,
+        0.008,
+        0.01,
+        0.012,
+        0.016
+      ]
+    },
+    "cartesian_count": 19635,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 11,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "ray_count": 180,
+      "inner_radius_fraction": 0.06,
+      "outer_radius_fraction": 0.6,
+      "gradient_percentile": 90.0,
+      "minimum_support_fraction": 0.25,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "a4c68b9a8e6a6900e8b6a6bf801b7908e5bf9f28c6f8b5b5af32c74b993bee20": {
+      "sha256": "a4c68b9a8e6a6900e8b6a6bf801b7908e5bf9f28c6f8b5b5af32c74b993bee20",
+      "legacy_parameter_set_id": "cd967f93437d",
+      "parameters": {
+        "ray_count": 180,
+        "inner_radius_fraction": 0.06,
+        "outer_radius_fraction": 0.6,
+        "gradient_percentile": 90.0,
+        "minimum_support_fraction": 0.25,
+        "bbox_padding_fraction": 0.0
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
