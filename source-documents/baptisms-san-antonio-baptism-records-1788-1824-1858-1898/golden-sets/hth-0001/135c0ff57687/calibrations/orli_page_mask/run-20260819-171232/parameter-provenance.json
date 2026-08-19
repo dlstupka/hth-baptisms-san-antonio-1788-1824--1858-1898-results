@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "orli_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [
+      "close_kernel_fraction",
+      "fill_holes"
+    ],
+    "equivalence_family_size": 10
+  },
+  "grid": {
+    "sha256": "d5bed34b0de55ab076da2eb8fb066fe5ad0575d406ad03667bd1c1fd52a990ab",
+    "parameter_order": [
+      "include_lines",
+      "dilation_fraction",
+      "page_padding_fraction",
+      "minimum_page_area_fraction",
+      "close_kernel_fraction",
+      "fill_holes"
+    ],
+    "values": {
+      "include_lines": [
+        0,
+        1
+      ],
+      "dilation_fraction": [
+        0.0,
+        0.0025,
+        0.005,
+        0.0075,
+        0.01,
+        0.015,
+        0.02,
+        0.03,
+        0.04,
+        0.06
+      ],
+      "page_padding_fraction": [
+        0.0,
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.08,
+        0.1,
+        0.12
+      ],
+      "minimum_page_area_fraction": [
+        0.08,
+        0.12,
+        0.16,
+        0.2,
+        0.25
+      ],
+      "close_kernel_fraction": [
+        0.006
+      ],
+      "fill_holes": [
+        1
+      ]
+    },
+    "cartesian_count": 1000,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 11,
+    "evaluated_grid_parameter_sets": 11,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "include_lines": 1,
+      "dilation_fraction": 0.01,
+      "close_kernel_fraction": 0.006,
+      "page_padding_fraction": 0.05,
+      "minimum_page_area_fraction": 0.12,
+      "fill_holes": 1
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
