@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "ransac",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "1fae2a4c2c28979656a81fe9f52981080725d569ad110818560f94e1dffcb4b2",
+    "parameter_order": [
+      "scan_samples",
+      "minimum_scan_foreground_fraction",
+      "residual_threshold_fraction",
+      "max_trials",
+      "minimum_mean_inlier_ratio",
+      "minimum_bbox_area_fraction",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "scan_samples": [
+        140,
+        220,
+        320
+      ],
+      "minimum_scan_foreground_fraction": [
+        0.008,
+        0.0125,
+        0.02
+      ],
+      "residual_threshold_fraction": [
+        0.004,
+        0.008,
+        0.014
+      ],
+      "max_trials": [
+        200,
+        400
+      ],
+      "minimum_mean_inlier_ratio": [
+        0.25,
+        0.45,
+        0.65
+      ],
+      "minimum_bbox_area_fraction": [
+        0.1,
+        0.18,
+        0.28
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.008,
+        0.016
+      ]
+    },
+    "cartesian_count": 1458,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 11,
+    "evaluated_grid_parameter_sets": 11,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "scan_samples": 220,
+      "minimum_scan_foreground_fraction": 0.0125,
+      "residual_threshold_fraction": 0.008,
+      "max_trials": 400,
+      "minimum_mean_inlier_ratio": 0.45,
+      "minimum_bbox_area_fraction": 0.18,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
