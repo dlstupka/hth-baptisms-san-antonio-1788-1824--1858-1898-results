@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "signed_polar_boundary_vote",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "6b04d9ffc091acf6158ddd3bf75f6d02848306eebee99bbd3e01af2a2bebceb2",
+    "parameter_order": [
+      "ray_count",
+      "inner_radius_fraction",
+      "outer_radius_fraction",
+      "gradient_percentile",
+      "minimum_support_fraction",
+      "bbox_padding_fraction",
+      "polarity"
+    ],
+    "values": {
+      "ray_count": [
+        72,
+        120,
+        180,
+        224,
+        360
+      ],
+      "inner_radius_fraction": [
+        0.1,
+        0.12,
+        0.16,
+        0.18,
+        0.22
+      ],
+      "outer_radius_fraction": [
+        0.45,
+        0.55,
+        0.6,
+        0.7,
+        0.82
+      ],
+      "gradient_percentile": [
+        82.0,
+        88.0,
+        90.0,
+        93.0,
+        95.0
+      ],
+      "minimum_support_fraction": [
+        0.2,
+        0.3,
+        0.35,
+        0.4,
+        0.5
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.002,
+        0.004,
+        0.008,
+        0.016
+      ],
+      "polarity": [
+        "bright_inside",
+        "dark_inside",
+        "absolute"
+      ]
+    },
+    "cartesian_count": 46875,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 11,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "ray_count": 180,
+      "inner_radius_fraction": 0.12,
+      "outer_radius_fraction": 0.7,
+      "gradient_percentile": 82.0,
+      "minimum_support_fraction": 0.35,
+      "bbox_padding_fraction": 0.0,
+      "polarity": "bright_inside"
+    }
+  },
+  "explicit_parameter_sets": {
+    "d271e15cc6fd4189c8c6d350b04e323d38177022c6d43b7d05f73fcd3a4e1a52": {
+      "sha256": "d271e15cc6fd4189c8c6d350b04e323d38177022c6d43b7d05f73fcd3a4e1a52",
+      "legacy_parameter_set_id": "8ddbe5f468cd",
+      "parameters": {
+        "bbox_padding_fraction": 0.0,
+        "gradient_percentile": 95.0,
+        "inner_radius_fraction": 0.2,
+        "minimum_support_fraction": 0.35,
+        "outer_radius_fraction": 0.6,
+        "polarity": "absolute",
+        "ray_count": 72
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
