@@ -1,0 +1,5900 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260820-233941",
+  "detector": "eynollah_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "15.266",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "7",
+    "ranked_quality": "0.96315717",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 81,
+    "live_possible_parameter_sets": 81,
+    "zombie_possible_parameter_sets": 2025,
+    "canonical_search_space": {
+      "schema_version": "1",
+      "strategy": "exhaustive",
+      "live_exhaustive_parameter_sets": 81,
+      "exhaustive_with_zombies_parameter_sets": 2025,
+      "effective_parameter_sets": 81,
+      "configured_zombie_parameters": [
+        "close_kernel_fraction",
+        "minimum_page_area_fraction"
+      ],
+      "denominator": "exhaustive-with-zombies"
+    },
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 50,
+  "fully_successful_parameter_set_count": 10,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "2a84898e09dbda902c6c3dfb24fd8130cb5d42ef8acb9fb7b22a43c774c21dae",
+  "model_selection": null,
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "9c711c53f075",
+    "parameters": {
+      "probability_threshold": 0.2,
+      "page_padding_fraction": 0.0075,
+      "close_kernel_fraction": 0.0,
+      "minimum_page_area_fraction": 0.02
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.96372577,
+      "mean_iou_success": 0.96372577,
+      "minimum_iou": 0.93755476,
+      "stddev_iou": 0.01645493,
+      "mean_edge_error_px": 10.05,
+      "elapsed_ms_total": 101.077,
+      "wall_ms": 101.99
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          96,
+          57,
+          1290,
+          960
+        ],
+        "iou": 0.96652671,
+        "edge_errors": {
+          "left": 29,
+          "top": 1,
+          "right": 1,
+          "bottom": 7,
+          "mean": 9.5,
+          "maximum": 29
+        },
+        "edge_error_mean_px": 9.5,
+        "edge_error_maximum_px": 29,
+        "elapsed_ms": 22.815,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            96,
+            57,
+            1290,
+            960
+          ],
+          "corners": [
+            [
+              1289.015869140625,
+              959.6553344726562
+            ],
+            [
+              96.06903076171875,
+              959.6553344726562
+            ],
+            [
+              96.06903076171875,
+              57.157196044921875
+            ],
+            [
+              1289.015869140625,
+              57.157196044921875
+            ]
+          ],
+          "confidence": 0.7158864736557007,
+          "score": 0.7158864736557007,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0020292268600314856,
+            "probability_max": 0.7985255122184753,
+            "probability_mean": 0.5408431887626648,
+            "mask_area_fraction": 0.7469233298788265
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          114,
+          10,
+          1214,
+          973
+        ],
+        "iou": 0.93755476,
+        "edge_errors": {
+          "left": 47,
+          "top": 2,
+          "right": 19,
+          "bottom": 4,
+          "mean": 18.0,
+          "maximum": 47
+        },
+        "edge_error_mean_px": 18.0,
+        "edge_error_maximum_px": 47,
+        "elapsed_ms": 18.752,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            114,
+            10,
+            1214,
+            973
+          ],
+          "corners": [
+            [
+              121.95892333984375,
+              972.330810546875
+            ],
+            [
+              114.82904052734375,
+              15.1417236328125
+            ],
+            [
+              1206.6630859375,
+              10.566986083984375
+            ],
+            [
+              1213.79296875,
+              967.7560424804688
+            ]
+          ],
+          "confidence": 0.651689350605011,
+          "score": 0.651689350605011,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0021411494817584753,
+            "probability_max": 0.7880334258079529,
+            "probability_mean": 0.45177778601646423,
+            "mask_area_fraction": 0.6825424505739796
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          9,
+          25,
+          1072,
+          969
+        ],
+        "iou": 0.98829904,
+        "edge_errors": {
+          "left": 6,
+          "top": 3,
+          "right": 2,
+          "bottom": 1,
+          "mean": 3.0,
+          "maximum": 6
+        },
+        "edge_error_mean_px": 3.0,
+        "edge_error_maximum_px": 6,
+        "elapsed_ms": 23.004,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            9,
+            25,
+            1072,
+            969
+          ],
+          "corners": [
+            [
+              1071.564697265625,
+              968.0191650390625
+            ],
+            [
+              9.149658203125,
+              968.0191650390625
+            ],
+            [
+              9.149658203125,
+              25.95184326171875
+            ],
+            [
+              1071.564697265625,
+              25.95184326171875
+            ]
+          ],
+          "confidence": 0.7133356332778931,
+          "score": 0.7133356332778931,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0031636925414204597,
+            "probability_max": 0.7958259582519531,
+            "probability_mean": 0.643965482711792,
+            "mask_area_fraction": 0.8952038823341837
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          75,
+          52,
+          1124,
+          941
+        ],
+        "iou": 0.96843863,
+        "edge_errors": {
+          "left": 9,
+          "top": 1,
+          "right": 23,
+          "bottom": 0,
+          "mean": 8.25,
+          "maximum": 23
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 23,
+        "elapsed_ms": 17.76,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            75,
+            52,
+            1124,
+            941
+          ],
+          "corners": [
+            [
+              1123.24072265625,
+              940.9935913085938
+            ],
+            [
+              75.63409423828125,
+              940.9935913085938
+            ],
+            [
+              75.63409423828125,
+              52.80084228515625
+            ],
+            [
+              1123.24072265625,
+              52.80084228515625
+            ]
+          ],
+          "confidence": 0.7174399495124817,
+          "score": 0.7174399495124817,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0024777045473456383,
+            "probability_max": 0.8220356106758118,
+            "probability_mean": 0.5044590830802917,
+            "mask_area_fraction": 0.6945750956632653
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          70,
+          31,
+          1176,
+          964
+        ],
+        "iou": 0.95780969,
+        "edge_errors": {
+          "left": 18,
+          "top": 2,
+          "right": 22,
+          "bottom": 4,
+          "mean": 11.5,
+          "maximum": 22
+        },
+        "edge_error_mean_px": 11.5,
+        "edge_error_maximum_px": 22,
+        "elapsed_ms": 18.746,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            70,
+            31,
+            1176,
+            964
+          ],
+          "corners": [
+            [
+              74.39398193359375,
+              963.9873657226562
+            ],
+            [
+              70.7862548828125,
+              34.448333740234375
+            ],
+            [
+              1171.620361328125,
+              31.843841552734375
+            ],
+            [
+              1175.2281494140625,
+              961.3828125
+            ]
+          ],
+          "confidence": 0.7169452905654907,
+          "score": 0.7169452905654907,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0027359987143427134,
+            "probability_max": 0.7913625836372375,
+            "probability_mean": 0.5566083788871765,
+            "mask_area_fraction": 0.7675955636160714
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "search_observation": {
+      "completion_index": 6,
+      "parameter_set_number": 6,
+      "elapsed_seconds": 0.41494663999992554,
+      "search_fraction": 0.6
+    },
+    "reference_roles": [],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "legacy_parameter_set_id": "9c711c53f075",
+    "parameter_identity_sha256": "a489890f36af5ca2b38c1c4de4a0a2e7170a1404670d735cc2f09b2b3cad72d7",
+    "parameter_set_equivalence_family_id": "43d3f672c857",
+    "parameter_set_equivalence_family_sha256": "43d3f672c857448ab68657a8d764a07ac538e8c4c094e68921b6b2b4dcc48278",
+    "parameter_set_equivalence_family_size": 25,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 4,
+    "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+    "profile": null,
+    "run_id": "run-20260820-233941",
+    "rank": 1,
+    "search_rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "256765f28912",
+    "parameters": {
+      "probability_threshold": 0.25,
+      "minimum_page_area_fraction": 0.02,
+      "close_kernel_fraction": 0.0,
+      "page_padding_fraction": 0.0075
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.96315717,
+      "mean_iou_success": 0.96315717,
+      "minimum_iou": 0.93111411,
+      "stddev_iou": 0.01855003,
+      "mean_edge_error_px": 10.15,
+      "elapsed_ms_total": 93.777,
+      "wall_ms": 97.413
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          99,
+          57,
+          1289,
+          960
+        ],
+        "iou": 0.96974763,
+        "edge_errors": {
+          "left": 26,
+          "top": 1,
+          "right": 0,
+          "bottom": 7,
+          "mean": 8.5,
+          "maximum": 26
+        },
+        "edge_error_mean_px": 8.5,
+        "edge_error_maximum_px": 26,
+        "elapsed_ms": 19.119,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            99,
+            57,
+            1289,
+            960
+          ],
+          "corners": [
+            [
+              1288.992431640625,
+              959.6552124023438
+            ],
+            [
+              99.177001953125,
+              959.6552124023438
+            ],
+            [
+              99.177001953125,
+              57.157196044921875
+            ],
+            [
+              1288.992431640625,
+              57.157196044921875
+            ]
+          ],
+          "confidence": 0.7170277833938599,
+          "score": 0.7170277833938599,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.25,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0020292268600314856,
+            "probability_max": 0.7985255122184753,
+            "probability_mean": 0.5408431887626648,
+            "mask_area_fraction": 0.7451919244260204
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          114,
+          12,
+          1211,
+          971
+        ],
+        "iou": 0.93111411,
+        "edge_errors": {
+          "left": 47,
+          "top": 4,
+          "right": 22,
+          "bottom": 6,
+          "mean": 19.75,
+          "maximum": 47
+        },
+        "edge_error_mean_px": 19.75,
+        "edge_error_maximum_px": 47,
+        "elapsed_ms": 19.255,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            114,
+            12,
+            1211,
+            971
+          ],
+          "corners": [
+            [
+              122.151123046875,
+              970.2151489257812
+            ],
+            [
+              114.89080810546875,
+              17.30487060546875
+            ],
+            [
+              1203.65380859375,
+              12.63873291015625
+            ],
+            [
+              1210.9140625,
+              965.5489501953125
+            ]
+          ],
+          "confidence": 0.6623443961143494,
+          "score": 0.6623443961143494,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.25,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0021411494817584753,
+            "probability_max": 0.7880334258079529,
+            "probability_mean": 0.45177778601646423,
+            "mask_area_fraction": 0.6676299426020408
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          9,
+          25,
+          1072,
+          969
+        ],
+        "iou": 0.98829904,
+        "edge_errors": {
+          "left": 6,
+          "top": 3,
+          "right": 2,
+          "bottom": 1,
+          "mean": 3.0,
+          "maximum": 6
+        },
+        "edge_error_mean_px": 3.0,
+        "edge_error_maximum_px": 6,
+        "elapsed_ms": 18.263,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            9,
+            25,
+            1072,
+            969
+          ],
+          "corners": [
+            [
+              1071.564697265625,
+              968.0191650390625
+            ],
+            [
+              9.149658203125,
+              968.0191650390625
+            ],
+            [
+              9.149658203125,
+              25.95184326171875
+            ],
+            [
+              1071.564697265625,
+              25.95184326171875
+            ]
+          ],
+          "confidence": 0.7141819000244141,
+          "score": 0.7141819000244141,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.25,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0031636925414204597,
+            "probability_max": 0.7958259582519531,
+            "probability_mean": 0.643965482711792,
+            "mask_area_fraction": 0.8936493542729592
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          75,
+          52,
+          1124,
+          939
+        ],
+        "iou": 0.96632616,
+        "edge_errors": {
+          "left": 9,
+          "top": 1,
+          "right": 23,
+          "bottom": 2,
+          "mean": 8.75,
+          "maximum": 23
+        },
+        "edge_error_mean_px": 8.75,
+        "edge_error_maximum_px": 23,
+        "elapsed_ms": 19.037,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            75,
+            52,
+            1124,
+            939
+          ],
+          "corners": [
+            [
+              1123.240966796875,
+              938.7786254882812
+            ],
+            [
+              75.63409423828125,
+              938.7786254882812
+            ],
+            [
+              75.63409423828125,
+              52.81732177734375
+            ],
+            [
+              1123.240966796875,
+              52.81732177734375
+            ]
+          ],
+          "confidence": 0.7186612486839294,
+          "score": 0.7186612486839294,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.25,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0024777045473456383,
+            "probability_max": 0.8220356106758118,
+            "probability_mean": 0.5044590830802917,
+            "mask_area_fraction": 0.6928561463647959
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          73,
+          32,
+          1175,
+          962
+        ],
+        "iou": 0.9602989,
+        "edge_errors": {
+          "left": 15,
+          "top": 1,
+          "right": 21,
+          "bottom": 6,
+          "mean": 10.75,
+          "maximum": 21
+        },
+        "edge_error_mean_px": 10.75,
+        "edge_error_maximum_px": 21,
+        "elapsed_ms": 18.103,
+        "candidate": {
+          "method": "eynollah_page_mask",
+          "bbox": [
+            73,
+            32,
+            1175,
+            962
+          ],
+          "corners": [
+            [
+              1174.2373046875,
+              961.50439453125
+            ],
+            [
+              73.9501953125,
+              961.50439453125
+            ],
+            [
+              73.9501953125,
+              32.915313720703125
+            ],
+            [
+              1174.2373046875,
+              32.915313720703125
+            ]
+          ],
+          "confidence": 0.7184717655181885,
+          "score": 0.7184717655181885,
+          "diagnostics": {
+            "model_id": "eynollah-page-extraction-2021-04-25",
+            "model_family": "Eynollah",
+            "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+            "evidence": "eynollah_page_extraction_probability",
+            "parameters": {
+              "probability_threshold": 0.25,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.0,
+              "page_padding_fraction": 0.0075
+            },
+            "probability_min": 0.0027359987143427134,
+            "probability_max": 0.7913625836372375,
+            "probability_mean": 0.5566083788871765,
+            "mask_area_fraction": 0.7652189293686225
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "256765f28912",
+    "parameter_identity_sha256": "e817bfbb539cf02658d643fcf7a88060908ee69e3330725866e959f476163e74",
+    "parameter_set_equivalence_family_id": "55b49e80b829",
+    "parameter_set_equivalence_family_sha256": "55b49e80b829de818f71d13096d150ad8a4a0373f82cf8dfbd595d3f7de344d1",
+    "parameter_set_equivalence_family_size": 25,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 40,
+    "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "search_space_member": true,
+    "profile": "baseline",
+    "run_id": "run-20260820-233941",
+    "rank": 5,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": null,
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "9c711c53f075",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0075,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96372577,
+        "mean_iou_success": 0.96372577,
+        "minimum_iou": 0.93755476,
+        "stddev_iou": 0.01645493,
+        "mean_edge_error_px": 10.05,
+        "elapsed_ms_total": 101.077,
+        "wall_ms": 101.99
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            96,
+            57,
+            1290,
+            960
+          ],
+          "iou": 0.96652671,
+          "edge_errors": {
+            "left": 29,
+            "top": 1,
+            "right": 1,
+            "bottom": 7,
+            "mean": 9.5,
+            "maximum": 29
+          },
+          "edge_error_mean_px": 9.5,
+          "edge_error_maximum_px": 29,
+          "elapsed_ms": 22.815,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              96,
+              57,
+              1290,
+              960
+            ],
+            "corners": [
+              [
+                1289.015869140625,
+                959.6553344726562
+              ],
+              [
+                96.06903076171875,
+                959.6553344726562
+              ],
+              [
+                96.06903076171875,
+                57.157196044921875
+              ],
+              [
+                1289.015869140625,
+                57.157196044921875
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            114,
+            10,
+            1214,
+            973
+          ],
+          "iou": 0.93755476,
+          "edge_errors": {
+            "left": 47,
+            "top": 2,
+            "right": 19,
+            "bottom": 4,
+            "mean": 18.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 18.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 18.752,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              114,
+              10,
+              1214,
+              973
+            ],
+            "corners": [
+              [
+                121.95892333984375,
+                972.330810546875
+              ],
+              [
+                114.82904052734375,
+                15.1417236328125
+              ],
+              [
+                1206.6630859375,
+                10.566986083984375
+              ],
+              [
+                1213.79296875,
+                967.7560424804688
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            9,
+            25,
+            1072,
+            969
+          ],
+          "iou": 0.98829904,
+          "edge_errors": {
+            "left": 6,
+            "top": 3,
+            "right": 2,
+            "bottom": 1,
+            "mean": 3.0,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 23.004,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              9,
+              25,
+              1072,
+              969
+            ],
+            "corners": [
+              [
+                1071.564697265625,
+                968.0191650390625
+              ],
+              [
+                9.149658203125,
+                968.0191650390625
+              ],
+              [
+                9.149658203125,
+                25.95184326171875
+              ],
+              [
+                1071.564697265625,
+                25.95184326171875
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            75,
+            52,
+            1124,
+            941
+          ],
+          "iou": 0.96843863,
+          "edge_errors": {
+            "left": 9,
+            "top": 1,
+            "right": 23,
+            "bottom": 0,
+            "mean": 8.25,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 17.76,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              75,
+              52,
+              1124,
+              941
+            ],
+            "corners": [
+              [
+                1123.24072265625,
+                940.9935913085938
+              ],
+              [
+                75.63409423828125,
+                940.9935913085938
+              ],
+              [
+                75.63409423828125,
+                52.80084228515625
+              ],
+              [
+                1123.24072265625,
+                52.80084228515625
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            70,
+            31,
+            1176,
+            964
+          ],
+          "iou": 0.95780969,
+          "edge_errors": {
+            "left": 18,
+            "top": 2,
+            "right": 22,
+            "bottom": 4,
+            "mean": 11.5,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 18.746,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              70,
+              31,
+              1176,
+              964
+            ],
+            "corners": [
+              [
+                74.39398193359375,
+                963.9873657226562
+              ],
+              [
+                70.7862548828125,
+                34.448333740234375
+              ],
+              [
+                1171.620361328125,
+                31.843841552734375
+              ],
+              [
+                1175.2281494140625,
+                961.3828125
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.41494663999992554,
+        "search_fraction": 0.6
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "9c711c53f075",
+      "parameter_identity_sha256": "a489890f36af5ca2b38c1c4de4a0a2e7170a1404670d735cc2f09b2b3cad72d7",
+      "parameter_set_equivalence_family_id": "43d3f672c857",
+      "parameter_set_equivalence_family_sha256": "43d3f672c857448ab68657a8d764a07ac538e8c4c094e68921b6b2b4dcc48278",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 1,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bea25c60b1af",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0085,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96366712,
+        "mean_iou_success": 0.96366712,
+        "minimum_iou": 0.9412101,
+        "stddev_iou": 0.01538862,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 102.47,
+        "wall_ms": 103.049
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            94,
+            56,
+            1291,
+            961
+          ],
+          "iou": 0.96620192,
+          "edge_errors": {
+            "left": 31,
+            "top": 0,
+            "right": 2,
+            "bottom": 6,
+            "mean": 9.75,
+            "maximum": 31
+          },
+          "edge_error_mean_px": 9.75,
+          "edge_error_maximum_px": 31,
+          "elapsed_ms": 22.373,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              94,
+              56,
+              1291,
+              961
+            ],
+            "corners": [
+              [
+                1290.191162109375,
+                960.5444946289062
+              ],
+              [
+                94.89373779296875,
+                960.5444946289062
+              ],
+              [
+                94.89373779296875,
+                56.268035888671875
+              ],
+              [
+                1290.191162109375,
+                56.268035888671875
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            113,
+            9,
+            1215,
+            974
+          ],
+          "iou": 0.9412101,
+          "edge_errors": {
+            "left": 46,
+            "top": 1,
+            "right": 18,
+            "bottom": 3,
+            "mean": 17.0,
+            "maximum": 46
+          },
+          "edge_error_mean_px": 17.0,
+          "edge_error_maximum_px": 46,
+          "elapsed_ms": 22.701,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              113,
+              9,
+              1215,
+              974
+            ],
+            "corners": [
+              [
+                120.89031982421875,
+                973.2783203125
+              ],
+              [
+                113.746337890625,
+                14.20318603515625
+              ],
+              [
+                1207.731689453125,
+                9.61944580078125
+              ],
+              [
+                1214.875732421875,
+                968.694580078125
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            8,
+            25,
+            1073,
+            969
+          ],
+          "iou": 0.98830408,
+          "edge_errors": {
+            "left": 7,
+            "top": 3,
+            "right": 1,
+            "bottom": 1,
+            "mean": 3.0,
+            "maximum": 7
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 7,
+          "elapsed_ms": 14.63,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              8,
+              25,
+              1073,
+              969
+            ],
+            "corners": [
+              [
+                1072.611328125,
+                968.947265625
+              ],
+              [
+                8.10296630859375,
+                968.947265625
+              ],
+              [
+                8.10296630859375,
+                25.023712158203125
+              ],
+              [
+                1072.611328125,
+                25.023712158203125
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            74,
+            51,
+            1125,
+            942
+          ],
+          "iou": 0.96656383,
+          "edge_errors": {
+            "left": 10,
+            "top": 0,
+            "right": 24,
+            "bottom": 1,
+            "mean": 8.75,
+            "maximum": 24
+          },
+          "edge_error_mean_px": 8.75,
+          "edge_error_maximum_px": 24,
+          "elapsed_ms": 19.107,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              74,
+              51,
+              1125,
+              942
+            ],
+            "corners": [
+              [
+                1124.27294921875,
+                941.86865234375
+              ],
+              [
+                74.6019287109375,
+                941.86865234375
+              ],
+              [
+                74.6019287109375,
+                51.92578125
+              ],
+              [
+                1124.27294921875,
+                51.92578125
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1177,
+            965
+          ],
+          "iou": 0.95605565,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 23,
+            "bottom": 3,
+            "mean": 12.0,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 23.659,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              69,
+              30,
+              1177,
+              965
+            ],
+            "corners": [
+              [
+                73.31298828125,
+                964.90576171875
+              ],
+              [
+                69.6981201171875,
+                33.535125732421875
+              ],
+              [
+                1172.701416015625,
+                30.92547607421875
+              ],
+              [
+                1176.3162841796875,
+                962.2960205078125
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 0.42613432999996803,
+        "search_fraction": 0.7
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "bea25c60b1af",
+      "parameter_identity_sha256": "3938b610f370bafdf8db4a22d19da4e7a6e7e4b02bb8f2585585541707bc4dc9",
+      "parameter_set_equivalence_family_id": "b5005bc17535",
+      "parameter_set_equivalence_family_sha256": "b5005bc175356d8e86b22c77daea9e7bd4e9ac46cef16a65daa64b029fe8cf82",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 2,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "24d69a08b327",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0065,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96343949,
+        "mean_iou_success": 0.96343949,
+        "minimum_iou": 0.9339065,
+        "stddev_iou": 0.0175198,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 98.598,
+        "wall_ms": 99.138
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            97,
+            58,
+            1288,
+            959
+          ],
+          "iou": 0.96521013,
+          "edge_errors": {
+            "left": 28,
+            "top": 2,
+            "right": 1,
+            "bottom": 8,
+            "mean": 9.75,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 9.75,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 22.718,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              97,
+              58,
+              1288,
+              959
+            ],
+            "corners": [
+              [
+                1287.840576171875,
+                958.7661743164062
+              ],
+              [
+                97.24432373046875,
+                958.7661743164062
+              ],
+              [
+                97.24432373046875,
+                58.046356201171875
+              ],
+              [
+                1287.840576171875,
+                58.046356201171875
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            115,
+            11,
+            1213,
+            972
+          ],
+          "iou": 0.9339065,
+          "edge_errors": {
+            "left": 48,
+            "top": 3,
+            "right": 20,
+            "bottom": 5,
+            "mean": 19.0,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 19.0,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 18.88,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              115,
+              11,
+              1213,
+              972
+            ],
+            "corners": [
+              [
+                123.027587890625,
+                971.38330078125
+              ],
+              [
+                115.9117431640625,
+                16.080230712890625
+              ],
+              [
+                1205.594482421875,
+                11.5145263671875
+              ],
+              [
+                1212.7103271484375,
+                966.8175048828125
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            10,
+            26,
+            1071,
+            968
+          ],
+          "iou": 0.98829152,
+          "edge_errors": {
+            "left": 5,
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "mean": 3.0,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 16.357,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              10,
+              26,
+              1071,
+              968
+            ],
+            "corners": [
+              [
+                1070.51806640625,
+                967.0910034179688
+              ],
+              [
+                10.19635009765625,
+                967.0910034179688
+              ],
+              [
+                10.19635009765625,
+                26.879974365234375
+              ],
+              [
+                1070.51806640625,
+                26.879974365234375
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            76,
+            53,
+            1123,
+            941
+          ],
+          "iou": 0.96922631,
+          "edge_errors": {
+            "left": 8,
+            "top": 2,
+            "right": 22,
+            "bottom": 0,
+            "mean": 8.0,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 22.121,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              76,
+              53,
+              1123,
+              941
+            ],
+            "corners": [
+              [
+                1122.208740234375,
+                940.1185302734375
+              ],
+              [
+                76.66619873046875,
+                940.1185302734375
+              ],
+              [
+                76.66619873046875,
+                53.6759033203125
+              ],
+              [
+                1122.208740234375,
+                53.6759033203125
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            71,
+            32,
+            1175,
+            964
+          ],
+          "iou": 0.96056299,
+          "edge_errors": {
+            "left": 17,
+            "top": 1,
+            "right": 21,
+            "bottom": 4,
+            "mean": 10.75,
+            "maximum": 21
+          },
+          "edge_error_mean_px": 10.75,
+          "edge_error_maximum_px": 21,
+          "elapsed_ms": 18.522,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              71,
+              32,
+              1175,
+              964
+            ],
+            "corners": [
+              [
+                75.47503662109375,
+                963.0689697265625
+              ],
+              [
+                71.87432861328125,
+                35.361572265625
+              ],
+              [
+                1170.539306640625,
+                32.76220703125
+              ],
+              [
+                1174.14013671875,
+                960.4696044921875
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.3229063059999362,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "24d69a08b327",
+      "parameter_identity_sha256": "a3abf076dd7524d738223a03c2204c03eeb01dfe6c3ab0adb2710423de49226f",
+      "parameter_set_equivalence_family_id": "0db4ddcc7511",
+      "parameter_set_equivalence_family_sha256": "0db4ddcc7511819581fac585ec9c6d39c008b181de17561f270d7723eff61fc0",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 3,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "eedcfa6f4634",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0095,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96334462,
+        "mean_iou_success": 0.96334462,
+        "minimum_iou": 0.94487252,
+        "stddev_iou": 0.01435442,
+        "mean_edge_error_px": 10.2,
+        "elapsed_ms_total": 93.847,
+        "wall_ms": 94.353
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            93,
+            55,
+            1292,
+            962
+          ],
+          "iou": 0.96457648,
+          "edge_errors": {
+            "left": 32,
+            "top": 1,
+            "right": 3,
+            "bottom": 5,
+            "mean": 10.25,
+            "maximum": 32
+          },
+          "edge_error_mean_px": 10.25,
+          "edge_error_maximum_px": 32,
+          "elapsed_ms": 21.665,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              93,
+              55,
+              1292,
+              962
+            ],
+            "corners": [
+              [
+                1291.366455078125,
+                961.4337158203125
+              ],
+              [
+                93.7183837890625,
+                961.4337158203125
+              ],
+              [
+                93.7183837890625,
+                55.37884521484375
+              ],
+              [
+                1291.366455078125,
+                55.37884521484375
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            112,
+            8,
+            1216,
+            975
+          ],
+          "iou": 0.94487252,
+          "edge_errors": {
+            "left": 45,
+            "top": 0,
+            "right": 17,
+            "bottom": 2,
+            "mean": 16.0,
+            "maximum": 45
+          },
+          "edge_error_mean_px": 16.0,
+          "edge_error_maximum_px": 45,
+          "elapsed_ms": 19.478,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              112,
+              8,
+              1216,
+              975
+            ],
+            "corners": [
+              [
+                119.82159423828125,
+                974.2259521484375
+              ],
+              [
+                112.66357421875,
+                13.264617919921875
+              ],
+              [
+                1208.800537109375,
+                8.671844482421875
+              ],
+              [
+                1215.95849609375,
+                969.6331787109375
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            7,
+            24,
+            1074,
+            970
+          ],
+          "iou": 0.98830572,
+          "edge_errors": {
+            "left": 8,
+            "top": 4,
+            "right": 0,
+            "bottom": 0,
+            "mean": 3.0,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 16.755,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              7,
+              24,
+              1074,
+              970
+            ],
+            "corners": [
+              [
+                1073.658203125,
+                969.87548828125
+              ],
+              [
+                7.05621337890625,
+                969.87548828125
+              ],
+              [
+                7.05621337890625,
+                24.09552001953125
+              ],
+              [
+                1073.658203125,
+                24.09552001953125
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            51,
+            1126,
+            943
+          ],
+          "iou": 0.96364647,
+          "edge_errors": {
+            "left": 11,
+            "top": 0,
+            "right": 25,
+            "bottom": 2,
+            "mean": 9.5,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 9.5,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 17.922,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              73,
+              51,
+              1126,
+              943
+            ],
+            "corners": [
+              [
+                1125.30517578125,
+                942.7437744140625
+              ],
+              [
+                73.56976318359375,
+                942.7437744140625
+              ],
+              [
+                73.56976318359375,
+                51.0506591796875
+              ],
+              [
+                1125.30517578125,
+                51.0506591796875
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            68,
+            30,
+            1178,
+            966
+          ],
+          "iou": 0.95532191,
+          "edge_errors": {
+            "left": 20,
+            "top": 3,
+            "right": 24,
+            "bottom": 2,
+            "mean": 12.25,
+            "maximum": 24
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 24,
+          "elapsed_ms": 18.027,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              68,
+              30,
+              1178,
+              966
+            ],
+            "corners": [
+              [
+                72.23193359375,
+                965.8240966796875
+              ],
+              [
+                68.6099853515625,
+                32.621826171875
+              ],
+              [
+                1173.782470703125,
+                30.007080078125
+              ],
+              [
+                1177.4044189453125,
+                963.2093505859375
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 0.509099661999926,
+        "search_fraction": 0.8
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "eedcfa6f4634",
+      "parameter_identity_sha256": "68593f022ec5986f2ff74c1ab0e305c290aa2a1c56a661f2b0e3816ba0dbcf35",
+      "parameter_set_equivalence_family_id": "f265bcbfdf1c",
+      "parameter_set_equivalence_family_sha256": "f265bcbfdf1cb565b855a0bbe9a249574f82c8429c213fdd75cfdf44126b643c",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 4,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "256765f28912",
+      "parameters": {
+        "probability_threshold": 0.25,
+        "minimum_page_area_fraction": 0.02,
+        "close_kernel_fraction": 0.0,
+        "page_padding_fraction": 0.0075
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96315717,
+        "mean_iou_success": 0.96315717,
+        "minimum_iou": 0.93111411,
+        "stddev_iou": 0.01855003,
+        "mean_edge_error_px": 10.15,
+        "elapsed_ms_total": 93.777,
+        "wall_ms": 97.413
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            99,
+            57,
+            1289,
+            960
+          ],
+          "iou": 0.96974763,
+          "edge_errors": {
+            "left": 26,
+            "top": 1,
+            "right": 0,
+            "bottom": 7,
+            "mean": 8.5,
+            "maximum": 26
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 26,
+          "elapsed_ms": 19.119,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              99,
+              57,
+              1289,
+              960
+            ],
+            "corners": [
+              [
+                1288.992431640625,
+                959.6552124023438
+              ],
+              [
+                99.177001953125,
+                959.6552124023438
+              ],
+              [
+                99.177001953125,
+                57.157196044921875
+              ],
+              [
+                1288.992431640625,
+                57.157196044921875
+              ]
+            ],
+            "confidence": 0.7170277833938599,
+            "score": 0.7170277833938599,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.25,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7451919244260204
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            114,
+            12,
+            1211,
+            971
+          ],
+          "iou": 0.93111411,
+          "edge_errors": {
+            "left": 47,
+            "top": 4,
+            "right": 22,
+            "bottom": 6,
+            "mean": 19.75,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 19.75,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 19.255,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              114,
+              12,
+              1211,
+              971
+            ],
+            "corners": [
+              [
+                122.151123046875,
+                970.2151489257812
+              ],
+              [
+                114.89080810546875,
+                17.30487060546875
+              ],
+              [
+                1203.65380859375,
+                12.63873291015625
+              ],
+              [
+                1210.9140625,
+                965.5489501953125
+              ]
+            ],
+            "confidence": 0.6623443961143494,
+            "score": 0.6623443961143494,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.25,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6676299426020408
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            9,
+            25,
+            1072,
+            969
+          ],
+          "iou": 0.98829904,
+          "edge_errors": {
+            "left": 6,
+            "top": 3,
+            "right": 2,
+            "bottom": 1,
+            "mean": 3.0,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 18.263,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              9,
+              25,
+              1072,
+              969
+            ],
+            "corners": [
+              [
+                1071.564697265625,
+                968.0191650390625
+              ],
+              [
+                9.149658203125,
+                968.0191650390625
+              ],
+              [
+                9.149658203125,
+                25.95184326171875
+              ],
+              [
+                1071.564697265625,
+                25.95184326171875
+              ]
+            ],
+            "confidence": 0.7141819000244141,
+            "score": 0.7141819000244141,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.25,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8936493542729592
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            75,
+            52,
+            1124,
+            939
+          ],
+          "iou": 0.96632616,
+          "edge_errors": {
+            "left": 9,
+            "top": 1,
+            "right": 23,
+            "bottom": 2,
+            "mean": 8.75,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.75,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 19.037,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              75,
+              52,
+              1124,
+              939
+            ],
+            "corners": [
+              [
+                1123.240966796875,
+                938.7786254882812
+              ],
+              [
+                75.63409423828125,
+                938.7786254882812
+              ],
+              [
+                75.63409423828125,
+                52.81732177734375
+              ],
+              [
+                1123.240966796875,
+                52.81732177734375
+              ]
+            ],
+            "confidence": 0.7186612486839294,
+            "score": 0.7186612486839294,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.25,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6928561463647959
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            73,
+            32,
+            1175,
+            962
+          ],
+          "iou": 0.9602989,
+          "edge_errors": {
+            "left": 15,
+            "top": 1,
+            "right": 21,
+            "bottom": 6,
+            "mean": 10.75,
+            "maximum": 21
+          },
+          "edge_error_mean_px": 10.75,
+          "edge_error_maximum_px": 21,
+          "elapsed_ms": 18.103,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              73,
+              32,
+              1175,
+              962
+            ],
+            "corners": [
+              [
+                1174.2373046875,
+                961.50439453125
+              ],
+              [
+                73.9501953125,
+                961.50439453125
+              ],
+              [
+                73.9501953125,
+                32.915313720703125
+              ],
+              [
+                1174.2373046875,
+                32.915313720703125
+              ]
+            ],
+            "confidence": 0.7184717655181885,
+            "score": 0.7184717655181885,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.25,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7652189293686225
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "legacy_parameter_set_id": "256765f28912",
+      "parameter_identity_sha256": "e817bfbb539cf02658d643fcf7a88060908ee69e3330725866e959f476163e74",
+      "parameter_set_equivalence_family_id": "55b49e80b829",
+      "parameter_set_equivalence_family_sha256": "55b49e80b829de818f71d13096d150ad8a4a0373f82cf8dfbd595d3f7de344d1",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 40,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "reference_roles": [
+        "baseline"
+      ],
+      "requested_search_member": false,
+      "search_space_member": true,
+      "profile": "baseline",
+      "run_id": "run-20260820-233941",
+      "rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "9c711c53f075",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0075,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96372577,
+        "mean_iou_success": 0.96372577,
+        "minimum_iou": 0.93755476,
+        "stddev_iou": 0.01645493,
+        "mean_edge_error_px": 10.05,
+        "elapsed_ms_total": 101.077,
+        "wall_ms": 101.99
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            96,
+            57,
+            1290,
+            960
+          ],
+          "iou": 0.96652671,
+          "edge_errors": {
+            "left": 29,
+            "top": 1,
+            "right": 1,
+            "bottom": 7,
+            "mean": 9.5,
+            "maximum": 29
+          },
+          "edge_error_mean_px": 9.5,
+          "edge_error_maximum_px": 29,
+          "elapsed_ms": 22.815,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              96,
+              57,
+              1290,
+              960
+            ],
+            "corners": [
+              [
+                1289.015869140625,
+                959.6553344726562
+              ],
+              [
+                96.06903076171875,
+                959.6553344726562
+              ],
+              [
+                96.06903076171875,
+                57.157196044921875
+              ],
+              [
+                1289.015869140625,
+                57.157196044921875
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            114,
+            10,
+            1214,
+            973
+          ],
+          "iou": 0.93755476,
+          "edge_errors": {
+            "left": 47,
+            "top": 2,
+            "right": 19,
+            "bottom": 4,
+            "mean": 18.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 18.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 18.752,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              114,
+              10,
+              1214,
+              973
+            ],
+            "corners": [
+              [
+                121.95892333984375,
+                972.330810546875
+              ],
+              [
+                114.82904052734375,
+                15.1417236328125
+              ],
+              [
+                1206.6630859375,
+                10.566986083984375
+              ],
+              [
+                1213.79296875,
+                967.7560424804688
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            9,
+            25,
+            1072,
+            969
+          ],
+          "iou": 0.98829904,
+          "edge_errors": {
+            "left": 6,
+            "top": 3,
+            "right": 2,
+            "bottom": 1,
+            "mean": 3.0,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 23.004,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              9,
+              25,
+              1072,
+              969
+            ],
+            "corners": [
+              [
+                1071.564697265625,
+                968.0191650390625
+              ],
+              [
+                9.149658203125,
+                968.0191650390625
+              ],
+              [
+                9.149658203125,
+                25.95184326171875
+              ],
+              [
+                1071.564697265625,
+                25.95184326171875
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            75,
+            52,
+            1124,
+            941
+          ],
+          "iou": 0.96843863,
+          "edge_errors": {
+            "left": 9,
+            "top": 1,
+            "right": 23,
+            "bottom": 0,
+            "mean": 8.25,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 17.76,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              75,
+              52,
+              1124,
+              941
+            ],
+            "corners": [
+              [
+                1123.24072265625,
+                940.9935913085938
+              ],
+              [
+                75.63409423828125,
+                940.9935913085938
+              ],
+              [
+                75.63409423828125,
+                52.80084228515625
+              ],
+              [
+                1123.24072265625,
+                52.80084228515625
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            70,
+            31,
+            1176,
+            964
+          ],
+          "iou": 0.95780969,
+          "edge_errors": {
+            "left": 18,
+            "top": 2,
+            "right": 22,
+            "bottom": 4,
+            "mean": 11.5,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 11.5,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 18.746,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              70,
+              31,
+              1176,
+              964
+            ],
+            "corners": [
+              [
+                74.39398193359375,
+                963.9873657226562
+              ],
+              [
+                70.7862548828125,
+                34.448333740234375
+              ],
+              [
+                1171.620361328125,
+                31.843841552734375
+              ],
+              [
+                1175.2281494140625,
+                961.3828125
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0075
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.41494663999992554,
+        "search_fraction": 0.6
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "9c711c53f075",
+      "parameter_identity_sha256": "a489890f36af5ca2b38c1c4de4a0a2e7170a1404670d735cc2f09b2b3cad72d7",
+      "parameter_set_equivalence_family_id": "43d3f672c857",
+      "parameter_set_equivalence_family_sha256": "43d3f672c857448ab68657a8d764a07ac538e8c4c094e68921b6b2b4dcc48278",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 1,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "bea25c60b1af",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0085,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96366712,
+        "mean_iou_success": 0.96366712,
+        "minimum_iou": 0.9412101,
+        "stddev_iou": 0.01538862,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 102.47,
+        "wall_ms": 103.049
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            94,
+            56,
+            1291,
+            961
+          ],
+          "iou": 0.96620192,
+          "edge_errors": {
+            "left": 31,
+            "top": 0,
+            "right": 2,
+            "bottom": 6,
+            "mean": 9.75,
+            "maximum": 31
+          },
+          "edge_error_mean_px": 9.75,
+          "edge_error_maximum_px": 31,
+          "elapsed_ms": 22.373,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              94,
+              56,
+              1291,
+              961
+            ],
+            "corners": [
+              [
+                1290.191162109375,
+                960.5444946289062
+              ],
+              [
+                94.89373779296875,
+                960.5444946289062
+              ],
+              [
+                94.89373779296875,
+                56.268035888671875
+              ],
+              [
+                1290.191162109375,
+                56.268035888671875
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            113,
+            9,
+            1215,
+            974
+          ],
+          "iou": 0.9412101,
+          "edge_errors": {
+            "left": 46,
+            "top": 1,
+            "right": 18,
+            "bottom": 3,
+            "mean": 17.0,
+            "maximum": 46
+          },
+          "edge_error_mean_px": 17.0,
+          "edge_error_maximum_px": 46,
+          "elapsed_ms": 22.701,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              113,
+              9,
+              1215,
+              974
+            ],
+            "corners": [
+              [
+                120.89031982421875,
+                973.2783203125
+              ],
+              [
+                113.746337890625,
+                14.20318603515625
+              ],
+              [
+                1207.731689453125,
+                9.61944580078125
+              ],
+              [
+                1214.875732421875,
+                968.694580078125
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            8,
+            25,
+            1073,
+            969
+          ],
+          "iou": 0.98830408,
+          "edge_errors": {
+            "left": 7,
+            "top": 3,
+            "right": 1,
+            "bottom": 1,
+            "mean": 3.0,
+            "maximum": 7
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 7,
+          "elapsed_ms": 14.63,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              8,
+              25,
+              1073,
+              969
+            ],
+            "corners": [
+              [
+                1072.611328125,
+                968.947265625
+              ],
+              [
+                8.10296630859375,
+                968.947265625
+              ],
+              [
+                8.10296630859375,
+                25.023712158203125
+              ],
+              [
+                1072.611328125,
+                25.023712158203125
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            74,
+            51,
+            1125,
+            942
+          ],
+          "iou": 0.96656383,
+          "edge_errors": {
+            "left": 10,
+            "top": 0,
+            "right": 24,
+            "bottom": 1,
+            "mean": 8.75,
+            "maximum": 24
+          },
+          "edge_error_mean_px": 8.75,
+          "edge_error_maximum_px": 24,
+          "elapsed_ms": 19.107,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              74,
+              51,
+              1125,
+              942
+            ],
+            "corners": [
+              [
+                1124.27294921875,
+                941.86865234375
+              ],
+              [
+                74.6019287109375,
+                941.86865234375
+              ],
+              [
+                74.6019287109375,
+                51.92578125
+              ],
+              [
+                1124.27294921875,
+                51.92578125
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1177,
+            965
+          ],
+          "iou": 0.95605565,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 23,
+            "bottom": 3,
+            "mean": 12.0,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 12.0,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 23.659,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              69,
+              30,
+              1177,
+              965
+            ],
+            "corners": [
+              [
+                73.31298828125,
+                964.90576171875
+              ],
+              [
+                69.6981201171875,
+                33.535125732421875
+              ],
+              [
+                1172.701416015625,
+                30.92547607421875
+              ],
+              [
+                1176.3162841796875,
+                962.2960205078125
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0085
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 0.42613432999996803,
+        "search_fraction": 0.7
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "bea25c60b1af",
+      "parameter_identity_sha256": "3938b610f370bafdf8db4a22d19da4e7a6e7e4b02bb8f2585585541707bc4dc9",
+      "parameter_set_equivalence_family_id": "b5005bc17535",
+      "parameter_set_equivalence_family_sha256": "b5005bc175356d8e86b22c77daea9e7bd4e9ac46cef16a65daa64b029fe8cf82",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 2,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "24d69a08b327",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0065,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96343949,
+        "mean_iou_success": 0.96343949,
+        "minimum_iou": 0.9339065,
+        "stddev_iou": 0.0175198,
+        "mean_edge_error_px": 10.1,
+        "elapsed_ms_total": 98.598,
+        "wall_ms": 99.138
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            97,
+            58,
+            1288,
+            959
+          ],
+          "iou": 0.96521013,
+          "edge_errors": {
+            "left": 28,
+            "top": 2,
+            "right": 1,
+            "bottom": 8,
+            "mean": 9.75,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 9.75,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 22.718,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              97,
+              58,
+              1288,
+              959
+            ],
+            "corners": [
+              [
+                1287.840576171875,
+                958.7661743164062
+              ],
+              [
+                97.24432373046875,
+                958.7661743164062
+              ],
+              [
+                97.24432373046875,
+                58.046356201171875
+              ],
+              [
+                1287.840576171875,
+                58.046356201171875
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            115,
+            11,
+            1213,
+            972
+          ],
+          "iou": 0.9339065,
+          "edge_errors": {
+            "left": 48,
+            "top": 3,
+            "right": 20,
+            "bottom": 5,
+            "mean": 19.0,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 19.0,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 18.88,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              115,
+              11,
+              1213,
+              972
+            ],
+            "corners": [
+              [
+                123.027587890625,
+                971.38330078125
+              ],
+              [
+                115.9117431640625,
+                16.080230712890625
+              ],
+              [
+                1205.594482421875,
+                11.5145263671875
+              ],
+              [
+                1212.7103271484375,
+                966.8175048828125
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            10,
+            26,
+            1071,
+            968
+          ],
+          "iou": 0.98829152,
+          "edge_errors": {
+            "left": 5,
+            "top": 2,
+            "right": 3,
+            "bottom": 2,
+            "mean": 3.0,
+            "maximum": 5
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 5,
+          "elapsed_ms": 16.357,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              10,
+              26,
+              1071,
+              968
+            ],
+            "corners": [
+              [
+                1070.51806640625,
+                967.0910034179688
+              ],
+              [
+                10.19635009765625,
+                967.0910034179688
+              ],
+              [
+                10.19635009765625,
+                26.879974365234375
+              ],
+              [
+                1070.51806640625,
+                26.879974365234375
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            76,
+            53,
+            1123,
+            941
+          ],
+          "iou": 0.96922631,
+          "edge_errors": {
+            "left": 8,
+            "top": 2,
+            "right": 22,
+            "bottom": 0,
+            "mean": 8.0,
+            "maximum": 22
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 22,
+          "elapsed_ms": 22.121,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              76,
+              53,
+              1123,
+              941
+            ],
+            "corners": [
+              [
+                1122.208740234375,
+                940.1185302734375
+              ],
+              [
+                76.66619873046875,
+                940.1185302734375
+              ],
+              [
+                76.66619873046875,
+                53.6759033203125
+              ],
+              [
+                1122.208740234375,
+                53.6759033203125
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            71,
+            32,
+            1175,
+            964
+          ],
+          "iou": 0.96056299,
+          "edge_errors": {
+            "left": 17,
+            "top": 1,
+            "right": 21,
+            "bottom": 4,
+            "mean": 10.75,
+            "maximum": 21
+          },
+          "edge_error_mean_px": 10.75,
+          "edge_error_maximum_px": 21,
+          "elapsed_ms": 18.522,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              71,
+              32,
+              1175,
+              964
+            ],
+            "corners": [
+              [
+                75.47503662109375,
+                963.0689697265625
+              ],
+              [
+                71.87432861328125,
+                35.361572265625
+              ],
+              [
+                1170.539306640625,
+                32.76220703125
+              ],
+              [
+                1174.14013671875,
+                960.4696044921875
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0065
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.3229063059999362,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "24d69a08b327",
+      "parameter_identity_sha256": "a3abf076dd7524d738223a03c2204c03eeb01dfe6c3ab0adb2710423de49226f",
+      "parameter_set_equivalence_family_id": "0db4ddcc7511",
+      "parameter_set_equivalence_family_sha256": "0db4ddcc7511819581fac585ec9c6d39c008b181de17561f270d7723eff61fc0",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 3,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "eedcfa6f4634",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0095,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96334462,
+        "mean_iou_success": 0.96334462,
+        "minimum_iou": 0.94487252,
+        "stddev_iou": 0.01435442,
+        "mean_edge_error_px": 10.2,
+        "elapsed_ms_total": 93.847,
+        "wall_ms": 94.353
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            93,
+            55,
+            1292,
+            962
+          ],
+          "iou": 0.96457648,
+          "edge_errors": {
+            "left": 32,
+            "top": 1,
+            "right": 3,
+            "bottom": 5,
+            "mean": 10.25,
+            "maximum": 32
+          },
+          "edge_error_mean_px": 10.25,
+          "edge_error_maximum_px": 32,
+          "elapsed_ms": 21.665,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              93,
+              55,
+              1292,
+              962
+            ],
+            "corners": [
+              [
+                1291.366455078125,
+                961.4337158203125
+              ],
+              [
+                93.7183837890625,
+                961.4337158203125
+              ],
+              [
+                93.7183837890625,
+                55.37884521484375
+              ],
+              [
+                1291.366455078125,
+                55.37884521484375
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            112,
+            8,
+            1216,
+            975
+          ],
+          "iou": 0.94487252,
+          "edge_errors": {
+            "left": 45,
+            "top": 0,
+            "right": 17,
+            "bottom": 2,
+            "mean": 16.0,
+            "maximum": 45
+          },
+          "edge_error_mean_px": 16.0,
+          "edge_error_maximum_px": 45,
+          "elapsed_ms": 19.478,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              112,
+              8,
+              1216,
+              975
+            ],
+            "corners": [
+              [
+                119.82159423828125,
+                974.2259521484375
+              ],
+              [
+                112.66357421875,
+                13.264617919921875
+              ],
+              [
+                1208.800537109375,
+                8.671844482421875
+              ],
+              [
+                1215.95849609375,
+                969.6331787109375
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            7,
+            24,
+            1074,
+            970
+          ],
+          "iou": 0.98830572,
+          "edge_errors": {
+            "left": 8,
+            "top": 4,
+            "right": 0,
+            "bottom": 0,
+            "mean": 3.0,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 16.755,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              7,
+              24,
+              1074,
+              970
+            ],
+            "corners": [
+              [
+                1073.658203125,
+                969.87548828125
+              ],
+              [
+                7.05621337890625,
+                969.87548828125
+              ],
+              [
+                7.05621337890625,
+                24.09552001953125
+              ],
+              [
+                1073.658203125,
+                24.09552001953125
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            51,
+            1126,
+            943
+          ],
+          "iou": 0.96364647,
+          "edge_errors": {
+            "left": 11,
+            "top": 0,
+            "right": 25,
+            "bottom": 2,
+            "mean": 9.5,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 9.5,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 17.922,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              73,
+              51,
+              1126,
+              943
+            ],
+            "corners": [
+              [
+                1125.30517578125,
+                942.7437744140625
+              ],
+              [
+                73.56976318359375,
+                942.7437744140625
+              ],
+              [
+                73.56976318359375,
+                51.0506591796875
+              ],
+              [
+                1125.30517578125,
+                51.0506591796875
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            68,
+            30,
+            1178,
+            966
+          ],
+          "iou": 0.95532191,
+          "edge_errors": {
+            "left": 20,
+            "top": 3,
+            "right": 24,
+            "bottom": 2,
+            "mean": 12.25,
+            "maximum": 24
+          },
+          "edge_error_mean_px": 12.25,
+          "edge_error_maximum_px": 24,
+          "elapsed_ms": 18.027,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              68,
+              30,
+              1178,
+              966
+            ],
+            "corners": [
+              [
+                72.23193359375,
+                965.8240966796875
+              ],
+              [
+                68.6099853515625,
+                32.621826171875
+              ],
+              [
+                1173.782470703125,
+                30.007080078125
+              ],
+              [
+                1177.4044189453125,
+                963.2093505859375
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0095
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 0.509099661999926,
+        "search_fraction": 0.8
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "eedcfa6f4634",
+      "parameter_identity_sha256": "68593f022ec5986f2ff74c1ab0e305c290aa2a1c56a661f2b0e3816ba0dbcf35",
+      "parameter_set_equivalence_family_id": "f265bcbfdf1c",
+      "parameter_set_equivalence_family_sha256": "f265bcbfdf1cb565b855a0bbe9a249574f82c8429c213fdd75cfdf44126b643c",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 4,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "db071d303f9a",
+      "parameters": {
+        "probability_threshold": 0.2,
+        "page_padding_fraction": 0.0055,
+        "close_kernel_fraction": 0.0,
+        "minimum_page_area_fraction": 0.02
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.96279104,
+        "mean_iou_success": 0.96279104,
+        "minimum_iou": 0.93026533,
+        "stddev_iou": 0.01869515,
+        "mean_edge_error_px": 10.25,
+        "elapsed_ms_total": 93.365,
+        "wall_ms": 96.896
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            98,
+            58,
+            1287,
+            958
+          ],
+          "iou": 0.96413399,
+          "edge_errors": {
+            "left": 27,
+            "top": 2,
+            "right": 2,
+            "bottom": 9,
+            "mean": 10.0,
+            "maximum": 27
+          },
+          "edge_error_mean_px": 10.0,
+          "edge_error_maximum_px": 27,
+          "elapsed_ms": 21.646,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              98,
+              58,
+              1287,
+              958
+            ],
+            "corners": [
+              [
+                1286.665283203125,
+                957.8770751953125
+              ],
+              [
+                98.41961669921875,
+                957.8770751953125
+              ],
+              [
+                98.41961669921875,
+                58.93548583984375
+              ],
+              [
+                1286.665283203125,
+                58.93548583984375
+              ]
+            ],
+            "confidence": 0.7158864736557007,
+            "score": 0.7158864736557007,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0055
+              },
+              "probability_min": 0.0020292268600314856,
+              "probability_max": 0.7985255122184753,
+              "probability_mean": 0.5408431887626648,
+              "mask_area_fraction": 0.7469233298788265
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            116,
+            12,
+            1212,
+            971
+          ],
+          "iou": 0.93026533,
+          "edge_errors": {
+            "left": 49,
+            "top": 4,
+            "right": 21,
+            "bottom": 6,
+            "mean": 20.0,
+            "maximum": 49
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 49,
+          "elapsed_ms": 18.74,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              116,
+              12,
+              1212,
+              971
+            ],
+            "corners": [
+              [
+                124.09625244140625,
+                970.4357299804688
+              ],
+              [
+                116.99444580078125,
+                17.018768310546875
+              ],
+              [
+                1204.52587890625,
+                12.462066650390625
+              ],
+              [
+                1211.627685546875,
+                965.8790283203125
+              ]
+            ],
+            "confidence": 0.651689350605011,
+            "score": 0.651689350605011,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0055
+              },
+              "probability_min": 0.0021411494817584753,
+              "probability_max": 0.7880334258079529,
+              "probability_mean": 0.45177778601646423,
+              "mask_area_fraction": 0.6825424505739796
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            11,
+            27,
+            1070,
+            967
+          ],
+          "iou": 0.98828005,
+          "edge_errors": {
+            "left": 4,
+            "top": 1,
+            "right": 4,
+            "bottom": 3,
+            "mean": 3.0,
+            "maximum": 4
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 4,
+          "elapsed_ms": 17.031,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              11,
+              27,
+              1070,
+              967
+            ],
+            "corners": [
+              [
+                1069.4713134765625,
+                966.162841796875
+              ],
+              [
+                11.2430419921875,
+                966.162841796875
+              ],
+              [
+                11.2430419921875,
+                27.80810546875
+              ],
+              [
+                1069.4713134765625,
+                27.80810546875
+              ]
+            ],
+            "confidence": 0.7133356332778931,
+            "score": 0.7133356332778931,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0055
+              },
+              "probability_min": 0.0031636925414204597,
+              "probability_max": 0.7958259582519531,
+              "probability_mean": 0.643965482711792,
+              "mask_area_fraction": 0.8952038823341837
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            54,
+            1122,
+            940
+          ],
+          "iou": 0.96894847,
+          "edge_errors": {
+            "left": 7,
+            "top": 3,
+            "right": 21,
+            "bottom": 1,
+            "mean": 8.0,
+            "maximum": 21
+          },
+          "edge_error_mean_px": 8.0,
+          "edge_error_maximum_px": 21,
+          "elapsed_ms": 17.91,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              77,
+              54,
+              1122,
+              940
+            ],
+            "corners": [
+              [
+                1121.176513671875,
+                939.2435302734375
+              ],
+              [
+                77.69830322265625,
+                939.2435302734375
+              ],
+              [
+                77.69830322265625,
+                54.550933837890625
+              ],
+              [
+                1121.176513671875,
+                54.550933837890625
+              ]
+            ],
+            "confidence": 0.7174399495124817,
+            "score": 0.7174399495124817,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0055
+              },
+              "probability_min": 0.0024777045473456383,
+              "probability_max": 0.8220356106758118,
+              "probability_mean": 0.5044590830802917,
+              "mask_area_fraction": 0.6945750956632653
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            72,
+            33,
+            1174,
+            963
+          ],
+          "iou": 0.96232734,
+          "edge_errors": {
+            "left": 16,
+            "top": 0,
+            "right": 20,
+            "bottom": 5,
+            "mean": 10.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 10.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 18.038,
+          "candidate": {
+            "method": "eynollah_page_mask",
+            "bbox": [
+              72,
+              33,
+              1174,
+              963
+            ],
+            "corners": [
+              [
+                76.5560302734375,
+                962.150634765625
+              ],
+              [
+                72.96246337890625,
+                36.2747802734375
+              ],
+              [
+                1169.4583740234375,
+                33.6805419921875
+              ],
+              [
+                1173.052001953125,
+                959.556396484375
+              ]
+            ],
+            "confidence": 0.7169452905654907,
+            "score": 0.7169452905654907,
+            "diagnostics": {
+              "model_id": "eynollah-page-extraction-2021-04-25",
+              "model_family": "Eynollah",
+              "model_source": "https://huggingface.co/SBB/eynollah-page-extraction",
+              "evidence": "eynollah_page_extraction_probability",
+              "parameters": {
+                "probability_threshold": 0.2,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.0,
+                "page_padding_fraction": 0.0055
+              },
+              "probability_min": 0.0027359987143427134,
+              "probability_max": 0.7913625836372375,
+              "probability_mean": 0.5566083788871765,
+              "mask_area_fraction": 0.7675955636160714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.3075511600000027,
+        "search_fraction": 0.4
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "db071d303f9a",
+      "parameter_identity_sha256": "72478d07c941c038580559a2dfaa9ddefd9381be429db77bca141b17b9fa02c2",
+      "parameter_set_equivalence_family_id": "f509eba9851d",
+      "parameter_set_equivalence_family_sha256": "f509eba9851dfddd299f5879fd1be457e5def11a4edfe8e5c7b500aaafe427aa",
+      "parameter_set_equivalence_family_size": 25,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "07e8eba7e811a99cb087f19fcf480fe6d8463293d7a9203d84014006ffe567f6",
+      "profile": null,
+      "run_id": "run-20260820-233941",
+      "rank": 6,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 2
+    },
+    "pages": [
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.98829904,
+        "winner_iou": 0.98829904,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "9c711c53f075",
+        "parameter_set_id": "9c711c53f075",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.96632616,
+        "winner_iou": 0.96843863,
+        "delta_iou": 0.00211247,
+        "status": "Improved",
+        "parameter_set": "9c711c53f075",
+        "parameter_set_id": "9c711c53f075",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.96974763,
+        "winner_iou": 0.96652671,
+        "delta_iou": -0.00322092,
+        "status": "Regressed",
+        "parameter_set": "9c711c53f075",
+        "parameter_set_id": "9c711c53f075",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.9602989,
+        "winner_iou": 0.95780969,
+        "delta_iou": -0.00248921,
+        "status": "Regressed",
+        "parameter_set": "9c711c53f075",
+        "parameter_set_id": "9c711c53f075",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.93111411,
+        "winner_iou": 0.93755476,
+        "delta_iou": 0.00644065,
+        "status": "Improved",
+        "parameter_set": "9c711c53f075",
+        "parameter_set_id": "9c711c53f075",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000001059",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervm76f27",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "c71f94f69aac585176841ee7fdedefa2bc7eb33d",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "32428676320",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "9a3b9263015aa03240b177f699d871bba211abb4",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 1518460928,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": true,
+    "evidence_source": "process-local-fallback",
+    "evidence_precompute_seconds": 23.036811
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 16.28208140724207,
+    "failures": 0,
+    "best_mean_iou": 0.96372577,
+    "best_worst_page_iou": 0.94925146,
+    "best_stddev_iou": 0.01080589,
+    "mean_iou_improvements": 2,
+    "minimum_iou_improvements": 6,
+    "stddev_improvements": 6,
+    "total_metric_improvements": 14,
+    "parameter_sets_with_improvements": 6,
+    "winner_changes": 2,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 0.3229063059999362,
+    "winner_last_changed_elapsed_seconds": 0.41494663999992554,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "24d69a08b327",
+        "parameter_short_name": "24d69a08",
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 0.3229063059999362,
+        "search_fraction": 0.5,
+        "parameter_set_equivalence_family_id": "0db4ddcc7511"
+      },
+      {
+        "change_number": 2,
+        "parameter_set_id": "9c711c53f075",
+        "parameter_short_name": "9c711c53",
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.41494663999992554,
+        "search_fraction": 0.6,
+        "parameter_set_equivalence_family_id": "43d3f672c857"
+      }
+    ],
+    "last_improvement_elapsed_seconds": 0.6111850300000015,
+    "time_since_last_improvement_seconds": 0.0029870619999883274
+  }
+}

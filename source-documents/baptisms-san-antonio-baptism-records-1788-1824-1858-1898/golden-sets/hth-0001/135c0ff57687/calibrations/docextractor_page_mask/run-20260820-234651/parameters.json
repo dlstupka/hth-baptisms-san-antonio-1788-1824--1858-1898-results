@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.4",
+  "detector": "docextractor_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/docextractor_page_mask.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "2.874",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "31",
+    "ranked_quality": "0.81848180",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "profiles": {
+      "baseline": {
+        "probability_threshold": 0.2,
+        "minimum_page_area_fraction": 0.02,
+        "close_kernel_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "probability_threshold": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.125,
+          0.15,
+          0.175,
+          0.2,
+          0.225,
+          0.25,
+          0.275,
+          0.3
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.01,
+          0.012,
+          0.014,
+          0.016,
+          0.018,
+          0.02,
+          0.022,
+          0.024,
+          0.026
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact",
+      "previous_declared_parameter_sets": 2000
+    },
+    "optimizer_shape_compatibility": "detector-implementation",
+    "detector": "docextractor_page_mask",
+    "description": "docExtractor historical ResUNet detector after the initial 2,000-set exhaustive HTH-0001 characterization. The released model and shared Golden Set inference remain fixed while this targeted refinement concentrates on the two measured Critical, strongly interacting controls: probability threshold and close-kernel fraction. Low-effect minimum-area rejection and Dormant padding are pinned at the current winner.",
+    "lifecycle": {
+      "prepare": "docextractor_page_mask",
+      "model_policy": "reuse",
+      "finalize": "docextractor_page_mask"
+    },
+    "model": {
+      "family": "docExtractor ResUNet",
+      "variant": "default ICFHR 2020",
+      "source": "monniert/docExtractor",
+      "runtime": "PyTorch CPU",
+      "training_domain": "synthetic historical documents"
+    }
+  }
+}
