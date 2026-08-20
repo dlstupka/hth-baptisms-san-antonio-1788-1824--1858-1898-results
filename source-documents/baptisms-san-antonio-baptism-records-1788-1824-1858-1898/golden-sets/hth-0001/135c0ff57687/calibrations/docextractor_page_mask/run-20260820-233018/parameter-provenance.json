@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "docextractor_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "61252854e5189fe00bf1ec6b00fd97c378b4e2facab202f2e678f5fa444bef42",
+    "parameter_order": [
+      "probability_threshold",
+      "close_kernel_fraction"
+    ],
+    "values": {
+      "probability_threshold": [
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.225,
+        0.25,
+        0.275,
+        0.3
+      ],
+      "close_kernel_fraction": [
+        0.01,
+        0.012,
+        0.014,
+        0.016,
+        0.018,
+        0.02,
+        0.022,
+        0.024,
+        0.026
+      ]
+    },
+    "cartesian_count": 81,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": true,
+    "evaluated_parameter_sets": 82,
+    "evaluated_grid_parameter_sets": 81,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "probability_threshold": 0.2,
+      "minimum_page_area_fraction": 0.02,
+      "close_kernel_fraction": 0.02,
+      "page_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "1607dc6baa59bccdbab331127a65540e71874d912a1da424ce9b863b08279487": {
+      "sha256": "1607dc6baa59bccdbab331127a65540e71874d912a1da424ce9b863b08279487",
+      "legacy_parameter_set_id": "095940b014f5",
+      "parameters": {
+        "close_kernel_fraction": 0.02,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0,
+        "probability_threshold": 0.2
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
