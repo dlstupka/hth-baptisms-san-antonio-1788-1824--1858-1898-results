@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "radial_edge",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "701ddca5477951c547a2d2128767fcfa1f23aaaf6a1dc3ed651bc1d9223810b7",
+    "parameter_order": [
+      "gaussian_sigma",
+      "ray_count",
+      "minimum_radius_fraction",
+      "maximum_radius_fraction",
+      "gradient_percentile",
+      "minimum_ray_support",
+      "support_weight",
+      "rectangularity_weight"
+    ],
+    "values": {
+      "gaussian_sigma": [
+        0.6,
+        1.2,
+        1.8,
+        2.4
+      ],
+      "ray_count": [
+        64,
+        96,
+        128,
+        144,
+        224
+      ],
+      "minimum_radius_fraction": [
+        0.1,
+        0.14,
+        0.18,
+        0.22,
+        0.26
+      ],
+      "maximum_radius_fraction": [
+        0.6,
+        0.66,
+        0.72,
+        0.78,
+        0.84
+      ],
+      "gradient_percentile": [
+        74.0,
+        82.0,
+        84.0,
+        90.0,
+        94.0
+      ],
+      "minimum_ray_support": [
+        0.25,
+        0.35,
+        0.45,
+        0.55,
+        0.65
+      ],
+      "support_weight": [
+        0.35,
+        0.45
+      ],
+      "rectangularity_weight": [
+        0.2,
+        0.3
+      ]
+    },
+    "cartesian_count": 50000,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 8,
+    "explicit_non_grid_parameter_sets": 2
+  },
+  "profiles": {
+    "baseline": {
+      "gaussian_sigma": 1.2,
+      "ray_count": 96,
+      "minimum_radius_fraction": 0.18,
+      "maximum_radius_fraction": 0.72,
+      "gradient_percentile": 82.0,
+      "minimum_ray_support": 0.45,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "area_weight": 0.35,
+      "support_weight": 0.45,
+      "rectangularity_weight": 0.2
+    }
+  },
+  "explicit_parameter_sets": {
+    "9d6acb57090207933e95d74ebbe3b0d7412474b367ae91793a11e0fe035e4297": {
+      "sha256": "9d6acb57090207933e95d74ebbe3b0d7412474b367ae91793a11e0fe035e4297",
+      "legacy_parameter_set_id": "837321a04ccf",
+      "parameters": {
+        "gaussian_sigma": 2.4,
+        "gradient_percentile": 78.0,
+        "maximum_radius_fraction": 0.78,
+        "minimum_radius_fraction": 0.22,
+        "minimum_ray_support": 0.25,
+        "ray_count": 144,
+        "rectangularity_weight": 0.2,
+        "support_weight": 0.45
+      }
+    },
+    "de22ca5d8396752a424d9dfa9d9f4cee06d122a01c0c7ef27d9631a1070a0ea2": {
+      "sha256": "de22ca5d8396752a424d9dfa9d9f4cee06d122a01c0c7ef27d9631a1070a0ea2",
+      "legacy_parameter_set_id": "d593fad7aeea",
+      "parameters": {
+        "area_weight": 0.35,
+        "gaussian_sigma": 1.2,
+        "gradient_percentile": 82.0,
+        "maximum_area_fraction": 0.98,
+        "maximum_radius_fraction": 0.72,
+        "minimum_area_fraction": 0.18,
+        "minimum_radius_fraction": 0.18,
+        "minimum_ray_support": 0.45,
+        "ray_count": 96,
+        "rectangularity_weight": 0.2,
+        "support_weight": 0.45
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}

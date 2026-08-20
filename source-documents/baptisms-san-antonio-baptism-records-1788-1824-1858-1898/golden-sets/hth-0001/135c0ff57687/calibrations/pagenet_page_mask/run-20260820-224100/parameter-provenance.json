@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "pagenet_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [
+      "minimum_mask_area_fraction"
+    ],
+    "equivalence_family_size": 2
+  },
+  "grid": {
+    "sha256": "f3ef416d236e0150aa4a632addc96bee4347d1be0dfe48d403082ccdf2f77276",
+    "parameter_order": [
+      "mask_threshold",
+      "close_kernel_fraction",
+      "polygon_epsilon_fraction",
+      "bbox_padding_fraction",
+      "minimum_mask_area_fraction"
+    ],
+    "values": {
+      "mask_threshold": [
+        0.204,
+        0.206,
+        0.208,
+        0.21,
+        0.212,
+        0.214,
+        0.216,
+        0.218,
+        0.22,
+        0.222,
+        0.224,
+        0.226,
+        0.228,
+        0.23,
+        0.232,
+        0.234,
+        0.236,
+        0.238,
+        0.24,
+        0.242,
+        0.244,
+        0.246,
+        0.248,
+        0.25,
+        0.5
+      ],
+      "close_kernel_fraction": [
+        0.0,
+        0.006
+      ],
+      "polygon_epsilon_fraction": [
+        0.012,
+        0.014,
+        0.0145,
+        0.015,
+        0.0155,
+        0.016,
+        0.0165,
+        0.017,
+        0.0175,
+        0.018,
+        0.0185,
+        0.019,
+        0.0195,
+        0.02,
+        0.0205,
+        0.021,
+        0.0215,
+        0.022,
+        0.0225,
+        0.023
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.02,
+        0.021,
+        0.022,
+        0.023,
+        0.024,
+        0.025,
+        0.026,
+        0.027,
+        0.028,
+        0.029,
+        0.03,
+        0.031,
+        0.032,
+        0.033,
+        0.034,
+        0.035,
+        0.036,
+        0.037,
+        0.038,
+        0.039,
+        0.04,
+        0.041,
+        0.042,
+        0.043
+      ],
+      "minimum_mask_area_fraction": [
+        0.04
+      ]
+    },
+    "cartesian_count": 25000,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "mask_threshold": 0.5,
+      "minimum_mask_area_fraction": 0.04,
+      "close_kernel_fraction": 0.006,
+      "polygon_epsilon_fraction": 0.012,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
