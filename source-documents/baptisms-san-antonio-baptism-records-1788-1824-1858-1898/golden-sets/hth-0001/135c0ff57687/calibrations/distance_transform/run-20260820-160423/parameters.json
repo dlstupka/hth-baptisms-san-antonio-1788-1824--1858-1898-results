@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.4",
+  "detector": "distance_transform",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/distance_transform.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "3.991",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "30",
+    "ranked_quality": "0.83878710",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "distance_transform",
+    "description": "Calibration space for the HTH Distance Transform interior-support document detector.",
+    "profiles": {
+      "baseline": {
+        "close_kernel_fraction": 0.008,
+        "distance_threshold_fraction": 0.18,
+        "minimum_core_area_fraction": 0.01,
+        "minimum_component_core_overlap": 0.08,
+        "minimum_bbox_area_fraction": 0.16,
+        "minimum_rectangularity": 0.5,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      },
+      "distance_threshold_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.18,
+          0.3
+        ]
+      },
+      "minimum_core_area_fraction": {
+        "type": "float",
+        "values": [
+          0.004,
+          0.01,
+          0.025
+        ]
+      },
+      "minimum_component_core_overlap": {
+        "type": "float",
+        "values": [
+          0.03,
+          0.08,
+          0.16
+        ]
+      },
+      "minimum_bbox_area_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.16,
+          0.24
+        ]
+      },
+      "minimum_rectangularity": {
+        "type": "float",
+        "values": [
+          0.35,
+          0.5,
+          0.7
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
