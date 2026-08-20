@@ -1,0 +1,5895 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260820-033648",
+  "detector": "distance_transform_rect",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 96,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 9
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "0.472",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "39",
+    "ranked_quality": "0.72428296",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 729,
+    "live_possible_parameter_sets": 729,
+    "zombie_possible_parameter_sets": 729,
+    "canonical_search_space": {
+      "schema_version": "1",
+      "strategy": "exhaustive",
+      "live_exhaustive_parameter_sets": 729,
+      "exhaustive_with_zombies_parameter_sets": 729,
+      "effective_parameter_sets": 729,
+      "configured_zombie_parameters": [],
+      "denominator": "exhaustive-with-zombies"
+    },
+    "planned_parameter_sets": 11,
+    "actual_parameter_sets": 11,
+    "locally_evaluated_parameter_sets": 11,
+    "locally_evaluated_page_evaluations": 55,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 9,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 55,
+    "actual_page_evaluations": 55
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 11,
+  "page_evaluation_count": 55,
+  "successful_page_evaluation_count": 45,
+  "fully_successful_parameter_set_count": 1,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "79a1d1aa4447d4bc961e24722c4e7f72d8a3ca08bb960637070ceba253724877",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "0a8482550c35",
+    "parameters": {
+      "bbox_padding_fraction": 0.016,
+      "distance_threshold_fraction": 0.3,
+      "minimum_bbox_area_fraction": 0.22,
+      "minimum_core_area_fraction": 0.002,
+      "minimum_mask_coverage": 0.06,
+      "proposal_expansion_fraction": 0.12
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.72428296,
+      "mean_iou_success": 0.72428296,
+      "minimum_iou": 0.44989626,
+      "stddev_iou": 0.22447629,
+      "mean_edge_error_px": 79.05,
+      "elapsed_ms_total": 32.33,
+      "wall_ms": 32.554
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          125,
+          45,
+          1324,
+          974
+        ],
+        "iou": 0.95199893,
+        "edge_errors": {
+          "left": 0,
+          "top": 11,
+          "right": 35,
+          "bottom": 7,
+          "mean": 13.25,
+          "maximum": 35
+        },
+        "edge_error_mean_px": 13.25,
+        "edge_error_maximum_px": 35,
+        "elapsed_ms": 8.205,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            125,
+            45,
+            1324,
+            974
+          ],
+          "corners": [
+            [
+              125,
+              45
+            ],
+            [
+              1324,
+              45
+            ],
+            [
+              1324,
+              974
+            ],
+            [
+              125,
+              974
+            ]
+          ],
+          "confidence": 0.9110970659977682,
+          "score": 0.9110970659977682,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.31423210034550275,
+            "bbox_area_fraction": 0.8174288079421599,
+            "mask_coverage": 0.8383583018141239,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          212,
+          0,
+          741,
+          987
+        ],
+        "iou": 0.44989626,
+        "edge_errors": {
+          "left": 145,
+          "top": 8,
+          "right": 492,
+          "bottom": 10,
+          "mean": 163.75,
+          "maximum": 492
+        },
+        "edge_error_mean_px": 163.75,
+        "edge_error_maximum_px": 492,
+        "elapsed_ms": 5.665,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            212,
+            0,
+            741,
+            987
+          ],
+          "corners": [
+            [
+              212,
+              0
+            ],
+            [
+              741,
+              0
+            ],
+            [
+              741,
+              987
+            ],
+            [
+              212,
+              987
+            ]
+          ],
+          "confidence": 0.9121513513099404,
+          "score": 0.9121513513099404,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.18491837658558216,
+            "bbox_area_fraction": 0.40197568389057753,
+            "mask_coverage": 0.8402751841998916,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          387,
+          202,
+          991,
+          949
+        ],
+        "iou": 0.45228343,
+        "edge_errors": {
+          "left": 372,
+          "top": 174,
+          "right": 83,
+          "bottom": 21,
+          "mean": 162.5,
+          "maximum": 372
+        },
+        "edge_error_mean_px": 162.5,
+        "edge_error_maximum_px": 372,
+        "elapsed_ms": 3.298,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            387,
+            202,
+            991,
+            949
+          ],
+          "corners": [
+            [
+              387,
+              202
+            ],
+            [
+              991,
+              202
+            ],
+            [
+              991,
+              949
+            ],
+            [
+              387,
+              949
+            ]
+          ],
+          "confidence": 0.5077186228357138,
+          "score": 0.5077186228357138,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.007674585602297888,
+            "bbox_area_fraction": 0.42186658488420803,
+            "mask_coverage": 0.10494295061038858,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          96,
+          92,
+          1112,
+          900
+        ],
+        "iou": 0.88842889,
+        "edge_errors": {
+          "left": 12,
+          "top": 41,
+          "right": 11,
+          "bottom": 41,
+          "mean": 26.25,
+          "maximum": 41
+        },
+        "edge_error_mean_px": 26.25,
+        "edge_error_maximum_px": 41,
+        "elapsed_ms": 7.474,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            96,
+            92,
+            1112,
+            900
+          ],
+          "corners": [
+            [
+              96,
+              92
+            ],
+            [
+              1112,
+              92
+            ],
+            [
+              1112,
+              900
+            ],
+            [
+              96,
+              900
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.38280338619667686,
+            "bbox_area_fraction": 0.6470725478450042,
+            "mask_coverage": 1.0,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          107,
+          78,
+          1151,
+          917
+        ],
+        "iou": 0.87880728,
+        "edge_errors": {
+          "left": 19,
+          "top": 45,
+          "right": 3,
+          "bottom": 51,
+          "mean": 29.5,
+          "maximum": 51
+        },
+        "edge_error_mean_px": 29.5,
+        "edge_error_maximum_px": 51,
+        "elapsed_ms": 7.688,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            107,
+            78,
+            1151,
+            917
+          ],
+          "corners": [
+            [
+              107,
+              78
+            ],
+            [
+              1151,
+              78
+            ],
+            [
+              1151,
+              917
+            ],
+            [
+              107,
+              917
+            ]
+          ],
+          "confidence": 0.9999554180994525,
+          "score": 0.9999554180994525,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.40485613230092726,
+            "bbox_area_fraction": 0.6977631201605965,
+            "mask_coverage": 0.9999189419990044,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "distance_transform_rect",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "326",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31614704921",
+      "historic_calibration_id": "run-20260812-155322",
+      "historic_created_at_utc": "2026-08-12T15:53:21.237383+00:00",
+      "parameter_identity_sha256": "51d7fef425396728362fbd5fe84634f94fdae09fee8e66f6b0f2425e2543d011",
+      "parameter_set_id": "0a8482550c35",
+      "parameters": {
+        "bbox_padding_fraction": 0.016,
+        "distance_threshold_fraction": 0.3,
+        "minimum_bbox_area_fraction": 0.22,
+        "minimum_core_area_fraction": 0.002,
+        "minimum_mask_coverage": 0.06,
+        "proposal_expansion_fraction": 0.12
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.07112295483238995,
+      "search_fraction": 0.18181818181818182
+    },
+    "legacy_parameter_set_id": "0a8482550c35",
+    "parameter_identity_sha256": "51d7fef425396728362fbd5fe84634f94fdae09fee8e66f6b0f2425e2543d011",
+    "parameter_set_equivalence_family_id": "0a8482550c35",
+    "parameter_set_equivalence_family_sha256": "0a8482550c35b1619d77292ca549e7305aa52b3dadc21aed76cfb8cc7ccf22ca",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 521,
+    "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+    "profile": null,
+    "run_id": "run-20260820-033648",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "e04459bcb474",
+    "parameters": {
+      "distance_threshold_fraction": 0.18,
+      "minimum_core_area_fraction": 0.006,
+      "proposal_expansion_fraction": 0.12,
+      "minimum_mask_coverage": 0.12,
+      "minimum_bbox_area_fraction": 0.14,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.63466519,
+      "mean_iou_success": 0.79333148,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.3533775,
+      "mean_edge_error_px": 60.438,
+      "elapsed_ms_total": 36.837,
+      "wall_ms": 37.252
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          94,
+          16,
+          1351,
+          986
+        ],
+        "iou": 0.86968974,
+        "edge_errors": {
+          "left": 31,
+          "top": 40,
+          "right": 62,
+          "bottom": 19,
+          "mean": 38.0,
+          "maximum": 62
+        },
+        "edge_error_mean_px": 38.0,
+        "edge_error_maximum_px": 62,
+        "elapsed_ms": 10.264,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            94,
+            16,
+            1351,
+            986
+          ],
+          "corners": [
+            [
+              94,
+              16
+            ],
+            [
+              1351,
+              16
+            ],
+            [
+              1351,
+              986
+            ],
+            [
+              94,
+              986
+            ]
+          ],
+          "confidence": 0.8717898121037654,
+          "score": 0.8717898121037654,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.18,
+              "minimum_core_area_fraction": 0.006,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.12,
+              "minimum_bbox_area_fraction": 0.14,
+              "bbox_padding_fraction": 0.0
+            },
+            "core_area_fraction": 0.44547837599034823,
+            "bbox_area_fraction": 0.8947919204609834,
+            "mask_coverage": 0.7668905674613915,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          182,
+          0,
+          763,
+          987
+        ],
+        "iou": 0.49371488,
+        "edge_errors": {
+          "left": 115,
+          "top": 8,
+          "right": 470,
+          "bottom": 10,
+          "mean": 150.75,
+          "maximum": 470
+        },
+        "edge_error_mean_px": 150.75,
+        "edge_error_maximum_px": 470,
+        "elapsed_ms": 7.447,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            182,
+            0,
+            763,
+            987
+          ],
+          "corners": [
+            [
+              182,
+              0
+            ],
+            [
+              763,
+              0
+            ],
+            [
+              763,
+              987
+            ],
+            [
+              182,
+              987
+            ]
+          ],
+          "confidence": 0.878003808547259,
+          "score": 0.878003808547259,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.18,
+              "minimum_core_area_fraction": 0.006,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.12,
+              "minimum_bbox_area_fraction": 0.14,
+              "bbox_padding_fraction": 0.0
+            },
+            "core_area_fraction": 0.23858488619531107,
+            "bbox_area_fraction": 0.44148936170212766,
+            "mask_coverage": 0.778188742813198,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 3.145,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0,
+          "score": 0,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.18,
+              "minimum_core_area_fraction": 0.006,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.12,
+              "minimum_bbox_area_fraction": 0.14,
+              "bbox_padding_fraction": 0.0
+            },
+            "reason": "weak_rectangle_proposal",
+            "bbox_area_fraction": 0.9483835497576447,
+            "mask_coverage": 0.05179236912156167
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          45,
+          42,
+          1163,
+          950
+        ],
+        "iou": 0.8916272,
+        "edge_errors": {
+          "left": 39,
+          "top": 9,
+          "right": 62,
+          "bottom": 9,
+          "mean": 29.75,
+          "maximum": 62
+        },
+        "edge_error_mean_px": 29.75,
+        "edge_error_maximum_px": 62,
+        "elapsed_ms": 7.795,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            45,
+            42,
+            1163,
+            950
+          ],
+          "corners": [
+            [
+              45,
+              42
+            ],
+            [
+              1163,
+              42
+            ],
+            [
+              1163,
+              950
+            ],
+            [
+              45,
+              950
+            ]
+          ],
+          "confidence": 0.9524320194967415,
+          "score": 0.9524320194967415,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.18,
+              "minimum_core_area_fraction": 0.006,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.12,
+              "minimum_bbox_area_fraction": 0.14,
+              "bbox_padding_fraction": 0.0
+            },
+            "core_area_fraction": 0.5092095721537346,
+            "bbox_area_fraction": 0.8001576441655894,
+            "mask_coverage": 0.913512762721348,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          55,
+          26,
+          1206,
+          969
+        ],
+        "iou": 0.91829411,
+        "edge_errors": {
+          "left": 33,
+          "top": 7,
+          "right": 52,
+          "bottom": 1,
+          "mean": 23.25,
+          "maximum": 52
+        },
+        "edge_error_mean_px": 23.25,
+        "edge_error_maximum_px": 52,
+        "elapsed_ms": 8.186,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            55,
+            26,
+            1206,
+            969
+          ],
+          "corners": [
+            [
+              55,
+              26
+            ],
+            [
+              1206,
+              26
+            ],
+            [
+              1206,
+              969
+            ],
+            [
+              55,
+              969
+            ]
+          ],
+          "confidence": 0.9484747920799195,
+          "score": 0.9484747920799195,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.18,
+              "minimum_core_area_fraction": 0.006,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.12,
+              "minimum_bbox_area_fraction": 0.14,
+              "bbox_padding_fraction": 0.0
+            },
+            "core_area_fraction": 0.5398926170219546,
+            "bbox_area_fraction": 0.8646345155020234,
+            "mask_coverage": 0.9063178037816717,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "e04459bcb474",
+    "parameter_identity_sha256": "2a67ff2b829f621dacfd84ad16e31725e9c735a8bb6e02c3468fe73523f5fa67",
+    "parameter_set_equivalence_family_id": "e04459bcb474",
+    "parameter_set_equivalence_family_sha256": "e04459bcb47426957f29ff9eb225f4acc36a847e07783ab91cc87f510babcdb4",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 363,
+    "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "search_space_member": true,
+    "profile": "baseline",
+    "run_id": "run-20260820-033648",
+    "rank": 8,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": {
+    "parameter_set_id": "0a8482550c35",
+    "parameters": {
+      "bbox_padding_fraction": 0.016,
+      "distance_threshold_fraction": 0.3,
+      "minimum_bbox_area_fraction": 0.22,
+      "minimum_core_area_fraction": 0.002,
+      "minimum_mask_coverage": 0.06,
+      "proposal_expansion_fraction": 0.12
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.72428296,
+      "mean_iou_success": 0.72428296,
+      "minimum_iou": 0.44989626,
+      "stddev_iou": 0.22447629,
+      "mean_edge_error_px": 79.05,
+      "elapsed_ms_total": 32.33,
+      "wall_ms": 32.554
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          125,
+          45,
+          1324,
+          974
+        ],
+        "iou": 0.95199893,
+        "edge_errors": {
+          "left": 0,
+          "top": 11,
+          "right": 35,
+          "bottom": 7,
+          "mean": 13.25,
+          "maximum": 35
+        },
+        "edge_error_mean_px": 13.25,
+        "edge_error_maximum_px": 35,
+        "elapsed_ms": 8.205,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            125,
+            45,
+            1324,
+            974
+          ],
+          "corners": [
+            [
+              125,
+              45
+            ],
+            [
+              1324,
+              45
+            ],
+            [
+              1324,
+              974
+            ],
+            [
+              125,
+              974
+            ]
+          ],
+          "confidence": 0.9110970659977682,
+          "score": 0.9110970659977682,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.31423210034550275,
+            "bbox_area_fraction": 0.8174288079421599,
+            "mask_coverage": 0.8383583018141239,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          212,
+          0,
+          741,
+          987
+        ],
+        "iou": 0.44989626,
+        "edge_errors": {
+          "left": 145,
+          "top": 8,
+          "right": 492,
+          "bottom": 10,
+          "mean": 163.75,
+          "maximum": 492
+        },
+        "edge_error_mean_px": 163.75,
+        "edge_error_maximum_px": 492,
+        "elapsed_ms": 5.665,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            212,
+            0,
+            741,
+            987
+          ],
+          "corners": [
+            [
+              212,
+              0
+            ],
+            [
+              741,
+              0
+            ],
+            [
+              741,
+              987
+            ],
+            [
+              212,
+              987
+            ]
+          ],
+          "confidence": 0.9121513513099404,
+          "score": 0.9121513513099404,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.18491837658558216,
+            "bbox_area_fraction": 0.40197568389057753,
+            "mask_coverage": 0.8402751841998916,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          387,
+          202,
+          991,
+          949
+        ],
+        "iou": 0.45228343,
+        "edge_errors": {
+          "left": 372,
+          "top": 174,
+          "right": 83,
+          "bottom": 21,
+          "mean": 162.5,
+          "maximum": 372
+        },
+        "edge_error_mean_px": 162.5,
+        "edge_error_maximum_px": 372,
+        "elapsed_ms": 3.298,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            387,
+            202,
+            991,
+            949
+          ],
+          "corners": [
+            [
+              387,
+              202
+            ],
+            [
+              991,
+              202
+            ],
+            [
+              991,
+              949
+            ],
+            [
+              387,
+              949
+            ]
+          ],
+          "confidence": 0.5077186228357138,
+          "score": 0.5077186228357138,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.007674585602297888,
+            "bbox_area_fraction": 0.42186658488420803,
+            "mask_coverage": 0.10494295061038858,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          96,
+          92,
+          1112,
+          900
+        ],
+        "iou": 0.88842889,
+        "edge_errors": {
+          "left": 12,
+          "top": 41,
+          "right": 11,
+          "bottom": 41,
+          "mean": 26.25,
+          "maximum": 41
+        },
+        "edge_error_mean_px": 26.25,
+        "edge_error_maximum_px": 41,
+        "elapsed_ms": 7.474,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            96,
+            92,
+            1112,
+            900
+          ],
+          "corners": [
+            [
+              96,
+              92
+            ],
+            [
+              1112,
+              92
+            ],
+            [
+              1112,
+              900
+            ],
+            [
+              96,
+              900
+            ]
+          ],
+          "confidence": 1.0,
+          "score": 1.0,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.38280338619667686,
+            "bbox_area_fraction": 0.6470725478450042,
+            "mask_coverage": 1.0,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          107,
+          78,
+          1151,
+          917
+        ],
+        "iou": 0.87880728,
+        "edge_errors": {
+          "left": 19,
+          "top": 45,
+          "right": 3,
+          "bottom": 51,
+          "mean": 29.5,
+          "maximum": 51
+        },
+        "edge_error_mean_px": 29.5,
+        "edge_error_maximum_px": 51,
+        "elapsed_ms": 7.688,
+        "candidate": {
+          "method": "distance_transform_rect",
+          "bbox": [
+            107,
+            78,
+            1151,
+            917
+          ],
+          "corners": [
+            [
+              107,
+              78
+            ],
+            [
+              1151,
+              78
+            ],
+            [
+              1151,
+              917
+            ],
+            [
+              107,
+              917
+            ]
+          ],
+          "confidence": 0.9999554180994525,
+          "score": 0.9999554180994525,
+          "diagnostics": {
+            "parameters": {
+              "distance_threshold_fraction": 0.3,
+              "minimum_core_area_fraction": 0.002,
+              "proposal_expansion_fraction": 0.12,
+              "minimum_mask_coverage": 0.06,
+              "minimum_bbox_area_fraction": 0.22,
+              "bbox_padding_fraction": 0.016
+            },
+            "core_area_fraction": 0.40485613230092726,
+            "bbox_area_fraction": 0.6977631201605965,
+            "mask_coverage": 0.9999189419990044,
+            "evidence": "distance_core_rectangle_proposal"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "distance_transform_rect",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "326",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31614704921",
+      "historic_calibration_id": "run-20260812-155322",
+      "historic_created_at_utc": "2026-08-12T15:53:21.237383+00:00",
+      "parameter_identity_sha256": "51d7fef425396728362fbd5fe84634f94fdae09fee8e66f6b0f2425e2543d011",
+      "parameter_set_id": "0a8482550c35",
+      "parameters": {
+        "bbox_padding_fraction": 0.016,
+        "distance_threshold_fraction": 0.3,
+        "minimum_bbox_area_fraction": 0.22,
+        "minimum_core_area_fraction": 0.002,
+        "minimum_mask_coverage": 0.06,
+        "proposal_expansion_fraction": 0.12
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.07112295483238995,
+      "search_fraction": 0.18181818181818182
+    },
+    "legacy_parameter_set_id": "0a8482550c35",
+    "parameter_identity_sha256": "51d7fef425396728362fbd5fe84634f94fdae09fee8e66f6b0f2425e2543d011",
+    "parameter_set_equivalence_family_id": "0a8482550c35",
+    "parameter_set_equivalence_family_sha256": "0a8482550c35b1619d77292ca549e7305aa52b3dadc21aed76cfb8cc7ccf22ca",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 521,
+    "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+    "profile": null,
+    "run_id": "run-20260820-033648",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "0a8482550c35",
+      "parameters": {
+        "bbox_padding_fraction": 0.016,
+        "distance_threshold_fraction": 0.3,
+        "minimum_bbox_area_fraction": 0.22,
+        "minimum_core_area_fraction": 0.002,
+        "minimum_mask_coverage": 0.06,
+        "proposal_expansion_fraction": 0.12
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.72428296,
+        "mean_iou_success": 0.72428296,
+        "minimum_iou": 0.44989626,
+        "stddev_iou": 0.22447629,
+        "mean_edge_error_px": 79.05,
+        "elapsed_ms_total": 32.33,
+        "wall_ms": 32.554
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            125,
+            45,
+            1324,
+            974
+          ],
+          "iou": 0.95199893,
+          "edge_errors": {
+            "left": 0,
+            "top": 11,
+            "right": 35,
+            "bottom": 7,
+            "mean": 13.25,
+            "maximum": 35
+          },
+          "edge_error_mean_px": 13.25,
+          "edge_error_maximum_px": 35,
+          "elapsed_ms": 8.205,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              125,
+              45,
+              1324,
+              974
+            ],
+            "corners": [
+              [
+                125,
+                45
+              ],
+              [
+                1324,
+                45
+              ],
+              [
+                1324,
+                974
+              ],
+              [
+                125,
+                974
+              ]
+            ],
+            "confidence": 0.9110970659977682,
+            "score": 0.9110970659977682,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.3,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.12,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.016
+              },
+              "core_area_fraction": 0.31423210034550275,
+              "bbox_area_fraction": 0.8174288079421599,
+              "mask_coverage": 0.8383583018141239,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            212,
+            0,
+            741,
+            987
+          ],
+          "iou": 0.44989626,
+          "edge_errors": {
+            "left": 145,
+            "top": 8,
+            "right": 492,
+            "bottom": 10,
+            "mean": 163.75,
+            "maximum": 492
+          },
+          "edge_error_mean_px": 163.75,
+          "edge_error_maximum_px": 492,
+          "elapsed_ms": 5.665,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              212,
+              0,
+              741,
+              987
+            ],
+            "corners": [
+              [
+                212,
+                0
+              ],
+              [
+                741,
+                0
+              ],
+              [
+                741,
+                987
+              ],
+              [
+                212,
+                987
+              ]
+            ],
+            "confidence": 0.9121513513099404,
+            "score": 0.9121513513099404,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.3,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.12,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.016
+              },
+              "core_area_fraction": 0.18491837658558216,
+              "bbox_area_fraction": 0.40197568389057753,
+              "mask_coverage": 0.8402751841998916,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            387,
+            202,
+            991,
+            949
+          ],
+          "iou": 0.45228343,
+          "edge_errors": {
+            "left": 372,
+            "top": 174,
+            "right": 83,
+            "bottom": 21,
+            "mean": 162.5,
+            "maximum": 372
+          },
+          "edge_error_mean_px": 162.5,
+          "edge_error_maximum_px": 372,
+          "elapsed_ms": 3.298,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              387,
+              202,
+              991,
+              949
+            ],
+            "corners": [
+              [
+                387,
+                202
+              ],
+              [
+                991,
+                202
+              ],
+              [
+                991,
+                949
+              ],
+              [
+                387,
+                949
+              ]
+            ],
+            "confidence": 0.5077186228357138,
+            "score": 0.5077186228357138,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.3,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.12,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.016
+              },
+              "core_area_fraction": 0.007674585602297888,
+              "bbox_area_fraction": 0.42186658488420803,
+              "mask_coverage": 0.10494295061038858,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            96,
+            92,
+            1112,
+            900
+          ],
+          "iou": 0.88842889,
+          "edge_errors": {
+            "left": 12,
+            "top": 41,
+            "right": 11,
+            "bottom": 41,
+            "mean": 26.25,
+            "maximum": 41
+          },
+          "edge_error_mean_px": 26.25,
+          "edge_error_maximum_px": 41,
+          "elapsed_ms": 7.474,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              96,
+              92,
+              1112,
+              900
+            ],
+            "corners": [
+              [
+                96,
+                92
+              ],
+              [
+                1112,
+                92
+              ],
+              [
+                1112,
+                900
+              ],
+              [
+                96,
+                900
+              ]
+            ],
+            "confidence": 1.0,
+            "score": 1.0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.3,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.12,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.016
+              },
+              "core_area_fraction": 0.38280338619667686,
+              "bbox_area_fraction": 0.6470725478450042,
+              "mask_coverage": 1.0,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            107,
+            78,
+            1151,
+            917
+          ],
+          "iou": 0.87880728,
+          "edge_errors": {
+            "left": 19,
+            "top": 45,
+            "right": 3,
+            "bottom": 51,
+            "mean": 29.5,
+            "maximum": 51
+          },
+          "edge_error_mean_px": 29.5,
+          "edge_error_maximum_px": 51,
+          "elapsed_ms": 7.688,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              107,
+              78,
+              1151,
+              917
+            ],
+            "corners": [
+              [
+                107,
+                78
+              ],
+              [
+                1151,
+                78
+              ],
+              [
+                1151,
+                917
+              ],
+              [
+                107,
+                917
+              ]
+            ],
+            "confidence": 0.9999554180994525,
+            "score": 0.9999554180994525,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.3,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.12,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.016
+              },
+              "core_area_fraction": 0.40485613230092726,
+              "bbox_area_fraction": 0.6977631201605965,
+              "mask_coverage": 0.9999189419990044,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "reference_roles": [
+        "historic_best"
+      ],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "historic_reference": {
+        "detector": "distance_transform_rect",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "historic_build_number": "326",
+        "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31614704921",
+        "historic_calibration_id": "run-20260812-155322",
+        "historic_created_at_utc": "2026-08-12T15:53:21.237383+00:00",
+        "parameter_identity_sha256": "51d7fef425396728362fbd5fe84634f94fdae09fee8e66f6b0f2425e2543d011",
+        "parameter_set_id": "0a8482550c35",
+        "parameters": {
+          "bbox_padding_fraction": 0.016,
+          "distance_threshold_fraction": 0.3,
+          "minimum_bbox_area_fraction": 0.22,
+          "minimum_core_area_fraction": 0.002,
+          "minimum_mask_coverage": 0.06,
+          "proposal_expansion_fraction": 0.12
+        },
+        "provenance_source": "legacy-parameters"
+      },
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.07112295483238995,
+        "search_fraction": 0.18181818181818182
+      },
+      "legacy_parameter_set_id": "0a8482550c35",
+      "parameter_identity_sha256": "51d7fef425396728362fbd5fe84634f94fdae09fee8e66f6b0f2425e2543d011",
+      "parameter_set_equivalence_family_id": "0a8482550c35",
+      "parameter_set_equivalence_family_sha256": "0a8482550c35b1619d77292ca549e7305aa52b3dadc21aed76cfb8cc7ccf22ca",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 521,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "4be72657e9a7",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.08,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.65634883,
+        "mean_iou_success": 0.82043604,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37086342,
+        "mean_edge_error_px": 52.312,
+        "elapsed_ms_total": 74.728,
+        "wall_ms": 75.151
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            101,
+            38,
+            1317,
+            979
+          ],
+          "iou": 0.9267192,
+          "edge_errors": {
+            "left": 24,
+            "top": 18,
+            "right": 28,
+            "bottom": 12,
+            "mean": 20.5,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 20.5,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 26.317,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              101,
+              38,
+              1317,
+              979
+            ],
+            "corners": [
+              [
+                101,
+                38
+              ],
+              [
+                1317,
+                38
+              ],
+              [
+                1317,
+                979
+              ],
+              [
+                101,
+                979
+              ]
+            ],
+            "confidence": 0.899249949312042,
+            "score": 0.899249949312042,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.839727237768704,
+              "mask_coverage": 0.8168180896582583,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            186,
+            0,
+            758,
+            987
+          ],
+          "iou": 0.48613603,
+          "edge_errors": {
+            "left": 119,
+            "top": 8,
+            "right": 475,
+            "bottom": 10,
+            "mean": 153.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 153.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 6.825,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              186,
+              0,
+              758,
+              987
+            ],
+            "corners": [
+              [
+                186,
+                0
+              ],
+              [
+                758,
+                0
+              ],
+              [
+                758,
+                987
+              ],
+              [
+                186,
+                987
+              ]
+            ],
+            "confidence": 0.884620255630894,
+            "score": 0.884620255630894,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.43465045592705165,
+              "mask_coverage": 0.7902186466016253,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 3.441,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9181985294117647,
+              "mask_coverage": 0.0534950005957127
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            59,
+            47,
+            1148,
+            945
+          ],
+          "iou": 0.92556462,
+          "edge_errors": {
+            "left": 25,
+            "top": 4,
+            "right": 47,
+            "bottom": 4,
+            "mean": 20.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 15.909,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              59,
+              47,
+              1148,
+              945
+            ],
+            "corners": [
+              [
+                59,
+                47
+              ],
+              [
+                1148,
+                47
+              ],
+              [
+                1148,
+                945
+              ],
+              [
+                59,
+                945
+              ]
+            ],
+            "confidence": 0.9715557580256913,
+            "score": 0.9715557580256913,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7708184885077404,
+              "mask_coverage": 0.9482831964103476,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1192,
+            965
+          ],
+          "iou": 0.94332432,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 38,
+            "bottom": 3,
+            "mean": 15.75,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.75,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 22.236,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              69,
+              30,
+              1192,
+              965
+            ],
+            "corners": [
+              [
+                69,
+                30
+              ],
+              [
+                1192,
+                30
+              ],
+              [
+                1192,
+                965
+              ],
+              [
+                69,
+                965
+              ]
+            ],
+            "confidence": 0.9652747367869678,
+            "score": 0.9652747367869678,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8364440939362076,
+              "mask_coverage": 0.9368631577944867,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.14818252180702984,
+        "search_fraction": 0.36363636363636365
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "4be72657e9a7",
+      "parameter_identity_sha256": "1bd60caccf6154ffd91b5f3df979a6bc7d1b1e146a99ab7c3ab4fd7ea803bef5",
+      "parameter_set_equivalence_family_id": "4be72657e9a7",
+      "parameter_set_equivalence_family_sha256": "4be72657e9a77b1a25538579224d638bc217d6af6f1f25b35e8151bcf7f174c9",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "fb963211fbe9",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.14,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.65634883,
+        "mean_iou_success": 0.82043604,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37086342,
+        "mean_edge_error_px": 52.312,
+        "elapsed_ms_total": 80.527,
+        "wall_ms": 80.92
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            101,
+            38,
+            1317,
+            979
+          ],
+          "iou": 0.9267192,
+          "edge_errors": {
+            "left": 24,
+            "top": 18,
+            "right": 28,
+            "bottom": 12,
+            "mean": 20.5,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 20.5,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 18.939,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              101,
+              38,
+              1317,
+              979
+            ],
+            "corners": [
+              [
+                101,
+                38
+              ],
+              [
+                1317,
+                38
+              ],
+              [
+                1317,
+                979
+              ],
+              [
+                101,
+                979
+              ]
+            ],
+            "confidence": 0.899249949312042,
+            "score": 0.899249949312042,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.839727237768704,
+              "mask_coverage": 0.8168180896582583,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            186,
+            0,
+            758,
+            987
+          ],
+          "iou": 0.48613603,
+          "edge_errors": {
+            "left": 119,
+            "top": 8,
+            "right": 475,
+            "bottom": 10,
+            "mean": 153.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 153.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 17.374,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              186,
+              0,
+              758,
+              987
+            ],
+            "corners": [
+              [
+                186,
+                0
+              ],
+              [
+                758,
+                0
+              ],
+              [
+                758,
+                987
+              ],
+              [
+                186,
+                987
+              ]
+            ],
+            "confidence": 0.884620255630894,
+            "score": 0.884620255630894,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.43465045592705165,
+              "mask_coverage": 0.7902186466016253,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.216,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9181985294117647,
+              "mask_coverage": 0.0534950005957127
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            59,
+            47,
+            1148,
+            945
+          ],
+          "iou": 0.92556462,
+          "edge_errors": {
+            "left": 25,
+            "top": 4,
+            "right": 47,
+            "bottom": 4,
+            "mean": 20.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 29.531,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              59,
+              47,
+              1148,
+              945
+            ],
+            "corners": [
+              [
+                59,
+                47
+              ],
+              [
+                1148,
+                47
+              ],
+              [
+                1148,
+                945
+              ],
+              [
+                59,
+                945
+              ]
+            ],
+            "confidence": 0.9715557580256913,
+            "score": 0.9715557580256913,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7708184885077404,
+              "mask_coverage": 0.9482831964103476,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1192,
+            965
+          ],
+          "iou": 0.94332432,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 38,
+            "bottom": 3,
+            "mean": 15.75,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.75,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 10.467,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              69,
+              30,
+              1192,
+              965
+            ],
+            "corners": [
+              [
+                69,
+                30
+              ],
+              [
+                1192,
+                30
+              ],
+              [
+                1192,
+                965
+              ],
+              [
+                69,
+                965
+              ]
+            ],
+            "confidence": 0.9652747367869678,
+            "score": 0.9652747367869678,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8364440939362076,
+              "mask_coverage": 0.9368631577944867,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 0.1575649029109627,
+        "search_fraction": 0.7272727272727273
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "fb963211fbe9",
+      "parameter_identity_sha256": "629c04a0d44c258845b1f30a4bfc3ee05a845cc740f3efab0d9230af2c392600",
+      "parameter_set_equivalence_family_id": "fb963211fbe9",
+      "parameter_set_equivalence_family_sha256": "fb963211fbe940f0a45fdc648db0cc2e8d13ff4e7d5e6edc7d2a42f55a42553e",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "86b444be6e6e",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.22,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.65634883,
+        "mean_iou_success": 0.82043604,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37086342,
+        "mean_edge_error_px": 52.312,
+        "elapsed_ms_total": 60.501,
+        "wall_ms": 61.027
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            101,
+            38,
+            1317,
+            979
+          ],
+          "iou": 0.9267192,
+          "edge_errors": {
+            "left": 24,
+            "top": 18,
+            "right": 28,
+            "bottom": 12,
+            "mean": 20.5,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 20.5,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 20.139,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              101,
+              38,
+              1317,
+              979
+            ],
+            "corners": [
+              [
+                101,
+                38
+              ],
+              [
+                1317,
+                38
+              ],
+              [
+                1317,
+                979
+              ],
+              [
+                101,
+                979
+              ]
+            ],
+            "confidence": 0.899249949312042,
+            "score": 0.899249949312042,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.839727237768704,
+              "mask_coverage": 0.8168180896582583,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            186,
+            0,
+            758,
+            987
+          ],
+          "iou": 0.48613603,
+          "edge_errors": {
+            "left": 119,
+            "top": 8,
+            "right": 475,
+            "bottom": 10,
+            "mean": 153.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 153.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 15.397,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              186,
+              0,
+              758,
+              987
+            ],
+            "corners": [
+              [
+                186,
+                0
+              ],
+              [
+                758,
+                0
+              ],
+              [
+                758,
+                987
+              ],
+              [
+                186,
+                987
+              ]
+            ],
+            "confidence": 0.884620255630894,
+            "score": 0.884620255630894,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.43465045592705165,
+              "mask_coverage": 0.7902186466016253,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.288,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9181985294117647,
+              "mask_coverage": 0.0534950005957127
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            59,
+            47,
+            1148,
+            945
+          ],
+          "iou": 0.92556462,
+          "edge_errors": {
+            "left": 25,
+            "top": 4,
+            "right": 47,
+            "bottom": 4,
+            "mean": 20.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 9.449,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              59,
+              47,
+              1148,
+              945
+            ],
+            "corners": [
+              [
+                59,
+                47
+              ],
+              [
+                1148,
+                47
+              ],
+              [
+                1148,
+                945
+              ],
+              [
+                59,
+                945
+              ]
+            ],
+            "confidence": 0.9715557580256913,
+            "score": 0.9715557580256913,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7708184885077404,
+              "mask_coverage": 0.9482831964103476,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1192,
+            965
+          ],
+          "iou": 0.94332432,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 38,
+            "bottom": 3,
+            "mean": 15.75,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.75,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 8.228,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              69,
+              30,
+              1192,
+              965
+            ],
+            "corners": [
+              [
+                69,
+                30
+              ],
+              [
+                1192,
+                30
+              ],
+              [
+                1192,
+                965
+              ],
+              [
+                69,
+                965
+              ]
+            ],
+            "confidence": 0.9652747367869678,
+            "score": 0.9652747367869678,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8364440939362076,
+              "mask_coverage": 0.9368631577944867,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 0.15295076300390065,
+        "search_fraction": 0.6363636363636364
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "86b444be6e6e",
+      "parameter_identity_sha256": "fccf2d2445d69f6084a5334b3cc823903f9c82f717acecf43d1818802c6d593a",
+      "parameter_set_equivalence_family_id": "86b444be6e6e",
+      "parameter_set_equivalence_family_sha256": "86b444be6e6eee4a4540b84afe5a745e79df60caa0f1ad6ca57c006f368b1745",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "29e38f999fc0",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.08,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.64325955,
+        "mean_iou_success": 0.80407443,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.35809399,
+        "mean_edge_error_px": 56.875,
+        "elapsed_ms_total": 87.035,
+        "wall_ms": 87.46
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            93,
+            30,
+            1325,
+            986
+          ],
+          "iou": 0.90033215,
+          "edge_errors": {
+            "left": 32,
+            "top": 26,
+            "right": 36,
+            "bottom": 19,
+            "mean": 28.25,
+            "maximum": 36
+          },
+          "edge_error_mean_px": 28.25,
+          "edge_error_maximum_px": 36,
+          "elapsed_ms": 16.779,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              93,
+              30,
+              1325,
+              986
+            ],
+            "corners": [
+              [
+                93,
+                30
+              ],
+              [
+                1325,
+                30
+              ],
+              [
+                1325,
+                986
+              ],
+              [
+                93,
+                986
+              ]
+            ],
+            "confidence": 0.8864581776748357,
+            "score": 0.8864581776748357,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.8643380701749236,
+              "mask_coverage": 0.7935603230451557,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            178,
+            0,
+            766,
+            987
+          ],
+          "iou": 0.49960805,
+          "edge_errors": {
+            "left": 111,
+            "top": 8,
+            "right": 467,
+            "bottom": 10,
+            "mean": 149.0,
+            "maximum": 467
+          },
+          "edge_error_mean_px": 149.0,
+          "edge_error_maximum_px": 467,
+          "elapsed_ms": 15.242,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              178,
+              0,
+              766,
+              987
+            ],
+            "corners": [
+              [
+                178,
+                0
+              ],
+              [
+                766,
+                0
+              ],
+              [
+                766,
+                987
+              ],
+              [
+                178,
+                987
+              ]
+            ],
+            "confidence": 0.8730260391897389,
+            "score": 0.8730260391897389,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.44680851063829785,
+              "mask_coverage": 0.7691382530722523,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 35.098,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9255514705882353,
+              "mask_coverage": 0.05307001548671002
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            51,
+            39,
+            1156,
+            953
+          ],
+          "iou": 0.89619494,
+          "edge_errors": {
+            "left": 33,
+            "top": 12,
+            "right": 55,
+            "bottom": 12,
+            "mean": 28.0,
+            "maximum": 55
+          },
+          "edge_error_mean_px": 28.0,
+          "edge_error_maximum_px": 55,
+          "elapsed_ms": 11.327,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              51,
+              39,
+              1156,
+              953
+            ],
+            "corners": [
+              [
+                51,
+                39
+              ],
+              [
+                1156,
+                39
+              ],
+              [
+                1156,
+                953
+              ],
+              [
+                51,
+                953
+              ]
+            ],
+            "confidence": 0.955005940770518,
+            "score": 0.955005940770518,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7960793896017908,
+              "mask_coverage": 0.9181926195827599,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            61,
+            22,
+            1200,
+            973
+          ],
+          "iou": 0.92016259,
+          "edge_errors": {
+            "left": 27,
+            "top": 11,
+            "right": 46,
+            "bottom": 5,
+            "mean": 22.25,
+            "maximum": 46
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 46,
+          "elapsed_ms": 8.589,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              61,
+              22,
+              1200,
+              973
+            ],
+            "corners": [
+              [
+                61,
+                22
+              ],
+              [
+                1200,
+                22
+              ],
+              [
+                1200,
+                973
+              ],
+              [
+                61,
+                973
+              ]
+            ],
+            "confidence": 0.9494890550033281,
+            "score": 0.9494890550033281,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8628787878787879,
+              "mask_coverage": 0.9081619181878693,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 0.16221042000688612,
+        "search_fraction": 0.8181818181818182
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "29e38f999fc0",
+      "parameter_identity_sha256": "dd65c1b68232e8c04b6ffaad72b6598003ec0f63389c6018731ec3269aa49080",
+      "parameter_set_equivalence_family_id": "29e38f999fc0",
+      "parameter_set_equivalence_family_sha256": "29e38f999fc05ca161ec1dac0f6c548b98eebe1fa3a26ee6f50feecf81c8e285",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "4be72657e9a7",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.08,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.65634883,
+        "mean_iou_success": 0.82043604,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37086342,
+        "mean_edge_error_px": 52.312,
+        "elapsed_ms_total": 74.728,
+        "wall_ms": 75.151
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            101,
+            38,
+            1317,
+            979
+          ],
+          "iou": 0.9267192,
+          "edge_errors": {
+            "left": 24,
+            "top": 18,
+            "right": 28,
+            "bottom": 12,
+            "mean": 20.5,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 20.5,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 26.317,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              101,
+              38,
+              1317,
+              979
+            ],
+            "corners": [
+              [
+                101,
+                38
+              ],
+              [
+                1317,
+                38
+              ],
+              [
+                1317,
+                979
+              ],
+              [
+                101,
+                979
+              ]
+            ],
+            "confidence": 0.899249949312042,
+            "score": 0.899249949312042,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.839727237768704,
+              "mask_coverage": 0.8168180896582583,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            186,
+            0,
+            758,
+            987
+          ],
+          "iou": 0.48613603,
+          "edge_errors": {
+            "left": 119,
+            "top": 8,
+            "right": 475,
+            "bottom": 10,
+            "mean": 153.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 153.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 6.825,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              186,
+              0,
+              758,
+              987
+            ],
+            "corners": [
+              [
+                186,
+                0
+              ],
+              [
+                758,
+                0
+              ],
+              [
+                758,
+                987
+              ],
+              [
+                186,
+                987
+              ]
+            ],
+            "confidence": 0.884620255630894,
+            "score": 0.884620255630894,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.43465045592705165,
+              "mask_coverage": 0.7902186466016253,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 3.441,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9181985294117647,
+              "mask_coverage": 0.0534950005957127
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            59,
+            47,
+            1148,
+            945
+          ],
+          "iou": 0.92556462,
+          "edge_errors": {
+            "left": 25,
+            "top": 4,
+            "right": 47,
+            "bottom": 4,
+            "mean": 20.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 15.909,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              59,
+              47,
+              1148,
+              945
+            ],
+            "corners": [
+              [
+                59,
+                47
+              ],
+              [
+                1148,
+                47
+              ],
+              [
+                1148,
+                945
+              ],
+              [
+                59,
+                945
+              ]
+            ],
+            "confidence": 0.9715557580256913,
+            "score": 0.9715557580256913,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7708184885077404,
+              "mask_coverage": 0.9482831964103476,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1192,
+            965
+          ],
+          "iou": 0.94332432,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 38,
+            "bottom": 3,
+            "mean": 15.75,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.75,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 22.236,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              69,
+              30,
+              1192,
+              965
+            ],
+            "corners": [
+              [
+                69,
+                30
+              ],
+              [
+                1192,
+                30
+              ],
+              [
+                1192,
+                965
+              ],
+              [
+                69,
+                965
+              ]
+            ],
+            "confidence": 0.9652747367869678,
+            "score": 0.9652747367869678,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8364440939362076,
+              "mask_coverage": 0.9368631577944867,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 0.14818252180702984,
+        "search_fraction": 0.36363636363636365
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "4be72657e9a7",
+      "parameter_identity_sha256": "1bd60caccf6154ffd91b5f3df979a6bc7d1b1e146a99ab7c3ab4fd7ea803bef5",
+      "parameter_set_equivalence_family_id": "4be72657e9a7",
+      "parameter_set_equivalence_family_sha256": "4be72657e9a77b1a25538579224d638bc217d6af6f1f25b35e8151bcf7f174c9",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "fb963211fbe9",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.14,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.65634883,
+        "mean_iou_success": 0.82043604,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37086342,
+        "mean_edge_error_px": 52.312,
+        "elapsed_ms_total": 80.527,
+        "wall_ms": 80.92
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            101,
+            38,
+            1317,
+            979
+          ],
+          "iou": 0.9267192,
+          "edge_errors": {
+            "left": 24,
+            "top": 18,
+            "right": 28,
+            "bottom": 12,
+            "mean": 20.5,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 20.5,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 18.939,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              101,
+              38,
+              1317,
+              979
+            ],
+            "corners": [
+              [
+                101,
+                38
+              ],
+              [
+                1317,
+                38
+              ],
+              [
+                1317,
+                979
+              ],
+              [
+                101,
+                979
+              ]
+            ],
+            "confidence": 0.899249949312042,
+            "score": 0.899249949312042,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.839727237768704,
+              "mask_coverage": 0.8168180896582583,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            186,
+            0,
+            758,
+            987
+          ],
+          "iou": 0.48613603,
+          "edge_errors": {
+            "left": 119,
+            "top": 8,
+            "right": 475,
+            "bottom": 10,
+            "mean": 153.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 153.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 17.374,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              186,
+              0,
+              758,
+              987
+            ],
+            "corners": [
+              [
+                186,
+                0
+              ],
+              [
+                758,
+                0
+              ],
+              [
+                758,
+                987
+              ],
+              [
+                186,
+                987
+              ]
+            ],
+            "confidence": 0.884620255630894,
+            "score": 0.884620255630894,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.43465045592705165,
+              "mask_coverage": 0.7902186466016253,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 4.216,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9181985294117647,
+              "mask_coverage": 0.0534950005957127
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            59,
+            47,
+            1148,
+            945
+          ],
+          "iou": 0.92556462,
+          "edge_errors": {
+            "left": 25,
+            "top": 4,
+            "right": 47,
+            "bottom": 4,
+            "mean": 20.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 29.531,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              59,
+              47,
+              1148,
+              945
+            ],
+            "corners": [
+              [
+                59,
+                47
+              ],
+              [
+                1148,
+                47
+              ],
+              [
+                1148,
+                945
+              ],
+              [
+                59,
+                945
+              ]
+            ],
+            "confidence": 0.9715557580256913,
+            "score": 0.9715557580256913,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7708184885077404,
+              "mask_coverage": 0.9482831964103476,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1192,
+            965
+          ],
+          "iou": 0.94332432,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 38,
+            "bottom": 3,
+            "mean": 15.75,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.75,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 10.467,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              69,
+              30,
+              1192,
+              965
+            ],
+            "corners": [
+              [
+                69,
+                30
+              ],
+              [
+                1192,
+                30
+              ],
+              [
+                1192,
+                965
+              ],
+              [
+                69,
+                965
+              ]
+            ],
+            "confidence": 0.9652747367869678,
+            "score": 0.9652747367869678,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8364440939362076,
+              "mask_coverage": 0.9368631577944867,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 0.1575649029109627,
+        "search_fraction": 0.7272727272727273
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "fb963211fbe9",
+      "parameter_identity_sha256": "629c04a0d44c258845b1f30a4bfc3ee05a845cc740f3efab0d9230af2c392600",
+      "parameter_set_equivalence_family_id": "fb963211fbe9",
+      "parameter_set_equivalence_family_sha256": "fb963211fbe940f0a45fdc648db0cc2e8d13ff4e7d5e6edc7d2a42f55a42553e",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "86b444be6e6e",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.22,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.65634883,
+        "mean_iou_success": 0.82043604,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.37086342,
+        "mean_edge_error_px": 52.312,
+        "elapsed_ms_total": 60.501,
+        "wall_ms": 61.027
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            101,
+            38,
+            1317,
+            979
+          ],
+          "iou": 0.9267192,
+          "edge_errors": {
+            "left": 24,
+            "top": 18,
+            "right": 28,
+            "bottom": 12,
+            "mean": 20.5,
+            "maximum": 28
+          },
+          "edge_error_mean_px": 20.5,
+          "edge_error_maximum_px": 28,
+          "elapsed_ms": 20.139,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              101,
+              38,
+              1317,
+              979
+            ],
+            "corners": [
+              [
+                101,
+                38
+              ],
+              [
+                1317,
+                38
+              ],
+              [
+                1317,
+                979
+              ],
+              [
+                101,
+                979
+              ]
+            ],
+            "confidence": 0.899249949312042,
+            "score": 0.899249949312042,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.839727237768704,
+              "mask_coverage": 0.8168180896582583,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            186,
+            0,
+            758,
+            987
+          ],
+          "iou": 0.48613603,
+          "edge_errors": {
+            "left": 119,
+            "top": 8,
+            "right": 475,
+            "bottom": 10,
+            "mean": 153.0,
+            "maximum": 475
+          },
+          "edge_error_mean_px": 153.0,
+          "edge_error_maximum_px": 475,
+          "elapsed_ms": 15.397,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              186,
+              0,
+              758,
+              987
+            ],
+            "corners": [
+              [
+                186,
+                0
+              ],
+              [
+                758,
+                0
+              ],
+              [
+                758,
+                987
+              ],
+              [
+                186,
+                987
+              ]
+            ],
+            "confidence": 0.884620255630894,
+            "score": 0.884620255630894,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.43465045592705165,
+              "mask_coverage": 0.7902186466016253,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 7.288,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9181985294117647,
+              "mask_coverage": 0.0534950005957127
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            59,
+            47,
+            1148,
+            945
+          ],
+          "iou": 0.92556462,
+          "edge_errors": {
+            "left": 25,
+            "top": 4,
+            "right": 47,
+            "bottom": 4,
+            "mean": 20.0,
+            "maximum": 47
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 47,
+          "elapsed_ms": 9.449,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              59,
+              47,
+              1148,
+              945
+            ],
+            "corners": [
+              [
+                59,
+                47
+              ],
+              [
+                1148,
+                47
+              ],
+              [
+                1148,
+                945
+              ],
+              [
+                59,
+                945
+              ]
+            ],
+            "confidence": 0.9715557580256913,
+            "score": 0.9715557580256913,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7708184885077404,
+              "mask_coverage": 0.9482831964103476,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            69,
+            30,
+            1192,
+            965
+          ],
+          "iou": 0.94332432,
+          "edge_errors": {
+            "left": 19,
+            "top": 3,
+            "right": 38,
+            "bottom": 3,
+            "mean": 15.75,
+            "maximum": 38
+          },
+          "edge_error_mean_px": 15.75,
+          "edge_error_maximum_px": 38,
+          "elapsed_ms": 8.228,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              69,
+              30,
+              1192,
+              965
+            ],
+            "corners": [
+              [
+                69,
+                30
+              ],
+              [
+                1192,
+                30
+              ],
+              [
+                1192,
+                965
+              ],
+              [
+                69,
+                965
+              ]
+            ],
+            "confidence": 0.9652747367869678,
+            "score": 0.9652747367869678,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.22,
+                "bbox_padding_fraction": 0.0
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8364440939362076,
+              "mask_coverage": 0.9368631577944867,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 0.15295076300390065,
+        "search_fraction": 0.6363636363636364
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "86b444be6e6e",
+      "parameter_identity_sha256": "fccf2d2445d69f6084a5334b3cc823903f9c82f717acecf43d1818802c6d593a",
+      "parameter_set_equivalence_family_id": "86b444be6e6e",
+      "parameter_set_equivalence_family_sha256": "86b444be6e6eee4a4540b84afe5a745e79df60caa0f1ad6ca57c006f368b1745",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "29e38f999fc0",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.08,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.64325955,
+        "mean_iou_success": 0.80407443,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.35809399,
+        "mean_edge_error_px": 56.875,
+        "elapsed_ms_total": 87.035,
+        "wall_ms": 87.46
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            93,
+            30,
+            1325,
+            986
+          ],
+          "iou": 0.90033215,
+          "edge_errors": {
+            "left": 32,
+            "top": 26,
+            "right": 36,
+            "bottom": 19,
+            "mean": 28.25,
+            "maximum": 36
+          },
+          "edge_error_mean_px": 28.25,
+          "edge_error_maximum_px": 36,
+          "elapsed_ms": 16.779,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              93,
+              30,
+              1325,
+              986
+            ],
+            "corners": [
+              [
+                93,
+                30
+              ],
+              [
+                1325,
+                30
+              ],
+              [
+                1325,
+                986
+              ],
+              [
+                93,
+                986
+              ]
+            ],
+            "confidence": 0.8864581776748357,
+            "score": 0.8864581776748357,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.8643380701749236,
+              "mask_coverage": 0.7935603230451557,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            178,
+            0,
+            766,
+            987
+          ],
+          "iou": 0.49960805,
+          "edge_errors": {
+            "left": 111,
+            "top": 8,
+            "right": 467,
+            "bottom": 10,
+            "mean": 149.0,
+            "maximum": 467
+          },
+          "edge_error_mean_px": 149.0,
+          "edge_error_maximum_px": 467,
+          "elapsed_ms": 15.242,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              178,
+              0,
+              766,
+              987
+            ],
+            "corners": [
+              [
+                178,
+                0
+              ],
+              [
+                766,
+                0
+              ],
+              [
+                766,
+                987
+              ],
+              [
+                178,
+                987
+              ]
+            ],
+            "confidence": 0.8730260391897389,
+            "score": 0.8730260391897389,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.44680851063829785,
+              "mask_coverage": 0.7691382530722523,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 35.098,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9255514705882353,
+              "mask_coverage": 0.05307001548671002
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            51,
+            39,
+            1156,
+            953
+          ],
+          "iou": 0.89619494,
+          "edge_errors": {
+            "left": 33,
+            "top": 12,
+            "right": 55,
+            "bottom": 12,
+            "mean": 28.0,
+            "maximum": 55
+          },
+          "edge_error_mean_px": 28.0,
+          "edge_error_maximum_px": 55,
+          "elapsed_ms": 11.327,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              51,
+              39,
+              1156,
+              953
+            ],
+            "corners": [
+              [
+                51,
+                39
+              ],
+              [
+                1156,
+                39
+              ],
+              [
+                1156,
+                953
+              ],
+              [
+                51,
+                953
+              ]
+            ],
+            "confidence": 0.955005940770518,
+            "score": 0.955005940770518,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7960793896017908,
+              "mask_coverage": 0.9181926195827599,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            61,
+            22,
+            1200,
+            973
+          ],
+          "iou": 0.92016259,
+          "edge_errors": {
+            "left": 27,
+            "top": 11,
+            "right": 46,
+            "bottom": 5,
+            "mean": 22.25,
+            "maximum": 46
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 46,
+          "elapsed_ms": 8.589,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              61,
+              22,
+              1200,
+              973
+            ],
+            "corners": [
+              [
+                61,
+                22
+              ],
+              [
+                1200,
+                22
+              ],
+              [
+                1200,
+                973
+              ],
+              [
+                61,
+                973
+              ]
+            ],
+            "confidence": 0.9494890550033281,
+            "score": 0.9494890550033281,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.08,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8628787878787879,
+              "mask_coverage": 0.9081619181878693,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 0.16221042000688612,
+        "search_fraction": 0.8181818181818182
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "29e38f999fc0",
+      "parameter_identity_sha256": "dd65c1b68232e8c04b6ffaad72b6598003ec0f63389c6018731ec3269aa49080",
+      "parameter_set_equivalence_family_id": "29e38f999fc0",
+      "parameter_set_equivalence_family_sha256": "29e38f999fc05ca161ec1dac0f6c548b98eebe1fa3a26ee6f50feecf81c8e285",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "30ddd9d571be",
+      "parameters": {
+        "distance_threshold_fraction": 0.1,
+        "minimum_core_area_fraction": 0.002,
+        "proposal_expansion_fraction": 0.06,
+        "minimum_mask_coverage": 0.06,
+        "minimum_bbox_area_fraction": 0.14,
+        "bbox_padding_fraction": 0.008
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.64325955,
+        "mean_iou_success": 0.80407443,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.35809399,
+        "mean_edge_error_px": 56.875,
+        "elapsed_ms_total": 76.786,
+        "wall_ms": 77.167
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            93,
+            30,
+            1325,
+            986
+          ],
+          "iou": 0.90033215,
+          "edge_errors": {
+            "left": 32,
+            "top": 26,
+            "right": 36,
+            "bottom": 19,
+            "mean": 28.25,
+            "maximum": 36
+          },
+          "edge_error_mean_px": 28.25,
+          "edge_error_maximum_px": 36,
+          "elapsed_ms": 16.226,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              93,
+              30,
+              1325,
+              986
+            ],
+            "corners": [
+              [
+                93,
+                30
+              ],
+              [
+                1325,
+                30
+              ],
+              [
+                1325,
+                986
+              ],
+              [
+                93,
+                986
+              ]
+            ],
+            "confidence": 0.8864581776748357,
+            "score": 0.8864581776748357,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.5440046321437902,
+              "bbox_area_fraction": 0.8643380701749236,
+              "mask_coverage": 0.7935603230451557,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            178,
+            0,
+            766,
+            987
+          ],
+          "iou": 0.49960805,
+          "edge_errors": {
+            "left": 111,
+            "top": 8,
+            "right": 467,
+            "bottom": 10,
+            "mean": 149.0,
+            "maximum": 467
+          },
+          "edge_error_mean_px": 149.0,
+          "edge_error_maximum_px": 467,
+          "elapsed_ms": 34.555,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              178,
+              0,
+              766,
+              987
+            ],
+            "corners": [
+              [
+                178,
+                0
+              ],
+              [
+                766,
+                0
+              ],
+              [
+                766,
+                987
+              ],
+              [
+                178,
+                987
+              ]
+            ],
+            "confidence": 0.8730260391897389,
+            "score": 0.8730260391897389,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.27890540553025195,
+              "bbox_area_fraction": 0.44680851063829785,
+              "mask_coverage": 0.7691382530722523,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 9.215,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0,
+            "score": 0,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.008
+              },
+              "reason": "weak_rectangle_proposal",
+              "bbox_area_fraction": 0.9255514705882353,
+              "mask_coverage": 0.05307001548671002
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            51,
+            39,
+            1156,
+            953
+          ],
+          "iou": 0.89619494,
+          "edge_errors": {
+            "left": 33,
+            "top": 12,
+            "right": 55,
+            "bottom": 12,
+            "mean": 28.0,
+            "maximum": 55
+          },
+          "edge_error_mean_px": 28.0,
+          "edge_error_maximum_px": 55,
+          "elapsed_ms": 8.548,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              51,
+              39,
+              1156,
+              953
+            ],
+            "corners": [
+              [
+                51,
+                39
+              ],
+              [
+                1156,
+                39
+              ],
+              [
+                1156,
+                953
+              ],
+              [
+                51,
+                953
+              ]
+            ],
+            "confidence": 0.955005940770518,
+            "score": 0.955005940770518,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.6025223066494308,
+              "bbox_area_fraction": 0.7960793896017908,
+              "mask_coverage": 0.9181926195827599,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            61,
+            22,
+            1200,
+            973
+          ],
+          "iou": 0.92016259,
+          "edge_errors": {
+            "left": 27,
+            "top": 11,
+            "right": 46,
+            "bottom": 5,
+            "mean": 22.25,
+            "maximum": 46
+          },
+          "edge_error_mean_px": 22.25,
+          "edge_error_maximum_px": 46,
+          "elapsed_ms": 8.242,
+          "candidate": {
+            "method": "distance_transform_rect",
+            "bbox": [
+              61,
+              22,
+              1200,
+              973
+            ],
+            "corners": [
+              [
+                61,
+                22
+              ],
+              [
+                1200,
+                22
+              ],
+              [
+                1200,
+                973
+              ],
+              [
+                61,
+                973
+              ]
+            ],
+            "confidence": 0.9494890550033281,
+            "score": 0.9494890550033281,
+            "diagnostics": {
+              "parameters": {
+                "distance_threshold_fraction": 0.1,
+                "minimum_core_area_fraction": 0.002,
+                "proposal_expansion_fraction": 0.06,
+                "minimum_mask_coverage": 0.06,
+                "minimum_bbox_area_fraction": 0.14,
+                "bbox_padding_fraction": 0.008
+              },
+              "core_area_fraction": 0.6411902941082752,
+              "bbox_area_fraction": 0.8628787878787879,
+              "mask_coverage": 0.9081619181878693,
+              "evidence": "distance_core_rectangle_proposal"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 0.1504406128078699,
+        "search_fraction": 0.5454545454545454
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "30ddd9d571be",
+      "parameter_identity_sha256": "007ab817d8aa31e27f1dfb4ae9431f587d9de68ce754966eaf486ea839f22714",
+      "parameter_set_equivalence_family_id": "30ddd9d571be",
+      "parameter_set_equivalence_family_sha256": "30ddd9d571be4765df65c54fb411caca702dafd5fb507c77dac0badc5f6719f7",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "f83255e0995c0336ff5ad84a779600f049aeb629cbd697e2082c9c47ec12745b",
+      "profile": null,
+      "run_id": "run-20260820-033648",
+      "rank": 6,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 2,
+      "regressions": 3
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.86968974,
+        "winner_iou": 0.95199893,
+        "delta_iou": 0.08230919,
+        "status": "Improved",
+        "parameter_set": "0a8482550c35",
+        "parameter_set_id": "0a8482550c35",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.8916272,
+        "winner_iou": 0.88842889,
+        "delta_iou": -0.00319831,
+        "status": "Regressed",
+        "parameter_set": "0a8482550c35",
+        "parameter_set_id": "0a8482550c35",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.91829411,
+        "winner_iou": 0.87880728,
+        "delta_iou": -0.03948683,
+        "status": "Regressed",
+        "parameter_set": "0a8482550c35",
+        "parameter_set_id": "0a8482550c35",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.45228343,
+        "delta_iou": 0.45228343,
+        "status": "Recovered",
+        "parameter_set": "0a8482550c35",
+        "parameter_set_id": "0a8482550c35",
+        "problem": true,
+        "problem_reasons": [
+          "Poor match"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.49371488,
+        "winner_iou": 0.44989626,
+        "delta_iou": -0.04381862,
+        "status": "Regressed",
+        "parameter_set": "0a8482550c35",
+        "parameter_set_id": "0a8482550c35",
+        "problem": true,
+        "problem_reasons": [
+          "Poor match",
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "rh8-al308",
+    "runner_environment": "self-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "atlhwe-lsf308",
+    "cpu_model": "AMD EPYC 9655 96-Core Processor",
+    "physical_core_count": 192,
+    "logical_cpu_count": 192,
+    "available_cpu_count": 192,
+    "smt_enabled": false,
+    "memory_bytes": 6493206470656,
+    "memory_gib": 6047.27,
+    "python_version": "3.12.0",
+    "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "74333cc2d9046f53acffa85540a2794e65cdf656",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "32328331193",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "self-hosted",
+      "192t"
+    ]
+  },
+  "source_commit": "c901dd6fd8bad57b219a92da50d03a987a7c2b8b",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 96,
+    "peak_rss_bytes": 360624128,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": false,
+    "evidence_source": null,
+    "evidence_precompute_seconds": null
+  },
+  "progress": {
+    "estimated_parameter_sets": 11,
+    "completed_parameter_sets": 11,
+    "average_eval_rate": 63.9785017813534,
+    "failures": 10,
+    "best_mean_iou": 0.72428296,
+    "best_worst_page_iou": 0.44989626,
+    "best_stddev_iou": 0.22447629,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 1,
+    "stddev_improvements": 1,
+    "total_metric_improvements": 3,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 0.07112295483238995,
+    "winner_last_changed_elapsed_seconds": 0.07112295483238995,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "0a8482550c35",
+        "parameter_short_name": "historic-best",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.07112295483238995,
+        "search_fraction": 0.18181818181818182,
+        "parameter_set_equivalence_family_id": "0a8482550c35"
+      }
+    ],
+    "last_improvement_elapsed_seconds": 0.07112295483238995,
+    "time_since_last_improvement_seconds": 0.10080979904159904
+  }
+}
