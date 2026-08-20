@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "grabcut_contour",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "22f4aa58310d079c7f92395261d8891ef8cd13346470c080af1540870ee9ca46",
+    "parameter_order": [
+      "grabcut_border_fraction",
+      "grabcut_erosion_kernel_fraction",
+      "grabcut_iterations",
+      "grabcut_close_kernel_fraction",
+      "grabcut_minimum_contour_area_fraction",
+      "grabcut_polygon_epsilon_fraction",
+      "contour_minimum_area_fraction",
+      "contour_minimum_rectangularity",
+      "minimum_agreement_iou",
+      "grabcut_weight",
+      "agreement_weight",
+      "require_contour"
+    ],
+    "values": {
+      "grabcut_border_fraction": [
+        0.02,
+        0.03
+      ],
+      "grabcut_erosion_kernel_fraction": [
+        0.015,
+        0.025
+      ],
+      "grabcut_iterations": [
+        3,
+        5
+      ],
+      "grabcut_close_kernel_fraction": [
+        0.02,
+        0.03
+      ],
+      "grabcut_minimum_contour_area_fraction": [
+        0.04,
+        0.08
+      ],
+      "grabcut_polygon_epsilon_fraction": [
+        0.01,
+        0.018,
+        0.03
+      ],
+      "contour_minimum_area_fraction": [
+        0.08,
+        0.12,
+        0.18
+      ],
+      "contour_minimum_rectangularity": [
+        0.45,
+        0.55,
+        0.7
+      ],
+      "minimum_agreement_iou": [
+        0.05,
+        0.15,
+        0.3
+      ],
+      "grabcut_weight": [
+        0.45,
+        0.55,
+        0.65
+      ],
+      "agreement_weight": [
+        0.15,
+        0.25,
+        0.35
+      ],
+      "require_contour": [
+        false,
+        true
+      ]
+    },
+    "cartesian_count": 46656,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 9,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "grabcut_border_fraction": 0.02,
+      "grabcut_erosion_kernel_fraction": 0.015,
+      "grabcut_erosion_iterations": 1,
+      "grabcut_iterations": 3,
+      "grabcut_close_kernel_fraction": 0.02,
+      "grabcut_close_iterations": 1,
+      "grabcut_minimum_bbox_area_fraction": 0.1,
+      "grabcut_minimum_contour_area_fraction": 0.04,
+      "grabcut_polygon_epsilon_fraction": 0.018,
+      "contour_minimum_area_fraction": 0.12,
+      "contour_epsilon_max_fraction": 0.04,
+      "contour_minimum_rectangularity": 0.55,
+      "minimum_agreement_iou": 0.15,
+      "grabcut_weight": 0.55,
+      "contour_weight": 0.2,
+      "agreement_weight": 0.25,
+      "require_contour": false
+    }
+  },
+  "explicit_parameter_sets": {
+    "671ab801486c406e1b071ccf546f4b3ef13728b5c894bcef0800250720e7c9b2": {
+      "sha256": "671ab801486c406e1b071ccf546f4b3ef13728b5c894bcef0800250720e7c9b2",
+      "legacy_parameter_set_id": "3817f226228a",
+      "parameters": {
+        "grabcut_border_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_erosion_iterations": 1,
+        "grabcut_iterations": 3,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_close_iterations": 1,
+        "grabcut_minimum_bbox_area_fraction": 0.1,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.018,
+        "contour_minimum_area_fraction": 0.12,
+        "contour_epsilon_max_fraction": 0.04,
+        "contour_minimum_rectangularity": 0.55,
+        "minimum_agreement_iou": 0.15,
+        "grabcut_weight": 0.55,
+        "contour_weight": 0.2,
+        "agreement_weight": 0.25,
+        "require_contour": false
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
