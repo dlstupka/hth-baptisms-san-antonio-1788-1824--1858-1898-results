@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.4",
+  "detector": "star_convex",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/star_convex.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 96,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "2.254",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "137",
+    "ranked_quality": "0.81787625",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "count": 4,
+    "assignment": "interleaved",
+    "source_run_ids": [
+      "run-20260820-194358",
+      "run-20260820-194359",
+      "run-20260820-194400",
+      "run-20260820-194401"
+    ]
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "star_convex",
+    "description": "Calibration space for the HTH Star Convex detector.",
+    "profiles": {
+      "baseline": {
+        "ray_count": 180,
+        "minimum_radius_fraction": 0.1,
+        "maximum_radius_fraction": 0.72,
+        "minimum_support_fraction": 0.55,
+        "smoothing_window": 5,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "ray_count": {
+        "type": "integer",
+        "values": [
+          90,
+          180,
+          360
+        ]
+      },
+      "minimum_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.05,
+          0.1,
+          0.16
+        ]
+      },
+      "maximum_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.6,
+          0.72,
+          0.84
+        ]
+      },
+      "minimum_support_fraction": {
+        "type": "float",
+        "values": [
+          0.4,
+          0.55,
+          0.7
+        ]
+      },
+      "smoothing_window": {
+        "type": "integer",
+        "values": [
+          1,
+          5,
+          9
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
