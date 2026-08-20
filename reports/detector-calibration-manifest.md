@@ -279,7 +279,7 @@ This table prefers compatible full calibrations when available and falls back to
 - **Calibration Evidence:** deterministic evidence score for how completely this run characterizes the evaluated Golden Set and parameter grid. Score 2 points for complete exhaustive coverage, 1 point when at least 90% of parameter sets succeed on every page, and 1 point when at least 1% of tested sets are within 0.001 Avg IoU of the winner. **Low** = 0–1 points, **Medium** = 2–3 points, and **High** = 4 points. This is not confidence that the detector generalizes beyond this Golden Set and grid.
 - **Approval Level:** automatic Golden Set-scoped engineering status derived from Search Type and Calibration Evidence. **Provisional** = smoke or unavailable evidence; **Candidate** = any reduced search or exhaustive search with Low evidence; **Recommended** = exhaustive search with Medium evidence; **Approved** = exhaustive search with High evidence. A different Golden Set requires its own calibration and approval.
 - **Evidence tables:** identify what each detector actually observes and whether that evidence generates, validates, filters, or scores a page hypothesis.
-- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/8def3b45cc2b606bef12e9a3d26876db51e8c790/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_multi_scale_radial_edge/run-20260815-155156/calibration-intelligence.json).
+- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/64f5f3fa38718b5808b2c6a2471e9904d8634477/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/adaptive_multi_scale_radial_edge/run-20260815-155156/calibration-intelligence.json).
 - **Est. Serial Runtime\*\*:** Estimated single-detector serial runtime derived from recorded regression evidence; actual wall time varies with parallelism and scheduling.
 
 [↑ Back to Navigation](#table-of-contents)
@@ -4968,8 +4968,8 @@ Dormant parameters may be omitted from future searches for this Golden Set, but 
 |---|---|
 | Detector pipelines | 4 |
 | Detector loading strategy | LPT (Longest Processing Time first) |
-| Threads per detector regression | 96 |
-| Execution recommendation basis | runtime-index coherent build 32327712591 (41/41 detectors) |
+| Threads per detector regression | 2 |
+| Execution recommendation basis | runtime-index coherent build 32327690407 (41/41 detectors) |
 | Pipeline start stagger | 0m |
 | Runtime intelligence | `runtime-index.json` |
 | Parallelism intelligence | `parallelism-index.json` |
@@ -4979,47 +4979,47 @@ Detector pipelines pull continuously from one shared queue. Once a detector fini
 
 | Queue | Detector | Pipeline | Estimated Runtime | Scheduling Basis |
 |---:|---|---|---:|---|
-| 1 | Kraken Page Mask (`kraken_page_mask`) | 1 | 3m 17s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 2 | GrabCut + Contour (`grabcut_contour`) | 2 | 1m 48s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 3 | GrabCut Segmentation (`grabcut`) | 3 | 1m 29s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 4 | Contour + GrabCut (`contour_grabcut`) | 4 | 41.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 5 | Doc-UFCN Page-Mask Detector (`doc_ufcn_page_mask`) | 4 | 23.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 6 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background (`amsre_bfq_spbv_pbg`) | 4 | 17.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 7 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background (`msre_bfq_spbv_pbg`) | 4 | 17.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 8 | dhSegment Page-Mask Detector (`dhsegment_page_mask`) | 3 | 11.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 9 | Learned Page-Mask Detector (`learned_page_mask`) | 4 | 10s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 10 | Adaptive Multi-Scale Radial Edge Search (`adaptive_multi_scale_radial_edge`) | 3 | 7.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 11 | Hough Line Borders (`hough`) | 2 | 5.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 12 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 3 | 5.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 13 | Segment-Supported Polar Voting (`segment_supported_polar_vote`) | 4 | 5.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 14 | Border Fusion Quad (`border_fusion_quad`) | 2 | 4.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 15 | Contour Quadrilateral (`contour_quad`) | 3 | 3.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 16 | Contour + Projection (`contour_projection`) | 4 | 3.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 17 | Joint Rectangle Voting (`joint_rectangle_vote`) | 3 | 3.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 18 | Multi-Scale Radial Edge Search (`multi_scale_radial_edge`) | 2 | 3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 19 | Border Energy Validator (`border_energy`) | 4 | 2.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 20 | Consensus Quadrilateral (`consensus_quad`) | 3 | 2.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 21 | Cross-Edge Contour (`cross_edge_contour`) | 4 | 2.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 22 | Page Background (`page_background`) | 2 | 2.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 23 | Projective Gradient Vote (`projective_gradient_vote`) | 3 | 2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 24 | Edge-Supported Contour (`edge_contour`) | 2 | 1.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 25 | Signed Polar Boundary Voting (`signed_polar_boundary_vote`) | 4 | 1.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 26 | Orli Page Mask (`orli_page_mask`) | 3 | 1.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 27 | Radial Edge Search (`radial_edge`) | 4 | 1.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 28 | Distance Transform Detector (`distance_transform`) | 2 | 1.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 29 | Line Segment Detector (`lsd`) | 3 | 1.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 30 | Contour + Components (`contour_components`) | 2 | 1.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 31 | Polar Boundary Voting (`polar_boundary_vote`) | 4 | 1.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 32 | Radon Boundary Projection (`radon_boundary`) | 2 | 1.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 33 | Connected Components (`components`) | 4 | 1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 34 | Star-Convex Boundary Optimization (`star_convex`) | 3 | 798 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 35 | RANSAC Border Fit (`ransac`) | 3 | 794 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 36 | Convex Hull Detector (`convex_hull`) | 4 | 558 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 37 | Text Flow Envelope (`text_flow`) | 2 | 531 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 38 | Contour Envelope (`contour`) | 4 | 483 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 39 | Distance-Transform Rectangle Proposal (`distance_transform_rect`) | 2 | 472 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 40 | Whitespace Frame (`whitespace_frame`) | 3 | 393 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
-| 41 | Gradient Boundary Voting (`gradient_vote`) | 4 | 364 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 1 | GrabCut + Contour (`grabcut_contour`) | 1 | 10m 46s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 2 | GrabCut Segmentation (`grabcut`) | 2 | 9m 3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 3 | Kraken Page Mask (`kraken_page_mask`) | 3 | 8m 41s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 4 | Contour + GrabCut (`contour_grabcut`) | 4 | 3m 43s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 5 | Learned Page-Mask Detector (`learned_page_mask`) | 4 | 1m 39s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 6 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background (`msre_bfq_spbv_pbg`) | 4 | 1m 11s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 7 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background (`amsre_bfq_spbv_pbg`) | 4 | 1m 5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 8 | Hough Line Borders (`hough`) | 4 | 39.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 9 | dhSegment Page-Mask Detector (`dhsegment_page_mask`) | 4 | 35.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 10 | Adaptive Multi-Scale Radial Edge Search (`adaptive_multi_scale_radial_edge`) | 3 | 32.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 11 | Doc-UFCN Page-Mask Detector (`doc_ufcn_page_mask`) | 4 | 29.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 12 | Segment-Supported Polar Voting (`segment_supported_polar_vote`) | 2 | 20.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 13 | Consensus Quadrilateral (`consensus_quad`) | 3 | 17s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 14 | Adaptive Radial Edge Search (`adaptive_radial_edge`) | 4 | 12.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 15 | Contour + Projection (`contour_projection`) | 2 | 12.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 16 | Contour Quadrilateral (`contour_quad`) | 3 | 11.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 17 | Border Fusion Quad (`border_fusion_quad`) | 4 | 10.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 18 | Border Energy Validator (`border_energy`) | 2 | 10.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 19 | Multi-Scale Radial Edge Search (`multi_scale_radial_edge`) | 3 | 9.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 20 | Joint Rectangle Voting (`joint_rectangle_vote`) | 4 | 8.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 21 | Projective Gradient Vote (`projective_gradient_vote`) | 2 | 7.8s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 22 | Page Background (`page_background`) | 3 | 6.5s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 23 | Cross-Edge Contour (`cross_edge_contour`) | 2 | 6.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 24 | Radon Boundary Projection (`radon_boundary`) | 4 | 6.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 25 | Edge-Supported Contour (`edge_contour`) | 3 | 5.9s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 26 | Distance Transform Detector (`distance_transform`) | 2 | 5.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 27 | Line Segment Detector (`lsd`) | 4 | 4.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 28 | Orli Page Mask (`orli_page_mask`) | 3 | 4.6s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 29 | Signed Polar Boundary Voting (`signed_polar_boundary_vote`) | 4 | 3.4s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 30 | Contour + Components (`contour_components`) | 2 | 3.2s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 31 | Radial Edge Search (`radial_edge`) | 3 | 2.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 32 | Star-Convex Boundary Optimization (`star_convex`) | 2 | 1.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 33 | RANSAC Border Fit (`ransac`) | 4 | 1.7s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 34 | Polar Boundary Voting (`polar_boundary_vote`) | 3 | 1.3s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 35 | Connected Components (`components`) | 2 | 1.1s | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 36 | Distance-Transform Rectangle Proposal (`distance_transform_rect`) | 4 | 903 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 37 | Convex Hull Detector (`convex_hull`) | 4 | 890 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 38 | Text Flow Envelope (`text_flow`) | 2 | 662 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 39 | Contour Envelope (`contour`) | 3 | 658 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 40 | Gradient Boundary Voting (`gradient_vote`) | 2 | 568 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
+| 41 | Whitespace Frame (`whitespace_frame`) | 3 | 487 ms | runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126 |
 
 #### Execution Optimization — Next Run Claim Strategy
 
@@ -5035,10 +5035,10 @@ Detector pipelines pull continuously from one shared queue. Once a detector fini
 
 | Pipeline | Initial LPT claim batch | Estimated Work | Threads |
 |---:|---|---|---:|---:|
-| 1 | Kraken Page Mask (`kraken_page_mask`) | 3m 17s | 96 |
-| 2 | GrabCut + Contour (`grabcut_contour`) | 1m 48s | 96 |
-| 3 | GrabCut Segmentation (`grabcut`) | 1m 29s | 96 |
-| 4 | Contour + GrabCut (`contour_grabcut`) | 41.7s | 96 |
+| 1 | GrabCut + Contour (`grabcut_contour`) | 10m 46s | 2 |
+| 2 | GrabCut Segmentation (`grabcut`) | 9m 3s | 2 |
+| 3 | Kraken Page Mask (`kraken_page_mask`) | 8m 41s | 2 |
+| 4 | Contour + GrabCut (`contour_grabcut`) | 3m 43s | 2 |
 
 Each short-run claim atomically removes consecutive work from the LPT queue until the batch contains at least 10 seconds of estimated work, using a 0.1-second scheduling floor. The parent constructs the initial batches before workers start; refill batches use one serialized queue transaction each. The final claimant drains whatever work remains—there is no special tail-mode reversion.
 
@@ -5055,16 +5055,16 @@ Queue order reflects the selected loading strategy. LPT (Longest Processing Time
 |---|---|---|
 | Detector pipelines | 4 | Current HTH default for multi-detector regressions. |
 | Detector loading | LPT (Longest Processing Time first) | Reduces the slow-detector tail by loading historically longest regressions first. |
-| Threads per detector regression | 96 | Preserve the current measured setting until runtime history supports a different thread recommendation. |
+| Threads per detector regression | 2 | Preserve the current measured setting until runtime history supports a different thread recommendation. |
 | Startup stagger | 0m | Avoids idle startup time unless runner contention requires a stagger. |
 
 #### Estimated Runtime
 
 | All-Detector Regression Scope | Estimated Wall Time* |
 |---|---:|
-| Exhaustive | 6d 17h 13m 53s |
-| Non-dormant | 1d 2h 44m 46s |
-| Critical only | 13h 49m 56s |
+| Exhaustive | 25d 17h 14m 12s |
+| Non-dormant | 4d 14h 35m 39s |
+| Critical only | 2d 8h 38m 3s |
 
 \* Estimates scale each detector's measured runtime to the selected effect-size domain, apply the normal bounded shard plan, and simulate shard-level LPT placement across the recommended detector pipelines. Effect-group fallback remains active when a detector has no parameter sets in the requested group.
 
@@ -19025,12 +19025,12 @@ Every completed regression contributes reusable quality and runtime evidence so 
 
 - `calibration-index.json` retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata.
 - Compatible authoritative calibrations remain preferred over provisional smoke observations.
-- Results commit: [8def3b45cc2b606bef12e9a3d26876db51e8c790](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/8def3b45cc2b606bef12e9a3d26876db51e8c790).
-- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/32328675416).
+- Results commit: [64f5f3fa38718b5808b2c6a2471e9904d8634477](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/64f5f3fa38718b5808b2c6a2471e9904d8634477).
+- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/32329021133).
 - Pipeline repository: [dlstupka/hth](https://github.com/dlstupka/hth).
 - Results repository: [dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results).
-- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/8def3b45cc2b606bef12e9a3d26876db51e8c790/calibration-index.json).
-- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/8def3b45cc2b606bef12e9a3d26876db51e8c790/runtime-index.json).
+- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/64f5f3fa38718b5808b2c6a2471e9904d8634477/calibration-index.json).
+- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/64f5f3fa38718b5808b2c6a2471e9904d8634477/runtime-index.json).
 - Smoke records are provisional; complete exhaustive full regressions are authoritative.
 
 [↑ Back to Navigation](#table-of-contents)
