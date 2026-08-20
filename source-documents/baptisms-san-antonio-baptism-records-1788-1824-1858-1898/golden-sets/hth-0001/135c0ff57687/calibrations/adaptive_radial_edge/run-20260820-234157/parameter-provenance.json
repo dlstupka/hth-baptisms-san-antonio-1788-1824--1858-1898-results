@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "adaptive_radial_edge",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "db4a94fa6db319029163fd0d8bdd8712711505ec3102c3179cb6e0a109852dbd",
+    "parameter_order": [
+      "gaussian_sigma",
+      "minimum_radius_fraction",
+      "maximum_radius_fraction",
+      "gradient_percentile",
+      "refined_angle_step_degrees",
+      "weak_side_support_fraction",
+      "side_assignment_tolerance_fraction",
+      "maximum_refined_sides"
+    ],
+    "values": {
+      "gaussian_sigma": [
+        0.6,
+        1.2,
+        1.8,
+        2.4
+      ],
+      "minimum_radius_fraction": [
+        0.1,
+        0.18,
+        0.22,
+        0.26
+      ],
+      "maximum_radius_fraction": [
+        0.6,
+        0.72,
+        0.78,
+        0.84
+      ],
+      "gradient_percentile": [
+        74.0,
+        82.0,
+        88.0,
+        94.0
+      ],
+      "refined_angle_step_degrees": [
+        0.35,
+        0.5,
+        1.0,
+        1.5
+      ],
+      "weak_side_support_fraction": [
+        0.35,
+        0.55,
+        0.65,
+        0.75
+      ],
+      "side_assignment_tolerance_fraction": [
+        0.015,
+        0.025,
+        0.035,
+        0.05
+      ],
+      "maximum_refined_sides": [
+        1,
+        2,
+        4
+      ]
+    },
+    "cartesian_count": 49152,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 8,
+    "explicit_non_grid_parameter_sets": 2
+  },
+  "profiles": {
+    "baseline": {
+      "gaussian_sigma": 1.2,
+      "ray_count": 120,
+      "minimum_radius_fraction": 0.18,
+      "maximum_radius_fraction": 0.72,
+      "gradient_percentile": 82.0,
+      "minimum_ray_support": 0.45,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "area_weight": 0.35,
+      "support_weight": 0.45,
+      "rectangularity_weight": 0.2,
+      "coarse_angle_step_degrees": 3.0,
+      "refined_angle_step_degrees": 1.0,
+      "weak_side_support_fraction": 0.55,
+      "side_assignment_tolerance_fraction": 0.025,
+      "maximum_refined_sides": 2
+    }
+  },
+  "explicit_parameter_sets": {
+    "37f7949a8d5ffbce089237b0585497cb90abbe08c480413099ca0fedd66d14b9": {
+      "sha256": "37f7949a8d5ffbce089237b0585497cb90abbe08c480413099ca0fedd66d14b9",
+      "legacy_parameter_set_id": "bcd9a1d083cf",
+      "parameters": {
+        "gaussian_sigma": 2.2,
+        "gradient_percentile": 74.0,
+        "maximum_radius_fraction": 0.78,
+        "maximum_refined_sides": 4,
+        "minimum_radius_fraction": 0.26,
+        "refined_angle_step_degrees": 0.35,
+        "side_assignment_tolerance_fraction": 0.035,
+        "weak_side_support_fraction": 0.35
+      }
+    },
+    "7110ebda6ada31f2c14857cf4c789f3830e9d2ed7ad5278a65ee257a04e1e850": {
+      "sha256": "7110ebda6ada31f2c14857cf4c789f3830e9d2ed7ad5278a65ee257a04e1e850",
+      "legacy_parameter_set_id": "a132c2ac5e87",
+      "parameters": {
+        "area_weight": 0.35,
+        "coarse_angle_step_degrees": 3.0,
+        "gaussian_sigma": 1.2,
+        "gradient_percentile": 82.0,
+        "maximum_area_fraction": 0.98,
+        "maximum_radius_fraction": 0.72,
+        "maximum_refined_sides": 2,
+        "minimum_area_fraction": 0.18,
+        "minimum_radius_fraction": 0.18,
+        "minimum_ray_support": 0.45,
+        "ray_count": 120,
+        "rectangularity_weight": 0.2,
+        "refined_angle_step_degrees": 1.0,
+        "side_assignment_tolerance_fraction": 0.025,
+        "support_weight": 0.45,
+        "weak_side_support_fraction": 0.55
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
