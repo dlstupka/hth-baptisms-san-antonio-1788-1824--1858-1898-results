@@ -1,0 +1,6120 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260820-190456",
+  "detector": "border_energy",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 8
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "8.499",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "21",
+    "ranked_quality": "0.72503892",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 6562,
+    "live_possible_parameter_sets": 6561,
+    "zombie_possible_parameter_sets": 6561,
+    "canonical_search_space": {
+      "schema_version": "1",
+      "strategy": "exhaustive",
+      "live_exhaustive_parameter_sets": 6561,
+      "exhaustive_with_zombies_parameter_sets": 6561,
+      "effective_parameter_sets": 6562,
+      "configured_zombie_parameters": [],
+      "denominator": "exhaustive-with-zombies"
+    },
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 8,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 29,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "30216017d691067ee888655f000f58c35e1089c3f070905f58788ca59226bf2f",
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "74e2112aac01",
+    "parameters": {
+      "band_fraction": 0.015,
+      "energy_weight": 0.3,
+      "epsilon_max_fraction": 0.03,
+      "gaussian_sigma": 0.8,
+      "minimum_border_energy": 0.05,
+      "minimum_contour_area_fraction": 0.08,
+      "minimum_rectangularity": 0.45,
+      "minimum_side_consistency": 0.3
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.72503892,
+      "mean_iou_success": 0.90629865,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.36513772,
+      "mean_edge_error_px": 27.25,
+      "elapsed_ms_total": 1019.913,
+      "wall_ms": 1020.547
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          111,
+          18,
+          1382,
+          939
+        ],
+        "iou": 0.85424412,
+        "edge_errors": {
+          "left": 14,
+          "top": 38,
+          "right": 93,
+          "bottom": 28,
+          "mean": 43.25,
+          "maximum": 93
+        },
+        "edge_error_mean_px": 43.25,
+        "edge_error_maximum_px": 93,
+        "elapsed_ms": 313.096,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "corners": [
+            [
+              111.0,
+              90.0
+            ],
+            [
+              1381.0,
+              18.0
+            ],
+            [
+              1257.0,
+              938.0
+            ],
+            [
+              235.0,
+              917.0
+            ]
+          ],
+          "confidence": 0.5028696171377542,
+          "score": 0.5028696171377542,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.79374,
+            "border_energy": 0.1565237445756793,
+            "side_consistency": 0.32295021367516663,
+            "side_energy": [
+              0.11101964861154556,
+              0.050549376755952835,
+              0.18107925355434418,
+              0.28344669938087463
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          119,
+          15,
+          1316,
+          949
+        ],
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52,
+          "top": 7,
+          "right": 83,
+          "bottom": 28,
+          "mean": 42.5,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 77.679,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "corners": [
+            [
+              119.0,
+              36.0
+            ],
+            [
+              1315.0,
+              15.0
+            ],
+            [
+              739.0,
+              948.0
+            ],
+            [
+              137.0,
+              771.0
+            ]
+          ],
+          "confidence": 0.623979047359873,
+          "score": 0.623979047359873,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.749072,
+            "border_energy": 0.3255681172013283,
+            "side_consistency": 0.8455220497565817,
+            "side_energy": [
+              0.29739460349082947,
+              0.2874700427055359,
+              0.27527502179145813,
+              0.4421328008174896
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 52.235,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.662027,
+            "border_energy": 0.08463503024540842,
+            "side_consistency": 0.15635032513349684,
+            "side_energy": [
+              0.14512909948825836,
+              0.013232714496552944,
+              0.01818830519914627,
+              0.1619900017976761
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders",
+            "reason": "inconsistent_border_energy"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          56,
+          1119,
+          938
+        ],
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11,
+          "top": 5,
+          "right": 18,
+          "bottom": 3,
+          "mean": 9.25,
+          "maximum": 18
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18,
+        "elapsed_ms": 245.127,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "corners": [
+            [
+              77.0,
+              56.0
+            ],
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              1118.0,
+              937.0
+            ],
+            [
+              73.0,
+              932.0
+            ]
+          ],
+          "confidence": 0.6911727245912457,
+          "score": 0.6911727245912457,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.879702,
+            "border_energy": 0.2961454316973686,
+            "side_consistency": 0.9156394841527367,
+            "side_energy": [
+              0.28637322783470154,
+              0.33715832233428955,
+              0.2898877263069153,
+              0.2711624503135681
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          81,
+          44,
+          1172,
+          948
+        ],
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7,
+          "top": 11,
+          "right": 18,
+          "bottom": 20,
+          "mean": 14.0,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 331.776,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "corners": [
+            [
+              84.0,
+              44.0
+            ],
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              1171.0,
+              947.0
+            ],
+            [
+              81.0,
+              945.0
+            ]
+          ],
+          "confidence": 0.6426981628469732,
+          "score": 0.6426981628469732,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.856308,
+            "border_energy": 0.26606830209493637,
+            "side_consistency": 0.7551283728919674,
+            "side_energy": [
+              0.20091572403907776,
+              0.27048081159591675,
+              0.23669281601905823,
+              0.35618385672569275
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "border_energy",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "278",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31423513220",
+      "historic_calibration_id": "run-20260810-192350",
+      "historic_created_at_utc": "2026-08-10T19:19:49.941606+00:00",
+      "parameter_identity_sha256": "b95b091530ccec81ec3436966ecb54c2141674bb5df49a2f01e4f2738262472e",
+      "parameter_set_id": "74e2112aac01",
+      "parameters": {
+        "band_fraction": 0.015,
+        "energy_weight": 0.3,
+        "epsilon_max_fraction": 0.03,
+        "gaussian_sigma": 0.8,
+        "minimum_border_energy": 0.05,
+        "minimum_contour_area_fraction": 0.08,
+        "minimum_rectangularity": 0.45,
+        "minimum_side_consistency": 0.3
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 1.8471300650001012,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "74e2112aac01",
+    "parameter_identity_sha256": "b95b091530ccec81ec3436966ecb54c2141674bb5df49a2f01e4f2738262472e",
+    "parameter_set_equivalence_family_id": "74e2112aac01",
+    "parameter_set_equivalence_family_sha256": "74e2112aac019e43790c08b1374687e9c1dd4d9a225296fcf3b9cf950c2968f4",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 54,
+    "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+    "profile": null,
+    "run_id": "run-20260820-190456",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "e38a975d1436",
+    "parameters": {
+      "minimum_contour_area_fraction": 0.12,
+      "epsilon_max_fraction": 0.04,
+      "minimum_rectangularity": 0.55,
+      "gaussian_sigma": 1.2,
+      "band_fraction": 0.008,
+      "minimum_border_energy": 0.1,
+      "minimum_side_consistency": 0.45,
+      "contour_weight": 0.45,
+      "energy_weight": 0.4,
+      "consistency_weight": 0.15
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.55419009,
+      "mean_iou_success": 0.92365016,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.45379921,
+      "mean_edge_error_px": 21.917,
+      "elapsed_ms_total": 823.11,
+      "wall_ms": 823.909
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 219.788,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "epsilon_max_fraction": 0.04,
+              "minimum_rectangularity": 0.55,
+              "gaussian_sigma": 1.2,
+              "band_fraction": 0.008,
+              "minimum_border_energy": 0.1,
+              "minimum_side_consistency": 0.45,
+              "contour_weight": 0.45,
+              "energy_weight": 0.4,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.79374,
+            "border_energy": 0.1838456029072404,
+            "side_consistency": 0.32418604094868747,
+            "side_energy": [
+              0.1723022311925888,
+              0.05960017815232277,
+              0.19582818448543549,
+              0.3076518177986145
+            ],
+            "band_width_pixels": 8,
+            "evidence": "sobel_energy_along_candidate_borders",
+            "reason": "inconsistent_border_energy"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          119,
+          15,
+          1316,
+          949
+        ],
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52,
+          "top": 7,
+          "right": 83,
+          "bottom": 28,
+          "mean": 42.5,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 115.544,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "corners": [
+            [
+              119.0,
+              36.0
+            ],
+            [
+              1315.0,
+              15.0
+            ],
+            [
+              739.0,
+              948.0
+            ],
+            [
+              137.0,
+              771.0
+            ]
+          ],
+          "confidence": 0.5914031058908732,
+          "score": 0.5914031058908732,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "epsilon_max_fraction": 0.04,
+              "minimum_rectangularity": 0.55,
+              "gaussian_sigma": 1.2,
+              "band_fraction": 0.008,
+              "minimum_border_energy": 0.1,
+              "minimum_side_consistency": 0.45,
+              "contour_weight": 0.45,
+              "energy_weight": 0.4,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.749072,
+            "border_energy": 0.3356582149863243,
+            "side_consistency": 0.8003827993089564,
+            "side_energy": [
+              0.32010307908058167,
+              0.2939760982990265,
+              0.26865506172180176,
+              0.45989862084388733
+            ],
+            "band_width_pixels": 8,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 57.132,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "epsilon_max_fraction": 0.04,
+              "minimum_rectangularity": 0.55,
+              "gaussian_sigma": 1.2,
+              "band_fraction": 0.008,
+              "minimum_border_energy": 0.1,
+              "minimum_side_consistency": 0.45,
+              "contour_weight": 0.45,
+              "energy_weight": 0.4,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.662027,
+            "border_energy": 0.09030215023085475,
+            "side_consistency": 0.12206518225118212,
+            "side_energy": [
+              0.16073200106620789,
+              0.011022748425602913,
+              0.013891767710447311,
+              0.1755620837211609
+            ],
+            "band_width_pixels": 8,
+            "evidence": "sobel_energy_along_candidate_borders",
+            "reason": "insufficient_border_energy"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          56,
+          1119,
+          938
+        ],
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11,
+          "top": 5,
+          "right": 18,
+          "bottom": 3,
+          "mean": 9.25,
+          "maximum": 18
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18,
+        "elapsed_ms": 199.902,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "corners": [
+            [
+              77.0,
+              56.0
+            ],
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              1118.0,
+              937.0
+            ],
+            [
+              73.0,
+              932.0
+            ]
+          ],
+          "confidence": 0.6854803124557093,
+          "score": 0.6854803124557093,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "epsilon_max_fraction": 0.04,
+              "minimum_rectangularity": 0.55,
+              "gaussian_sigma": 1.2,
+              "band_fraction": 0.008,
+              "minimum_border_energy": 0.1,
+              "minimum_side_consistency": 0.45,
+              "contour_weight": 0.45,
+              "energy_weight": 0.4,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.879702,
+            "border_energy": 0.4798555374145508,
+            "side_consistency": 0.6511479832659267,
+            "side_energy": [
+              0.5509741306304932,
+              0.31245696544647217,
+              0.5188503265380859,
+              0.5371407270431519
+            ],
+            "band_width_pixels": 8,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          81,
+          44,
+          1172,
+          948
+        ],
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7,
+          "top": 11,
+          "right": 18,
+          "bottom": 20,
+          "mean": 14.0,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 230.744,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "corners": [
+            [
+              84.0,
+              44.0
+            ],
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              1171.0,
+              947.0
+            ],
+            [
+              81.0,
+              945.0
+            ]
+          ],
+          "confidence": 0.5888562635061524,
+          "score": 0.5888562635061524,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.12,
+              "epsilon_max_fraction": 0.04,
+              "minimum_rectangularity": 0.55,
+              "gaussian_sigma": 1.2,
+              "band_fraction": 0.008,
+              "minimum_border_energy": 0.1,
+              "minimum_side_consistency": 0.45,
+              "contour_weight": 0.45,
+              "energy_weight": 0.4,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.856308,
+            "border_energy": 0.29620856791734695,
+            "side_consistency": 0.5668949089280905,
+            "side_energy": [
+              0.1679191291332245,
+              0.29604682326316833,
+              0.2991314232349396,
+              0.4217368960380554
+            ],
+            "band_width_pixels": 8,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "e38a975d1436",
+    "parameter_identity_sha256": "5a653e08329e34a02cefa8fa7c92f99af81bee09e0603436dd6b694d96e9faa6",
+    "parameter_set_equivalence_family_id": "e38a975d1436",
+    "parameter_set_equivalence_family_sha256": "e38a975d1436d6ee4b98c65f3b4e522b6958da72977380c35b97c0a17ec8fbc9",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": null,
+    "parameter_grid_sha256": null,
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "search_space_member": true,
+    "profile": "baseline",
+    "run_id": "run-20260820-190456",
+    "rank": 2,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": {
+    "parameter_set_id": "74e2112aac01",
+    "parameters": {
+      "band_fraction": 0.015,
+      "energy_weight": 0.3,
+      "epsilon_max_fraction": 0.03,
+      "gaussian_sigma": 0.8,
+      "minimum_border_energy": 0.05,
+      "minimum_contour_area_fraction": 0.08,
+      "minimum_rectangularity": 0.45,
+      "minimum_side_consistency": 0.3
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.72503892,
+      "mean_iou_success": 0.90629865,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.36513772,
+      "mean_edge_error_px": 27.25,
+      "elapsed_ms_total": 1019.913,
+      "wall_ms": 1020.547
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          111,
+          18,
+          1382,
+          939
+        ],
+        "iou": 0.85424412,
+        "edge_errors": {
+          "left": 14,
+          "top": 38,
+          "right": 93,
+          "bottom": 28,
+          "mean": 43.25,
+          "maximum": 93
+        },
+        "edge_error_mean_px": 43.25,
+        "edge_error_maximum_px": 93,
+        "elapsed_ms": 313.096,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "corners": [
+            [
+              111.0,
+              90.0
+            ],
+            [
+              1381.0,
+              18.0
+            ],
+            [
+              1257.0,
+              938.0
+            ],
+            [
+              235.0,
+              917.0
+            ]
+          ],
+          "confidence": 0.5028696171377542,
+          "score": 0.5028696171377542,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.79374,
+            "border_energy": 0.1565237445756793,
+            "side_consistency": 0.32295021367516663,
+            "side_energy": [
+              0.11101964861154556,
+              0.050549376755952835,
+              0.18107925355434418,
+              0.28344669938087463
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          119,
+          15,
+          1316,
+          949
+        ],
+        "iou": 0.86176634,
+        "edge_errors": {
+          "left": 52,
+          "top": 7,
+          "right": 83,
+          "bottom": 28,
+          "mean": 42.5,
+          "maximum": 83
+        },
+        "edge_error_mean_px": 42.5,
+        "edge_error_maximum_px": 83,
+        "elapsed_ms": 77.679,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "corners": [
+            [
+              119.0,
+              36.0
+            ],
+            [
+              1315.0,
+              15.0
+            ],
+            [
+              739.0,
+              948.0
+            ],
+            [
+              137.0,
+              771.0
+            ]
+          ],
+          "confidence": 0.623979047359873,
+          "score": 0.623979047359873,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.749072,
+            "border_energy": 0.3255681172013283,
+            "side_consistency": 0.8455220497565817,
+            "side_energy": [
+              0.29739460349082947,
+              0.2874700427055359,
+              0.27527502179145813,
+              0.4421328008174896
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 52.235,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.662027,
+            "border_energy": 0.08463503024540842,
+            "side_consistency": 0.15635032513349684,
+            "side_energy": [
+              0.14512909948825836,
+              0.013232714496552944,
+              0.01818830519914627,
+              0.1619900017976761
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders",
+            "reason": "inconsistent_border_energy"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          56,
+          1119,
+          938
+        ],
+        "iou": 0.96377596,
+        "edge_errors": {
+          "left": 11,
+          "top": 5,
+          "right": 18,
+          "bottom": 3,
+          "mean": 9.25,
+          "maximum": 18
+        },
+        "edge_error_mean_px": 9.25,
+        "edge_error_maximum_px": 18,
+        "elapsed_ms": 245.127,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "corners": [
+            [
+              77.0,
+              56.0
+            ],
+            [
+              1115.0,
+              56.0
+            ],
+            [
+              1118.0,
+              937.0
+            ],
+            [
+              73.0,
+              932.0
+            ]
+          ],
+          "confidence": 0.6911727245912457,
+          "score": 0.6911727245912457,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.879702,
+            "border_energy": 0.2961454316973686,
+            "side_consistency": 0.9156394841527367,
+            "side_energy": [
+              0.28637322783470154,
+              0.33715832233428955,
+              0.2898877263069153,
+              0.2711624503135681
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          81,
+          44,
+          1172,
+          948
+        ],
+        "iou": 0.94540817,
+        "edge_errors": {
+          "left": 7,
+          "top": 11,
+          "right": 18,
+          "bottom": 20,
+          "mean": 14.0,
+          "maximum": 20
+        },
+        "edge_error_mean_px": 14.0,
+        "edge_error_maximum_px": 20,
+        "elapsed_ms": 331.776,
+        "candidate": {
+          "method": "border_energy",
+          "bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "corners": [
+            [
+              84.0,
+              44.0
+            ],
+            [
+              1144.0,
+              44.0
+            ],
+            [
+              1171.0,
+              947.0
+            ],
+            [
+              81.0,
+              945.0
+            ]
+          ],
+          "confidence": 0.6426981628469732,
+          "score": 0.6426981628469732,
+          "diagnostics": {
+            "parameters": {
+              "minimum_contour_area_fraction": 0.08,
+              "epsilon_max_fraction": 0.03,
+              "minimum_rectangularity": 0.45,
+              "gaussian_sigma": 0.8,
+              "band_fraction": 0.015,
+              "minimum_border_energy": 0.05,
+              "minimum_side_consistency": 0.3,
+              "contour_weight": 0.45,
+              "energy_weight": 0.3,
+              "consistency_weight": 0.15
+            },
+            "contour_score": 0.856308,
+            "border_energy": 0.26606830209493637,
+            "side_consistency": 0.7551283728919674,
+            "side_energy": [
+              0.20091572403907776,
+              0.27048081159591675,
+              0.23669281601905823,
+              0.35618385672569275
+            ],
+            "band_width_pixels": 15,
+            "evidence": "sobel_energy_along_candidate_borders"
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "border_energy",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "278",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31423513220",
+      "historic_calibration_id": "run-20260810-192350",
+      "historic_created_at_utc": "2026-08-10T19:19:49.941606+00:00",
+      "parameter_identity_sha256": "b95b091530ccec81ec3436966ecb54c2141674bb5df49a2f01e4f2738262472e",
+      "parameter_set_id": "74e2112aac01",
+      "parameters": {
+        "band_fraction": 0.015,
+        "energy_weight": 0.3,
+        "epsilon_max_fraction": 0.03,
+        "gaussian_sigma": 0.8,
+        "minimum_border_energy": 0.05,
+        "minimum_contour_area_fraction": 0.08,
+        "minimum_rectangularity": 0.45,
+        "minimum_side_consistency": 0.3
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 1.8471300650001012,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "74e2112aac01",
+    "parameter_identity_sha256": "b95b091530ccec81ec3436966ecb54c2141674bb5df49a2f01e4f2738262472e",
+    "parameter_set_equivalence_family_id": "74e2112aac01",
+    "parameter_set_equivalence_family_sha256": "74e2112aac019e43790c08b1374687e9c1dd4d9a225296fcf3b9cf950c2968f4",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 54,
+    "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+    "profile": null,
+    "run_id": "run-20260820-190456",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "74e2112aac01",
+      "parameters": {
+        "band_fraction": 0.015,
+        "energy_weight": 0.3,
+        "epsilon_max_fraction": 0.03,
+        "gaussian_sigma": 0.8,
+        "minimum_border_energy": 0.05,
+        "minimum_contour_area_fraction": 0.08,
+        "minimum_rectangularity": 0.45,
+        "minimum_side_consistency": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.72503892,
+        "mean_iou_success": 0.90629865,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.36513772,
+        "mean_edge_error_px": 27.25,
+        "elapsed_ms_total": 1019.913,
+        "wall_ms": 1020.547
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            111,
+            18,
+            1382,
+            939
+          ],
+          "iou": 0.85424412,
+          "edge_errors": {
+            "left": 14,
+            "top": 38,
+            "right": 93,
+            "bottom": 28,
+            "mean": 43.25,
+            "maximum": 93
+          },
+          "edge_error_mean_px": 43.25,
+          "edge_error_maximum_px": 93,
+          "elapsed_ms": 313.096,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              111,
+              18,
+              1382,
+              939
+            ],
+            "corners": [
+              [
+                111.0,
+                90.0
+              ],
+              [
+                1381.0,
+                18.0
+              ],
+              [
+                1257.0,
+                938.0
+              ],
+              [
+                235.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.5028696171377542,
+            "score": 0.5028696171377542,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.015,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.1565237445756793,
+              "side_consistency": 0.32295021367516663,
+              "side_energy": [
+                0.11101964861154556,
+                0.050549376755952835,
+                0.18107925355434418,
+                0.28344669938087463
+              ],
+              "band_width_pixels": 15,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 77.679,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.623979047359873,
+            "score": 0.623979047359873,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.015,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.3255681172013283,
+              "side_consistency": 0.8455220497565817,
+              "side_energy": [
+                0.29739460349082947,
+                0.2874700427055359,
+                0.27527502179145813,
+                0.4421328008174896
+              ],
+              "band_width_pixels": 15,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 52.235,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.015,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08463503024540842,
+              "side_consistency": 0.15635032513349684,
+              "side_energy": [
+                0.14512909948825836,
+                0.013232714496552944,
+                0.01818830519914627,
+                0.1619900017976761
+              ],
+              "band_width_pixels": 15,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 245.127,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.6911727245912457,
+            "score": 0.6911727245912457,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.015,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.2961454316973686,
+              "side_consistency": 0.9156394841527367,
+              "side_energy": [
+                0.28637322783470154,
+                0.33715832233428955,
+                0.2898877263069153,
+                0.2711624503135681
+              ],
+              "band_width_pixels": 15,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 331.776,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.6426981628469732,
+            "score": 0.6426981628469732,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.015,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.26606830209493637,
+              "side_consistency": 0.7551283728919674,
+              "side_energy": [
+                0.20091572403907776,
+                0.27048081159591675,
+                0.23669281601905823,
+                0.35618385672569275
+              ],
+              "band_width_pixels": 15,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "reference_roles": [
+        "historic_best"
+      ],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "historic_reference": {
+        "detector": "border_energy",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "historic_build_number": "278",
+        "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31423513220",
+        "historic_calibration_id": "run-20260810-192350",
+        "historic_created_at_utc": "2026-08-10T19:19:49.941606+00:00",
+        "parameter_identity_sha256": "b95b091530ccec81ec3436966ecb54c2141674bb5df49a2f01e4f2738262472e",
+        "parameter_set_id": "74e2112aac01",
+        "parameters": {
+          "band_fraction": 0.015,
+          "energy_weight": 0.3,
+          "epsilon_max_fraction": 0.03,
+          "gaussian_sigma": 0.8,
+          "minimum_border_energy": 0.05,
+          "minimum_contour_area_fraction": 0.08,
+          "minimum_rectangularity": 0.45,
+          "minimum_side_consistency": 0.3
+        },
+        "provenance_source": "legacy-parameters"
+      },
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 1.8471300650001012,
+        "search_fraction": 0.2
+      },
+      "legacy_parameter_set_id": "74e2112aac01",
+      "parameter_identity_sha256": "b95b091530ccec81ec3436966ecb54c2141674bb5df49a2f01e4f2738262472e",
+      "parameter_set_equivalence_family_id": "74e2112aac01",
+      "parameter_set_equivalence_family_sha256": "74e2112aac019e43790c08b1374687e9c1dd4d9a225296fcf3b9cf950c2968f4",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 54,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "e38a975d1436",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.12,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.55,
+        "gaussian_sigma": 1.2,
+        "band_fraction": 0.008,
+        "minimum_border_energy": 0.1,
+        "minimum_side_consistency": 0.45,
+        "contour_weight": 0.45,
+        "energy_weight": 0.4,
+        "consistency_weight": 0.15
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 823.11,
+        "wall_ms": 823.909
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 219.788,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "epsilon_max_fraction": 0.04,
+                "minimum_rectangularity": 0.55,
+                "gaussian_sigma": 1.2,
+                "band_fraction": 0.008,
+                "minimum_border_energy": 0.1,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.1838456029072404,
+              "side_consistency": 0.32418604094868747,
+              "side_energy": [
+                0.1723022311925888,
+                0.05960017815232277,
+                0.19582818448543549,
+                0.3076518177986145
+              ],
+              "band_width_pixels": 8,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 115.544,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.5914031058908732,
+            "score": 0.5914031058908732,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "epsilon_max_fraction": 0.04,
+                "minimum_rectangularity": 0.55,
+                "gaussian_sigma": 1.2,
+                "band_fraction": 0.008,
+                "minimum_border_energy": 0.1,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.3356582149863243,
+              "side_consistency": 0.8003827993089564,
+              "side_energy": [
+                0.32010307908058167,
+                0.2939760982990265,
+                0.26865506172180176,
+                0.45989862084388733
+              ],
+              "band_width_pixels": 8,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 57.132,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "epsilon_max_fraction": 0.04,
+                "minimum_rectangularity": 0.55,
+                "gaussian_sigma": 1.2,
+                "band_fraction": 0.008,
+                "minimum_border_energy": 0.1,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.09030215023085475,
+              "side_consistency": 0.12206518225118212,
+              "side_energy": [
+                0.16073200106620789,
+                0.011022748425602913,
+                0.013891767710447311,
+                0.1755620837211609
+              ],
+              "band_width_pixels": 8,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "insufficient_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 199.902,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.6854803124557093,
+            "score": 0.6854803124557093,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "epsilon_max_fraction": 0.04,
+                "minimum_rectangularity": 0.55,
+                "gaussian_sigma": 1.2,
+                "band_fraction": 0.008,
+                "minimum_border_energy": 0.1,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.4798555374145508,
+              "side_consistency": 0.6511479832659267,
+              "side_energy": [
+                0.5509741306304932,
+                0.31245696544647217,
+                0.5188503265380859,
+                0.5371407270431519
+              ],
+              "band_width_pixels": 8,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 230.744,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5888562635061524,
+            "score": 0.5888562635061524,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.12,
+                "epsilon_max_fraction": 0.04,
+                "minimum_rectangularity": 0.55,
+                "gaussian_sigma": 1.2,
+                "band_fraction": 0.008,
+                "minimum_border_energy": 0.1,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.29620856791734695,
+              "side_consistency": 0.5668949089280905,
+              "side_energy": [
+                0.1679191291332245,
+                0.29604682326316833,
+                0.2991314232349396,
+                0.4217368960380554
+              ],
+              "band_width_pixels": 8,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "legacy_parameter_set_id": "e38a975d1436",
+      "parameter_identity_sha256": "5a653e08329e34a02cefa8fa7c92f99af81bee09e0603436dd6b694d96e9faa6",
+      "parameter_set_equivalence_family_id": "e38a975d1436",
+      "parameter_set_equivalence_family_sha256": "e38a975d1436d6ee4b98c65f3b4e522b6958da72977380c35b97c0a17ec8fbc9",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": null,
+      "parameter_grid_sha256": null,
+      "reference_roles": [
+        "baseline"
+      ],
+      "requested_search_member": false,
+      "search_space_member": true,
+      "profile": "baseline",
+      "run_id": "run-20260820-190456",
+      "rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "ee832909df97",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.3,
+        "energy_weight": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1396.727,
+        "wall_ms": 1397.268
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 315.903,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 174.927,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.6231196770473257,
+            "score": 0.6231196770473257,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 71.89,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 435.168,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.6943925313628397,
+            "score": 0.6943925313628397,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 398.839,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5935546625044528,
+            "score": 0.5935546625044528,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 3.245312025999965,
+        "search_fraction": 0.3
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "ee832909df97",
+      "parameter_identity_sha256": "384a57bbff9e8c51431871d794e7cd0587685bc7cd9f52e13217d3366ecd835a",
+      "parameter_set_equivalence_family_id": "ee832909df97",
+      "parameter_set_equivalence_family_sha256": "ee832909df97b0fe6c9d83a2dd8a481f2d99814083497f1dc2c114e61415f906",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 3,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "24d1f88af992",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.3,
+        "energy_weight": 0.4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1832.726,
+        "wall_ms": 1838.37
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 546.426,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 123.676,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.5934409856263342,
+            "score": 0.5934409856263342,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 125.279,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 496.547,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.669352387709321,
+            "score": 0.669352387709321,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 540.798,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5577396215546055,
+            "score": 0.5577396215546055,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 3.6904889470001763,
+        "search_fraction": 0.4
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "24d1f88af992",
+      "parameter_identity_sha256": "9f0d66b49e32817eeeeb41c511c779a98a2bc2ce93742f9db661bd88cafe9a5b",
+      "parameter_set_equivalence_family_id": "24d1f88af992",
+      "parameter_set_equivalence_family_sha256": "24d1f88af99252077c81abad6ed2cb40d36fb9cfd20bd0cd5226cdccf4cbaf7e",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 4,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "66d5d1766542",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.3,
+        "energy_weight": 0.5
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1322.086,
+        "wall_ms": 1322.667
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 296.796,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 166.861,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.5691584199182502,
+            "score": 0.5691584199182502,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 108.475,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 410.941,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.6488649974473512,
+            "score": 0.6488649974473512,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 339.013,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5284364062320035,
+            "score": 0.5284364062320035,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 4.568256510000083,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "66d5d1766542",
+      "parameter_identity_sha256": "55f32c6d3b71a07e89cc85bdd486c5216b9eee22bc4ed39ab087b362de71df8f",
+      "parameter_set_equivalence_family_id": "66d5d1766542",
+      "parameter_set_equivalence_family_sha256": "66d5d1766542a95661f042c3583eb1971b9768300e2cd86c3abfe602a35eba16",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 5,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "ee832909df97",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.3,
+        "energy_weight": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1396.727,
+        "wall_ms": 1397.268
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 315.903,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 174.927,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.6231196770473257,
+            "score": 0.6231196770473257,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 71.89,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 435.168,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.6943925313628397,
+            "score": 0.6943925313628397,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 398.839,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5935546625044528,
+            "score": 0.5935546625044528,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 3.245312025999965,
+        "search_fraction": 0.3
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "ee832909df97",
+      "parameter_identity_sha256": "384a57bbff9e8c51431871d794e7cd0587685bc7cd9f52e13217d3366ecd835a",
+      "parameter_set_equivalence_family_id": "ee832909df97",
+      "parameter_set_equivalence_family_sha256": "ee832909df97b0fe6c9d83a2dd8a481f2d99814083497f1dc2c114e61415f906",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 3,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "24d1f88af992",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.3,
+        "energy_weight": 0.4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1832.726,
+        "wall_ms": 1838.37
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 546.426,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 123.676,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.5934409856263342,
+            "score": 0.5934409856263342,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 125.279,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 496.547,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.669352387709321,
+            "score": 0.669352387709321,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 540.798,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5577396215546055,
+            "score": 0.5577396215546055,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 3.6904889470001763,
+        "search_fraction": 0.4
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "24d1f88af992",
+      "parameter_identity_sha256": "9f0d66b49e32817eeeeb41c511c779a98a2bc2ce93742f9db661bd88cafe9a5b",
+      "parameter_set_equivalence_family_id": "24d1f88af992",
+      "parameter_set_equivalence_family_sha256": "24d1f88af99252077c81abad6ed2cb40d36fb9cfd20bd0cd5226cdccf4cbaf7e",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 4,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "66d5d1766542",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.3,
+        "energy_weight": 0.5
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1322.086,
+        "wall_ms": 1322.667
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 296.796,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 166.861,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.5691584199182502,
+            "score": 0.5691584199182502,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 108.475,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 410.941,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.6488649974473512,
+            "score": 0.6488649974473512,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 339.013,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5284364062320035,
+            "score": 0.5284364062320035,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.3,
+                "contour_weight": 0.45,
+                "energy_weight": 0.5,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 4.568256510000083,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "66d5d1766542",
+      "parameter_identity_sha256": "55f32c6d3b71a07e89cc85bdd486c5216b9eee22bc4ed39ab087b362de71df8f",
+      "parameter_set_equivalence_family_id": "66d5d1766542",
+      "parameter_set_equivalence_family_sha256": "66d5d1766542a95661f042c3583eb1971b9768300e2cd86c3abfe602a35eba16",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 5,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "d051925a3a6c",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.45,
+        "energy_weight": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1446.253,
+        "wall_ms": 1446.817
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 501.747,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 183.031,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.6231196770473257,
+            "score": 0.6231196770473257,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 126.748,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 304.869,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.6943925313628397,
+            "score": 0.6943925313628397,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 329.858,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5935546625044528,
+            "score": 0.5935546625044528,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.3,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 5.136345909000056,
+        "search_fraction": 0.6
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "d051925a3a6c",
+      "parameter_identity_sha256": "0f05eb5d104a48eb43b39cb9b1fd933fda2376b42825315ff3d98fd99586e34a",
+      "parameter_set_equivalence_family_id": "d051925a3a6c",
+      "parameter_set_equivalence_family_sha256": "d051925a3a6cb33ab612121f2319ec0983fb3f422a3d3ecd8874b5d0627e3cf4",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 6,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "d4b93ff23f99",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.03,
+        "minimum_rectangularity": 0.45,
+        "gaussian_sigma": 0.8,
+        "band_fraction": 0.004,
+        "minimum_border_energy": 0.05,
+        "minimum_side_consistency": 0.45,
+        "energy_weight": 0.4
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55419009,
+        "mean_iou_success": 0.92365016,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45379921,
+        "mean_edge_error_px": 21.917,
+        "elapsed_ms_total": 1541.745,
+        "wall_ms": 1542.292
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 329.459,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.79374,
+              "border_energy": 0.15914328210055828,
+              "side_consistency": 0.26206059806202525,
+              "side_energy": [
+                0.13412173092365265,
+                0.0417051836848259,
+                0.1807355135679245,
+                0.2800107002258301
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            119,
+            15,
+            1316,
+            949
+          ],
+          "iou": 0.86176634,
+          "edge_errors": {
+            "left": 52,
+            "top": 7,
+            "right": 83,
+            "bottom": 28,
+            "mean": 42.5,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 42.5,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 110.834,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              119,
+              15,
+              1316,
+              949
+            ],
+            "corners": [
+              [
+                119.0,
+                36.0
+              ],
+              [
+                1315.0,
+                15.0
+              ],
+              [
+                739.0,
+                948.0
+              ],
+              [
+                137.0,
+                771.0
+              ]
+            ],
+            "confidence": 0.5934409856263342,
+            "score": 0.5934409856263342,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.749072,
+              "border_energy": 0.32633276283741,
+              "side_consistency": 0.8388365366091348,
+              "side_energy": [
+                0.30438509583473206,
+                0.2899622917175293,
+                0.27373984456062317,
+                0.43724381923675537
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 63.252,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.662027,
+              "border_energy": 0.08308111340738833,
+              "side_consistency": 0.1490825122891274,
+              "side_energy": [
+                0.1391364336013794,
+                0.012385941110551357,
+                0.01816144771873951,
+                0.16264063119888306
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders",
+              "reason": "inconsistent_border_energy"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            56,
+            1119,
+            938
+          ],
+          "iou": 0.96377596,
+          "edge_errors": {
+            "left": 11,
+            "top": 5,
+            "right": 18,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 18
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 18,
+          "elapsed_ms": 481.055,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              73,
+              56,
+              1119,
+              938
+            ],
+            "corners": [
+              [
+                77.0,
+                56.0
+              ],
+              [
+                1115.0,
+                56.0
+              ],
+              [
+                1118.0,
+                937.0
+              ],
+              [
+                73.0,
+                932.0
+              ]
+            ],
+            "confidence": 0.669352387709321,
+            "score": 0.669352387709321,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.879702,
+              "border_energy": 0.443991094827652,
+              "side_consistency": 0.6392669985217349,
+              "side_energy": [
+                0.5115740299224854,
+                0.28382885456085205,
+                0.4305248260498047,
+                0.5500366687774658
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            44,
+            1172,
+            948
+          ],
+          "iou": 0.94540817,
+          "edge_errors": {
+            "left": 7,
+            "top": 11,
+            "right": 18,
+            "bottom": 20,
+            "mean": 14.0,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 14.0,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 557.145,
+          "candidate": {
+            "method": "border_energy",
+            "bbox": [
+              81,
+              44,
+              1172,
+              948
+            ],
+            "corners": [
+              [
+                84.0,
+                44.0
+              ],
+              [
+                1144.0,
+                44.0
+              ],
+              [
+                1171.0,
+                947.0
+              ],
+              [
+                81.0,
+                945.0
+              ]
+            ],
+            "confidence": 0.5577396215546055,
+            "score": 0.5577396215546055,
+            "diagnostics": {
+              "parameters": {
+                "minimum_contour_area_fraction": 0.08,
+                "epsilon_max_fraction": 0.03,
+                "minimum_rectangularity": 0.45,
+                "gaussian_sigma": 0.8,
+                "band_fraction": 0.004,
+                "minimum_border_energy": 0.05,
+                "minimum_side_consistency": 0.45,
+                "contour_weight": 0.45,
+                "energy_weight": 0.4,
+                "consistency_weight": 0.15
+              },
+              "contour_score": 0.856308,
+              "border_energy": 0.23540425300598145,
+              "side_consistency": 0.5215954690147535,
+              "side_energy": [
+                0.1227857917547226,
+                0.27309727668762207,
+                0.3042528033256531,
+                0.24148114025592804
+              ],
+              "band_width_pixels": 4,
+              "evidence": "sobel_energy_along_candidate_borders"
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 6.113347148000003,
+        "search_fraction": 0.7
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "d4b93ff23f99",
+      "parameter_identity_sha256": "39c34a7ae5509da3d078d6a8368f1a16bc48353444c616ccfb11168335862116",
+      "parameter_set_equivalence_family_id": "d4b93ff23f99",
+      "parameter_set_equivalence_family_sha256": "d4b93ff23f99cbd9e49366d917b2063610480ba7c0b0e8ae6d2a64e56f6c7da2",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+      "profile": null,
+      "run_id": "run-20260820-190456",
+      "rank": 7,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 1,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.96377596,
+        "winner_iou": 0.96377596,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "74e2112aac01",
+        "parameter_set_id": "74e2112aac01",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.94540817,
+        "winner_iou": 0.94540817,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "74e2112aac01",
+        "parameter_set_id": "74e2112aac01",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.86176634,
+        "winner_iou": 0.86176634,
+        "delta_iou": 0.0,
+        "status": "Unchanged",
+        "parameter_set": "74e2112aac01",
+        "parameter_set_id": "74e2112aac01",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.85424412,
+        "delta_iou": 0.85424412,
+        "status": "Recovered",
+        "parameter_set": "74e2112aac01",
+        "parameter_set_id": "74e2112aac01",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "74e2112aac01",
+        "parameter_set_id": "74e2112aac01",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000001028",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervm76f27",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "7a8e440913d79096eb75441eda15d607430e6898",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "32404517381",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "eeafef1e696654329219b763c34ddd2e554a213b",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 255320064,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": false,
+    "evidence_source": null,
+    "evidence_precompute_seconds": null
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 1.2421740704485154,
+    "failures": 21,
+    "best_mean_iou": 0.72503892,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.36513772,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 1,
+    "total_metric_improvements": 2,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 1.8471300650001012,
+    "winner_last_changed_elapsed_seconds": 1.8471300650001012,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "74e2112aac01",
+        "parameter_short_name": "historic-best",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 1.8471300650001012,
+        "search_fraction": 0.2,
+        "parameter_set_equivalence_family_id": "74e2112aac01"
+      }
+    ],
+    "last_improvement_elapsed_seconds": 1.8471300650001012,
+    "time_since_last_improvement_seconds": 6.203271435000033
+  }
+}
