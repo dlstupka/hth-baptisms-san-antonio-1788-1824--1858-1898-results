@@ -1,0 +1,120 @@
+{
+  "schema_version": "0.4",
+  "detector": "docextractor_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/docextractor_page_mask.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 128,
+  "precomputed_evidence": "regression-output/.learned-evidence/docextractor_page_mask",
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 3,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "2.451",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "100",
+    "ranked_quality": "0.93444463",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "count": 3,
+    "assignment": "interleaved",
+    "source_run_ids": [
+      "run-20260821-144058",
+      "run-20260821-144059",
+      "run-20260821-144100"
+    ]
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "profiles": {
+      "baseline": {
+        "probability_threshold": 0.2,
+        "minimum_page_area_fraction": 0.02,
+        "close_kernel_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "probability_threshold": {
+        "type": "float",
+        "values": [
+          0.2125,
+          0.215,
+          0.2175,
+          0.22,
+          0.2225,
+          0.225,
+          0.2275,
+          0.23,
+          0.2325,
+          0.235,
+          0.2375
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.024,
+          0.025,
+          0.026,
+          0.027,
+          0.028,
+          0.029,
+          0.03,
+          0.031,
+          0.032
+        ]
+      },
+      "minimum_page_area_fraction": {
+        "type": "float",
+        "values": [
+          0.02
+        ]
+      },
+      "page_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact",
+      "previous_declared_parameter_sets": 99
+    },
+    "optimizer_shape_compatibility": "detector-implementation",
+    "detector": "docextractor_page_mask",
+    "description": "docExtractor historical ResUNet detector final interaction-focused micro-refinement. The prior 99-set pass improved Avg IoU to 0.9344 at probability_threshold=0.225 and close_kernel_fraction=0.028, with both remaining active dimensions classified Critical and a strong measured interaction. This pass uses a 99-member search micro-grid resolving threshold in 0.0025 increments from 0.2125 through 0.2375 and closing in 0.001 increments from 0.024 through 0.032 around that winner, plus the mandatory detector-baseline reference; the measured-Zombie minimum-area and padding controls remain explicit singleton dimensions for complete identities and provenance.",
+    "lifecycle": {
+      "prepare": "docextractor_page_mask",
+      "model_policy": "reuse",
+      "finalize": "docextractor_page_mask"
+    },
+    "model": {
+      "family": "docExtractor ResUNet",
+      "variant": "default ICFHR 2020",
+      "source": "monniert/docExtractor",
+      "runtime": "PyTorch CPU",
+      "training_domain": "synthetic historical documents"
+    }
+  }
+}
