@@ -1,0 +1,136 @@
+{
+  "schema_version": "0.4",
+  "detector": "contour_projection",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/contour_projection.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "20.280",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "17",
+    "ranked_quality": "0.87682013",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "contour_projection",
+    "description": "Calibration space for the HTH Contour + Projection detector.",
+    "profiles": {
+      "baseline": {
+        "minimum_contour_area_fraction": 0.12,
+        "close_kernel_fraction": 0.008,
+        "close_iterations": 1,
+        "epsilon_min_fraction": 0.008,
+        "epsilon_max_fraction": 0.04,
+        "epsilon_steps": 9,
+        "minimum_rectangularity": 0.55,
+        "projection_margin_fraction": 0.06,
+        "projection_threshold_block_fraction": 0.08,
+        "projection_threshold_c": 9.0,
+        "minimum_projection_score": 0.08,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.25,
+        "angle_weight": 0.2,
+        "projection_weight": 0.3,
+        "merge_fragmented_contours": true
+      }
+    },
+    "parameters": {
+      "minimum_contour_area_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.12,
+          0.18
+        ]
+      },
+      "epsilon_max_fraction": {
+        "type": "float",
+        "values": [
+          0.03,
+          0.04,
+          0.06
+        ]
+      },
+      "minimum_rectangularity": {
+        "type": "float",
+        "values": [
+          0.45,
+          0.55,
+          0.7
+        ]
+      },
+      "projection_margin_fraction": {
+        "type": "float",
+        "values": [
+          0.03,
+          0.06,
+          0.1
+        ]
+      },
+      "projection_threshold_block_fraction": {
+        "type": "float",
+        "values": [
+          0.05,
+          0.08,
+          0.12
+        ]
+      },
+      "projection_threshold_c": {
+        "type": "float",
+        "values": [
+          5.0,
+          9.0,
+          13.0
+        ]
+      },
+      "minimum_projection_score": {
+        "type": "float",
+        "values": [
+          0.05,
+          0.08,
+          0.15
+        ]
+      },
+      "projection_weight": {
+        "type": "float",
+        "values": [
+          0.2,
+          0.3,
+          0.4
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
