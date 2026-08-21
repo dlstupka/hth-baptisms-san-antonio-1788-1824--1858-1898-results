@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "scantailor_page_frame",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "2b71090b79396db5bda0ccd698577afaedd7b96516a4224089a6cef51a9b3f6b",
+    "parameter_order": [
+      "illumination_sigma_fraction",
+      "ink_quantile",
+      "content_close_fraction",
+      "projection_smooth_fraction",
+      "boundary_search_margin_fraction",
+      "minimum_page_area_fraction"
+    ],
+    "values": {
+      "illumination_sigma_fraction": [
+        0.09
+      ],
+      "ink_quantile": [
+        0.76
+      ],
+      "content_close_fraction": [
+        0.012
+      ],
+      "projection_smooth_fraction": [
+        0.002,
+        0.0025,
+        0.003,
+        0.0035,
+        0.004,
+        0.0045
+      ],
+      "boundary_search_margin_fraction": [
+        0.065,
+        0.0675,
+        0.07,
+        0.0725,
+        0.075,
+        0.0775,
+        0.08,
+        0.0825,
+        0.085
+      ],
+      "minimum_page_area_fraction": [
+        0.12
+      ]
+    },
+    "cartesian_count": 54,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": true,
+    "evaluated_parameter_sets": 55,
+    "evaluated_grid_parameter_sets": 54,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "illumination_sigma_fraction": 0.035,
+      "ink_quantile": 0.82,
+      "content_close_fraction": 0.012,
+      "projection_smooth_fraction": 0.008,
+      "boundary_search_margin_fraction": 0.06,
+      "minimum_page_area_fraction": 0.2
+    }
+  },
+  "explicit_parameter_sets": {
+    "835b595ff0f03a0ad372632e6b50a876d0a09089412d032adc806cac1b71666e": {
+      "sha256": "835b595ff0f03a0ad372632e6b50a876d0a09089412d032adc806cac1b71666e",
+      "legacy_parameter_set_id": "d4ed742934a2",
+      "parameters": {
+        "boundary_search_margin_fraction": 0.06,
+        "content_close_fraction": 0.012,
+        "illumination_sigma_fraction": 0.035,
+        "ink_quantile": 0.82,
+        "minimum_page_area_fraction": 0.2,
+        "projection_smooth_fraction": 0.008
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
