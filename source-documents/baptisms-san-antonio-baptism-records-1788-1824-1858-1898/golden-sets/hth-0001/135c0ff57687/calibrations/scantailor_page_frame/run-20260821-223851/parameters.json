@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.4",
+  "detector": "scantailor_page_frame",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/scantailor_page_frame.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "16.699",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "18",
+    "ranked_quality": "0.92996877",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "scantailor_page_frame",
+    "description": "Expanded characterization space for a ScanTailor-style historical scan page-frame detector. The first exhaustive run established a useful 0.9300 basin but placed ink quantile and content closing at their lower bounds and projection smoothing at its upper bound. This 2,304-member grid preserves both the original baseline and first winner while extending those boundary-hit domains, widening illumination normalization, and opening the minimum-page-area gate so the next exhaustive pass can distinguish a true optimum from an edge-of-grid result.",
+    "profiles": {
+      "baseline": {
+        "illumination_sigma_fraction": 0.035,
+        "ink_quantile": 0.82,
+        "content_close_fraction": 0.012,
+        "projection_smooth_fraction": 0.008,
+        "boundary_search_margin_fraction": 0.06,
+        "minimum_page_area_fraction": 0.2
+      }
+    },
+    "parameters": {
+      "illumination_sigma_fraction": {
+        "type": "float",
+        "values": [
+          0.015,
+          0.035,
+          0.06,
+          0.09
+        ]
+      },
+      "ink_quantile": {
+        "type": "float",
+        "values": [
+          0.68,
+          0.76,
+          0.82,
+          0.88
+        ]
+      },
+      "content_close_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.006,
+          0.012,
+          0.022
+        ]
+      },
+      "projection_smooth_fraction": {
+        "type": "float",
+        "values": [
+          0.004,
+          0.008,
+          0.016,
+          0.028
+        ]
+      },
+      "boundary_search_margin_fraction": {
+        "type": "float",
+        "values": [
+          0.035,
+          0.06,
+          0.1
+        ]
+      },
+      "minimum_page_area_fraction": {
+        "type": "float",
+        "values": [
+          0.12,
+          0.2,
+          0.3
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
