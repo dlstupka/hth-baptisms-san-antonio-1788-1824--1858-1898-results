@@ -1,0 +1,178 @@
+{
+  "schema_version": "0.4",
+  "detector": "dhsegment_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/dhsegment_page_mask.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": null,
+  "threads": 2,
+  "precomputed_evidence": "regression-output/.learned-evidence/dhsegment_page_mask",
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 192,
+    "pipeline_number": 1,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "unknown",
+    "runtime_estimate_source": "single-detector",
+    "queue_position": "1",
+    "ranked_quality": "unknown",
+    "execution_shape_source": "preferred-dispatch-optimizer",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "count": 192,
+    "assignment": "interleaved",
+    "source_run_ids": [
+      "run-20260821-234702",
+      "run-20260821-234703",
+      "run-20260821-234704",
+      "run-20260821-234705",
+      "run-20260821-234706",
+      "run-20260821-234707",
+      "run-20260821-234708",
+      "run-20260821-234709",
+      "run-20260821-234710",
+      "run-20260821-234711",
+      "run-20260821-234712",
+      "run-20260821-234713",
+      "run-20260821-234714",
+      "run-20260821-234715",
+      "run-20260821-234716",
+      "run-20260821-234717",
+      "run-20260821-234718",
+      "run-20260821-234719",
+      "run-20260821-234720",
+      "run-20260821-234721",
+      "run-20260821-234722",
+      "run-20260821-234723",
+      "run-20260821-234724",
+      "run-20260821-234725",
+      "run-20260821-234726",
+      "run-20260821-234727",
+      "run-20260821-234728",
+      "run-20260821-234729",
+      "run-20260821-234730",
+      "run-20260821-234731",
+      "run-20260821-234732",
+      "run-20260821-234733",
+      "run-20260821-234734",
+      "run-20260821-234735",
+      "run-20260821-234736",
+      "run-20260821-234737",
+      "run-20260821-234738",
+      "run-20260821-234739",
+      "run-20260821-234740",
+      "run-20260821-234741",
+      "run-20260821-234742"
+    ]
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "dhsegment_page_mask",
+    "description": "Initial exhaustive calibration for the dhSegment v0.2 page-extraction model. The network remains fixed while HTH calibrates only page-mask post-processing and minimum-area geometry.",
+    "profiles": {
+      "baseline": {
+        "probability_threshold": -1.0,
+        "minimum_page_area_fraction": 0.2,
+        "close_kernel_fraction": 0.005,
+        "open_kernel_fraction": 0.0,
+        "contour_offset_fraction": 0.0,
+        "fill_holes": 1
+      }
+    },
+    "parameters": {
+      "probability_threshold": {
+        "type": "float",
+        "values": [
+          -1.0,
+          0.25,
+          0.3,
+          0.35,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6,
+          0.65
+        ]
+      },
+      "minimum_page_area_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.15,
+          0.2,
+          0.25,
+          0.3
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.0025,
+          0.005,
+          0.0075,
+          0.01
+        ]
+      },
+      "open_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.0015,
+          0.003,
+          0.0045,
+          0.006
+        ]
+      },
+      "contour_offset_fraction": {
+        "type": "float",
+        "values": [
+          -0.004,
+          0.0,
+          0.004,
+          0.008
+        ]
+      },
+      "fill_holes": {
+        "type": "int",
+        "values": [
+          0,
+          1
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    },
+    "lifecycle": {
+      "prepare": "dhsegment_page_mask",
+      "model_policy": "reuse",
+      "finalize": "dhsegment_page_mask"
+    },
+    "model": {
+      "family": "dhSegment",
+      "variant": "v0.2-page-extraction",
+      "source": "dhlab-epfl/dhSegment",
+      "release_asset": "model.zip",
+      "runtime": "TensorFlow SavedModel"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
