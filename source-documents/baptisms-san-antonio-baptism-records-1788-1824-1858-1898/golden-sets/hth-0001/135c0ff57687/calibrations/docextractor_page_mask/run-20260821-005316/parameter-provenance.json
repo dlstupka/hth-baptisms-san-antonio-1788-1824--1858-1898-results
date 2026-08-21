@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "docextractor_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "3cf3881cd6509fdec185d9bd8fecf4b105db0c037d2e2be163cfb9f61063e365",
+    "parameter_order": [
+      "probability_threshold",
+      "close_kernel_fraction",
+      "minimum_page_area_fraction",
+      "page_padding_fraction"
+    ],
+    "values": {
+      "probability_threshold": [
+        0.1,
+        0.125,
+        0.15,
+        0.175,
+        0.2,
+        0.225,
+        0.25,
+        0.275,
+        0.3
+      ],
+      "close_kernel_fraction": [
+        0.01,
+        0.012,
+        0.014,
+        0.016,
+        0.018,
+        0.02,
+        0.022,
+        0.024,
+        0.026
+      ],
+      "minimum_page_area_fraction": [
+        0.02
+      ],
+      "page_padding_fraction": [
+        0.0
+      ]
+    },
+    "cartesian_count": 81,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "probability_threshold": 0.2,
+      "minimum_page_area_fraction": 0.02,
+      "close_kernel_fraction": 0.02,
+      "page_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
