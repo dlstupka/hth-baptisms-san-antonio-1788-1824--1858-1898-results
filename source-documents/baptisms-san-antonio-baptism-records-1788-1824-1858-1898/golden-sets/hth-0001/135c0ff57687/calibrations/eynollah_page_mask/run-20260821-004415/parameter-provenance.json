@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "eynollah_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [
+      "close_kernel_fraction",
+      "minimum_page_area_fraction"
+    ],
+    "equivalence_family_size": 25
+  },
+  "grid": {
+    "sha256": "a94ca4efe6e3276f28bf3dc989a3136ac2629790fc32eb22e18579121add8f38",
+    "parameter_order": [
+      "probability_threshold",
+      "page_padding_fraction",
+      "close_kernel_fraction",
+      "minimum_page_area_fraction"
+    ],
+    "values": {
+      "probability_threshold": [
+        0.245,
+        0.25,
+        0.255,
+        0.26,
+        0.2625,
+        0.265,
+        0.27,
+        0.275,
+        0.28
+      ],
+      "page_padding_fraction": [
+        0.0075,
+        0.008,
+        0.0085,
+        0.009,
+        0.0095,
+        0.01,
+        0.0105,
+        0.011,
+        0.0115
+      ],
+      "close_kernel_fraction": [
+        0.0
+      ],
+      "minimum_page_area_fraction": [
+        0.02
+      ]
+    },
+    "cartesian_count": 81,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": true,
+    "evaluated_parameter_sets": 81,
+    "evaluated_grid_parameter_sets": 81,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "probability_threshold": 0.2625,
+      "minimum_page_area_fraction": 0.02,
+      "close_kernel_fraction": 0.0,
+      "page_padding_fraction": 0.0095
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
