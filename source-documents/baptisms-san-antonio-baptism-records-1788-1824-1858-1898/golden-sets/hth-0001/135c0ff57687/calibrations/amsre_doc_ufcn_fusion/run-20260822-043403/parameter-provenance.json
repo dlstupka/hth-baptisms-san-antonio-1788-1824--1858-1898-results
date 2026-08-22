@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "amsre_doc_ufcn_fusion",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "73d6d1252a1fcea923a6af5ea10cdaac399067d2b482175fb4f60d3bb0658d52",
+    "parameter_order": [
+      "amsre_rescue_score_ceiling",
+      "doc_ufcn_minimum_confidence",
+      "minimum_corner_disagreement_fraction"
+    ],
+    "values": {
+      "amsre_rescue_score_ceiling": [
+        0.55,
+        0.65,
+        0.75,
+        0.85,
+        0.9,
+        0.95,
+        1.0
+      ],
+      "doc_ufcn_minimum_confidence": [
+        0.5,
+        0.6,
+        0.7,
+        0.75,
+        0.8,
+        0.9
+      ],
+      "minimum_corner_disagreement_fraction": [
+        0.0,
+        0.005,
+        0.01,
+        0.02,
+        0.04
+      ]
+    },
+    "cartesian_count": 210,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": true,
+    "evaluated_parameter_sets": 210,
+    "evaluated_grid_parameter_sets": 210,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "amsre_rescue_score_ceiling": 0.85,
+      "doc_ufcn_minimum_confidence": 0.75,
+      "minimum_corner_disagreement_fraction": 0.01
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
