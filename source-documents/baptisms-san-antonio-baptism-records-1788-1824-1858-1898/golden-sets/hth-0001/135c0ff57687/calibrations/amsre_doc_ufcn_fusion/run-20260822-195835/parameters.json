@@ -1,0 +1,120 @@
+{
+  "schema_version": "0.4",
+  "detector": "amsre_doc_ufcn_fusion",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/amsre_doc_ufcn_fusion.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 192,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 2,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "18.787",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "8",
+    "ranked_quality": "0.98972503",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "amsre_doc_ufcn_fusion",
+    "description": "Fusion Gen3 uses the calibrated AMSRE winner as primary geometry and calibrated Doc-UFCN as a selective rescue. The second-stage refinement adds AMSRE refined-ray support as the discriminating gate: prior evidence shows the false rescues on Golden Set pages 1/5 retained ~80% refined support while the legitimate rescues on pages 9/10 retained 0%/~56%. The search therefore preserves the incumbent behavior at a 1.0 support ceiling while testing tighter measured-support ceilings, with the previously characterized AMSRE score and Doc-UFCN confidence pinned and corner disagreement kept local.",
+    "child_calibrations": {
+      "adaptive_multi_scale_radial_edge": {
+        "parameter_set_id": "21ea516c3c5a",
+        "parameters": {
+          "coarse_angle_step_degrees": 2.0454545454545454,
+          "refined_angle_step_degrees": 0.35,
+          "weak_side_support_fraction": 0.65,
+          "side_assignment_tolerance_fraction": 0.0075,
+          "maximum_refined_sides": 3
+        }
+      },
+      "doc_ufcn_page_mask": {
+        "parameter_set_id": "595002645fcc",
+        "parameters": {
+          "minimum_confidence": 0.5,
+          "minimum_component_area_fraction": 0.0005,
+          "minimum_page_area_fraction": 0.2,
+          "page_padding_fraction": 0.01
+        }
+      }
+    },
+    "profiles": {
+      "baseline": {
+        "amsre_rescue_score_ceiling": 0.85,
+        "doc_ufcn_minimum_confidence": 0.75,
+        "minimum_corner_disagreement_fraction": 0.01,
+        "maximum_amsre_refined_support_fraction": 1.0
+      }
+    },
+    "parameters": {
+      "amsre_rescue_score_ceiling": {
+        "type": "float",
+        "values": [
+          0.95
+        ]
+      },
+      "doc_ufcn_minimum_confidence": {
+        "type": "float",
+        "values": [
+          0.9
+        ]
+      },
+      "minimum_corner_disagreement_fraction": {
+        "type": "float",
+        "values": [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015
+        ]
+      },
+      "maximum_amsre_refined_support_fraction": {
+        "type": "float",
+        "values": [
+          0.45,
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          1.0
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 28,
+      "historic_best_reference": "mandatory-exact"
+    },
+    "optimizer_shape_compatibility": "detector-implementation",
+    "lifecycle": {
+      "prepare": "doc_ufcn_page_mask",
+      "finalize": "doc_ufcn_page_mask",
+      "policy": "reuse"
+    }
+  }
+}
