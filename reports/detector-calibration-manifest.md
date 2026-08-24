@@ -241,53 +241,53 @@ This table prefers compatible full calibrations when available and falls back to
 
 | Rank | Detector | Detector ID | Role | Golden Set ID | Date | Build* | Est. Serial Runtime** | Family ID | Parameter Set ID | Parameter Sets | Search Type | Successful Parameter Sets | Best Avg IoU | Min IoU | StdDev | Avg IoU Success | Failures | Δ Baseline Avg IoU | Near-best Coverage (Basin) | Equivalent Best Configurations | Calibration Evidence | Approval Level |
 |---:|---|---|---|---|---|---|---:|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
-| **1** | **Fusion Gen3 — AMSRE + Doc-UFCN** | **`amsre_doc_ufcn_fusion`** | **Hybrid (AMSRE + Doc-UFCN gated rescue)** | **`HTH-0001`** | **2026-08-24** | **[#754](https://github.com/dlstupka/hth/actions/runs/32774708290)** | **19.6s** | **`77da32a57bfc`** | **`77da32a57bfc`** | **10** | **smoke** | **100.0%** | **0.9897** | **0.9814** | **0.0063** | **0.9897** | **0** | **+0.0117** | **30.0%** | **30.0%** | **Medium** | **Provisional** |
-| 2 | Adaptive Multi-Scale Radial Edge Search | `adaptive_multi_scale_radial_edge` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 10.6s | `e8e8dc34f8fb` | `e8e8dc34f8fb` | 10 | smoke | 100.0% | 0.9767 | 0.9566 | 0.0177 | 0.9767 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 3 | Doc-UFCN Page-Mask Detector | `doc_ufcn_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 8.9s | `a5b5f0a03acf` | `a5b5f0a03acf` | 10 | smoke | 100.0% | 0.9747 | 0.9545 | 0.0119 | 0.9747 | 0 | +0.0841 | 10.0% | 10.0% | Medium | Provisional |
-| 4 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background | `amsre_bfq_spbv_pbg` | Hybrid (AMSRE + BFQ + SPBV + Page Background) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 26.4s | `156ff0241cc1` | `156ff0241cc1` | 10 | smoke | 100.0% | 0.9743 | 0.9638 | 0.0103 | 0.9743 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 5 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background | `msre_bfq_spbv_pbg` | Hybrid (MSRE + BFQ + SPBV + Page Background) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 21s | `54d4e56ee0fc` | `54d4e56ee0fc` | 10 | smoke | 100.0% | 0.9738 | 0.9638 | 0.0103 | 0.9738 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 6 | dhSegment Page-Mask Detector | `dhsegment_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 19.6s | `28199c1dee3e` | `28199c1dee3e` | 10 | smoke | 100.0% | 0.9729 | 0.9571 | 0.0120 | 0.9729 | 0 | +0.0059 | 20.0% | 20.0% | Medium | Provisional |
-| 7 | Polar Boundary Voting | `polar_boundary_vote` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 1.2s | `cd967f93437d` | `cd967f93437d` | 10 | smoke | 100.0% | 0.9678 | 0.9425 | 0.0182 | 0.9678 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 8 | Page Background | `page_background` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2.8s | `5ba735a3e4a4` | `5ba735a3e4a4` | 10 | smoke | 90.0% | 0.9664 | 0.9476 | 0.0212 | 0.9664 | 0 | +0.2046 | 20.0% | 10.0% | Medium | Provisional |
-| 9 | Eynollah Page-Mask Detector | `eynollah_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 9.3s | `8b854e1547c4` | `0dcad981fc34` | 10 | smoke | 100.0% | 0.9641 | 0.9393 | 0.0160 | 0.9641 | 0 | +0.0000 | 30.0% | 10.0% | Medium | Provisional |
-| 10 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 1.7s | `d593fad7aeea` | `d593fad7aeea` | 10 | smoke | 100.0% | 0.9503 | 0.9340 | 0.0145 | 0.9503 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 11 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 349 ms | `1029318d5974` | `1029318d5974` | 10 | smoke | 10.0% | 0.9467 | 0.8611 | 0.0442 | 0.9467 | 0 | +0.0000 | 10.0% | 10.0% | Low | Provisional |
-| 12 | ScanTailor Page Frame | `scantailor_page_frame` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 24s | `60e473e3d379` | `60e473e3d379` | 10 | smoke | 100.0% | 0.9397 | 0.8489 | 0.0476 | 0.9397 | 0 | +0.0156 | 20.0% | 10.0% | Medium | Provisional |
-| 13 | Border Fusion Quad | `border_fusion_quad` | Hybrid (Radial + Polar + Gradient) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 4.6s | `90182e3a350a` | `90182e3a350a` | 10 | smoke | 100.0% | 0.9367 | 0.8379 | 0.0539 | 0.9367 | 0 | +0.0477 | 10.0% | 10.0% | Medium | Provisional |
-| 14 | Adaptive Radial Edge Search | `adaptive_radial_edge` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 5.7s | `a132c2ac5e87` | `a132c2ac5e87` | 10 | smoke | 100.0% | 0.9329 | 0.8817 | 0.0344 | 0.9329 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 15 | docExtractor Page-Mask Detector | `docextractor_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 11.1s | `a7f45316a1bf` | `a7f45316a1bf` | 10 | smoke | 100.0% | 0.9321 | 0.8098 | 0.0636 | 0.9321 | 0 | +0.0039 | 10.0% | 10.0% | Medium | Provisional |
-| 16 | Segment-Supported Polar Voting | `segment_supported_polar_vote` | Hybrid (Polar + LSD) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 5.9s | `c953ea21ba66` | `c953ea21ba66` | 10 | smoke | 80.0% | 0.9236 | 0.8360 | 0.0531 | 0.9236 | 0 | +0.2262 | 20.0% | 10.0% | Low | Provisional |
-| 17 | Multi-Scale Radial Edge Search | `multi_scale_radial_edge` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2.7s | `82346a58b9d3` | `82346a58b9d3` | 10 | smoke | 90.0% | 0.9020 | 0.7318 | 0.0897 | 0.9020 | 0 | +0.2499 | 20.0% | 10.0% | Medium | Provisional |
-| 18 | PageNet Page-Mask Detector | `pagenet_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 4.5s | `2d1fb8b9c664` | `db5a00104004` | 10 | smoke | 100.0% | 0.8851 | 0.8122 | 0.0456 | 0.8851 | 0 | +0.0477 | 90.0% | 40.0% | Medium | Provisional |
-| 19 | Learned Page-Mask Detector | `learned_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 42.4s | `5224fd6d0bf0` | `5224fd6d0bf0` | 10 | smoke | 100.0% | 0.8792 | 0.7929 | 0.0511 | 0.8792 | 0 | +0.0417 | 60.0% | 30.0% | Medium | Provisional |
-| 20 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 1m 54s | `3eec8a03f1de` | `3eec8a03f1de` | 10 | smoke | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 100.0% | 100.0% | Medium | Provisional |
-| 21 | Contour + Projection | `contour_projection` | Hybrid (Contour Quad + Projection) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 5.4s | `0cd13eb1a471` | `0cd13eb1a471` | 10 | smoke | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 100.0% | 100.0% | Medium | Provisional |
-| 22 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 3.3s | `bea942a4969a` | `bea942a4969a` | 10 | smoke | 50.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 50.0% | 50.0% | Low | Provisional |
-| 23 | Cross-Edge Contour | `cross_edge_contour` | Hybrid (Contour Quad + Cross-Edge Validation) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2.9s | `a5450e58ec9e` | `a5450e58ec9e` | 10 | smoke | 40.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 40.0% | 40.0% | Low | Provisional |
-| 24 | Edge-Supported Contour | `edge_contour` | Hybrid (Contour Quad + LSD) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2.6s | `4e5bc37a649a` | `4e5bc37a649a` | 10 | smoke | 30.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.3377 | 30.0% | 30.0% | Low | Provisional |
-| 25 | Signed Polar Boundary Voting | `signed_polar_boundary_vote` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 1.8s | `45844b256edd` | `45844b256edd` | 10 | smoke | 100.0% | 0.8668 | 0.7402 | 0.0759 | 0.8668 | 0 | +0.0185 | 20.0% | 10.0% | Medium | Provisional |
-| 26 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 1.4s | `14818b491952` | `14818b491952` | 10 | smoke | 100.0% | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | +0.0000 | 100.0% | 100.0% | Medium | Provisional |
-| 27 | Contour Envelope | `contour` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 456 ms | `0bf3c1624426` | `0bf3c1624426` | 10 | smoke | 40.0% | 0.8392 | 0.4919 | 0.1797 | 0.8392 | 0 | +0.1670 | 10.0% | 10.0% | Low | Provisional |
-| 28 | Distance Transform Detector | `distance_transform` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2.5s | `e66a7546e1a7` | `e66a7546e1a7` | 10 | smoke | 100.0% | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | +0.0795 | 30.0% | 30.0% | Medium | Provisional |
-| 29 | Kraken Page Mask | `kraken_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 1m 39s | `8e7329ed85d1` | `8e7329ed85d1` | 10 | smoke | 100.0% | 0.8336 | 0.5226 | 0.1752 | 0.8336 | 0 | +0.0268 | 90.0% | 90.0% | Medium | Provisional |
-| 30 | Mask R-CNN Page-Mask Detector | `mask_rcnn_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 15.5s | `fb81bb954397` | `fb81bb954397` | 10 | smoke | 100.0% | 0.8255 | 0.5226 | 0.1580 | 0.8255 | 0 | +0.0354 | 30.0% | 10.0% | Medium | Provisional |
-| 31 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 3m 55s | `9c90917e5b48` | `9c90917e5b48` | 10 | smoke | 100.0% | 0.8217 | 0.5699 | 0.1596 | 0.8217 | 0 | +0.0086 | 10.0% | 10.0% | Medium | Provisional |
-| 32 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 3m 22s | `018d128420cb` | `018d128420cb` | 10 | smoke | 100.0% | 0.8130 | 0.5532 | 0.1692 | 0.8130 | 0 | +0.0000 | 10.0% | 10.0% | Medium | Provisional |
-| 33 | Orli Page Mask | `orli_page_mask` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2.3s | `479a861bb552` | `d75b76f301e6` | 10 | smoke | 10.0% | 0.8063 | 0.6913 | 0.0867 | 0.8063 | 0 | +0.0000 | 10.0% | 10.0% | Low | Provisional |
-| 34 | Star-Convex Boundary Optimization | `star_convex` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 769 ms | `095537f3b0cd` | `095537f3b0cd` | 10 | smoke | 100.0% | 0.7981 | 0.5414 | 0.1935 | 0.7981 | 0 | +0.0224 | 10.0% | 10.0% | Medium | Provisional |
-| 35 | Connected Components | `components` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 944 ms | `7eb87978bb9a` | `7eb87978bb9a` | 10 | smoke | 100.0% | 0.7794 | 0.5504 | 0.1789 | 0.7794 | 0 | +0.0609 | 30.0% | 30.0% | Medium | Provisional |
-| 36 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2s | `7b8b1aaee481` | `7b8b1aaee481` | 10 | smoke | 0.0% | 0.7368 | 0.0000 | 0.3714 | 0.9210 | 1 | +0.1954 | 30.0% | 30.0% | Low | Provisional |
-| 37 | Convex Hull Detector | `convex_hull` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 454 ms | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 10 | smoke | 0.0% | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | +0.0692 | 30.0% | 30.0% | Low | Provisional |
-| 38 | Distance-Transform Rectangle Proposal | `distance_transform_rect` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 606 ms | `4be72657e9a7` | `4be72657e9a7` | 10 | smoke | 0.0% | 0.6563 | 0.0000 | 0.3709 | 0.8204 | 1 | +0.0217 | 30.0% | 30.0% | Low | Provisional |
-| 39 | Hough Line Borders | `hough` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 13.2s | `d2ef0aec6694` | `d2ef0aec6694` | 10 | smoke | 0.0% | 0.5661 | 0.0000 | 0.3407 | 0.7076 | 1 | +0.0877 | 10.0% | 10.0% | Low | Provisional |
-| 40 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 3.3s | `e38a975d1436` | `e38a975d1436` | 10 | smoke | 0.0% | 0.5542 | 0.0000 | 0.4538 | 0.9237 | 2 | +0.0000 | 70.0% | 70.0% | Low | Provisional |
-| 41 | Consensus Quadrilateral | `consensus_quad` | Hybrid (Contour Quad + Edge Contour) | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 6.2s | `dce471449373` | `dce471449373` | 10 | smoke | 0.0% | 0.5513 | 0.0000 | 0.4513 | 0.9188 | 2 | +0.0000 | 10.0% | 10.0% | Low | Provisional |
-| 42 | Projective Gradient Vote | `projective_gradient_vote` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 3.4s | `ea6049908ba9` | `ea6049908ba9` | 10 | smoke | 0.0% | 0.5463 | 0.0000 | 0.4477 | 0.9105 | 2 | +0.0989 | 90.0% | 90.0% | Low | Provisional |
-| 43 | Radon Boundary Projection | `radon_boundary` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 2.3s | `7310593db919` | `7310593db919` | 10 | smoke | 70.0% | 0.4811 | 0.1918 | 0.2655 | 0.4811 | 0 | +0.0584 | 10.0% | 10.0% | Low | Provisional |
-| 44 | Text Flow Envelope | `text_flow` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 567 ms | `cd4fbe8ec7d8` | `cd4fbe8ec7d8` | 10 | smoke | 0.0% | 0.1596 | 0.0000 | 0.3191 | 0.7978 | 4 | +0.0000 | 10.0% | 10.0% | Low | Provisional |
-| 45 | Joint Rectangle Voting | `joint_rectangle_vote` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 3.2s | `697c22dd549f` | `697c22dd549f` | 10 | smoke | 0.0% | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 5 | +0.0000 | 100.0% | 100.0% | Low | Provisional |
-| 46 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 1s | `7e367fe3bfd5` | `7e367fe3bfd5` | 10 | smoke | 0.0% | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 5 | +0.0000 | 100.0% | 100.0% | Low | Provisional |
-| 47 | Whitespace Frame | `whitespace_frame` | Generator | `HTH-0001` | 2026-08-24 | [#754](https://github.com/dlstupka/hth/actions/runs/32774708290) | 434 ms | `9ef715dda063` | `9ef715dda063` | 10 | smoke | 0.0% | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 5 | +0.0000 | 100.0% | 100.0% | Low | Provisional |
+| **1** | **Fusion Gen3 — AMSRE + Doc-UFCN** | **`amsre_doc_ufcn_fusion`** | **Hybrid (AMSRE + Doc-UFCN gated rescue)** | **`HTH-0001`** | **2026-08-22** | **[#732](https://github.com/dlstupka/hth/actions/runs/32577678904)** | **47.9s** | **`57b3edb3ac1c`** | **`57b3edb3ac1c`** | **29** | **exhaustive** | **100.0%** | **0.9897** | **0.9814** | **0.0063** | **0.9897** | **0** | **+0.0117** | **20.7%** | **20.7%** | **High** | **Approved** |
+| 2 | Adaptive Multi-Scale Radial Edge Search | `adaptive_multi_scale_radial_edge` | Generator | `HTH-0001` | 2026-08-21 | [#720](https://github.com/dlstupka/hth/actions/runs/32537880801) | 31m 59s | `21ea516c3c5a` | `21ea516c3c5a` | 50001 | exhaustive | 100.0% | 0.9781 | 0.9564 | 0.0182 | 0.9781 | 0 | +0.0013 | 0.0% | 0.0% | Medium | Recommended |
+| 3 | Multi-Scale Radial Edge Search | `multi_scale_radial_edge` | Generator | `HTH-0001` | 2026-08-13 | [#371](https://github.com/dlstupka/hth/actions/runs/31748488486) | 3h 50m 18s | `ddb7623ebb92` | `ddb7623ebb92` | 384077 | exhaustive | 100.0% | 0.9765 | 0.9566 | 0.0175 | 0.9765 | 0 | +0.3245 | 0.0% | 0.0% | Medium | Recommended |
+| 4 | Fusion Gen1 — MSRE + BFQ + SPBV + Page Background | `msre_bfq_spbv_pbg` | Hybrid (MSRE + BFQ + SPBV + Page Background) | `HTH-0001` | 2026-08-21 | [#721](https://github.com/dlstupka/hth/actions/runs/32537960192) | 1h 8m 51s | `7b7dbac43ea6` | `7b7dbac43ea6` | 50176 | exhaustive | 84.5% | 0.9747 | 0.9638 | 0.0101 | 0.9747 | 0 | +0.0009 | 31.0% | 0.0% | Medium | Recommended |
+| 5 | Doc-UFCN Page-Mask Detector | `doc_ufcn_page_mask` | Generator | `HTH-0001` | 2026-08-21 | [#722](https://github.com/dlstupka/hth/actions/runs/32537994773) | 8.7s | `595002645fcc` | `595002645fcc` | 2000 | exhaustive | 100.0% | 0.9747 | 0.9545 | 0.0119 | 0.9747 | 0 | +0.0841 | 10.0% | 10.0% | High | Approved |
+| 6 | Fusion Gen2 — AMSRE + BFQ + SPBV + Page Background | `amsre_bfq_spbv_pbg` | Hybrid (AMSRE + BFQ + SPBV + Page Background) | `HTH-0001` | 2026-08-15 | [#428](https://github.com/dlstupka/hth/actions/runs/31899010020) | 1h 18m 41s | `156ff0241cc1` | `156ff0241cc1` | 50177 | exhaustive | 99.4% | 0.9743 | 0.9638 | 0.0103 | 0.9743 | 0 | +0.0000 | 90.2% | 61.6% | High | Approved |
+| 7 | dhSegment Page-Mask Detector | `dhsegment_page_mask` | Generator | `HTH-0001` | 2026-08-21 | [#723](https://github.com/dlstupka/hth/actions/runs/32538021572) | 43.3s | `15434712cddf` | `15434712cddf` | 10000 | exhaustive | 100.0% | 0.9735 | 0.9634 | 0.0100 | 0.9735 | 0 | +0.0065 | 7.7% | 1.3% | High | Approved |
+| 8 | Adaptive Radial Edge Search | `adaptive_radial_edge` | Generator | `HTH-0001` | 2026-08-20 | [#607](https://github.com/dlstupka/hth/actions/runs/32384172327) | 4m 45s | `bcd9a1d083cf` | `00dca876b0aa` | 49153 | exhaustive | 100.0% | 0.9726 | 0.9557 | 0.0159 | 0.9726 | 0 | +0.0397 | 0.1% | 0.0% | Medium | Recommended |
+| 9 | Signed Polar Boundary Voting | `signed_polar_boundary_vote` | Generator | `HTH-0001` | 2026-08-13 | [#374](https://github.com/dlstupka/hth/actions/runs/31748657986) | 4h 1m 25s | `8ddbe5f468cd` | `8ddbe5f468cd` | 453600 | exhaustive | 100.0% | 0.9717 | 0.9506 | 0.0193 | 0.9717 | 0 | +0.1235 | 0.0% | 0.0% | Medium | Recommended |
+| 10 | Border Fusion Quad | `border_fusion_quad` | Hybrid (Radial + Polar + Gradient) | `HTH-0001` | 2026-08-13 | [#372](https://github.com/dlstupka/hth/actions/runs/31748550347) | 11h 28m 47s | `2370e6cea486` | `2370e6cea486` | 539001 | exhaustive | 99.1% | 0.9707 | 0.9588 | 0.0112 | 0.9707 | 0 | +0.0817 | 5.4% | 0.8% | High | Approved |
+| 11 | Page Background | `page_background` | Generator | `HTH-0001` | 2026-08-14 | [#383](https://github.com/dlstupka/hth/actions/runs/31806184641) | 16m 17s | `afbe81a796a1` | `afbe81a796a1` | 200001 | exhaustive | 46.0% | 0.9692 | 0.9498 | 0.0171 | 0.9692 | 0 | +0.2074 | 0.6% | 0.1% | Medium | Recommended |
+| 12 | Polar Boundary Voting | `polar_boundary_vote` | Generator | `HTH-0001` | 2026-08-15 | [#416](https://github.com/dlstupka/hth/actions/runs/31891034843) | 26m 49s | `935369155754` | `935369155754` | 19636 | exhaustive | 100.0% | 0.9691 | 0.9524 | 0.0154 | 0.9691 | 0 | +0.0013 | 0.0% | 0.0% | Medium | Recommended |
+| 13 | Eynollah Page-Mask Detector | `eynollah_page_mask` | Generator | `HTH-0001` | 2026-08-21 | [#685](https://github.com/dlstupka/hth/actions/runs/32433672262) | 792 ms | `8b854e1547c4` | `0dcad981fc34` | 81 | exhaustive | 100.0% | 0.9641 | 0.9393 | 0.0160 | 0.9641 | 0 | +0.0000 | 42.0% | 4.9% | High | Approved |
+| 14 | Gradient Boundary Voting | `gradient_vote` | Generator | `HTH-0001` | 2026-08-15 | [#421](https://github.com/dlstupka/hth/actions/runs/31891526961) | 809 ms | `cf581d27715b` | `cf581d27715b` | 22 | exhaustive | 54.5% | 0.9622 | 0.9384 | 0.0160 | 0.9622 | 0 | +0.0155 | 18.2% | 13.6% | Medium | Recommended |
+| 15 | Radial Edge Search | `radial_edge` | Generator | `HTH-0001` | 2026-08-13 | [#369](https://github.com/dlstupka/hth/actions/runs/31748401024) | 13m 28s | `837321a04ccf` | `837321a04ccf` | 400001 | exhaustive | 100.0% | 0.9571 | 0.9261 | 0.0183 | 0.9571 | 0 | +0.0068 | 0.1% | 0.0% | Medium | Recommended |
+| 16 | Segment-Supported Polar Voting | `segment_supported_polar_vote` | Hybrid (Polar + LSD) | `HTH-0001` | 2026-08-14 | [#382](https://github.com/dlstupka/hth/actions/runs/31806152306) | 22m 54s | `4546643c94a4` | `4546643c94a4` | 180001 | exhaustive | 80.0% | 0.9470 | 0.8447 | 0.0536 | 0.9470 | 0 | +0.2496 | 0.0% | 0.0% | Medium | Recommended |
+| 17 | ScanTailor Page Frame | `scantailor_page_frame` | Generator | `HTH-0001` | 2026-08-21 | [#719](https://github.com/dlstupka/hth/actions/runs/32536118341) | 14.3s | `150bcbfd2844` | `150bcbfd2844` | 55 | exhaustive | 100.0% | 0.9404 | 0.8482 | 0.0480 | 0.9404 | 0 | +0.0163 | 12.7% | 1.8% | High | Approved |
+| 18 | docExtractor Page-Mask Detector | `docextractor_page_mask` | Generator | `HTH-0001` | 2026-08-21 | [#703](https://github.com/dlstupka/hth/actions/runs/32512973199) | 794 ms | `e114f8dccca4` | `e114f8dccca4` | 100 | exhaustive | 100.0% | 0.9344 | 0.8098 | 0.0642 | 0.9344 | 0 | +0.0063 | 6.0% | 3.0% | High | Approved |
+| 19 | Orli Page Mask | `orli_page_mask` | Generator | `HTH-0001` | 2026-08-20 | [#584](https://github.com/dlstupka/hth/actions/runs/32327736880) | 13.7s | `d58e03537115` | `bd0c02b4f4fe` | 1680 | exhaustive | 50.0% | 0.9185 | 0.8557 | 0.0411 | 0.9185 | 0 | +0.1122 | 0.8% | 0.4% | Medium | Recommended |
+| 20 | GrabCut Segmentation | `grabcut` | Generator | `HTH-0001` | 2026-08-16 | [#447](https://github.com/dlstupka/hth/actions/runs/31955479629) | 46m 8s | `110867d137a9` | `110867d137a9` | 13122 | exhaustive | 95.4% | 0.9137 | 0.7378 | 0.0886 | 0.9137 | 0 | +0.1006 | 0.0% | 0.0% | Medium | Recommended |
+| 21 | Contour Quadrilateral | `contour_quad` | Generator | `HTH-0001` | 2026-08-10 | [#287](https://github.com/dlstupka/hth/actions/runs/31424165043) | 10h 40m 34s | `49095b866d0d` | `49095b866d0d` | 1062882 | exhaustive | 33.3% | 0.8874 | 0.7589 | 0.0731 | 0.8874 | 0 | +0.0105 | 15.5% | 5.3% | Medium | Recommended |
+| 22 | Learned Page-Mask Detector | `learned_page_mask` | Generator | `HTH-0001` | 2026-08-13 | [#355](https://github.com/dlstupka/hth/actions/runs/31711919948) | 1h 19m 22s | `275078578cee` | `275078578cee` | 50000 | exhaustive | 100.0% | 0.8868 | 0.8122 | 0.0470 | 0.8868 | 0 | +0.0494 | 1.0% | 0.1% | High | Approved |
+| 23 | PageNet Page-Mask Detector | `pagenet_page_mask` | Generator | `HTH-0001` | 2026-08-21 | [#696](https://github.com/dlstupka/hth/actions/runs/32487110122) | 846 ms | `632d3ade8aa9` | `3d8095986d9a` | 251 | exhaustive | 100.0% | 0.8868 | 0.8122 | 0.0470 | 0.8868 | 0 | +0.0494 | 15.9% | 6.4% | High | Approved |
+| 24 | GrabCut + Contour | `grabcut_contour` | Hybrid (GrabCut + Contour Quad) | `HTH-0001` | 2026-08-18 | [#512](https://github.com/dlstupka/hth/actions/runs/32089562359) | 3h 22m 55s | `3a1623be3b6e` | `3a1623be3b6e` | 46657 | exhaustive | 100.0% | 0.8781 | 0.7198 | 0.0900 | 0.8781 | 0 | +0.0651 | 6.2% | 6.2% | High | Approved |
+| 25 | Contour + GrabCut | `contour_grabcut` | Hybrid (Contour Quad + GrabCut) | `HTH-0001` | 2026-08-10 | [#285](https://github.com/dlstupka/hth/actions/runs/31424162073) | 3h 9m 30s | `3eec8a03f1de` | `3eec8a03f1de` | 6562 | exhaustive | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
+| 26 | Contour + Projection | `contour_projection` | Hybrid (Contour Quad + Projection) | `HTH-0001` | 2026-08-10 | [#286](https://github.com/dlstupka/hth/actions/runs/31424163624) | 7m 22s | `0cd13eb1a471` | `0cd13eb1a471` | 6562 | exhaustive | 100.0% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 92.6% | 92.6% | High | Approved |
+| 27 | Cross-Edge Contour | `cross_edge_contour` | Hybrid (Contour Quad + Cross-Edge Validation) | `HTH-0001` | 2026-08-10 | [#288](https://github.com/dlstupka/hth/actions/runs/31424166301) | 3m 28s | `a5450e58ec9e` | `a5450e58ec9e` | 6562 | exhaustive | 29.6% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.0000 | 29.6% | 29.6% | Medium | Recommended |
+| 28 | Edge-Supported Contour | `edge_contour` | Hybrid (Contour Quad + LSD) | `HTH-0001` | 2026-08-10 | [#301](https://github.com/dlstupka/hth/actions/runs/31437186835) | 1m 8s | `4e5bc37a649a` | `4e5bc37a649a` | 13123 | exhaustive | 12.3% | 0.8768 | 0.7589 | 0.0734 | 0.8768 | 0 | +0.3377 | 8.6% | 8.6% | Medium | Recommended |
+| 29 | Contour + Components | `contour_components` | Hybrid (Contour Quad + Components) | `HTH-0001` | 2026-08-10 | [#284](https://github.com/dlstupka/hth/actions/runs/31424160561) | 3m 48s | `14818b491952` | `14818b491952` | 19684 | exhaustive | 100.0% | 0.8617 | 0.7572 | 0.0655 | 0.8617 | 0 | +0.0000 | 100.0% | 100.0% | High | Approved |
+| 30 | Contour Envelope | `contour` | Generator | `HTH-0001` | 2026-08-10 | [#283](https://github.com/dlstupka/hth/actions/runs/31424159190) | 4.6s | `7aed2fc501c5` | `7aed2fc501c5` | 1458 | exhaustive | 50.0% | 0.8498 | 0.5457 | 0.1589 | 0.8498 | 0 | +0.1776 | 1.9% | 1.9% | Medium | Recommended |
+| 31 | Kraken Page Mask | `kraken_page_mask` | Generator | `HTH-0001` | 2026-08-17 | [#503](https://github.com/dlstupka/hth/actions/runs/32066651136) | 9.4s | `c4845fd6c6b6` | `c4845fd6c6b6` | 10000 | exhaustive | 100.0% | 0.8396 | 0.5596 | 0.1531 | 0.8396 | 0 | +0.0328 | 1.0% | 0.4% | High | Approved |
+| 32 | Distance Transform Detector | `distance_transform` | Generator | `HTH-0001` | 2026-08-12 | [#322](https://github.com/dlstupka/hth/actions/runs/31606269618) | 28.6s | `e66a7546e1a7` | `e66a7546e1a7` | 2187 | exhaustive | 51.2% | 0.8388 | 0.5001 | 0.1745 | 0.8388 | 0 | +0.0795 | 6.6% | 6.6% | Medium | Recommended |
+| 33 | Mask R-CNN Page-Mask Detector | `mask_rcnn_page_mask` | Generator | `HTH-0001` | 2026-08-20 | [#667](https://github.com/dlstupka/hth/actions/runs/32409137793) | 901 ms | `fb81bb954397` | `fb81bb954397` | 91 | exhaustive | 100.0% | 0.8255 | 0.5226 | 0.1580 | 0.8255 | 0 | +0.0354 | 19.8% | 6.6% | High | Approved |
+| 34 | Star-Convex Boundary Optimization | `star_convex` | Generator | `HTH-0001` | 2026-08-12 | [#328](https://github.com/dlstupka/hth/actions/runs/31614832224) | 7.2s | `024732f5e631` | `024732f5e631` | 729 | exhaustive | 100.0% | 0.8179 | 0.5367 | 0.1827 | 0.8179 | 0 | +0.0422 | 0.4% | 0.4% | Medium | Recommended |
+| 35 | Connected Components | `components` | Generator | `HTH-0001` | 2026-08-10 | [#281](https://github.com/dlstupka/hth/actions/runs/31424156590) | 40.8s | `f1929c8e2655` | `f1929c8e2655` | 19683 | exhaustive | 75.8% | 0.7897 | 0.5725 | 0.1665 | 0.7897 | 0 | +0.0712 | 0.8% | 0.8% | Medium | Recommended |
+| 36 | RANSAC Border Fit | `ransac` | Generator | `HTH-0001` | 2026-08-10 | [#296](https://github.com/dlstupka/hth/actions/runs/31424177450) | 1m 31s | `9647b030702e` | `9647b030702e` | 1458 | exhaustive | 5.3% | 0.7541 | 0.3558 | 0.2541 | 0.7541 | 0 | +0.0710 | 0.4% | 0.4% | Medium | Recommended |
+| 37 | Line Segment Detector | `lsd` | Generator | `HTH-0001` | 2026-08-10 | [#294](https://github.com/dlstupka/hth/actions/runs/31424174875) | 59s | `7546c5067527` | `7546c5067527` | 2187 | exhaustive | 0.0% | 0.7378 | 0.0000 | 0.3721 | 0.9222 | 1 | +0.1964 | 1.2% | 0.4% | Medium | Recommended |
+| 38 | Convex Hull Detector | `convex_hull` | Generator | `HTH-0001` | 2026-08-12 | [#321](https://github.com/dlstupka/hth/actions/runs/31606215160) | 2s | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 2187 | exhaustive | 0.0% | 0.7325 | 0.0000 | 0.3683 | 0.9156 | 1 | +0.0692 | 6.6% | 6.6% | Medium | Recommended |
+| 39 | Border Energy Validator | `border_energy` | Hybrid (Contour Quad + Border Energy) | `HTH-0001` | 2026-08-10 | [#278](https://github.com/dlstupka/hth/actions/runs/31423513220) | 3m 59s | `74e2112aac01` | `74e2112aac01` | 6562 | exhaustive | 0.0% | 0.7250 | 0.0000 | 0.3651 | 0.9063 | 1 | +0.1708 | 19.8% | 19.8% | Medium | Recommended |
+| 40 | Distance-Transform Rectangle Proposal | `distance_transform_rect` | Generator | `HTH-0001` | 2026-08-12 | [#326](https://github.com/dlstupka/hth/actions/runs/31614704921) | 1.2s | `0a8482550c35` | `0a8482550c35` | 729 | exhaustive | 9.9% | 0.7243 | 0.4499 | 0.2245 | 0.7243 | 0 | +0.0896 | 0.8% | 0.8% | Medium | Recommended |
+| 41 | Hough Line Borders | `hough` | Generator | `HTH-0001` | 2026-08-10 | [#293](https://github.com/dlstupka/hth/actions/runs/31424173458) | 3m 4s | `c2c117479e3f` | `c2c117479e3f` | 2188 | exhaustive | 0.0% | 0.6050 | 0.0000 | 0.3217 | 0.7563 | 1 | +0.1266 | 0.0% | 0.0% | Medium | Recommended |
+| 42 | Projective Gradient Vote | `projective_gradient_vote` | Generator | `HTH-0001` | 2026-08-13 | [#358](https://github.com/dlstupka/hth/actions/runs/31715583665) | 6.1s | `e536a07cca54` | `e536a07cca54` | 730 | exhaustive | 0.0% | 0.5541 | 0.0000 | 0.4546 | 0.9235 | 2 | +0.1067 | 11.1% | 3.7% | Medium | Recommended |
+| 43 | Consensus Quadrilateral | `consensus_quad` | Hybrid (Contour Quad + Edge Contour) | `HTH-0001` | 2026-08-10 | [#282](https://github.com/dlstupka/hth/actions/runs/31424157793) | 21.3s | `f387da7ebb7e` | `f387da7ebb7e` | 243 | exhaustive | 0.0% | 0.5528 | 0.0000 | 0.4526 | 0.9213 | 2 | +0.0015 | 9.9% | 4.9% | Medium | Recommended |
+| 44 | Radon Boundary Projection | `radon_boundary` | Generator | `HTH-0001` | 2026-08-12 | [#331](https://github.com/dlstupka/hth/actions/runs/31633124269) | 10.4s | `dd6b2601d568` | `dd6b2601d568` | 729 | exhaustive | 58.0% | 0.4983 | 0.2028 | 0.2509 | 0.4983 | 0 | +0.0756 | 1.2% | 1.2% | Medium | Recommended |
+| 45 | Joint Rectangle Voting | `joint_rectangle_vote` | Generator | `HTH-0001` | 2026-08-12 | [#336](https://github.com/dlstupka/hth/actions/runs/31635559108) | 22.3s | `5c9509e05f14` | `5c9509e05f14` | 2187 | exhaustive | 0.0% | 0.1980 | 0.0000 | 0.3960 | 0.9899 | 4 | +0.1980 | 1.2% | 1.2% | Medium | Recommended |
+| 46 | Text Flow Envelope | `text_flow` | Generator | `HTH-0001` | 2026-08-12 | [#335](https://github.com/dlstupka/hth/actions/runs/31635508472) | 3.5s | `a2bbfc162f9e` | `a2bbfc162f9e` | 729 | exhaustive | 0.0% | 0.1634 | 0.0000 | 0.3268 | 0.8170 | 4 | +0.0038 | 4.7% | 4.7% | Medium | Recommended |
+| 47 | Whitespace Frame | `whitespace_frame` | Generator | `HTH-0001` | 2026-08-12 | [#333](https://github.com/dlstupka/hth/actions/runs/31633282476) | 1.3s | `9ef715dda063` | `9ef715dda063` | 730 | exhaustive | 0.0% | 0.0000 | 0.0000 | 0.0000 | 0.0000 | 5 | +0.0000 | 100.0% | 100.0% | Medium | Recommended |
 
 [↑ Back to Navigation](#table-of-contents)
 
@@ -303,7 +303,7 @@ This table prefers compatible full calibrations when available and falls back to
 - **Calibration Evidence:** deterministic evidence score for how completely this run characterizes the evaluated Golden Set and parameter grid. Score 2 points for complete exhaustive coverage, 1 point when at least 90% of parameter sets succeed on every page, and 1 point when at least 1% of tested sets are within 0.001 Avg IoU of the winner. **Low** = 0–1 points, **Medium** = 2–3 points, and **High** = 4 points. This is not confidence that the detector generalizes beyond this Golden Set and grid.
 - **Approval Level:** automatic Golden Set-scoped engineering status derived from Search Type and Calibration Evidence. **Provisional** = smoke or unavailable evidence; **Candidate** = any reduced search or exhaustive search with Low evidence; **Recommended** = exhaustive search with Medium evidence; **Approved** = exhaustive search with High evidence. A different Golden Set requires its own calibration and approval.
 - **Evidence tables:** identify what each detector actually observes and whether that evidence generates, validates, filters, or scores a page hypothesis.
-- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/13ed99f5ee41d005d327af9607ec1d7bab441417/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/amsre_doc_ufcn_fusion/run-20260824-210335/calibration-intelligence.json).
+- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/479bed1e63047ecb5cd0a599a6c6a928991e5fe6/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/amsre_doc_ufcn_fusion/run-20260822-140711/calibration-intelligence.json).
 - **Est. Serial Runtime\*\*:** Estimated single-detector serial runtime derived from recorded regression evidence; actual wall time varies with parallelism and scheduling.
 
 [↑ Back to Navigation](#table-of-contents)
@@ -5324,12 +5324,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `e8e8dc34f8fb` | `e8e8dc34f8fb` | `baseline` | 0.9767 | 0.9566 | 0.0177 | +0.0000 | 0.9767 | 0 | reference | reference |
-| 1 | new | `06a6f380f2b1` | `06a6f380f2b1` | `06a6f380f2b1` | 0.9723 | 0.9557 | 0.0152 | -0.0045 | 0.9723 | 0 | 5.3s | 50.00% |
-| 2 | new | `4b0617f73ec2` | `4b0617f73ec2` | `4b0617f73ec2` | 0.9723 | 0.9557 | 0.0152 | -0.0045 | 0.9723 | 0 | 6.5s | 60.00% |
-| 3 | new | `e634d8ca1523` | `e634d8ca1523` | `e634d8ca1523` | 0.9721 | 0.9557 | 0.0149 | -0.0047 | 0.9721 | 0 | 9.9s | 100.00% |
-| 4 | new | `b45c5ee0f5fa` | `b45c5ee0f5fa` | `b45c5ee0f5fa` | 0.9720 | 0.9557 | 0.0148 | -0.0047 | 0.9720 | 0 | 4.6s | 40.00% |
-| 5 | new | `f6301375e3a7` | `f6301375e3a7` | `f6301375e3a7` | 0.9705 | 0.9557 | 0.0146 | -0.0062 | 0.9705 | 0 | 8.9s | 90.00% |
+| Baseline* | [#720](https://github.com/dlstupka/hth/actions/runs/32537880801) | `e8e8dc34f8fb` | `e8e8dc34f8fb` | `baseline` | 0.9767 | 0.9566 | 0.0177 | +0.0000 | 0.9767 | 0 | reference | reference |
+| 1 | [#720](https://github.com/dlstupka/hth/actions/runs/32537880801) | `06a6f380f2b1` | `06a6f380f2b1` | `06a6f380f2b1` | 0.9723 | 0.9557 | 0.0152 | -0.0045 | 0.9723 | 0 | 5.3s | 50.00% |
+| 2 | [#720](https://github.com/dlstupka/hth/actions/runs/32537880801) | `4b0617f73ec2` | `4b0617f73ec2` | `4b0617f73ec2` | 0.9723 | 0.9557 | 0.0152 | -0.0045 | 0.9723 | 0 | 6.5s | 60.00% |
+| 3 | [#720](https://github.com/dlstupka/hth/actions/runs/32537880801) | `e634d8ca1523` | `e634d8ca1523` | `e634d8ca1523` | 0.9721 | 0.9557 | 0.0149 | -0.0047 | 0.9721 | 0 | 9.9s | 100.00% |
+| 4 | [#720](https://github.com/dlstupka/hth/actions/runs/32537880801) | `b45c5ee0f5fa` | `b45c5ee0f5fa` | `b45c5ee0f5fa` | 0.9720 | 0.9557 | 0.0148 | -0.0047 | 0.9720 | 0 | 4.6s | 40.00% |
+| 5 | [#720](https://github.com/dlstupka/hth/actions/runs/32537880801) | `f6301375e3a7` | `f6301375e3a7` | `f6301375e3a7` | 0.9705 | 0.9557 | 0.0146 | -0.0062 | 0.9705 | 0 | 8.9s | 90.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -5675,12 +5675,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `a132c2ac5e87` | `a132c2ac5e87` | `baseline` | 0.9329 | 0.8817 | 0.0344 | +0.0000 | 0.9329 | 0 | reference | reference |
-| 1 | new | `31e6d8b608a6` | `31e6d8b608a6` | `31e6d8b608a6` | 0.8826 | 0.8125 | 0.0362 | -0.0503 | 0.8826 | 0 | 2.6s | 60.00% |
-| 2 | new | `18306ca501cd` | `18306ca501cd` | `18306ca501cd` | 0.8766 | 0.8125 | 0.0346 | -0.0563 | 0.8766 | 0 | 1.1s | 30.00% |
-| 3 | new | `b1bad09b25cc` | `b1bad09b25cc` | `b1bad09b25cc` | 0.8754 | 0.8583 | 0.0204 | -0.0575 | 0.8754 | 0 | 1.8s | 40.00% |
-| 4 | new | `5ebb46d5cf37` | `5ebb46d5cf37` | `5ebb46d5cf37` | 0.8676 | 0.8016 | 0.0477 | -0.0653 | 0.8676 | 0 | 2.4s | 50.00% |
-| 5 | new | `2981cdfaca34` | `2981cdfaca34` | `2981cdfaca34` | 0.8676 | 0.8016 | 0.0477 | -0.0653 | 0.8676 | 0 | 3.6s | 80.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `a132c2ac5e87` | `a132c2ac5e87` | `baseline` | 0.9329 | 0.8817 | 0.0344 | +0.0000 | 0.9329 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `31e6d8b608a6` | `31e6d8b608a6` | `31e6d8b608a6` | 0.8826 | 0.8125 | 0.0362 | -0.0503 | 0.8826 | 0 | 2.6s | 60.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `18306ca501cd` | `18306ca501cd` | `18306ca501cd` | 0.8766 | 0.8125 | 0.0346 | -0.0563 | 0.8766 | 0 | 1.1s | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b1bad09b25cc` | `b1bad09b25cc` | `b1bad09b25cc` | 0.8754 | 0.8583 | 0.0204 | -0.0575 | 0.8754 | 0 | 1.8s | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5ebb46d5cf37` | `5ebb46d5cf37` | `5ebb46d5cf37` | 0.8676 | 0.8016 | 0.0477 | -0.0653 | 0.8676 | 0 | 2.4s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2981cdfaca34` | `2981cdfaca34` | `2981cdfaca34` | 0.8676 | 0.8016 | 0.0477 | -0.0653 | 0.8676 | 0 | 3.6s | 80.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -5966,7 +5966,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `156ff0241cc1` | `156ff0241cc1` | partial |
 
 ### Detector Evidence
 
@@ -6003,12 +6003,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `156ff0241cc1` | `156ff0241cc1` | `baseline` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | reference | reference |
-| 1 | new | `2aa41939b8f9` | `2aa41939b8f9` | `2aa41939b8f9` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 18s | 70.00% |
-| 2 | new | `e940d0a6d2b3` | `e940d0a6d2b3` | `e940d0a6d2b3` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 22.4s | 80.00% |
-| 3 | new | `15d3526249ed` | `15d3526249ed` | `15d3526249ed` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 22.8s | 90.00% |
-| 4 | new | `88a403377e09` | `88a403377e09` | `88a403377e09` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 25.4s | 100.00% |
-| 5 | new | `8243d036b8d9` | `8243d036b8d9` | `8243d036b8d9` | 0.9707 | 0.9539 | 0.0138 | -0.0035 | 0.9707 | 0 | 7.8s | 20.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `156ff0241cc1` | `156ff0241cc1` | `baseline` | 0.9743 | 0.9638 | 0.0103 | +0.0000 | 0.9743 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2aa41939b8f9` | `2aa41939b8f9` | `2aa41939b8f9` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 18s | 70.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e940d0a6d2b3` | `e940d0a6d2b3` | `e940d0a6d2b3` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 22.4s | 80.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `15d3526249ed` | `15d3526249ed` | `15d3526249ed` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 22.8s | 90.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `88a403377e09` | `88a403377e09` | `88a403377e09` | 0.9709 | 0.9539 | 0.0139 | -0.0034 | 0.9709 | 0 | 25.4s | 100.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8243d036b8d9` | `8243d036b8d9` | `8243d036b8d9` | 0.9707 | 0.9539 | 0.0138 | -0.0035 | 0.9707 | 0 | 7.8s | 20.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -6320,12 +6320,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `d19ebc3334b0` | `d19ebc3334b0` | `baseline` | 0.9781 | 0.9564 | 0.0182 | -0.0117 | 0.9781 | 0 | reference | reference |
-| 1 | new | `77da32a57bfc` | `77da32a57bfc` | `77da32a57bfc` | 0.9897 | 0.9814 | 0.0063 | +0.0000 | 0.9897 | 0 | 6.2s | 50.00% |
-| 2 | new | `57b3edb3ac1c` | `57b3edb3ac1c` | `57b3edb3ac1c` | 0.9897 | 0.9814 | 0.0063 | +0.0000 | 0.9897 | 0 | 7.9s | 60.00% |
-| 3 | new | `3ecd02174d3a` | `3ecd02174d3a` | `3ecd02174d3a` | 0.9897 | 0.9814 | 0.0063 | +0.0000 | 0.9897 | 0 | 8.4s | 70.00% |
-| 4 | new | `5e128fa4244c` | `5e128fa4244c` | `5e128fa4244c` | 0.9847 | 0.9564 | 0.0149 | -0.0050 | 0.9847 | 0 | 3.7s | 20.00% |
-| 5 | new | `f142faf43471` | `f142faf43471` | `f142faf43471` | 0.9847 | 0.9564 | 0.0149 | -0.0050 | 0.9847 | 0 | 3.9s | 30.00% |
+| Baseline* | [#732](https://github.com/dlstupka/hth/actions/runs/32577678904) | `d19ebc3334b0` | `d19ebc3334b0` | `baseline` | 0.9781 | 0.9564 | 0.0182 | -0.0117 | 0.9781 | 0 | reference | reference |
+| 1 | [#732](https://github.com/dlstupka/hth/actions/runs/32577678904) | `77da32a57bfc` | `77da32a57bfc` | `77da32a57bfc` | 0.9897 | 0.9814 | 0.0063 | +0.0000 | 0.9897 | 0 | 6.2s | 50.00% |
+| 2 | [#732](https://github.com/dlstupka/hth/actions/runs/32577678904) | `57b3edb3ac1c` | `57b3edb3ac1c` | `57b3edb3ac1c` | 0.9897 | 0.9814 | 0.0063 | +0.0000 | 0.9897 | 0 | 7.9s | 60.00% |
+| 3 | [#732](https://github.com/dlstupka/hth/actions/runs/32577678904) | `3ecd02174d3a` | `3ecd02174d3a` | `3ecd02174d3a` | 0.9897 | 0.9814 | 0.0063 | +0.0000 | 0.9897 | 0 | 8.4s | 70.00% |
+| 4 | [#732](https://github.com/dlstupka/hth/actions/runs/32577678904) | `5e128fa4244c` | `5e128fa4244c` | `5e128fa4244c` | 0.9847 | 0.9564 | 0.0149 | -0.0050 | 0.9847 | 0 | 3.7s | 20.00% |
+| 5 | [#732](https://github.com/dlstupka/hth/actions/runs/32577678904) | `f142faf43471` | `f142faf43471` | `f142faf43471` | 0.9847 | 0.9564 | 0.0149 | -0.0050 | 0.9847 | 0 | 3.9s | 30.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -6653,12 +6653,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `e38a975d1436` | `e38a975d1436` | `baseline` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | reference | reference |
-| 1 | new | `ee832909df97` | `ee832909df97` | `ee832909df97` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 858 ms | 20.00% |
-| 2 | new | `24d1f88af992` | `24d1f88af992` | `24d1f88af992` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 917 ms | 30.00% |
-| 3 | new | `66d5d1766542` | `66d5d1766542` | `66d5d1766542` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 1.5s | 50.00% |
-| 4 | new | `d051925a3a6c` | `d051925a3a6c` | `d051925a3a6c` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 1.4s | 40.00% |
-| 5 | new | `d4b93ff23f99` | `d4b93ff23f99` | `d4b93ff23f99` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 2s | 70.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e38a975d1436` | `e38a975d1436` | `baseline` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ee832909df97` | `ee832909df97` | `ee832909df97` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 858 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `24d1f88af992` | `24d1f88af992` | `24d1f88af992` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 917 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `66d5d1766542` | `66d5d1766542` | `66d5d1766542` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 1.5s | 50.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d051925a3a6c` | `d051925a3a6c` | `d051925a3a6c` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 1.4s | 40.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d4b93ff23f99` | `d4b93ff23f99` | `d4b93ff23f99` | 0.5542 | 0.0000 | 0.4538 | +0.0000 | 0.9237 | 2 | 2s | 70.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -6979,12 +6979,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `17b4a7b30cd9` | `17b4a7b30cd9` | `baseline` | 0.8890 | 0.5825 | 0.1538 | -0.0477 | 0.8890 | 0 | reference | reference |
-| 1 | new | `90182e3a350a` | `90182e3a350a` | `90182e3a350a` | 0.9367 | 0.8379 | 0.0539 | +0.0000 | 0.9367 | 0 | 1.1s | 20.00% |
-| 2 | new | `736ea0f654f7` | `736ea0f654f7` | `736ea0f654f7` | 0.9351 | 0.8379 | 0.0543 | -0.0016 | 0.9351 | 0 | 1.1s | 30.00% |
-| 3 | new | `4bc129a45c0c` | `4bc129a45c0c` | `4bc129a45c0c` | 0.9351 | 0.8379 | 0.0543 | -0.0016 | 0.9351 | 0 | 1.7s | 40.00% |
-| 4 | new | `63a3ee8a870f` | `63a3ee8a870f` | `63a3ee8a870f` | 0.9327 | 0.8379 | 0.0520 | -0.0040 | 0.9327 | 0 | 1.8s | 50.00% |
-| 5 | new | `2c69d245c77d` | `2c69d245c77d` | `2c69d245c77d` | 0.9250 | 0.8379 | 0.0526 | -0.0117 | 0.9250 | 0 | 2.4s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `17b4a7b30cd9` | `17b4a7b30cd9` | `baseline` | 0.8890 | 0.5825 | 0.1538 | -0.0477 | 0.8890 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `90182e3a350a` | `90182e3a350a` | `90182e3a350a` | 0.9367 | 0.8379 | 0.0539 | +0.0000 | 0.9367 | 0 | 1.1s | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `736ea0f654f7` | `736ea0f654f7` | `736ea0f654f7` | 0.9351 | 0.8379 | 0.0543 | -0.0016 | 0.9351 | 0 | 1.1s | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4bc129a45c0c` | `4bc129a45c0c` | `4bc129a45c0c` | 0.9351 | 0.8379 | 0.0543 | -0.0016 | 0.9351 | 0 | 1.7s | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `63a3ee8a870f` | `63a3ee8a870f` | `63a3ee8a870f` | 0.9327 | 0.8379 | 0.0520 | -0.0040 | 0.9327 | 0 | 1.8s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2c69d245c77d` | `2c69d245c77d` | `2c69d245c77d` | 0.9250 | 0.8379 | 0.0526 | -0.0117 | 0.9250 | 0 | 2.4s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -7307,12 +7307,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `4e09dc84fa8a` | `4e09dc84fa8a` | `baseline` | 0.7185 | 0.2413 | 0.2967 | -0.0609 | 0.7185 | 0 | reference | reference |
-| 1 | new | `7eb87978bb9a` | `7eb87978bb9a` | `7eb87978bb9a` | 0.7794 | 0.5504 | 0.1789 | +0.0000 | 0.7794 | 0 | 104 ms | 40.00% |
-| 2 | new | `2a180d02de36` | `2a180d02de36` | `2a180d02de36` | 0.7794 | 0.5504 | 0.1789 | +0.0000 | 0.7794 | 0 | 160 ms | 70.00% |
-| 3 | new | `b6a644d99d2e` | `b6a644d99d2e` | `b6a644d99d2e` | 0.7794 | 0.5504 | 0.1789 | +0.0000 | 0.7794 | 0 | 221 ms | 100.00% |
-| 4 | new | `04ff9a0c7a86` | `04ff9a0c7a86` | `04ff9a0c7a86` | 0.7734 | 0.4617 | 0.2201 | -0.0060 | 0.7734 | 0 | 85 ms | 30.00% |
-| 5 | new | `732d1fd40ae7` | `732d1fd40ae7` | `732d1fd40ae7` | 0.7734 | 0.4617 | 0.2201 | -0.0060 | 0.7734 | 0 | 146 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4e09dc84fa8a` | `4e09dc84fa8a` | `baseline` | 0.7185 | 0.2413 | 0.2967 | -0.0609 | 0.7185 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7eb87978bb9a` | `7eb87978bb9a` | `7eb87978bb9a` | 0.7794 | 0.5504 | 0.1789 | +0.0000 | 0.7794 | 0 | 104 ms | 40.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2a180d02de36` | `2a180d02de36` | `2a180d02de36` | 0.7794 | 0.5504 | 0.1789 | +0.0000 | 0.7794 | 0 | 160 ms | 70.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b6a644d99d2e` | `b6a644d99d2e` | `b6a644d99d2e` | 0.7794 | 0.5504 | 0.1789 | +0.0000 | 0.7794 | 0 | 221 ms | 100.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `04ff9a0c7a86` | `04ff9a0c7a86` | `04ff9a0c7a86` | 0.7734 | 0.4617 | 0.2201 | -0.0060 | 0.7734 | 0 | 85 ms | 30.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `732d1fd40ae7` | `732d1fd40ae7` | `732d1fd40ae7` | 0.7734 | 0.4617 | 0.2201 | -0.0060 | 0.7734 | 0 | 146 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -7645,12 +7645,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `dce471449373` | `dce471449373` | `baseline` | 0.5513 | 0.0000 | 0.4513 | +0.0000 | 0.9188 | 2 | reference | reference |
-| 1 | new | `48c503656d02` | `48c503656d02` | `48c503656d02` | 0.3654 | 0.0000 | 0.4487 | -0.1859 | 0.9136 | 3 | 5s | 80.00% |
-| 2 | new | `957153998277` | `957153998277` | `957153998277` | 0.3654 | 0.0000 | 0.4487 | -0.1859 | 0.9136 | 3 | 5.1s | 90.00% |
-| 3 | new | `1752e509b03b` | `1752e509b03b` | `1752e509b03b` | 0.3654 | 0.0000 | 0.4487 | -0.1859 | 0.9136 | 3 | 5.8s | 100.00% |
-| 4 | new | `0c4cd99b53b0` | `0c4cd99b53b0` | `0c4cd99b53b0` | 0.3653 | 0.0000 | 0.4485 | -0.1860 | 0.9131 | 3 | 1.9s | 30.00% |
-| 5 | new | `c11482b7189e` | `c11482b7189e` | `c11482b7189e` | 0.3653 | 0.0000 | 0.4485 | -0.1860 | 0.9131 | 3 | 1.8s | 20.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `dce471449373` | `dce471449373` | `baseline` | 0.5513 | 0.0000 | 0.4513 | +0.0000 | 0.9188 | 2 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `48c503656d02` | `48c503656d02` | `48c503656d02` | 0.3654 | 0.0000 | 0.4487 | -0.1859 | 0.9136 | 3 | 5s | 80.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `957153998277` | `957153998277` | `957153998277` | 0.3654 | 0.0000 | 0.4487 | -0.1859 | 0.9136 | 3 | 5.1s | 90.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `1752e509b03b` | `1752e509b03b` | `1752e509b03b` | 0.3654 | 0.0000 | 0.4487 | -0.1859 | 0.9136 | 3 | 5.8s | 100.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0c4cd99b53b0` | `0c4cd99b53b0` | `0c4cd99b53b0` | 0.3653 | 0.0000 | 0.4485 | -0.1860 | 0.9131 | 3 | 1.9s | 30.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c11482b7189e` | `c11482b7189e` | `c11482b7189e` | 0.3653 | 0.0000 | 0.4485 | -0.1860 | 0.9131 | 3 | 1.8s | 20.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -7973,12 +7973,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `6019a18e4c4e` | `6019a18e4c4e` | `baseline` | 0.6722 | 0.0000 | 0.3846 | -0.1670 | 0.8403 | 1 | reference | reference |
-| 1 | new | `0bf3c1624426` | `0bf3c1624426` | `0bf3c1624426` | 0.8392 | 0.4919 | 0.1797 | +0.0000 | 0.8392 | 0 | 48 ms | 50.00% |
-| 2 | new | `a20447ccca1e` | `a20447ccca1e` | `a20447ccca1e` | 0.8364 | 0.4784 | 0.1870 | -0.0028 | 0.8364 | 0 | 30 ms | 20.00% |
-| 3 | new | `160333f7751d` | `160333f7751d` | `160333f7751d` | 0.8364 | 0.4784 | 0.1870 | -0.0028 | 0.8364 | 0 | 83 ms | 90.00% |
-| 4 | new | `e0ad87b12d87` | `e0ad87b12d87` | `e0ad87b12d87` | 0.8338 | 0.5178 | 0.1600 | -0.0054 | 0.8338 | 0 | 64 ms | 70.00% |
-| 5 | new | `7e0ae458ce6c` | `7e0ae458ce6c` | `7e0ae458ce6c` | 0.6722 | 0.0000 | 0.3846 | -0.1670 | 0.8403 | 1 | 32 ms | 30.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `6019a18e4c4e` | `6019a18e4c4e` | `baseline` | 0.6722 | 0.0000 | 0.3846 | -0.1670 | 0.8403 | 1 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0bf3c1624426` | `0bf3c1624426` | `0bf3c1624426` | 0.8392 | 0.4919 | 0.1797 | +0.0000 | 0.8392 | 0 | 48 ms | 50.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `a20447ccca1e` | `a20447ccca1e` | `a20447ccca1e` | 0.8364 | 0.4784 | 0.1870 | -0.0028 | 0.8364 | 0 | 30 ms | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `160333f7751d` | `160333f7751d` | `160333f7751d` | 0.8364 | 0.4784 | 0.1870 | -0.0028 | 0.8364 | 0 | 83 ms | 90.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e0ad87b12d87` | `e0ad87b12d87` | `e0ad87b12d87` | 0.8338 | 0.5178 | 0.1600 | -0.0054 | 0.8338 | 0 | 64 ms | 70.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7e0ae458ce6c` | `7e0ae458ce6c` | `7e0ae458ce6c` | 0.6722 | 0.0000 | 0.3846 | -0.1670 | 0.8403 | 1 | 32 ms | 30.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -8289,7 +8289,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `14818b491952` | `14818b491952` | partial |
 
 ### Detector Evidence
 
@@ -8326,12 +8326,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `14818b491952` | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | reference | reference |
-| 1 | new | `6931e3aea38a` | `6931e3aea38a` | `6931e3aea38a` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 219 ms | 20.00% |
-| 2 | new | `d6a2096d57a6` | `d6a2096d57a6` | `d6a2096d57a6` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 231 ms | 30.00% |
-| 3 | new | `4339c3f69581` | `4339c3f69581` | `4339c3f69581` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 345 ms | 40.00% |
-| 4 | new | `2cd41c1cfd70` | `2cd41c1cfd70` | `2cd41c1cfd70` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 353 ms | 50.00% |
-| 5 | new | `91d7206d1476` | `91d7206d1476` | `91d7206d1476` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 482 ms | 70.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `14818b491952` | `14818b491952` | `baseline` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `6931e3aea38a` | `6931e3aea38a` | `6931e3aea38a` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 219 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d6a2096d57a6` | `d6a2096d57a6` | `d6a2096d57a6` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 231 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4339c3f69581` | `4339c3f69581` | `4339c3f69581` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 345 ms | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2cd41c1cfd70` | `2cd41c1cfd70` | `2cd41c1cfd70` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 353 ms | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `91d7206d1476` | `91d7206d1476` | `91d7206d1476` | 0.8617 | 0.7572 | 0.0655 | +0.0000 | 0.8617 | 0 | 482 ms | 70.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -8628,7 +8628,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `3eec8a03f1de` | `3eec8a03f1de` | partial |
 
 ### Detector Evidence
 
@@ -8665,12 +8665,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `3eec8a03f1de` | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
-| 1 | new | `42fc63229bb3` | `42fc63229bb3` | `42fc63229bb3` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 52.7s | 30.00% |
-| 2 | new | `cb5795c42bd3` | `cb5795c42bd3` | `cb5795c42bd3` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 52.7s | 20.00% |
-| 3 | new | `a3d42053b548` | `a3d42053b548` | `a3d42053b548` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1m 10s | 40.00% |
-| 4 | new | `0fb98d4d4330` | `0fb98d4d4330` | `0fb98d4d4330` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1m 10s | 50.00% |
-| 5 | new | `56ae8fdbf618` | `56ae8fdbf618` | `56ae8fdbf618` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1m 25s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `3eec8a03f1de` | `3eec8a03f1de` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `42fc63229bb3` | `42fc63229bb3` | `42fc63229bb3` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 52.7s | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `cb5795c42bd3` | `cb5795c42bd3` | `cb5795c42bd3` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 52.7s | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `a3d42053b548` | `a3d42053b548` | `a3d42053b548` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1m 10s | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0fb98d4d4330` | `0fb98d4d4330` | `0fb98d4d4330` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1m 10s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `56ae8fdbf618` | `56ae8fdbf618` | `56ae8fdbf618` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1m 25s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -8961,7 +8961,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `0cd13eb1a471` | `0cd13eb1a471` | partial |
 
 ### Detector Evidence
 
@@ -8998,12 +8998,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `0cd13eb1a471` | `0cd13eb1a471` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
-| 1 | new | `172304831b2e` | `172304831b2e` | `172304831b2e` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.7s | 30.00% |
-| 2 | new | `06593bf5afce` | `06593bf5afce` | `06593bf5afce` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 20.00% |
-| 3 | new | `07cc1ff1c71c` | `07cc1ff1c71c` | `07cc1ff1c71c` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2.5s | 40.00% |
-| 4 | new | `8d75cf39600c` | `8d75cf39600c` | `8d75cf39600c` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2.5s | 50.00% |
-| 5 | new | `b71b6267963a` | `b71b6267963a` | `b71b6267963a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 3.4s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0cd13eb1a471` | `0cd13eb1a471` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `172304831b2e` | `172304831b2e` | `172304831b2e` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.7s | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `06593bf5afce` | `06593bf5afce` | `06593bf5afce` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `07cc1ff1c71c` | `07cc1ff1c71c` | `07cc1ff1c71c` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2.5s | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8d75cf39600c` | `8d75cf39600c` | `8d75cf39600c` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2.5s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b71b6267963a` | `b71b6267963a` | `b71b6267963a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 3.4s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -9333,12 +9333,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `bea942a4969a` | `bea942a4969a` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
-| 1 | new | `f1832589441b` | `f1832589441b` | `f1832589441b` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 823 ms | 40.00% |
-| 2 | new | `d830fab26f05` | `d830fab26f05` | `d830fab26f05` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.3s | 60.00% |
-| 3 | new | `5a213f7d7eeb` | `5a213f7d7eeb` | `5a213f7d7eeb` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 70.00% |
-| 4 | new | `5ee8b6f684ab` | `5ee8b6f684ab` | `5ee8b6f684ab` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2s | 100.00% |
-| 5 | new | `67a3c5ff528e` | `67a3c5ff528e` | `67a3c5ff528e` | 0.6531 | 0.0000 | 0.3777 | -0.2237 | 0.8164 | 1 | 479 ms | 20.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `bea942a4969a` | `bea942a4969a` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f1832589441b` | `f1832589441b` | `f1832589441b` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 823 ms | 40.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d830fab26f05` | `d830fab26f05` | `d830fab26f05` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.3s | 60.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5a213f7d7eeb` | `5a213f7d7eeb` | `5a213f7d7eeb` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.6s | 70.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5ee8b6f684ab` | `5ee8b6f684ab` | `5ee8b6f684ab` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 2s | 100.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `67a3c5ff528e` | `67a3c5ff528e` | `67a3c5ff528e` | 0.6531 | 0.0000 | 0.3777 | -0.2237 | 0.8164 | 1 | 479 ms | 20.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -9630,7 +9630,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `04fd0a6e4bc2` | `04fd0a6e4bc2` | partial |
 
 ### Detector Evidence
 
@@ -9667,12 +9667,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `74f5cad7945a` | `74f5cad7945a` | `baseline` | 0.6633 | 0.0000 | 0.3670 | -0.0692 | 0.8291 | 1 | reference | reference |
-| 1 | new | `04fd0a6e4bc2` | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 30 ms | 30.00% |
-| 2 | new | `f1f8a19fc636` | `f1f8a19fc636` | `f1f8a19fc636` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 43 ms | 50.00% |
-| 3 | new | `b9dc838c7691` | `b9dc838c7691` | `b9dc838c7691` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 64 ms | 80.00% |
-| 4 | new | `c0dae043b64c` | `c0dae043b64c` | `c0dae043b64c` | 0.7261 | 0.0000 | 0.3642 | -0.0064 | 0.9076 | 1 | 29 ms | 20.00% |
-| 5 | new | `b15680d0d573` | `b15680d0d573` | `b15680d0d573` | 0.7261 | 0.0000 | 0.3642 | -0.0064 | 0.9076 | 1 | 51 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `74f5cad7945a` | `74f5cad7945a` | `baseline` | 0.6633 | 0.0000 | 0.3670 | -0.0692 | 0.8291 | 1 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `04fd0a6e4bc2` | `04fd0a6e4bc2` | `04fd0a6e4bc2` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 30 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f1f8a19fc636` | `f1f8a19fc636` | `f1f8a19fc636` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 43 ms | 50.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b9dc838c7691` | `b9dc838c7691` | `b9dc838c7691` | 0.7325 | 0.0000 | 0.3683 | +0.0000 | 0.9156 | 1 | 64 ms | 80.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c0dae043b64c` | `c0dae043b64c` | `c0dae043b64c` | 0.7261 | 0.0000 | 0.3642 | -0.0064 | 0.9076 | 1 | 29 ms | 20.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b15680d0d573` | `b15680d0d573` | `b15680d0d573` | 0.7261 | 0.0000 | 0.3642 | -0.0064 | 0.9076 | 1 | 51 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -9957,7 +9957,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `a5450e58ec9e` | `a5450e58ec9e` | partial |
 
 ### Detector Evidence
 
@@ -9994,12 +9994,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `a5450e58ec9e` | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
-| 1 | new | `0bd97323ddd6` | `0bd97323ddd6` | `0bd97323ddd6` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 732 ms | 20.00% |
-| 2 | new | `5417f7a84576` | `5417f7a84576` | `5417f7a84576` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 754 ms | 30.00% |
-| 3 | new | `491385b9c30f` | `491385b9c30f` | `491385b9c30f` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.2s | 50.00% |
-| 4 | new | `5e7bbad85e3f` | `5e7bbad85e3f` | `5e7bbad85e3f` | 0.5527 | 0.0000 | 0.4528 | -0.3241 | 0.9211 | 2 | 1.2s | 40.00% |
-| 5 | new | `9739acebc0a5` | `9739acebc0a5` | `9739acebc0a5` | 0.5527 | 0.0000 | 0.4528 | -0.3241 | 0.9211 | 2 | 1.6s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `a5450e58ec9e` | `a5450e58ec9e` | `baseline` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0bd97323ddd6` | `0bd97323ddd6` | `0bd97323ddd6` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 732 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5417f7a84576` | `5417f7a84576` | `5417f7a84576` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 754 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `491385b9c30f` | `491385b9c30f` | `491385b9c30f` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.2s | 50.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5e7bbad85e3f` | `5e7bbad85e3f` | `5e7bbad85e3f` | 0.5527 | 0.0000 | 0.4528 | -0.3241 | 0.9211 | 2 | 1.2s | 40.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `9739acebc0a5` | `9739acebc0a5` | `9739acebc0a5` | 0.5527 | 0.0000 | 0.4528 | -0.3241 | 0.9211 | 2 | 1.6s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -10317,12 +10317,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `013084b6c0e9` | `013084b6c0e9` | `baseline` | 0.9670 | 0.9424 | 0.0148 | -0.0059 | 0.9670 | 0 | reference | reference |
-| 1 | new | `28199c1dee3e` | `28199c1dee3e` | `28199c1dee3e` | 0.9729 | 0.9571 | 0.0120 | +0.0000 | 0.9729 | 0 | 284 ms | 80.00% |
-| 2 | new | `eaa0fe25898d` | `eaa0fe25898d` | `eaa0fe25898d` | 0.9729 | 0.9571 | 0.0120 | +0.0000 | 0.9729 | 0 | 300 ms | 90.00% |
-| 3 | new | `171496d5337d` | `171496d5337d` | `171496d5337d` | 0.9691 | 0.9479 | 0.0137 | -0.0038 | 0.9691 | 0 | 228 ms | 60.00% |
-| 4 | new | `3ac283e1a83c` | `3ac283e1a83c` | `3ac283e1a83c` | 0.9691 | 0.9479 | 0.0137 | -0.0038 | 0.9691 | 0 | 236 ms | 70.00% |
-| 5 | new | `bebf5b6a6773` | `bebf5b6a6773` | `bebf5b6a6773` | 0.9670 | 0.9424 | 0.0148 | -0.0059 | 0.9670 | 0 | 170 ms | 40.00% |
+| Baseline* | [#723](https://github.com/dlstupka/hth/actions/runs/32538021572) | `013084b6c0e9` | `013084b6c0e9` | `baseline` | 0.9670 | 0.9424 | 0.0148 | -0.0059 | 0.9670 | 0 | reference | reference |
+| 1 | [#723](https://github.com/dlstupka/hth/actions/runs/32538021572) | `28199c1dee3e` | `28199c1dee3e` | `28199c1dee3e` | 0.9729 | 0.9571 | 0.0120 | +0.0000 | 0.9729 | 0 | 284 ms | 80.00% |
+| 2 | [#723](https://github.com/dlstupka/hth/actions/runs/32538021572) | `eaa0fe25898d` | `eaa0fe25898d` | `eaa0fe25898d` | 0.9729 | 0.9571 | 0.0120 | +0.0000 | 0.9729 | 0 | 300 ms | 90.00% |
+| 3 | [#723](https://github.com/dlstupka/hth/actions/runs/32538021572) | `171496d5337d` | `171496d5337d` | `171496d5337d` | 0.9691 | 0.9479 | 0.0137 | -0.0038 | 0.9691 | 0 | 228 ms | 60.00% |
+| 4 | [#723](https://github.com/dlstupka/hth/actions/runs/32538021572) | `3ac283e1a83c` | `3ac283e1a83c` | `3ac283e1a83c` | 0.9691 | 0.9479 | 0.0137 | -0.0038 | 0.9691 | 0 | 236 ms | 70.00% |
+| 5 | [#723](https://github.com/dlstupka/hth/actions/runs/32538021572) | `bebf5b6a6773` | `bebf5b6a6773` | `bebf5b6a6773` | 0.9670 | 0.9424 | 0.0148 | -0.0059 | 0.9670 | 0 | 170 ms | 40.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -10619,7 +10619,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `e66a7546e1a7` | `e66a7546e1a7` | partial |
 
 ### Detector Evidence
 
@@ -10656,12 +10656,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `8b59bc493e1f` | `8b59bc493e1f` | `baseline` | 0.7593 | 0.4357 | 0.2472 | -0.0795 | 0.7593 | 0 | reference | reference |
-| 1 | new | `e66a7546e1a7` | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 735 ms | 30.00% |
-| 2 | new | `8e57ff70b94c` | `8e57ff70b94c` | `8e57ff70b94c` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 1.5s | 60.00% |
-| 3 | new | `d0c1acdb2940` | `d0c1acdb2940` | `d0c1acdb2940` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 1.8s | 90.00% |
-| 4 | new | `98c86be0e2ce` | `98c86be0e2ce` | `98c86be0e2ce` | 0.8358 | 0.4784 | 0.1871 | -0.0029 | 0.8358 | 0 | 730 ms | 20.00% |
-| 5 | new | `823d0ace1a0f` | `823d0ace1a0f` | `823d0ace1a0f` | 0.8358 | 0.4784 | 0.1871 | -0.0029 | 0.8358 | 0 | 1.1s | 50.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8b59bc493e1f` | `8b59bc493e1f` | `baseline` | 0.7593 | 0.4357 | 0.2472 | -0.0795 | 0.7593 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e66a7546e1a7` | `e66a7546e1a7` | `e66a7546e1a7` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 735 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8e57ff70b94c` | `8e57ff70b94c` | `8e57ff70b94c` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 1.5s | 60.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d0c1acdb2940` | `d0c1acdb2940` | `d0c1acdb2940` | 0.8388 | 0.5001 | 0.1745 | +0.0000 | 0.8388 | 0 | 1.8s | 90.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `98c86be0e2ce` | `98c86be0e2ce` | `98c86be0e2ce` | 0.8358 | 0.4784 | 0.1871 | -0.0029 | 0.8358 | 0 | 730 ms | 20.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `823d0ace1a0f` | `823d0ace1a0f` | `823d0ace1a0f` | 0.8358 | 0.4784 | 0.1871 | -0.0029 | 0.8358 | 0 | 1.1s | 50.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -10992,12 +10992,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `e04459bcb474` | `e04459bcb474` | `baseline` | 0.6347 | 0.0000 | 0.3534 | -0.0217 | 0.7933 | 1 | reference | reference |
-| 1 | new | `4be72657e9a7` | `4be72657e9a7` | `4be72657e9a7` | 0.6563 | 0.0000 | 0.3709 | +0.0000 | 0.8204 | 1 | 90 ms | 30.00% |
-| 2 | new | `fb963211fbe9` | `fb963211fbe9` | `fb963211fbe9` | 0.6563 | 0.0000 | 0.3709 | +0.0000 | 0.8204 | 1 | 135 ms | 50.00% |
-| 3 | new | `86b444be6e6e` | `86b444be6e6e` | `86b444be6e6e` | 0.6563 | 0.0000 | 0.3709 | +0.0000 | 0.8204 | 1 | 223 ms | 80.00% |
-| 4 | new | `29e38f999fc0` | `29e38f999fc0` | `29e38f999fc0` | 0.6433 | 0.0000 | 0.3581 | -0.0131 | 0.8041 | 1 | 89 ms | 20.00% |
-| 5 | new | `30ddd9d571be` | `30ddd9d571be` | `30ddd9d571be` | 0.6433 | 0.0000 | 0.3581 | -0.0131 | 0.8041 | 1 | 179 ms | 70.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e04459bcb474` | `e04459bcb474` | `baseline` | 0.6347 | 0.0000 | 0.3534 | -0.0217 | 0.7933 | 1 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4be72657e9a7` | `4be72657e9a7` | `4be72657e9a7` | 0.6563 | 0.0000 | 0.3709 | +0.0000 | 0.8204 | 1 | 90 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `fb963211fbe9` | `fb963211fbe9` | `fb963211fbe9` | 0.6563 | 0.0000 | 0.3709 | +0.0000 | 0.8204 | 1 | 135 ms | 50.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `86b444be6e6e` | `86b444be6e6e` | `86b444be6e6e` | 0.6563 | 0.0000 | 0.3709 | +0.0000 | 0.8204 | 1 | 223 ms | 80.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `29e38f999fc0` | `29e38f999fc0` | `29e38f999fc0` | 0.6433 | 0.0000 | 0.3581 | -0.0131 | 0.8041 | 1 | 89 ms | 20.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `30ddd9d571be` | `30ddd9d571be` | `30ddd9d571be` | 0.6433 | 0.0000 | 0.3581 | -0.0131 | 0.8041 | 1 | 179 ms | 70.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -11326,12 +11326,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `329dcc7161e9` | `329dcc7161e9` | `baseline` | 0.8906 | 0.8515 | 0.0406 | -0.0841 | 0.8906 | 0 | reference | reference |
-| 1 | new | `a5b5f0a03acf` | `a5b5f0a03acf` | `a5b5f0a03acf` | 0.9747 | 0.9545 | 0.0119 | +0.0000 | 0.9747 | 0 | 347 ms | 20.00% |
-| 2 | new | `45a72b95bd15` | `45a72b95bd15` | `45a72b95bd15` | 0.9656 | 0.9181 | 0.0249 | -0.0091 | 0.9656 | 0 | 351 ms | 30.00% |
-| 3 | new | `cb7b5ba5905b` | `cb7b5ba5905b` | `cb7b5ba5905b` | 0.9485 | 0.9423 | 0.0064 | -0.0262 | 0.9485 | 0 | 590 ms | 40.00% |
-| 4 | new | `2c66b3ee474f` | `2c66b3ee474f` | `2c66b3ee474f` | 0.9241 | 0.9082 | 0.0168 | -0.0506 | 0.9241 | 0 | 602 ms | 50.00% |
-| 5 | new | `2cd594505fcb` | `2cd594505fcb` | `2cd594505fcb` | 0.9066 | 0.8811 | 0.0304 | -0.0681 | 0.9066 | 0 | 830 ms | 80.00% |
+| Baseline* | [#722](https://github.com/dlstupka/hth/actions/runs/32537994773) | `329dcc7161e9` | `329dcc7161e9` | `baseline` | 0.8906 | 0.8515 | 0.0406 | -0.0841 | 0.8906 | 0 | reference | reference |
+| 1 | [#722](https://github.com/dlstupka/hth/actions/runs/32537994773) | `a5b5f0a03acf` | `a5b5f0a03acf` | `a5b5f0a03acf` | 0.9747 | 0.9545 | 0.0119 | +0.0000 | 0.9747 | 0 | 347 ms | 20.00% |
+| 2 | [#722](https://github.com/dlstupka/hth/actions/runs/32537994773) | `45a72b95bd15` | `45a72b95bd15` | `45a72b95bd15` | 0.9656 | 0.9181 | 0.0249 | -0.0091 | 0.9656 | 0 | 351 ms | 30.00% |
+| 3 | [#722](https://github.com/dlstupka/hth/actions/runs/32537994773) | `cb7b5ba5905b` | `cb7b5ba5905b` | `cb7b5ba5905b` | 0.9485 | 0.9423 | 0.0064 | -0.0262 | 0.9485 | 0 | 590 ms | 40.00% |
+| 4 | [#722](https://github.com/dlstupka/hth/actions/runs/32537994773) | `2c66b3ee474f` | `2c66b3ee474f` | `2c66b3ee474f` | 0.9241 | 0.9082 | 0.0168 | -0.0506 | 0.9241 | 0 | 602 ms | 50.00% |
+| 5 | [#722](https://github.com/dlstupka/hth/actions/runs/32537994773) | `2cd594505fcb` | `2cd594505fcb` | `2cd594505fcb` | 0.9066 | 0.8811 | 0.0304 | -0.0681 | 0.9066 | 0 | 830 ms | 80.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -11640,12 +11640,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `095940b014f5` | `095940b014f5` | `baseline` | 0.9281 | 0.8108 | 0.0616 | -0.0039 | 0.9281 | 0 | reference | reference |
-| 1 | new | `a7f45316a1bf` | `a7f45316a1bf` | `a7f45316a1bf` | 0.9321 | 0.8098 | 0.0636 | +0.0000 | 0.9321 | 0 | 577 ms | 70.00% |
-| 2 | new | `f1ff41ac4ba0` | `f1ff41ac4ba0` | `f1ff41ac4ba0` | 0.9309 | 0.8098 | 0.0626 | -0.0012 | 0.9309 | 0 | 560 ms | 60.00% |
-| 3 | new | `fa9887c1cd10` | `fa9887c1cd10` | `fa9887c1cd10` | 0.9309 | 0.8098 | 0.0626 | -0.0012 | 0.9309 | 0 | 739 ms | 80.00% |
-| 4 | new | `26c6a01f7db5` | `26c6a01f7db5` | `26c6a01f7db5` | 0.9307 | 0.8098 | 0.0626 | -0.0014 | 0.9307 | 0 | 758 ms | 90.00% |
-| 5 | new | `cc680d747434` | `cc680d747434` | `cc680d747434` | 0.9307 | 0.8098 | 0.0626 | -0.0014 | 0.9307 | 0 | 866 ms | 100.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `095940b014f5` | `095940b014f5` | `baseline` | 0.9281 | 0.8108 | 0.0616 | -0.0039 | 0.9281 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `a7f45316a1bf` | `a7f45316a1bf` | `a7f45316a1bf` | 0.9321 | 0.8098 | 0.0636 | +0.0000 | 0.9321 | 0 | 577 ms | 70.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f1ff41ac4ba0` | `f1ff41ac4ba0` | `f1ff41ac4ba0` | 0.9309 | 0.8098 | 0.0626 | -0.0012 | 0.9309 | 0 | 560 ms | 60.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `fa9887c1cd10` | `fa9887c1cd10` | `fa9887c1cd10` | 0.9309 | 0.8098 | 0.0626 | -0.0012 | 0.9309 | 0 | 739 ms | 80.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `26c6a01f7db5` | `26c6a01f7db5` | `26c6a01f7db5` | 0.9307 | 0.8098 | 0.0626 | -0.0014 | 0.9307 | 0 | 758 ms | 90.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `cc680d747434` | `cc680d747434` | `cc680d747434` | 0.9307 | 0.8098 | 0.0626 | -0.0014 | 0.9307 | 0 | 866 ms | 100.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -11930,7 +11930,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `4e5bc37a649a` | `4e5bc37a649a` | partial |
 
 ### Detector Evidence
 
@@ -11967,12 +11967,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `cc91b22426bb` | `cc91b22426bb` | `baseline` | 0.5392 | 0.0000 | 0.4417 | -0.3377 | 0.8986 | 2 | reference | reference |
-| 1 | new | `4e5bc37a649a` | `4e5bc37a649a` | `4e5bc37a649a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 827 ms | 30.00% |
-| 2 | new | `3f9b315b2a2d` | `3f9b315b2a2d` | `3f9b315b2a2d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 826 ms | 20.00% |
-| 3 | new | `06aecf5b236a` | `06aecf5b236a` | `06aecf5b236a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.1s | 50.00% |
-| 4 | new | `466c3d5add05` | `466c3d5add05` | `466c3d5add05` | 0.3651 | 0.0000 | 0.4483 | -0.5117 | 0.9128 | 3 | 1.1s | 40.00% |
-| 5 | new | `908717e8cc63` | `908717e8cc63` | `908717e8cc63` | 0.3651 | 0.0000 | 0.4483 | -0.5117 | 0.9128 | 3 | 1.5s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `cc91b22426bb` | `cc91b22426bb` | `baseline` | 0.5392 | 0.0000 | 0.4417 | -0.3377 | 0.8986 | 2 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4e5bc37a649a` | `4e5bc37a649a` | `4e5bc37a649a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 827 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `3f9b315b2a2d` | `3f9b315b2a2d` | `3f9b315b2a2d` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 826 ms | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `06aecf5b236a` | `06aecf5b236a` | `06aecf5b236a` | 0.8768 | 0.7589 | 0.0734 | +0.0000 | 0.8768 | 0 | 1.1s | 50.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `466c3d5add05` | `466c3d5add05` | `466c3d5add05` | 0.3651 | 0.0000 | 0.4483 | -0.5117 | 0.9128 | 3 | 1.1s | 40.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `908717e8cc63` | `908717e8cc63` | `908717e8cc63` | 0.3651 | 0.0000 | 0.4483 | -0.5117 | 0.9128 | 3 | 1.5s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -12315,12 +12315,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `8b854e1547c4` | `0dcad981fc34` | `baseline` | 0.9641 | 0.9393 | 0.0160 | +0.0000 | 0.9641 | 0 | reference | reference |
-| 1 | new | `5c48a52efb5d` | `ab0757b77b68` | `ab0757b77b68` | 0.9632 | 0.9393 | 0.0158 | -0.0010 | 0.9632 | 0 | 140 ms | 60.00% |
-| 2 | new | `5ee4a9beca3e` | `92c73facec9d` | `92c73facec9d` | 0.9632 | 0.9320 | 0.0182 | -0.0010 | 0.9632 | 0 | 69 ms | 20.00% |
-| 3 | new | `b8100713be96` | `814f63cf05c2` | `814f63cf05c2` | 0.9631 | 0.9348 | 0.0172 | -0.0010 | 0.9631 | 0 | 104 ms | 40.00% |
-| 4 | new | `c719a03a6673` | `ca077ad5eb2e` | `ca077ad5eb2e` | 0.9630 | 0.9356 | 0.0170 | -0.0011 | 0.9630 | 0 | 107 ms | 50.00% |
-| 5 | new | `4ec3426ba3a8` | `09a1c703daab` | `09a1c703daab` | 0.9625 | 0.9311 | 0.0184 | -0.0016 | 0.9625 | 0 | 71 ms | 30.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8b854e1547c4` | `0dcad981fc34` | `baseline` | 0.9641 | 0.9393 | 0.0160 | +0.0000 | 0.9641 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5c48a52efb5d` | `ab0757b77b68` | `ab0757b77b68` | 0.9632 | 0.9393 | 0.0158 | -0.0010 | 0.9632 | 0 | 140 ms | 60.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5ee4a9beca3e` | `92c73facec9d` | `92c73facec9d` | 0.9632 | 0.9320 | 0.0182 | -0.0010 | 0.9632 | 0 | 69 ms | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b8100713be96` | `814f63cf05c2` | `814f63cf05c2` | 0.9631 | 0.9348 | 0.0172 | -0.0010 | 0.9631 | 0 | 104 ms | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c719a03a6673` | `ca077ad5eb2e` | `ca077ad5eb2e` | 0.9630 | 0.9356 | 0.0170 | -0.0011 | 0.9630 | 0 | 107 ms | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4ec3426ba3a8` | `09a1c703daab` | `09a1c703daab` | 0.9625 | 0.9311 | 0.0184 | -0.0016 | 0.9625 | 0 | 71 ms | 30.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -12643,12 +12643,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `018d128420cb` | `018d128420cb` | `baseline` | 0.8130 | 0.5532 | 0.1692 | +0.0000 | 0.8130 | 0 | reference | reference |
-| 1 | new | `71c8fb00da00` | `71c8fb00da00` | `71c8fb00da00` | 0.7443 | 0.3729 | 0.2583 | -0.0688 | 0.7443 | 0 | 2m 19s | 60.00% |
-| 2 | new | `c4569ce5ec31` | `c4569ce5ec31` | `c4569ce5ec31` | 0.7443 | 0.3729 | 0.2583 | -0.0688 | 0.7443 | 0 | 2m 19s | 70.00% |
-| 3 | new | `f5a2acd172d1` | `f5a2acd172d1` | `f5a2acd172d1` | 0.7409 | 0.3560 | 0.2633 | -0.0721 | 0.7409 | 0 | 2m 53s | 80.00% |
-| 4 | new | `5a4694bf2661` | `5a4694bf2661` | `5a4694bf2661` | 0.7409 | 0.3560 | 0.2633 | -0.0721 | 0.7409 | 0 | 2m 54s | 90.00% |
-| 5 | new | `0e1da08a0efd` | `0e1da08a0efd` | `0e1da08a0efd` | 0.7400 | 0.3516 | 0.2645 | -0.0730 | 0.7400 | 0 | 1m 10s | 20.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `018d128420cb` | `018d128420cb` | `baseline` | 0.8130 | 0.5532 | 0.1692 | +0.0000 | 0.8130 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `71c8fb00da00` | `71c8fb00da00` | `71c8fb00da00` | 0.7443 | 0.3729 | 0.2583 | -0.0688 | 0.7443 | 0 | 2m 19s | 60.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c4569ce5ec31` | `c4569ce5ec31` | `c4569ce5ec31` | 0.7443 | 0.3729 | 0.2583 | -0.0688 | 0.7443 | 0 | 2m 19s | 70.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f5a2acd172d1` | `f5a2acd172d1` | `f5a2acd172d1` | 0.7409 | 0.3560 | 0.2633 | -0.0721 | 0.7409 | 0 | 2m 53s | 80.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5a4694bf2661` | `5a4694bf2661` | `5a4694bf2661` | 0.7409 | 0.3560 | 0.2633 | -0.0721 | 0.7409 | 0 | 2m 54s | 90.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0e1da08a0efd` | `0e1da08a0efd` | `0e1da08a0efd` | 0.7400 | 0.3516 | 0.2645 | -0.0730 | 0.7400 | 0 | 1m 10s | 20.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -12970,12 +12970,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `3817f226228a` | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | -0.0086 | 0.8130 | 0 | reference | reference |
-| 1 | new | `9c90917e5b48` | `9c90917e5b48` | `9c90917e5b48` | 0.8217 | 0.5699 | 0.1596 | +0.0000 | 0.8217 | 0 | 3m 53s | 100.00% |
-| 2 | new | `a8c2142a0236` | `a8c2142a0236` | `a8c2142a0236` | 0.8185 | 0.5691 | 0.1624 | -0.0032 | 0.8185 | 0 | 2m 35s | 70.00% |
-| 3 | new | `b09065090626` | `b09065090626` | `b09065090626` | 0.8185 | 0.5691 | 0.1624 | -0.0032 | 0.8185 | 0 | 2m 35s | 60.00% |
-| 4 | new | `5129f68f30d3` | `5129f68f30d3` | `5129f68f30d3` | 0.8164 | 0.5574 | 0.1661 | -0.0053 | 0.8164 | 0 | 1m 58s | 50.00% |
-| 5 | new | `5809567183b8` | `5809567183b8` | `5809567183b8` | 0.8164 | 0.5574 | 0.1661 | -0.0053 | 0.8164 | 0 | 1m 58s | 40.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `3817f226228a` | `3817f226228a` | `baseline` | 0.8130 | 0.5532 | 0.1692 | -0.0086 | 0.8130 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `9c90917e5b48` | `9c90917e5b48` | `9c90917e5b48` | 0.8217 | 0.5699 | 0.1596 | +0.0000 | 0.8217 | 0 | 3m 53s | 100.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `a8c2142a0236` | `a8c2142a0236` | `a8c2142a0236` | 0.8185 | 0.5691 | 0.1624 | -0.0032 | 0.8185 | 0 | 2m 35s | 70.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b09065090626` | `b09065090626` | `b09065090626` | 0.8185 | 0.5691 | 0.1624 | -0.0032 | 0.8185 | 0 | 2m 35s | 60.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5129f68f30d3` | `5129f68f30d3` | `5129f68f30d3` | 0.8164 | 0.5574 | 0.1661 | -0.0053 | 0.8164 | 0 | 1m 58s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5809567183b8` | `5809567183b8` | `5809567183b8` | 0.8164 | 0.5574 | 0.1661 | -0.0053 | 0.8164 | 0 | 1m 58s | 40.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -13317,12 +13317,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `1029318d5974` | `1029318d5974` | `baseline` | 0.9467 | 0.8611 | 0.0442 | +0.0000 | 0.9467 | 0 | reference | reference |
-| 1 | new | `30474c8453fd` | `30474c8453fd` | `30474c8453fd` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 30.00% |
-| 2 | new | `899d902a4617` | `899d902a4617` | `899d902a4617` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 20.00% |
-| 3 | new | `77872953d74c` | `77872953d74c` | `77872953d74c` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 40.00% |
-| 4 | new | `4969d77896b6` | `4969d77896b6` | `4969d77896b6` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 50.00% |
-| 5 | new | `578ed95f660c` | `578ed95f660c` | `578ed95f660c` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `1029318d5974` | `1029318d5974` | `baseline` | 0.9467 | 0.8611 | 0.0442 | +0.0000 | 0.9467 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `30474c8453fd` | `30474c8453fd` | `30474c8453fd` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `899d902a4617` | `899d902a4617` | `899d902a4617` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `77872953d74c` | `77872953d74c` | `77872953d74c` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4969d77896b6` | `4969d77896b6` | `4969d77896b6` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `578ed95f660c` | `578ed95f660c` | `578ed95f660c` | 0.0000 | 0.0000 | 0.0000 | -0.9467 | 0.0000 | 5 | 19 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -13640,12 +13640,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `7078053f309d` | `7078053f309d` | `baseline` | 0.4784 | 0.0000 | 0.2851 | -0.0877 | 0.5981 | 1 | reference | reference |
-| 1 | new | `d2ef0aec6694` | `d2ef0aec6694` | `d2ef0aec6694` | 0.5661 | 0.0000 | 0.3407 | +0.0000 | 0.7076 | 1 | 6.5s | 40.00% |
-| 2 | new | `217ec1728985` | `217ec1728985` | `217ec1728985` | 0.5556 | 0.0000 | 0.3391 | -0.0105 | 0.6946 | 1 | 4.4s | 30.00% |
-| 3 | new | `90e4276c2a1d` | `90e4276c2a1d` | `90e4276c2a1d` | 0.5495 | 0.0000 | 0.3375 | -0.0166 | 0.6869 | 1 | 4.3s | 20.00% |
-| 4 | new | `cd10502d9095` | `cd10502d9095` | `cd10502d9095` | 0.5030 | 0.0000 | 0.3046 | -0.0631 | 0.6288 | 1 | 8.8s | 70.00% |
-| 5 | new | `96052fb049b9` | `96052fb049b9` | `96052fb049b9` | 0.4882 | 0.0000 | 0.3000 | -0.0780 | 0.6102 | 1 | 8.6s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7078053f309d` | `7078053f309d` | `baseline` | 0.4784 | 0.0000 | 0.2851 | -0.0877 | 0.5981 | 1 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d2ef0aec6694` | `d2ef0aec6694` | `d2ef0aec6694` | 0.5661 | 0.0000 | 0.3407 | +0.0000 | 0.7076 | 1 | 6.5s | 40.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `217ec1728985` | `217ec1728985` | `217ec1728985` | 0.5556 | 0.0000 | 0.3391 | -0.0105 | 0.6946 | 1 | 4.4s | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `90e4276c2a1d` | `90e4276c2a1d` | `90e4276c2a1d` | 0.5495 | 0.0000 | 0.3375 | -0.0166 | 0.6869 | 1 | 4.3s | 20.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `cd10502d9095` | `cd10502d9095` | `cd10502d9095` | 0.5030 | 0.0000 | 0.3046 | -0.0631 | 0.6288 | 1 | 8.8s | 70.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `96052fb049b9` | `96052fb049b9` | `96052fb049b9` | 0.4882 | 0.0000 | 0.3000 | -0.0780 | 0.6102 | 1 | 8.6s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -13987,12 +13987,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `697c22dd549f` | `697c22dd549f` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | reference | reference |
-| 1 | new | `b699602175ff` | `b699602175ff` | `b699602175ff` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 815 ms | 20.00% |
-| 2 | new | `832829bf5599` | `832829bf5599` | `832829bf5599` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 870 ms | 30.00% |
-| 3 | new | `ae65e4295acc` | `ae65e4295acc` | `ae65e4295acc` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 1.4s | 40.00% |
-| 4 | new | `bd9ecd87d248` | `bd9ecd87d248` | `bd9ecd87d248` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 1.4s | 50.00% |
-| 5 | new | `f926b52af6a2` | `f926b52af6a2` | `f926b52af6a2` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 1.9s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `697c22dd549f` | `697c22dd549f` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b699602175ff` | `b699602175ff` | `b699602175ff` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 815 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `832829bf5599` | `832829bf5599` | `832829bf5599` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 870 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ae65e4295acc` | `ae65e4295acc` | `ae65e4295acc` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 1.4s | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `bd9ecd87d248` | `bd9ecd87d248` | `bd9ecd87d248` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 1.4s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f926b52af6a2` | `f926b52af6a2` | `f926b52af6a2` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 1.9s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -14278,12 +14278,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `d75b76f301e6` | `d75b76f301e6` | `baseline` | 0.8068 | 0.6201 | 0.0947 | -0.0268 | 0.8068 | 0 | reference | reference |
-| 1 | new | `8e7329ed85d1` | `8e7329ed85d1` | `8e7329ed85d1` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 119 ms | 20.00% |
-| 2 | new | `172a631f5c19` | `172a631f5c19` | `172a631f5c19` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 131 ms | 30.00% |
-| 3 | new | `8161375b5ba2` | `8161375b5ba2` | `8161375b5ba2` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 174 ms | 40.00% |
-| 4 | new | `bd78177097cd` | `bd78177097cd` | `bd78177097cd` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 184 ms | 50.00% |
-| 5 | new | `4c073e72c58a` | `4c073e72c58a` | `4c073e72c58a` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 227 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d75b76f301e6` | `d75b76f301e6` | `baseline` | 0.8068 | 0.6201 | 0.0947 | -0.0268 | 0.8068 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8e7329ed85d1` | `8e7329ed85d1` | `8e7329ed85d1` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 119 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `172a631f5c19` | `172a631f5c19` | `172a631f5c19` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 131 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8161375b5ba2` | `8161375b5ba2` | `8161375b5ba2` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 174 ms | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `bd78177097cd` | `bd78177097cd` | `bd78177097cd` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 184 ms | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4c073e72c58a` | `4c073e72c58a` | `4c073e72c58a` | 0.8336 | 0.5226 | 0.1752 | +0.0000 | 0.8336 | 0 | 227 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -14607,12 +14607,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `04e0ef2b5787` | `04e0ef2b5787` | `baseline` | 0.8374 | 0.7029 | 0.0740 | -0.0417 | 0.8374 | 0 | reference | reference |
-| 1 | new | `5224fd6d0bf0` | `5224fd6d0bf0` | `5224fd6d0bf0` | 0.8792 | 0.7929 | 0.0511 | +0.0000 | 0.8792 | 0 | 16.1s | 30.00% |
-| 2 | new | `df8cf13093da` | `df8cf13093da` | `df8cf13093da` | 0.8792 | 0.7951 | 0.0502 | -0.0000 | 0.8792 | 0 | 16.3s | 40.00% |
-| 3 | new | `7ced6c1838d8` | `7ced6c1838d8` | `7ced6c1838d8` | 0.8791 | 0.7972 | 0.0493 | -0.0000 | 0.8791 | 0 | 24.6s | 60.00% |
-| 4 | new | `ca8b4fb456e1` | `ca8b4fb456e1` | `ca8b4fb456e1` | 0.8788 | 0.7993 | 0.0482 | -0.0003 | 0.8788 | 0 | 23.8s | 50.00% |
-| 5 | new | `75d99c2f888e` | `75d99c2f888e` | `75d99c2f888e` | 0.8785 | 0.8015 | 0.0471 | -0.0007 | 0.8785 | 0 | 32.4s | 70.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `04e0ef2b5787` | `04e0ef2b5787` | `baseline` | 0.8374 | 0.7029 | 0.0740 | -0.0417 | 0.8374 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5224fd6d0bf0` | `5224fd6d0bf0` | `5224fd6d0bf0` | 0.8792 | 0.7929 | 0.0511 | +0.0000 | 0.8792 | 0 | 16.1s | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `df8cf13093da` | `df8cf13093da` | `df8cf13093da` | 0.8792 | 0.7951 | 0.0502 | -0.0000 | 0.8792 | 0 | 16.3s | 40.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7ced6c1838d8` | `7ced6c1838d8` | `7ced6c1838d8` | 0.8791 | 0.7972 | 0.0493 | -0.0000 | 0.8791 | 0 | 24.6s | 60.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ca8b4fb456e1` | `ca8b4fb456e1` | `ca8b4fb456e1` | 0.8788 | 0.7993 | 0.0482 | -0.0003 | 0.8788 | 0 | 23.8s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `75d99c2f888e` | `75d99c2f888e` | `75d99c2f888e` | 0.8785 | 0.8015 | 0.0471 | -0.0007 | 0.8785 | 0 | 32.4s | 70.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -14934,12 +14934,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `b2df04f4e947` | `b2df04f4e947` | `baseline` | 0.5414 | 0.0000 | 0.4436 | -0.1954 | 0.9023 | 2 | reference | reference |
-| 1 | new | `7b8b1aaee481` | `7b8b1aaee481` | `7b8b1aaee481` | 0.7368 | 0.0000 | 0.3714 | +0.0000 | 0.9210 | 1 | 679 ms | 30.00% |
-| 2 | new | `19a4857c76d8` | `19a4857c76d8` | `19a4857c76d8` | 0.7368 | 0.0000 | 0.3714 | +0.0000 | 0.9210 | 1 | 1.2s | 60.00% |
-| 3 | new | `1b2cebd68deb` | `1b2cebd68deb` | `1b2cebd68deb` | 0.7368 | 0.0000 | 0.3714 | +0.0000 | 0.9210 | 1 | 1.4s | 90.00% |
-| 4 | new | `0bd9251e7f32` | `0bd9251e7f32` | `0bd9251e7f32` | 0.7340 | 0.0000 | 0.3695 | -0.0028 | 0.9175 | 1 | 678 ms | 20.00% |
-| 5 | new | `2cf82997c714` | `2cf82997c714` | `2cf82997c714` | 0.7340 | 0.0000 | 0.3695 | -0.0028 | 0.9175 | 1 | 918 ms | 50.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b2df04f4e947` | `b2df04f4e947` | `baseline` | 0.5414 | 0.0000 | 0.4436 | -0.1954 | 0.9023 | 2 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7b8b1aaee481` | `7b8b1aaee481` | `7b8b1aaee481` | 0.7368 | 0.0000 | 0.3714 | +0.0000 | 0.9210 | 1 | 679 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `19a4857c76d8` | `19a4857c76d8` | `19a4857c76d8` | 0.7368 | 0.0000 | 0.3714 | +0.0000 | 0.9210 | 1 | 1.2s | 60.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `1b2cebd68deb` | `1b2cebd68deb` | `1b2cebd68deb` | 0.7368 | 0.0000 | 0.3714 | +0.0000 | 0.9210 | 1 | 1.4s | 90.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0bd9251e7f32` | `0bd9251e7f32` | `0bd9251e7f32` | 0.7340 | 0.0000 | 0.3695 | -0.0028 | 0.9175 | 1 | 678 ms | 20.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2cf82997c714` | `2cf82997c714` | `2cf82997c714` | 0.7340 | 0.0000 | 0.3695 | -0.0028 | 0.9175 | 1 | 918 ms | 50.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -15222,7 +15222,11 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `fb81bb954397` | `fb81bb954397` | partial |
+| [#667](https://github.com/dlstupka/hth/actions/runs/32409137793) | 2026-08-20 | `fb81bb954397` | `fb81bb954397` | authoritative |
+| [#664](https://github.com/dlstupka/hth/actions/runs/32407766945) | 2026-08-20 | `fb81bb954397` | `fb81bb954397` | authoritative |
+| [#660](https://github.com/dlstupka/hth/actions/runs/32404602094) | 2026-08-20 | `fb81bb954397` | `fb81bb954397` | authoritative |
+| [#657](https://github.com/dlstupka/hth/actions/runs/32394049537) | 2026-08-20 | `fb81bb954397` | `fb81bb954397` | authoritative |
 
 ### Detector Evidence
 
@@ -15260,12 +15264,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `246b533f6b88` | `246b533f6b88` | `baseline` | 0.7901 | 0.5137 | 0.1539 | -0.0354 | 0.7901 | 0 | reference | reference |
-| 1 | new | `fb81bb954397` | `fb81bb954397` | `fb81bb954397` | 0.8255 | 0.5226 | 0.1580 | +0.0000 | 0.8255 | 0 | 78 ms | 40.00% |
-| 2 | new | `9e439caf6be4` | `9e439caf6be4` | `9e439caf6be4` | 0.8252 | 0.5299 | 0.1533 | -0.0003 | 0.8252 | 0 | 79 ms | 50.00% |
-| 3 | new | `6410bad16d32` | `6410bad16d32` | `6410bad16d32` | 0.8247 | 0.5377 | 0.1481 | -0.0008 | 0.8247 | 0 | 104 ms | 60.00% |
-| 4 | new | `8731350c8e6a` | `8731350c8e6a` | `8731350c8e6a` | 0.8236 | 0.5149 | 0.1620 | -0.0019 | 0.8236 | 0 | 53 ms | 30.00% |
-| 5 | new | `ea8c2b8eaf24` | `ea8c2b8eaf24` | `ea8c2b8eaf24` | 0.8226 | 0.5456 | 0.1423 | -0.0029 | 0.8226 | 0 | 105 ms | 70.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `246b533f6b88` | `246b533f6b88` | `baseline` | 0.7901 | 0.5137 | 0.1539 | -0.0354 | 0.7901 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `fb81bb954397` | `fb81bb954397` | `fb81bb954397` | 0.8255 | 0.5226 | 0.1580 | +0.0000 | 0.8255 | 0 | 78 ms | 40.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `9e439caf6be4` | `9e439caf6be4` | `9e439caf6be4` | 0.8252 | 0.5299 | 0.1533 | -0.0003 | 0.8252 | 0 | 79 ms | 50.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `6410bad16d32` | `6410bad16d32` | `6410bad16d32` | 0.8247 | 0.5377 | 0.1481 | -0.0008 | 0.8247 | 0 | 104 ms | 60.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8731350c8e6a` | `8731350c8e6a` | `8731350c8e6a` | 0.8236 | 0.5149 | 0.1620 | -0.0019 | 0.8236 | 0 | 53 ms | 30.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ea8c2b8eaf24` | `ea8c2b8eaf24` | `ea8c2b8eaf24` | 0.8226 | 0.5456 | 0.1423 | -0.0029 | 0.8226 | 0 | 105 ms | 70.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -15593,12 +15597,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `54d4e56ee0fc` | `54d4e56ee0fc` | `baseline` | 0.9738 | 0.9638 | 0.0103 | +0.0000 | 0.9738 | 0 | reference | reference |
-| 1 | new | `dd5a26d95fc5` | `dd5a26d95fc5` | `dd5a26d95fc5` | 0.9704 | 0.9539 | 0.0138 | -0.0034 | 0.9704 | 0 | 18.2s | 90.00% |
-| 2 | new | `3d005d0c0a53` | `3d005d0c0a53` | `3d005d0c0a53` | 0.9704 | 0.9539 | 0.0138 | -0.0034 | 0.9704 | 0 | 20.4s | 100.00% |
-| 3 | new | `3f64fab7e641` | `3f64fab7e641` | `3f64fab7e641` | 0.9703 | 0.9539 | 0.0137 | -0.0035 | 0.9703 | 0 | 6.3s | 20.00% |
-| 4 | new | `d0e428c5372c` | `d0e428c5372c` | `d0e428c5372c` | 0.9703 | 0.9539 | 0.0137 | -0.0035 | 0.9703 | 0 | 6.6s | 30.00% |
-| 5 | new | `9e6c4d554438` | `9e6c4d554438` | `9e6c4d554438` | 0.9703 | 0.9539 | 0.0137 | -0.0035 | 0.9703 | 0 | 10.1s | 40.00% |
+| Baseline* | [#721](https://github.com/dlstupka/hth/actions/runs/32537960192) | `54d4e56ee0fc` | `54d4e56ee0fc` | `baseline` | 0.9738 | 0.9638 | 0.0103 | +0.0000 | 0.9738 | 0 | reference | reference |
+| 1 | [#721](https://github.com/dlstupka/hth/actions/runs/32537960192) | `dd5a26d95fc5` | `dd5a26d95fc5` | `dd5a26d95fc5` | 0.9704 | 0.9539 | 0.0138 | -0.0034 | 0.9704 | 0 | 18.2s | 90.00% |
+| 2 | [#721](https://github.com/dlstupka/hth/actions/runs/32537960192) | `3d005d0c0a53` | `3d005d0c0a53` | `3d005d0c0a53` | 0.9704 | 0.9539 | 0.0138 | -0.0034 | 0.9704 | 0 | 20.4s | 100.00% |
+| 3 | [#721](https://github.com/dlstupka/hth/actions/runs/32537960192) | `3f64fab7e641` | `3f64fab7e641` | `3f64fab7e641` | 0.9703 | 0.9539 | 0.0137 | -0.0035 | 0.9703 | 0 | 6.3s | 20.00% |
+| 4 | [#721](https://github.com/dlstupka/hth/actions/runs/32537960192) | `d0e428c5372c` | `d0e428c5372c` | `d0e428c5372c` | 0.9703 | 0.9539 | 0.0137 | -0.0035 | 0.9703 | 0 | 6.6s | 30.00% |
+| 5 | [#721](https://github.com/dlstupka/hth/actions/runs/32537960192) | `9e6c4d554438` | `9e6c4d554438` | `9e6c4d554438` | 0.9703 | 0.9539 | 0.0137 | -0.0035 | 0.9703 | 0 | 10.1s | 40.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -15911,12 +15915,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `e732fc5165fb` | `e732fc5165fb` | `baseline` | 0.6520 | 0.3544 | 0.1762 | -0.2499 | 0.6520 | 0 | reference | reference |
-| 1 | new | `82346a58b9d3` | `82346a58b9d3` | `82346a58b9d3` | 0.9020 | 0.7318 | 0.0897 | +0.0000 | 0.9020 | 0 | 1.4s | 80.00% |
-| 2 | new | `3794c3a143a9` | `3794c3a143a9` | `3794c3a143a9` | 0.9018 | 0.7318 | 0.0896 | -0.0001 | 0.9018 | 0 | 1.2s | 70.00% |
-| 3 | new | `1ec9b961447c` | `1ec9b961447c` | `1ec9b961447c` | 0.9003 | 0.7318 | 0.0884 | -0.0017 | 0.9003 | 0 | 1.7s | 100.00% |
-| 4 | new | `17b9ede58a3c` | `17b9ede58a3c` | `17b9ede58a3c` | 0.8999 | 0.7318 | 0.0882 | -0.0020 | 0.8999 | 0 | 1.5s | 90.00% |
-| 5 | new | `7655f2d438cb` | `7655f2d438cb` | `7655f2d438cb` | 0.8955 | 0.7318 | 0.0853 | -0.0065 | 0.8955 | 0 | 849 ms | 40.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e732fc5165fb` | `e732fc5165fb` | `baseline` | 0.6520 | 0.3544 | 0.1762 | -0.2499 | 0.6520 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `82346a58b9d3` | `82346a58b9d3` | `82346a58b9d3` | 0.9020 | 0.7318 | 0.0897 | +0.0000 | 0.9020 | 0 | 1.4s | 80.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `3794c3a143a9` | `3794c3a143a9` | `3794c3a143a9` | 0.9018 | 0.7318 | 0.0896 | -0.0001 | 0.9018 | 0 | 1.2s | 70.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `1ec9b961447c` | `1ec9b961447c` | `1ec9b961447c` | 0.9003 | 0.7318 | 0.0884 | -0.0017 | 0.9003 | 0 | 1.7s | 100.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `17b9ede58a3c` | `17b9ede58a3c` | `17b9ede58a3c` | 0.8999 | 0.7318 | 0.0882 | -0.0020 | 0.8999 | 0 | 1.5s | 90.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7655f2d438cb` | `7655f2d438cb` | `7655f2d438cb` | 0.8955 | 0.7318 | 0.0853 | -0.0065 | 0.8955 | 0 | 849 ms | 40.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -16249,12 +16253,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `479a861bb552` | `d75b76f301e6` | `baseline` | 0.8063 | 0.6913 | 0.0867 | +0.0000 | 0.8063 | 0 | reference | reference |
-| 1 | new | `0d91a06fe178` | `df47a71b2101` | `df47a71b2101` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 698 ms | 20.00% |
-| 2 | new | `c6ab179988ea` | `b5bffe569ef0` | `b5bffe569ef0` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 702 ms | 30.00% |
-| 3 | new | `80b8be1482c2` | `1f96a73219f3` | `1f96a73219f3` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 1.1s | 40.00% |
-| 4 | new | `4189b7899756` | `e7f7b003d576` | `e7f7b003d576` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 1.1s | 50.00% |
-| 5 | new | `dda61b64c8ee` | `63b7e71e9389` | `63b7e71e9389` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 1.3s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `479a861bb552` | `d75b76f301e6` | `baseline` | 0.8063 | 0.6913 | 0.0867 | +0.0000 | 0.8063 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0d91a06fe178` | `df47a71b2101` | `df47a71b2101` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 698 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c6ab179988ea` | `b5bffe569ef0` | `b5bffe569ef0` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 702 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `80b8be1482c2` | `1f96a73219f3` | `1f96a73219f3` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 1.1s | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `4189b7899756` | `e7f7b003d576` | `e7f7b003d576` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 1.1s | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `dda61b64c8ee` | `63b7e71e9389` | `63b7e71e9389` | 0.0000 | 0.0000 | 0.0000 | -0.8063 | 0.0000 | 5 | 1.3s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -16570,12 +16574,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `c81fb1ff4213` | `c81fb1ff4213` | `baseline` | 0.7618 | 0.0000 | 0.3812 | -0.2046 | 0.9523 | 1 | reference | reference |
-| 1 | new | `5ba735a3e4a4` | `5ba735a3e4a4` | `5ba735a3e4a4` | 0.9664 | 0.9476 | 0.0212 | +0.0000 | 0.9664 | 0 | 1.3s | 90.00% |
-| 2 | new | `39a3c9b2d5e8` | `39a3c9b2d5e8` | `39a3c9b2d5e8` | 0.9662 | 0.9476 | 0.0214 | -0.0002 | 0.9662 | 0 | 1.3s | 80.00% |
-| 3 | new | `156e30d9452e` | `156e30d9452e` | `156e30d9452e` | 0.9638 | 0.9437 | 0.0222 | -0.0026 | 0.9638 | 0 | 549 ms | 30.00% |
-| 4 | new | `7364bda565d2` | `7364bda565d2` | `7364bda565d2` | 0.9638 | 0.9437 | 0.0222 | -0.0026 | 0.9638 | 0 | 806 ms | 40.00% |
-| 5 | new | `35244cae67e0` | `35244cae67e0` | `35244cae67e0` | 0.9638 | 0.9437 | 0.0222 | -0.0026 | 0.9638 | 0 | 808 ms | 50.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c81fb1ff4213` | `c81fb1ff4213` | `baseline` | 0.7618 | 0.0000 | 0.3812 | -0.2046 | 0.9523 | 1 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5ba735a3e4a4` | `5ba735a3e4a4` | `5ba735a3e4a4` | 0.9664 | 0.9476 | 0.0212 | +0.0000 | 0.9664 | 0 | 1.3s | 90.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `39a3c9b2d5e8` | `39a3c9b2d5e8` | `39a3c9b2d5e8` | 0.9662 | 0.9476 | 0.0214 | -0.0002 | 0.9662 | 0 | 1.3s | 80.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `156e30d9452e` | `156e30d9452e` | `156e30d9452e` | 0.9638 | 0.9437 | 0.0222 | -0.0026 | 0.9638 | 0 | 549 ms | 30.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7364bda565d2` | `7364bda565d2` | `7364bda565d2` | 0.9638 | 0.9437 | 0.0222 | -0.0026 | 0.9638 | 0 | 806 ms | 40.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `35244cae67e0` | `35244cae67e0` | `35244cae67e0` | 0.9638 | 0.9437 | 0.0222 | -0.0026 | 0.9638 | 0 | 808 ms | 50.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -16892,12 +16896,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `59e45cee4613` | `49fac5bed131` | `baseline` | 0.8374 | 0.7029 | 0.0740 | -0.0477 | 0.8374 | 0 | reference | reference |
-| 1 | new | `2d1fb8b9c664` | `db5a00104004` | `db5a00104004` | 0.8851 | 0.8122 | 0.0456 | +0.0000 | 0.8851 | 0 | 88 ms | 40.00% |
-| 2 | new | `176e7c514c98` | `de47154184b5` | `de47154184b5` | 0.8851 | 0.8122 | 0.0456 | +0.0000 | 0.8851 | 0 | 150 ms | 90.00% |
-| 3 | new | `59d5e1daf5bc` | `f90562d5bf89` | `f90562d5bf89` | 0.8851 | 0.8100 | 0.0464 | -0.0001 | 0.8851 | 0 | 60 ms | 30.00% |
-| 4 | new | `521e73346b0b` | `2dd4e9736bfb` | `2dd4e9736bfb` | 0.8851 | 0.8100 | 0.0464 | -0.0001 | 0.8851 | 0 | 148 ms | 80.00% |
-| 5 | new | `0bd02f1c4f27` | `568cdad77b63` | `568cdad77b63` | 0.8850 | 0.8079 | 0.0473 | -0.0001 | 0.8850 | 0 | 57 ms | 20.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `59e45cee4613` | `49fac5bed131` | `baseline` | 0.8374 | 0.7029 | 0.0740 | -0.0477 | 0.8374 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2d1fb8b9c664` | `db5a00104004` | `db5a00104004` | 0.8851 | 0.8122 | 0.0456 | +0.0000 | 0.8851 | 0 | 88 ms | 40.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `176e7c514c98` | `de47154184b5` | `de47154184b5` | 0.8851 | 0.8122 | 0.0456 | +0.0000 | 0.8851 | 0 | 150 ms | 90.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `59d5e1daf5bc` | `f90562d5bf89` | `f90562d5bf89` | 0.8851 | 0.8100 | 0.0464 | -0.0001 | 0.8851 | 0 | 60 ms | 30.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `521e73346b0b` | `2dd4e9736bfb` | `2dd4e9736bfb` | 0.8851 | 0.8100 | 0.0464 | -0.0001 | 0.8851 | 0 | 148 ms | 80.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0bd02f1c4f27` | `568cdad77b63` | `568cdad77b63` | 0.8850 | 0.8079 | 0.0473 | -0.0001 | 0.8850 | 0 | 57 ms | 20.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -17216,12 +17220,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `cd967f93437d` | `cd967f93437d` | `baseline` | 0.9678 | 0.9425 | 0.0182 | +0.0000 | 0.9678 | 0 | reference | reference |
-| 1 | new | `8e42d73c350b` | `8e42d73c350b` | `8e42d73c350b` | 0.8991 | 0.8205 | 0.0460 | -0.0687 | 0.8991 | 0 | 598 ms | 100.00% |
-| 2 | new | `e2eac70d041d` | `e2eac70d041d` | `e2eac70d041d` | 0.8979 | 0.8204 | 0.0457 | -0.0699 | 0.8979 | 0 | 562 ms | 90.00% |
-| 3 | new | `e671a728c6d4` | `e671a728c6d4` | `e671a728c6d4` | 0.8966 | 0.8204 | 0.0454 | -0.0712 | 0.8966 | 0 | 556 ms | 80.00% |
-| 4 | new | `e5ad7959f684` | `e5ad7959f684` | `e5ad7959f684` | 0.8956 | 0.8204 | 0.0450 | -0.0722 | 0.8956 | 0 | 463 ms | 70.00% |
-| 5 | new | `f2305c0a35d0` | `f2305c0a35d0` | `f2305c0a35d0` | 0.8947 | 0.8204 | 0.0445 | -0.0731 | 0.8947 | 0 | 456 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `cd967f93437d` | `cd967f93437d` | `baseline` | 0.9678 | 0.9425 | 0.0182 | +0.0000 | 0.9678 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8e42d73c350b` | `8e42d73c350b` | `8e42d73c350b` | 0.8991 | 0.8205 | 0.0460 | -0.0687 | 0.8991 | 0 | 598 ms | 100.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e2eac70d041d` | `e2eac70d041d` | `e2eac70d041d` | 0.8979 | 0.8204 | 0.0457 | -0.0699 | 0.8979 | 0 | 562 ms | 90.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e671a728c6d4` | `e671a728c6d4` | `e671a728c6d4` | 0.8966 | 0.8204 | 0.0454 | -0.0712 | 0.8966 | 0 | 556 ms | 80.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e5ad7959f684` | `e5ad7959f684` | `e5ad7959f684` | 0.8956 | 0.8204 | 0.0450 | -0.0722 | 0.8956 | 0 | 463 ms | 70.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f2305c0a35d0` | `f2305c0a35d0` | `f2305c0a35d0` | 0.8947 | 0.8204 | 0.0445 | -0.0731 | 0.8947 | 0 | 456 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -17543,12 +17547,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `c6d5d9271464` | `c6d5d9271464` | `baseline` | 0.4474 | 0.0000 | 0.3917 | -0.0989 | 0.7457 | 2 | reference | reference |
-| 1 | new | `ea6049908ba9` | `ea6049908ba9` | `ea6049908ba9` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 993 ms | 30.00% |
-| 2 | new | `058b6c85f605` | `058b6c85f605` | `058b6c85f605` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 984 ms | 20.00% |
-| 3 | new | `218afc35ed78` | `218afc35ed78` | `218afc35ed78` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 1.5s | 50.00% |
-| 4 | new | `09234c13ffc4` | `09234c13ffc4` | `09234c13ffc4` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 1.5s | 40.00% |
-| 5 | new | `928d5fcecfd4` | `928d5fcecfd4` | `928d5fcecfd4` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 2s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c6d5d9271464` | `c6d5d9271464` | `baseline` | 0.4474 | 0.0000 | 0.3917 | -0.0989 | 0.7457 | 2 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ea6049908ba9` | `ea6049908ba9` | `ea6049908ba9` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 993 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `058b6c85f605` | `058b6c85f605` | `058b6c85f605` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 984 ms | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `218afc35ed78` | `218afc35ed78` | `218afc35ed78` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 1.5s | 50.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `09234c13ffc4` | `09234c13ffc4` | `09234c13ffc4` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 1.5s | 40.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `928d5fcecfd4` | `928d5fcecfd4` | `928d5fcecfd4` | 0.5463 | 0.0000 | 0.4477 | +0.0000 | 0.9105 | 2 | 2s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -17878,12 +17882,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `d593fad7aeea` | `d593fad7aeea` | `baseline` | 0.9503 | 0.9340 | 0.0145 | +0.0000 | 0.9503 | 0 | reference | reference |
-| 1 | new | `0c476a6d2841` | `0c476a6d2841` | `0c476a6d2841` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 177 ms | 30.00% |
-| 2 | new | `d1b85a845bdf` | `d1b85a845bdf` | `d1b85a845bdf` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 171 ms | 20.00% |
-| 3 | new | `ad5a7b3bfe96` | `ad5a7b3bfe96` | `ad5a7b3bfe96` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 250 ms | 40.00% |
-| 4 | new | `5ac13f6272da` | `5ac13f6272da` | `5ac13f6272da` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 259 ms | 50.00% |
-| 5 | new | `8e677524b6d5` | `8e677524b6d5` | `8e677524b6d5` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 331 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d593fad7aeea` | `d593fad7aeea` | `baseline` | 0.9503 | 0.9340 | 0.0145 | +0.0000 | 0.9503 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0c476a6d2841` | `0c476a6d2841` | `0c476a6d2841` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 177 ms | 30.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d1b85a845bdf` | `d1b85a845bdf` | `d1b85a845bdf` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 171 ms | 20.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ad5a7b3bfe96` | `ad5a7b3bfe96` | `ad5a7b3bfe96` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 250 ms | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `5ac13f6272da` | `5ac13f6272da` | `5ac13f6272da` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 259 ms | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8e677524b6d5` | `8e677524b6d5` | `8e677524b6d5` | 0.7861 | 0.6915 | 0.0931 | -0.1642 | 0.7861 | 0 | 331 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -18199,12 +18203,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `f26bbb16c7b6` | `f26bbb16c7b6` | `baseline` | 0.4227 | 0.2130 | 0.2863 | -0.0584 | 0.4227 | 0 | reference | reference |
-| 1 | new | `7310593db919` | `7310593db919` | `7310593db919` | 0.4811 | 0.1918 | 0.2655 | +0.0000 | 0.4811 | 0 | 989 ms | 40.00% |
-| 2 | new | `991ec364dc7e` | `991ec364dc7e` | `991ec364dc7e` | 0.4735 | 0.1767 | 0.2822 | -0.0076 | 0.4735 | 0 | 639 ms | 30.00% |
-| 3 | new | `d16cee8d5acd` | `d16cee8d5acd` | `d16cee8d5acd` | 0.4604 | 0.1623 | 0.2900 | -0.0207 | 0.4604 | 0 | 618 ms | 20.00% |
-| 4 | new | `227420ed6c9e` | `227420ed6c9e` | `227420ed6c9e` | 0.4557 | 0.1462 | 0.2892 | -0.0254 | 0.4557 | 0 | 1.4s | 70.00% |
-| 5 | new | `06163c156ed7` | `06163c156ed7` | `06163c156ed7` | 0.4491 | 0.1344 | 0.3043 | -0.0319 | 0.4491 | 0 | 1.4s | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f26bbb16c7b6` | `f26bbb16c7b6` | `baseline` | 0.4227 | 0.2130 | 0.2863 | -0.0584 | 0.4227 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7310593db919` | `7310593db919` | `7310593db919` | 0.4811 | 0.1918 | 0.2655 | +0.0000 | 0.4811 | 0 | 989 ms | 40.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `991ec364dc7e` | `991ec364dc7e` | `991ec364dc7e` | 0.4735 | 0.1767 | 0.2822 | -0.0076 | 0.4735 | 0 | 639 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `d16cee8d5acd` | `d16cee8d5acd` | `d16cee8d5acd` | 0.4604 | 0.1623 | 0.2900 | -0.0207 | 0.4604 | 0 | 618 ms | 20.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `227420ed6c9e` | `227420ed6c9e` | `227420ed6c9e` | 0.4557 | 0.1462 | 0.2892 | -0.0254 | 0.4557 | 0 | 1.4s | 70.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `06163c156ed7` | `06163c156ed7` | `06163c156ed7` | 0.4491 | 0.1344 | 0.3043 | -0.0319 | 0.4491 | 0 | 1.4s | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -18508,7 +18512,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `7e367fe3bfd5` | `7e367fe3bfd5` | partial |
 
 ### Detector Evidence
 
@@ -18544,12 +18548,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `7e367fe3bfd5` | `7e367fe3bfd5` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | reference | reference |
-| 1 | new | `55356b348cc7` | `55356b348cc7` | `55356b348cc7` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 208 ms | 20.00% |
-| 2 | new | `c00244a14f3f` | `c00244a14f3f` | `c00244a14f3f` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 209 ms | 30.00% |
-| 3 | new | `6b99d5f448b7` | `6b99d5f448b7` | `6b99d5f448b7` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 340 ms | 50.00% |
-| 4 | new | `2080a62a8e2c` | `2080a62a8e2c` | `2080a62a8e2c` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 339 ms | 40.00% |
-| 5 | new | `e113c97844b3` | `e113c97844b3` | `e113c97844b3` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 466 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7e367fe3bfd5` | `7e367fe3bfd5` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `55356b348cc7` | `55356b348cc7` | `55356b348cc7` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 208 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c00244a14f3f` | `c00244a14f3f` | `c00244a14f3f` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 209 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `6b99d5f448b7` | `6b99d5f448b7` | `6b99d5f448b7` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 340 ms | 50.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `2080a62a8e2c` | `2080a62a8e2c` | `2080a62a8e2c` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 339 ms | 40.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `e113c97844b3` | `e113c97844b3` | `e113c97844b3` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 466 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -18797,7 +18801,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `60e473e3d379` | `60e473e3d379` | partial |
 
 ### Detector Evidence
 
@@ -18834,12 +18838,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `d4ed742934a2` | `d4ed742934a2` | `baseline` | 0.9241 | 0.8478 | 0.0524 | -0.0156 | 0.9241 | 0 | reference | reference |
-| 1 | new | `60e473e3d379` | `60e473e3d379` | `60e473e3d379` | 0.9397 | 0.8489 | 0.0476 | +0.0000 | 0.9397 | 0 | 10.1s | 40.00% |
-| 2 | new | `ad108720c832` | `ad108720c832` | `ad108720c832` | 0.9388 | 0.8489 | 0.0474 | -0.0008 | 0.9388 | 0 | 10.9s | 50.00% |
-| 3 | new | `306c443a2b50` | `306c443a2b50` | `306c443a2b50` | 0.9376 | 0.8489 | 0.0473 | -0.0020 | 0.9376 | 0 | 14.8s | 60.00% |
-| 4 | new | `2f8c24080e84` | `2f8c24080e84` | `2f8c24080e84` | 0.9375 | 0.8489 | 0.0473 | -0.0022 | 0.9375 | 0 | 16.3s | 70.00% |
-| 5 | new | `feb2ad721e81` | `feb2ad721e81` | `feb2ad721e81` | 0.9375 | 0.8489 | 0.0473 | -0.0022 | 0.9375 | 0 | 19.7s | 80.00% |
+| Baseline* | [#719](https://github.com/dlstupka/hth/actions/runs/32536118341) | `d4ed742934a2` | `d4ed742934a2` | `baseline` | 0.9241 | 0.8478 | 0.0524 | -0.0156 | 0.9241 | 0 | reference | reference |
+| 1 | [#719](https://github.com/dlstupka/hth/actions/runs/32536118341) | `60e473e3d379` | `60e473e3d379` | `60e473e3d379` | 0.9397 | 0.8489 | 0.0476 | +0.0000 | 0.9397 | 0 | 10.1s | 40.00% |
+| 2 | [#719](https://github.com/dlstupka/hth/actions/runs/32536118341) | `ad108720c832` | `ad108720c832` | `ad108720c832` | 0.9388 | 0.8489 | 0.0474 | -0.0008 | 0.9388 | 0 | 10.9s | 50.00% |
+| 3 | [#719](https://github.com/dlstupka/hth/actions/runs/32536118341) | `306c443a2b50` | `306c443a2b50` | `306c443a2b50` | 0.9376 | 0.8489 | 0.0473 | -0.0020 | 0.9376 | 0 | 14.8s | 60.00% |
+| 4 | [#719](https://github.com/dlstupka/hth/actions/runs/32536118341) | `2f8c24080e84` | `2f8c24080e84` | `2f8c24080e84` | 0.9375 | 0.8489 | 0.0473 | -0.0022 | 0.9375 | 0 | 16.3s | 70.00% |
+| 5 | [#719](https://github.com/dlstupka/hth/actions/runs/32536118341) | `feb2ad721e81` | `feb2ad721e81` | `feb2ad721e81` | 0.9375 | 0.8489 | 0.0473 | -0.0022 | 0.9375 | 0 | 19.7s | 80.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -19160,12 +19164,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `92e0158634c3` | `92e0158634c3` | `baseline` | 0.6974 | 0.0000 | 0.3602 | -0.2262 | 0.8717 | 1 | reference | reference |
-| 1 | new | `c953ea21ba66` | `c953ea21ba66` | `c953ea21ba66` | 0.9236 | 0.8360 | 0.0531 | +0.0000 | 0.9236 | 0 | 2.6s | 40.00% |
-| 2 | new | `aba81860e8e3` | `aba81860e8e3` | `aba81860e8e3` | 0.9232 | 0.8360 | 0.0531 | -0.0004 | 0.9232 | 0 | 4.3s | 90.00% |
-| 3 | new | `adc752238e83` | `adc752238e83` | `adc752238e83` | 0.9199 | 0.7975 | 0.0675 | -0.0036 | 0.9199 | 0 | 3.6s | 70.00% |
-| 4 | new | `3a37e81cc288` | `3a37e81cc288` | `3a37e81cc288` | 0.9185 | 0.7975 | 0.0667 | -0.0050 | 0.9185 | 0 | 2s | 30.00% |
-| 5 | new | `1c887604aeaf` | `1c887604aeaf` | `1c887604aeaf` | 0.9178 | 0.7975 | 0.0665 | -0.0058 | 0.9178 | 0 | 4s | 80.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `92e0158634c3` | `92e0158634c3` | `baseline` | 0.6974 | 0.0000 | 0.3602 | -0.2262 | 0.8717 | 1 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `c953ea21ba66` | `c953ea21ba66` | `c953ea21ba66` | 0.9236 | 0.8360 | 0.0531 | +0.0000 | 0.9236 | 0 | 2.6s | 40.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `aba81860e8e3` | `aba81860e8e3` | `aba81860e8e3` | 0.9232 | 0.8360 | 0.0531 | -0.0004 | 0.9232 | 0 | 4.3s | 90.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `adc752238e83` | `adc752238e83` | `adc752238e83` | 0.9199 | 0.7975 | 0.0675 | -0.0036 | 0.9199 | 0 | 3.6s | 70.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `3a37e81cc288` | `3a37e81cc288` | `3a37e81cc288` | 0.9185 | 0.7975 | 0.0667 | -0.0050 | 0.9185 | 0 | 2s | 30.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `1c887604aeaf` | `1c887604aeaf` | `1c887604aeaf` | 0.9178 | 0.7975 | 0.0665 | -0.0058 | 0.9178 | 0 | 4s | 80.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -19499,12 +19503,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `839015ab653d` | `839015ab653d` | `baseline` | 0.8483 | 0.7473 | 0.0746 | -0.0185 | 0.8483 | 0 | reference | reference |
-| 1 | new | `45844b256edd` | `45844b256edd` | `45844b256edd` | 0.8668 | 0.7402 | 0.0759 | +0.0000 | 0.8668 | 0 | 379 ms | 50.00% |
-| 2 | new | `78e0a52a25f0` | `78e0a52a25f0` | `78e0a52a25f0` | 0.8664 | 0.7467 | 0.0731 | -0.0004 | 0.8664 | 0 | 515 ms | 70.00% |
-| 3 | new | `7da11e12ff8f` | `7da11e12ff8f` | `7da11e12ff8f` | 0.8657 | 0.7532 | 0.0702 | -0.0010 | 0.8657 | 0 | 681 ms | 100.00% |
-| 4 | new | `78cd644f1e0b` | `78cd644f1e0b` | `78cd644f1e0b` | 0.8438 | 0.7532 | 0.0581 | -0.0229 | 0.8438 | 0 | 641 ms | 90.00% |
-| 5 | new | `b6bfa241e517` | `b6bfa241e517` | `b6bfa241e517` | 0.8431 | 0.7467 | 0.0602 | -0.0236 | 0.8431 | 0 | 515 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `839015ab653d` | `839015ab653d` | `baseline` | 0.8483 | 0.7473 | 0.0746 | -0.0185 | 0.8483 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `45844b256edd` | `45844b256edd` | `45844b256edd` | 0.8668 | 0.7402 | 0.0759 | +0.0000 | 0.8668 | 0 | 379 ms | 50.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `78e0a52a25f0` | `78e0a52a25f0` | `78e0a52a25f0` | 0.8664 | 0.7467 | 0.0731 | -0.0004 | 0.8664 | 0 | 515 ms | 70.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `7da11e12ff8f` | `7da11e12ff8f` | `7da11e12ff8f` | 0.8657 | 0.7532 | 0.0702 | -0.0010 | 0.8657 | 0 | 681 ms | 100.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `78cd644f1e0b` | `78cd644f1e0b` | `78cd644f1e0b` | 0.8438 | 0.7532 | 0.0581 | -0.0229 | 0.8438 | 0 | 641 ms | 90.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `b6bfa241e517` | `b6bfa241e517` | `b6bfa241e517` | 0.8431 | 0.7467 | 0.0602 | -0.0236 | 0.8431 | 0 | 515 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -19842,12 +19846,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `f914375ada78` | `f914375ada78` | `baseline` | 0.7756 | 0.3969 | 0.2448 | -0.0224 | 0.7756 | 0 | reference | reference |
-| 1 | new | `095537f3b0cd` | `095537f3b0cd` | `095537f3b0cd` | 0.7981 | 0.5414 | 0.1935 | +0.0000 | 0.7981 | 0 | 150 ms | 20.00% |
-| 2 | new | `0d7165269fe3` | `0d7165269fe3` | `0d7165269fe3` | 0.7967 | 0.5268 | 0.2043 | -0.0014 | 0.7967 | 0 | 150 ms | 30.00% |
-| 3 | new | `ba17416e0dda` | `ba17416e0dda` | `ba17416e0dda` | 0.7902 | 0.5579 | 0.1749 | -0.0078 | 0.7902 | 0 | 240 ms | 40.00% |
-| 4 | new | `53cf691df4c6` | `53cf691df4c6` | `53cf691df4c6` | 0.7662 | 0.3900 | 0.2364 | -0.0319 | 0.7662 | 0 | 385 ms | 90.00% |
-| 5 | new | `6f61e79a4b7e` | `6f61e79a4b7e` | `6f61e79a4b7e` | 0.7650 | 0.3960 | 0.2416 | -0.0331 | 0.7650 | 0 | 323 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f914375ada78` | `f914375ada78` | `baseline` | 0.7756 | 0.3969 | 0.2448 | -0.0224 | 0.7756 | 0 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `095537f3b0cd` | `095537f3b0cd` | `095537f3b0cd` | 0.7981 | 0.5414 | 0.1935 | +0.0000 | 0.7981 | 0 | 150 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `0d7165269fe3` | `0d7165269fe3` | `0d7165269fe3` | 0.7967 | 0.5268 | 0.2043 | -0.0014 | 0.7967 | 0 | 150 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ba17416e0dda` | `ba17416e0dda` | `ba17416e0dda` | 0.7902 | 0.5579 | 0.1749 | -0.0078 | 0.7902 | 0 | 240 ms | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `53cf691df4c6` | `53cf691df4c6` | `53cf691df4c6` | 0.7662 | 0.3900 | 0.2364 | -0.0319 | 0.7662 | 0 | 385 ms | 90.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `6f61e79a4b7e` | `6f61e79a4b7e` | `6f61e79a4b7e` | 0.7650 | 0.3960 | 0.2416 | -0.0331 | 0.7650 | 0 | 323 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -20184,12 +20188,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `cd4fbe8ec7d8` | `cd4fbe8ec7d8` | `baseline` | 0.1596 | 0.0000 | 0.3191 | +0.0000 | 0.7978 | 4 | reference | reference |
-| 1 | new | `00521cb468c7` | `00521cb468c7` | `00521cb468c7` | 0.1158 | 0.0000 | 0.2316 | -0.0437 | 0.5791 | 4 | 120 ms | 50.00% |
-| 2 | new | `1c0b5b0e68d2` | `1c0b5b0e68d2` | `1c0b5b0e68d2` | 0.1158 | 0.0000 | 0.2316 | -0.0437 | 0.5791 | 4 | 158 ms | 60.00% |
-| 3 | new | `755592f2b19d` | `755592f2b19d` | `755592f2b19d` | 0.1112 | 0.0000 | 0.2223 | -0.0484 | 0.5558 | 4 | 76 ms | 30.00% |
-| 4 | new | `aed529db32b1` | `aed529db32b1` | `aed529db32b1` | 0.1112 | 0.0000 | 0.2223 | -0.0484 | 0.5558 | 4 | 158 ms | 70.00% |
-| 5 | new | `8cecb4ddab71` | `8cecb4ddab71` | `8cecb4ddab71` | 0.1068 | 0.0000 | 0.2135 | -0.0528 | 0.5338 | 4 | 69 ms | 20.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `cd4fbe8ec7d8` | `cd4fbe8ec7d8` | `baseline` | 0.1596 | 0.0000 | 0.3191 | +0.0000 | 0.7978 | 4 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `00521cb468c7` | `00521cb468c7` | `00521cb468c7` | 0.1158 | 0.0000 | 0.2316 | -0.0437 | 0.5791 | 4 | 120 ms | 50.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `1c0b5b0e68d2` | `1c0b5b0e68d2` | `1c0b5b0e68d2` | 0.1158 | 0.0000 | 0.2316 | -0.0437 | 0.5791 | 4 | 158 ms | 60.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `755592f2b19d` | `755592f2b19d` | `755592f2b19d` | 0.1112 | 0.0000 | 0.2223 | -0.0484 | 0.5558 | 4 | 76 ms | 30.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `aed529db32b1` | `aed529db32b1` | `aed529db32b1` | 0.1112 | 0.0000 | 0.2223 | -0.0484 | 0.5558 | 4 | 158 ms | 70.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `8cecb4ddab71` | `8cecb4ddab71` | `8cecb4ddab71` | 0.1068 | 0.0000 | 0.2135 | -0.0528 | 0.5338 | 4 | 69 ms | 20.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -20483,7 +20487,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| current/unknown | unknown | `unknown` | `unknown` | No build provenance was available. |
+| [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | 2026-08-21 | `9ef715dda063` | `9ef715dda063` | partial |
 
 ### Detector Evidence
 
@@ -20519,12 +20523,12 @@ The regression execution shape selected for this detector run is recorded here s
 
 | Rank | Last Build | Family ID | Parameter Set ID | Parameter Short Name | Avg IoU | Min IoU | StdDev | Δ Avg IoU | Avg IoU Success | Failures | Discovery Time | Search Space % |
 |---|---|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Baseline* | new | `9ef715dda063` | `9ef715dda063` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | reference | reference |
-| 1 | new | `f7e0d706deeb` | `f7e0d706deeb` | `f7e0d706deeb` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 33 ms | 20.00% |
-| 2 | new | `93f2d7e9ecfa` | `93f2d7e9ecfa` | `93f2d7e9ecfa` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 35 ms | 30.00% |
-| 3 | new | `f2b82f6c9e72` | `f2b82f6c9e72` | `f2b82f6c9e72` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 49 ms | 40.00% |
-| 4 | new | `051f77f76305` | `051f77f76305` | `051f77f76305` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 51 ms | 50.00% |
-| 5 | new | `ecc21ea1857a` | `ecc21ea1857a` | `ecc21ea1857a` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 65 ms | 60.00% |
+| Baseline* | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `9ef715dda063` | `9ef715dda063` | `baseline` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | reference | reference |
+| 1 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f7e0d706deeb` | `f7e0d706deeb` | `f7e0d706deeb` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 33 ms | 20.00% |
+| 2 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `93f2d7e9ecfa` | `93f2d7e9ecfa` | `93f2d7e9ecfa` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 35 ms | 30.00% |
+| 3 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `f2b82f6c9e72` | `f2b82f6c9e72` | `f2b82f6c9e72` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 49 ms | 40.00% |
+| 4 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `051f77f76305` | `051f77f76305` | `051f77f76305` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 51 ms | 50.00% |
+| 5 | [#718](https://github.com/dlstupka/hth/actions/runs/32536052443) | `ecc21ea1857a` | `ecc21ea1857a` | `ecc21ea1857a` | 0.0000 | 0.0000 | 0.0000 | +0.0000 | 0.0000 | 5 | 65 ms | 60.00% |
 
 \* **Baseline** is the detector's default parameter-set configuration.
 \*\* **Best** is the historic best-known compatible parameter set prior to this regression run.
@@ -20693,12 +20697,12 @@ Every completed regression contributes reusable quality and runtime evidence so 
 
 - `calibration-index.json` retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata.
 - Compatible authoritative calibrations remain preferred over provisional smoke observations.
-- Results commit: [13ed99f5ee41d005d327af9607ec1d7bab441417](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/13ed99f5ee41d005d327af9607ec1d7bab441417).
-- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/32778980506).
+- Results commit: [479bed1e63047ecb5cd0a599a6c6a928991e5fe6](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/479bed1e63047ecb5cd0a599a6c6a928991e5fe6).
+- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/32779650653).
 - Pipeline repository: [dlstupka/hth](https://github.com/dlstupka/hth).
 - Results repository: [dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results).
-- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/13ed99f5ee41d005d327af9607ec1d7bab441417/indexes/calibration-index.json).
-- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/13ed99f5ee41d005d327af9607ec1d7bab441417/indexes/runtime-index.json).
+- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/479bed1e63047ecb5cd0a599a6c6a928991e5fe6/indexes/calibration-index.json).
+- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/479bed1e63047ecb5cd0a599a6c6a928991e5fe6/indexes/runtime-index.json).
 - Smoke records are provisional; complete exhaustive full regressions are authoritative.
 
 [↑ Back to Navigation](#table-of-contents)
