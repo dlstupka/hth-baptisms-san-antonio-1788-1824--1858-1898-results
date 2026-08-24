@@ -1,0 +1,151 @@
+{
+  "schema_version": "0.4",
+  "detector": "segment_supported_polar_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/segment_supported_polar_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "22.393",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "17",
+    "ranked_quality": "0.92355288",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "segment_supported_polar_vote",
+    "description": "Generation-3 calibration space for Segment-Supported Polar Voting, collapsing dormant support thresholds and concentrating the exhaustive search on the six dimensions that shaped the Generation-2 winning basin.",
+    "profiles": {
+      "baseline": {
+        "ray_count": 180,
+        "inner_radius_fraction": 0.12,
+        "outer_radius_fraction": 0.7,
+        "gradient_percentile": 82.0,
+        "minimum_support_fraction": 0.35,
+        "segment_distance_fraction": 0.018,
+        "minimum_segment_length_fraction": 0.1,
+        "minimum_segment_support_fraction": 0.3,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "ray_count": {
+        "type": "integer",
+        "values": [
+          48,
+          60,
+          72,
+          84,
+          120,
+          180
+        ]
+      },
+      "inner_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.1,
+          0.12,
+          0.14,
+          0.16,
+          0.18
+        ]
+      },
+      "outer_radius_fraction": {
+        "type": "float",
+        "values": [
+          0.66,
+          0.7,
+          0.72,
+          0.76,
+          0.82,
+          0.9
+        ]
+      },
+      "gradient_percentile": {
+        "type": "float",
+        "values": [
+          78.0,
+          82.0,
+          83.0,
+          84.0,
+          86.0,
+          90.0,
+          92.0
+        ]
+      },
+      "minimum_support_fraction": {
+        "type": "float",
+        "values": [
+          0.2
+        ]
+      },
+      "segment_distance_fraction": {
+        "type": "float",
+        "values": [
+          0.0025,
+          0.0035,
+          0.005,
+          0.0065,
+          0.01,
+          0.018
+        ]
+      },
+      "minimum_segment_length_fraction": {
+        "type": "float",
+        "values": [
+          0.015,
+          0.0225,
+          0.03,
+          0.045,
+          0.1
+        ]
+      },
+      "minimum_segment_support_fraction": {
+        "type": "float",
+        "values": [
+          0.1
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "bounded-cartesian-v1",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact",
+      "previous_declared_parameter_sets": 180000
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}

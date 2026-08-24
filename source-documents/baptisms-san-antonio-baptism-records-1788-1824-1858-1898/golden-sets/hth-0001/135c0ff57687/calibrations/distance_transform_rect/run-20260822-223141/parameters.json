@@ -1,0 +1,110 @@
+{
+  "schema_version": "0.4",
+  "detector": "distance_transform_rect",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/distance_transform_rect.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "0.782",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "43",
+    "ranked_quality": "0.72428296",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "distance_transform_rect",
+    "description": "Calibration space for the HTH Distance Transform Rect detector.",
+    "profiles": {
+      "baseline": {
+        "distance_threshold_fraction": 0.18,
+        "minimum_core_area_fraction": 0.006,
+        "proposal_expansion_fraction": 0.12,
+        "minimum_mask_coverage": 0.12,
+        "minimum_bbox_area_fraction": 0.14,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "distance_threshold_fraction": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.18,
+          0.3
+        ]
+      },
+      "minimum_core_area_fraction": {
+        "type": "float",
+        "values": [
+          0.002,
+          0.006,
+          0.015
+        ]
+      },
+      "proposal_expansion_fraction": {
+        "type": "float",
+        "values": [
+          0.06,
+          0.12,
+          0.22
+        ]
+      },
+      "minimum_mask_coverage": {
+        "type": "float",
+        "values": [
+          0.06,
+          0.12,
+          0.22
+        ]
+      },
+      "minimum_bbox_area_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.14,
+          0.22
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.016
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
