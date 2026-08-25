@@ -124,6 +124,8 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | amsre_doc_ufcn_fusion | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 4 | 96 | 3p/128t, 4p/96t | exhaustive | 1m 19s | 384 | 2.62 | 1m 20s | 6 |
 | amsre_doc_ufcn_fusion | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 1 | 384 | 1p/384t | exhaustive | 2m 18s | 384 | 1.32 | 22s | 5 |
 | amsre_doc_ufcn_fusion | 192t — rh8-al316 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 2 | 192 | 2p/192t | exhaustive | 3m 7s | 384 | 0.85 | 34s | 4 |
+| amsre_doc_ufcn_fusion | 192t — rh8-al317 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 3023.3 GiB | 1 | 384 | 1p/384t | exhaustive | 2m 19s | 384 | 1.45 | 20s | 8 |
+| amsre_doc_ufcn_fusion | 192t — rh8-al320 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 503.3 GiB | 2 | 192 | 2p/192t | adaptive | 5m 6s | 384 | 0.97 | 30s | 4 |
 | border_energy | 192t — rh8-al325 (192 vCPU) | — | — | — | — | 8 | 48 | 7p/54t, 8p/48t, 9p/42t | legacy | — | 384 | 84.13 | 1m 18s | 7 |
 | border_fusion_quad | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 11 | 34 | 10p/38t, 11p/34t, 12p/32t, 13p/29t, 14p/27t, 15p/25t | legacy | — | 374 | 18.77 | 13s | 12 |
 | components | 192t — rh8-al324 (192 vCPU) | — | — | — | — | 8 | 48 | 8p/48t | legacy | — | 384 | 596.45 | 33s | 5 |
@@ -797,25 +799,33 @@ This table contains measurements from this optimizer execution only. Bold identi
 | **192t — rh8-al307 (192 vCPU)** | 1 | 1 | 384 | 384 | 22s | 0s | 1.32 | 1.00× | 0.00% | — | — | — | — |
 | 192t — rh8-al308 (192 vCPU) | 1 | 1 | 384 | 384 | 2m 10s | 0s | 1.62 | 1.00× | -38.46% | 17.7 | 33.7 | 19.5% | 36.0 GiB |
 | **192t — rh8-al308 (192 vCPU)** | 1 | 1 | 384 | 384 | 22s | 0s | 1.32 | 1.00× | -49.78% | — | — | — | — |
+| **192t — rh8-al317 (192 vCPU)** | 1 | 1 | 384 | 384 | 20s | 0s | 1.45 | 1.00× | 0.00% | — | — | — | — |
 | 192t — rh8-al307 (192 vCPU) | 2 | 2 | 192 | 384 | 31s | 0s | 0.94 | 0.71× | -29.03% | — | — | — | — |
 | 192t — rh8-al307 (192 vCPU) | 2 | 2 | 192 | 384 | 33s | 0s | 0.88 | 0.67× | -33.33% | 267.9 | 267.9 | 83.7% | 26.3 GiB |
 | 192t — rh8-al308 (192 vCPU) | 2 | 2 | 192 | 384 | 1m 31s | 0s | 2.31 | 1.43× | -12.09% | 77.2 | 77.2 | 44.9% | 36.2 GiB |
 | 192t — rh8-al308 (192 vCPU) | 2 | 2 | 192 | 384 | 30s | 0s | 0.97 | 0.73× | -63.17% | — | — | — | — |
 | **192t — rh8-al316 (192 vCPU)** | 2 | 2 | 192 | 384 | 34s | 0s | 0.85 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al317 (192 vCPU) | 2 | 2 | 192 | 384 | 30s | 0s | 0.97 | 0.67× | -33.33% | — | — | — | — |
+| **192t — rh8-al320 (192 vCPU)** | 2 | 2 | 192 | 384 | 30s | 0s | 0.97 | — | 0.00% | — | — | — | — |
 | 192t — rh8-al307 (192 vCPU) | 3 | 3 | 128 | 384 | 40s | 0s | 0.72 | 0.55× | -45.00% | 304.6 | 304.6 | 90.3% | 25.7 GiB |
 | 192t — rh8-al307 (192 vCPU) | 3 | 3 | 128 | 384 | 39s | 0s | 0.74 | 0.56× | -43.59% | 82.0 | 82.0 | 45.8% | 23.5 GiB |
 | 192t — rh8-al308 (192 vCPU) | 3 | 3 | 128 | 384 | 1m 21s | 0s | 2.59 | 1.60× | -1.23% | 176.2 | 182.5 | 51.0% | 37.5 GiB |
 | 192t — rh8-al308 (192 vCPU) | 3 | 3 | 128 | 384 | 38s | 0s | 0.76 | 0.58× | -70.93% | 85.7 | 85.7 | 47.3% | 26.0 GiB |
 | 192t — rh8-al316 (192 vCPU) | 3 | 3 | 128 | 384 | 42s | 0s | 0.69 | — | -19.05% | 162.2 | 162.2 | 66.8% | 18.1 GiB |
+| 192t — rh8-al317 (192 vCPU) | 3 | 3 | 128 | 384 | 39s | 0s | 0.74 | 0.51× | -48.72% | 100.4 | 100.4 | 45.7% | 17.3 GiB |
+| 192t — rh8-al320 (192 vCPU) | 3 | 3 | 128 | 384 | 39s | 0s | 0.74 | — | -23.08% | 414.1 | 414.1 | 92.4% | 8.7 GiB |
 | 192t — rh8-al307 (192 vCPU) | 4 | 4 | 96 | 384 | 47s | 0s | 0.62 | 0.47× | -53.19% | 243.3 | 243.3 | 88.1% | 25.0 GiB |
 | **192t — rh8-al308 (192 vCPU)** | 4 | 4 | 96 | 384 | 1m 20s | 0s | 2.62 | 1.62× | 0.00% | 267.5 | 267.5 | 74.5% | 37.7 GiB |
 | 192t — rh8-al308 (192 vCPU) | 4 | 4 | 96 | 384 | 48s | 0s | 0.60 | 0.46× | -76.98% | 243.3 | 243.3 | 89.2% | 27.3 GiB |
 | 192t — rh8-al316 (192 vCPU) | 4 | 4 | 96 | 384 | 50s | 0s | 0.58 | — | -32.00% | 261.8 | 261.8 | 85.4% | 18.6 GiB |
+| 192t — rh8-al317 (192 vCPU) | 4 | 4 | 96 | 384 | 48s | 0s | 0.60 | 0.42× | -58.33% | 235.2 | 235.2 | 88.4% | 19.0 GiB |
 | 192t — rh8-al308 (192 vCPU) | 5 | 5 | 76 | 380 | 1m 24s | 0s | 2.50 | 1.55× | -4.76% | 333.1 | 333.1 | 75.3% | 26.4 GiB |
 | 192t — rh8-al316 (192 vCPU) | 5 | 5 | 76 | 380 | 1m 1s | 0s | 0.48 | — | -44.26% | 318.5 | 318.5 | 87.2% | 19.0 GiB |
 | 192t — rh8-al308 (192 vCPU) | 6 | 6 | 64 | 384 | 1m 30s | 0s | 2.33 | 1.44× | -11.11% | 324.4 | 354.9 | 84.3% | 38.8 GiB |
+| 192t — rh8-al320 (192 vCPU) | 6 | 6 | 64 | 384 | 1m 7s | 0s | 0.43 | — | -55.22% | 500.6 | 500.6 | 93.4% | 10.5 GiB |
 | 192t — rh8-al308 (192 vCPU) | 7 | 7 | 54 | 378 | 1m 19s | 0s | 0.37 | 0.28× | -86.02% | 289.6 | 289.6 | 84.9% | 29.6 GiB |
 | 192t — rh8-al307 (192 vCPU) | 8 | 8 | 48 | 384 | 1m 29s | 0s | 0.33 | 0.25× | -75.28% | 207.0 | 207.0 | 57.2% | 29.2 GiB |
+| 192t — rh8-al320 (192 vCPU) | 16 | 16 | 24 | 384 | 2m 48s | 0s | 0.17 | — | -82.14% | 361.9 | 488.8 | 90.9% | 15.5 GiB |
 
 **Startup-overhead note:** executor startup is measured from `run-detector-regressions` entry through detector lifecycle preparation, planning, shared learned-evidence resolution/preparation, and initial queue setup before pipeline fan-out. It remains included in **Wall** and therefore in shape-level **Sets/s** as a constant reminder of incurred end-to-end cost. Per-shard parameter-set throughput is timed after fan-out and does not include this pre-fan-out startup overhead.
 
