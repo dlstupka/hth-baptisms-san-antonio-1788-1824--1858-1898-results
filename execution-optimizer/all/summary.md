@@ -116,55 +116,56 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
-| adaptive_multi_scale_radial_edge | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 48 | 8 | 24p/16t, 48p/8t | legacy | — | 384 | 24.94 | 6m 41s | 1 |
-| adaptive_radial_edge | 32t — rh8-s32 (32 vCPU) | — | — | — | — | 22 | 2 | 21p/3t, 22p/2t, 23p/2t, 24p/2t, 25p/2t, 26p/2t, 27p/2t | legacy | — | 44 | 74.57 | 1m 28s | 1 |
-| amsre_bfq_spbv_pbg | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 42 | 9 | 42p/9t, 43p/8t, 44p/8t, 45p/8t, 46p/8t, 47p/8t, 48p/8t | legacy | — | 378 | 10.60 | 1h 18m 54s | 1 |
-| amsre_doc_ufcn_fusion | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 4 | 96 | 3p/128t, 4p/96t | exhaustive | 1m 19s | 384 | 2.62 | 1m 20s | 1 |
-| amsre_doc_ufcn_fusion | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 1 | 384 | 1p/384t | exhaustive | 2m 18s | 384 | 1.32 | 22s | 1 |
-| amsre_doc_ufcn_fusion | 192t — rh8-al316 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 2 | 192 | 2p/192t | exhaustive | 3m 7s | 384 | 0.85 | 34s | 1 |
-| border_energy | 192t — rh8-al325 (192 vCPU) | — | — | — | — | 8 | 48 | 7p/54t, 8p/48t, 9p/42t | legacy | — | 384 | 84.13 | 1m 18s | 1 |
-| border_fusion_quad | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 11 | 34 | 10p/38t, 11p/34t, 12p/32t, 13p/29t, 14p/27t, 15p/25t | legacy | — | 374 | 18.77 | 13s | 1 |
-| components | 192t — rh8-al324 (192 vCPU) | — | — | — | — | 8 | 48 | 8p/48t | legacy | — | 384 | 596.45 | 33s | 1 |
-| consensus_quad | 192t — rh8-al323 (192 vCPU) | — | — | — | — | 5 | 76 | 5p/76t, 6p/64t | legacy | — | 380 | 27.00 | 9s | 1 |
-| contour | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 7 | 54 | 2p/192t, 3p/128t, 4p/96t, 5p/76t, 6p/64t, 7p/54t, 8p/48t | legacy | — | 378 | 364.50 | 4s | 1 |
-| contour_components | 32t — rh8-s32 (32 vCPU) | — | — | — | — | 9 | 7 | 8p/8t, 9p/7t, 10p/6t | legacy | — | 63 | 106.98 | 3m 4s | 1 |
-| contour_grabcut | 192t — rh8-al320 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 2p/192t | legacy | — | 384 | 4.93 | 22m 10s | 1 |
-| contour_projection | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 21 | 18 | 21p/18t | legacy | — | 378 | 49.71 | 2m 12s | 1 |
-| contour_quad | 192t — rh8-al324 (192 vCPU) | — | — | — | — | 8 | 48 | 6p/64t, 7p/54t, 8p/48t, 9p/42t, 10p/38t | legacy | — | 384 | 146.81 | 2h 40s | 1 |
-| convex_hull | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 8 | 48 | 8p/48t | legacy | — | 384 | 437.40 | 5s | 1 |
-| cross_edge_contour | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 7 | 54 | 7p/54t, 8p/48t, 9p/42t | legacy | — | 378 | 93.74 | 1m 10s | 1 |
-| dhsegment_page_mask | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 207 | 1 | 192p/2t, 207p/1t, 215p/1t, 219p/1t, 220p/1t, 221p/1t, 222p/1t, 223p/1t | legacy | — | 207 | 11.85 | 14m 4s | 1 |
-| distance_transform | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 64p/6t | legacy | — | 384 | 72.90 | 30s | 1 |
-| distance_transform_rect | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 5 | 76 | 1p/384t, 3p/128t, 5p/76t | legacy | — | 380 | 243.00 | 3s | 1 |
-| doc_ufcn_page_mask | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 5 | 76 | 4p/96t, 5p/76t, 6p/64t | legacy | — | 380 | 142.86 | 14s | 1 |
-| docextractor_page_mask | 192t — rh8-al317 (192 vCPU) | — | — | — | — | 3 | 128 | 3p/128t | legacy | — | 384 | 9.90 | 10s | 1 |
-| edge_contour | 192t — rh8-al323 (192 vCPU) | — | — | — | — | 20 | 19 | 20p/19t, 21p/18t, 22p/17t, 23p/16t | legacy | — | 380 | 182.26 | 1m 12s | 1 |
-| eynollah_page_mask | 192t — rh8-al316 (192 vCPU) | — | — | — | — | 2 | 192 | 2p/192t | legacy | — | 384 | 6.75 | 12s | 1 |
+| adaptive_multi_scale_radial_edge | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 48 | 8 | 24p/16t, 48p/8t | legacy | — | 384 | 24.94 | 6m 41s | 2 |
+| adaptive_radial_edge | 32t — rh8-s32 (32 vCPU) | — | — | — | — | 22 | 2 | 21p/3t, 22p/2t, 23p/2t, 24p/2t, 25p/2t, 26p/2t, 27p/2t | legacy | — | 44 | 74.57 | 1m 28s | 12 |
+| amsre_bfq_spbv_pbg | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 42 | 9 | 42p/9t, 43p/8t, 44p/8t, 45p/8t, 46p/8t, 47p/8t, 48p/8t | legacy | — | 378 | 10.60 | 1h 18m 54s | 12 |
+| amsre_doc_ufcn_fusion | 192t — rh8-al307 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 1 | 384 | 1p/384t | adaptive | 3m 6s | 384 | 1.32 | 22s | 4 |
+| amsre_doc_ufcn_fusion | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 4 | 96 | 3p/128t, 4p/96t | exhaustive | 1m 19s | 384 | 2.62 | 1m 20s | 6 |
+| amsre_doc_ufcn_fusion | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 1 | 384 | 1p/384t | exhaustive | 2m 18s | 384 | 1.32 | 22s | 5 |
+| amsre_doc_ufcn_fusion | 192t — rh8-al316 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 2 | 192 | 2p/192t | exhaustive | 3m 7s | 384 | 0.85 | 34s | 4 |
+| border_energy | 192t — rh8-al325 (192 vCPU) | — | — | — | — | 8 | 48 | 7p/54t, 8p/48t, 9p/42t | legacy | — | 384 | 84.13 | 1m 18s | 7 |
+| border_fusion_quad | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 11 | 34 | 10p/38t, 11p/34t, 12p/32t, 13p/29t, 14p/27t, 15p/25t | legacy | — | 374 | 18.77 | 13s | 12 |
+| components | 192t — rh8-al324 (192 vCPU) | — | — | — | — | 8 | 48 | 8p/48t | legacy | — | 384 | 596.45 | 33s | 5 |
+| consensus_quad | 192t — rh8-al323 (192 vCPU) | — | — | — | — | 5 | 76 | 5p/76t, 6p/64t | legacy | — | 380 | 27.00 | 9s | 10 |
+| contour | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 7 | 54 | 2p/192t, 3p/128t, 4p/96t, 5p/76t, 6p/64t, 7p/54t, 8p/48t | legacy | — | 378 | 364.50 | 4s | 10 |
+| contour_components | 32t — rh8-s32 (32 vCPU) | — | — | — | — | 9 | 7 | 8p/8t, 9p/7t, 10p/6t | legacy | — | 63 | 106.98 | 3m 4s | 7 |
+| contour_grabcut | 192t — rh8-al320 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 2p/192t | legacy | — | 384 | 4.93 | 22m 10s | 5 |
+| contour_projection | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 21 | 18 | 21p/18t | legacy | — | 378 | 49.71 | 2m 12s | 15 |
+| contour_quad | 192t — rh8-al324 (192 vCPU) | — | — | — | — | 8 | 48 | 6p/64t, 7p/54t, 8p/48t, 9p/42t, 10p/38t | legacy | — | 384 | 146.81 | 2h 40s | 9 |
+| convex_hull | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 8 | 48 | 8p/48t | legacy | — | 384 | 437.40 | 5s | 5 |
+| cross_edge_contour | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 7 | 54 | 7p/54t, 8p/48t, 9p/42t | legacy | — | 378 | 93.74 | 1m 10s | 7 |
+| dhsegment_page_mask | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 207 | 1 | 192p/2t, 207p/1t, 215p/1t, 219p/1t, 220p/1t, 221p/1t, 222p/1t, 223p/1t | legacy | — | 207 | 11.85 | 14m 4s | 8 |
+| distance_transform | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 64p/6t | legacy | — | 384 | 72.90 | 30s | 2 |
+| distance_transform_rect | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 5 | 76 | 1p/384t, 3p/128t, 5p/76t | legacy | — | 380 | 243.00 | 3s | 6 |
+| doc_ufcn_page_mask | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 5 | 76 | 4p/96t, 5p/76t, 6p/64t | legacy | — | 380 | 142.86 | 14s | 4 |
+| docextractor_page_mask | 192t — rh8-al317 (192 vCPU) | — | — | — | — | 3 | 128 | 3p/128t | legacy | — | 384 | 9.90 | 10s | 5 |
+| edge_contour | 192t — rh8-al323 (192 vCPU) | — | — | — | — | 20 | 19 | 20p/19t, 21p/18t, 22p/17t, 23p/16t | legacy | — | 380 | 182.26 | 1m 12s | 9 |
+| eynollah_page_mask | 192t — rh8-al316 (192 vCPU) | — | — | — | — | 2 | 192 | 2p/192t | legacy | — | 384 | 6.75 | 12s | 5 |
 | grabcut | 192t — rh8-al320 (192 vCPU) | — | — | — | — | 2 | 192 | 2p/192t | legacy | — | 384 | 4.81 | 45m 30s | 1 |
-| grabcut_contour | 192t — rh8-al317 (192 vCPU) | — | — | — | — | 2 | 192 | 2p/192t | legacy | — | 384 | 3.97 | 6m 7s | 1 |
-| gradient_vote | 192t — rh8-al325 (192 vCPU) | — | — | — | — | 9 | 42 | 9p/42t, 10p/38t | legacy | — | 378 | 729.11 | 9s | 1 |
-| hough | 192t — rh8-al324 (192 vCPU) | — | — | — | — | 23 | 16 | 18p/21t, 22p/17t, 23p/16t | legacy | — | 368 | 25.15 | 1m 27s | 1 |
-| joint_rectangle_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 23 | 16 | 22p/17t, 23p/16t | legacy | — | 368 | 75.41 | 29s | 1 |
-| kraken_page_mask | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 17 | 22 | 15p/25t, 16p/24t, 17p/22t, 18p/21t, 19p/20t, 20p/19t, 21p/18t, 22p/17t, 23p/16t | legacy | — | 374 | 2.75 | 1h 40s | 1 |
-| learned_page_mask | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 4 | 96 | 3p/128t, 4p/96t | legacy | — | 384 | 10.29 | 16m 12s | 1 |
-| lsd | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 9 | 42 | 9p/42t | legacy | — | 378 | 168.23 | 13s | 1 |
-| mask_rcnn_page_mask | 192t — rh8-al308 (192 vCPU) | — | — | — | — | 11 | 34 | 10p/38t, 11p/34t | legacy | — | 374 | 100.00 | 20s | 1 |
-| msre_bfq_spbv_pbg | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 36 | 10 | 29p/13t, 30p/12t, 31p/12t, 32p/12t, 33p/11t, 34p/11t, 35p/10t, 36p/10t, 37p/10t, 38p/10t | legacy | — | 360 | 11.10 | 3m 17s | 1 |
-| multi_scale_radial_edge | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 9 | 42 | 9p/42t | legacy | — | 378 | 60.83 | 12s | 1 |
-| orli_page_mask | 192t — rh8-al316 (192 vCPU) | — | — | — | — | 12 | 32 | 12p/32t | legacy | — | 384 | 303.03 | 33s | 1 |
-| page_background | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 5 | 76 | 4p/96t, 5p/76t | legacy | — | 380 | 136.75 | 16s | 1 |
-| pagenet_page_mask | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 7 | 54 | 5p/76t, 6p/64t, 7p/54t, 8p/48t | legacy | — | 378 | 641.03 | 39s | 1 |
-| polar_boundary_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 13 | 29 | 13p/29t | legacy | — | 377 | 60.75 | 12s | 1 |
-| projective_gradient_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 6 | 64 | 6p/64t | legacy | — | 384 | 91.25 | 8s | 1 |
-| radial_edge | 192t — rh8-al323 (192 vCPU) | — | — | — | — | 26 | 14 | 23p/16t, 24p/16t, 25p/15t, 26p/14t, 27p/14t | legacy | — | 364 | 345.37 | 19s | 1 |
-| radon_boundary | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 7 | 54 | 5p/76t, 6p/64t, 7p/54t | legacy | — | 378 | 56.08 | 13s | 1 |
-| ransac | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 23 | 16 | 23p/16t | legacy | — | 368 | 145.80 | 10s | 1 |
-| scantailor_page_frame | 192t — rh8-al308 (192 vCPU) | — | — | — | — | 11 | 34 | 11p/34t | legacy | — | 374 | 16.55 | 29s | 1 |
-| segment_supported_polar_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 76 | 5 | 73p/5t, 74p/5t, 75p/5t, 76p/5t | legacy | — | 380 | 137.64 | 2m 23s | 1 |
-| signed_polar_boundary_vote | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 40 | 9 | 40p/9t | legacy | — | 360 | 87.48 | 25s | 1 |
-| star_convex | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 10 | 38 | 10p/38t | legacy | — | 380 | 72.90 | 10s | 1 |
-| text_flow | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 8p/48t | legacy | — | 384 | 145.80 | 5s | 1 |
-| whitespace_frame | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 3p/128t, 4p/96t | legacy | — | 384 | 243.33 | 3s | 1 |
+| grabcut_contour | 192t — rh8-al317 (192 vCPU) | — | — | — | — | 2 | 192 | 2p/192t | legacy | — | 384 | 3.97 | 6m 7s | 5 |
+| gradient_vote | 192t — rh8-al325 (192 vCPU) | — | — | — | — | 9 | 42 | 9p/42t, 10p/38t | legacy | — | 378 | 729.11 | 9s | 7 |
+| hough | 192t — rh8-al324 (192 vCPU) | — | — | — | — | 23 | 16 | 18p/21t, 22p/17t, 23p/16t | legacy | — | 368 | 25.15 | 1m 27s | 21 |
+| joint_rectangle_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 23 | 16 | 22p/17t, 23p/16t | legacy | — | 368 | 75.41 | 29s | 7 |
+| kraken_page_mask | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 17 | 22 | 15p/25t, 16p/24t, 17p/22t, 18p/21t, 19p/20t, 20p/19t, 21p/18t, 22p/17t, 23p/16t | legacy | — | 374 | 2.75 | 1h 40s | 17 |
+| learned_page_mask | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 4 | 96 | 3p/128t, 4p/96t | legacy | — | 384 | 10.29 | 16m 12s | 6 |
+| lsd | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 9 | 42 | 9p/42t | legacy | — | 378 | 168.23 | 13s | 8 |
+| mask_rcnn_page_mask | 192t — rh8-al308 (192 vCPU) | — | — | — | — | 11 | 34 | 10p/38t, 11p/34t | legacy | — | 374 | 100.00 | 20s | 6 |
+| msre_bfq_spbv_pbg | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 36 | 10 | 29p/13t, 30p/12t, 31p/12t, 32p/12t, 33p/11t, 34p/11t, 35p/10t, 36p/10t, 37p/10t, 38p/10t | legacy | — | 360 | 11.10 | 3m 17s | 15 |
+| multi_scale_radial_edge | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 9 | 42 | 9p/42t | legacy | — | 378 | 60.83 | 12s | 5 |
+| orli_page_mask | 192t — rh8-al316 (192 vCPU) | — | — | — | — | 12 | 32 | 12p/32t | legacy | — | 384 | 303.03 | 33s | 8 |
+| page_background | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 5 | 76 | 4p/96t, 5p/76t | legacy | — | 380 | 136.75 | 16s | 8 |
+| pagenet_page_mask | 192t — rh8-al307 (192 vCPU) | — | — | — | — | 7 | 54 | 5p/76t, 6p/64t, 7p/54t, 8p/48t | legacy | — | 378 | 641.03 | 39s | 7 |
+| polar_boundary_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 13 | 29 | 13p/29t | legacy | — | 377 | 60.75 | 12s | 10 |
+| projective_gradient_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 6 | 64 | 6p/64t | legacy | — | 384 | 91.25 | 8s | 6 |
+| radial_edge | 192t — rh8-al323 (192 vCPU) | — | — | — | — | 26 | 14 | 23p/16t, 24p/16t, 25p/15t, 26p/14t, 27p/14t | legacy | — | 364 | 345.37 | 19s | 10 |
+| radon_boundary | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 7 | 54 | 5p/76t, 6p/64t, 7p/54t | legacy | — | 378 | 56.08 | 13s | 7 |
+| ransac | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 23 | 16 | 23p/16t | legacy | — | 368 | 145.80 | 10s | 6 |
+| scantailor_page_frame | 192t — rh8-al308 (192 vCPU) | — | — | — | — | 11 | 34 | 11p/34t | legacy | — | 374 | 16.55 | 29s | 8 |
+| segment_supported_polar_vote | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 76 | 5 | 73p/5t, 74p/5t, 75p/5t, 76p/5t | legacy | — | 380 | 137.64 | 2m 23s | 9 |
+| signed_polar_boundary_vote | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 40 | 9 | 40p/9t | legacy | — | 360 | 87.48 | 25s | 9 |
+| star_convex | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 10 | 38 | 10p/38t | legacy | — | 380 | 72.90 | 10s | 8 |
+| text_flow | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 8p/48t | legacy | — | 384 | 145.80 | 5s | 7 |
+| whitespace_frame | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 3p/128t, 4p/96t | legacy | — | 384 | 243.33 | 3s | 6 |
 
 **Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
 
@@ -264,7 +265,7 @@ Compatible completed measurements are plotted by detector; thread count is annot
 <details>
 <summary><strong>amsre_doc_ufcn_fusion</strong></summary>
 
-**Search method(s):** `exhaustive`
+**Search method(s):** `adaptive, exhaustive`
 
 ![amsre_doc_ufcn_fusion Detector Run Profile Plot](profiles/amsre_doc_ufcn_fusion.svg)
 
@@ -785,17 +786,20 @@ This table contains measurements from this optimizer execution only. Bold identi
 <details>
 <summary><strong>amsre_doc_ufcn_fusion</strong></summary>
 
-**Search method(s):** `exhaustive`
+**Search method(s):** `adaptive, exhaustive`
 
 This table contains measurements from this optimizer execution only. Bold identifies this run’s measured throughput winner; the preferred configuration above is selected from all compatible coalesced optimizer evidence.
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Startup overhead | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| **192t — rh8-al307 (192 vCPU)** | 1 | 1 | 384 | 384 | 22s | 0s | 1.32 | 1.00× | 0.00% | — | — | — | — |
 | 192t — rh8-al308 (192 vCPU) | 1 | 1 | 384 | 384 | 2m 10s | 0s | 1.62 | 1.00× | -38.46% | 17.7 | 33.7 | 19.5% | 36.0 GiB |
 | **192t — rh8-al308 (192 vCPU)** | 1 | 1 | 384 | 384 | 22s | 0s | 1.32 | 1.00× | -49.78% | — | — | — | — |
+| 192t — rh8-al307 (192 vCPU) | 2 | 2 | 192 | 384 | 33s | 0s | 0.88 | 0.67× | -33.33% | 267.9 | 267.9 | 83.7% | 26.3 GiB |
 | 192t — rh8-al308 (192 vCPU) | 2 | 2 | 192 | 384 | 1m 31s | 0s | 2.31 | 1.43× | -12.09% | 77.2 | 77.2 | 44.9% | 36.2 GiB |
 | 192t — rh8-al308 (192 vCPU) | 2 | 2 | 192 | 384 | 30s | 0s | 0.97 | 0.73× | -63.17% | — | — | — | — |
 | **192t — rh8-al316 (192 vCPU)** | 2 | 2 | 192 | 384 | 34s | 0s | 0.85 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al307 (192 vCPU) | 3 | 3 | 128 | 384 | 40s | 0s | 0.72 | 0.55× | -45.00% | 304.6 | 304.6 | 90.3% | 25.7 GiB |
 | 192t — rh8-al308 (192 vCPU) | 3 | 3 | 128 | 384 | 1m 21s | 0s | 2.59 | 1.60× | -1.23% | 176.2 | 182.5 | 51.0% | 37.5 GiB |
 | 192t — rh8-al308 (192 vCPU) | 3 | 3 | 128 | 384 | 38s | 0s | 0.76 | 0.58× | -70.93% | 85.7 | 85.7 | 47.3% | 26.0 GiB |
 | 192t — rh8-al316 (192 vCPU) | 3 | 3 | 128 | 384 | 42s | 0s | 0.69 | — | -19.05% | 162.2 | 162.2 | 66.8% | 18.1 GiB |
@@ -806,6 +810,7 @@ This table contains measurements from this optimizer execution only. Bold identi
 | 192t — rh8-al316 (192 vCPU) | 5 | 5 | 76 | 380 | 1m 1s | 0s | 0.48 | — | -44.26% | 318.5 | 318.5 | 87.2% | 19.0 GiB |
 | 192t — rh8-al308 (192 vCPU) | 6 | 6 | 64 | 384 | 1m 30s | 0s | 2.33 | 1.44× | -11.11% | 324.4 | 354.9 | 84.3% | 38.8 GiB |
 | 192t — rh8-al308 (192 vCPU) | 7 | 7 | 54 | 378 | 1m 19s | 0s | 0.37 | 0.28× | -86.02% | 289.6 | 289.6 | 84.9% | 29.6 GiB |
+| 192t — rh8-al307 (192 vCPU) | 8 | 8 | 48 | 384 | 1m 29s | 0s | 0.33 | 0.25× | -75.28% | 207.0 | 207.0 | 57.2% | 29.2 GiB |
 
 **Startup-overhead note:** executor startup is measured from `run-detector-regressions` entry through detector lifecycle preparation, planning, shared learned-evidence resolution/preparation, and initial queue setup before pipeline fan-out. It remains included in **Wall** and therefore in shape-level **Sets/s** as a constant reminder of incurred end-to-end cost. Per-shard parameter-set throughput is timed after fan-out and does not include this pre-fan-out startup overhead.
 
