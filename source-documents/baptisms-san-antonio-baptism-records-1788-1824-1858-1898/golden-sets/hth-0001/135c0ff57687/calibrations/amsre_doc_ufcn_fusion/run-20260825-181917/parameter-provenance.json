@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "amsre_doc_ufcn_fusion",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "17a68232a28d8921aed567b2b07b2d05bfe7dd7cb22680be05b3c80a19ab2fe2",
+    "parameter_order": [
+      "amsre_rescue_score_ceiling",
+      "doc_ufcn_minimum_confidence",
+      "minimum_corner_disagreement_fraction",
+      "maximum_amsre_refined_support_fraction"
+    ],
+    "values": {
+      "amsre_rescue_score_ceiling": [
+        0.95
+      ],
+      "doc_ufcn_minimum_confidence": [
+        0.9
+      ],
+      "minimum_corner_disagreement_fraction": [
+        0.0075,
+        0.01,
+        0.0125,
+        0.015
+      ],
+      "maximum_amsre_refined_support_fraction": [
+        0.45,
+        0.5,
+        0.55,
+        0.6,
+        0.65,
+        0.7,
+        1.0
+      ]
+    },
+    "cartesian_count": 28,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": true,
+    "evaluated_parameter_sets": 29,
+    "evaluated_grid_parameter_sets": 28,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "amsre_rescue_score_ceiling": 0.85,
+      "doc_ufcn_minimum_confidence": 0.75,
+      "minimum_corner_disagreement_fraction": 0.01,
+      "maximum_amsre_refined_support_fraction": 1.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "fd23c4f0da7d73b69f482c636fc630b7ee3790d6a660e86c28b4e9a8426e2217": {
+      "sha256": "fd23c4f0da7d73b69f482c636fc630b7ee3790d6a660e86c28b4e9a8426e2217",
+      "legacy_parameter_set_id": "d19ebc3334b0",
+      "parameters": {
+        "amsre_rescue_score_ceiling": 0.85,
+        "doc_ufcn_minimum_confidence": 0.75,
+        "minimum_corner_disagreement_fraction": 0.01,
+        "maximum_amsre_refined_support_fraction": 1.0
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
