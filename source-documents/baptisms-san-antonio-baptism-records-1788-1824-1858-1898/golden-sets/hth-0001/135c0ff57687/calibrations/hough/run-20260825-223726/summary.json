@@ -1,0 +1,6323 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260825-223726",
+  "detector": "hough",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 8
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "46.669",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108",
+    "queue_position": "11",
+    "ranked_quality": "0.60502449",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 2188,
+    "live_possible_parameter_sets": 2187,
+    "zombie_possible_parameter_sets": 2187,
+    "canonical_search_space": {
+      "schema_version": "1",
+      "strategy": "exhaustive",
+      "live_exhaustive_parameter_sets": 2187,
+      "exhaustive_with_zombies_parameter_sets": 2187,
+      "effective_parameter_sets": 2188,
+      "configured_zombie_parameters": [],
+      "denominator": "exhaustive-with-zombies"
+    },
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 8,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 38,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "8a2ee1ed3a5c80287ce36c69323dbecd42624aef86fd69014cb67bf1d05f1c97",
+  "model_selection": null,
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "c2c117479e3f",
+    "parameters": {
+      "axis_angle_tolerance_degrees": 12.0,
+      "bbox_padding_fraction": 0.015,
+      "canny_low_threshold": 65,
+      "hough_threshold_fraction": 0.055,
+      "maximum_gap_fraction": 0.055,
+      "minimum_length_fraction": 0.12,
+      "outer_percentile": 5.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.60502449,
+      "mean_iou_success": 0.75628061,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.32169383,
+      "mean_edge_error_px": 67.062,
+      "elapsed_ms_total": 6309.41,
+      "wall_ms": 6310.04
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          105,
+          113,
+          1297,
+          889
+        ],
+        "iou": 0.83470778,
+        "edge_errors": {
+          "left": 20,
+          "top": 57,
+          "right": 8,
+          "bottom": 78,
+          "mean": 40.75,
+          "maximum": 78
+        },
+        "edge_error_mean_px": 40.75,
+        "edge_error_maximum_px": 78,
+        "elapsed_ms": 2085.295,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            105,
+            113,
+            1297,
+            889
+          ],
+          "corners": [
+            [
+              105.0,
+              113.0
+            ],
+            [
+              1297.0,
+              113.0
+            ],
+            [
+              1297.0,
+              889.0
+            ],
+            [
+              105.0,
+              889.0
+            ]
+          ],
+          "confidence": 0.935872,
+          "score": 0.935872,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1472,
+            "vertical_lines": 17,
+            "horizontal_lines": 1396,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.678817,
+            "mask_score": 0.908389,
+            "support_score": 1.0,
+            "area_score": 1.0
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          113,
+          19,
+          769,
+          957
+        ],
+        "iou": 0.54460842,
+        "edge_errors": {
+          "left": 46,
+          "top": 11,
+          "right": 464,
+          "bottom": 20,
+          "mean": 135.25,
+          "maximum": 464
+        },
+        "edge_error_mean_px": 135.25,
+        "edge_error_maximum_px": 464,
+        "elapsed_ms": 300.511,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            113,
+            19,
+            769,
+            957
+          ],
+          "corners": [
+            [
+              113.0,
+              19.0
+            ],
+            [
+              769.0,
+              19.0
+            ],
+            [
+              769.0,
+              957.0
+            ],
+            [
+              113.0,
+              957.0
+            ]
+          ],
+          "confidence": 0.856691,
+          "score": 0.856691,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 177,
+            "vertical_lines": 28,
+            "horizontal_lines": 103,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.473733,
+            "mask_score": 0.825336,
+            "support_score": 1.0,
+            "area_score": 0.789555
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 33.795,
+        "candidate": {
+          "method": "hough",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "insufficient_axis_lines",
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1,
+            "vertical_lines": 0,
+            "horizontal_lines": 1,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          61,
+          120,
+          1143,
+          889
+        ],
+        "iou": 0.81882601,
+        "edge_errors": {
+          "left": 23,
+          "top": 69,
+          "right": 42,
+          "bottom": 52,
+          "mean": 46.5,
+          "maximum": 69
+        },
+        "edge_error_mean_px": 46.5,
+        "edge_error_maximum_px": 69,
+        "elapsed_ms": 2132.373,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            61,
+            120,
+            1143,
+            889
+          ],
+          "corners": [
+            [
+              61.0,
+              120.0
+            ],
+            [
+              1143.0,
+              120.0
+            ],
+            [
+              1143.0,
+              889.0
+            ],
+            [
+              61.0,
+              889.0
+            ]
+          ],
+          "confidence": 0.951842,
+          "score": 0.951842,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1276,
+            "vertical_lines": 36,
+            "horizontal_lines": 1239,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.655845,
+            "mask_score": 0.931203,
+            "support_score": 1.0,
+            "area_score": 1.0
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          66,
+          106,
+          1189,
+          915
+        ],
+        "iou": 0.82698023,
+        "edge_errors": {
+          "left": 22,
+          "top": 73,
+          "right": 35,
+          "bottom": 53,
+          "mean": 45.75,
+          "maximum": 73
+        },
+        "edge_error_mean_px": 45.75,
+        "edge_error_maximum_px": 73,
+        "elapsed_ms": 1757.436,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            66,
+            106,
+            1189,
+            915
+          ],
+          "corners": [
+            [
+              66.0,
+              106.0
+            ],
+            [
+              1189.0,
+              106.0
+            ],
+            [
+              1189.0,
+              915.0
+            ],
+            [
+              66.0,
+              915.0
+            ]
+          ],
+          "confidence": 0.936916,
+          "score": 0.936916,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1439,
+            "vertical_lines": 22,
+            "horizontal_lines": 1413,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 119,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.723725,
+            "mask_score": 0.90988,
+            "support_score": 1.0,
+            "area_score": 1.0
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "hough",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "293",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31424173458",
+      "historic_calibration_id": "run-20260810-195940",
+      "historic_created_at_utc": "2026-08-10T19:56:35.726210+00:00",
+      "model_variant": null,
+      "parameter_identity_sha256": "f86c289191351ba1fcc9fc65c7e060df7dc6af0ba88cd84df5973bae725511d7",
+      "parameter_set_id": "c2c117479e3f",
+      "parameters": {
+        "axis_angle_tolerance_degrees": 12.0,
+        "bbox_padding_fraction": 0.015,
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.055,
+        "maximum_gap_fraction": 0.055,
+        "minimum_length_fraction": 0.12,
+        "outer_percentile": 5.0
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 14.1625912720001,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "c2c117479e3f",
+    "parameter_identity_sha256": "f86c289191351ba1fcc9fc65c7e060df7dc6af0ba88cd84df5973bae725511d7",
+    "parameter_set_equivalence_family_id": "c2c117479e3f",
+    "parameter_set_equivalence_family_sha256": "c2c117479e3fc020d555c8f913dcf09ee484170fafdd006349983f2a2e491b01",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 1730,
+    "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+    "profile": null,
+    "run_id": "run-20260825-223726",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "7078053f309d",
+    "parameters": {
+      "canny_low_threshold": 40,
+      "hough_threshold_fraction": 0.055,
+      "minimum_length_fraction": 0.2,
+      "maximum_gap_fraction": 0.055,
+      "axis_angle_tolerance_degrees": 22.0,
+      "outer_percentile": 10.0,
+      "minimum_bbox_area_fraction": 0.1,
+      "bbox_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.4784465,
+      "mean_iou_success": 0.59805812,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.28505266,
+      "mean_edge_error_px": 112.688,
+      "elapsed_ms_total": 7842.449,
+      "wall_ms": 7846.165
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          251,
+          182,
+          1282,
+          826
+        ],
+        "iou": 0.62614249,
+        "edge_errors": {
+          "left": 126,
+          "top": 126,
+          "right": 7,
+          "bottom": 141,
+          "mean": 100.0,
+          "maximum": 141
+        },
+        "edge_error_mean_px": 100.0,
+        "edge_error_maximum_px": 141,
+        "elapsed_ms": 3116.45,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            251,
+            182,
+            1282,
+            826
+          ],
+          "corners": [
+            [
+              251.0,
+              182.0
+            ],
+            [
+              1282.0,
+              182.0
+            ],
+            [
+              1282.0,
+              826.0
+            ],
+            [
+              251.0,
+              826.0
+            ]
+          ],
+          "confidence": 0.891673,
+          "score": 0.891673,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 1191,
+            "vertical_lines": 14,
+            "horizontal_lines": 1153,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.487259,
+            "mask_score": 0.872091,
+            "support_score": 1.0,
+            "area_score": 0.812098
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          252,
+          50,
+          670,
+          880
+        ],
+        "iou": 0.30706622,
+        "edge_errors": {
+          "left": 185,
+          "top": 42,
+          "right": 563,
+          "bottom": 97,
+          "mean": 221.75,
+          "maximum": 563
+        },
+        "edge_error_mean_px": 221.75,
+        "edge_error_maximum_px": 563,
+        "elapsed_ms": 553.587,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            252,
+            50,
+            670,
+            880
+          ],
+          "corners": [
+            [
+              252.0,
+              50.0
+            ],
+            [
+              670.0,
+              50.0
+            ],
+            [
+              670.0,
+              880.0
+            ],
+            [
+              252.0,
+              880.0
+            ]
+          ],
+          "confidence": 0.809516,
+          "score": 0.809516,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 449,
+            "vertical_lines": 218,
+            "horizontal_lines": 105,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.267105,
+            "mask_score": 0.807141,
+            "support_score": 1.0,
+            "area_score": 0.445174
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 44.13,
+        "candidate": {
+          "method": "hough",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "insufficient_axis_lines",
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 1,
+            "vertical_lines": 0,
+            "horizontal_lines": 1,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          80,
+          166,
+          1122,
+          834
+        ],
+        "iou": 0.73696452,
+        "edge_errors": {
+          "left": 4,
+          "top": 115,
+          "right": 21,
+          "bottom": 107,
+          "mean": 61.75,
+          "maximum": 115
+        },
+        "edge_error_mean_px": 61.75,
+        "edge_error_maximum_px": 115,
+        "elapsed_ms": 1617.423,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            80,
+            166,
+            1122,
+            834
+          ],
+          "corners": [
+            [
+              80.0,
+              166.0
+            ],
+            [
+              1122.0,
+              166.0
+            ],
+            [
+              1122.0,
+              834.0
+            ],
+            [
+              80.0,
+              834.0
+            ]
+          ],
+          "confidence": 0.934376,
+          "score": 0.934376,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 872,
+            "vertical_lines": 28,
+            "horizontal_lines": 843,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 197,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.548646,
+            "mask_score": 0.918479,
+            "support_score": 1.0,
+            "area_score": 0.91441
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          91,
+          148,
+          1169,
+          832
+        ],
+        "iou": 0.72205925,
+        "edge_errors": {
+          "left": 3,
+          "top": 115,
+          "right": 15,
+          "bottom": 136,
+          "mean": 67.25,
+          "maximum": 136
+        },
+        "edge_error_mean_px": 67.25,
+        "edge_error_maximum_px": 136,
+        "elapsed_ms": 2510.859,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            91,
+            148,
+            1169,
+            832
+          ],
+          "corners": [
+            [
+              91.0,
+              148.0
+            ],
+            [
+              1169.0,
+              148.0
+            ],
+            [
+              1169.0,
+              832.0
+            ],
+            [
+              91.0,
+              832.0
+            ]
+          ],
+          "confidence": 0.926447,
+          "score": 0.926447,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 40,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.2,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 22.0,
+              "outer_percentile": 10.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.0
+            },
+            "hough_lines": 988,
+            "vertical_lines": 21,
+            "horizontal_lines": 962,
+            "canny_high_threshold": 120,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 198,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.587382,
+            "mask_score": 0.897929,
+            "support_score": 1.0,
+            "area_score": 0.97897
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "7078053f309d",
+    "parameter_identity_sha256": "e1fe506cad92d612c312fe3cf38d73e6fec6f08f92290902de2c3a91a9d0a983",
+    "parameter_set_equivalence_family_id": "7078053f309d",
+    "parameter_set_equivalence_family_sha256": "7078053f309d0ebffb07c49162c4c75340f928f0fd00753887c0b22423e65215",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": null,
+    "parameter_grid_sha256": null,
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "search_space_member": true,
+    "profile": "baseline",
+    "run_id": "run-20260825-223726",
+    "rank": 8,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": {
+    "parameter_set_id": "c2c117479e3f",
+    "parameters": {
+      "axis_angle_tolerance_degrees": 12.0,
+      "bbox_padding_fraction": 0.015,
+      "canny_low_threshold": 65,
+      "hough_threshold_fraction": 0.055,
+      "maximum_gap_fraction": 0.055,
+      "minimum_length_fraction": 0.12,
+      "outer_percentile": 5.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 4,
+      "failure_count": 1,
+      "mean_iou": 0.60502449,
+      "mean_iou_success": 0.75628061,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.32169383,
+      "mean_edge_error_px": 67.062,
+      "elapsed_ms_total": 6309.41,
+      "wall_ms": 6310.04
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          105,
+          113,
+          1297,
+          889
+        ],
+        "iou": 0.83470778,
+        "edge_errors": {
+          "left": 20,
+          "top": 57,
+          "right": 8,
+          "bottom": 78,
+          "mean": 40.75,
+          "maximum": 78
+        },
+        "edge_error_mean_px": 40.75,
+        "edge_error_maximum_px": 78,
+        "elapsed_ms": 2085.295,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            105,
+            113,
+            1297,
+            889
+          ],
+          "corners": [
+            [
+              105.0,
+              113.0
+            ],
+            [
+              1297.0,
+              113.0
+            ],
+            [
+              1297.0,
+              889.0
+            ],
+            [
+              105.0,
+              889.0
+            ]
+          ],
+          "confidence": 0.935872,
+          "score": 0.935872,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1472,
+            "vertical_lines": 17,
+            "horizontal_lines": 1396,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.678817,
+            "mask_score": 0.908389,
+            "support_score": 1.0,
+            "area_score": 1.0
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          113,
+          19,
+          769,
+          957
+        ],
+        "iou": 0.54460842,
+        "edge_errors": {
+          "left": 46,
+          "top": 11,
+          "right": 464,
+          "bottom": 20,
+          "mean": 135.25,
+          "maximum": 464
+        },
+        "edge_error_mean_px": 135.25,
+        "edge_error_maximum_px": 464,
+        "elapsed_ms": 300.511,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            113,
+            19,
+            769,
+            957
+          ],
+          "corners": [
+            [
+              113.0,
+              19.0
+            ],
+            [
+              769.0,
+              19.0
+            ],
+            [
+              769.0,
+              957.0
+            ],
+            [
+              113.0,
+              957.0
+            ]
+          ],
+          "confidence": 0.856691,
+          "score": 0.856691,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 177,
+            "vertical_lines": 28,
+            "horizontal_lines": 103,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.473733,
+            "mask_score": 0.825336,
+            "support_score": 1.0,
+            "area_score": 0.789555
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 33.795,
+        "candidate": {
+          "method": "hough",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "reason": "insufficient_axis_lines",
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1,
+            "vertical_lines": 0,
+            "horizontal_lines": 1,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          61,
+          120,
+          1143,
+          889
+        ],
+        "iou": 0.81882601,
+        "edge_errors": {
+          "left": 23,
+          "top": 69,
+          "right": 42,
+          "bottom": 52,
+          "mean": 46.5,
+          "maximum": 69
+        },
+        "edge_error_mean_px": 46.5,
+        "edge_error_maximum_px": 69,
+        "elapsed_ms": 2132.373,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            61,
+            120,
+            1143,
+            889
+          ],
+          "corners": [
+            [
+              61.0,
+              120.0
+            ],
+            [
+              1143.0,
+              120.0
+            ],
+            [
+              1143.0,
+              889.0
+            ],
+            [
+              61.0,
+              889.0
+            ]
+          ],
+          "confidence": 0.951842,
+          "score": 0.951842,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1276,
+            "vertical_lines": 36,
+            "horizontal_lines": 1239,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 118,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.655845,
+            "mask_score": 0.931203,
+            "support_score": 1.0,
+            "area_score": 1.0
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          66,
+          106,
+          1189,
+          915
+        ],
+        "iou": 0.82698023,
+        "edge_errors": {
+          "left": 22,
+          "top": 73,
+          "right": 35,
+          "bottom": 53,
+          "mean": 45.75,
+          "maximum": 73
+        },
+        "edge_error_mean_px": 45.75,
+        "edge_error_maximum_px": 73,
+        "elapsed_ms": 1757.436,
+        "candidate": {
+          "method": "hough",
+          "bbox": [
+            66,
+            106,
+            1189,
+            915
+          ],
+          "corners": [
+            [
+              66.0,
+              106.0
+            ],
+            [
+              1189.0,
+              106.0
+            ],
+            [
+              1189.0,
+              915.0
+            ],
+            [
+              66.0,
+              915.0
+            ]
+          ],
+          "confidence": 0.936916,
+          "score": 0.936916,
+          "diagnostics": {
+            "parameters": {
+              "canny_low_threshold": 65,
+              "hough_threshold_fraction": 0.055,
+              "minimum_length_fraction": 0.12,
+              "maximum_gap_fraction": 0.055,
+              "axis_angle_tolerance_degrees": 12.0,
+              "outer_percentile": 5.0,
+              "minimum_bbox_area_fraction": 0.1,
+              "bbox_padding_fraction": 0.015
+            },
+            "hough_lines": 1439,
+            "vertical_lines": 22,
+            "horizontal_lines": 1413,
+            "canny_high_threshold": 195,
+            "mask_margin_px": 10,
+            "hough_threshold": 54,
+            "minimum_length_px": 119,
+            "maximum_gap_px": 54,
+            "bbox_area_fraction": 0.723725,
+            "mask_score": 0.90988,
+            "support_score": 1.0,
+            "area_score": 1.0
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "hough",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "293",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31424173458",
+      "historic_calibration_id": "run-20260810-195940",
+      "historic_created_at_utc": "2026-08-10T19:56:35.726210+00:00",
+      "model_variant": null,
+      "parameter_identity_sha256": "f86c289191351ba1fcc9fc65c7e060df7dc6af0ba88cd84df5973bae725511d7",
+      "parameter_set_id": "c2c117479e3f",
+      "parameters": {
+        "axis_angle_tolerance_degrees": 12.0,
+        "bbox_padding_fraction": 0.015,
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.055,
+        "maximum_gap_fraction": 0.055,
+        "minimum_length_fraction": 0.12,
+        "outer_percentile": 5.0
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 14.1625912720001,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "c2c117479e3f",
+    "parameter_identity_sha256": "f86c289191351ba1fcc9fc65c7e060df7dc6af0ba88cd84df5973bae725511d7",
+    "parameter_set_equivalence_family_id": "c2c117479e3f",
+    "parameter_set_equivalence_family_sha256": "c2c117479e3fc020d555c8f913dcf09ee484170fafdd006349983f2a2e491b01",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 1730,
+    "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+    "profile": null,
+    "run_id": "run-20260825-223726",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "c2c117479e3f",
+      "parameters": {
+        "axis_angle_tolerance_degrees": 12.0,
+        "bbox_padding_fraction": 0.015,
+        "canny_low_threshold": 65,
+        "hough_threshold_fraction": 0.055,
+        "maximum_gap_fraction": 0.055,
+        "minimum_length_fraction": 0.12,
+        "outer_percentile": 5.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.60502449,
+        "mean_iou_success": 0.75628061,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.32169383,
+        "mean_edge_error_px": 67.062,
+        "elapsed_ms_total": 6309.41,
+        "wall_ms": 6310.04
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            105,
+            113,
+            1297,
+            889
+          ],
+          "iou": 0.83470778,
+          "edge_errors": {
+            "left": 20,
+            "top": 57,
+            "right": 8,
+            "bottom": 78,
+            "mean": 40.75,
+            "maximum": 78
+          },
+          "edge_error_mean_px": 40.75,
+          "edge_error_maximum_px": 78,
+          "elapsed_ms": 2085.295,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              105,
+              113,
+              1297,
+              889
+            ],
+            "corners": [
+              [
+                105.0,
+                113.0
+              ],
+              [
+                1297.0,
+                113.0
+              ],
+              [
+                1297.0,
+                889.0
+              ],
+              [
+                105.0,
+                889.0
+              ]
+            ],
+            "confidence": 0.935872,
+            "score": 0.935872,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1472,
+              "vertical_lines": 17,
+              "horizontal_lines": 1396,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.678817,
+              "mask_score": 0.908389,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            113,
+            19,
+            769,
+            957
+          ],
+          "iou": 0.54460842,
+          "edge_errors": {
+            "left": 46,
+            "top": 11,
+            "right": 464,
+            "bottom": 20,
+            "mean": 135.25,
+            "maximum": 464
+          },
+          "edge_error_mean_px": 135.25,
+          "edge_error_maximum_px": 464,
+          "elapsed_ms": 300.511,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              113,
+              19,
+              769,
+              957
+            ],
+            "corners": [
+              [
+                113.0,
+                19.0
+              ],
+              [
+                769.0,
+                19.0
+              ],
+              [
+                769.0,
+                957.0
+              ],
+              [
+                113.0,
+                957.0
+              ]
+            ],
+            "confidence": 0.856691,
+            "score": 0.856691,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 177,
+              "vertical_lines": 28,
+              "horizontal_lines": 103,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.473733,
+              "mask_score": 0.825336,
+              "support_score": 1.0,
+              "area_score": 0.789555
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 33.795,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "insufficient_axis_lines",
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1,
+              "vertical_lines": 0,
+              "horizontal_lines": 1,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            61,
+            120,
+            1143,
+            889
+          ],
+          "iou": 0.81882601,
+          "edge_errors": {
+            "left": 23,
+            "top": 69,
+            "right": 42,
+            "bottom": 52,
+            "mean": 46.5,
+            "maximum": 69
+          },
+          "edge_error_mean_px": 46.5,
+          "edge_error_maximum_px": 69,
+          "elapsed_ms": 2132.373,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              61,
+              120,
+              1143,
+              889
+            ],
+            "corners": [
+              [
+                61.0,
+                120.0
+              ],
+              [
+                1143.0,
+                120.0
+              ],
+              [
+                1143.0,
+                889.0
+              ],
+              [
+                61.0,
+                889.0
+              ]
+            ],
+            "confidence": 0.951842,
+            "score": 0.951842,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1276,
+              "vertical_lines": 36,
+              "horizontal_lines": 1239,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.655845,
+              "mask_score": 0.931203,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            106,
+            1189,
+            915
+          ],
+          "iou": 0.82698023,
+          "edge_errors": {
+            "left": 22,
+            "top": 73,
+            "right": 35,
+            "bottom": 53,
+            "mean": 45.75,
+            "maximum": 73
+          },
+          "edge_error_mean_px": 45.75,
+          "edge_error_maximum_px": 73,
+          "elapsed_ms": 1757.436,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              106,
+              1189,
+              915
+            ],
+            "corners": [
+              [
+                66.0,
+                106.0
+              ],
+              [
+                1189.0,
+                106.0
+              ],
+              [
+                1189.0,
+                915.0
+              ],
+              [
+                66.0,
+                915.0
+              ]
+            ],
+            "confidence": 0.936916,
+            "score": 0.936916,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 65,
+                "hough_threshold_fraction": 0.055,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.055,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1439,
+              "vertical_lines": 22,
+              "horizontal_lines": 1413,
+              "canny_high_threshold": 195,
+              "mask_margin_px": 10,
+              "hough_threshold": 54,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 54,
+              "bbox_area_fraction": 0.723725,
+              "mask_score": 0.90988,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "reference_roles": [
+        "historic_best"
+      ],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "historic_reference": {
+        "detector": "hough",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "historic_build_number": "293",
+        "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31424173458",
+        "historic_calibration_id": "run-20260810-195940",
+        "historic_created_at_utc": "2026-08-10T19:56:35.726210+00:00",
+        "model_variant": null,
+        "parameter_identity_sha256": "f86c289191351ba1fcc9fc65c7e060df7dc6af0ba88cd84df5973bae725511d7",
+        "parameter_set_id": "c2c117479e3f",
+        "parameters": {
+          "axis_angle_tolerance_degrees": 12.0,
+          "bbox_padding_fraction": 0.015,
+          "canny_low_threshold": 65,
+          "hough_threshold_fraction": 0.055,
+          "maximum_gap_fraction": 0.055,
+          "minimum_length_fraction": 0.12,
+          "outer_percentile": 5.0
+        },
+        "provenance_source": "legacy-parameters"
+      },
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 14.1625912720001,
+        "search_fraction": 0.2
+      },
+      "legacy_parameter_set_id": "c2c117479e3f",
+      "parameter_identity_sha256": "f86c289191351ba1fcc9fc65c7e060df7dc6af0ba88cd84df5973bae725511d7",
+      "parameter_set_equivalence_family_id": "c2c117479e3f",
+      "parameter_set_equivalence_family_sha256": "c2c117479e3fc020d555c8f913dcf09ee484170fafdd006349983f2a2e491b01",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1730,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "d2ef0aec6694",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.56611443,
+        "mean_iou_success": 0.70764304,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.3406598,
+        "mean_edge_error_px": 84.688,
+        "elapsed_ms_total": 4803.263,
+        "wall_ms": 4803.88
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            110,
+            101,
+            1295,
+            883
+          ],
+          "iou": 0.84530648,
+          "edge_errors": {
+            "left": 15,
+            "top": 45,
+            "right": 6,
+            "bottom": 84,
+            "mean": 37.5,
+            "maximum": 84
+          },
+          "edge_error_mean_px": 37.5,
+          "edge_error_maximum_px": 84,
+          "elapsed_ms": 1430.756,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              110,
+              101,
+              1295,
+              883
+            ],
+            "corners": [
+              [
+                110.0,
+                101.0
+              ],
+              [
+                1295.0,
+                101.0
+              ],
+              [
+                1295.0,
+                883.0
+              ],
+              [
+                110.0,
+                883.0
+              ]
+            ],
+            "confidence": 0.940444,
+            "score": 0.940444,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.680049,
+              "mask_score": 0.914919,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            238,
+            33,
+            699,
+            869
+          ],
+          "iou": 0.34110248,
+          "edge_errors": {
+            "left": 171,
+            "top": 25,
+            "right": 534,
+            "bottom": 108,
+            "mean": 209.5,
+            "maximum": 534
+          },
+          "edge_error_mean_px": 209.5,
+          "edge_error_maximum_px": 534,
+          "elapsed_ms": 784.711,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              238,
+              33,
+              699,
+              869
+            ],
+            "corners": [
+              [
+                238.0,
+                33.0
+              ],
+              [
+                699.0,
+                33.0
+              ],
+              [
+                699.0,
+                869.0
+              ],
+              [
+                238.0,
+                869.0
+              ]
+            ],
+            "confidence": 0.821806,
+            "score": 0.821806,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.296711,
+              "mask_score": 0.817649,
+              "support_score": 1.0,
+              "area_score": 0.494519
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 31.005,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            65,
+            119,
+            1141,
+            879
+          ],
+          "iou": 0.81362569,
+          "edge_errors": {
+            "left": 19,
+            "top": 68,
+            "right": 40,
+            "bottom": 62,
+            "mean": 47.25,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 47.25,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 1063.926,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              65,
+              119,
+              1141,
+              879
+            ],
+            "corners": [
+              [
+                65.0,
+                119.0
+              ],
+              [
+                1141.0,
+                119.0
+              ],
+              [
+                1141.0,
+                879.0
+              ],
+              [
+                65.0,
+                879.0
+              ]
+            ],
+            "confidence": 0.952009,
+            "score": 0.952009,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.644575,
+              "mask_score": 0.931442,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            107,
+            1185,
+            917
+          ],
+          "iou": 0.83053749,
+          "edge_errors": {
+            "left": 22,
+            "top": 74,
+            "right": 31,
+            "bottom": 51,
+            "mean": 44.5,
+            "maximum": 74
+          },
+          "edge_error_mean_px": 44.5,
+          "edge_error_maximum_px": 74,
+          "elapsed_ms": 1492.865,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              107,
+              1185,
+              917
+            ],
+            "corners": [
+              [
+                66.0,
+                107.0
+              ],
+              [
+                1185.0,
+                107.0
+              ],
+              [
+                1185.0,
+                917.0
+              ],
+              [
+                66.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.938835,
+            "score": 0.938835,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.722039,
+              "mask_score": 0.912621,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 25.671947885999998,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "d2ef0aec6694",
+      "parameter_identity_sha256": "924b1518ab147d0dfe5a2a73b7ef5f5e96a69941a30092727086add15e470e21",
+      "parameter_set_equivalence_family_id": "d2ef0aec6694",
+      "parameter_set_equivalence_family_sha256": "d2ef0aec6694c93470baa772a1660ba83aaa9db4b0e0ebe98ed7469866c9f259",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "217ec1728985",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.005
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.55564695,
+        "mean_iou_success": 0.69455869,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.33906277,
+        "mean_edge_error_px": 87.688,
+        "elapsed_ms_total": 10833.835,
+        "wall_ms": 10834.445
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            120,
+            111,
+            1285,
+            873
+          ],
+          "iou": 0.83058483,
+          "edge_errors": {
+            "left": 5,
+            "top": 55,
+            "right": 4,
+            "bottom": 94,
+            "mean": 39.5,
+            "maximum": 94
+          },
+          "edge_error_mean_px": 39.5,
+          "edge_error_maximum_px": 94,
+          "elapsed_ms": 3235.139,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              120,
+              111,
+              1285,
+              873
+            ],
+            "corners": [
+              [
+                120.0,
+                111.0
+              ],
+              [
+                1285.0,
+                111.0
+              ],
+              [
+                1285.0,
+                873.0
+              ],
+              [
+                120.0,
+                873.0
+              ]
+            ],
+            "confidence": 0.942126,
+            "score": 0.942126,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.651472,
+              "mask_score": 0.917323,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            248,
+            43,
+            689,
+            859
+          ],
+          "iou": 0.31849779,
+          "edge_errors": {
+            "left": 181,
+            "top": 35,
+            "right": 544,
+            "bottom": 118,
+            "mean": 219.5,
+            "maximum": 544
+          },
+          "edge_error_mean_px": 219.5,
+          "edge_error_maximum_px": 544,
+          "elapsed_ms": 2415.411,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              248,
+              43,
+              689,
+              859
+            ],
+            "corners": [
+              [
+                248.0,
+                43.0
+              ],
+              [
+                689.0,
+                43.0
+              ],
+              [
+                689.0,
+                859.0
+              ],
+              [
+                248.0,
+                859.0
+              ]
+            ],
+            "confidence": 0.815438,
+            "score": 0.815438,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.277048,
+              "mask_score": 0.813234,
+              "support_score": 1.0,
+              "area_score": 0.461747
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 43.629,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            75,
+            129,
+            1131,
+            869
+          ],
+          "iou": 0.8057688,
+          "edge_errors": {
+            "left": 9,
+            "top": 78,
+            "right": 30,
+            "bottom": 72,
+            "mean": 47.25,
+            "maximum": 78
+          },
+          "edge_error_mean_px": 47.25,
+          "edge_error_maximum_px": 78,
+          "elapsed_ms": 2305.745,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              75,
+              129,
+              1131,
+              869
+            ],
+            "corners": [
+              [
+                75.0,
+                129.0
+              ],
+              [
+                1131.0,
+                129.0
+              ],
+              [
+                1131.0,
+                869.0
+              ],
+              [
+                75.0,
+                869.0
+              ]
+            ],
+            "confidence": 0.955104,
+            "score": 0.955104,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.615947,
+              "mask_score": 0.935863,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            76,
+            117,
+            1175,
+            907
+          ],
+          "iou": 0.82338333,
+          "edge_errors": {
+            "left": 12,
+            "top": 84,
+            "right": 21,
+            "bottom": 61,
+            "mean": 44.5,
+            "maximum": 84
+          },
+          "edge_error_mean_px": 44.5,
+          "edge_error_maximum_px": 84,
+          "elapsed_ms": 2833.911,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              76,
+              117,
+              1175,
+              907
+            ],
+            "corners": [
+              [
+                76.0,
+                117.0
+              ],
+              [
+                1175.0,
+                117.0
+              ],
+              [
+                1175.0,
+                907.0
+              ],
+              [
+                76.0,
+                907.0
+              ]
+            ],
+            "confidence": 0.941659,
+            "score": 0.941659,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.691624,
+              "mask_score": 0.916656,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 25.004270041999916,
+        "search_fraction": 0.4
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "217ec1728985",
+      "parameter_identity_sha256": "54269f94cfdfa198a7e624a831fdafaa068abbba2cd34d9f0006977424e85737",
+      "parameter_set_equivalence_family_id": "217ec1728985",
+      "parameter_set_equivalence_family_sha256": "217ec17289853d50f9e3d3a25276d813d304923de5aaeb8cc650d34b6a4219af",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "90e4276c2a1d",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.54949974,
+        "mean_iou_success": 0.68687468,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.33751695,
+        "mean_edge_error_px": 89.562,
+        "elapsed_ms_total": 6702.429,
+        "wall_ms": 6703.061
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            125,
+            116,
+            1280,
+            868
+          ],
+          "iou": 0.81908405,
+          "edge_errors": {
+            "left": 0,
+            "top": 60,
+            "right": 9,
+            "bottom": 99,
+            "mean": 42.0,
+            "maximum": 99
+          },
+          "edge_error_mean_px": 42.0,
+          "edge_error_maximum_px": 99,
+          "elapsed_ms": 2303.808,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              125,
+              116,
+              1280,
+              868
+            ],
+            "corners": [
+              [
+                125.0,
+                116.0
+              ],
+              [
+                1280.0,
+                116.0
+              ],
+              [
+                1280.0,
+                868.0
+              ],
+              [
+                125.0,
+                868.0
+              ]
+            ],
+            "confidence": 0.943212,
+            "score": 0.943212,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.637404,
+              "mask_score": 0.918874,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            253,
+            48,
+            684,
+            854
+          ],
+          "iou": 0.30746096,
+          "edge_errors": {
+            "left": 186,
+            "top": 40,
+            "right": 549,
+            "bottom": 123,
+            "mean": 224.5,
+            "maximum": 549
+          },
+          "edge_error_mean_px": 224.5,
+          "edge_error_maximum_px": 549,
+          "elapsed_ms": 1026.858,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              253,
+              48,
+              684,
+              854
+            ],
+            "corners": [
+              [
+                253.0,
+                48.0
+              ],
+              [
+                684.0,
+                48.0
+              ],
+              [
+                684.0,
+                854.0
+              ],
+              [
+                253.0,
+                854.0
+              ]
+            ],
+            "confidence": 0.811771,
+            "score": 0.811771,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.267448,
+              "mask_score": 0.810281,
+              "support_score": 1.0,
+              "area_score": 0.445747
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 37.258,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            134,
+            1126,
+            864
+          ],
+          "iou": 0.801479,
+          "edge_errors": {
+            "left": 4,
+            "top": 83,
+            "right": 25,
+            "bottom": 77,
+            "mean": 47.25,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 47.25,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 1570.723,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              80,
+              134,
+              1126,
+              864
+            ],
+            "corners": [
+              [
+                80.0,
+                134.0
+              ],
+              [
+                1126.0,
+                134.0
+              ],
+              [
+                1126.0,
+                864.0
+              ],
+              [
+                80.0,
+                864.0
+              ]
+            ],
+            "confidence": 0.954273,
+            "score": 0.954273,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.60187,
+              "mask_score": 0.934675,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            122,
+            1170,
+            902
+          ],
+          "iou": 0.8194747,
+          "edge_errors": {
+            "left": 7,
+            "top": 89,
+            "right": 16,
+            "bottom": 66,
+            "mean": 44.5,
+            "maximum": 89
+          },
+          "edge_error_mean_px": 44.5,
+          "edge_error_maximum_px": 89,
+          "elapsed_ms": 1763.782,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              81,
+              122,
+              1170,
+              902
+            ],
+            "corners": [
+              [
+                81.0,
+                122.0
+              ],
+              [
+                1170.0,
+                122.0
+              ],
+              [
+                1170.0,
+                902.0
+              ],
+              [
+                81.0,
+                902.0
+              ]
+            ],
+            "confidence": 0.942661,
+            "score": 0.942661,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.676656,
+              "mask_score": 0.918088,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 20.869506170000022,
+        "search_fraction": 0.3
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "90e4276c2a1d",
+      "parameter_identity_sha256": "b5811293d57a93ad73a9382b1cbe5951aaf7ade960392799c4a6d882dedd677e",
+      "parameter_set_equivalence_family_id": "90e4276c2a1d",
+      "parameter_set_equivalence_family_sha256": "90e4276c2a1d49917fa44f72fe4edf819581a07083423c8b64895b281076b834",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "cd10502d9095",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 10.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.50301451,
+        "mean_iou_success": 0.62876814,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.30462285,
+        "mean_edge_error_px": 106.25,
+        "elapsed_ms_total": 8709.827,
+        "wall_ms": 8710.406
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            199,
+            145,
+            1275,
+            837
+          ],
+          "iou": 0.70217766,
+          "edge_errors": {
+            "left": 74,
+            "top": 89,
+            "right": 14,
+            "bottom": 130,
+            "mean": 76.75,
+            "maximum": 130
+          },
+          "edge_error_mean_px": 76.75,
+          "edge_error_maximum_px": 130,
+          "elapsed_ms": 2596.973,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              199,
+              145,
+              1275,
+              837
+            ],
+            "corners": [
+              [
+                199.0,
+                145.0
+              ],
+              [
+                1275.0,
+                145.0
+              ],
+              [
+                1275.0,
+                837.0
+              ],
+              [
+                199.0,
+                837.0
+              ]
+            ],
+            "confidence": 0.931587,
+            "score": 0.931587,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.546429,
+              "mask_score": 0.915022,
+              "support_score": 1.0,
+              "area_score": 0.910714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            263,
+            37,
+            677,
+            851
+          ],
+          "iou": 0.29826509,
+          "edge_errors": {
+            "left": 196,
+            "top": 29,
+            "right": 556,
+            "bottom": 126,
+            "mean": 226.75,
+            "maximum": 556
+          },
+          "edge_error_mean_px": 226.75,
+          "edge_error_maximum_px": 556,
+          "elapsed_ms": 2002.712,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              263,
+              37,
+              677,
+              851
+            ],
+            "corners": [
+              [
+                263.0,
+                37.0
+              ],
+              [
+                677.0,
+                37.0
+              ],
+              [
+                677.0,
+                851.0
+              ],
+              [
+                263.0,
+                851.0
+              ]
+            ],
+            "confidence": 0.806296,
+            "score": 0.806296,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.259449,
+              "mask_score": 0.804364,
+              "support_score": 1.0,
+              "area_score": 0.432415
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 35.507,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            71,
+            143,
+            1135,
+            838
+          ],
+          "iou": 0.75369884,
+          "edge_errors": {
+            "left": 13,
+            "top": 92,
+            "right": 34,
+            "bottom": 103,
+            "mean": 60.5,
+            "maximum": 103
+          },
+          "edge_error_mean_px": 60.5,
+          "edge_error_maximum_px": 103,
+          "elapsed_ms": 1723.684,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              71,
+              143,
+              1135,
+              838
+            ],
+            "corners": [
+              [
+                71.0,
+                143.0
+              ],
+              [
+                1135.0,
+                143.0
+              ],
+              [
+                1135.0,
+                838.0
+              ],
+              [
+                71.0,
+                838.0
+              ]
+            ],
+            "confidence": 0.940728,
+            "score": 0.940728,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.582874,
+              "mask_score": 0.919403,
+              "support_score": 1.0,
+              "area_score": 0.971456
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            74,
+            141,
+            1183,
+            875
+          ],
+          "iou": 0.76093096,
+          "edge_errors": {
+            "left": 14,
+            "top": 108,
+            "right": 29,
+            "bottom": 93,
+            "mean": 61.0,
+            "maximum": 108
+          },
+          "edge_error_mean_px": 61.0,
+          "edge_error_maximum_px": 108,
+          "elapsed_ms": 2350.951,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              74,
+              141,
+              1183,
+              875
+            ],
+            "corners": [
+              [
+                74.0,
+                141.0
+              ],
+              [
+                1183.0,
+                141.0
+              ],
+              [
+                1183.0,
+                875.0
+              ],
+              [
+                74.0,
+                875.0
+              ]
+            ],
+            "confidence": 0.926245,
+            "score": 0.926245,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.648445,
+              "mask_score": 0.894636,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 43.017491500000006,
+        "search_fraction": 0.8
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "cd10502d9095",
+      "parameter_identity_sha256": "69c4a0098fcad7d6ef5f7a7612123fceb0fe1165a1dd03b6988882ce8c206d55",
+      "parameter_set_equivalence_family_id": "cd10502d9095",
+      "parameter_set_equivalence_family_sha256": "cd10502d9095e790a153de19f514b2ec5d7872c416e77889a7c5f6f00bbbc8ca",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "d2ef0aec6694",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.56611443,
+        "mean_iou_success": 0.70764304,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.3406598,
+        "mean_edge_error_px": 84.688,
+        "elapsed_ms_total": 4803.263,
+        "wall_ms": 4803.88
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            110,
+            101,
+            1295,
+            883
+          ],
+          "iou": 0.84530648,
+          "edge_errors": {
+            "left": 15,
+            "top": 45,
+            "right": 6,
+            "bottom": 84,
+            "mean": 37.5,
+            "maximum": 84
+          },
+          "edge_error_mean_px": 37.5,
+          "edge_error_maximum_px": 84,
+          "elapsed_ms": 1430.756,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              110,
+              101,
+              1295,
+              883
+            ],
+            "corners": [
+              [
+                110.0,
+                101.0
+              ],
+              [
+                1295.0,
+                101.0
+              ],
+              [
+                1295.0,
+                883.0
+              ],
+              [
+                110.0,
+                883.0
+              ]
+            ],
+            "confidence": 0.940444,
+            "score": 0.940444,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.680049,
+              "mask_score": 0.914919,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            238,
+            33,
+            699,
+            869
+          ],
+          "iou": 0.34110248,
+          "edge_errors": {
+            "left": 171,
+            "top": 25,
+            "right": 534,
+            "bottom": 108,
+            "mean": 209.5,
+            "maximum": 534
+          },
+          "edge_error_mean_px": 209.5,
+          "edge_error_maximum_px": 534,
+          "elapsed_ms": 784.711,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              238,
+              33,
+              699,
+              869
+            ],
+            "corners": [
+              [
+                238.0,
+                33.0
+              ],
+              [
+                699.0,
+                33.0
+              ],
+              [
+                699.0,
+                869.0
+              ],
+              [
+                238.0,
+                869.0
+              ]
+            ],
+            "confidence": 0.821806,
+            "score": 0.821806,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.296711,
+              "mask_score": 0.817649,
+              "support_score": 1.0,
+              "area_score": 0.494519
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 31.005,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            65,
+            119,
+            1141,
+            879
+          ],
+          "iou": 0.81362569,
+          "edge_errors": {
+            "left": 19,
+            "top": 68,
+            "right": 40,
+            "bottom": 62,
+            "mean": 47.25,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 47.25,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 1063.926,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              65,
+              119,
+              1141,
+              879
+            ],
+            "corners": [
+              [
+                65.0,
+                119.0
+              ],
+              [
+                1141.0,
+                119.0
+              ],
+              [
+                1141.0,
+                879.0
+              ],
+              [
+                65.0,
+                879.0
+              ]
+            ],
+            "confidence": 0.952009,
+            "score": 0.952009,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.644575,
+              "mask_score": 0.931442,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            66,
+            107,
+            1185,
+            917
+          ],
+          "iou": 0.83053749,
+          "edge_errors": {
+            "left": 22,
+            "top": 74,
+            "right": 31,
+            "bottom": 51,
+            "mean": 44.5,
+            "maximum": 74
+          },
+          "edge_error_mean_px": 44.5,
+          "edge_error_maximum_px": 74,
+          "elapsed_ms": 1492.865,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              66,
+              107,
+              1185,
+              917
+            ],
+            "corners": [
+              [
+                66.0,
+                107.0
+              ],
+              [
+                1185.0,
+                107.0
+              ],
+              [
+                1185.0,
+                917.0
+              ],
+              [
+                66.0,
+                917.0
+              ]
+            ],
+            "confidence": 0.938835,
+            "score": 0.938835,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.722039,
+              "mask_score": 0.912621,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 25.671947885999998,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "d2ef0aec6694",
+      "parameter_identity_sha256": "924b1518ab147d0dfe5a2a73b7ef5f5e96a69941a30092727086add15e470e21",
+      "parameter_set_equivalence_family_id": "d2ef0aec6694",
+      "parameter_set_equivalence_family_sha256": "d2ef0aec6694c93470baa772a1660ba83aaa9db4b0e0ebe98ed7469866c9f259",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "217ec1728985",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.005
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.55564695,
+        "mean_iou_success": 0.69455869,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.33906277,
+        "mean_edge_error_px": 87.688,
+        "elapsed_ms_total": 10833.835,
+        "wall_ms": 10834.445
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            120,
+            111,
+            1285,
+            873
+          ],
+          "iou": 0.83058483,
+          "edge_errors": {
+            "left": 5,
+            "top": 55,
+            "right": 4,
+            "bottom": 94,
+            "mean": 39.5,
+            "maximum": 94
+          },
+          "edge_error_mean_px": 39.5,
+          "edge_error_maximum_px": 94,
+          "elapsed_ms": 3235.139,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              120,
+              111,
+              1285,
+              873
+            ],
+            "corners": [
+              [
+                120.0,
+                111.0
+              ],
+              [
+                1285.0,
+                111.0
+              ],
+              [
+                1285.0,
+                873.0
+              ],
+              [
+                120.0,
+                873.0
+              ]
+            ],
+            "confidence": 0.942126,
+            "score": 0.942126,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.651472,
+              "mask_score": 0.917323,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            248,
+            43,
+            689,
+            859
+          ],
+          "iou": 0.31849779,
+          "edge_errors": {
+            "left": 181,
+            "top": 35,
+            "right": 544,
+            "bottom": 118,
+            "mean": 219.5,
+            "maximum": 544
+          },
+          "edge_error_mean_px": 219.5,
+          "edge_error_maximum_px": 544,
+          "elapsed_ms": 2415.411,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              248,
+              43,
+              689,
+              859
+            ],
+            "corners": [
+              [
+                248.0,
+                43.0
+              ],
+              [
+                689.0,
+                43.0
+              ],
+              [
+                689.0,
+                859.0
+              ],
+              [
+                248.0,
+                859.0
+              ]
+            ],
+            "confidence": 0.815438,
+            "score": 0.815438,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.277048,
+              "mask_score": 0.813234,
+              "support_score": 1.0,
+              "area_score": 0.461747
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 43.629,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            75,
+            129,
+            1131,
+            869
+          ],
+          "iou": 0.8057688,
+          "edge_errors": {
+            "left": 9,
+            "top": 78,
+            "right": 30,
+            "bottom": 72,
+            "mean": 47.25,
+            "maximum": 78
+          },
+          "edge_error_mean_px": 47.25,
+          "edge_error_maximum_px": 78,
+          "elapsed_ms": 2305.745,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              75,
+              129,
+              1131,
+              869
+            ],
+            "corners": [
+              [
+                75.0,
+                129.0
+              ],
+              [
+                1131.0,
+                129.0
+              ],
+              [
+                1131.0,
+                869.0
+              ],
+              [
+                75.0,
+                869.0
+              ]
+            ],
+            "confidence": 0.955104,
+            "score": 0.955104,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.615947,
+              "mask_score": 0.935863,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            76,
+            117,
+            1175,
+            907
+          ],
+          "iou": 0.82338333,
+          "edge_errors": {
+            "left": 12,
+            "top": 84,
+            "right": 21,
+            "bottom": 61,
+            "mean": 44.5,
+            "maximum": 84
+          },
+          "edge_error_mean_px": 44.5,
+          "edge_error_maximum_px": 84,
+          "elapsed_ms": 2833.911,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              76,
+              117,
+              1175,
+              907
+            ],
+            "corners": [
+              [
+                76.0,
+                117.0
+              ],
+              [
+                1175.0,
+                117.0
+              ],
+              [
+                1175.0,
+                907.0
+              ],
+              [
+                76.0,
+                907.0
+              ]
+            ],
+            "confidence": 0.941659,
+            "score": 0.941659,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.691624,
+              "mask_score": 0.916656,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 25.004270041999916,
+        "search_fraction": 0.4
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "217ec1728985",
+      "parameter_identity_sha256": "54269f94cfdfa198a7e624a831fdafaa068abbba2cd34d9f0006977424e85737",
+      "parameter_set_equivalence_family_id": "217ec1728985",
+      "parameter_set_equivalence_family_sha256": "217ec17289853d50f9e3d3a25276d813d304923de5aaeb8cc650d34b6a4219af",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "90e4276c2a1d",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 5.0,
+        "bbox_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.54949974,
+        "mean_iou_success": 0.68687468,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.33751695,
+        "mean_edge_error_px": 89.562,
+        "elapsed_ms_total": 6702.429,
+        "wall_ms": 6703.061
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            125,
+            116,
+            1280,
+            868
+          ],
+          "iou": 0.81908405,
+          "edge_errors": {
+            "left": 0,
+            "top": 60,
+            "right": 9,
+            "bottom": 99,
+            "mean": 42.0,
+            "maximum": 99
+          },
+          "edge_error_mean_px": 42.0,
+          "edge_error_maximum_px": 99,
+          "elapsed_ms": 2303.808,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              125,
+              116,
+              1280,
+              868
+            ],
+            "corners": [
+              [
+                125.0,
+                116.0
+              ],
+              [
+                1280.0,
+                116.0
+              ],
+              [
+                1280.0,
+                868.0
+              ],
+              [
+                125.0,
+                868.0
+              ]
+            ],
+            "confidence": 0.943212,
+            "score": 0.943212,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.637404,
+              "mask_score": 0.918874,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            253,
+            48,
+            684,
+            854
+          ],
+          "iou": 0.30746096,
+          "edge_errors": {
+            "left": 186,
+            "top": 40,
+            "right": 549,
+            "bottom": 123,
+            "mean": 224.5,
+            "maximum": 549
+          },
+          "edge_error_mean_px": 224.5,
+          "edge_error_maximum_px": 549,
+          "elapsed_ms": 1026.858,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              253,
+              48,
+              684,
+              854
+            ],
+            "corners": [
+              [
+                253.0,
+                48.0
+              ],
+              [
+                684.0,
+                48.0
+              ],
+              [
+                684.0,
+                854.0
+              ],
+              [
+                253.0,
+                854.0
+              ]
+            ],
+            "confidence": 0.811771,
+            "score": 0.811771,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.267448,
+              "mask_score": 0.810281,
+              "support_score": 1.0,
+              "area_score": 0.445747
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 37.258,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            134,
+            1126,
+            864
+          ],
+          "iou": 0.801479,
+          "edge_errors": {
+            "left": 4,
+            "top": 83,
+            "right": 25,
+            "bottom": 77,
+            "mean": 47.25,
+            "maximum": 83
+          },
+          "edge_error_mean_px": 47.25,
+          "edge_error_maximum_px": 83,
+          "elapsed_ms": 1570.723,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              80,
+              134,
+              1126,
+              864
+            ],
+            "corners": [
+              [
+                80.0,
+                134.0
+              ],
+              [
+                1126.0,
+                134.0
+              ],
+              [
+                1126.0,
+                864.0
+              ],
+              [
+                80.0,
+                864.0
+              ]
+            ],
+            "confidence": 0.954273,
+            "score": 0.954273,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.60187,
+              "mask_score": 0.934675,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            81,
+            122,
+            1170,
+            902
+          ],
+          "iou": 0.8194747,
+          "edge_errors": {
+            "left": 7,
+            "top": 89,
+            "right": 16,
+            "bottom": 66,
+            "mean": 44.5,
+            "maximum": 89
+          },
+          "edge_error_mean_px": 44.5,
+          "edge_error_maximum_px": 89,
+          "elapsed_ms": 1763.782,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              81,
+              122,
+              1170,
+              902
+            ],
+            "corners": [
+              [
+                81.0,
+                122.0
+              ],
+              [
+                1170.0,
+                122.0
+              ],
+              [
+                1170.0,
+                902.0
+              ],
+              [
+                81.0,
+                902.0
+              ]
+            ],
+            "confidence": 0.942661,
+            "score": 0.942661,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 5.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.0
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.676656,
+              "mask_score": 0.918088,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 20.869506170000022,
+        "search_fraction": 0.3
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "90e4276c2a1d",
+      "parameter_identity_sha256": "b5811293d57a93ad73a9382b1cbe5951aaf7ade960392799c4a6d882dedd677e",
+      "parameter_set_equivalence_family_id": "90e4276c2a1d",
+      "parameter_set_equivalence_family_sha256": "90e4276c2a1d49917fa44f72fe4edf819581a07083423c8b64895b281076b834",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "cd10502d9095",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 10.0,
+        "bbox_padding_fraction": 0.015
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.50301451,
+        "mean_iou_success": 0.62876814,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.30462285,
+        "mean_edge_error_px": 106.25,
+        "elapsed_ms_total": 8709.827,
+        "wall_ms": 8710.406
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            199,
+            145,
+            1275,
+            837
+          ],
+          "iou": 0.70217766,
+          "edge_errors": {
+            "left": 74,
+            "top": 89,
+            "right": 14,
+            "bottom": 130,
+            "mean": 76.75,
+            "maximum": 130
+          },
+          "edge_error_mean_px": 76.75,
+          "edge_error_maximum_px": 130,
+          "elapsed_ms": 2596.973,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              199,
+              145,
+              1275,
+              837
+            ],
+            "corners": [
+              [
+                199.0,
+                145.0
+              ],
+              [
+                1275.0,
+                145.0
+              ],
+              [
+                1275.0,
+                837.0
+              ],
+              [
+                199.0,
+                837.0
+              ]
+            ],
+            "confidence": 0.931587,
+            "score": 0.931587,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.546429,
+              "mask_score": 0.915022,
+              "support_score": 1.0,
+              "area_score": 0.910714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            263,
+            37,
+            677,
+            851
+          ],
+          "iou": 0.29826509,
+          "edge_errors": {
+            "left": 196,
+            "top": 29,
+            "right": 556,
+            "bottom": 126,
+            "mean": 226.75,
+            "maximum": 556
+          },
+          "edge_error_mean_px": 226.75,
+          "edge_error_maximum_px": 556,
+          "elapsed_ms": 2002.712,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              263,
+              37,
+              677,
+              851
+            ],
+            "corners": [
+              [
+                263.0,
+                37.0
+              ],
+              [
+                677.0,
+                37.0
+              ],
+              [
+                677.0,
+                851.0
+              ],
+              [
+                263.0,
+                851.0
+              ]
+            ],
+            "confidence": 0.806296,
+            "score": 0.806296,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.259449,
+              "mask_score": 0.804364,
+              "support_score": 1.0,
+              "area_score": 0.432415
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 35.507,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            71,
+            143,
+            1135,
+            838
+          ],
+          "iou": 0.75369884,
+          "edge_errors": {
+            "left": 13,
+            "top": 92,
+            "right": 34,
+            "bottom": 103,
+            "mean": 60.5,
+            "maximum": 103
+          },
+          "edge_error_mean_px": 60.5,
+          "edge_error_maximum_px": 103,
+          "elapsed_ms": 1723.684,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              71,
+              143,
+              1135,
+              838
+            ],
+            "corners": [
+              [
+                71.0,
+                143.0
+              ],
+              [
+                1135.0,
+                143.0
+              ],
+              [
+                1135.0,
+                838.0
+              ],
+              [
+                71.0,
+                838.0
+              ]
+            ],
+            "confidence": 0.940728,
+            "score": 0.940728,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.582874,
+              "mask_score": 0.919403,
+              "support_score": 1.0,
+              "area_score": 0.971456
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            74,
+            141,
+            1183,
+            875
+          ],
+          "iou": 0.76093096,
+          "edge_errors": {
+            "left": 14,
+            "top": 108,
+            "right": 29,
+            "bottom": 93,
+            "mean": 61.0,
+            "maximum": 108
+          },
+          "edge_error_mean_px": 61.0,
+          "edge_error_maximum_px": 108,
+          "elapsed_ms": 2350.951,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              74,
+              141,
+              1183,
+              875
+            ],
+            "corners": [
+              [
+                74.0,
+                141.0
+              ],
+              [
+                1183.0,
+                141.0
+              ],
+              [
+                1183.0,
+                875.0
+              ],
+              [
+                74.0,
+                875.0
+              ]
+            ],
+            "confidence": 0.926245,
+            "score": 0.926245,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.015
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.648445,
+              "mask_score": 0.894636,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 43.017491500000006,
+        "search_fraction": 0.8
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "cd10502d9095",
+      "parameter_identity_sha256": "69c4a0098fcad7d6ef5f7a7612123fceb0fe1165a1dd03b6988882ce8c206d55",
+      "parameter_set_equivalence_family_id": "cd10502d9095",
+      "parameter_set_equivalence_family_sha256": "cd10502d9095e790a153de19f514b2ec5d7872c416e77889a7c5f6f00bbbc8ca",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "96052fb049b9",
+      "parameters": {
+        "canny_low_threshold": 25,
+        "hough_threshold_fraction": 0.035,
+        "minimum_length_fraction": 0.12,
+        "maximum_gap_fraction": 0.025,
+        "axis_angle_tolerance_degrees": 12.0,
+        "outer_percentile": 10.0,
+        "bbox_padding_fraction": 0.005
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 4,
+        "failure_count": 1,
+        "mean_iou": 0.48816133,
+        "mean_iou_success": 0.61020166,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.30003831,
+        "mean_edge_error_px": 111.25,
+        "elapsed_ms_total": 8632.042,
+        "wall_ms": 8632.742
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            209,
+            155,
+            1265,
+            827
+          ],
+          "iou": 0.66920909,
+          "edge_errors": {
+            "left": 84,
+            "top": 99,
+            "right": 24,
+            "bottom": 140,
+            "mean": 86.75,
+            "maximum": 140
+          },
+          "edge_error_mean_px": 86.75,
+          "edge_error_maximum_px": 140,
+          "elapsed_ms": 3771.637,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              209,
+              155,
+              1265,
+              827
+            ],
+            "corners": [
+              [
+                209.0,
+                155.0
+              ],
+              [
+                1265.0,
+                155.0
+              ],
+              [
+                1265.0,
+                827.0
+              ],
+              [
+                209.0,
+                827.0
+              ]
+            ],
+            "confidence": 0.914296,
+            "score": 0.914296,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 1546,
+              "vertical_lines": 42,
+              "horizontal_lines": 1367,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.520773,
+              "mask_score": 0.896429,
+              "support_score": 1.0,
+              "area_score": 0.867955
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            273,
+            47,
+            667,
+            841
+          ],
+          "iou": 0.27688179,
+          "edge_errors": {
+            "left": 206,
+            "top": 39,
+            "right": 566,
+            "bottom": 136,
+            "mean": 236.75,
+            "maximum": 566
+          },
+          "edge_error_mean_px": 236.75,
+          "edge_error_maximum_px": 566,
+          "elapsed_ms": 956.964,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              273,
+              47,
+              667,
+              841
+            ],
+            "corners": [
+              [
+                273.0,
+                47.0
+              ],
+              [
+                667.0,
+                47.0
+              ],
+              [
+                667.0,
+                841.0
+              ],
+              [
+                273.0,
+                841.0
+              ]
+            ],
+            "confidence": 0.797125,
+            "score": 0.797125,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 1148,
+              "vertical_lines": 694,
+              "horizontal_lines": 60,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.240848,
+              "mask_score": 0.795691,
+              "support_score": 1.0,
+              "area_score": 0.401414
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 35.892,
+          "candidate": {
+            "method": "hough",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "reason": "no_hough_lines",
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              }
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            81,
+            153,
+            1125,
+            828
+          ],
+          "iou": 0.74345728,
+          "edge_errors": {
+            "left": 3,
+            "top": 102,
+            "right": 24,
+            "bottom": 113,
+            "mean": 60.5,
+            "maximum": 113
+          },
+          "edge_error_mean_px": 60.5,
+          "edge_error_maximum_px": 113,
+          "elapsed_ms": 1873.896,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              81,
+              153,
+              1125,
+              828
+            ],
+            "corners": [
+              [
+                81.0,
+                153.0
+              ],
+              [
+                1125.0,
+                153.0
+              ],
+              [
+                1125.0,
+                828.0
+              ],
+              [
+                81.0,
+                828.0
+              ]
+            ],
+            "confidence": 0.937164,
+            "score": 0.937164,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 914,
+              "vertical_lines": 56,
+              "horizontal_lines": 854,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 34,
+              "minimum_length_px": 118,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.555459,
+              "mask_score": 0.920839,
+              "support_score": 1.0,
+              "area_score": 0.925765
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            84,
+            151,
+            1173,
+            865
+          ],
+          "iou": 0.75125847,
+          "edge_errors": {
+            "left": 4,
+            "top": 118,
+            "right": 19,
+            "bottom": 103,
+            "mean": 61.0,
+            "maximum": 118
+          },
+          "edge_error_mean_px": 61.0,
+          "edge_error_maximum_px": 118,
+          "elapsed_ms": 1993.653,
+          "candidate": {
+            "method": "hough",
+            "bbox": [
+              84,
+              151,
+              1173,
+              865
+            ],
+            "corners": [
+              [
+                84.0,
+                151.0
+              ],
+              [
+                1173.0,
+                151.0
+              ],
+              [
+                1173.0,
+                865.0
+              ],
+              [
+                84.0,
+                865.0
+              ]
+            ],
+            "confidence": 0.930576,
+            "score": 0.930576,
+            "diagnostics": {
+              "parameters": {
+                "canny_low_threshold": 25,
+                "hough_threshold_fraction": 0.035,
+                "minimum_length_fraction": 0.12,
+                "maximum_gap_fraction": 0.025,
+                "axis_angle_tolerance_degrees": 12.0,
+                "outer_percentile": 10.0,
+                "minimum_bbox_area_fraction": 0.1,
+                "bbox_padding_fraction": 0.005
+              },
+              "hough_lines": 991,
+              "vertical_lines": 43,
+              "horizontal_lines": 943,
+              "canny_high_threshold": 75,
+              "mask_margin_px": 10,
+              "hough_threshold": 35,
+              "minimum_length_px": 119,
+              "maximum_gap_px": 25,
+              "bbox_area_fraction": 0.619401,
+              "mask_score": 0.900823,
+              "support_score": 1.0,
+              "area_score": 1.0
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 34.304821402000016,
+        "search_fraction": 0.6
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "96052fb049b9",
+      "parameter_identity_sha256": "ee3641051213c002e75b47297a2ffe9e56c4d9c7d2dcab6a478509154cecbd09",
+      "parameter_set_equivalence_family_id": "96052fb049b9",
+      "parameter_set_equivalence_family_sha256": "96052fb049b912b724d47883a09c3be197e7fcdf82a6d916740825978b686165",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "22cf3b17e40a484392adc3900ceb342c32e6d40fb4797151344f5e15138148d9",
+      "profile": null,
+      "run_id": "run-20260825-223726",
+      "rank": 6,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 1,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.62614249,
+        "winner_iou": 0.83470778,
+        "delta_iou": 0.20856529,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.72205925,
+        "winner_iou": 0.82698023,
+        "delta_iou": 0.10492098,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.73696452,
+        "winner_iou": 0.81882601,
+        "delta_iou": 0.08186149,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.30706622,
+        "winner_iou": 0.54460842,
+        "delta_iou": 0.2375422,
+        "status": "Improved",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "c2c117479e3f",
+        "parameter_set_id": "c2c117479e3f",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000001297",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervm76f27",
+    "cpu_model": "Intel(R) Xeon(R) Platinum 8370C CPU @ 2.80GHz",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16769708032,
+    "memory_gib": 15.62,
+    "python_version": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "21ab8a2b61be4a4f5636ca5027b63e6b1d4a5fdf",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "32904881561",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "50182f1a30ad892b7c68ed7828bdad845631c2ff",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 281026560,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": false,
+    "evidence_source": null,
+    "evidence_precompute_seconds": null
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 0.19611122827991034,
+    "failures": 12,
+    "best_mean_iou": 0.60502449,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.2546086,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 1,
+    "total_metric_improvements": 2,
+    "parameter_sets_with_improvements": 2,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 14.1625912720001,
+    "winner_last_changed_elapsed_seconds": 14.1625912720001,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "c2c117479e3f",
+        "parameter_short_name": "historic-best",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 14.1625912720001,
+        "search_fraction": 0.2,
+        "parameter_set_equivalence_family_id": "c2c117479e3f"
+      }
+    ],
+    "last_improvement_elapsed_seconds": 45.0734437860001,
+    "time_since_last_improvement_seconds": 5.918027165000012
+  }
+}
