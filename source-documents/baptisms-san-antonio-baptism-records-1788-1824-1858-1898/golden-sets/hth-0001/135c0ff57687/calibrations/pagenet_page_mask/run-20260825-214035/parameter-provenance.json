@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "pagenet_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [
+      "minimum_mask_area_fraction"
+    ],
+    "equivalence_family_size": 2
+  },
+  "grid": {
+    "sha256": "9e7e4888a60bdeed277056143cce9c3019a615481efddef6f13540808898ae6f",
+    "parameter_order": [
+      "mask_threshold",
+      "close_kernel_fraction",
+      "polygon_epsilon_fraction",
+      "bbox_padding_fraction",
+      "minimum_mask_area_fraction"
+    ],
+    "values": {
+      "mask_threshold": [
+        0.222,
+        0.224,
+        0.226,
+        0.228,
+        0.23
+      ],
+      "close_kernel_fraction": [
+        0.0,
+        0.006
+      ],
+      "polygon_epsilon_fraction": [
+        0.0195,
+        0.02,
+        0.0205,
+        0.021,
+        0.0215
+      ],
+      "bbox_padding_fraction": [
+        0.027,
+        0.028,
+        0.029,
+        0.03,
+        0.031
+      ],
+      "minimum_mask_area_fraction": [
+        0.04
+      ]
+    },
+    "cartesian_count": 250,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 9,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "mask_threshold": 0.5,
+      "minimum_mask_area_fraction": 0.04,
+      "close_kernel_fraction": 0.006,
+      "polygon_epsilon_fraction": 0.012,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "5b5375338476307c38e0e2e9e810a85906f51d08a4beb5dcd8cb14f612568ab0": {
+      "sha256": "5b5375338476307c38e0e2e9e810a85906f51d08a4beb5dcd8cb14f612568ab0",
+      "legacy_parameter_set_id": "49fac5bed131",
+      "parameters": {
+        "mask_threshold": 0.5,
+        "minimum_mask_area_fraction": 0.04,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.0
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
