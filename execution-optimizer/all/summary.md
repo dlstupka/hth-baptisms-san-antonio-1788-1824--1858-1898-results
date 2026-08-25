@@ -140,6 +140,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | dhsegment_page_mask | 192t — rh8-al321 (192 vCPU) | — | — | — | — | 207 | 1 | 192p/2t, 207p/1t, 215p/1t, 219p/1t, 220p/1t, 221p/1t, 222p/1t, 223p/1t | legacy | — | 207 | 11.85 | 14m 4s | 8 |
 | distance_transform | 192t — rh8-al318 (192 vCPU) | — | — | — | — | 1 | 384 | 1p/384t, 64p/6t | legacy | — | 384 | 72.90 | 30s | 2 |
 | distance_transform_rect | 192t — rh8-al319 (192 vCPU) | — | — | — | — | 5 | 76 | 1p/384t, 3p/128t, 5p/76t | legacy | — | 380 | 243.00 | 3s | 6 |
+| doc_ufcn_page_mask | 192t — rh8-al317 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 3023.3 GiB | 3 | 128 | 3p/128t | exhaustive | 39s | 384 | 32.00 | 8s | 4 |
 | doc_ufcn_page_mask | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 503.3 GiB | 5 | 76 | 3p/128t, 4p/96t, 5p/76t, 6p/64t | exhaustive | 53s | 380 | 32.00 | 8s | 6 |
 | docextractor_page_mask | 192t — rh8-al317 (192 vCPU) | — | — | — | — | 3 | 128 | 3p/128t | legacy | — | 384 | 9.90 | 10s | 5 |
 | edge_contour | 192t — rh8-al323 (192 vCPU) | — | — | — | — | 20 | 19 | 20p/19t, 21p/18t, 22p/17t, 23p/16t | legacy | — | 380 | 182.26 | 1m 12s | 9 |
@@ -1159,9 +1160,13 @@ This table contains measurements from this optimizer execution only. Bold identi
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Startup overhead | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al317 (192 vCPU) | 1 | 1 | 384 | 384 | 10s | 1s | 25.60 | 1.00× | -20.00% | — | — | — | — |
 | 192t — rh8-al321 (192 vCPU) | 1 | 1 | 384 | 384 | 10s | 1s | 25.60 | 1.00× | -20.00% | — | — | — | — |
+| 192t — rh8-al317 (192 vCPU) | 2 | 2 | 192 | 384 | 9s | 5s | 28.44 | 1.11× | -11.11% | — | — | — | — |
 | 192t — rh8-al321 (192 vCPU) | 2 | 2 | 192 | 384 | 9s | 5s | 28.44 | 1.11× | -11.11% | — | — | — | — |
+| **192t — rh8-al317 (192 vCPU)** | 3 | 3 | 128 | 384 | 8s | 5s | 32.00 | 1.25× | 0.00% | — | — | — | — |
 | 192t — rh8-al321 (192 vCPU) | 3 | 3 | 128 | 384 | 8s | 5s | 32.00 | 1.25× | 0.00% | — | — | — | — |
+| 192t — rh8-al317 (192 vCPU) | 4 | 4 | 96 | 384 | 10s | 7s | 25.60 | 1.00× | -20.00% | — | — | — | — |
 | 192t — rh8-al321 (192 vCPU) | 4 | 4 | 96 | 384 | 8s | 5s | 32.00 | 1.25× | 0.00% | — | — | — | — |
 | **192t — rh8-al321 (192 vCPU)** | 5 | 5 | 76 | 380 | 8s | 5s | 32.00 | 1.25× | 0.00% | — | — | — | — |
 | 192t — rh8-al321 (192 vCPU) | 6 | 6 | 64 | 384 | 8s | 5s | 32.00 | 1.25× | 0.00% | — | — | — | — |
