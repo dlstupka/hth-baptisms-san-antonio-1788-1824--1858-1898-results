@@ -13,7 +13,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1382,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -54,16 +54,253 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            135,
+            53,
+            1290,
+            970
+          ],
+          "corners": [
+            [
+              138.635,
+              52.648
+            ],
+            [
+              1288.73,
+              56.857
+            ],
+            [
+              1285.393,
+              968.735
+            ],
+            [
+              135.298,
+              964.527
+            ]
+          ],
+          "confidence": 0.8624482750802235,
+          "score": 0.8624482750802235,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 1524.834,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  135,
+                  53,
+                  1290,
+                  970
+                ],
+                "corners": [
+                  [
+                    138.63516235351562,
+                    52.648468017578125
+                  ],
+                  [
+                    1288.729736328125,
+                    56.857025146484375
+                  ],
+                  [
+                    1285.392822265625,
+                    968.7353515625
+                  ],
+                  [
+                    135.29830932617188,
+                    964.52685546875
+                  ]
+                ],
+                "confidence": 0.8624482750802235,
+                "score": 0.8624482750802235,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 170,
+                  "refined_supported_rays": 791,
+                  "total_supported_rays": 961,
+                  "ray_support": 0.9659090909090909,
+                  "mean_fused_strength": 0.7518814206123352,
+                  "side_eligible_rays": [
+                    51,
+                    37,
+                    49,
+                    39
+                  ],
+                  "side_support_counts": [
+                    33,
+                    25,
+                    29,
+                    1
+                  ],
+                  "side_support_fractions": [
+                    0.6470588235294118,
+                    0.6756756756756757,
+                    0.5918367346938775,
+                    0.02564102564102564
+                  ],
+                  "weak_sides": [
+                    3,
+                    2,
+                    0
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.7696465172098871
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  110,
+                  54,
+                  1295,
+                  964
+                ],
+                "corners": [
+                  [
+                    1294.6097412109375,
+                    963.9198608398438
+                  ],
+                  [
+                    110.3900146484375,
+                    963.9198608398438
+                  ],
+                  [
+                    110.3900146484375,
+                    54.08001708984375
+                  ],
+                  [
+                    1294.6097412109375,
+                    54.08001708984375
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 2,
+                  "page_envelope": {
+                    "qualifying_component_count": 2,
+                    "decision": "multi-component-spread-envelope",
+                    "joined_component_count": 2,
+                    "joined_components": [
+                      {
+                        "area_fraction_of_primary": 0.9887496048885811,
+                        "vertical_overlap": 1.0,
+                        "height_ratio": 1.0,
+                        "horizontal_center_separation_fraction": 0.4240231548480463,
+                        "span_gain": 2.0138648180242633
+                      }
+                    ],
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 1026928.5
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.7536249167065399,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        109.1043,
+                        89.4748,
+                        29.7838,
+                        1.1538
+                      ],
+                      "robust_score": 59.62927436828613,
+                      "background_score": 37.202152252197266,
+                      "contrast_ratio": 1.6028447484450112
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        13.7315,
+                        54.4253,
+                        2.4943,
+                        13.575
+                      ],
+                      "robust_score": 13.653274059295654,
+                      "background_score": 37.202152252197266,
+                      "contrast_ratio": 0.367002262845942
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.01032275054603815,
+            "amsre_score": 0.8624482750802235,
+            "amsre_refined_support_fraction": 0.8231009365244537,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 791,
+            "amsre_total_supported_rays": 961,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 1.0181421631803311,
+              "doc_to_amsre_width_ratio": 1.025974025974026,
+              "doc_to_amsre_height_ratio": 0.9923664122137404,
+              "center_displacement_fraction": 0.006071673921576863,
+              "bbox_iou": 0.967430172997004
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": false
+            },
+            "decision": "amsre-primary",
+            "selected_child": "adaptive_multi_scale_radial_edge",
+            "elapsed_ms": 2480.586,
             "mask": {
               "background_lab": [
                 0.0,
@@ -75,7 +312,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -92,16 +329,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -114,7 +349,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1400,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -155,16 +390,252 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            102,
+            10,
+            1310,
+            942
+          ],
+          "corners": [
+            [
+              102.094,
+              16.866
+            ],
+            [
+              1303.255,
+              10.017
+            ],
+            [
+              1308.526,
+              934.357
+            ],
+            [
+              107.365,
+              941.206
+            ]
+          ],
+          "confidence": 0.9117553301633996,
+          "score": 0.9117553301633996,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 397.958,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  102,
+                  10,
+                  1310,
+                  942
+                ],
+                "corners": [
+                  [
+                    102.09423828125,
+                    16.86636734008789
+                  ],
+                  [
+                    1303.2554931640625,
+                    10.017300605773926
+                  ],
+                  [
+                    1308.526123046875,
+                    934.3565063476562
+                  ],
+                  [
+                    107.3648681640625,
+                    941.2056274414062
+                  ]
+                ],
+                "confidence": 0.9117553301633996,
+                "score": 0.9117553301633996,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 174,
+                  "refined_supported_rays": 506,
+                  "total_supported_rays": 680,
+                  "ray_support": 0.9886363636363636,
+                  "mean_fused_strength": 0.8557710647583008,
+                  "side_eligible_rays": [
+                    50,
+                    37,
+                    52,
+                    37
+                  ],
+                  "side_support_counts": [
+                    31,
+                    25,
+                    46,
+                    2
+                  ],
+                  "side_support_fractions": [
+                    0.62,
+                    0.6756756756756757,
+                    0.8846153846153846,
+                    0.05405405405405406
+                  ],
+                  "weak_sides": [
+                    3,
+                    0
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.8035291445886376
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  122,
+                  10,
+                  1317,
+                  938
+                ],
+                "corners": [
+                  [
+                    1316.709716796875,
+                    937.079833984375
+                  ],
+                  [
+                    122.2900390625,
+                    937.079833984375
+                  ],
+                  [
+                    122.2900390625,
+                    10.920013427734375
+                  ],
+                  [
+                    1316.709716796875,
+                    10.920013427734375
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 2,
+                  "page_envelope": {
+                    "qualifying_component_count": 2,
+                    "decision": "multi-component-spread-envelope",
+                    "joined_component_count": 2,
+                    "joined_components": [
+                      {
+                        "area_fraction_of_primary": 0.9994367133431304,
+                        "vertical_overlap": 1.0,
+                        "height_ratio": 0.9988998899889989,
+                        "horizontal_center_separation_fraction": 0.41714285714285715,
+                        "span_gain": 1.9931972789115646
+                      }
+                    ],
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 1055030.0
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.7635185989289333,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        82.3273,
+                        119.9077,
+                        29.6458,
+                        0.9557
+                      ],
+                      "robust_score": 55.986578941345215,
+                      "background_score": 36.715118408203125,
+                      "contrast_ratio": 1.5248916895454254
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        0.0439,
+                        72.561,
+                        0.3004,
+                        19.0217
+                      ],
+                      "robust_score": 9.661058694124222,
+                      "background_score": 36.715118408203125,
+                      "contrast_ratio": 0.26313570847603984
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.008559434674680233,
+            "amsre_score": 0.9117553301633996,
+            "amsre_refined_support_fraction": 0.7441176470588236,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 506,
+            "amsre_total_supported_rays": 680,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 0.9849927521814512,
+              "doc_to_amsre_width_ratio": 0.9892384105960265,
+              "doc_to_amsre_height_ratio": 0.9957081545064378,
+              "center_displacement_fraction": 0.007967197416165,
+              "bbox_iou": 0.9736053806590177
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": false
+            },
+            "decision": "amsre-primary",
+            "selected_child": "adaptive_multi_scale_radial_edge",
+            "elapsed_ms": 1342.792,
             "mask": {
               "background_lab": [
                 0.0,
@@ -176,7 +647,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -193,16 +664,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -215,7 +684,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1365,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -256,16 +725,251 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            90,
+            58,
+            1274,
+            967
+          ],
+          "corners": [
+            [
+              90.403,
+              66.326
+            ],
+            [
+              1267.071,
+              58.007
+            ],
+            [
+              1273.434,
+              958.063
+            ],
+            [
+              96.766,
+              966.382
+            ]
+          ],
+          "confidence": 0.8941089757741256,
+          "score": 0.8941089757741256,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 377.989,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  90,
+                  58,
+                  1274,
+                  967
+                ],
+                "corners": [
+                  [
+                    90.4029541015625,
+                    66.3257827758789
+                  ],
+                  [
+                    1267.0709228515625,
+                    58.00661849975586
+                  ],
+                  [
+                    1273.4344482421875,
+                    958.062744140625
+                  ],
+                  [
+                    96.7664794921875,
+                    966.3819580078125
+                  ]
+                ],
+                "confidence": 0.8941089757741256,
+                "score": 0.8941089757741256,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 171,
+                  "refined_supported_rays": 204,
+                  "total_supported_rays": 375,
+                  "ray_support": 0.9715909090909091,
+                  "mean_fused_strength": 0.8358929753303528,
+                  "side_eligible_rays": [
+                    53,
+                    36,
+                    50,
+                    37
+                  ],
+                  "side_support_counts": [
+                    45,
+                    26,
+                    43,
+                    1
+                  ],
+                  "side_support_fractions": [
+                    0.8490566037735849,
+                    0.7222222222222222,
+                    0.86,
+                    0.02702702702702703
+                  ],
+                  "weak_sides": [
+                    3
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.7877281431478267
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  101,
+                  58,
+                  1282,
+                  961
+                ],
+                "corners": [
+                  [
+                    1281.570068359375,
+                    960.8499755859375
+                  ],
+                  [
+                    101.42999267578125,
+                    960.8499755859375
+                  ],
+                  [
+                    101.42999267578125,
+                    58.149993896484375
+                  ],
+                  [
+                    1281.570068359375,
+                    58.149993896484375
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 2,
+                  "page_envelope": {
+                    "qualifying_component_count": 2,
+                    "decision": "multi-component-spread-envelope",
+                    "joined_component_count": 2,
+                    "joined_components": [
+                      {
+                        "area_fraction_of_primary": 0.976410385787034,
+                        "vertical_overlap": 1.0,
+                        "height_ratio": 0.9977426636568849,
+                        "horizontal_center_separation_fraction": 0.426007326007326,
+                        "span_gain": 1.9828767123287672
+                      }
+                    ],
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 1015634.0
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.7553849872631598,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        133.1592,
+                        101.9753,
+                        18.296,
+                        2.4087
+                      ],
+                      "robust_score": 60.1356897354126,
+                      "background_score": 29.529647827148438,
+                      "contrast_ratio": 2.036451300991342
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        5.0814,
+                        9.7223,
+                        0.6822,
+                        9.8006
+                      ],
+                      "robust_score": 7.401803970336914,
+                      "background_score": 29.529647827148438,
+                      "contrast_ratio": 0.2506566964043498
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.006544106639921665,
+            "amsre_score": 0.8941089757741256,
+            "amsre_refined_support_fraction": 0.544,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 204,
+            "amsre_total_supported_rays": 375,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 0.9908822807956471,
+              "doc_to_amsre_width_ratio": 0.9974662162162162,
+              "doc_to_amsre_height_ratio": 0.9933993399339934,
+              "center_displacement_fraction": 0.005918443159864984,
+              "bbox_iou": 0.9776082622660317
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": false,
+              "amsre_refined_support_below_ceiling": true
+            },
+            "decision": "amsre-primary",
+            "selected_child": "adaptive_multi_scale_radial_edge",
+            "elapsed_ms": 1402.93,
             "mask": {
               "background_lab": [
                 0.0,
@@ -277,7 +981,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -294,16 +998,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -316,7 +1018,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1408,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -357,16 +1059,251 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            100,
+            25,
+            1316,
+            959
+          ],
+          "corners": [
+            [
+              102.199,
+              25.114
+            ],
+            [
+              1314.719,
+              28.13
+            ],
+            [
+              1312.405,
+              958.273
+            ],
+            [
+              99.885,
+              955.257
+            ]
+          ],
+          "confidence": 0.9089840809864304,
+          "score": 0.9089840809864304,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 380.948,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  100,
+                  25,
+                  1316,
+                  959
+                ],
+                "corners": [
+                  [
+                    102.19874572753906,
+                    25.11407470703125
+                  ],
+                  [
+                    1314.718505859375,
+                    28.1297607421875
+                  ],
+                  [
+                    1312.405029296875,
+                    958.2728271484375
+                  ],
+                  [
+                    99.88536071777344,
+                    955.2571411132812
+                  ]
+                ],
+                "confidence": 0.9089840809864304,
+                "score": 0.9089840809864304,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 174,
+                  "refined_supported_rays": 213,
+                  "total_supported_rays": 387,
+                  "ray_support": 0.9886363636363636,
+                  "mean_fused_strength": 0.8406299352645874,
+                  "side_eligible_rays": [
+                    51,
+                    37,
+                    51,
+                    37
+                  ],
+                  "side_support_counts": [
+                    43,
+                    25,
+                    41,
+                    3
+                  ],
+                  "side_support_fractions": [
+                    0.8431372549019608,
+                    0.6756756756756757,
+                    0.803921568627451,
+                    0.08108108108108109
+                  ],
+                  "weak_sides": [
+                    3
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.812384592944361
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  110,
+                  24,
+                  1324,
+                  955
+                ],
+                "corners": [
+                  [
+                    1323.89990234375,
+                    954.1099853515625
+                  ],
+                  [
+                    110.10003662109375,
+                    954.1099853515625
+                  ],
+                  [
+                    110.10003662109375,
+                    24.8900146484375
+                  ],
+                  [
+                    1323.89990234375,
+                    24.8900146484375
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 2,
+                  "page_envelope": {
+                    "qualifying_component_count": 2,
+                    "decision": "multi-component-spread-envelope",
+                    "joined_component_count": 2,
+                    "joined_components": [
+                      {
+                        "area_fraction_of_primary": 0.9743733442021602,
+                        "vertical_overlap": 1.0,
+                        "height_ratio": 0.9879385964912281,
+                        "horizontal_center_separation_fraction": 0.4240056818181818,
+                        "span_gain": 1.9816971713810316
+                      }
+                    ],
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 1070492.0
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.7710878434445879,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        122.1978,
+                        97.1797,
+                        34.6664,
+                        2.8369
+                      ],
+                      "robust_score": 65.92307090759277,
+                      "background_score": 36.055511474609375,
+                      "contrast_ratio": 1.82837708332099
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        13.7848,
+                        20.6945,
+                        0.221,
+                        19.675
+                      ],
+                      "robust_score": 16.72992181777954,
+                      "background_score": 36.055511474609375,
+                      "contrast_ratio": 0.46400456223068437
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.005838722921907902,
+            "amsre_score": 0.9089840809864304,
+            "amsre_refined_support_fraction": 0.5503875968992248,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 213,
+            "amsre_total_supported_rays": 387,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 0.9951485546038544,
+              "doc_to_amsre_width_ratio": 0.9983552631578947,
+              "doc_to_amsre_height_ratio": 0.9967880085653105,
+              "center_displacement_fraction": 0.005434116707427872,
+              "bbox_iou": 0.9800611325780018
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": false,
+              "amsre_refined_support_below_ceiling": true
+            },
+            "decision": "amsre-primary",
+            "selected_child": "adaptive_multi_scale_radial_edge",
+            "elapsed_ms": 1383.439,
             "mask": {
               "background_lab": [
                 0.0,
@@ -378,7 +1315,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -395,16 +1332,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -417,7 +1352,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1316,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -458,16 +1393,285 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            66,
+            9,
+            1234,
+            977
+          ],
+          "corners": [
+            [
+              65.503,
+              18.451
+            ],
+            [
+              1225.269,
+              9.255
+            ],
+            [
+              1232.863,
+              966.993
+            ],
+            [
+              73.097,
+              976.189
+            ]
+          ],
+          "confidence": 0.8713143896586413,
+          "score": 0.8713143896586413,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 384.261,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  66,
+                  9,
+                  1234,
+                  977
+                ],
+                "corners": [
+                  [
+                    65.50347900390625,
+                    18.4512882232666
+                  ],
+                  [
+                    1225.268798828125,
+                    9.255498886108398
+                  ],
+                  [
+                    1232.862548828125,
+                    966.9932861328125
+                  ],
+                  [
+                    73.09735107421875,
+                    976.1890869140625
+                  ]
+                ],
+                "confidence": 0.8713143896586413,
+                "score": 0.8713143896586413,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 151,
+                  "refined_supported_rays": 612,
+                  "total_supported_rays": 763,
+                  "ray_support": 0.8579545454545454,
+                  "mean_fused_strength": 0.9043194055557251,
+                  "side_eligible_rays": [
+                    50,
+                    39,
+                    49,
+                    38
+                  ],
+                  "side_support_counts": [
+                    10,
+                    3,
+                    25,
+                    1
+                  ],
+                  "side_support_fractions": [
+                    0.2,
+                    0.07692307692307693,
+                    0.5102040816326531,
+                    0.02631578947368421
+                  ],
+                  "weak_sides": [
+                    3,
+                    1,
+                    0
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.8552064763232551
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  107,
+                  10,
+                  1228,
+                  972
+                ],
+                "corners": [
+                  [
+                    1227.989990234375,
+                    971.4199829101562
+                  ],
+                  [
+                    107.010009765625,
+                    971.4199829101562
+                  ],
+                  [
+                    107.010009765625,
+                    10.58001708984375
+                  ],
+                  [
+                    1227.989990234375,
+                    10.58001708984375
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 12,
+                  "page_envelope": {
+                    "qualifying_component_count": 7,
+                    "decision": "image-supported-single-leaf-spread-completion",
+                    "joined_component_count": 0,
+                    "single_leaf_spread_completion": {
+                      "attempted": true,
+                      "decision": "image-supported-single-leaf-spread-completion",
+                      "leaf_width_fraction": 0.4787234042553192,
+                      "leaf_height_fraction": 0.9544072948328267,
+                      "physical_margin_fractions": {
+                        "left": 0.0897,
+                        "right": 0.4316,
+                        "top": 0.0203,
+                        "bottom": 0.0253
+                      },
+                      "missing_side": "right",
+                      "outer_background_boundary": {
+                        "accepted": true,
+                        "reason": "sustained-outer-background-transition",
+                        "boundary_x": 1217.0,
+                        "contrast": 11.5,
+                        "inside_level": 11.5,
+                        "outside_level": 0.0,
+                        "background": 0.0,
+                        "background_mad": 0.0,
+                        "candidate_count": 7
+                      },
+                      "boundary_x": 1217.0,
+                      "boundary_score": 43.0,
+                      "boundary_background": 23.0,
+                      "boundary_mad": 6.5,
+                      "boundary_threshold": 42.5,
+                      "boundary_contrast_ratio": 1.8696,
+                      "boundary_selection": "outer-background-transition",
+                      "robust_boundary_candidates": 5,
+                      "outer_boundary": true,
+                      "span_gain": 1.7444,
+                      "completed_area": 1023477.5,
+                      "completed_bounds": [
+                        118.0,
+                        20.0,
+                        1217.0,
+                        962.0
+                      ]
+                    },
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 1023477.5
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.7879619706642277,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        95.553,
+                        123.683,
+                        9.3932,
+                        13.454
+                      ],
+                      "robust_score": 54.5035343170166,
+                      "background_score": 39.11521530151367,
+                      "contrast_ratio": 1.3934100553169506
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        11.5243,
+                        29.5731,
+                        0.1692,
+                        3.3136
+                      ],
+                      "robust_score": 7.4189488887786865,
+                      "background_score": 39.11521530151367,
+                      "contrast_ratio": 0.1896691308379834
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.013085437938570976,
+            "amsre_score": 0.8713143896586413,
+            "amsre_refined_support_fraction": 0.8020969855832241,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 612,
+            "amsre_total_supported_rays": 763,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 0.9538113466545908,
+              "doc_to_amsre_width_ratio": 0.9597602739726028,
+              "doc_to_amsre_height_ratio": 0.993801652892562,
+              "center_displacement_fraction": 0.010707547084382088,
+              "bbox_iou": 0.9538113466545908
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": false
+            },
+            "decision": "amsre-primary",
+            "selected_child": "adaptive_multi_scale_radial_edge",
+            "elapsed_ms": 1497.468,
             "mask": {
               "background_lab": [
                 0.0,
@@ -479,7 +1683,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -496,16 +1700,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -518,7 +1720,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1088,
       "height_px": 983,
       "analysis_scale": 1.0,
@@ -559,16 +1761,256 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            15,
+            28,
+            1073,
+            967
+          ],
+          "corners": [
+            [
+              15.584,
+              27.815
+            ],
+            [
+              1071.522,
+              27.936
+            ],
+            [
+              1071.415,
+              966.364
+            ],
+            [
+              15.476,
+              966.244
+            ]
+          ],
+          "confidence": 0.8715342514126381,
+          "score": 0.8715342514126381,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 380.833,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  15,
+                  28,
+                  1073,
+                  967
+                ],
+                "corners": [
+                  [
+                    15.583516120910645,
+                    27.81488037109375
+                  ],
+                  [
+                    1071.5224609375,
+                    27.9356689453125
+                  ],
+                  [
+                    1071.4150390625,
+                    966.3643798828125
+                  ],
+                  [
+                    15.476176261901855,
+                    966.2435913085938
+                  ]
+                ],
+                "confidence": 0.8715342514126381,
+                "score": 0.8715342514126381,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 176,
+                  "refined_supported_rays": 785,
+                  "total_supported_rays": 961,
+                  "ray_support": 1.0,
+                  "mean_fused_strength": 0.6207634210586548,
+                  "side_eligible_rays": [
+                    47,
+                    41,
+                    47,
+                    41
+                  ],
+                  "side_support_counts": [
+                    12,
+                    17,
+                    10,
+                    4
+                  ],
+                  "side_support_fractions": [
+                    0.2553191489361702,
+                    0.4146341463414634,
+                    0.2127659574468085,
+                    0.0975609756097561
+                  ],
+                  "weak_sides": [
+                    3,
+                    2,
+                    0
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.9265261254752084
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  4,
+                  19,
+                  1080,
+                  974
+                ],
+                "corners": [
+                  [
+                    1079.5400390625,
+                    973.3499755859375
+                  ],
+                  [
+                    4.46002197265625,
+                    973.3499755859375
+                  ],
+                  [
+                    4.46002197265625,
+                    19.649993896484375
+                  ],
+                  [
+                    1079.5400390625,
+                    19.649993896484375
+                  ]
+                ],
+                "confidence": 0.9775,
+                "score": 0.9775,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 1,
+                  "page_envelope": {
+                    "qualifying_component_count": 1,
+                    "decision": "single-component",
+                    "joined_component_count": 0,
+                    "single_leaf_spread_completion": {
+                      "attempted": false,
+                      "decision": "already-broad",
+                      "leaf_width_fraction": 0.9696691176470589,
+                      "leaf_height_fraction": 0.9521871820956256,
+                      "physical_margin_fractions": {
+                        "left": 0.0138,
+                        "right": 0.0165,
+                        "top": 0.0295,
+                        "bottom": 0.0183
+                      }
+                    },
+                    "selected_confidence": 0.97,
+                    "selected_component_area": 975839.5
+                  },
+                  "selected_confidence": 0.97,
+                  "selected_area_fraction": 0.9124224874334271,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        3.0149,
+                        0.5563,
+                        37.9825,
+                        0.8488
+                      ],
+                      "robust_score": 1.9318492710590363,
+                      "background_score": 12.0,
+                      "contrast_ratio": 0.16098743925491968
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        0.0,
+                        0.4139,
+                        0.0,
+                        0.0
+                      ],
+                      "robust_score": 0.0,
+                      "background_score": 12.0,
+                      "contrast_ratio": 0.0
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.008380400948226452,
+            "amsre_score": 0.8715342514126381,
+            "amsre_refined_support_fraction": 0.8168574401664932,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 785,
+            "amsre_total_supported_rays": 961,
+            "doc_ufcn_selected_confidence": 0.97,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 1.0343425314707557,
+              "doc_to_amsre_width_ratio": 1.0170132325141776,
+              "doc_to_amsre_height_ratio": 1.0170394036208732,
+              "center_displacement_fraction": 0.0015249740000821165,
+              "bbox_iou": 0.9667977189123961
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": false
+            },
+            "decision": "amsre-primary",
+            "selected_child": "adaptive_multi_scale_radial_edge",
+            "elapsed_ms": 1624.889,
             "mask": {
               "background_lab": [
                 1.0,
@@ -580,7 +2022,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -597,16 +2039,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -619,7 +2059,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 915,
       "height_px": 986,
       "analysis_scale": 1.0,
@@ -660,16 +2100,256 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            11,
+            38,
+            897,
+            972
+          ],
+          "corners": [
+            [
+              11.436,
+              45.522
+            ],
+            [
+              888.633,
+              38.417
+            ],
+            [
+              896.128,
+              963.844
+            ],
+            [
+              18.932,
+              970.949
+            ]
+          ],
+          "confidence": 0.711940234894832,
+          "score": 0.711940234894832,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 357.157,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  11,
+                  38,
+                  897,
+                  972
+                ],
+                "corners": [
+                  [
+                    11.4361572265625,
+                    45.522342681884766
+                  ],
+                  [
+                    888.6328125,
+                    38.417476654052734
+                  ],
+                  [
+                    896.1282958984375,
+                    963.84375
+                  ],
+                  [
+                    18.931640625,
+                    970.9486083984375
+                  ]
+                ],
+                "confidence": 0.711940234894832,
+                "score": 0.711940234894832,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 122,
+                  "refined_supported_rays": 468,
+                  "total_supported_rays": 590,
+                  "ray_support": 0.6931818181818182,
+                  "mean_fused_strength": 0.6179322600364685,
+                  "side_eligible_rays": [
+                    43,
+                    46,
+                    41,
+                    46
+                  ],
+                  "side_support_counts": [
+                    3,
+                    32,
+                    19,
+                    1
+                  ],
+                  "side_support_fractions": [
+                    0.06976744186046512,
+                    0.6956521739130435,
+                    0.4634146341463415,
+                    0.021739130434782608
+                  ],
+                  "weak_sides": [
+                    3,
+                    0,
+                    2
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.899848238964912
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  1,
+                  57,
+                  902,
+                  976
+                ],
+                "corners": [
+                  [
+                    7.187957763671875,
+                    975.0291748046875
+                  ],
+                  [
+                    1.978759765625,
+                    62.11822509765625
+                  ],
+                  [
+                    895.994873046875,
+                    57.016845703125
+                  ],
+                  [
+                    901.2041015625,
+                    969.9277954101562
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 1,
+                  "page_envelope": {
+                    "qualifying_component_count": 1,
+                    "decision": "single-component",
+                    "joined_component_count": 0,
+                    "single_leaf_spread_completion": {
+                      "attempted": false,
+                      "decision": "already-broad",
+                      "leaf_width_fraction": 0.9606557377049181,
+                      "leaf_height_fraction": 0.9117647058823529,
+                      "physical_margin_fractions": {
+                        "left": 0.012,
+                        "right": 0.0273,
+                        "top": 0.069,
+                        "bottom": 0.0193
+                      }
+                    },
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 775609.5
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.8596964054134938,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        0.1345,
+                        6.24,
+                        20.5142,
+                        20.9617
+                      ],
+                      "robust_score": 13.377121210098267,
+                      "background_score": 11.401753425598145,
+                      "contrast_ratio": 1.1732512281896232
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        0.0704,
+                        5.1464,
+                        1.8706,
+                        0.2239
+                      ],
+                      "robust_score": 1.047229327261448,
+                      "background_score": 11.401753425598145,
+                      "contrast_ratio": 0.09184809460186247
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.011050953529775143,
+            "amsre_score": 0.711940234894832,
+            "amsre_refined_support_fraction": 0.7932203389830509,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 468,
+            "amsre_total_supported_rays": 590,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 1.0005981699624422,
+              "doc_to_amsre_width_ratio": 1.0169300225733635,
+              "doc_to_amsre_height_ratio": 0.9839400428265525,
+              "center_displacement_fraction": 0.008748932653868119,
+              "bbox_iou": 0.9595633796648648
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": false
+            },
+            "decision": "amsre-primary",
+            "selected_child": "adaptive_multi_scale_radial_edge",
+            "elapsed_ms": 1656.077,
             "mask": {
               "background_lab": [
                 0.0,
@@ -681,7 +2361,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -698,16 +2378,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -720,7 +2398,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1228,
       "height_px": 987,
       "analysis_scale": 1.0,
@@ -761,16 +2439,254 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            61,
+            34,
+            1126,
+            953
+          ],
+          "corners": [
+            [
+              1119.278,
+              952.04
+            ],
+            [
+              61.424,
+              944.411
+            ],
+            [
+              67.986,
+              34.373
+            ],
+            [
+              1125.84,
+              42.002
+            ]
+          ],
+          "confidence": 0.9924999999999999,
+          "score": 0.9924999999999999,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 358.713,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  68,
+                  36,
+                  1192,
+                  954
+                ],
+                "corners": [
+                  [
+                    77.87226867675781,
+                    35.873779296875
+                  ],
+                  [
+                    1190.8271484375,
+                    48.3291015625
+                  ],
+                  [
+                    1180.70263671875,
+                    953.0160522460938
+                  ],
+                  [
+                    67.74772644042969,
+                    940.5607299804688
+                  ]
+                ],
+                "confidence": 0.8782761794270071,
+                "score": 0.8782761794270071,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 160,
+                  "refined_supported_rays": 229,
+                  "total_supported_rays": 389,
+                  "ray_support": 0.9090909090909091,
+                  "mean_fused_strength": 0.8585457801818848,
+                  "side_eligible_rays": [
+                    49,
+                    40,
+                    48,
+                    39
+                  ],
+                  "side_support_counts": [
+                    41,
+                    9,
+                    32,
+                    27
+                  ],
+                  "side_support_fractions": [
+                    0.8367346938775511,
+                    0.225,
+                    0.6666666666666666,
+                    0.6923076923076923
+                  ],
+                  "weak_sides": [
+                    1
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.8308349541349359
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  61,
+                  34,
+                  1126,
+                  953
+                ],
+                "corners": [
+                  [
+                    1119.2777099609375,
+                    952.039794921875
+                  ],
+                  [
+                    61.42352294921875,
+                    944.4110107421875
+                  ],
+                  [
+                    67.98626708984375,
+                    34.3731689453125
+                  ],
+                  [
+                    1125.8404541015625,
+                    42.001953125
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 1,
+                  "page_envelope": {
+                    "qualifying_component_count": 1,
+                    "decision": "single-component",
+                    "joined_component_count": 0,
+                    "single_leaf_spread_completion": {
+                      "attempted": false,
+                      "decision": "already-broad",
+                      "leaf_width_fraction": 0.8452768729641694,
+                      "leaf_height_fraction": 0.9067882472137792,
+                      "physical_margin_fractions": {
+                        "left": 0.0586,
+                        "right": 0.0961,
+                        "top": 0.0496,
+                        "bottom": 0.0436
+                      }
+                    },
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 909811.5
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.7506472580022375,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        83.9319,
+                        7.0956,
+                        18.6627,
+                        93.7034
+                      ],
+                      "robust_score": 51.2973051071167,
+                      "background_score": 22.090721130371094,
+                      "contrast_ratio": 2.322119988948273
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        0.3026,
+                        2.1607,
+                        0.9559,
+                        1.9777
+                      ],
+                      "robust_score": 1.4668002128601074,
+                      "background_score": 22.090721130371094,
+                      "contrast_ratio": 0.06639892850050509
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.022870730608701706,
+            "amsre_score": 0.8782761794270071,
+            "amsre_refined_support_fraction": 0.5886889460154242,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 229,
+            "amsre_total_supported_rays": 389,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 0.9485410415649059,
+              "doc_to_amsre_width_ratio": 0.947508896797153,
+              "doc_to_amsre_height_ratio": 1.0010893246187365,
+              "center_displacement_fraction": 0.023187024190322952,
+              "bbox_iou": 0.9325295252412338
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": true
+            },
+            "decision": "doc-ufcn-refined-support-gated-rescue",
+            "selected_child": "doc_ufcn_page_mask",
+            "elapsed_ms": 1492.172,
             "mask": {
               "background_lab": [
                 0.0,
@@ -782,7 +2698,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -799,16 +2715,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -821,7 +2735,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1288,
       "height_px": 985,
       "analysis_scale": 1.0,
@@ -862,16 +2776,249 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            79,
+            51,
+            1104,
+            943
+          ],
+          "corners": [
+            [
+              1103.03,
+              942.74
+            ],
+            [
+              79.97,
+              942.74
+            ],
+            [
+              79.97,
+              51.26
+            ],
+            [
+              1103.03,
+              51.26
+            ]
+          ],
+          "confidence": 0.9924999999999999,
+          "score": 0.9924999999999999,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 280.167,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  73,
+                  52,
+                  1135,
+                  941
+                ],
+                "corners": [
+                  [
+                    74.62295532226562,
+                    51.61212158203125
+                  ],
+                  [
+                    1134.1390380859375,
+                    53.60125732421875
+                  ],
+                  [
+                    1132.4754638671875,
+                    939.739990234375
+                  ],
+                  [
+                    72.95932006835938,
+                    937.7508544921875
+                  ]
+                ],
+                "confidence": 0.9153320717110853,
+                "score": 0.9153320717110853,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 172,
+                  "refined_supported_rays": 0,
+                  "total_supported_rays": 172,
+                  "ray_support": 0.9772727272727273,
+                  "mean_fused_strength": 0.9289550185203552,
+                  "side_eligible_rays": [
+                    49,
+                    41,
+                    49,
+                    37
+                  ],
+                  "side_support_counts": [
+                    45,
+                    32,
+                    45,
+                    26
+                  ],
+                  "side_support_fractions": [
+                    0.9183673469387755,
+                    0.7804878048780488,
+                    0.9183673469387755,
+                    0.7027027027027027
+                  ],
+                  "weak_sides": [],
+                  "refinement_triggered": false,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.740046012593075
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  79,
+                  51,
+                  1104,
+                  943
+                ],
+                "corners": [
+                  [
+                    1103.0299072265625,
+                    942.7398681640625
+                  ],
+                  [
+                    79.97000122070312,
+                    942.7398681640625
+                  ],
+                  [
+                    79.97000122070312,
+                    51.260009765625
+                  ],
+                  [
+                    1103.0299072265625,
+                    51.260009765625
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 2,
+                  "page_envelope": {
+                    "qualifying_component_count": 2,
+                    "decision": "multi-component-spread-envelope",
+                    "joined_component_count": 2,
+                    "joined_components": [
+                      {
+                        "area_fraction_of_primary": 0.994091415699617,
+                        "vertical_overlap": 1.0,
+                        "height_ratio": 0.9965714285714286,
+                        "horizontal_center_separation_fraction": 0.3920807453416149,
+                        "span_gain": 2.003992015968064
+                      }
+                    ],
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 869386.0
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.6852681527256677,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        34.4191,
+                        82.522,
+                        129.2305,
+                        89.0189
+                      ],
+                      "robust_score": 85.77042007446289,
+                      "background_score": 23.409399032592773,
+                      "contrast_ratio": 3.663930883276637
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        0.1349,
+                        4.0482,
+                        0.1533,
+                        5.28
+                      ],
+                      "robust_score": 2.1007490903139114,
+                      "background_score": 23.409399032592773,
+                      "contrast_ratio": 0.08973955663659074
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.011526315473020077,
+            "amsre_score": 0.9153320717110853,
+            "amsre_refined_support_fraction": 0.0,
+            "amsre_refinement_triggered": false,
+            "amsre_refined_supported_rays": 0,
+            "amsre_total_supported_rays": 172,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 0.9684170834577881,
+              "doc_to_amsre_width_ratio": 0.9651600753295668,
+              "doc_to_amsre_height_ratio": 1.0033745781777277,
+              "center_displacement_fraction": 0.007715212981960416,
+              "bbox_iou": 0.9620267463969856
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": true
+            },
+            "decision": "doc-ufcn-refined-support-gated-rescue",
+            "selected_child": "doc_ufcn_page_mask",
+            "elapsed_ms": 1355.432,
             "mask": {
               "background_lab": [
                 0.0,
@@ -883,7 +3030,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -900,16 +3047,14 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     },
@@ -922,7 +3067,7 @@
       "source_repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898",
       "source_commit": "9f03a2632820a26b9724dac7a7a62e87776b1b04",
       "pipeline_repository": "dlstupka/hth",
-      "pipeline_commit": "d309515f8699913c660ae6e39e07229b817cf461",
+      "pipeline_commit": "6448245051cea95e290dd60e697fc0cc086a13db",
       "width_px": 1268,
       "height_px": 990,
       "analysis_scale": 1.0,
@@ -963,16 +3108,254 @@
       "geometry_candidates": [
         {
           "method": "amsre_doc_ufcn_fusion",
-          "bbox": null,
-          "corners": null,
-          "confidence": 0.0,
-          "score": 0.0,
+          "bbox": [
+            81,
+            27,
+            1158,
+            970
+          ],
+          "corners": [
+            [
+              84.511,
+              969.065
+            ],
+            [
+              81.07,
+              31.507
+            ],
+            [
+              1154.521,
+              27.568
+            ],
+            [
+              1157.961,
+              965.126
+            ]
+          ],
+          "confidence": 0.9924999999999999,
+          "score": 0.9924999999999999,
           "diagnostics": {
-            "reason": "detector_exception",
-            "exception_type": "ModuleNotFoundError",
-            "exception_message": "No module named 'hth'",
-            "traceback": "Traceback (most recent call last):\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/registry.py\", line 646, in run_registered_detector\n    candidate = spec.entrypoint(\n                ^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_amsre_doc_ufcn_fusion.py\", line 154, in detect\n    doc = detector_doc_ufcn_page_mask.detect(\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 626, in detect\n    selected, envelope_diagnostics = _select_page_envelope(image_bgr, values)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 544, in _select_page_envelope\n    candidates = _qualifying_polygons(image_bgr, values)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 286, in _qualifying_polygons\n    for record in _infer_evidence(image_bgr):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 138, in _infer_evidence\n    predicted, _, _, _ = _load_model().predict(rgb, min_cc=1)\n                         ^^^^^^^^^^^^^\n  File \"/home/runner/work/hth/hth/hth-pipeline/hth/geometry/detector_doc_ufcn_page_mask.py\", line 79, in _load_model\n    from hth.doc_ufcn_compat import use_modern_torch_autocast\nModuleNotFoundError: No module named 'hth'\n",
-            "elapsed_ms": 372.936,
+            "parameters": {
+              "amsre_rescue_score_ceiling": 0.95,
+              "doc_ufcn_minimum_confidence": 0.9,
+              "minimum_corner_disagreement_fraction": 0.0075,
+              "maximum_amsre_refined_support_fraction": 0.65
+            },
+            "children": {
+              "adaptive_multi_scale_radial_edge": {
+                "method": "adaptive_multi_scale_radial_edge",
+                "parameter_set_id": "21ea516c3c5a",
+                "status": "ok",
+                "bbox": [
+                  77,
+                  34,
+                  1187,
+                  965
+                ],
+                "corners": [
+                  [
+                    76.53118896484375,
+                    33.5802001953125
+                  ],
+                  [
+                    1186.01708984375,
+                    33.5802001953125
+                  ],
+                  [
+                    1186.01708984375,
+                    964.174560546875
+                  ],
+                  [
+                    76.53118896484375,
+                    964.174560546875
+                  ]
+                ],
+                "confidence": 0.8950578461590385,
+                "score": 0.8950578461590385,
+                "diagnostics": {
+                  "parameters": {
+                    "base_sigma": 1.0,
+                    "scale_ratio": 3.5,
+                    "scale_count": 4,
+                    "minimum_radius_fraction": 0.16,
+                    "maximum_radius_fraction": 0.78,
+                    "gradient_percentile": 96.875,
+                    "minimum_ray_support": 0.36,
+                    "minimum_area_fraction": 0.18,
+                    "maximum_area_fraction": 0.98,
+                    "bbox_padding_fraction": 0.0,
+                    "support_weight": 0.5,
+                    "strength_weight": 0.3,
+                    "area_weight": 0.2,
+                    "coarse_angle_step_degrees": 2.0454545454545454,
+                    "refined_angle_step_degrees": 0.35,
+                    "weak_side_support_fraction": 0.65,
+                    "side_assignment_tolerance_fraction": 0.0075,
+                    "maximum_refined_sides": 3
+                  },
+                  "parent_detector": "multi_scale_radial_edge",
+                  "parent_parameter_set_id": "ddb7623ebb92",
+                  "scale_sigmas": [
+                    1.0,
+                    3.5,
+                    12.25,
+                    42.875
+                  ],
+                  "requested_coarse_rays": 176,
+                  "coarse_supported_rays": 169,
+                  "refined_supported_rays": 215,
+                  "total_supported_rays": 384,
+                  "ray_support": 0.9602272727272727,
+                  "mean_fused_strength": 0.8348243236541748,
+                  "side_eligible_rays": [
+                    49,
+                    39,
+                    49,
+                    39
+                  ],
+                  "side_support_counts": [
+                    43,
+                    19,
+                    41,
+                    26
+                  ],
+                  "side_support_fractions": [
+                    0.8775510204081632,
+                    0.48717948717948717,
+                    0.8367346938775511,
+                    0.6666666666666666
+                  ],
+                  "weak_sides": [
+                    1
+                  ],
+                  "refinement_triggered": true,
+                  "evidence": "adaptive_angular_sampling_over_fixed_multi_scale_radial_evidence",
+                  "area_fraction": 0.8224845634957484
+                }
+              },
+              "doc_ufcn_page_mask": {
+                "method": "doc_ufcn_page_mask",
+                "parameter_set_id": "595002645fcc",
+                "status": "ok",
+                "bbox": [
+                  81,
+                  27,
+                  1158,
+                  970
+                ],
+                "corners": [
+                  [
+                    84.51092529296875,
+                    969.0652465820312
+                  ],
+                  [
+                    81.0703125,
+                    31.506988525390625
+                  ],
+                  [
+                    1154.520751953125,
+                    27.56768798828125
+                  ],
+                  [
+                    1157.9613037109375,
+                    965.1259765625
+                  ]
+                ],
+                "confidence": 0.9924999999999999,
+                "score": 0.9924999999999999,
+                "diagnostics": {
+                  "parameters": {
+                    "minimum_confidence": 0.5,
+                    "minimum_component_area_fraction": 0.0005,
+                    "minimum_page_area_fraction": 0.2,
+                    "page_padding_fraction": 0.01
+                  },
+                  "model_id": "doc-ufcn-generic-page",
+                  "model_family": "Doc-UFCN",
+                  "model_sha256": "ab9036a138c9792d433edd02ac3c744745c0b06f01fc50e973c2b92d9e0dfd83",
+                  "model_source": "https://huggingface.co/Teklia/doc-ufcn-generic-page/resolve/main/model.pth?download=true",
+                  "upstream_repository": "https://github.com/johnlockejrr/doc-ufcn",
+                  "upstream_license": "BSD-3-Clause",
+                  "doc_ufcn_version": "0.2.0rc4",
+                  "input_size": 768,
+                  "inference_backend": "doc-ufcn-pytorch",
+                  "raw_polygon_count": 1,
+                  "page_envelope": {
+                    "qualifying_component_count": 1,
+                    "decision": "single-component",
+                    "joined_component_count": 0,
+                    "single_leaf_spread_completion": {
+                      "attempted": false,
+                      "decision": "already-broad",
+                      "leaf_width_fraction": 0.832807570977918,
+                      "leaf_height_fraction": 0.9272727272727272,
+                      "physical_margin_fractions": {
+                        "left": 0.0726,
+                        "right": 0.0946,
+                        "top": 0.0394,
+                        "bottom": 0.0333
+                      }
+                    },
+                    "selected_confidence": 0.99,
+                    "selected_component_area": 944388.5
+                  },
+                  "selected_confidence": 0.99,
+                  "selected_area_fraction": 0.7523089730108657,
+                  "padding_arbitration": {
+                    "requested_padding_fraction": 0.01,
+                    "baseline_padding_fraction": 0.05,
+                    "decision": "requested-padding",
+                    "requested_boundary_support": {
+                      "edge_scores": [
+                        77.9546,
+                        45.3735,
+                        94.8563,
+                        49.1113
+                      ],
+                      "robust_score": 63.53294563293457,
+                      "background_score": 27.312999725341797,
+                      "contrast_ratio": 2.326106479398777
+                    },
+                    "baseline_boundary_support": {
+                      "edge_scores": [
+                        3.2118,
+                        0.4265,
+                        2.4863,
+                        0.1746
+                      ],
+                      "robust_score": 1.4564274549484253,
+                      "background_score": 27.312999725341797,
+                      "contrast_ratio": 0.053323599370050496
+                    }
+                  },
+                  "evidence": "doc_ufcn_generic_page_polygon"
+                }
+              }
+            },
+            "evidence": "calibrated_amsre_primary_with_doc_ufcn_confidence_gated_rescue",
+            "corner_disagreement_fraction": 0.011575538665056229,
+            "amsre_score": 0.8950578461590385,
+            "amsre_refined_support_fraction": 0.5598958333333334,
+            "amsre_refinement_triggered": true,
+            "amsre_refined_supported_rays": 215,
+            "amsre_total_supported_rays": 384,
+            "doc_ufcn_selected_confidence": 0.99,
+            "candidate_geometry": {
+              "doc_to_amsre_area_ratio": 0.9827764391674166,
+              "doc_to_amsre_width_ratio": 0.9702702702702702,
+              "doc_to_amsre_height_ratio": 1.0128893662728249,
+              "center_displacement_fraction": 0.00779506189511669,
+              "bbox_iou": 0.9582857863741405
+            },
+            "rescue_gates": {
+              "amsre_score_below_ceiling": true,
+              "doc_ufcn_confidence_sufficient": true,
+              "corner_disagreement_sufficient": true,
+              "amsre_refined_support_below_ceiling": true
+            },
+            "decision": "doc-ufcn-refined-support-gated-rescue",
+            "selected_child": "doc_ufcn_page_mask",
+            "elapsed_ms": 1442.374,
             "mask": {
               "background_lab": [
                 0.0,
@@ -984,7 +3367,7 @@
             },
             "analysis_scale": 1.0
           },
-          "status": "error",
+          "status": "ok",
           "detector_name": "Fusion Gen3 — AMSRE + Doc-UFCN",
           "origin": "HTH",
           "foundation": [
@@ -1001,23 +3384,21 @@
           "repository": "https://github.com/dlstupka/hth"
         }
       ],
-      "geometry_candidate_status": "error",
+      "geometry_candidate_status": "complete",
       "geometry_candidate_summary": {
         "status_counts": {
-          "ok": 0,
+          "ok": 1,
           "no_candidate": 0,
-          "error": 1
+          "error": 0
         },
-        "failed_methods": [
-          "amsre_doc_ufcn_fusion"
-        ],
+        "failed_methods": [],
         "no_candidate_methods": []
       }
     }
   ],
   "geometry_candidate_summary": {
-    "processed": 0,
-    "errors": 10,
+    "processed": 10,
+    "errors": 0,
     "methods": [
       "amsre_doc_ufcn_fusion"
     ],
@@ -1029,11 +3410,11 @@
       "minimum_corner_disagreement_fraction": 0.0075
     },
     "page_status_counts": {
-      "complete": 0,
+      "complete": 10,
       "partial": 0,
-      "error": 10
+      "error": 0
     },
-    "detector_error_count": 10,
+    "detector_error_count": 0,
     "detectors": [
       {
         "method": "contour",
@@ -1812,20 +4193,20 @@
     ],
     "method_status_counts": {
       "amsre_doc_ufcn_fusion": {
-        "ok": 0,
+        "ok": 10,
         "no_candidate": 0,
-        "error": 10
+        "error": 0
       }
     },
     "detector_performance": {
       "amsre_doc_ufcn_fusion": {
         "runs": 10,
-        "elapsed_ms_total": 4815.796,
-        "elapsed_ms_average": 481.58,
-        "confidence_average": null
+        "elapsed_ms_total": 15678.159,
+        "elapsed_ms_average": 1567.816,
+        "confidence_average": 0.900959
       }
     },
-    "fail_on": "never"
+    "fail_on": "detector-error"
   },
   "document_detector": {
     "selection_policy": "best-approved-authoritative-calibration",
