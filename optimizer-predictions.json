@@ -31,7 +31,7 @@
       "provenance": "predicted",
       "relation": "scaled-vcpu",
       "source": "predicted-low-linear-vcpu",
-      "status": "pending",
+      "status": "verified",
       "target_runner": {
         "cpu_model": "AMD EPYC 9655 96-Core Processor",
         "logical_cpu_count": 192,
@@ -39,6 +39,17 @@
         "runner_label": "192t",
         "runner_name": "rh8-al317",
         "thread_budget": 384
+      },
+      "verification": {
+        "actual_shape": {
+          "allocated_threads": 330,
+          "pipelines": 55,
+          "threads_per_pipeline": 6
+        },
+        "exact_shape_match": false,
+        "pipeline_error_pct": 140.0,
+        "threads_error_pct": -66.667,
+        "verified_at_utc": "2026-08-26T19:59:48.635695Z"
       },
       "verified_pipeline_correction": 1.0,
       "workload": {
@@ -51,5 +62,5 @@
     }
   ],
   "schema_version": "1.0",
-  "updated_at_utc": "2026-08-26T19:57:21.138400Z"
+  "updated_at_utc": "2026-08-26T19:59:48.635702Z"
 }
