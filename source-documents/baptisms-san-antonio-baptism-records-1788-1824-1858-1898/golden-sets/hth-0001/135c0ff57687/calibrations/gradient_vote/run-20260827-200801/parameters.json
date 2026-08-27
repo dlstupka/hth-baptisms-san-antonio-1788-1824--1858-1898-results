@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.4",
+  "detector": "gradient_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/gradient_vote.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 76,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 3,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "0.407",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126",
+    "queue_position": "46",
+    "ranked_quality": "0.96216715",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "gradient_vote",
+    "description": "Second lower-bound refinement for HTH Gradient Boundary Voting. The preceding 81-combination diagnostic improved Avg IoU from 0.9250 to 0.9464 and Min IoU from 0.7525 to 0.8593, with the winner again landing on the lowest tested border_search_fraction (0.15). minimum_span_fraction was behaviorally flat across the winning border-search slice, so it is pinned to the winning 0.15 value while border_search_fraction alone is extended below 0.15 at fine resolution.",
+    "profiles": {
+      "baseline": {
+        "gaussian_sigma": 1.2,
+        "border_search_fraction": 0.15,
+        "central_band_fraction": 1.0,
+        "gradient_percentile": 70.0,
+        "vote_smooth_fraction": 0.012,
+        "minimum_vote_support": 0.08,
+        "minimum_span_fraction": 0.15,
+        "minimum_area_fraction": 0.2,
+        "support_weight": 0.45,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.2
+      }
+    },
+    "parameters": {
+      "border_search_fraction": {
+        "type": "float",
+        "values": [
+          0.05,
+          0.055,
+          0.06,
+          0.065,
+          0.07,
+          0.075,
+          0.08,
+          0.085,
+          0.09,
+          0.095,
+          0.1,
+          0.105,
+          0.11,
+          0.115,
+          0.12,
+          0.125,
+          0.13,
+          0.135,
+          0.14,
+          0.145,
+          0.15
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
