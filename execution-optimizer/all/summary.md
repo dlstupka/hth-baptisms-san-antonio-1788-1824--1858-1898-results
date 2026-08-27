@@ -183,7 +183,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | Detector | Observed vCPU anchors | Prediction readiness | Prediction checks | Desired / missing optimization data |
 |---|---|---|---|---|
 | adaptive_multi_scale_radial_edge | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
-| adaptive_radial_edge | 192 | low | 1 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| adaptive_radial_edge | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | amsre_bfq_spbv_pbg | none | none | 0 verified / 0 pending | missing: at least one completed optimizer run |
 | amsre_doc_ufcn_fusion | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | border_energy | none | none | 0 verified / 0 pending | missing: at least one completed optimizer run |
@@ -197,7 +197,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | contour_quad | none | none | 0 verified / 0 pending | missing: at least one completed optimizer run |
 | convex_hull | none | none | 0 verified / 0 pending | missing: at least one completed optimizer run |
 | cross_edge_contour | none | none | 0 verified / 0 pending | missing: at least one completed optimizer run |
-| dhsegment_page_mask | 32, 192 | moderate | 2 verified / 0 pending | desired: a third vCPU size to validate interpolation/extrapolation |
+| dhsegment_page_mask | 32, 192 | moderate | 0 verified / 0 pending | desired: a third vCPU size to validate interpolation/extrapolation |
 | distance_transform | none | none | 0 verified / 0 pending | missing: at least one completed optimizer run |
 | distance_transform_rect | none | none | 0 verified / 0 pending | missing: at least one completed optimizer run |
 | doc_ufcn_page_mask | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
