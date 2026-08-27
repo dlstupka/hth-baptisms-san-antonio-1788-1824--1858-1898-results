@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `dhsegment_page_mask`  
-Optimizer run: **33078880307** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **33080635811** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -22,11 +22,11 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
-| dhsegment_page_mask | 32t — rh8-s32 (32 vCPU) | AMD EPYC 9175F 16-Core Processor | 16 | 32 | 1511.3 GiB | 15 | 4 | 15p/4t | legacy | 1m 31s | 60 | 21.33 | 12s | 7 |
+| dhsegment_page_mask | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 503.3 GiB | 37 | 10 | 37p/10t | legacy | 1m 29s | 370 | 17.07 | 15s | 5 |
 
 **Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
 
-**Shape-prediction coverage:** vCPU anchors `32`; readiness **low**; prediction checks **0 verified / 0 pending**.
+**Shape-prediction coverage:** vCPU anchors `192`; readiness **low**; prediction checks **0 verified / 0 pending**.
 **Desired / missing optimization data:** missing: a second vCPU size to establish shape scaling.
 
 </details>
@@ -56,13 +56,11 @@ This table contains measurements from this optimizer execution only. Bold identi
 
 | Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Startup overhead | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 32t — rh8-s32 (32 vCPU) | 1 | 1 | 64 | 64 | 13s | 2s | 19.69 | 1.00× | -7.69% | — | — | — | — |
-| 32t — rh8-s32 (32 vCPU) | 6 | 6 | 10 | 60 | 13s | 9s | 19.69 | 1.00× | -7.69% | — | — | — | — |
-| 32t — rh8-s32 (32 vCPU) | 14 | 14 | 4 | 56 | 13s | 9s | 19.69 | 1.00× | -7.69% | — | — | — | — |
-| **32t — rh8-s32 (32 vCPU)** | 15 | 15 | 4 | 60 | 12s | 9s | 21.33 | 1.08× | 0.00% | — | — | — | — |
-| 32t — rh8-s32 (32 vCPU) | 16 | 16 | 4 | 64 | 13s | 9s | 19.69 | 1.00× | -7.69% | — | — | — | — |
-| 32t — rh8-s32 (32 vCPU) | 17 | 17 | 3 | 51 | 13s | 10s | 19.69 | 1.00× | -7.69% | 24.9 | 24.9 | 18.6% | 13.6 GiB |
-| 32t — rh8-s32 (32 vCPU) | 21 | 21 | 3 | 63 | 14s | 10s | 18.29 | 0.93× | -14.29% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 7 | 7 | 54 | 378 | 22s | 19s | 11.64 | — | -31.82% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 36 | 36 | 10 | 360 | 16s | 11s | 16.00 | — | -6.25% | — | — | — | — |
+| **192t — rh8-al318 (192 vCPU)** | 37 | 37 | 10 | 370 | 15s | 11s | 17.07 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 38 | 38 | 10 | 380 | 16s | 11s | 16.00 | — | -6.25% | — | — | — | — |
+| 192t — rh8-al318 (192 vCPU) | 84 | 84 | 4 | 336 | 20s | 12s | 12.80 | — | -25.00% | 143.2 | 143.2 | 12.8% | 8.6 GiB |
 
 **Startup-overhead note:** executor startup is measured from `run-detector-regressions` entry through detector lifecycle preparation, planning, shared learned-evidence resolution/preparation, and initial queue setup before pipeline fan-out. It remains included in **Wall** and therefore in shape-level **Sets/s** as a constant reminder of incurred end-to-end cost. Per-shard parameter-set throughput is timed after fan-out and does not include this pre-fan-out startup overhead.
 
