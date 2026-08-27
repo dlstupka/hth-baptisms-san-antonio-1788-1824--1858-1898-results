@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `dhsegment_page_mask`  
-Optimizer run: **31967269409** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **33075352091** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -22,10 +22,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 
 | Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
 |---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
-| dhsegment_page_mask | 192t — rh8-al308 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 6047.3 GiB | 32 | 12 | 32p/12t | adaptive | 1d 3h 48m 24s | 384 | 4.24 | 39m 18s | 1 |
-| dhsegment_page_mask | 192t — rh8-al318 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 128 | 3 | 124p/3t, 125p/3t, 126p/3t, 127p/3t, 128p/3t | adaptive | 2h 47m 34s | 384 | 10.82 | 15m 24s | 1 |
-| dhsegment_page_mask | 192t — rh8-al321 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 192 | 2 | 162p/2t, 163p/2t, 164p/2t, 165p/2t, 174p/2t, 192p/2t, 207p/1t, 215p/1t, 219p/1t, 220p/1t, 221p/1t, 222p/1t, 223p/1t | adaptive | 2h 9m 17s | 384 | 11.90 | 14m | 2 |
-| dhsegment_page_mask | e9k — rh8-al316 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 64 | 6 | 63p/6t, 64p/6t | adaptive | 3h 36m 33s | 384 | 7.13 | 23m 23s | 1 |
+| dhsegment_page_mask | 192t — rh8-al316 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 7 | 54 | 4p/96t, 5p/76t, 6p/64t, 7p/54t, 8p/48t, 9p/42t, 14p/27t | legacy | 3m 46s | 378 | 19.69 | 13s | 15 |
 
 **Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
 
@@ -57,18 +54,27 @@ Shapes completed in this execution are shown below.
 
 This table contains measurements from this optimizer execution only. Bold identifies this run’s measured throughput winner; the preferred configuration above is selected from all compatible coalesced optimizer evidence.
 
-| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al321 (192 vCPU) | 192 | 192 | 2 | 384 | 14m 4s | 11.85 | — | 0.00% | 430.8 | 520.7 | 93.2% | 220.2 GiB |
-| **192t — rh8-al321 (192 vCPU)** | 207 | 207 | 1 | 207 | 14m 4s | 11.85 | — | 0.00% | 411.9 | 495.3 | 92.7% | 230.0 GiB |
-| 192t — rh8-al321 (192 vCPU) | 215 | 215 | 1 | 215 | 14m 6s | 11.82 | — | -0.24% | 392.9 | 452.9 | 92.4% | 238.6 GiB |
-| 192t — rh8-al321 (192 vCPU) | 219 | 219 | 1 | 219 | 14m 8s | 11.79 | — | -0.47% | 396.4 | 573.1 | 92.1% | 242.4 GiB |
-| 192t — rh8-al321 (192 vCPU) | 220 | 220 | 1 | 220 | 14m 10s | 11.76 | — | -0.71% | 412.9 | 492.5 | 91.6% | 243.2 GiB |
-| 192t — rh8-al321 (192 vCPU) | 221 | 221 | 1 | 221 | 14m 7s | 11.81 | — | -0.35% | 404.0 | 527.3 | 92.1% | 244.8 GiB |
-| 192t — rh8-al321 (192 vCPU) | 222 | 222 | 1 | 222 | 14m 8s | 11.79 | — | -0.47% | 450.6 | 567.2 | 92.2% | 245.3 GiB |
-| 192t — rh8-al321 (192 vCPU) | 223 | 223 | 1 | 223 | 14m 8s | 11.79 | — | -0.47% | 431.8 | 558.4 | 92.2% | 246.9 GiB |
+| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Startup overhead | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al316 (192 vCPU) | 2 | 2 | 192 | 384 | 14s | 11s | 18.29 | — | -7.14% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 3 | 3 | 128 | 384 | 14s | 11s | 18.29 | — | -7.14% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 4 | 4 | 96 | 384 | 13s | 11s | 19.69 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 5 | 5 | 76 | 380 | 13s | 11s | 19.69 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 6 | 6 | 64 | 384 | 13s | 11s | 19.69 | — | 0.00% | 61.8 | 61.8 | 7.6% | 17.5 GiB |
+| **192t — rh8-al316 (192 vCPU)** | 7 | 7 | 54 | 378 | 13s | 11s | 19.69 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 8 | 8 | 48 | 384 | 13s | 11s | 19.69 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 9 | 9 | 42 | 378 | 13s | 11s | 19.69 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 10 | 10 | 38 | 380 | 14s | 11s | 18.29 | — | -7.14% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 14 | 14 | 27 | 378 | 13s | 11s | 19.69 | — | 0.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 16 | 16 | 24 | 384 | 14s | 11s | 18.29 | — | -7.14% | 100.4 | 100.4 | 14.0% | 17.5 GiB |
+| 192t — rh8-al316 (192 vCPU) | 19 | 19 | 20 | 380 | 14s | 11s | 18.29 | — | -7.14% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 27 | 27 | 14 | 378 | 15s | 11s | 17.07 | — | -13.33% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 52 | 52 | 7 | 364 | 17s | 12s | 15.06 | — | -23.53% | 109.6 | 109.6 | 23.6% | 17.5 GiB |
+| 192t — rh8-al316 (192 vCPU) | 192 | 192 | 2 | 384 | 33s | 18s | 7.76 | — | -60.61% | — | — | — | — |
 
-**Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 2.0% from the perceived maximum.
+**Startup-overhead note:** executor startup is measured from `run-detector-regressions` entry through detector lifecycle preparation, planning, shared learned-evidence resolution/preparation, and initial queue setup before pipeline fan-out. It remains included in **Wall** and therefore in shape-level **Sets/s** as a constant reminder of incurred end-to-end cost. Per-shard parameter-set throughput is timed after fan-out and does not include this pre-fan-out startup overhead.
+
+**Early stop:** perceived throughput peak/plateau bracketed by completed shapes more than 2.0% below the peak on both available sides.
 
 </details>
 
