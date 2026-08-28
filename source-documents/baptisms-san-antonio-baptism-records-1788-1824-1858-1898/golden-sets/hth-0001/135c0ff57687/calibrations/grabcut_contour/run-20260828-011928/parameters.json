@@ -1,0 +1,164 @@
+{
+  "schema_version": "0.4",
+  "detector": "grabcut_contour",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/grabcut_contour.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 76,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "118.295",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126+scheduler-slot",
+    "queue_position": "2",
+    "ranked_quality": "0.87721376",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "grabcut_contour",
+    "description": "Calibration space for the HTH GrabCut + Contour directional hybrid detector.",
+    "profiles": {
+      "baseline": {
+        "grabcut_border_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_erosion_iterations": 1,
+        "grabcut_iterations": 3,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_close_iterations": 1,
+        "grabcut_minimum_bbox_area_fraction": 0.1,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.018,
+        "contour_minimum_area_fraction": 0.12,
+        "contour_epsilon_max_fraction": 0.04,
+        "contour_minimum_rectangularity": 0.55,
+        "minimum_agreement_iou": 0.15,
+        "grabcut_weight": 0.55,
+        "contour_weight": 0.2,
+        "agreement_weight": 0.25,
+        "require_contour": false
+      }
+    },
+    "parameters": {
+      "grabcut_border_fraction": {
+        "type": "float",
+        "values": [
+          0.02,
+          0.03
+        ]
+      },
+      "grabcut_erosion_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.015,
+          0.025
+        ]
+      },
+      "grabcut_iterations": {
+        "type": "integer",
+        "values": [
+          3,
+          5
+        ]
+      },
+      "grabcut_close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.02,
+          0.03
+        ]
+      },
+      "grabcut_minimum_contour_area_fraction": {
+        "type": "float",
+        "values": [
+          0.04,
+          0.08
+        ]
+      },
+      "grabcut_polygon_epsilon_fraction": {
+        "type": "float",
+        "values": [
+          0.01,
+          0.018,
+          0.03
+        ]
+      },
+      "contour_minimum_area_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.12,
+          0.18
+        ]
+      },
+      "contour_minimum_rectangularity": {
+        "type": "float",
+        "values": [
+          0.45,
+          0.55,
+          0.7
+        ]
+      },
+      "minimum_agreement_iou": {
+        "type": "float",
+        "values": [
+          0.05,
+          0.15,
+          0.3
+        ]
+      },
+      "grabcut_weight": {
+        "type": "float",
+        "values": [
+          0.45,
+          0.55,
+          0.65
+        ]
+      },
+      "agreement_weight": {
+        "type": "float",
+        "values": [
+          0.15,
+          0.25,
+          0.35
+        ]
+      },
+      "require_contour": {
+        "type": "boolean",
+        "values": [
+          false,
+          true
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "bounded-cartesian-v1",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact",
+      "previous_declared_parameter_sets": 354294
+    }
+  }
+}
