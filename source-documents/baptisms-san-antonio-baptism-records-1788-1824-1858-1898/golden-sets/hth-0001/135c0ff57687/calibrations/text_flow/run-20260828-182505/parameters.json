@@ -1,0 +1,110 @@
+{
+  "schema_version": "0.4",
+  "detector": "text_flow",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/text_flow.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 76,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 5,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "4.033",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126+scheduler-slot",
+    "queue_position": "40",
+    "ranked_quality": "0.16340617",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "text_flow",
+    "description": "Calibration space for text-line flow document envelope detection.",
+    "profiles": {
+      "baseline": {
+        "minimum_component_area_fraction": 2e-05,
+        "maximum_component_area_fraction": 0.01,
+        "line_join_fraction": 0.03,
+        "minimum_line_count": 3,
+        "minimum_text_coverage_fraction": 0.08,
+        "bbox_padding_fraction": 0.02
+      }
+    },
+    "parameters": {
+      "minimum_component_area_fraction": {
+        "type": "float",
+        "values": [
+          1e-05,
+          2e-05,
+          5e-05
+        ]
+      },
+      "maximum_component_area_fraction": {
+        "type": "float",
+        "values": [
+          0.005,
+          0.01,
+          0.02
+        ]
+      },
+      "line_join_fraction": {
+        "type": "float",
+        "values": [
+          0.018,
+          0.03,
+          0.05
+        ]
+      },
+      "minimum_line_count": {
+        "type": "integer",
+        "values": [
+          2,
+          3,
+          5
+        ]
+      },
+      "minimum_text_coverage_fraction": {
+        "type": "float",
+        "values": [
+          0.04,
+          0.08,
+          0.14
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.01,
+          0.02,
+          0.04
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
