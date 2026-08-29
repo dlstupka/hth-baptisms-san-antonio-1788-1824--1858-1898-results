@@ -1,0 +1,112 @@
+{
+  "schema_version": "0.4",
+  "detector": "scantailor_page_frame",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/scantailor_page_frame.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "84.976",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108+scheduler-slot",
+    "queue_position": "8",
+    "ranked_quality": "0.94037825",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "scantailor_page_frame",
+    "description": "Focused ScanTailor two-dimensional refinement derived from the 480-set characterization. Boundary search margin is overwhelmingly dominant (eta-squared 0.7995), while projection smoothing has low standalone influence but a strong incremental interaction with boundary margin. The search therefore concentrates 54 Cartesian points around the 0.075 / 0.003 winning basin: boundary margin spans 0.065-0.085 in 0.0025 steps and projection smoothing spans 0.002-0.0045 in 0.0005 steps. Illumination sigma, ink quantile, content close, and minimum page area are pinned to the current winning values so grid budget is not spent re-exploring characterized low/zombie dimensions. The detector's true default profile remains separately preserved as the mandatory baseline reference.",
+    "profiles": {
+      "baseline": {
+        "illumination_sigma_fraction": 0.035,
+        "ink_quantile": 0.82,
+        "content_close_fraction": 0.012,
+        "projection_smooth_fraction": 0.008,
+        "boundary_search_margin_fraction": 0.06,
+        "minimum_page_area_fraction": 0.2
+      }
+    },
+    "parameters": {
+      "illumination_sigma_fraction": {
+        "type": "float",
+        "values": [
+          0.09
+        ]
+      },
+      "ink_quantile": {
+        "type": "float",
+        "values": [
+          0.76
+        ]
+      },
+      "content_close_fraction": {
+        "type": "float",
+        "values": [
+          0.012
+        ]
+      },
+      "projection_smooth_fraction": {
+        "type": "float",
+        "values": [
+          0.002,
+          0.0025,
+          0.003,
+          0.0035,
+          0.004,
+          0.0045
+        ]
+      },
+      "boundary_search_margin_fraction": {
+        "type": "float",
+        "values": [
+          0.065,
+          0.0675,
+          0.07,
+          0.0725,
+          0.075,
+          0.0775,
+          0.08,
+          0.0825,
+          0.085
+        ]
+      },
+      "minimum_page_area_fraction": {
+        "type": "float",
+        "values": [
+          0.12
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
