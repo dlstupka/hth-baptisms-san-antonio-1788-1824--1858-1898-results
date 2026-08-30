@@ -1,0 +1,186 @@
+{
+  "predictions": [
+    {
+      "anchor_logical_cpus": 32,
+      "confidence": "low",
+      "created_at_utc": "2026-08-26T19:52:24.440819Z",
+      "detector_id": "adaptive_radial_edge",
+      "evidence": [
+        {
+          "allocated_threads": 44,
+          "allocation_fraction": 0.6875,
+          "cpu_model": "",
+          "logical_cpus": 32,
+          "physical_cores": null,
+          "pipelines": 22,
+          "runner_name": "rh8-s32",
+          "threads_per_pipeline": 2
+        }
+      ],
+      "evidence_vcpu_anchors": [
+        32
+      ],
+      "matched_observations": 12,
+      "method": "vcpu-linear-shape-scale-v2",
+      "predicted_shape": {
+        "allocated_threads": 264,
+        "pipelines": 132,
+        "threads_per_pipeline": 2
+      },
+      "prediction_id": "c0ec9c2f5d5d75389601",
+      "provenance": "predicted",
+      "relation": "scaled-vcpu",
+      "source": "predicted-low-linear-vcpu",
+      "status": "verified",
+      "target_runner": {
+        "cpu_model": "AMD EPYC 9655 96-Core Processor",
+        "logical_cpu_count": 192,
+        "physical_core_count": 192,
+        "runner_label": "192t",
+        "runner_name": "rh8-al317",
+        "thread_budget": 384
+      },
+      "verification": {
+        "actual_shape": {
+          "allocated_threads": 330,
+          "pipelines": 55,
+          "threads_per_pipeline": 6
+        },
+        "exact_shape_match": false,
+        "pipeline_error_pct": 140.0,
+        "threads_error_pct": -66.667,
+        "verified_at_utc": "2026-08-26T19:59:48.635695Z"
+      },
+      "verified_pipeline_correction": 1.0,
+      "workload": {
+        "detector_config_sha256": "3f151454bc4e77afcd7816b3b73b76ba41e1001842c396986f77727da8a17462",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "max_dimension": 1800,
+        "mode": "full",
+        "strategy": "exhaustive"
+      }
+    },
+    {
+      "anchor_logical_cpus": 192,
+      "confidence": "low",
+      "created_at_utc": "2026-08-27T13:24:55.351155Z",
+      "detector_id": "dhsegment_page_mask",
+      "evidence": [
+        {
+          "allocated_threads": 378,
+          "allocation_fraction": 0.984375,
+          "cpu_model": "amd epyc 9655 96-core processor",
+          "logical_cpus": 192,
+          "physical_cores": 192,
+          "pipelines": 7,
+          "runner_name": "rh8-al316",
+          "threads_per_pipeline": 54
+        }
+      ],
+      "evidence_vcpu_anchors": [
+        192
+      ],
+      "matched_observations": 15,
+      "method": "vcpu-linear-shape-scale-v2",
+      "predicted_shape": {
+        "allocated_threads": 63,
+        "pipelines": 1,
+        "threads_per_pipeline": 63
+      },
+      "prediction_id": "bece478c35aa11515501",
+      "provenance": "predicted",
+      "relation": "scaled-vcpu",
+      "source": "predicted-low-linear-vcpu",
+      "status": "verified",
+      "target_runner": {
+        "cpu_model": "AMD EPYC 9175F 16-Core Processor",
+        "logical_cpu_count": 32,
+        "physical_core_count": 16,
+        "runner_label": "32t",
+        "runner_name": "rh8-s32",
+        "thread_budget": 64
+      },
+      "verification": {
+        "actual_shape": {
+          "allocated_threads": 60,
+          "pipelines": 15,
+          "threads_per_pipeline": 4
+        },
+        "exact_shape_match": false,
+        "pipeline_error_pct": -93.333,
+        "threads_error_pct": 1475.0,
+        "verified_at_utc": "2026-08-27T13:52:14.908715Z"
+      },
+      "verified_pipeline_correction": 1.0,
+      "workload": {
+        "detector_config_sha256": "16aa45a0d95c1880873089a210356da18aa9963f56df4f119d8a125e76291eb2",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "max_dimension": 1800,
+        "mode": "full",
+        "strategy": "exhaustive"
+      }
+    },
+    {
+      "anchor_logical_cpus": 192,
+      "confidence": "low",
+      "created_at_utc": "2026-08-27T13:43:33.278306Z",
+      "detector_id": "dhsegment_page_mask",
+      "evidence": [
+        {
+          "allocated_threads": 378,
+          "allocation_fraction": 0.984375,
+          "cpu_model": "amd epyc 9655 96-core processor",
+          "logical_cpus": 192,
+          "physical_cores": 192,
+          "pipelines": 7,
+          "runner_name": "rh8-al316",
+          "threads_per_pipeline": 54
+        }
+      ],
+      "evidence_vcpu_anchors": [
+        192
+      ],
+      "matched_observations": 15,
+      "method": "vcpu-linear-shape-scale-v2",
+      "predicted_shape": {
+        "allocated_threads": 64,
+        "pipelines": 1,
+        "threads_per_pipeline": 64
+      },
+      "prediction_id": "cdd0dfb9909520fac11e",
+      "provenance": "predicted",
+      "relation": "scaled-vcpu",
+      "source": "predicted-low-linear-vcpu",
+      "status": "verified",
+      "target_runner": {
+        "cpu_model": "AMD EPYC 9175F 16-Core Processor",
+        "logical_cpu_count": 32,
+        "physical_core_count": 16,
+        "runner_label": "32t",
+        "runner_name": "rh8-s32",
+        "thread_budget": 64
+      },
+      "verification": {
+        "actual_shape": {
+          "allocated_threads": 60,
+          "pipelines": 15,
+          "threads_per_pipeline": 4
+        },
+        "exact_shape_match": false,
+        "pipeline_error_pct": -93.333,
+        "threads_error_pct": 1500.0,
+        "verified_at_utc": "2026-08-27T13:52:14.908744Z"
+      },
+      "verified_pipeline_correction": 1.0,
+      "workload": {
+        "detector_config_sha256": "16aa45a0d95c1880873089a210356da18aa9963f56df4f119d8a125e76291eb2",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "max_dimension": 1800,
+        "mode": "full",
+        "strategy": "exhaustive"
+      }
+    }
+  ],
+  "schema_version": "1.0",
+  "updated_at_utc": "2026-08-30T17:56:24.789167Z"
+}
