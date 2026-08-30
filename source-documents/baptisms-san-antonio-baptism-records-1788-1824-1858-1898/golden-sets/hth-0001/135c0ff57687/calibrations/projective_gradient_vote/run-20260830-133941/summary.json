@@ -1,0 +1,6228 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260830-133941",
+  "detector": "projective_gradient_vote",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 8
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "7.808",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108+scheduler-slot",
+    "queue_position": "36",
+    "ranked_quality": "0.55411904",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 730,
+    "live_possible_parameter_sets": 729,
+    "zombie_possible_parameter_sets": 729,
+    "canonical_search_space": {
+      "schema_version": "1",
+      "strategy": "exhaustive",
+      "live_exhaustive_parameter_sets": 729,
+      "exhaustive_with_zombies_parameter_sets": 729,
+      "effective_parameter_sets": 730,
+      "configured_zombie_parameters": [],
+      "denominator": "exhaustive-with-zombies"
+    },
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 8,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 30,
+  "fully_successful_parameter_set_count": 0,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "10c49cfcf0a87ff0ca3b9d64ffcc358d7c90aae2989f952582bf6ad7ec266daa",
+  "model_selection": null,
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "e536a07cca54",
+    "parameters": {
+      "family_tolerance_degrees": 10.0,
+      "gaussian_sigma": 1.8,
+      "gradient_percentile": 82.0,
+      "minimum_segment_fraction": 0.24,
+      "minimum_side_support": 0.08,
+      "orthogonality_tolerance_degrees": 22.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.55411904,
+      "mean_iou_success": 0.92353173,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.45456192,
+      "mean_edge_error_px": 22.333,
+      "elapsed_ms_total": 1486.007,
+      "wall_ms": 1486.6
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          102,
+          58,
+          1285,
+          972
+        ],
+        "iou": 0.96984436,
+        "edge_errors": {
+          "left": 23,
+          "top": 2,
+          "right": 4,
+          "bottom": 5,
+          "mean": 8.5,
+          "maximum": 23
+        },
+        "edge_error_mean_px": 8.5,
+        "edge_error_maximum_px": 23,
+        "elapsed_ms": 315.603,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            102,
+            58,
+            1285,
+            972
+          ],
+          "corners": [
+            [
+              105.45071411132812,
+              88.7265625
+            ],
+            [
+              1278.1834716796875,
+              58.222190856933594
+            ],
+            [
+              1284.5762939453125,
+              956.5888061523438
+            ],
+            [
+              102.87421417236328,
+              971.2760009765625
+            ]
+          ],
+          "confidence": 0.9367255050476224,
+          "score": 0.9367255050476224,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 7,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.7693129399445393,
+            "side_support": [
+              0.9980944991111755,
+              0.9917330741882324,
+              1.0,
+              1.0
+            ],
+            "projective_geometry_score": 0.9090909090909101
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 282.815,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 1,
+            "orientation_families_degrees": null,
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "reason": "insufficient_projective_line_families"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 202.601,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 3,
+            "orientation_families_degrees": null,
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "reason": "insufficient_projective_line_families"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          48,
+          1273,
+          942
+        ],
+        "iou": 0.84370805,
+        "edge_errors": {
+          "left": 11,
+          "top": 3,
+          "right": 172,
+          "bottom": 1,
+          "mean": 46.75,
+          "maximum": 172
+        },
+        "edge_error_mean_px": 46.75,
+        "edge_error_maximum_px": 172,
+        "elapsed_ms": 326.479,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            73,
+            48,
+            1273,
+            942
+          ],
+          "corners": [
+            [
+              77.9316635131836,
+              48.46403503417969
+            ],
+            [
+              1257.571533203125,
+              55.85499572753906
+            ],
+            [
+              1272.9183349609375,
+              941.9968872070312
+            ],
+            [
+              73.19706726074219,
+              929.34375
+            ]
+          ],
+          "confidence": 0.9469953060537984,
+          "score": 0.9469953060537984,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 8,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8284535555101713,
+            "side_support": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "projective_geometry_score": 0.909090909090909
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          75,
+          30,
+          1183,
+          966
+        ],
+        "iou": 0.95704278,
+        "edge_errors": {
+          "left": 13,
+          "top": 3,
+          "right": 29,
+          "bottom": 2,
+          "mean": 11.75,
+          "maximum": 29
+        },
+        "edge_error_mean_px": 11.75,
+        "edge_error_maximum_px": 29,
+        "elapsed_ms": 358.509,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            75,
+            30,
+            1183,
+            966
+          ],
+          "corners": [
+            [
+              79.91805267333984,
+              38.24900817871094
+            ],
+            [
+              1182.5150146484375,
+              30.502378463745117
+            ],
+            [
+              1173.9677734375,
+              965.9816284179688
+            ],
+            [
+              75.73259735107422,
+              951.2275390625
+            ]
+          ],
+          "confidence": 0.902200911656716,
+          "score": 0.902200911656716,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 5,
+            "orientation_families_degrees": [
+              178.00000000000003,
+              90.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8101986971001923,
+            "side_support": [
+              0.9980756640434265,
+              1.0,
+              0.6960613131523132,
+              1.0
+            ],
+            "projective_geometry_score": 0.9090909090909101
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "projective_gradient_vote",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "358",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31715583665",
+      "historic_calibration_id": "run-20260813-152907",
+      "historic_created_at_utc": "2026-08-13T15:29:00.733077+00:00",
+      "model_variant": null,
+      "parameter_identity_sha256": "c929b8c419967ff8c374fcde1498a6bbfb38e4d0c0512b99781ae5412dfd7420",
+      "parameter_set_id": "e536a07cca54",
+      "parameters": {
+        "family_tolerance_degrees": 10.0,
+        "gaussian_sigma": 1.8,
+        "gradient_percentile": 82.0,
+        "minimum_segment_fraction": 0.24,
+        "minimum_side_support": 0.08,
+        "orthogonality_tolerance_degrees": 22.0
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 2.6881429949999074,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "e536a07cca54",
+    "parameter_identity_sha256": "c929b8c419967ff8c374fcde1498a6bbfb38e4d0c0512b99781ae5412dfd7420",
+    "parameter_set_equivalence_family_id": "e536a07cca54",
+    "parameter_set_equivalence_family_sha256": "e536a07cca54978170c4896e197e7955f7fa1b3e62a044596148d66008260edf",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 624,
+    "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+    "profile": null,
+    "run_id": "run-20260830-133941",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "c6d5d9271464",
+    "parameters": {
+      "gaussian_sigma": 1.2,
+      "gradient_percentile": 82.0,
+      "minimum_segment_fraction": 0.16,
+      "angle_bin_degrees": 4.0,
+      "family_tolerance_degrees": 16.0,
+      "orthogonality_tolerance_degrees": 22.0,
+      "minimum_side_support": 0.18,
+      "minimum_area_fraction": 0.18,
+      "maximum_area_fraction": 0.98,
+      "maximum_corner_overshoot_fraction": 0.08,
+      "bbox_padding_fraction": 0.0,
+      "support_weight": 0.55,
+      "geometry_weight": 0.3,
+      "area_weight": 0.15
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.44744418,
+      "mean_iou_success": 0.7457403,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.39165461,
+      "mean_edge_error_px": 70.667,
+      "elapsed_ms_total": 1193.295,
+      "wall_ms": 1195.079
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          70,
+          20,
+          1285,
+          976
+        ],
+        "iou": 0.90694689,
+        "edge_errors": {
+          "left": 55,
+          "top": 36,
+          "right": 4,
+          "bottom": 9,
+          "mean": 26.0,
+          "maximum": 55
+        },
+        "edge_error_mean_px": 26.0,
+        "edge_error_maximum_px": 55,
+        "elapsed_ms": 305.118,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            70,
+            20,
+            1285,
+            976
+          ],
+          "corners": [
+            [
+              80.8549575805664,
+              90.1684341430664
+            ],
+            [
+              1277.9691162109375,
+              20.5197696685791
+            ],
+            [
+              1284.3485107421875,
+              954.5369262695312
+            ],
+            [
+              70.39095306396484,
+              975.792724609375
+            ]
+          ],
+          "confidence": 0.893324534788106,
+          "score": 0.893324534788106,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 17,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8048486916634235,
+            "side_support": [
+              0.9856069087982178,
+              0.6708105206489563,
+              0.9958590269088745,
+              0.9831414222717285
+            ],
+            "projective_geometry_score": 0.9090909090909101
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 184.907,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 7,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "reason": "insufficient_projective_line_families"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 143.513,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 4,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.002587485513850787,
+            "reason": "implausible_area"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          77,
+          45,
+          1278,
+          943
+        ],
+        "iou": 0.83925051,
+        "edge_errors": {
+          "left": 7,
+          "top": 6,
+          "right": 177,
+          "bottom": 2,
+          "mean": 48.0,
+          "maximum": 177
+        },
+        "edge_error_mean_px": 48.0,
+        "edge_error_maximum_px": 177,
+        "elapsed_ms": 377.47,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            77,
+            45,
+            1278,
+            943
+          ],
+          "corners": [
+            [
+              77.26133728027344,
+              57.59391403198242
+            ],
+            [
+              1261.940673828125,
+              45.67426300048828
+            ],
+            [
+              1277.43701171875,
+              942.076904296875
+            ],
+            [
+              77.78326416015625,
+              929.38134765625
+            ]
+          ],
+          "confidence": 0.9383380657243056,
+          "score": 0.9383380657243056,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 16,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8307732576300734,
+            "side_support": [
+              1.0,
+              0.9937031269073486,
+              0.9507922530174255,
+              0.9900122880935669
+            ],
+            "projective_geometry_score": 0.909090909090909
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          78,
+          34,
+          622,
+          959
+        ],
+        "iou": 0.4910235,
+        "edge_errors": {
+          "left": 10,
+          "top": 1,
+          "right": 532,
+          "bottom": 9,
+          "mean": 138.0,
+          "maximum": 532
+        },
+        "edge_error_mean_px": 138.0,
+        "edge_error_maximum_px": 532,
+        "elapsed_ms": 182.287,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            78,
+            34,
+            622,
+            959
+          ],
+          "corners": [
+            [
+              79.1539077758789,
+              38.255123138427734
+            ],
+            [
+              611.9496459960938,
+              34.43716812133789
+            ],
+            [
+              621.667724609375,
+              958.6958618164062
+            ],
+            [
+              78.588623046875,
+              951.5828857421875
+            ]
+          ],
+          "confidence": 0.8618035799867418,
+          "score": 0.8618035799867418,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.2,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.16,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 16.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.18,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 15,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.39372089897572093,
+            "side_support": [
+              0.9356620907783508,
+              0.9658136963844299,
+              0.994644045829773,
+              0.9585577845573425
+            ],
+            "projective_geometry_score": 0.9090909090909101
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "c6d5d9271464",
+    "parameter_identity_sha256": "88a676e2e6515718b38d462063601a003c2c889f25cc94af0c145f5d8ba7c103",
+    "parameter_set_equivalence_family_id": "c6d5d9271464",
+    "parameter_set_equivalence_family_sha256": "c6d5d92714641ea78856100a0a484cffe5f2fb03e7e62f3d13f91ad8ede58034",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": null,
+    "parameter_grid_sha256": null,
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "search_space_member": true,
+    "profile": "baseline",
+    "run_id": "run-20260830-133941",
+    "rank": 10,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": {
+    "parameter_set_id": "e536a07cca54",
+    "parameters": {
+      "family_tolerance_degrees": 10.0,
+      "gaussian_sigma": 1.8,
+      "gradient_percentile": 82.0,
+      "minimum_segment_fraction": 0.24,
+      "minimum_side_support": 0.08,
+      "orthogonality_tolerance_degrees": 22.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 3,
+      "failure_count": 2,
+      "mean_iou": 0.55411904,
+      "mean_iou_success": 0.92353173,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.45456192,
+      "mean_edge_error_px": 22.333,
+      "elapsed_ms_total": 1486.007,
+      "wall_ms": 1486.6
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          102,
+          58,
+          1285,
+          972
+        ],
+        "iou": 0.96984436,
+        "edge_errors": {
+          "left": 23,
+          "top": 2,
+          "right": 4,
+          "bottom": 5,
+          "mean": 8.5,
+          "maximum": 23
+        },
+        "edge_error_mean_px": 8.5,
+        "edge_error_maximum_px": 23,
+        "elapsed_ms": 315.603,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            102,
+            58,
+            1285,
+            972
+          ],
+          "corners": [
+            [
+              105.45071411132812,
+              88.7265625
+            ],
+            [
+              1278.1834716796875,
+              58.222190856933594
+            ],
+            [
+              1284.5762939453125,
+              956.5888061523438
+            ],
+            [
+              102.87421417236328,
+              971.2760009765625
+            ]
+          ],
+          "confidence": 0.9367255050476224,
+          "score": 0.9367255050476224,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 7,
+            "orientation_families_degrees": [
+              90.0,
+              178.00000000000003
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.7693129399445393,
+            "side_support": [
+              0.9980944991111755,
+              0.9917330741882324,
+              1.0,
+              1.0
+            ],
+            "projective_geometry_score": 0.9090909090909101
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 282.815,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 1,
+            "orientation_families_degrees": null,
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "reason": "insufficient_projective_line_families"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "no_candidate",
+        "iou": 0.0,
+        "edge_error_mean_px": null,
+        "edge_error_maximum_px": null,
+        "elapsed_ms": 202.601,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": null,
+          "corners": null,
+          "confidence": 0.0,
+          "score": 0.0,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 3,
+            "orientation_families_degrees": null,
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "reason": "insufficient_projective_line_families"
+          },
+          "status": "no_candidate",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          73,
+          48,
+          1273,
+          942
+        ],
+        "iou": 0.84370805,
+        "edge_errors": {
+          "left": 11,
+          "top": 3,
+          "right": 172,
+          "bottom": 1,
+          "mean": 46.75,
+          "maximum": 172
+        },
+        "edge_error_mean_px": 46.75,
+        "edge_error_maximum_px": 172,
+        "elapsed_ms": 326.479,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            73,
+            48,
+            1273,
+            942
+          ],
+          "corners": [
+            [
+              77.9316635131836,
+              48.46403503417969
+            ],
+            [
+              1257.571533203125,
+              55.85499572753906
+            ],
+            [
+              1272.9183349609375,
+              941.9968872070312
+            ],
+            [
+              73.19706726074219,
+              929.34375
+            ]
+          ],
+          "confidence": 0.9469953060537984,
+          "score": 0.9469953060537984,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 8,
+            "orientation_families_degrees": [
+              90.0,
+              2.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8284535555101713,
+            "side_support": [
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ],
+            "projective_geometry_score": 0.909090909090909
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          75,
+          30,
+          1183,
+          966
+        ],
+        "iou": 0.95704278,
+        "edge_errors": {
+          "left": 13,
+          "top": 3,
+          "right": 29,
+          "bottom": 2,
+          "mean": 11.75,
+          "maximum": 29
+        },
+        "edge_error_mean_px": 11.75,
+        "edge_error_maximum_px": 29,
+        "elapsed_ms": 358.509,
+        "candidate": {
+          "method": "projective_gradient_vote",
+          "bbox": [
+            75,
+            30,
+            1183,
+            966
+          ],
+          "corners": [
+            [
+              79.91805267333984,
+              38.24900817871094
+            ],
+            [
+              1182.5150146484375,
+              30.502378463745117
+            ],
+            [
+              1173.9677734375,
+              965.9816284179688
+            ],
+            [
+              75.73259735107422,
+              951.2275390625
+            ]
+          ],
+          "confidence": 0.902200911656716,
+          "score": 0.902200911656716,
+          "diagnostics": {
+            "parameters": {
+              "gaussian_sigma": 1.8,
+              "gradient_percentile": 82.0,
+              "minimum_segment_fraction": 0.24,
+              "angle_bin_degrees": 4.0,
+              "family_tolerance_degrees": 10.0,
+              "orthogonality_tolerance_degrees": 22.0,
+              "minimum_side_support": 0.08,
+              "minimum_area_fraction": 0.18,
+              "maximum_area_fraction": 0.98,
+              "maximum_corner_overshoot_fraction": 0.08,
+              "bbox_padding_fraction": 0.0,
+              "support_weight": 0.55,
+              "geometry_weight": 0.3,
+              "area_weight": 0.15
+            },
+            "segment_count": 5,
+            "orientation_families_degrees": [
+              178.00000000000003,
+              90.0
+            ],
+            "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+            "area_fraction": 0.8101986971001923,
+            "side_support": [
+              0.9980756640434265,
+              1.0,
+              0.6960613131523132,
+              1.0
+            ],
+            "projective_geometry_score": 0.9090909090909101
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "projective_gradient_vote",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "358",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31715583665",
+      "historic_calibration_id": "run-20260813-152907",
+      "historic_created_at_utc": "2026-08-13T15:29:00.733077+00:00",
+      "model_variant": null,
+      "parameter_identity_sha256": "c929b8c419967ff8c374fcde1498a6bbfb38e4d0c0512b99781ae5412dfd7420",
+      "parameter_set_id": "e536a07cca54",
+      "parameters": {
+        "family_tolerance_degrees": 10.0,
+        "gaussian_sigma": 1.8,
+        "gradient_percentile": 82.0,
+        "minimum_segment_fraction": 0.24,
+        "minimum_side_support": 0.08,
+        "orthogonality_tolerance_degrees": 22.0
+      },
+      "provenance_source": "legacy-parameters"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 2.6881429949999074,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "e536a07cca54",
+    "parameter_identity_sha256": "c929b8c419967ff8c374fcde1498a6bbfb38e4d0c0512b99781ae5412dfd7420",
+    "parameter_set_equivalence_family_id": "e536a07cca54",
+    "parameter_set_equivalence_family_sha256": "e536a07cca54978170c4896e197e7955f7fa1b3e62a044596148d66008260edf",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 624,
+    "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+    "profile": null,
+    "run_id": "run-20260830-133941",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "e536a07cca54",
+      "parameters": {
+        "family_tolerance_degrees": 10.0,
+        "gaussian_sigma": 1.8,
+        "gradient_percentile": 82.0,
+        "minimum_segment_fraction": 0.24,
+        "minimum_side_support": 0.08,
+        "orthogonality_tolerance_degrees": 22.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.55411904,
+        "mean_iou_success": 0.92353173,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.45456192,
+        "mean_edge_error_px": 22.333,
+        "elapsed_ms_total": 1486.007,
+        "wall_ms": 1486.6
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            102,
+            58,
+            1285,
+            972
+          ],
+          "iou": 0.96984436,
+          "edge_errors": {
+            "left": 23,
+            "top": 2,
+            "right": 4,
+            "bottom": 5,
+            "mean": 8.5,
+            "maximum": 23
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 23,
+          "elapsed_ms": 315.603,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              102,
+              58,
+              1285,
+              972
+            ],
+            "corners": [
+              [
+                105.45071411132812,
+                88.7265625
+              ],
+              [
+                1278.1834716796875,
+                58.222190856933594
+              ],
+              [
+                1284.5762939453125,
+                956.5888061523438
+              ],
+              [
+                102.87421417236328,
+                971.2760009765625
+              ]
+            ],
+            "confidence": 0.9367255050476224,
+            "score": 0.9367255050476224,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.8,
+                "gradient_percentile": 82.0,
+                "minimum_segment_fraction": 0.24,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 7,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.7693129399445393,
+              "side_support": [
+                0.9980944991111755,
+                0.9917330741882324,
+                1.0,
+                1.0
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 282.815,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.8,
+                "gradient_percentile": 82.0,
+                "minimum_segment_fraction": 0.24,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 1,
+              "orientation_families_degrees": null,
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "reason": "insufficient_projective_line_families"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 202.601,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.8,
+                "gradient_percentile": 82.0,
+                "minimum_segment_fraction": 0.24,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 3,
+              "orientation_families_degrees": null,
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "reason": "insufficient_projective_line_families"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            73,
+            48,
+            1273,
+            942
+          ],
+          "iou": 0.84370805,
+          "edge_errors": {
+            "left": 11,
+            "top": 3,
+            "right": 172,
+            "bottom": 1,
+            "mean": 46.75,
+            "maximum": 172
+          },
+          "edge_error_mean_px": 46.75,
+          "edge_error_maximum_px": 172,
+          "elapsed_ms": 326.479,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              73,
+              48,
+              1273,
+              942
+            ],
+            "corners": [
+              [
+                77.9316635131836,
+                48.46403503417969
+              ],
+              [
+                1257.571533203125,
+                55.85499572753906
+              ],
+              [
+                1272.9183349609375,
+                941.9968872070312
+              ],
+              [
+                73.19706726074219,
+                929.34375
+              ]
+            ],
+            "confidence": 0.9469953060537984,
+            "score": 0.9469953060537984,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.8,
+                "gradient_percentile": 82.0,
+                "minimum_segment_fraction": 0.24,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 8,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8284535555101713,
+              "side_support": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "projective_geometry_score": 0.909090909090909
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            75,
+            30,
+            1183,
+            966
+          ],
+          "iou": 0.95704278,
+          "edge_errors": {
+            "left": 13,
+            "top": 3,
+            "right": 29,
+            "bottom": 2,
+            "mean": 11.75,
+            "maximum": 29
+          },
+          "edge_error_mean_px": 11.75,
+          "edge_error_maximum_px": 29,
+          "elapsed_ms": 358.509,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              75,
+              30,
+              1183,
+              966
+            ],
+            "corners": [
+              [
+                79.91805267333984,
+                38.24900817871094
+              ],
+              [
+                1182.5150146484375,
+                30.502378463745117
+              ],
+              [
+                1173.9677734375,
+                965.9816284179688
+              ],
+              [
+                75.73259735107422,
+                951.2275390625
+              ]
+            ],
+            "confidence": 0.902200911656716,
+            "score": 0.902200911656716,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 1.8,
+                "gradient_percentile": 82.0,
+                "minimum_segment_fraction": 0.24,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 5,
+              "orientation_families_degrees": [
+                178.00000000000003,
+                90.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8101986971001923,
+              "side_support": [
+                0.9980756640434265,
+                1.0,
+                0.6960613131523132,
+                1.0
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "reference_roles": [
+        "historic_best"
+      ],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "historic_reference": {
+        "detector": "projective_gradient_vote",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "historic_build_number": "358",
+        "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/31715583665",
+        "historic_calibration_id": "run-20260813-152907",
+        "historic_created_at_utc": "2026-08-13T15:29:00.733077+00:00",
+        "model_variant": null,
+        "parameter_identity_sha256": "c929b8c419967ff8c374fcde1498a6bbfb38e4d0c0512b99781ae5412dfd7420",
+        "parameter_set_id": "e536a07cca54",
+        "parameters": {
+          "family_tolerance_degrees": 10.0,
+          "gaussian_sigma": 1.8,
+          "gradient_percentile": 82.0,
+          "minimum_segment_fraction": 0.24,
+          "minimum_side_support": 0.08,
+          "orthogonality_tolerance_degrees": 22.0
+        },
+        "provenance_source": "legacy-parameters"
+      },
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 2.6881429949999074,
+        "search_fraction": 0.2
+      },
+      "legacy_parameter_set_id": "e536a07cca54",
+      "parameter_identity_sha256": "c929b8c419967ff8c374fcde1498a6bbfb38e4d0c0512b99781ae5412dfd7420",
+      "parameter_set_equivalence_family_id": "e536a07cca54",
+      "parameter_set_equivalence_family_sha256": "e536a07cca54978170c4896e197e7955f7fa1b3e62a044596148d66008260edf",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 624,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "ea6049908ba9",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.08
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1780.174,
+        "wall_ms": 1780.706
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 437.246,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 417.122,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 292.9,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 366.37,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 266.536,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 4.474326695999935,
+        "search_fraction": 0.3
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "ea6049908ba9",
+      "parameter_identity_sha256": "4cd18eec709b94a27e8336a5da85d7bd73d1e53749ac75852b04715bd63ea89d",
+      "parameter_set_equivalence_family_id": "ea6049908ba9",
+      "parameter_set_equivalence_family_sha256": "ea6049908ba92b487123ba1baf82ca5a9edec13bebf8eea2a17bbeb6220337d4",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "058b6c85f605",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.18
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1979.583,
+        "wall_ms": 1980.1
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 488.244,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 378.603,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 291.76,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 371.179,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 449.797,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 4.6749185009998655,
+        "search_fraction": 0.4
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "058b6c85f605",
+      "parameter_identity_sha256": "a7a3e8e399a0c8407175c44172dcf498a86be53cd158535687eed052ad4b6884",
+      "parameter_set_equivalence_family_id": "058b6c85f605",
+      "parameter_set_equivalence_family_sha256": "058b6c85f605db786f1046b54e51f236f8190a891a51266b9e805d1f913b5127",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "218afc35ed78",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1271.27,
+        "wall_ms": 1271.852
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 225.546,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 370.949,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 301.319,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 199.111,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 174.345,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 5.747321865999993,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "218afc35ed78",
+      "parameter_identity_sha256": "ba9b577a57cc63344925faf9abef670a9d8dc5cd152509e01dbe6e3e5082ebc8",
+      "parameter_set_equivalence_family_id": "218afc35ed78",
+      "parameter_set_equivalence_family_sha256": "218afc35ed78b6e8822cd87a7796b64c6f792c92afed2e9494a38144e5c7abd0",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "09234c13ffc4",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 22.0,
+        "minimum_side_support": 0.08
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1271.68,
+        "wall_ms": 1272.196
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 422.756,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9228856308670748,
+            "score": 0.9228856308670748,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 173.801,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 97.577,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 330.957,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.938631431079425,
+            "score": 0.938631431079425,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.909090909090909
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 246.589,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.9191585713936259,
+            "score": 0.9191585713936259,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 5.9541976649998105,
+        "search_fraction": 0.6
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "09234c13ffc4",
+      "parameter_identity_sha256": "e5901d163dbd85154f3aebee2526a0483fc4fad55891a9d8431b1c0c522b9a33",
+      "parameter_set_equivalence_family_id": "09234c13ffc4",
+      "parameter_set_equivalence_family_sha256": "09234c13ffc45ae5eb06016ae6561c78fee3de271e1c6efeceea4829f6d852fc",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "ea6049908ba9",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.08
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1780.174,
+        "wall_ms": 1780.706
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 437.246,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 417.122,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 292.9,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 366.37,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 266.536,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 3,
+        "parameter_set_number": 3,
+        "elapsed_seconds": 4.474326695999935,
+        "search_fraction": 0.3
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "ea6049908ba9",
+      "parameter_identity_sha256": "4cd18eec709b94a27e8336a5da85d7bd73d1e53749ac75852b04715bd63ea89d",
+      "parameter_set_equivalence_family_id": "ea6049908ba9",
+      "parameter_set_equivalence_family_sha256": "ea6049908ba92b487123ba1baf82ca5a9edec13bebf8eea2a17bbeb6220337d4",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 0,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "058b6c85f605",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.18
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1979.583,
+        "wall_ms": 1980.1
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 488.244,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 378.603,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 291.76,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 371.179,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 449.797,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 4,
+        "parameter_set_number": 4,
+        "elapsed_seconds": 4.6749185009998655,
+        "search_fraction": 0.4
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "058b6c85f605",
+      "parameter_identity_sha256": "a7a3e8e399a0c8407175c44172dcf498a86be53cd158535687eed052ad4b6884",
+      "parameter_set_equivalence_family_id": "058b6c85f605",
+      "parameter_set_equivalence_family_sha256": "058b6c85f605db786f1046b54e51f236f8190a891a51266b9e805d1f913b5127",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 1,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "218afc35ed78",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 12.0,
+        "minimum_side_support": 0.3
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1271.27,
+        "wall_ms": 1271.852
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 225.546,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9001583581398024,
+            "score": 0.9001583581398024,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 370.949,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 301.319,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 199.111,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.9159041583521523,
+            "score": 0.9159041583521523,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.8333333333333331
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 174.345,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.8964312986663535,
+            "score": 0.8964312986663535,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 12.0,
+                "minimum_side_support": 0.3,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.8333333333333353
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 5.747321865999993,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "218afc35ed78",
+      "parameter_identity_sha256": "ba9b577a57cc63344925faf9abef670a9d8dc5cd152509e01dbe6e3e5082ebc8",
+      "parameter_set_equivalence_family_id": "218afc35ed78",
+      "parameter_set_equivalence_family_sha256": "218afc35ed78b6e8822cd87a7796b64c6f792c92afed2e9494a38144e5c7abd0",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "09234c13ffc4",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 22.0,
+        "minimum_side_support": 0.08
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1271.68,
+        "wall_ms": 1272.196
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 422.756,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9228856308670748,
+            "score": 0.9228856308670748,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 173.801,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 97.577,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 330.957,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.938631431079425,
+            "score": 0.938631431079425,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.909090909090909
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 246.589,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.9191585713936259,
+            "score": 0.9191585713936259,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.08,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 6,
+        "parameter_set_number": 6,
+        "elapsed_seconds": 5.9541976649998105,
+        "search_fraction": 0.6
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "09234c13ffc4",
+      "parameter_identity_sha256": "e5901d163dbd85154f3aebee2526a0483fc4fad55891a9d8431b1c0c522b9a33",
+      "parameter_set_equivalence_family_id": "09234c13ffc4",
+      "parameter_set_equivalence_family_sha256": "09234c13ffc45ae5eb06016ae6561c78fee3de271e1c6efeceea4829f6d852fc",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 3,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "928d5fcecfd4",
+      "parameters": {
+        "gaussian_sigma": 0.8,
+        "gradient_percentile": 74.0,
+        "minimum_segment_fraction": 0.1,
+        "family_tolerance_degrees": 10.0,
+        "orthogonality_tolerance_degrees": 22.0,
+        "minimum_side_support": 0.18
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 3,
+        "failure_count": 2,
+        "mean_iou": 0.54631183,
+        "mean_iou_success": 0.91051971,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.44774952,
+        "mean_edge_error_px": 25.833,
+        "elapsed_ms_total": 1510.377,
+        "wall_ms": 1510.955
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            77,
+            27,
+            1285,
+            979
+          ],
+          "iou": 0.91600645,
+          "edge_errors": {
+            "left": 48,
+            "top": 29,
+            "right": 4,
+            "bottom": 12,
+            "mean": 23.25,
+            "maximum": 48
+          },
+          "edge_error_mean_px": 23.25,
+          "edge_error_maximum_px": 48,
+          "elapsed_ms": 235.196,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              27,
+              1285,
+              979
+            ],
+            "corners": [
+              [
+                77.05387115478516,
+                84.10990905761719
+              ],
+              [
+                1277.788330078125,
+                27.608470916748047
+              ],
+              [
+                1284.981689453125,
+                954.44580078125
+              ],
+              [
+                79.0566635131836,
+                978.106689453125
+              ]
+            ],
+            "confidence": 0.9228856308670748,
+            "score": 0.9228856308670748,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 38,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.804105682657883,
+              "side_support": [
+                0.994575023651123,
+                0.8949861526489258,
+                1.0,
+                0.9616570472717285
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 295.34,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 25,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.00014651724977051767,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "no_candidate",
+          "iou": 0.0,
+          "edge_error_mean_px": null,
+          "edge_error_maximum_px": null,
+          "elapsed_ms": 117.023,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": null,
+            "corners": null,
+            "confidence": 0.0,
+            "score": 0.0,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 4,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.0025023949011669174,
+              "reason": "implausible_area"
+            },
+            "status": "no_candidate",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            77,
+            50,
+            1277,
+            941
+          ],
+          "iou": 0.84654882,
+          "edge_errors": {
+            "left": 7,
+            "top": 1,
+            "right": 176,
+            "bottom": 0,
+            "mean": 46.0,
+            "maximum": 176
+          },
+          "edge_error_mean_px": 46.0,
+          "edge_error_maximum_px": 176,
+          "elapsed_ms": 445.786,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              77,
+              50,
+              1277,
+              941
+            ],
+            "corners": [
+              [
+                77.29579162597656,
+                50.077056884765625
+              ],
+              [
+                1261.8223876953125,
+                54.38561248779297
+              ],
+              [
+                1276.758056640625,
+                922.2930297851562
+              ],
+              [
+                77.59259796142578,
+                940.2809448242188
+              ]
+            ],
+            "confidence": 0.938631431079425,
+            "score": 0.938631431079425,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 29,
+              "orientation_families_degrees": [
+                90.0,
+                2.0
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8258592237918627,
+              "side_support": [
+                1.0,
+                0.9542874097824097,
+                0.9877145886421204,
+                1.0
+              ],
+              "projective_geometry_score": 0.909090909090909
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            30,
+            1179,
+            964
+          ],
+          "iou": 0.96900386,
+          "edge_errors": {
+            "left": 1,
+            "top": 3,
+            "right": 25,
+            "bottom": 4,
+            "mean": 8.25,
+            "maximum": 25
+          },
+          "edge_error_mean_px": 8.25,
+          "edge_error_maximum_px": 25,
+          "elapsed_ms": 417.032,
+          "candidate": {
+            "method": "projective_gradient_vote",
+            "bbox": [
+              87,
+              30,
+              1179,
+              964
+            ],
+            "corners": [
+              [
+                87.11235046386719,
+                37.80858612060547
+              ],
+              [
+                1177.111083984375,
+                30.905242919921875
+              ],
+              [
+                1178.8079833984375,
+                963.6783447265625
+              ],
+              [
+                92.83401489257812,
+                955.4651489257812
+              ]
+            ],
+            "confidence": 0.9191585713936259,
+            "score": 0.9191585713936259,
+            "diagnostics": {
+              "parameters": {
+                "gaussian_sigma": 0.8,
+                "gradient_percentile": 74.0,
+                "minimum_segment_fraction": 0.1,
+                "angle_bin_degrees": 4.0,
+                "family_tolerance_degrees": 10.0,
+                "orthogonality_tolerance_degrees": 22.0,
+                "minimum_side_support": 0.18,
+                "minimum_area_fraction": 0.18,
+                "maximum_area_fraction": 0.98,
+                "maximum_corner_overshoot_fraction": 0.08,
+                "bbox_padding_fraction": 0.0,
+                "support_weight": 0.55,
+                "geometry_weight": 0.3,
+                "area_weight": 0.15
+              },
+              "segment_count": 28,
+              "orientation_families_degrees": [
+                90.0,
+                178.00000000000003
+              ],
+              "evidence": "long_segment_gradient_votes_with_projective_line_intersections",
+              "area_fraction": 0.8018821336372359,
+              "side_support": [
+                1.0,
+                0.9903110861778259,
+                0.9389243721961975,
+                0.8973025679588318
+              ],
+              "projective_geometry_score": 0.9090909090909101
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 7.255774797999948,
+        "search_fraction": 0.7
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "928d5fcecfd4",
+      "parameter_identity_sha256": "54b7beb5e4fa1703a974bd1cd97a17e937c4dfb672e0f5ff3e36d16962acac16",
+      "parameter_set_equivalence_family_id": "928d5fcecfd4",
+      "parameter_set_equivalence_family_sha256": "928d5fcecfd42e22e456243ed9e89d061b30cdbbc913a7af0fd38cfc7ffee3aa",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "4af0d7b29b360e5cc1db2842d6c10c4e41494d99496461a32334ccc3d6d77b3a",
+      "profile": null,
+      "run_id": "run-20260830-133941",
+      "rank": 6,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 2,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 0
+    },
+    "pages": [
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.90694689,
+        "winner_iou": 0.96984436,
+        "delta_iou": 0.06289747,
+        "status": "Improved",
+        "parameter_set": "e536a07cca54",
+        "parameter_set_id": "e536a07cca54",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.4910235,
+        "winner_iou": 0.95704278,
+        "delta_iou": 0.46601928,
+        "status": "Improved",
+        "parameter_set": "e536a07cca54",
+        "parameter_set_id": "e536a07cca54",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.83925051,
+        "winner_iou": 0.84370805,
+        "delta_iou": 0.00445754,
+        "status": "Improved",
+        "parameter_set": "e536a07cca54",
+        "parameter_set_id": "e536a07cca54",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "e536a07cca54",
+        "parameter_set_id": "e536a07cca54",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.0,
+        "winner_iou": 0.0,
+        "delta_iou": 0.0,
+        "status": "No polygon found",
+        "parameter_set": "e536a07cca54",
+        "parameter_set_id": "e536a07cca54",
+        "problem": true,
+        "problem_reasons": [
+          "No polygon found"
+        ],
+        "detector_status": "no_candidate"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000001463",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmgx7h7",
+    "cpu_model": "AMD EPYC 7763 64-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "594f73c5d7e9e1f2b39299c67255ab28ac8e0ee1",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "33313773180",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "d689cc18029a8a5f72e31a4fc2e15ff91a30f175",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 280588288,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": false,
+    "evidence_source": null,
+    "evidence_precompute_seconds": null
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 0.995683776940377,
+    "failures": 20,
+    "best_mean_iou": 0.55411904,
+    "best_worst_page_iou": 0.0,
+    "best_stddev_iou": 0.39165461,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 1,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 2.6881429949999074,
+    "winner_last_changed_elapsed_seconds": 2.6881429949999074,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "e536a07cca54",
+        "parameter_short_name": "historic-best",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 2.6881429949999074,
+        "search_fraction": 0.2,
+        "parameter_set_equivalence_family_id": "e536a07cca54"
+      }
+    ],
+    "last_improvement_elapsed_seconds": 2.6881429949999074,
+    "time_since_last_improvement_seconds": 7.355206340999985
+  }
+}
