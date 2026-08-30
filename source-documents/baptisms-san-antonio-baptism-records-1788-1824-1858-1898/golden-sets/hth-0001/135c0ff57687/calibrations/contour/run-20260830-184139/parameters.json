@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.4",
+  "detector": "contour",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/contour.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 76,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "4.312",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126+scheduler-slot",
+    "queue_position": "41",
+    "ranked_quality": "0.84980856",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "contour",
+    "description": "Black-box calibration space for the HTH external-contour geometry detector.",
+    "profiles": {
+      "baseline": {
+        "minimum_contour_area_fraction": 0.12,
+        "polygon_epsilon_fraction": 0.018,
+        "close_kernel_fraction": 0.0,
+        "close_iterations": 0,
+        "rectangularity_weight": 0.25,
+        "bbox_padding_fraction": 0.0,
+        "merge_fragmented_contours": false
+      }
+    },
+    "parameters": {
+      "minimum_contour_area_fraction": {
+        "type": "float",
+        "values": [
+          0.06,
+          0.12,
+          0.2
+        ]
+      },
+      "polygon_epsilon_fraction": {
+        "type": "float",
+        "values": [
+          0.008,
+          0.018,
+          0.035
+        ]
+      },
+      "close_kernel_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.008,
+          0.018
+        ]
+      },
+      "close_iterations": {
+        "type": "integer",
+        "values": [
+          0,
+          1,
+          2
+        ]
+      },
+      "rectangularity_weight": {
+        "type": "float",
+        "values": [
+          0.1,
+          0.25,
+          0.4
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.005,
+          0.015
+        ]
+      },
+      "merge_fragmented_contours": {
+        "type": "boolean",
+        "values": [
+          false,
+          true
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
