@@ -1,0 +1,6419 @@
+{
+  "schema_version": "0.8",
+  "run_id": "run-20260830-003630",
+  "detector": "docextractor_page_mask",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "threads": 2,
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved",
+    "full_candidate_count": 8
+  },
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 4,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "49.368",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108+scheduler-slot",
+    "queue_position": "14",
+    "ranked_quality": "0.93444463",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "parameter_space": {
+    "possible_parameter_sets": 100,
+    "live_possible_parameter_sets": 99,
+    "zombie_possible_parameter_sets": 99,
+    "canonical_search_space": {
+      "schema_version": "1",
+      "strategy": "exhaustive",
+      "live_exhaustive_parameter_sets": 99,
+      "exhaustive_with_zombies_parameter_sets": 99,
+      "effective_parameter_sets": 100,
+      "configured_zombie_parameters": [],
+      "denominator": "exhaustive-with-zombies"
+    },
+    "planned_parameter_sets": 10,
+    "actual_parameter_sets": 10,
+    "locally_evaluated_parameter_sets": 10,
+    "locally_evaluated_page_evaluations": 50,
+    "baseline_execution": "evaluated",
+    "shard_index": 0,
+    "shard_count": 1,
+    "full_exhaustive_candidate_count": 8,
+    "golden_set_pages": 5,
+    "planned_page_evaluations": 50,
+    "actual_page_evaluations": 50
+  },
+  "page_ordinals": [
+    1,
+    5,
+    6,
+    9,
+    10
+  ],
+  "parameter_set_count": 10,
+  "page_evaluation_count": 50,
+  "successful_page_evaluation_count": 50,
+  "fully_successful_parameter_set_count": 10,
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "detector_config_sha256": "dfdb912ddf5bde43d8fb6397f1f4775724009314e85b9041359ce13c7d3f0483",
+  "model_selection": null,
+  "max_dimension": 1800,
+  "winner": {
+    "parameter_set_id": "e114f8dccca4",
+    "parameters": {
+      "close_kernel_fraction": 0.028,
+      "minimum_page_area_fraction": 0.02,
+      "page_padding_fraction": 0.0,
+      "probability_threshold": 0.225
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.93444463,
+      "mean_iou_success": 0.93444463,
+      "minimum_iou": 0.80984403,
+      "stddev_iou": 0.06421953,
+      "mean_edge_error_px": 17.3,
+      "elapsed_ms_total": 362.511,
+      "wall_ms": 366.227
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          59,
+          57,
+          1286,
+          967
+        ],
+        "iou": 0.94292186,
+        "edge_errors": {
+          "left": 66,
+          "top": 1,
+          "right": 3,
+          "bottom": 0,
+          "mean": 17.5,
+          "maximum": 66
+        },
+        "edge_error_mean_px": 17.5,
+        "edge_error_maximum_px": 66,
+        "elapsed_ms": 66.134,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            59,
+            57,
+            1286,
+            967
+          ],
+          "corners": [
+            [
+              1284.593994140625,
+              966.5792236328125
+            ],
+            [
+              59.24860382080078,
+              965.397216796875
+            ],
+            [
+              60.124210357666016,
+              57.181156158447266
+            ],
+            [
+              1285.4697265625,
+              58.36308288574219
+            ]
+          ],
+          "confidence": 0.6580448150634766,
+          "score": 0.6580448150634766,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 0.9999945759773254,
+            "probability_mean": 0.4880910813808441,
+            "mask_area_fraction": 0.7431664156626506
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          67,
+          11,
+          1239,
+          977
+        ],
+        "iou": 0.99181614,
+        "edge_errors": {
+          "left": 0,
+          "top": 3,
+          "right": 6,
+          "bottom": 0,
+          "mean": 2.25,
+          "maximum": 6
+        },
+        "edge_error_mean_px": 2.25,
+        "edge_error_maximum_px": 6,
+        "elapsed_ms": 71.21,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            67,
+            11,
+            1239,
+            977
+          ],
+          "corners": [
+            [
+              1231.7918701171875,
+              976.5381469726562
+            ],
+            [
+              67.74763488769531,
+              968.7125854492188
+            ],
+            [
+              74.17967987060547,
+              11.951451301574707
+            ],
+            [
+              1238.223876953125,
+              19.776973724365234
+            ]
+          ],
+          "confidence": 0.7069242596626282,
+          "score": 0.7069242596626282,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 0.9999997019767761,
+            "probability_mean": 0.53371661901474,
+            "mask_area_fraction": 0.7550651041666666
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          0,
+          0,
+          1088,
+          832
+        ],
+        "iou": 0.80984403,
+        "edge_errors": {
+          "left": 15,
+          "top": 28,
+          "right": 14,
+          "bottom": 138,
+          "mean": 48.75,
+          "maximum": 138
+        },
+        "edge_error_mean_px": 48.75,
+        "edge_error_maximum_px": 138,
+        "elapsed_ms": 89.55,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            -1,
+            0,
+            1088,
+            832
+          ],
+          "corners": [
+            [
+              1087.1500244140625,
+              831.638427734375
+            ],
+            [
+              -2.545122248262359e-14,
+              831.638427734375
+            ],
+            [
+              2.545122248262359e-14,
+              0.0
+            ],
+            [
+              1087.1500244140625,
+              0.0
+            ]
+          ],
+          "confidence": 0.9379878044128418,
+          "score": 0.9379878044128418,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.560051679611206,
+            "mask_area_fraction": 0.5908436283520762
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          80,
+          65,
+          1117,
+          941
+        ],
+        "iou": 0.96557958,
+        "edge_errors": {
+          "left": 4,
+          "top": 14,
+          "right": 16,
+          "bottom": 0,
+          "mean": 8.5,
+          "maximum": 16
+        },
+        "edge_error_mean_px": 8.5,
+        "edge_error_maximum_px": 16,
+        "elapsed_ms": 73.226,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "corners": [
+            [
+              89.7530288696289,
+              940.1702880859375
+            ],
+            [
+              80.9710693359375,
+              76.1337661743164
+            ],
+            [
+              1107.2484130859375,
+              65.70537567138672
+            ],
+            [
+              1116.0303955078125,
+              929.741943359375
+            ]
+          ],
+          "confidence": 0.5914978981018066,
+          "score": 0.5914978981018066,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.30938848853111267,
+            "mask_area_fraction": 0.5741130139172625
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          87,
+          54,
+          1167,
+          971
+        ],
+        "iou": 0.96206156,
+        "edge_errors": {
+          "left": 1,
+          "top": 21,
+          "right": 13,
+          "bottom": 3,
+          "mean": 9.5,
+          "maximum": 21
+        },
+        "edge_error_mean_px": 9.5,
+        "edge_error_maximum_px": 21,
+        "elapsed_ms": 62.391,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            87,
+            54,
+            1167,
+            971
+          ],
+          "corners": [
+            [
+              91.43244171142578,
+              970.2317504882812
+            ],
+            [
+              87.38384246826172,
+              58.974056243896484
+            ],
+            [
+              1162.6400146484375,
+              54.19337463378906
+            ],
+            [
+              1166.688720703125,
+              965.451171875
+            ]
+          ],
+          "confidence": 0.6203853487968445,
+          "score": 0.6203853487968445,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.36876657605171204,
+            "mask_area_fraction": 0.6611232326076076
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "docextractor_page_mask",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "703",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/32512973199",
+      "historic_calibration_id": "run-20260821-182325",
+      "historic_created_at_utc": "2026-08-21T18:23:24.221898+00:00",
+      "model_variant": null,
+      "parameter_identity_sha256": "30ed5011695e4818ef3e54e6a42cc57e544a7e3ef304e1f86c92eb158acdd74b",
+      "parameter_set_id": "e114f8dccca4",
+      "parameters": {
+        "close_kernel_fraction": 0.028,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0,
+        "probability_threshold": 0.225
+      },
+      "provenance_source": "parameter-provenance"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.624893990000146,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "e114f8dccca4",
+    "parameter_identity_sha256": "30ed5011695e4818ef3e54e6a42cc57e544a7e3ef304e1f86c92eb158acdd74b",
+    "parameter_set_equivalence_family_id": "e114f8dccca4",
+    "parameter_set_equivalence_family_sha256": "e114f8dccca414238dfce4ae92f264628ae392f4cbbcf570f4ec05d0a5c0eb89",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 49,
+    "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+    "profile": null,
+    "run_id": "run-20260830-003630",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "baseline": {
+    "parameter_set_id": "095940b014f5",
+    "parameters": {
+      "probability_threshold": 0.2,
+      "minimum_page_area_fraction": 0.02,
+      "close_kernel_fraction": 0.02,
+      "page_padding_fraction": 0.0
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.92814485,
+      "mean_iou_success": 0.92814485,
+      "minimum_iou": 0.81082893,
+      "stddev_iou": 0.06161639,
+      "mean_edge_error_px": 18.9,
+      "elapsed_ms_total": 250.242,
+      "wall_ms": 254.012
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          57,
+          54,
+          1286,
+          969
+        ],
+        "iou": 0.93826047,
+        "edge_errors": {
+          "left": 68,
+          "top": 2,
+          "right": 3,
+          "bottom": 2,
+          "mean": 18.75,
+          "maximum": 68
+        },
+        "edge_error_mean_px": 18.75,
+        "edge_error_maximum_px": 68,
+        "elapsed_ms": 34.188,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            57,
+            54,
+            1286,
+            969
+          ],
+          "corners": [
+            [
+              59.63032913208008,
+              968.8941650390625
+            ],
+            [
+              57.99814224243164,
+              56.25486373901367
+            ],
+            [
+              1283.6383056640625,
+              54.061763763427734
+            ],
+            [
+              1285.2705078125,
+              966.7010498046875
+            ]
+          ],
+          "confidence": 0.6655519008636475,
+          "score": 0.6655519008636475,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.02,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 0.9999945759773254,
+            "probability_mean": 0.4880910813808441,
+            "mask_area_fraction": 0.7430513246166484
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          67,
+          11,
+          1239,
+          981
+        ],
+        "iou": 0.98773872,
+        "edge_errors": {
+          "left": 0,
+          "top": 3,
+          "right": 6,
+          "bottom": 4,
+          "mean": 3.25,
+          "maximum": 6
+        },
+        "edge_error_mean_px": 3.25,
+        "edge_error_maximum_px": 6,
+        "elapsed_ms": 32.717,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            67,
+            11,
+            1239,
+            981
+          ],
+          "corners": [
+            [
+              1231.8248291015625,
+              980.6258544921875
+            ],
+            [
+              67.74172973632812,
+              972.9039916992188
+            ],
+            [
+              74.11618041992188,
+              11.956189155578613
+            ],
+            [
+              1238.19921875,
+              19.67810821533203
+            ]
+          ],
+          "confidence": 0.7143003940582275,
+          "score": 0.7143003940582275,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.02,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 0.9999997019767761,
+            "probability_mean": 0.53371661901474,
+            "mask_area_fraction": 0.75240478515625
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          0,
+          0,
+          1088,
+          833
+        ],
+        "iou": 0.81082893,
+        "edge_errors": {
+          "left": 15,
+          "top": 28,
+          "right": 14,
+          "bottom": 137,
+          "mean": 48.5,
+          "maximum": 137
+        },
+        "edge_error_mean_px": 48.5,
+        "edge_error_maximum_px": 137,
+        "elapsed_ms": 51.207,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            -1,
+            0,
+            1088,
+            833
+          ],
+          "corners": [
+            [
+              1087.1500244140625,
+              832.48876953125
+            ],
+            [
+              -2.5477248416960925e-14,
+              832.48876953125
+            ],
+            [
+              2.5477248416960925e-14,
+              0.0
+            ],
+            [
+              1087.1500244140625,
+              0.0
+            ]
+          ],
+          "confidence": 0.9366953372955322,
+          "score": 0.9366953372955322,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.02,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.560051679611206,
+            "mask_area_fraction": 0.5919651546280277
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          80,
+          64,
+          1117,
+          941
+        ],
+        "iou": 0.96666089,
+        "edge_errors": {
+          "left": 4,
+          "top": 13,
+          "right": 16,
+          "bottom": 0,
+          "mean": 8.25,
+          "maximum": 16
+        },
+        "edge_error_mean_px": 8.25,
+        "edge_error_maximum_px": 16,
+        "elapsed_ms": 67.147,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            80,
+            64,
+            1117,
+            941
+          ],
+          "corners": [
+            [
+              89.74295806884766,
+              940.1805419921875
+            ],
+            [
+              80.95079803466797,
+              75.13810729980469
+            ],
+            [
+              1107.2384033203125,
+              64.70960235595703
+            ],
+            [
+              1116.030517578125,
+              929.7520751953125
+            ]
+          ],
+          "confidence": 0.6269435286521912,
+          "score": 0.6269435286521912,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.02,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.30938848853111267,
+            "mask_area_fraction": 0.5434415698416751
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          84,
+          69,
+          1170,
+          961
+        ],
+        "iou": 0.93723523,
+        "edge_errors": {
+          "left": 4,
+          "top": 36,
+          "right": 16,
+          "bottom": 7,
+          "mean": 15.75,
+          "maximum": 36
+        },
+        "edge_error_mean_px": 15.75,
+        "edge_error_maximum_px": 36,
+        "elapsed_ms": 64.983,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            84,
+            69,
+            1170,
+            961
+          ],
+          "corners": [
+            [
+              91.43425750732422,
+              960.7198486328125
+            ],
+            [
+              84.37218475341797,
+              77.6368179321289
+            ],
+            [
+              1162.62646484375,
+              69.0075912475586
+            ],
+            [
+              1169.6884765625,
+              952.0906982421875
+            ]
+          ],
+          "confidence": 0.6445517539978027,
+          "score": 0.6445517539978027,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.2,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.02,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.36876657605171204,
+            "mask_area_fraction": 0.6491984171671672
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "legacy_parameter_set_id": "095940b014f5",
+    "parameter_identity_sha256": "1607dc6baa59bccdbab331127a65540e71874d912a1da424ce9b863b08279487",
+    "parameter_set_equivalence_family_id": "095940b014f5",
+    "parameter_set_equivalence_family_sha256": "095940b014f540166053528398b745ab2751d3af6c968571ed931c5bc0bdc595",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": null,
+    "parameter_grid_sha256": null,
+    "reference_roles": [
+      "baseline"
+    ],
+    "requested_search_member": false,
+    "search_space_member": true,
+    "profile": "baseline",
+    "run_id": "run-20260830-003630",
+    "rank": 10,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "historic_best": {
+    "parameter_set_id": "e114f8dccca4",
+    "parameters": {
+      "close_kernel_fraction": 0.028,
+      "minimum_page_area_fraction": 0.02,
+      "page_padding_fraction": 0.0,
+      "probability_threshold": 0.225
+    },
+    "summary": {
+      "page_count": 5,
+      "success_count": 5,
+      "failure_count": 0,
+      "mean_iou": 0.93444463,
+      "mean_iou_success": 0.93444463,
+      "minimum_iou": 0.80984403,
+      "stddev_iou": 0.06421953,
+      "mean_edge_error_px": 17.3,
+      "elapsed_ms_total": 362.511,
+      "wall_ms": 366.227
+    },
+    "pages": [
+      {
+        "global_ordinal": 1,
+        "label": "ordinary_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          125,
+          56,
+          1289,
+          967
+        ],
+        "predicted_bbox": [
+          59,
+          57,
+          1286,
+          967
+        ],
+        "iou": 0.94292186,
+        "edge_errors": {
+          "left": 66,
+          "top": 1,
+          "right": 3,
+          "bottom": 0,
+          "mean": 17.5,
+          "maximum": 66
+        },
+        "edge_error_mean_px": 17.5,
+        "edge_error_maximum_px": 66,
+        "elapsed_ms": 66.134,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            59,
+            57,
+            1286,
+            967
+          ],
+          "corners": [
+            [
+              1284.593994140625,
+              966.5792236328125
+            ],
+            [
+              59.24860382080078,
+              965.397216796875
+            ],
+            [
+              60.124210357666016,
+              57.181156158447266
+            ],
+            [
+              1285.4697265625,
+              58.36308288574219
+            ]
+          ],
+          "confidence": 0.6580448150634766,
+          "score": 0.6580448150634766,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 0.9999945759773254,
+            "probability_mean": 0.4880910813808441,
+            "mask_area_fraction": 0.7431664156626506
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 5,
+        "label": "damaged_partial_register_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          67,
+          8,
+          1233,
+          977
+        ],
+        "predicted_bbox": [
+          67,
+          11,
+          1239,
+          977
+        ],
+        "iou": 0.99181614,
+        "edge_errors": {
+          "left": 0,
+          "top": 3,
+          "right": 6,
+          "bottom": 0,
+          "mean": 2.25,
+          "maximum": 6
+        },
+        "edge_error_mean_px": 2.25,
+        "edge_error_maximum_px": 6,
+        "elapsed_ms": 71.21,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            67,
+            11,
+            1239,
+            977
+          ],
+          "corners": [
+            [
+              1231.7918701171875,
+              976.5381469726562
+            ],
+            [
+              67.74763488769531,
+              968.7125854492188
+            ],
+            [
+              74.17967987060547,
+              11.951451301574707
+            ],
+            [
+              1238.223876953125,
+              19.776973724365234
+            ]
+          ],
+          "confidence": 0.7069242596626282,
+          "score": 0.7069242596626282,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 0.9999997019767761,
+            "probability_mean": 0.53371661901474,
+            "mask_area_fraction": 0.7550651041666666
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 6,
+        "label": "title_or_index_sheet",
+        "layout_type": "single_page",
+        "status": "ok",
+        "approved_bbox": [
+          15,
+          28,
+          1074,
+          970
+        ],
+        "predicted_bbox": [
+          0,
+          0,
+          1088,
+          832
+        ],
+        "iou": 0.80984403,
+        "edge_errors": {
+          "left": 15,
+          "top": 28,
+          "right": 14,
+          "bottom": 138,
+          "mean": 48.75,
+          "maximum": 138
+        },
+        "edge_error_mean_px": 48.75,
+        "edge_error_maximum_px": 138,
+        "elapsed_ms": 89.55,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            -1,
+            0,
+            1088,
+            832
+          ],
+          "corners": [
+            [
+              1087.1500244140625,
+              831.638427734375
+            ],
+            [
+              -2.545122248262359e-14,
+              831.638427734375
+            ],
+            [
+              2.545122248262359e-14,
+              0.0
+            ],
+            [
+              1087.1500244140625,
+              0.0
+            ]
+          ],
+          "confidence": 0.9379878044128418,
+          "score": 0.9379878044128418,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.560051679611206,
+            "mask_area_fraction": 0.5908436283520762
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 9,
+        "label": "clean_two_page_spread",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          84,
+          51,
+          1101,
+          941
+        ],
+        "predicted_bbox": [
+          80,
+          65,
+          1117,
+          941
+        ],
+        "iou": 0.96557958,
+        "edge_errors": {
+          "left": 4,
+          "top": 14,
+          "right": 16,
+          "bottom": 0,
+          "mean": 8.5,
+          "maximum": 16
+        },
+        "edge_error_mean_px": 8.5,
+        "edge_error_maximum_px": 16,
+        "elapsed_ms": 73.226,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "corners": [
+            [
+              89.7530288696289,
+              940.1702880859375
+            ],
+            [
+              80.9710693359375,
+              76.1337661743164
+            ],
+            [
+              1107.2484130859375,
+              65.70537567138672
+            ],
+            [
+              1116.0303955078125,
+              929.741943359375
+            ]
+          ],
+          "confidence": 0.5914978981018066,
+          "score": 0.5914978981018066,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.30938848853111267,
+            "mask_area_fraction": 0.5741130139172625
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      },
+      {
+        "global_ordinal": 10,
+        "label": "clean_two_page_spread_2",
+        "layout_type": "two_page_spread",
+        "status": "ok",
+        "approved_bbox": [
+          88,
+          33,
+          1154,
+          968
+        ],
+        "predicted_bbox": [
+          87,
+          54,
+          1167,
+          971
+        ],
+        "iou": 0.96206156,
+        "edge_errors": {
+          "left": 1,
+          "top": 21,
+          "right": 13,
+          "bottom": 3,
+          "mean": 9.5,
+          "maximum": 21
+        },
+        "edge_error_mean_px": 9.5,
+        "edge_error_maximum_px": 21,
+        "elapsed_ms": 62.391,
+        "candidate": {
+          "method": "docextractor_page_mask",
+          "bbox": [
+            87,
+            54,
+            1167,
+            971
+          ],
+          "corners": [
+            [
+              91.43244171142578,
+              970.2317504882812
+            ],
+            [
+              87.38384246826172,
+              58.974056243896484
+            ],
+            [
+              1162.6400146484375,
+              54.19337463378906
+            ],
+            [
+              1166.688720703125,
+              965.451171875
+            ]
+          ],
+          "confidence": 0.6203853487968445,
+          "score": 0.6203853487968445,
+          "diagnostics": {
+            "model_id": "docextractor-default-icfhr2020",
+            "model_family": "docExtractor ResUNet",
+            "model_source": "https://github.com/monniert/docExtractor",
+            "evidence": "docextractor_nonbackground_probability_envelope",
+            "parameters": {
+              "probability_threshold": 0.225,
+              "minimum_page_area_fraction": 0.02,
+              "close_kernel_fraction": 0.028,
+              "page_padding_fraction": 0.0
+            },
+            "probability_min": 0.0,
+            "probability_max": 1.0,
+            "probability_mean": 0.36876657605171204,
+            "mask_area_fraction": 0.6611232326076076
+          },
+          "status": "ok",
+          "detector_name": "",
+          "origin": "",
+          "foundation": null,
+          "authors": null,
+          "version": "",
+          "repository": ""
+        },
+        "error": {},
+        "warnings": [],
+        "metadata": {}
+      }
+    ],
+    "reference_roles": [
+      "historic_best"
+    ],
+    "requested_search_member": true,
+    "search_space_member": true,
+    "historic_reference": {
+      "detector": "docextractor_page_mask",
+      "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+      "historic_build_number": "703",
+      "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/32512973199",
+      "historic_calibration_id": "run-20260821-182325",
+      "historic_created_at_utc": "2026-08-21T18:23:24.221898+00:00",
+      "model_variant": null,
+      "parameter_identity_sha256": "30ed5011695e4818ef3e54e6a42cc57e544a7e3ef304e1f86c92eb158acdd74b",
+      "parameter_set_id": "e114f8dccca4",
+      "parameters": {
+        "close_kernel_fraction": 0.028,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0,
+        "probability_threshold": 0.225
+      },
+      "provenance_source": "parameter-provenance"
+    },
+    "search_observation": {
+      "completion_index": 2,
+      "parameter_set_number": 2,
+      "elapsed_seconds": 0.624893990000146,
+      "search_fraction": 0.2
+    },
+    "legacy_parameter_set_id": "e114f8dccca4",
+    "parameter_identity_sha256": "30ed5011695e4818ef3e54e6a42cc57e544a7e3ef304e1f86c92eb158acdd74b",
+    "parameter_set_equivalence_family_id": "e114f8dccca4",
+    "parameter_set_equivalence_family_sha256": "e114f8dccca414238dfce4ae92f264628ae392f4cbbcf570f4ec05d0a5c0eb89",
+    "parameter_set_equivalence_family_size": 1,
+    "parameter_identity_schema_version": "1",
+    "parameter_schema_version": "1",
+    "parameter_grid_ordinal": 49,
+    "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+    "profile": null,
+    "run_id": "run-20260830-003630",
+    "rank": 1,
+    "error": {},
+    "warnings": [],
+    "metadata": {}
+  },
+  "top_parameter_sets": [
+    {
+      "parameter_set_id": "e114f8dccca4",
+      "parameters": {
+        "close_kernel_fraction": 0.028,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0,
+        "probability_threshold": 0.225
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93444463,
+        "mean_iou_success": 0.93444463,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06421953,
+        "mean_edge_error_px": 17.3,
+        "elapsed_ms_total": 362.511,
+        "wall_ms": 366.227
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            59,
+            57,
+            1286,
+            967
+          ],
+          "iou": 0.94292186,
+          "edge_errors": {
+            "left": 66,
+            "top": 1,
+            "right": 3,
+            "bottom": 0,
+            "mean": 17.5,
+            "maximum": 66
+          },
+          "edge_error_mean_px": 17.5,
+          "edge_error_maximum_px": 66,
+          "elapsed_ms": 66.134,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              59,
+              57,
+              1286,
+              967
+            ],
+            "corners": [
+              [
+                1284.593994140625,
+                966.5792236328125
+              ],
+              [
+                59.24860382080078,
+                965.397216796875
+              ],
+              [
+                60.124210357666016,
+                57.181156158447266
+              ],
+              [
+                1285.4697265625,
+                58.36308288574219
+              ]
+            ],
+            "confidence": 0.6580448150634766,
+            "score": 0.6580448150634766,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.225,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7431664156626506
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            11,
+            1239,
+            977
+          ],
+          "iou": 0.99181614,
+          "edge_errors": {
+            "left": 0,
+            "top": 3,
+            "right": 6,
+            "bottom": 0,
+            "mean": 2.25,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 2.25,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 71.21,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              11,
+              1239,
+              977
+            ],
+            "corners": [
+              [
+                1231.7918701171875,
+                976.5381469726562
+              ],
+              [
+                67.74763488769531,
+                968.7125854492188
+              ],
+              [
+                74.17967987060547,
+                11.951451301574707
+              ],
+              [
+                1238.223876953125,
+                19.776973724365234
+              ]
+            ],
+            "confidence": 0.7069242596626282,
+            "score": 0.7069242596626282,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.225,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7550651041666666
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 89.55,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.9379878044128418,
+            "score": 0.9379878044128418,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.225,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5908436283520762
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 73.226,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.7530288696289,
+                940.1702880859375
+              ],
+              [
+                80.9710693359375,
+                76.1337661743164
+              ],
+              [
+                1107.2484130859375,
+                65.70537567138672
+              ],
+              [
+                1116.0303955078125,
+                929.741943359375
+              ]
+            ],
+            "confidence": 0.5914978981018066,
+            "score": 0.5914978981018066,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.225,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5741130139172625
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            54,
+            1167,
+            971
+          ],
+          "iou": 0.96206156,
+          "edge_errors": {
+            "left": 1,
+            "top": 21,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.5,
+            "maximum": 21
+          },
+          "edge_error_mean_px": 9.5,
+          "edge_error_maximum_px": 21,
+          "elapsed_ms": 62.391,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              54,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43244171142578,
+                970.2317504882812
+              ],
+              [
+                87.38384246826172,
+                58.974056243896484
+              ],
+              [
+                1162.6400146484375,
+                54.19337463378906
+              ],
+              [
+                1166.688720703125,
+                965.451171875
+              ]
+            ],
+            "confidence": 0.6203853487968445,
+            "score": 0.6203853487968445,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.225,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6611232326076076
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "reference_roles": [
+        "historic_best"
+      ],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "historic_reference": {
+        "detector": "docextractor_page_mask",
+        "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+        "historic_build_number": "703",
+        "historic_build_url": "https://github.com/dlstupka/hth/actions/runs/32512973199",
+        "historic_calibration_id": "run-20260821-182325",
+        "historic_created_at_utc": "2026-08-21T18:23:24.221898+00:00",
+        "model_variant": null,
+        "parameter_identity_sha256": "30ed5011695e4818ef3e54e6a42cc57e544a7e3ef304e1f86c92eb158acdd74b",
+        "parameter_set_id": "e114f8dccca4",
+        "parameters": {
+          "close_kernel_fraction": 0.028,
+          "minimum_page_area_fraction": 0.02,
+          "page_padding_fraction": 0.0,
+          "probability_threshold": 0.225
+        },
+        "provenance_source": "parameter-provenance"
+      },
+      "search_observation": {
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.624893990000146,
+        "search_fraction": 0.2
+      },
+      "legacy_parameter_set_id": "e114f8dccca4",
+      "parameter_identity_sha256": "30ed5011695e4818ef3e54e6a42cc57e544a7e3ef304e1f86c92eb158acdd74b",
+      "parameter_set_equivalence_family_id": "e114f8dccca4",
+      "parameter_set_equivalence_family_sha256": "e114f8dccca414238dfce4ae92f264628ae392f4cbbcf570f4ec05d0a5c0eb89",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 49,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "a7f45316a1bf",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.028,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93209058,
+        "mean_iou_success": 0.93209058,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06362293,
+        "mean_edge_error_px": 17.9,
+        "elapsed_ms_total": 563.076,
+        "wall_ms": 563.677
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            975
+          ],
+          "iou": 0.93317352,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 8,
+            "mean": 20.0,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 115.387,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              975
+            ],
+            "corners": [
+              [
+                59.639949798583984,
+                974.2901611328125
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2801513671875,
+                972.0969848632812
+              ]
+            ],
+            "confidence": 0.6561522483825684,
+            "score": 0.6561522483825684,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7445496474534502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            11,
+            1239,
+            980
+          ],
+          "iou": 0.98875493,
+          "edge_errors": {
+            "left": 0,
+            "top": 3,
+            "right": 6,
+            "bottom": 3,
+            "mean": 3.0,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 77.561,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              11,
+              1239,
+              980
+            ],
+            "corners": [
+              [
+                1231.770751953125,
+                979.6844482421875
+              ],
+              [
+                67.72652435302734,
+                971.8589477539062
+              ],
+              [
+                74.1797103881836,
+                11.951482772827148
+              ],
+              [
+                1238.223876953125,
+                19.777006149291992
+              ]
+            ],
+            "confidence": 0.7042251229286194,
+            "score": 0.7042251229286194,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7656075032552083
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 107.955,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.9367172718048096,
+            "score": 0.9367172718048096,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5918455341695502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 163.386,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5885807871818542,
+            "score": 0.5885807871818542,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5774949725485189
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 98.787,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6181373000144958,
+            "score": 0.6181373000144958,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6622665634384385
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 2.139251976999958,
+        "search_fraction": 0.8
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "a7f45316a1bf",
+      "parameter_identity_sha256": "ca8381aa456330d57ad0e3fe7e12db32589d90846dbef24aca980172c8f4af7e",
+      "parameter_set_equivalence_family_id": "a7f45316a1bf",
+      "parameter_set_equivalence_family_sha256": "a7f45316a1bf480268ba5edf82b07e4b6ab7d8b0ac6b6d30406b8c49e79d66a3",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "f1ff41ac4ba0",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.029,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93088174,
+        "mean_iou_success": 0.93088174,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06258376,
+        "mean_edge_error_px": 18.2,
+        "elapsed_ms_total": 369.025,
+        "wall_ms": 369.648
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            975
+          ],
+          "iou": 0.93317352,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 8,
+            "mean": 20.0,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 82.266,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              975
+            ],
+            "corners": [
+              [
+                59.639949798583984,
+                974.2901611328125
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2801513671875,
+                972.0969848632812
+              ]
+            ],
+            "confidence": 0.6561522483825684,
+            "score": 0.6561522483825684,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7445496474534502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            0,
+            1239,
+            981
+          ],
+          "iou": 0.98271075,
+          "edge_errors": {
+            "left": 0,
+            "top": 8,
+            "right": 6,
+            "bottom": 4,
+            "mean": 4.5,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 4.5,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 90.468,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              -1,
+              1239,
+              981
+            ],
+            "corners": [
+              [
+                1231.3765869140625,
+                980.3642578125
+              ],
+              [
+                67.5162353515625,
+                971.7854614257812
+              ],
+              [
+                74.68204498291016,
+                -0.381656289100647
+              ],
+              [
+                1238.542236328125,
+                8.197138786315918
+              ]
+            ],
+            "confidence": 0.7008353471755981,
+            "score": 0.7008353471755981,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7677225748697917
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 69.04,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.9360594153404236,
+            "score": 0.9360594153404236,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5922936040224913
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 63.398,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5756114721298218,
+            "score": 0.5756114721298218,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5808362327630235
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 63.853,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6181373000144958,
+            "score": 0.6181373000144958,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6622665634384385
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 2.0751901870000893,
+        "search_fraction": 0.7
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "f1ff41ac4ba0",
+      "parameter_identity_sha256": "e0c71a8180ec50cf17b55db18aa46ecd53c2fda9b0541786c66333cb15806c7c",
+      "parameter_set_equivalence_family_id": "f1ff41ac4ba0",
+      "parameter_set_equivalence_family_sha256": "f1ff41ac4ba05ba1bc504c198ee87a60fb5d1360b0ab1e53f12fecc7991b534e",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "fa9887c1cd10",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.03,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93088174,
+        "mean_iou_success": 0.93088174,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06258376,
+        "mean_edge_error_px": 18.2,
+        "elapsed_ms_total": 641.088,
+        "wall_ms": 641.733
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            975
+          ],
+          "iou": 0.93317352,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 8,
+            "mean": 20.0,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 123.694,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              975
+            ],
+            "corners": [
+              [
+                59.639949798583984,
+                974.2901611328125
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2801513671875,
+                972.0969848632812
+              ]
+            ],
+            "confidence": 0.6561522483825684,
+            "score": 0.6561522483825684,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7445496474534502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            0,
+            1239,
+            981
+          ],
+          "iou": 0.98271075,
+          "edge_errors": {
+            "left": 0,
+            "top": 8,
+            "right": 6,
+            "bottom": 4,
+            "mean": 4.5,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 4.5,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 95.929,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              -1,
+              1239,
+              981
+            ],
+            "corners": [
+              [
+                1231.3765869140625,
+                980.3642578125
+              ],
+              [
+                67.5162353515625,
+                971.7854614257812
+              ],
+              [
+                74.68204498291016,
+                -0.381656289100647
+              ],
+              [
+                1238.542236328125,
+                8.197138786315918
+              ]
+            ],
+            "confidence": 0.7008353471755981,
+            "score": 0.7008353471755981,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7677225748697917
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 258.356,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.9360594153404236,
+            "score": 0.9360594153404236,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5922936040224913
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 101.408,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5756114721298218,
+            "score": 0.5756114721298218,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5808362327630235
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 61.701,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6070036292076111,
+            "score": 0.6070036292076111,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6637715840840841
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 10,
+        "parameter_set_number": 10,
+        "elapsed_seconds": 2.715066547000106,
+        "search_fraction": 1.0
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "fa9887c1cd10",
+      "parameter_identity_sha256": "bf761151c78a78c7cc4a507732a70276d83901a9996cf1981e8d202bf15a0272",
+      "parameter_set_equivalence_family_id": "fa9887c1cd10",
+      "parameter_set_equivalence_family_sha256": "fa9887c1cd101a1fc7e2f6e7c0238b8aa06630bab11b1325f2ca37419bdef457",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "26c6a01f7db5",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.031,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93067959,
+        "mean_iou_success": 0.93067959,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06257766,
+        "mean_edge_error_px": 18.25,
+        "elapsed_ms_total": 465.382,
+        "wall_ms": 469.598
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            976
+          ],
+          "iou": 0.93216274,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 9,
+            "mean": 20.25,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.25,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 66.314,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              976
+            ],
+            "corners": [
+              [
+                59.64192581176758,
+                975.3701171875
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2821044921875,
+                973.1769409179688
+              ]
+            ],
+            "confidence": 0.6535080075263977,
+            "score": 0.6535080075263977,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7456269680996714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            0,
+            1239,
+            981
+          ],
+          "iou": 0.98271075,
+          "edge_errors": {
+            "left": 0,
+            "top": 8,
+            "right": 6,
+            "bottom": 4,
+            "mean": 4.5,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 4.5,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 148.99,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              -1,
+              1239,
+              981
+            ],
+            "corners": [
+              [
+                1231.37646484375,
+                980.3642578125
+              ],
+              [
+                67.51624298095703,
+                971.7854614257812
+              ],
+              [
+                74.68367004394531,
+                -0.6014130115509033
+              ],
+              [
+                1238.5439453125,
+                7.977381706237793
+              ]
+            ],
+            "confidence": 0.6977448463439941,
+            "score": 0.6977448463439941,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7692793782552083
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 99.238,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              0,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.14990234375,
+                831.6383056640625
+              ],
+              [
+                0.00010375976853538305,
+                831.6383056640625
+              ],
+              [
+                0.00010375976853538305,
+                0.0
+              ],
+              [
+                1087.14990234375,
+                0.0
+              ]
+            ],
+            "confidence": 0.9354723691940308,
+            "score": 0.9354723691940308,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5927075448745674
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 69.046,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5700724720954895,
+            "score": 0.5700724720954895,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5870822427221655
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 81.794,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6070036292076111,
+            "score": 0.6070036292076111,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6637715840840841
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 2.608914883000125,
+        "search_fraction": 0.9
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "26c6a01f7db5",
+      "parameter_identity_sha256": "0f6828ed6e5cbc5fd74d46b1927087532ddcd4f264e18ce3d023b41cca7121e0",
+      "parameter_set_equivalence_family_id": "26c6a01f7db5",
+      "parameter_set_equivalence_family_sha256": "26c6a01f7db556e7738061883a5116556e0062b4f69ad28e7dcea3bd26ec56ac",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 7,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "search_top_parameter_sets": [
+    {
+      "parameter_set_id": "a7f45316a1bf",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.028,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93209058,
+        "mean_iou_success": 0.93209058,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06362293,
+        "mean_edge_error_px": 17.9,
+        "elapsed_ms_total": 563.076,
+        "wall_ms": 563.677
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            975
+          ],
+          "iou": 0.93317352,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 8,
+            "mean": 20.0,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 115.387,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              975
+            ],
+            "corners": [
+              [
+                59.639949798583984,
+                974.2901611328125
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2801513671875,
+                972.0969848632812
+              ]
+            ],
+            "confidence": 0.6561522483825684,
+            "score": 0.6561522483825684,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7445496474534502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            11,
+            1239,
+            980
+          ],
+          "iou": 0.98875493,
+          "edge_errors": {
+            "left": 0,
+            "top": 3,
+            "right": 6,
+            "bottom": 3,
+            "mean": 3.0,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 77.561,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              11,
+              1239,
+              980
+            ],
+            "corners": [
+              [
+                1231.770751953125,
+                979.6844482421875
+              ],
+              [
+                67.72652435302734,
+                971.8589477539062
+              ],
+              [
+                74.1797103881836,
+                11.951482772827148
+              ],
+              [
+                1238.223876953125,
+                19.777006149291992
+              ]
+            ],
+            "confidence": 0.7042251229286194,
+            "score": 0.7042251229286194,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7656075032552083
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 107.955,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.9367172718048096,
+            "score": 0.9367172718048096,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5918455341695502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 163.386,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5885807871818542,
+            "score": 0.5885807871818542,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5774949725485189
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 98.787,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6181373000144958,
+            "score": 0.6181373000144958,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.028,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6622665634384385
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 8,
+        "parameter_set_number": 8,
+        "elapsed_seconds": 2.139251976999958,
+        "search_fraction": 0.8
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "a7f45316a1bf",
+      "parameter_identity_sha256": "ca8381aa456330d57ad0e3fe7e12db32589d90846dbef24aca980172c8f4af7e",
+      "parameter_set_equivalence_family_id": "a7f45316a1bf",
+      "parameter_set_equivalence_family_sha256": "a7f45316a1bf480268ba5edf82b07e4b6ab7d8b0ac6b6d30406b8c49e79d66a3",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 4,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 2,
+      "search_rank": 1,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "f1ff41ac4ba0",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.029,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93088174,
+        "mean_iou_success": 0.93088174,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06258376,
+        "mean_edge_error_px": 18.2,
+        "elapsed_ms_total": 369.025,
+        "wall_ms": 369.648
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            975
+          ],
+          "iou": 0.93317352,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 8,
+            "mean": 20.0,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 82.266,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              975
+            ],
+            "corners": [
+              [
+                59.639949798583984,
+                974.2901611328125
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2801513671875,
+                972.0969848632812
+              ]
+            ],
+            "confidence": 0.6561522483825684,
+            "score": 0.6561522483825684,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7445496474534502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            0,
+            1239,
+            981
+          ],
+          "iou": 0.98271075,
+          "edge_errors": {
+            "left": 0,
+            "top": 8,
+            "right": 6,
+            "bottom": 4,
+            "mean": 4.5,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 4.5,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 90.468,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              -1,
+              1239,
+              981
+            ],
+            "corners": [
+              [
+                1231.3765869140625,
+                980.3642578125
+              ],
+              [
+                67.5162353515625,
+                971.7854614257812
+              ],
+              [
+                74.68204498291016,
+                -0.381656289100647
+              ],
+              [
+                1238.542236328125,
+                8.197138786315918
+              ]
+            ],
+            "confidence": 0.7008353471755981,
+            "score": 0.7008353471755981,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7677225748697917
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 69.04,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.9360594153404236,
+            "score": 0.9360594153404236,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5922936040224913
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 63.398,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5756114721298218,
+            "score": 0.5756114721298218,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5808362327630235
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 63.853,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6181373000144958,
+            "score": 0.6181373000144958,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.029,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6622665634384385
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 7,
+        "parameter_set_number": 7,
+        "elapsed_seconds": 2.0751901870000893,
+        "search_fraction": 0.7
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "f1ff41ac4ba0",
+      "parameter_identity_sha256": "e0c71a8180ec50cf17b55db18aa46ecd53c2fda9b0541786c66333cb15806c7c",
+      "parameter_set_equivalence_family_id": "f1ff41ac4ba0",
+      "parameter_set_equivalence_family_sha256": "f1ff41ac4ba05ba1bc504c198ee87a60fb5d1360b0ab1e53f12fecc7991b534e",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 5,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 3,
+      "search_rank": 2,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "fa9887c1cd10",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.03,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93088174,
+        "mean_iou_success": 0.93088174,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06258376,
+        "mean_edge_error_px": 18.2,
+        "elapsed_ms_total": 641.088,
+        "wall_ms": 641.733
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            975
+          ],
+          "iou": 0.93317352,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 8,
+            "mean": 20.0,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 123.694,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              975
+            ],
+            "corners": [
+              [
+                59.639949798583984,
+                974.2901611328125
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2801513671875,
+                972.0969848632812
+              ]
+            ],
+            "confidence": 0.6561522483825684,
+            "score": 0.6561522483825684,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7445496474534502
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            0,
+            1239,
+            981
+          ],
+          "iou": 0.98271075,
+          "edge_errors": {
+            "left": 0,
+            "top": 8,
+            "right": 6,
+            "bottom": 4,
+            "mean": 4.5,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 4.5,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 95.929,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              -1,
+              1239,
+              981
+            ],
+            "corners": [
+              [
+                1231.3765869140625,
+                980.3642578125
+              ],
+              [
+                67.5162353515625,
+                971.7854614257812
+              ],
+              [
+                74.68204498291016,
+                -0.381656289100647
+              ],
+              [
+                1238.542236328125,
+                8.197138786315918
+              ]
+            ],
+            "confidence": 0.7008353471755981,
+            "score": 0.7008353471755981,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7677225748697917
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 258.356,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.9360594153404236,
+            "score": 0.9360594153404236,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5922936040224913
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 101.408,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5756114721298218,
+            "score": 0.5756114721298218,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5808362327630235
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 61.701,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6070036292076111,
+            "score": 0.6070036292076111,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.03,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6637715840840841
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 10,
+        "parameter_set_number": 10,
+        "elapsed_seconds": 2.715066547000106,
+        "search_fraction": 1.0
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "fa9887c1cd10",
+      "parameter_identity_sha256": "bf761151c78a78c7cc4a507732a70276d83901a9996cf1981e8d202bf15a0272",
+      "parameter_set_equivalence_family_id": "fa9887c1cd10",
+      "parameter_set_equivalence_family_sha256": "fa9887c1cd101a1fc7e2f6e7c0238b8aa06630bab11b1325f2ca37419bdef457",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 6,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 4,
+      "search_rank": 3,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "26c6a01f7db5",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.031,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.93067959,
+        "mean_iou_success": 0.93067959,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06257766,
+        "mean_edge_error_px": 18.25,
+        "elapsed_ms_total": 465.382,
+        "wall_ms": 469.598
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            976
+          ],
+          "iou": 0.93216274,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 9,
+            "mean": 20.25,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.25,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 66.314,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              976
+            ],
+            "corners": [
+              [
+                59.64192581176758,
+                975.3701171875
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2821044921875,
+                973.1769409179688
+              ]
+            ],
+            "confidence": 0.6535080075263977,
+            "score": 0.6535080075263977,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7456269680996714
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            0,
+            1239,
+            981
+          ],
+          "iou": 0.98271075,
+          "edge_errors": {
+            "left": 0,
+            "top": 8,
+            "right": 6,
+            "bottom": 4,
+            "mean": 4.5,
+            "maximum": 8
+          },
+          "edge_error_mean_px": 4.5,
+          "edge_error_maximum_px": 8,
+          "elapsed_ms": 148.99,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              -1,
+              1239,
+              981
+            ],
+            "corners": [
+              [
+                1231.37646484375,
+                980.3642578125
+              ],
+              [
+                67.51624298095703,
+                971.7854614257812
+              ],
+              [
+                74.68367004394531,
+                -0.6014130115509033
+              ],
+              [
+                1238.5439453125,
+                7.977381706237793
+              ]
+            ],
+            "confidence": 0.6977448463439941,
+            "score": 0.6977448463439941,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7692793782552083
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 99.238,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              0,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.14990234375,
+                831.6383056640625
+              ],
+              [
+                0.00010375976853538305,
+                831.6383056640625
+              ],
+              [
+                0.00010375976853538305,
+                0.0
+              ],
+              [
+                1087.14990234375,
+                0.0
+              ]
+            ],
+            "confidence": 0.9354723691940308,
+            "score": 0.9354723691940308,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5927075448745674
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 69.046,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.5700724720954895,
+            "score": 0.5700724720954895,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.5870822427221655
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            53,
+            1167,
+            971
+          ],
+          "iou": 0.96310083,
+          "edge_errors": {
+            "left": 1,
+            "top": 20,
+            "right": 13,
+            "bottom": 3,
+            "mean": 9.25,
+            "maximum": 20
+          },
+          "edge_error_mean_px": 9.25,
+          "edge_error_maximum_px": 20,
+          "elapsed_ms": 81.794,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              53,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.2407836914062
+              ],
+              [
+                87.3736801147461,
+                57.99742126464844
+              ],
+              [
+                1162.6373291015625,
+                53.2060546875
+              ],
+              [
+                1166.69921875,
+                965.4494018554688
+              ]
+            ],
+            "confidence": 0.6070036292076111,
+            "score": 0.6070036292076111,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.031,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6637715840840841
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 9,
+        "parameter_set_number": 9,
+        "elapsed_seconds": 2.608914883000125,
+        "search_fraction": 0.9
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "26c6a01f7db5",
+      "parameter_identity_sha256": "0f6828ed6e5cbc5fd74d46b1927087532ddcd4f264e18ce3d023b41cca7121e0",
+      "parameter_set_equivalence_family_id": "26c6a01f7db5",
+      "parameter_set_equivalence_family_sha256": "26c6a01f7db556e7738061883a5116556e0062b4f69ad28e7dcea3bd26ec56ac",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 7,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 5,
+      "search_rank": 4,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    },
+    {
+      "parameter_set_id": "f446b59b4c9b",
+      "parameters": {
+        "probability_threshold": 0.2125,
+        "close_kernel_fraction": 0.026,
+        "minimum_page_area_fraction": 0.02,
+        "page_padding_fraction": 0.0
+      },
+      "summary": {
+        "page_count": 5,
+        "success_count": 5,
+        "failure_count": 0,
+        "mean_iou": 0.92855628,
+        "mean_iou_success": 0.92855628,
+        "minimum_iou": 0.80984403,
+        "stddev_iou": 0.06227876,
+        "mean_edge_error_px": 18.75,
+        "elapsed_ms_total": 370.271,
+        "wall_ms": 498.265
+      },
+      "pages": [
+        {
+          "global_ordinal": 1,
+          "label": "ordinary_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            125,
+            56,
+            1289,
+            967
+          ],
+          "predicted_bbox": [
+            57,
+            55,
+            1286,
+            975
+          ],
+          "iou": 0.93317352,
+          "edge_errors": {
+            "left": 68,
+            "top": 1,
+            "right": 3,
+            "bottom": 8,
+            "mean": 20.0,
+            "maximum": 68
+          },
+          "edge_error_mean_px": 20.0,
+          "edge_error_maximum_px": 68,
+          "elapsed_ms": 48.325,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              57,
+              55,
+              1286,
+              975
+            ],
+            "corners": [
+              [
+                59.639949798583984,
+                974.2901611328125
+              ],
+              [
+                57.9999885559082,
+                57.3232536315918
+              ],
+              [
+                1283.6402587890625,
+                55.130149841308594
+              ],
+              [
+                1285.2801513671875,
+                972.0969848632812
+              ]
+            ],
+            "confidence": 0.6601410508155823,
+            "score": 0.6601410508155823,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.026,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999945759773254,
+              "probability_mean": 0.4880910813808441,
+              "mask_area_fraction": 0.7427000616100766
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 5,
+          "label": "damaged_partial_register_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            67,
+            8,
+            1233,
+            977
+          ],
+          "predicted_bbox": [
+            67,
+            11,
+            1239,
+            980
+          ],
+          "iou": 0.98875493,
+          "edge_errors": {
+            "left": 0,
+            "top": 3,
+            "right": 6,
+            "bottom": 3,
+            "mean": 3.0,
+            "maximum": 6
+          },
+          "edge_error_mean_px": 3.0,
+          "edge_error_maximum_px": 6,
+          "elapsed_ms": 61.718,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              67,
+              11,
+              1239,
+              980
+            ],
+            "corners": [
+              [
+                1231.770751953125,
+                979.6844482421875
+              ],
+              [
+                67.72652435302734,
+                971.8589477539062
+              ],
+              [
+                74.1797103881836,
+                11.951482772827148
+              ],
+              [
+                1238.223876953125,
+                19.777006149291992
+              ]
+            ],
+            "confidence": 0.7074119448661804,
+            "score": 0.7074119448661804,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.026,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 0.9999997019767761,
+              "probability_mean": 0.53371661901474,
+              "mask_area_fraction": 0.7644482421875
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 6,
+          "label": "title_or_index_sheet",
+          "layout_type": "single_page",
+          "status": "ok",
+          "approved_bbox": [
+            15,
+            28,
+            1074,
+            970
+          ],
+          "predicted_bbox": [
+            0,
+            0,
+            1088,
+            832
+          ],
+          "iou": 0.80984403,
+          "edge_errors": {
+            "left": 15,
+            "top": 28,
+            "right": 14,
+            "bottom": 138,
+            "mean": 48.75,
+            "maximum": 138
+          },
+          "edge_error_mean_px": 48.75,
+          "edge_error_maximum_px": 138,
+          "elapsed_ms": 117.157,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              -1,
+              0,
+              1088,
+              832
+            ],
+            "corners": [
+              [
+                1087.1500244140625,
+                831.638427734375
+              ],
+              [
+                -2.545122248262359e-14,
+                831.638427734375
+              ],
+              [
+                2.545122248262359e-14,
+                0.0
+              ],
+              [
+                1087.1500244140625,
+                0.0
+              ]
+            ],
+            "confidence": 0.93696129322052,
+            "score": 0.93696129322052,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.026,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.560051679611206,
+              "mask_area_fraction": 0.5916782682742214
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 9,
+          "label": "clean_two_page_spread",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            84,
+            51,
+            1101,
+            941
+          ],
+          "predicted_bbox": [
+            80,
+            65,
+            1117,
+            941
+          ],
+          "iou": 0.96557958,
+          "edge_errors": {
+            "left": 4,
+            "top": 14,
+            "right": 16,
+            "bottom": 0,
+            "mean": 8.5,
+            "maximum": 16
+          },
+          "edge_error_mean_px": 8.5,
+          "edge_error_maximum_px": 16,
+          "elapsed_ms": 76.41,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              80,
+              65,
+              1117,
+              941
+            ],
+            "corners": [
+              [
+                89.75981903076172,
+                940.1871337890625
+              ],
+              [
+                80.95992279052734,
+                76.14346313476562
+              ],
+              [
+                1107.2427978515625,
+                65.69377899169922
+              ],
+              [
+                1116.042724609375,
+                929.7374877929688
+              ]
+            ],
+            "confidence": 0.6086357235908508,
+            "score": 0.6086357235908508,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.026,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.30938848853111267,
+              "mask_area_fraction": 0.559604427349336
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        },
+        {
+          "global_ordinal": 10,
+          "label": "clean_two_page_spread_2",
+          "layout_type": "two_page_spread",
+          "status": "ok",
+          "approved_bbox": [
+            88,
+            33,
+            1154,
+            968
+          ],
+          "predicted_bbox": [
+            87,
+            70,
+            1167,
+            971
+          ],
+          "iou": 0.94542933,
+          "edge_errors": {
+            "left": 1,
+            "top": 37,
+            "right": 13,
+            "bottom": 3,
+            "mean": 13.5,
+            "maximum": 37
+          },
+          "edge_error_mean_px": 13.5,
+          "edge_error_maximum_px": 37,
+          "elapsed_ms": 66.661,
+          "candidate": {
+            "method": "docextractor_page_mask",
+            "bbox": [
+              87,
+              70,
+              1167,
+              971
+            ],
+            "corners": [
+              [
+                91.43558502197266,
+                970.24072265625
+              ],
+              [
+                87.44877624511719,
+                74.87042236328125
+              ],
+              [
+                1162.71240234375,
+                70.07906341552734
+              ],
+              [
+                1166.69921875,
+                965.4493408203125
+              ]
+            ],
+            "confidence": 0.6337820887565613,
+            "score": 0.6337820887565613,
+            "diagnostics": {
+              "model_id": "docextractor-default-icfhr2020",
+              "model_family": "docExtractor ResUNet",
+              "model_source": "https://github.com/monniert/docExtractor",
+              "evidence": "docextractor_nonbackground_probability_envelope",
+              "parameters": {
+                "probability_threshold": 0.2125,
+                "minimum_page_area_fraction": 0.02,
+                "close_kernel_fraction": 0.026,
+                "page_padding_fraction": 0.0
+              },
+              "probability_min": 0.0,
+              "probability_max": 1.0,
+              "probability_mean": 0.36876657605171204,
+              "mask_area_fraction": 0.6609351539039039
+            },
+            "status": "ok",
+            "detector_name": "",
+            "origin": "",
+            "foundation": null,
+            "authors": null,
+            "version": "",
+            "repository": ""
+          },
+          "error": {},
+          "warnings": [],
+          "metadata": {}
+        }
+      ],
+      "search_observation": {
+        "completion_index": 5,
+        "parameter_set_number": 5,
+        "elapsed_seconds": 1.5771769099999347,
+        "search_fraction": 0.5
+      },
+      "reference_roles": [],
+      "requested_search_member": true,
+      "search_space_member": true,
+      "legacy_parameter_set_id": "f446b59b4c9b",
+      "parameter_identity_sha256": "2847cb5898aa2c30c1b7e80ec53bbd8653777bd5bb2fa9530fa979734d5ee510",
+      "parameter_set_equivalence_family_id": "f446b59b4c9b",
+      "parameter_set_equivalence_family_sha256": "f446b59b4c9b6dfd4851c3160d81d0f1bd1f0320b06a474312eb08c01081b3a5",
+      "parameter_set_equivalence_family_size": 1,
+      "parameter_identity_schema_version": "1",
+      "parameter_schema_version": "1",
+      "parameter_grid_ordinal": 2,
+      "parameter_grid_sha256": "218bef2f8273302047ec3edbeb20a9645e07a37b1d2847e2758a7f373243a8fe",
+      "profile": null,
+      "run_id": "run-20260830-003630",
+      "rank": 6,
+      "search_rank": 5,
+      "error": {},
+      "warnings": [],
+      "metadata": {}
+    }
+  ],
+  "winner_page_report": {
+    "schema_version": "0.1",
+    "thresholds": {
+      "poor_match_iou_below": 0.5,
+      "regression_delta_below": -0.001
+    },
+    "counts": {
+      "unprocessed_pages": 0,
+      "no_polygon_found": 0,
+      "zero_overlap": 0,
+      "poor_matches": 0,
+      "regressions": 1
+    },
+    "pages": [
+      {
+        "golden_set_page": 5,
+        "baseline_iou": 0.98773872,
+        "winner_iou": 0.99181614,
+        "delta_iou": 0.00407742,
+        "status": "Improved",
+        "parameter_set": "e114f8dccca4",
+        "parameter_set_id": "e114f8dccca4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 9,
+        "baseline_iou": 0.96666089,
+        "winner_iou": 0.96557958,
+        "delta_iou": -0.00108131,
+        "status": "Regressed",
+        "parameter_set": "e114f8dccca4",
+        "parameter_set_id": "e114f8dccca4",
+        "problem": true,
+        "problem_reasons": [
+          "Regressed"
+        ],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 10,
+        "baseline_iou": 0.93723523,
+        "winner_iou": 0.96206156,
+        "delta_iou": 0.02482633,
+        "status": "Improved",
+        "parameter_set": "e114f8dccca4",
+        "parameter_set_id": "e114f8dccca4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 1,
+        "baseline_iou": 0.93826047,
+        "winner_iou": 0.94292186,
+        "delta_iou": 0.00466139,
+        "status": "Improved",
+        "parameter_set": "e114f8dccca4",
+        "parameter_set_id": "e114f8dccca4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      },
+      {
+        "golden_set_page": 6,
+        "baseline_iou": 0.81082893,
+        "winner_iou": 0.80984403,
+        "delta_iou": -0.0009849,
+        "status": "Unchanged",
+        "parameter_set": "e114f8dccca4",
+        "parameter_set_id": "e114f8dccca4",
+        "problem": false,
+        "problem_reasons": [],
+        "detector_status": "ok"
+      }
+    ]
+  },
+  "runner": {
+    "execution_target": "GitHub Hosted",
+    "runner_name": "GitHub Actions 1000001453",
+    "runner_environment": "github-hosted",
+    "runner_os": "Linux",
+    "runner_arch": "X64",
+    "machine_name": "runnervmgx7h7",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "physical_core_count": 2,
+    "logical_cpu_count": 4,
+    "available_cpu_count": 4,
+    "smt_enabled": true,
+    "memory_bytes": 16766414848,
+    "memory_gib": 15.61,
+    "python_version": "3.12.14",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "opencv_version": "4.14.0",
+    "numpy_version": "2.4.6",
+    "pipeline_commit": "12893ba1f9bb990307d6840e23416915d628fba3",
+    "github_repository": "dlstupka/hth",
+    "github_run_id": "33282989169",
+    "github_run_attempt": "1",
+    "github_runner_labels": [
+      "ubuntu-latest"
+    ]
+  },
+  "source_commit": "3d01a9a372054e052b713c34e2ef7d88ed8cd1ac",
+  "performance": {
+    "sample_count": 2,
+    "configured_threads": 2,
+    "peak_rss_bytes": 1386909696,
+    "samples_file": "logs/runner-performance.jsonl",
+    "precomputed_evidence": true,
+    "evidence_source": "process-local-fallback",
+    "evidence_precompute_seconds": 32.828547
+  },
+  "progress": {
+    "estimated_parameter_sets": 10,
+    "completed_parameter_sets": 10,
+    "average_eval_rate": 3.680254556965828,
+    "failures": 0,
+    "best_mean_iou": 0.93444463,
+    "best_worst_page_iou": 0.81082893,
+    "best_stddev_iou": 0.06161639,
+    "mean_iou_improvements": 1,
+    "minimum_iou_improvements": 0,
+    "stddev_improvements": 0,
+    "total_metric_improvements": 1,
+    "parameter_sets_with_improvements": 1,
+    "winner_changes": 1,
+    "baseline_surpassed": true,
+    "winner_first_changed_elapsed_seconds": 0.624893990000146,
+    "winner_last_changed_elapsed_seconds": 0.624893990000146,
+    "winner_history": [
+      {
+        "change_number": 1,
+        "parameter_set_id": "e114f8dccca4",
+        "parameter_short_name": "historic-best",
+        "completion_index": 2,
+        "parameter_set_number": 2,
+        "elapsed_seconds": 0.624893990000146,
+        "search_fraction": 0.2,
+        "parameter_set_equivalence_family_id": "e114f8dccca4"
+      }
+    ],
+    "last_improvement_elapsed_seconds": 0.624893990000146,
+    "time_since_last_improvement_seconds": 2.0923093569999764
+  }
+}
