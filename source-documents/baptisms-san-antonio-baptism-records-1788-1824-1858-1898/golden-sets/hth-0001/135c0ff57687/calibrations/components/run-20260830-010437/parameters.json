@@ -1,0 +1,137 @@
+{
+  "schema_version": "0.4",
+  "detector": "components",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/components.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 76,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "4.642",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126+scheduler-slot",
+    "queue_position": "35",
+    "ranked_quality": "0.78971141",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "components",
+    "description": "Black-box calibration space for the HTH connected-components geometry detector.",
+    "profiles": {
+      "baseline": {
+        "minimum_component_area_fraction": 0.0015,
+        "minimum_component_area_px": 25,
+        "merge_area_ratio": 0.02,
+        "merge_gap_fraction": 0.035,
+        "minimum_bbox_area_fraction": 0.12,
+        "minimum_selected_area_fraction": 0.04,
+        "bbox_padding_fraction": 0.0,
+        "morphology_close_fraction": 0.008,
+        "morphology_dilate_fraction": 0.015
+      }
+    },
+    "parameters": {
+      "minimum_component_area_fraction": {
+        "type": "float",
+        "values": [
+          0.00075,
+          0.0015,
+          0.003
+        ]
+      },
+      "minimum_component_area_px": {
+        "type": "integer",
+        "values": [
+          10,
+          25,
+          50
+        ]
+      },
+      "merge_area_ratio": {
+        "type": "float",
+        "values": [
+          0.01,
+          0.02,
+          0.05
+        ]
+      },
+      "merge_gap_fraction": {
+        "type": "float",
+        "values": [
+          0.02,
+          0.035,
+          0.06
+        ]
+      },
+      "minimum_bbox_area_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.12,
+          0.18
+        ]
+      },
+      "minimum_selected_area_fraction": {
+        "type": "float",
+        "values": [
+          0.02,
+          0.04,
+          0.07
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.005,
+          0.015
+        ]
+      },
+      "morphology_close_fraction": {
+        "type": "float",
+        "values": [
+          0.004,
+          0.008,
+          0.016
+        ]
+      },
+      "morphology_dilate_fraction": {
+        "type": "float",
+        "values": [
+          0.008,
+          0.015,
+          0.03
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
