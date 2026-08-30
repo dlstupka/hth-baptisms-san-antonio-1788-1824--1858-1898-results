@@ -159,7 +159,7 @@ Compatible completed optimizer runs are coalesced by detector, workload, and con
 | learned_page_mask | 192t — rh8-al318 (192 vCPU) | 31698713628 | — | — | 192 | — | 4 | 96 | 3p/128t, 4p/96t | legacy | 1h 54m | 384 | 10.29 | 16m 12s | 6 |
 | lsd | 192t — rh8-al321 (192 vCPU) | 31337815528 | — | — | 192 | — | 9 | 42 | 9p/42t | legacy | 2m 17s | 378 | 168.23 | 13s | 8 |
 | mask_rcnn_page_mask | 192t — rh8-al308 (192 vCPU) | 32393304061 | — | — | 192 | — | 11 | 34 | 10p/38t, 11p/34t | legacy | 2m 45s | 374 | 100.00 | 20s | 6 |
-| msre_bfq_spbv_pbg | 192t — rh8-al318 (192 vCPU) | 31813031101 | — | — | 192 | — | 36 | 10 | 29p/13t, 30p/12t, 31p/12t, 32p/12t, 33p/11t, 34p/11t, 35p/10t, 36p/10t, 37p/10t, 38p/10t | legacy | 1h 27m 18s | 360 | 11.10 | 3m 17s | 15 |
+| msre_bfq_spbv_pbg | 192t — rh8-al321 (192 vCPU) | 33326002993 | AMD EPYC 9655 96-Core Processor | 192 | 192 | 503.3 GiB | 37 | 10 | 37p/10t | adaptive | 13m 18s | 370 | 8.83 | 29s | 11 |
 | multi_scale_radial_edge | 192t — rh8-al316 (192 vCPU) | 33207798869 | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 30 | 12 | 10p/38t, 11p/34t, 12p/32t, 13p/29t, 14p/27t, 15p/25t, 16p/24t, 17p/22t, 18p/21t, 19p/20t, 20p/19t, 21p/18t, 22p/17t, 23p/16t, 24p/16t, 25p/15t, 26p/14t, 27p/14t, 28p/13t, 29p/13t, 30p/12t, 31p/12t, 32p/12t, 33p/11t | adaptive | 3m 11s | 360 | 42.67 | 6s | 28 |
 | orli_page_mask | 192t — rh8-al316 (192 vCPU) | 32160375460 | — | — | 192 | — | 12 | 32 | 12p/32t | legacy | 7m 51s | 384 | 303.03 | 33s | 8 |
 | page_background | 192t — rh8-al307 (192 vCPU) | 31763872761 | — | — | 192 | — | 5 | 76 | 4p/96t, 5p/76t | legacy | 3m 1s | 380 | 136.75 | 16s | 8 |
@@ -558,7 +558,7 @@ Compatible completed measurements are plotted by detector; thread count is annot
 <details>
 <summary><strong>msre_bfq_spbv_pbg</strong></summary>
 
-**Search method(s):** `legacy`
+**Search method(s):** `adaptive`
 
 ![msre_bfq_spbv_pbg Detector Run Profile Plot](profiles/msre_bfq_spbv_pbg.svg)
 
@@ -1520,27 +1520,23 @@ This table contains measurements from this optimizer execution only. Bold identi
 <details>
 <summary><strong>msre_bfq_spbv_pbg</strong></summary>
 
-**Search method(s):** `legacy`
+**Search method(s):** `adaptive`
 
 This table contains measurements from this optimizer execution only. Bold identifies this run’s measured throughput winner; the preferred configuration above is selected from all compatible coalesced optimizer evidence.
 
 | Runner | Optimizer run | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Startup overhead | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 2 | 2 | 192 | 384 | 38m 24s | — | 0.95 | — | -91.44% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 14 | 14 | 27 | 378 | 5m 11s | — | 7.03 | — | -36.67% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 28 | 28 | 13 | 364 | 3m 22s | — | 10.83 | — | -2.43% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 29 | 29 | 13 | 377 | 3m 20s | — | 10.94 | — | -1.44% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 30 | 30 | 12 | 360 | 3m 21s | — | 10.88 | — | -1.98% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 31 | 31 | 12 | 372 | 3m 20s | — | 10.94 | — | -1.44% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 32 | 32 | 12 | 384 | 3m 18s | — | 11.05 | — | -0.45% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 33 | 33 | 11 | 363 | 3m 18s | — | 11.05 | — | -0.45% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 34 | 34 | 11 | 374 | 3m 17s | — | 11.10 | — | 0.00% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 35 | 35 | 10 | 350 | 3m 20s | — | 10.94 | — | -1.44% | — | — | — | — |
-| **192t — rh8-al318 (192 vCPU)** | 31813031101 | 36 | 36 | 10 | 360 | 3m 17s | — | 11.10 | — | 0.00% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 37 | 37 | 10 | 370 | 3m 20s | — | 10.94 | — | -1.44% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 38 | 38 | 10 | 380 | 3m 19s | — | 10.99 | — | -0.99% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 39 | 39 | 9 | 351 | 3m 23s | — | 10.77 | — | -2.97% | — | — | — | — |
-| 192t — rh8-al318 (192 vCPU) | 31813031101 | 96 | 96 | 4 | 384 | 3m 48s | — | 9.59 | — | -13.60% | — | — | — | — |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 1 | 1 | 384 | 384 | 7m 55s | 0s | 0.54 | 1.00× | -93.89% | 102.8 | 433.4 | 12.2% | 23.8 GiB |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 31 | 31 | 12 | 372 | 31s | 1s | 8.26 | 15.32× | -6.45% | — | — | — | — |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 32 | 32 | 12 | 384 | 31s | 1s | 8.26 | 15.32× | -6.45% | 1753.8 | 1753.8 | 76.3% | 31.6 GiB |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 33 | 33 | 11 | 363 | 30s | 1s | 8.53 | 15.83× | -3.33% | — | — | — | — |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 34 | 34 | 11 | 374 | 30s | 1s | 8.53 | 15.83× | -3.33% | 2258.1 | 2258.1 | 78.1% | 32.4 GiB |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 35 | 35 | 10 | 350 | 30s | 1s | 8.53 | 15.83× | -3.33% | — | — | — | — |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 36 | 36 | 10 | 360 | 30s | 1s | 8.53 | 15.83× | -3.33% | — | — | — | — |
+| **192t — rh8-al321 (192 vCPU)** | 33326002993 | 37 | 37 | 10 | 370 | 29s | 1s | 8.83 | 16.38× | 0.00% | 1377.8 | 1377.8 | 76.7% | 32.9 GiB |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 38 | 38 | 10 | 380 | 30s | 1s | 8.53 | 15.83× | -3.33% | — | — | — | — |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 39 | 39 | 9 | 351 | 31s | 1s | 8.26 | 15.32× | -6.45% | 1291.6 | 1291.6 | 79.7% | 33.4 GiB |
+| 192t — rh8-al321 (192 vCPU) | 33326002993 | 192 | 192 | 2 | 384 | 48s | 3s | 5.33 | 9.90× | -39.58% | 3328.4 | 3328.4 | 43.8% | 71.7 GiB |
 
 **Startup-overhead note:** executor startup is measured from `run-detector-regressions` entry through detector lifecycle preparation, planning, shared learned-evidence resolution/preparation, and initial queue setup before pipeline fan-out. It remains included in **Wall** and therefore in shape-level **Sets/s** as a constant reminder of incurred end-to-end cost. Per-shard parameter-set throughput is timed after fan-out and does not include this pre-fan-out startup overhead.
 
