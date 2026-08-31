@@ -209,7 +209,7 @@
         "strategy": "exhaustive"
       },
       "source": "predicted-low-linear-vcpu",
-      "status": "pending",
+      "status": "verified",
       "target_runner": {
         "cpu_model": "AMD EPYC 9175F 16-Core Processor",
         "logical_cpu_count": 32,
@@ -217,9 +217,20 @@
         "runner_label": null,
         "runner_name": "rh8-s32",
         "thread_budget": 64
+      },
+      "verification": {
+        "actual_shape": {
+          "allocated_threads": 60,
+          "pipelines": 10,
+          "threads_per_pipeline": 6
+        },
+        "exact_shape_match": false,
+        "pipeline_error_pct": -60.0,
+        "threads_error_pct": 166.667,
+        "verified_at_utc": "2026-08-31T13:26:04.239098Z"
       }
     }
   ],
   "schema_version": "1.0",
-  "updated_at_utc": "2026-08-31T01:19:39.472300Z"
+  "updated_at_utc": "2026-08-31T13:26:04.239105Z"
 }
