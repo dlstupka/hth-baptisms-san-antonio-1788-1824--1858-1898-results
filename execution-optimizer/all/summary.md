@@ -224,7 +224,7 @@ Compatible completed optimizer runs are coalesced by stable detector evidence id
 | pagenet_page_mask | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | polar_boundary_vote | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | projective_gradient_vote | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
-| radial_edge | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
+| radial_edge | 192 | low | 0 verified / 1 pending | missing: a second vCPU size to establish shape scaling |
 | radon_boundary | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | ransac | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
 | scantailor_page_frame | 192 | low | 0 verified / 0 pending | missing: a second vCPU size to establish shape scaling |
