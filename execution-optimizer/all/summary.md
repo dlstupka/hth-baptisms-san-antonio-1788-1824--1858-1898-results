@@ -165,7 +165,7 @@ Compatible completed optimizer runs are coalesced by stable detector evidence id
 | pagenet_page_mask | 192t — rh8-al307 (192 vCPU) | 32484937174 | — | — | 192 | — | 7 | 54 | 5p/76t, 6p/64t, 7p/54t, 8p/48t | legacy | 5m 3s | 378 | 641.03 | 39s | 7 |
 | polar_boundary_vote | 192t — rh8-al318 (192 vCPU) | 31613956281 | — | — | 192 | — | 13 | 29 | 13p/29t | legacy | 3m 56s | 377 | 60.75 | 12s | 10 |
 | projective_gradient_vote | 192t — rh8-al318 (192 vCPU) | 31714523594 | — | — | 192 | — | 6 | 64 | 6p/64t | legacy | 1m 27s | 384 | 91.25 | 8s | 6 |
-| radial_edge | 192t — rh8-al323 (192 vCPU) | 31337056613 | — | — | 192 | — | 26 | 14 | 23p/16t, 24p/16t, 25p/15t, 26p/14t, 27p/14t | legacy | 7m 43s | 364 | 345.37 | 19s | 10 |
+| radial_edge | 192t — rh8-al316 (192 vCPU) | 33340290180 | AMD EPYC 9655 96-Core Processor | 192 | 192 | 2897.3 GiB | 24 | 16 | 24p/16t | adaptive | 48s | 384 | 64.00 | 4s | 7 |
 | radon_boundary | 192t — rh8-al319 (192 vCPU) | 31632640087 | — | — | 192 | — | 7 | 54 | 5p/76t, 6p/64t, 7p/54t | legacy | 2m 23s | 378 | 56.08 | 13s | 7 |
 | ransac | 192t — rh8-al321 (192 vCPU) | 31337400373 | — | — | 192 | — | 23 | 16 | 23p/16t | legacy | 2m 52s | 368 | 145.80 | 10s | 6 |
 | scantailor_page_frame | 192t — rh8-al308 (192 vCPU) | legacy-published-27adf849f7bd7d88 | — | — | 192 | — | 11 | 34 | 11p/34t | unknown | 4m 44s | 374 | 16.55 | 29s | 8 |
@@ -628,7 +628,7 @@ Compatible completed measurements are plotted by detector; thread count is annot
 <details>
 <summary><strong>radial_edge</strong></summary>
 
-**Search method(s):** `legacy`
+**Search method(s):** `adaptive`
 
 ![radial_edge Detector Run Profile Plot](profiles/radial_edge.svg)
 
@@ -1700,22 +1700,19 @@ This table contains measurements from this optimizer execution only. Bold identi
 <details>
 <summary><strong>radial_edge</strong></summary>
 
-**Search method(s):** `legacy`
+**Search method(s):** `adaptive`
 
 This table contains measurements from this optimizer execution only. Bold identifies this run’s measured throughput winner; the preferred configuration above is selected from all compatible coalesced optimizer evidence.
 
 | Runner | Optimizer run | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Startup overhead | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 1 | 1 | 384 | 384 | 4m 20s | — | 25.24 | 1.00× | -92.69% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 8 | 8 | 48 | 384 | 45s | — | 145.82 | 5.78× | -57.78% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 22 | 22 | 17 | 374 | 20s | — | 328.10 | 13.00× | -5.00% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 23 | 23 | 16 | 368 | 19s | — | 345.37 | 13.68× | 0.00% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 24 | 24 | 16 | 384 | 19s | — | 345.37 | 13.68× | 0.00% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 25 | 25 | 15 | 375 | 19s | — | 345.37 | 13.68× | 0.00% | — | — | — | — |
-| **192t — rh8-al323 (192 vCPU)** | 31337056613 | 26 | 26 | 14 | 364 | 19s | — | 345.37 | 13.68× | 0.00% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 27 | 27 | 14 | 378 | 19s | — | 345.37 | 13.68× | 0.00% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 28 | 28 | 13 | 364 | 20s | — | 328.10 | 13.00× | -5.00% | — | — | — | — |
-| 192t — rh8-al323 (192 vCPU) | 31337056613 | 64 | 64 | 6 | 384 | 23s | — | 285.30 | 11.30× | -17.39% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 33340290180 | 1 | 1 | 384 | 384 | 9s | 0s | 28.44 | 1.00× | -55.56% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 33340290180 | 22 | 22 | 17 | 374 | 5s | 1s | 51.20 | 1.80× | -20.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 33340290180 | 23 | 23 | 16 | 368 | 5s | 1s | 51.20 | 1.80× | -20.00% | — | — | — | — |
+| **192t — rh8-al316 (192 vCPU)** | 33340290180 | 24 | 24 | 16 | 384 | 4s | 1s | 64.00 | 2.25× | 0.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 33340290180 | 25 | 25 | 15 | 375 | 5s | 1s | 51.20 | 1.80× | -20.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 33340290180 | 26 | 26 | 14 | 364 | 5s | 1s | 51.20 | 1.80× | -20.00% | — | — | — | — |
+| 192t — rh8-al316 (192 vCPU) | 33340290180 | 192 | 192 | 2 | 384 | 12s | 4s | 21.33 | 0.75× | -66.67% | — | — | — | — |
 
 **Startup-overhead note:** executor startup is measured from `run-detector-regressions` entry through detector lifecycle preparation, planning, shared learned-evidence resolution/preparation, and initial queue setup before pipeline fan-out. It remains included in **Wall** and therefore in shape-level **Sets/s** as a constant reminder of incurred end-to-end cost. Per-shard parameter-set throughput is timed after fan-out and does not include this pre-fan-out startup overhead.
 
