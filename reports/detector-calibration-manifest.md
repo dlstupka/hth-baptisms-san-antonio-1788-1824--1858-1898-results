@@ -62,7 +62,7 @@
     - [RANSAC Border Fit (`ransac`)](#ransac-border-fit-ransac)
 - [Detector Regression Reports](#detector-regression-reports)
   - [Regression Completion Summary](#regression-completion-summary)
-  - [Regression Execution Schedule](#regression-execution-schedule)
+  - [Regression Smoke-Test Execution Schedule](#regression-smoke-test-execution-schedule)
   - [Per-Detector Regression Reports](#per-detector-regression-reports)
     - [Adaptive Multi-Scale Radial Edge Search (`adaptive_multi_scale_radial_edge`)](#adaptive-multi-scale-radial-edge-search-adaptivemultiscaleradialedge-2)
     - [Adaptive Radial Edge Search (`adaptive_radial_edge`)](#adaptive-radial-edge-search-adaptiveradialedge-2)
@@ -302,7 +302,7 @@ This table prefers compatible full calibrations when available and falls back to
 - **Calibration Evidence:** deterministic evidence score for how completely this run characterizes the evaluated Golden Set and parameter grid. Score 2 points for complete exhaustive coverage, 1 point when at least 90% of parameter sets succeed on every page, and 1 point when at least 1% of tested sets are within 0.001 Avg IoU of the winner. **Low** = 0–1 points, **Medium** = 2–3 points, and **High** = 4 points. This is not confidence that the detector generalizes beyond this Golden Set and grid.
 - **Approval Level:** automatic Golden Set-scoped engineering status derived from Search Type and Calibration Evidence. **Provisional** = smoke or unavailable evidence; **Candidate** = any reduced search or exhaustive search with Low evidence; **Recommended** = exhaustive search with Medium evidence; **Approved** = exhaustive search with High evidence. A different Golden Set requires its own calibration and approval.
 - **Evidence tables:** identify what each detector actually observes and whether that evidence generates, validates, filters, or scores a page hypothesis.
-- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/d3179233bf30a9d87b9f1b60507e108da125b9b7/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/amsre_doc_ufcn_fusion/run-20260825-213511/calibration-intelligence.json).
+- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/8c3a4589f391f20af81c7e850adeda1d1540344f/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-0001/135c0ff57687/calibrations/amsre_doc_ufcn_fusion/run-20260825-213511/calibration-intelligence.json).
 - **Est. Serial Runtime\*\*:** Estimated single-detector serial runtime derived from recorded regression evidence; actual wall time varies with parallelism and scheduling.
 
 [↑ Back to Navigation](#table-of-contents)
@@ -5154,36 +5154,31 @@ Calibration evidence basis: partial or adaptive search, many parameter sets fail
 
 [↑ Back to Navigation](#table-of-contents)
 
-<a id="regression-execution-schedule"></a>
-### Regression Execution Schedule
+<a id="regression-smoke-test-execution-schedule"></a>
+### Regression Smoke-Test Execution Schedule
 
-The next multi-detector run is planned once, before workers start. Detector runtimes are ordered by Longest Processing Time (LPT), then greedily assigned to the least-loaded pipeline so the longest jobs gate the build and projected pipeline finish times converge. Pipelines execute their fixed schedules without dynamic stealing or refill claims.
+Report Writer shows a stable GitHub-hosted smoke-test reference schedule rather than reusing the topology of whichever self-hosted runner produced the current calibration manifest. Detector costs come from the newest matching GitHub-hosted smoke observation when available, then canonical static LPT places the detectors for the fixed 4-vCPU / 8-thread reference capacity.
 
-| Setting | Preferred next run |
+| Setting | GitHub-hosted smoke reference |
 |---|---|
-| Detector pipelines | 7 |
+| Runner profile | GitHub hosted — 4 vCPU / 8 max threads |
+| Detector pipelines | 1 |
 | Loading / balancing | Static LPT makespan balancing |
-| Threads per detector regression | 54 |
+| Threads per detector regression | 8 |
 | Scheduling intelligence | `canonical-lpt-planner` |
+| Smoke evidence | No matching persisted GitHub-hosted smoke observation; runtime estimates used. |
 | Pipeline start stagger | 0m |
 | Runtime intelligence | `runtime-index.json` |
 | Parallelism intelligence | `parallelism-index.json` |
 | Calibration intelligence | `calibration-index.json` |
-| Persistence | Results are accumulated during execution and published as one post-run calibration/index transaction. |
 
-| Pipeline | Schedule | Reshuffle | Est Work | Actual Work Time | Next Run | Next Est | Threads |
-|---:|---|---|---:|---:|---|---:|---:|
-| 1 | `kraken_page_mask`, `eynollah_page_mask`, `consensus_quad`, `star_convex`, `lsd`, `edge_contour`, `joint_rectangle_vote`, `ransac`, `convex_hull`, `signed_polar_boundary_vote`, `gradient_vote` | -`eynollah_page_mask` -`consensus_quad` -`star_convex` -`lsd` -`edge_contour` -`joint_rectangle_vote` -`ransac` -`convex_hull` -`signed_polar_boundary_vote` -`gradient_vote` | 7m 31s | — | `kraken_page_mask` | 4m 19s | 54 |
-| 2 | `grabcut_contour`, `hough`, `learned_page_mask`, `segment_supported_polar_vote`, `cross_edge_contour`, `doc_ufcn_page_mask`, `contour_components`, `adaptive_radial_edge`, `multi_scale_radial_edge`, `components`, `contour` | -`hough` -`learned_page_mask` -`segment_supported_polar_vote` -`contour_components` -`adaptive_radial_edge` -`multi_scale_radial_edge` -`components` -`contour` +`contour_grabcut` +`pagenet_page_mask` +`ransac` +`whitespace_frame` | 5m 54s | — | `grabcut_contour`, `contour_grabcut`, `cross_edge_contour`, `doc_ufcn_page_mask`, `pagenet_page_mask`, `ransac`, `whitespace_frame` | 4m 18s | 54 |
-| 3 | `grabcut`, `amsre_bfq_spbv_pbg`, `amsre_doc_ufcn_fusion`, `scantailor_page_frame`, `dhsegment_page_mask`, `radon_boundary`, `polar_boundary_vote`, `border_fusion_quad`, `pagenet_page_mask`, `border_energy`, `radial_edge`, `page_background`, `text_flow` | -`grabcut` -`amsre_doc_ufcn_fusion` -`scantailor_page_frame` -`border_fusion_quad` -`pagenet_page_mask` -`border_energy` -`radial_edge` -`page_background` -`text_flow` +`contour_components` +`contour_quad` +`distance_transform_rect` | 9m 4s | — | `amsre_bfq_spbv_pbg`, `dhsegment_page_mask`, `radon_boundary`, `polar_boundary_vote`, `contour_components`, `contour_quad`, `distance_transform_rect` | 4m 18s | 54 |
-| 4 | `msre_bfq_spbv_pbg`, `mask_rcnn_page_mask`, `adaptive_multi_scale_radial_edge`, `docextractor_page_mask`, `contour_projection`, `orli_page_mask`, `distance_transform`, `projective_gradient_vote`, `contour_quad`, `distance_transform_rect`, `whitespace_frame` | -`mask_rcnn_page_mask` -`adaptive_multi_scale_radial_edge` -`docextractor_page_mask` -`orli_page_mask` -`distance_transform` -`contour_quad` -`distance_transform_rect` -`whitespace_frame` +`eynollah_page_mask` +`star_convex` +`joint_rectangle_vote` +`components` +`text_flow` | 6m 53s | — | `msre_bfq_spbv_pbg`, `eynollah_page_mask`, `contour_projection`, `star_convex`, `projective_gradient_vote`, `joint_rectangle_vote`, `components`, `text_flow` | 4m 18s | 54 |
-| 5 | `contour_grabcut` | -`contour_grabcut` +`grabcut` +`hough` +`consensus_quad` +`border_fusion_quad` +`edge_contour` +`multi_scale_radial_edge` +`page_background` +`convex_hull` | 49.6s | — | `grabcut`, `hough`, `consensus_quad`, `border_fusion_quad`, `edge_contour`, `multi_scale_radial_edge`, `page_background`, `convex_hull` | 4m 21s | 54 |
-| 6 | — | +`amsre_doc_ufcn_fusion` +`adaptive_multi_scale_radial_edge` +`segment_supported_polar_vote` +`distance_transform` +`adaptive_radial_edge` +`border_energy` +`contour` +`gradient_vote` | 0 ms | — | `amsre_doc_ufcn_fusion`, `adaptive_multi_scale_radial_edge`, `segment_supported_polar_vote`, `distance_transform`, `adaptive_radial_edge`, `border_energy`, `contour`, `gradient_vote` | 4m 19s | 54 |
-| 7 | — | +`mask_rcnn_page_mask` +`scantailor_page_frame` +`docextractor_page_mask` +`orli_page_mask` +`lsd` +`learned_page_mask` +`radial_edge` +`signed_polar_boundary_vote` | 0 ms | — | `mask_rcnn_page_mask`, `scantailor_page_frame`, `docextractor_page_mask`, `orli_page_mask`, `lsd`, `learned_page_mask`, `radial_edge`, `signed_polar_boundary_vote` | 4m 18s | 54 |
+| Pipeline | Smoke-test schedule | Est Work | Threads |
+|---:|---|---:|---:|
+| 1 | `kraken_page_mask`, `grabcut_contour`, `amsre_bfq_spbv_pbg`, `msre_bfq_spbv_pbg`, `grabcut`, `amsre_doc_ufcn_fusion`, `mask_rcnn_page_mask`, `scantailor_page_frame`, `adaptive_multi_scale_radial_edge`, `hough`, `eynollah_page_mask`, `dhsegment_page_mask`, `contour_grabcut`, `docextractor_page_mask`, `segment_supported_polar_vote`, `consensus_quad`, `contour_projection`, `radon_boundary`, `cross_edge_contour`, `orli_page_mask`, `polar_boundary_vote`, `star_convex`, `doc_ufcn_page_mask`, `distance_transform`, `border_fusion_quad`, `lsd`, `contour_components`, `projective_gradient_vote`, `pagenet_page_mask`, `adaptive_radial_edge`, `edge_contour`, `learned_page_mask`, `contour_quad`, `joint_rectangle_vote`, `border_energy`, `multi_scale_radial_edge`, `ransac`, `radial_edge`, `components`, `distance_transform_rect`, `contour`, `whitespace_frame`, `page_background`, `convex_hull`, `signed_polar_boundary_vote`, `text_flow`, `gradient_vote` | 30m 11s | 8 |
 
-`Schedule` is the fixed detector-ID order executed by this build. `Est Work` is the estimate used before fan-out. `Actual Work Time` is the measured fixed-pipeline span. `Reshuffle`, `Next Run`, and `Next Est` are derived after the run by re-running static LPT with the newly measured scheduler-facing detector costs.
+This is a reference smoke schedule only. Self-hosted runners may use different detector-pipeline counts and thread allocations; their changing topology is intentionally not projected into this Report Writer section.
 
-Scheduler-facing detector cost includes the executor's per-detector load/run/unload wrapper time; pipeline scheduling therefore learns orchestration overhead instead of modeling detector-core RUN-INFO time alone. The next schedule is still fixed before the following run starts—there is no dynamic stealing.
+Scheduler-facing detector cost includes the executor's per-detector load/run/unload wrapper time; canonical static LPT therefore learns orchestration overhead instead of modeling detector-core RUN-INFO time alone.
 
 #### Estimated Runtime by Search Scope
 
@@ -20853,12 +20848,12 @@ Every completed regression contributes reusable quality and runtime evidence so 
 
 - `calibration-index.json` retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata.
 - Compatible authoritative calibrations remain preferred over provisional smoke observations.
-- Results commit: [d3179233bf30a9d87b9f1b60507e108da125b9b7](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/d3179233bf30a9d87b9f1b60507e108da125b9b7).
-- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/33344267648).
+- Results commit: [8c3a4589f391f20af81c7e850adeda1d1540344f](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/8c3a4589f391f20af81c7e850adeda1d1540344f).
+- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/33345963308).
 - Pipeline repository: [dlstupka/hth](https://github.com/dlstupka/hth).
 - Results repository: [dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results).
-- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/d3179233bf30a9d87b9f1b60507e108da125b9b7/indexes/calibration-index.json).
-- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/d3179233bf30a9d87b9f1b60507e108da125b9b7/indexes/runtime-index.json).
+- Calibration index: [calibration-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/8c3a4589f391f20af81c7e850adeda1d1540344f/indexes/calibration-index.json).
+- Runtime index: [runtime-index.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/8c3a4589f391f20af81c7e850adeda1d1540344f/indexes/runtime-index.json).
 - Smoke records are provisional; complete exhaustive full regressions are authoritative.
 
 [↑ Back to Navigation](#table-of-contents)
