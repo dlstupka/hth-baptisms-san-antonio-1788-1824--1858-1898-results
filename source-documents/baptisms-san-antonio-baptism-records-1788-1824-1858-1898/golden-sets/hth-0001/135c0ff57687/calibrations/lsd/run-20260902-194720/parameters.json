@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.4",
+  "detector": "lsd",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/lsd.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 76,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 5,
+    "pipeline_number": 5,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "5.646",
+    "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126+scheduler-slot",
+    "queue_position": "29",
+    "ranked_quality": "0.73776731",
+    "execution_shape_source": "preferred-multidetector-short-occupancy",
+    "exact_execution_shape": true,
+    "execution_thread_budget": "384"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "lsd",
+    "description": "Black-box calibration space for the OpenCV Line Segment Detector document-envelope detector.",
+    "profiles": {
+      "baseline": {
+        "refine_mode": "std",
+        "scale": 0.8,
+        "minimum_length_fraction": 0.14,
+        "axis_angle_tolerance_degrees": 18.0,
+        "outer_percentile": 10.0,
+        "minimum_bbox_area_fraction": 0.1,
+        "bbox_padding_fraction": 0.0
+      }
+    },
+    "parameters": {
+      "refine_mode": {
+        "type": "string",
+        "values": [
+          "none",
+          "std",
+          "adv"
+        ]
+      },
+      "scale": {
+        "type": "float",
+        "values": [
+          0.6,
+          0.8,
+          1.0
+        ]
+      },
+      "minimum_length_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.14,
+          0.22
+        ]
+      },
+      "axis_angle_tolerance_degrees": {
+        "type": "float",
+        "values": [
+          10.0,
+          18.0,
+          28.0
+        ]
+      },
+      "outer_percentile": {
+        "type": "float",
+        "values": [
+          5.0,
+          10.0,
+          20.0
+        ]
+      },
+      "minimum_bbox_area_fraction": {
+        "type": "float",
+        "values": [
+          0.08,
+          0.1,
+          0.15
+        ]
+      },
+      "bbox_padding_fraction": {
+        "type": "float",
+        "values": [
+          0.0,
+          0.005,
+          0.015
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "failures",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 50176,
+      "historic_best_reference": "mandatory-exact"
+    }
+  }
+}
