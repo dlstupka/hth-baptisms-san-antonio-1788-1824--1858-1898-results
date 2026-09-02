@@ -1,0 +1,142 @@
+{
+  "schema_version": "0.4",
+  "detector": "adaptive_multi_scale_radial_edge",
+  "strategy": "exhaustive",
+  "requested_strategy": "exhaustive",
+  "strategy_fallback_reason": null,
+  "detector_config": "hth-pipeline/config/detectors/adaptive_multi_scale_radial_edge.json",
+  "golden_set": "hth-pipeline/config/golden_set.json",
+  "golden_set_sha256": "135c0ff576876ef8911296e2502193ed20d159799079a4f8a58994854fcbba8e",
+  "image_root": "results-repo/test/latest/raw",
+  "max_dimension": 1800,
+  "limit": 10,
+  "threads": 2,
+  "precomputed_evidence": null,
+  "debug_level": "none",
+  "debug_artifacts": "none",
+  "detector_pipeline": {
+    "pipeline_count": 4,
+    "pipeline_number": 2,
+    "stagger_minutes": 0,
+    "loading_strategy": "lpt",
+    "runtime_estimate_seconds": "67.850",
+    "runtime_estimate_source": "runtime-index:mode+strategy+dimension+golden-set:score=108+scheduler-slot",
+    "queue_position": "13",
+    "ranked_quality": "0.97805518",
+    "execution_shape_source": "auto",
+    "exact_execution_shape": false,
+    "execution_thread_budget": "8"
+  },
+  "shard": {
+    "index": 0,
+    "count": 1,
+    "assignment": "interleaved"
+  },
+  "configuration": {
+    "schema_version": "0.1",
+    "detector": "adaptive_multi_scale_radial_edge",
+    "description": "Generation-2 refinement for Adaptive Multi-Scale Radial Edge Search. MSRE multiscale evidence remains fixed while exhaustive calibration densely resolves the narrow angular-adaptation basin found by Generation 1. Full regression now uses a half-density coarse-angle axis (25,000 declared combinations) while mandatory historic-best evaluation preserves the exact incumbent outside or inside the reduced grid.",
+    "parent_detector": "multi_scale_radial_edge",
+    "parent_parameter_set_id": "ddb7623ebb92",
+    "profiles": {
+      "baseline": {
+        "base_sigma": 1.0,
+        "scale_ratio": 3.5,
+        "scale_count": 4,
+        "minimum_radius_fraction": 0.16,
+        "maximum_radius_fraction": 0.78,
+        "gradient_percentile": 96.875,
+        "minimum_ray_support": 0.36,
+        "minimum_area_fraction": 0.18,
+        "maximum_area_fraction": 0.98,
+        "bbox_padding_fraction": 0.0,
+        "support_weight": 0.5,
+        "strength_weight": 0.3,
+        "area_weight": 0.2,
+        "coarse_angle_step_degrees": 2.0454545454545454,
+        "refined_angle_step_degrees": 0.35,
+        "weak_side_support_fraction": 0.45,
+        "side_assignment_tolerance_fraction": 0.015,
+        "maximum_refined_sides": 4
+      }
+    },
+    "parameters": {
+      "coarse_angle_step_degrees": {
+        "type": "float",
+        "values": [
+          1.85,
+          1.95,
+          2.0454545454545454,
+          2.1,
+          2.2
+        ]
+      },
+      "refined_angle_step_degrees": {
+        "type": "float",
+        "values": [
+          0.25,
+          0.3,
+          0.35,
+          0.4,
+          0.45,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          1.0
+        ]
+      },
+      "weak_side_support_fraction": {
+        "type": "float",
+        "values": [
+          0.3,
+          0.35,
+          0.4,
+          0.45,
+          0.5,
+          0.55,
+          0.6,
+          0.65,
+          0.7,
+          0.75
+        ]
+      },
+      "side_assignment_tolerance_fraction": {
+        "type": "float",
+        "values": [
+          0.0075,
+          0.01,
+          0.0125,
+          0.015,
+          0.0175,
+          0.02,
+          0.025,
+          0.03,
+          0.04,
+          0.05
+        ]
+      },
+      "maximum_refined_sides": {
+        "type": "int",
+        "values": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "binary_refine": {
+      "passes": 3,
+      "local_exhaustive_radius": 1
+    },
+    "regression": {
+      "debug_artifacts": "winner",
+      "full_space_policy": "declared-cartesian",
+      "full_space_max_parameter_sets": 25000,
+      "historic_best_reference": "mandatory-exact"
+    },
+    "optimizer_shape_compatibility": "detector-implementation"
+  }
+}
