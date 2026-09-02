@@ -1,7 +1,7 @@
 ### Execution optimizer summary
 
 Detector: `radon_boundary`  
-Optimizer run: **31632640087** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
+Optimizer run: **33637621563** — execution data below contains only shapes completed in this execution; the preferred configuration may use all compatible completed optimizer evidence.
 
 <a id="table-of-contents"></a>
 
@@ -18,11 +18,11 @@ Optimizer run: **31632640087** — execution data below contains only shapes com
 <details open>
 <summary><strong>1. Preferred Detector Run Configuration</strong></summary>
 
-Compatible completed optimizer runs are coalesced by detector, workload, and concrete runner profile. Repeated shapes retain all observations; the preferred shape is selected canonically by throughput, then lower resource use for throughput-equivalent shapes.
+Compatible completed optimizer runs are coalesced by stable detector evidence identity and concrete runner profile; search scope is retained only as informational provenance. Repeated shapes retain all observations; the preferred shape is selected canonically by throughput, then newest compatible optimizer run, then lower resource use within a run.
 
-| Detector | Runner | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
-|---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
-| radon_boundary | 192t — rh8-al319 (192 vCPU) | AMD EPYC 9655 96-Core Processor | 192 | 192 | 1511.3 GiB | 7 | 54 | 5p/76t, 6p/64t, 7p/54t | adaptive | 2m 26s | 378 | 56.08 | 13s | 1 |
+| Detector | Runner | Optimizer run | CPU | Physical | Logical | RAM | Preferred pipelines | Threads / pipeline | Preferred shape range (≤2%) | Search method | Optimization time | Allocated | Sets/s | Shape time | Observations |
+|---|---|---|---|---:|---:|---:|---:|---:|---|---|---:|---:|---:|---:|---:|
+| radon_boundary | 192t — rh8-al320 (192 vCPU) | 33637621563 | AMD EPYC 9655 96-Core Processor | 192 | 192 | 503.3 GiB | 7 | 54 | 3p/128t, 4p/96t, 5p/76t, 6p/64t, 7p/54t | adaptive | 59s | 378 | 64.00 | 4s | 10 |
 
 **Search method legend:** `adaptive` = sparse wide-range search with local refinement around the measured peak and ≤2% preferred-shape boundaries; `powers-of-2` = logarithmic power-of-two pipeline sweep; `exhaustive` = every legal pipeline count in the requested range.
 
@@ -52,17 +52,24 @@ Compatible completed measurements are plotted as detector pipelines versus param
 
 Shapes completed in this execution are shown below.
 
-| Runner | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Sets/s | Speedup | Δ from best | Avg load | Peak load | Avg CPU | Peak RAM |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 192t — rh8-al319 (192 vCPU) | 1 | 1 | 384 | 384 | 32s | 22.78 | 1.00× | -59.38% | — | — | — | — |
-| 192t — rh8-al319 (192 vCPU) | 4 | 4 | 96 | 384 | 20s | 36.45 | 1.60× | -35.00% | — | — | — | — |
-| 192t — rh8-al319 (192 vCPU) | 5 | 5 | 76 | 380 | 13s | 56.08 | 2.46× | 0.00% | 628.0 | 628.0 | 56.9% | 25.1 GiB |
-| 192t — rh8-al319 (192 vCPU) | 6 | 6 | 64 | 384 | 13s | 56.08 | 2.46× | 0.00% | — | — | — | — |
-| **192t — rh8-al319 (192 vCPU)** | 7 | 7 | 54 | 378 | 13s | 56.08 | 2.46× | 0.00% | — | — | — | — |
-| 192t — rh8-al319 (192 vCPU) | 8 | 8 | 48 | 384 | 15s | 48.60 | 2.13× | -13.33% | — | — | — | — |
-| 192t — rh8-al319 (192 vCPU) | 64 | 64 | 6 | 384 | 37s | 19.70 | 0.86× | -64.86% | 609.0 | 609.0 | 45.0% | 11.5 GiB |
+This table contains measurements from this optimizer execution only. Bold identifies this run’s measured throughput winner; the preferred configuration above is selected from all compatible coalesced optimizer evidence.
 
-**Early stop:** throughput plateau detected after 3 consecutive completed shapes improved by less than 2.0% from the perceived maximum.
+| Runner | Optimizer run | Pipelines | Shards | Threads / pipeline | Allocated | Wall | Startup overhead | Sets/s | Speedup | Δ from run best | Avg load | Peak load | Avg CPU | Peak RAM |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 1 | 1 | 384 | 384 | 6s | 0s | 42.67 | 1.00× | -33.33% | — | — | — | — |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 2 | 2 | 192 | 384 | 5s | 0s | 51.20 | 1.20× | -20.00% | — | — | — | — |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 3 | 3 | 128 | 384 | 4s | 0s | 64.00 | 1.50× | 0.00% | — | — | — | — |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 4 | 4 | 96 | 384 | 4s | 0s | 64.00 | 1.50× | 0.00% | — | — | — | — |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 5 | 5 | 76 | 380 | 4s | 0s | 64.00 | 1.50× | 0.00% | — | — | — | — |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 6 | 6 | 64 | 384 | 4s | 0s | 64.00 | 1.50× | 0.00% | — | — | — | — |
+| **192t — rh8-al320 (192 vCPU)** | 33637621563 | 7 | 7 | 54 | 378 | 4s | 0s | 64.00 | 1.50× | 0.00% | — | — | — | — |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 8 | 8 | 48 | 384 | 5s | 0s | 51.20 | 1.20× | -20.00% | — | — | — | — |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 9 | 9 | 42 | 378 | 5s | 0s | 51.20 | 1.20× | -20.00% | 109.4 | 109.4 | 25.7% | 7.7 GiB |
+| 192t — rh8-al320 (192 vCPU) | 33637621563 | 192 | 192 | 2 | 384 | 11s | 3s | 23.27 | 0.55× | -63.64% | — | — | — | — |
+
+**Startup-overhead note:** executor startup is measured from `run-detector-regressions` entry through detector lifecycle preparation, planning, shared learned-evidence resolution/preparation, and initial queue setup before pipeline fan-out. It remains included in **Wall** and therefore in shape-level **Sets/s** as a constant reminder of incurred end-to-end cost. Per-shard parameter-set throughput is timed after fan-out and does not include this pre-fan-out startup overhead.
+
+**Stop reason:** `adaptive_search_complete`
 
 </details>
 
