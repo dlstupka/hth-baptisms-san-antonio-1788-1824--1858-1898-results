@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "whitespace_frame",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "9a50a29d81a1346312eda554bb2cb8a39313c1d5278f8cb8a9414c3cf03d251e",
+    "parameter_order": [
+      "background_threshold",
+      "minimum_border_background_fraction",
+      "minimum_page_area_fraction",
+      "maximum_page_area_fraction",
+      "close_kernel_fraction",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "background_threshold": [
+        235,
+        245,
+        250
+      ],
+      "minimum_border_background_fraction": [
+        0.4,
+        0.55,
+        0.7
+      ],
+      "minimum_page_area_fraction": [
+        0.1,
+        0.18,
+        0.28
+      ],
+      "maximum_page_area_fraction": [
+        0.9,
+        0.96,
+        0.99
+      ],
+      "close_kernel_fraction": [
+        0.004,
+        0.01,
+        0.02
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.008,
+        0.016
+      ]
+    },
+    "cartesian_count": 729,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "adaptive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 65,
+    "evaluated_grid_parameter_sets": 64,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "background_threshold": 245,
+      "minimum_border_background_fraction": 0.55,
+      "minimum_page_area_fraction": 0.18,
+      "maximum_page_area_fraction": 0.98,
+      "close_kernel_fraction": 0.01,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "b8304ad7bfd2854c639b6513841402c045fa9c65d22b6b681e39144f07a7004c": {
+      "sha256": "b8304ad7bfd2854c639b6513841402c045fa9c65d22b6b681e39144f07a7004c",
+      "legacy_parameter_set_id": "9ef715dda063",
+      "parameters": {
+        "background_threshold": 245,
+        "minimum_border_background_fraction": 0.55,
+        "minimum_page_area_fraction": 0.18,
+        "maximum_page_area_fraction": 0.98,
+        "close_kernel_fraction": 0.01,
+        "bbox_padding_fraction": 0.0
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
