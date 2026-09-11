@@ -1,0 +1,1449 @@
+{
+  "available": true,
+  "calibration_confidence": {
+    "rating": "Low",
+    "reasons": [
+      "partial or adaptive search",
+      "many parameter sets failed at least one page",
+      "broad near-best basin"
+    ]
+  },
+  "calibration_identity": {
+    "build": {
+      "event": "workflow_dispatch",
+      "evidence_tier": "partial",
+      "github_run_attempt": "1",
+      "github_run_id": "34623379196",
+      "github_run_number": "1097",
+      "mode": "full",
+      "pipeline_commit": "a213c83aac58a66b40a49cbcbced602fcc8dee05",
+      "ref": "refs/heads/main",
+      "repository": "dlstupka/hth",
+      "run_time_seconds": 50.525,
+      "run_url": "https://github.com/dlstupka/hth/actions/runs/34623379196",
+      "workflow": "HTH detector regression"
+    },
+    "calibration_run_id": "run-20260911-164412",
+    "calibration_schema_version": "1.1",
+    "created_at_utc": "2026-09-11T16:44:12.957992+00:00",
+    "detector_configuration": {
+      "configuration": "hth-pipeline/config/detectors/contour.json",
+      "detector_id": "contour",
+      "sha256": "50c7162c44c11534c7f4f179f541c7934e96c3e4115fd0375dda15c8ebbbd886"
+    },
+    "golden_set": {
+      "collection_id": "HTH-GOLDEN-0002",
+      "configuration": "hth-pipeline/config/golden_sets/HTH-GOLDEN-0002.golden-set.json",
+      "description": "Golden Set candidate workspace synthesized from Baptisms: San Antonio. Baptism Records 1788\u20131824, 1858\u20131898.",
+      "page_count": 18,
+      "page_ordinals": [
+        3,
+        64,
+        65,
+        95,
+        100,
+        101,
+        155,
+        197,
+        251,
+        298,
+        380,
+        381,
+        400,
+        500,
+        710,
+        728,
+        821,
+        920
+      ],
+      "schema_version": "1.0",
+      "sha256": "00a8b142ecd24f49637af5c5e5e31e5b17f64065c33d91a5f4fbeccaaa04a6ee"
+    },
+    "model_selection": null,
+    "pipeline": {
+      "commit": "a213c83aac58a66b40a49cbcbced602fcc8dee05",
+      "opencv": "4.14.0",
+      "python": "3.12.0",
+      "source_commit": "5811f22162c314d989f86081b080e857d5b46fa8"
+    },
+    "source_document": {
+      "image_count": 929,
+      "title": "Baptisms: San Antonio. Baptism Records 1788\u20131824, 1858\u20131898"
+    }
+  },
+  "calibration_status": "partial",
+  "canonical_search_space": {
+    "configured_zombie_parameters": [],
+    "denominator": "exhaustive-with-zombies",
+    "effective_parameter_sets": 1458,
+    "evaluated_search_space_parameter_sets": 122,
+    "exhaustive_with_zombies_parameter_sets": 1458,
+    "live_exhaustive_parameter_sets": 1458,
+    "reference_evaluations_excluded_from_analysis": true
+  },
+  "detector": "contour",
+  "detector_evidence": {
+    "detector_id": "contour",
+    "evidence_sources": [
+      {
+        "function": "Primary",
+        "interpretation": "Generates page-region hypotheses from thresholded contours.",
+        "source": "Contour geometry"
+      },
+      {
+        "function": "Supporting",
+        "interpretation": "Attempts to recover page boundaries split across multiple contours.",
+        "source": "Fragment merging"
+      }
+    ],
+    "friendly_name": "Contour Envelope",
+    "role": "Generator",
+    "short_name": "Contour"
+  },
+  "detector_selection_intelligence": {
+    "applicability": {
+      "detector_configuration": {
+        "configuration": "hth-pipeline/config/detectors/contour.json",
+        "detector_id": "contour",
+        "sha256": "50c7162c44c11534c7f4f179f541c7934e96c3e4115fd0375dda15c8ebbbd886"
+      },
+      "golden_set": {
+        "collection_id": "HTH-GOLDEN-0002",
+        "configuration": "hth-pipeline/config/golden_sets/HTH-GOLDEN-0002.golden-set.json",
+        "description": "Golden Set candidate workspace synthesized from Baptisms: San Antonio. Baptism Records 1788\u20131824, 1858\u20131898.",
+        "page_count": 18,
+        "page_ordinals": [
+          3,
+          64,
+          65,
+          95,
+          100,
+          101,
+          155,
+          197,
+          251,
+          298,
+          380,
+          381,
+          400,
+          500,
+          710,
+          728,
+          821,
+          920
+        ],
+        "schema_version": "1.0",
+        "sha256": "00a8b142ecd24f49637af5c5e5e31e5b17f64065c33d91a5f4fbeccaaa04a6ee"
+      },
+      "revalidate_when": [
+        "source document changes",
+        "Golden Set changes",
+        "detector configuration changes",
+        "effect-size policy changes"
+      ],
+      "source_document": {
+        "image_count": 929,
+        "title": "Baptisms: San Antonio. Baptism Records 1788\u20131824, 1858\u20131898"
+      }
+    },
+    "avg_iou_success": 0.8525643,
+    "best_avg_iou": 0.80519962,
+    "calibration_evidence": {
+      "rating": "Low",
+      "reasons": [
+        "partial or adaptive search",
+        "many parameter sets failed at least one page",
+        "broad near-best basin"
+      ]
+    },
+    "equivalent_best_coverage": 0.22950819672131148,
+    "failure_count": 1,
+    "minimum_iou": 0.0,
+    "near_best_coverage": 0.5,
+    "recommended_detector_id": "contour",
+    "recommended_parameter_set_id": "0ce3bc6168b0",
+    "recommended_parameters": {
+      "bbox_padding_fraction": 0.004375,
+      "close_iterations": 0,
+      "close_kernel_fraction": 0.012375,
+      "merge_fragmented_contours": true,
+      "minimum_contour_area_fraction": 0.2,
+      "polygon_epsilon_fraction": 0.0340703125,
+      "rectangularity_weight": 0.4
+    },
+    "recommended_search_domains": [
+      "exhaustive_with_zombies",
+      "exhaustive",
+      "non_dormant",
+      "low_plus",
+      "moderate_plus",
+      "important_plus",
+      "critical"
+    ],
+    "stddev_iou": 0.24579224
+  },
+  "domain_space": {
+    "critical": {
+      "fixed_parameter_policy": "baseline",
+      "fixed_parameters": {},
+      "included_parameters": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction",
+        "close_iterations"
+      ],
+      "parameter_set_count": 1458
+    },
+    "exhaustive": {
+      "fixed_parameter_policy": "baseline",
+      "fixed_parameters": {},
+      "included_parameters": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction",
+        "close_iterations"
+      ],
+      "parameter_set_count": 1458
+    },
+    "exhaustive_with_zombies": {
+      "fixed_parameter_policy": "baseline",
+      "fixed_parameters": {},
+      "included_parameters": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction",
+        "close_iterations"
+      ],
+      "parameter_set_count": 1458
+    },
+    "important_plus": {
+      "fixed_parameter_policy": "baseline",
+      "fixed_parameters": {},
+      "included_parameters": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction",
+        "close_iterations"
+      ],
+      "parameter_set_count": 1458
+    },
+    "low_plus": {
+      "fixed_parameter_policy": "baseline",
+      "fixed_parameters": {},
+      "included_parameters": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction",
+        "close_iterations"
+      ],
+      "parameter_set_count": 1458
+    },
+    "moderate_plus": {
+      "fixed_parameter_policy": "baseline",
+      "fixed_parameters": {},
+      "included_parameters": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction",
+        "close_iterations"
+      ],
+      "parameter_set_count": 1458
+    },
+    "non_dormant": {
+      "fixed_parameter_policy": "baseline",
+      "fixed_parameters": {},
+      "included_parameters": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction",
+        "close_iterations"
+      ],
+      "parameter_set_count": 1458
+    }
+  },
+  "domain_space_intelligence": {
+    "available_domains": [
+      "exhaustive_with_zombies",
+      "exhaustive",
+      "non_dormant",
+      "low_plus",
+      "moderate_plus",
+      "important_plus",
+      "critical"
+    ],
+    "default_strategy": "exhaustive",
+    "domains": {
+      "critical": {
+        "fixed_parameter_policy": "baseline",
+        "fixed_parameters": {},
+        "included_parameters": [
+          "merge_fragmented_contours",
+          "close_kernel_fraction",
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction",
+          "rectangularity_weight",
+          "minimum_contour_area_fraction",
+          "close_iterations"
+        ],
+        "parameter_set_count": 1458
+      },
+      "exhaustive": {
+        "fixed_parameter_policy": "baseline",
+        "fixed_parameters": {},
+        "included_parameters": [
+          "merge_fragmented_contours",
+          "close_kernel_fraction",
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction",
+          "rectangularity_weight",
+          "minimum_contour_area_fraction",
+          "close_iterations"
+        ],
+        "parameter_set_count": 1458
+      },
+      "exhaustive_with_zombies": {
+        "fixed_parameter_policy": "baseline",
+        "fixed_parameters": {},
+        "included_parameters": [
+          "merge_fragmented_contours",
+          "close_kernel_fraction",
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction",
+          "rectangularity_weight",
+          "minimum_contour_area_fraction",
+          "close_iterations"
+        ],
+        "parameter_set_count": 1458
+      },
+      "important_plus": {
+        "fixed_parameter_policy": "baseline",
+        "fixed_parameters": {},
+        "included_parameters": [
+          "merge_fragmented_contours",
+          "close_kernel_fraction",
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction",
+          "rectangularity_weight",
+          "minimum_contour_area_fraction",
+          "close_iterations"
+        ],
+        "parameter_set_count": 1458
+      },
+      "low_plus": {
+        "fixed_parameter_policy": "baseline",
+        "fixed_parameters": {},
+        "included_parameters": [
+          "merge_fragmented_contours",
+          "close_kernel_fraction",
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction",
+          "rectangularity_weight",
+          "minimum_contour_area_fraction",
+          "close_iterations"
+        ],
+        "parameter_set_count": 1458
+      },
+      "moderate_plus": {
+        "fixed_parameter_policy": "baseline",
+        "fixed_parameters": {},
+        "included_parameters": [
+          "merge_fragmented_contours",
+          "close_kernel_fraction",
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction",
+          "rectangularity_weight",
+          "minimum_contour_area_fraction",
+          "close_iterations"
+        ],
+        "parameter_set_count": 1458
+      },
+      "non_dormant": {
+        "fixed_parameter_policy": "baseline",
+        "fixed_parameters": {},
+        "included_parameters": [
+          "merge_fragmented_contours",
+          "close_kernel_fraction",
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction",
+          "rectangularity_weight",
+          "minimum_contour_area_fraction",
+          "close_iterations"
+        ],
+        "parameter_set_count": 1458
+      }
+    },
+    "fallback_order": [
+      "critical",
+      "important_plus",
+      "moderate_plus",
+      "low_plus",
+      "non_dormant",
+      "exhaustive"
+    ],
+    "scope": "Golden Set and detector configuration specific"
+  },
+  "evidence_tier": "partial",
+  "interaction_method": {
+    "note": "Pairwise interaction importance is estimated from a deterministic sample and is exploratory, not causal.",
+    "parameters_considered": [
+      "merge_fragmented_contours",
+      "close_kernel_fraction",
+      "bbox_padding_fraction",
+      "polygon_epsilon_fraction",
+      "rectangularity_weight",
+      "minimum_contour_area_fraction"
+    ],
+    "sample_size": 122,
+    "sample_step": 1
+  },
+  "interactions": [
+    {
+      "eta_squared": 0.6476027344345863,
+      "incremental_importance": 0.18460824163439365,
+      "parameters": [
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.5712015597954815,
+      "incremental_importance": 0.17086710810144962,
+      "parameters": [
+        "polygon_epsilon_fraction",
+        "rectangularity_weight"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.4284053739717846,
+      "incremental_importance": 0.15214580842851405,
+      "parameters": [
+        "rectangularity_weight",
+        "minimum_contour_area_fraction"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.6353962399826054,
+      "incremental_importance": 0.13495642925773743,
+      "parameters": [
+        "close_kernel_fraction",
+        "polygon_epsilon_fraction"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.6271147198873845,
+      "incremental_importance": 0.12667490916251656,
+      "parameters": [
+        "close_kernel_fraction",
+        "minimum_contour_area_fraction"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.5197820592112884,
+      "incremental_importance": 0.11944760751725653,
+      "parameters": [
+        "polygon_epsilon_fraction",
+        "minimum_contour_area_fraction"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.5632213128883842,
+      "incremental_importance": 0.10022682008819156,
+      "parameters": [
+        "bbox_padding_fraction",
+        "minimum_contour_area_fraction"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.9737493130132611,
+      "incremental_importance": 0.09498361928412236,
+      "parameters": [
+        "merge_fragmented_contours",
+        "minimum_contour_area_fraction"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.5532544498884882,
+      "incremental_importance": 0.09025995708829554,
+      "parameters": [
+        "bbox_padding_fraction",
+        "rectangularity_weight"
+      ],
+      "sample_size": 122
+    },
+    {
+      "eta_squared": 0.5820666529422509,
+      "incremental_importance": 0.08162684221738292,
+      "parameters": [
+        "close_kernel_fraction",
+        "bbox_padding_fraction"
+      ],
+      "sample_size": 122
+    }
+  ],
+  "landscape": {
+    "best_mean_iou": 0.80519962,
+    "equivalent_tolerance": 0.0001,
+    "equivalent_winner_count": 28,
+    "equivalent_winner_share": 0.22950819672131148,
+    "mean_mean_iou": 0.784809025409836,
+    "median_mean_iou": 0.804059015,
+    "minimum_mean_iou": 0.66357863,
+    "near_best_count": 61,
+    "near_best_share": 0.5,
+    "near_best_tolerance": 0.001,
+    "p90_mean_iou": 0.80519962,
+    "p95_mean_iou": 0.80519962,
+    "p99_mean_iou": 0.80519962,
+    "stddev_mean_iou": 0.03816172824091483
+  },
+  "measurement_state": {
+    "eligible_parameter_set_count": 122,
+    "failure_reason_counts": {
+      "no_plausible_contour": 156
+    },
+    "informative": true,
+    "page_evaluation_count": 2196,
+    "page_evaluations": 2196,
+    "parameter_set_count": 122,
+    "positive_iou_page_evaluation_count": 2040,
+    "positive_iou_page_evaluations": 2040,
+    "reason": "Regression contains valid positive-overlap measurements.",
+    "status": "measured",
+    "successful_page_evaluation_count": 2040,
+    "successful_page_evaluations": 2040,
+    "terminal_success": true
+  },
+  "page_sensitivity": [
+    {
+      "global_ordinal": 3,
+      "maximum_iou": 0.93093879,
+      "mean_iou": 0.7465348997540983,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.264578382295087,
+      "success_rate": 0.9508196721311475
+    },
+    {
+      "global_ordinal": 64,
+      "maximum_iou": 0.60619348,
+      "mean_iou": 0.5143054961475415,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.19271041788448814,
+      "success_rate": 0.8770491803278688
+    },
+    {
+      "global_ordinal": 65,
+      "maximum_iou": 0.86390969,
+      "mean_iou": 0.8615857477868857,
+      "minimum_iou": 0.84822775,
+      "stddev_iou": 0.005121193132617229,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 95,
+      "maximum_iou": 0.53512433,
+      "mean_iou": 0.5279421906557384,
+      "minimum_iou": 0.52192199,
+      "stddev_iou": 0.004098853115424024,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 100,
+      "maximum_iou": 0.9599815,
+      "mean_iou": 0.9535249295081959,
+      "minimum_iou": 0.92856575,
+      "stddev_iou": 0.010204392422811343,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 101,
+      "maximum_iou": 0.9503511,
+      "mean_iou": 0.9321297089344276,
+      "minimum_iou": 0.89694595,
+      "stddev_iou": 0.016593610134439586,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 155,
+      "maximum_iou": 0.97820672,
+      "mean_iou": 0.9657075947540985,
+      "minimum_iou": 0.88297429,
+      "stddev_iou": 0.018430659209382038,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 197,
+      "maximum_iou": 0.9329464,
+      "mean_iou": 0.9196140556557378,
+      "minimum_iou": 0.84050139,
+      "stddev_iou": 0.022064430249481543,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 251,
+      "maximum_iou": 0.82858629,
+      "mean_iou": 0.6951485799180331,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.25158377146789507,
+      "success_rate": 0.8934426229508197
+    },
+    {
+      "global_ordinal": 298,
+      "maximum_iou": 0.86639726,
+      "mean_iou": 0.8536553240163934,
+      "minimum_iou": 0.82893624,
+      "stddev_iou": 0.011638488013804469,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 380,
+      "maximum_iou": 0.0,
+      "mean_iou": 0.0,
+      "minimum_iou": 0.0,
+      "stddev_iou": 0.0,
+      "success_rate": 0.0
+    },
+    {
+      "global_ordinal": 381,
+      "maximum_iou": 0.52067263,
+      "mean_iou": 0.5062528241803275,
+      "minimum_iou": 0.49410603,
+      "stddev_iou": 0.008787458047127113,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 400,
+      "maximum_iou": 0.96623662,
+      "mean_iou": 0.9469261800819688,
+      "minimum_iou": 0.8967857,
+      "stddev_iou": 0.017624668455234003,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 500,
+      "maximum_iou": 0.96951552,
+      "mean_iou": 0.960527926147541,
+      "minimum_iou": 0.92749271,
+      "stddev_iou": 0.013879621828355638,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 710,
+      "maximum_iou": 0.98764504,
+      "mean_iou": 0.9741907348360657,
+      "minimum_iou": 0.96033738,
+      "stddev_iou": 0.008974273820099184,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 728,
+      "maximum_iou": 0.87809771,
+      "mean_iou": 0.8611519004098374,
+      "minimum_iou": 0.82843654,
+      "stddev_iou": 0.015430362232261402,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 821,
+      "maximum_iou": 0.94447817,
+      "mean_iou": 0.9327732936065569,
+      "minimum_iou": 0.89841161,
+      "stddev_iou": 0.015045267586643167,
+      "success_rate": 1.0
+    },
+    {
+      "global_ordinal": 920,
+      "maximum_iou": 0.98943068,
+      "mean_iou": 0.9745910732786895,
+      "minimum_iou": 0.96124441,
+      "stddev_iou": 0.008565510845637538,
+      "success_rate": 1.0
+    }
+  ],
+  "parameter_influence": [
+    {
+      "best_values": [
+        {
+          "count": 107,
+          "mean_iou": 0.7982032729906539,
+          "value": "true"
+        },
+        {
+          "count": 15,
+          "mean_iou": 0.6892633926666666,
+          "value": "false"
+        }
+      ],
+      "classification": "Critical",
+      "eta_squared": 0.8787656937291387,
+      "evidence_source": "current run",
+      "mean_iou_range": 0.10893988032398727,
+      "near_best_value_coverage": 0.5,
+      "parameter": "merge_fragmented_contours",
+      "value_count": 2
+    },
+    {
+      "best_values": [
+        {
+          "count": 1,
+          "mean_iou": 0.80519962,
+          "value": "0.00925977"
+        },
+        {
+          "count": 1,
+          "mean_iou": 0.80519962,
+          "value": "0.0114375"
+        },
+        {
+          "count": 1,
+          "mean_iou": 0.80519962,
+          "value": "0.0122188"
+        }
+      ],
+      "classification": "Critical",
+      "eta_squared": 0.500439810724868,
+      "evidence_source": "current run",
+      "mean_iou_range": 0.07255692166666672,
+      "near_best_value_coverage": 0.7288135593220338,
+      "parameter": "close_kernel_fraction",
+      "value_count": 59
+    },
+    {
+      "best_values": [
+        {
+          "count": 1,
+          "mean_iou": 0.80519962,
+          "value": "0.00436523"
+        },
+        {
+          "count": 1,
+          "mean_iou": 0.80519962,
+          "value": "0.0046875"
+        },
+        {
+          "count": 26,
+          "mean_iou": 0.8051996199999999,
+          "value": "0.004375"
+        }
+      ],
+      "classification": "Critical",
+      "eta_squared": 0.4629944928001926,
+      "evidence_source": "current run",
+      "mean_iou_range": 0.06786523071428574,
+      "near_best_value_coverage": 0.52,
+      "parameter": "bbox_padding_fraction",
+      "value_count": 25
+    },
+    {
+      "best_values": [
+        {
+          "count": 2,
+          "mean_iou": 0.80519962,
+          "value": "0.0185312"
+        },
+        {
+          "count": 1,
+          "mean_iou": 0.80519962,
+          "value": "0.0238438"
+        },
+        {
+          "count": 1,
+          "mean_iou": 0.80519962,
+          "value": "0.0280938"
+        }
+      ],
+      "classification": "Critical",
+      "eta_squared": 0.40033445169403187,
+      "evidence_source": "current run",
+      "mean_iou_range": 0.06872904181818185,
+      "near_best_value_coverage": 0.6206896551724138,
+      "parameter": "polygon_epsilon_fraction",
+      "value_count": 29
+    },
+    {
+      "best_values": [
+        {
+          "count": 96,
+          "mean_iou": 0.7951841181249995,
+          "value": "0.4"
+        },
+        {
+          "count": 13,
+          "mean_iou": 0.7512824130769229,
+          "value": "0.25"
+        },
+        {
+          "count": 13,
+          "mean_iou": 0.7417195684615385,
+          "value": "0.1"
+        }
+      ],
+      "classification": "Critical",
+      "eta_squared": 0.2762595655432705,
+      "evidence_source": "current run",
+      "mean_iou_range": 0.053464549663460925,
+      "near_best_value_coverage": 0.3333333333333333,
+      "parameter": "rectangularity_weight",
+      "value_count": 3
+    },
+    {
+      "best_values": [
+        {
+          "count": 99,
+          "mean_iou": 0.793923025151515,
+          "value": "0.2"
+        },
+        {
+          "count": 2,
+          "mean_iou": 0.77271399,
+          "value": "0.09"
+        },
+        {
+          "count": 2,
+          "mean_iou": 0.77271399,
+          "value": "0.16"
+        }
+      ],
+      "classification": "Critical",
+      "eta_squared": 0.26677436724566916,
+      "evidence_source": "current run",
+      "mean_iou_range": 0.05843836086580079,
+      "near_best_value_coverage": 0.2,
+      "parameter": "minimum_contour_area_fraction",
+      "value_count": 5
+    },
+    {
+      "best_values": [
+        {
+          "count": 99,
+          "mean_iou": 0.7922110592929287,
+          "value": "0"
+        },
+        {
+          "count": 6,
+          "mean_iou": 0.7631723666666667,
+          "value": "1"
+        },
+        {
+          "count": 17,
+          "mean_iou": 0.7493395311764706,
+          "value": "2"
+        }
+      ],
+      "classification": "Critical",
+      "eta_squared": 0.16671589599092412,
+      "evidence_source": "current run",
+      "mean_iou_range": 0.04287152811645811,
+      "near_best_value_coverage": 0.3333333333333333,
+      "parameter": "close_iterations",
+      "value_count": 3
+    }
+  ],
+  "parameter_intelligence": {
+    "active_parameters": [
+      "merge_fragmented_contours",
+      "close_kernel_fraction",
+      "bbox_padding_fraction",
+      "polygon_epsilon_fraction",
+      "rectangularity_weight",
+      "minimum_contour_area_fraction",
+      "close_iterations"
+    ],
+    "classification_thresholds": {
+      "critical": {
+        "eta_squared_minimum": 0.14
+      },
+      "dormant": {
+        "eta_squared_below": 0.005,
+        "eta_squared_minimum": 0.0005,
+        "note": "also includes eta^2 < 0.0005 when the zombie practical-range test is not met"
+      },
+      "important": {
+        "eta_squared_below": 0.14,
+        "eta_squared_minimum": 0.06
+      },
+      "low": {
+        "eta_squared_below": 0.02,
+        "eta_squared_minimum": 0.005
+      },
+      "moderate": {
+        "eta_squared_below": 0.06,
+        "eta_squared_minimum": 0.02
+      },
+      "zombie": {
+        "and_avg_iou_range_below": 0.0005,
+        "eta_squared_below": 0.0005
+      }
+    },
+    "configured_zombie_parameters": [],
+    "dormant_parameters": [],
+    "effect_size_method": "one-way eta-squared over Avg IoU",
+    "interaction_method": {
+      "note": "Pairwise interaction importance is estimated from a deterministic sample and is exploratory, not causal.",
+      "parameters_considered": [
+        "merge_fragmented_contours",
+        "close_kernel_fraction",
+        "bbox_padding_fraction",
+        "polygon_epsilon_fraction",
+        "rectangularity_weight",
+        "minimum_contour_area_fraction"
+      ],
+      "sample_size": 122,
+      "sample_step": 1
+    },
+    "interactions": [
+      {
+        "eta_squared": 0.6476027344345863,
+        "incremental_importance": 0.18460824163439365,
+        "parameters": [
+          "bbox_padding_fraction",
+          "polygon_epsilon_fraction"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.5712015597954815,
+        "incremental_importance": 0.17086710810144962,
+        "parameters": [
+          "polygon_epsilon_fraction",
+          "rectangularity_weight"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.4284053739717846,
+        "incremental_importance": 0.15214580842851405,
+        "parameters": [
+          "rectangularity_weight",
+          "minimum_contour_area_fraction"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.6353962399826054,
+        "incremental_importance": 0.13495642925773743,
+        "parameters": [
+          "close_kernel_fraction",
+          "polygon_epsilon_fraction"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.6271147198873845,
+        "incremental_importance": 0.12667490916251656,
+        "parameters": [
+          "close_kernel_fraction",
+          "minimum_contour_area_fraction"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.5197820592112884,
+        "incremental_importance": 0.11944760751725653,
+        "parameters": [
+          "polygon_epsilon_fraction",
+          "minimum_contour_area_fraction"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.5632213128883842,
+        "incremental_importance": 0.10022682008819156,
+        "parameters": [
+          "bbox_padding_fraction",
+          "minimum_contour_area_fraction"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.9737493130132611,
+        "incremental_importance": 0.09498361928412236,
+        "parameters": [
+          "merge_fragmented_contours",
+          "minimum_contour_area_fraction"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.5532544498884882,
+        "incremental_importance": 0.09025995708829554,
+        "parameters": [
+          "bbox_padding_fraction",
+          "rectangularity_weight"
+        ],
+        "sample_size": 122
+      },
+      {
+        "eta_squared": 0.5820666529422509,
+        "incremental_importance": 0.08162684221738292,
+        "parameters": [
+          "close_kernel_fraction",
+          "bbox_padding_fraction"
+        ],
+        "sample_size": 122
+      }
+    ],
+    "page_sensitivity": [
+      {
+        "global_ordinal": 3,
+        "maximum_iou": 0.93093879,
+        "mean_iou": 0.7465348997540983,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.264578382295087,
+        "success_rate": 0.9508196721311475
+      },
+      {
+        "global_ordinal": 64,
+        "maximum_iou": 0.60619348,
+        "mean_iou": 0.5143054961475415,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.19271041788448814,
+        "success_rate": 0.8770491803278688
+      },
+      {
+        "global_ordinal": 65,
+        "maximum_iou": 0.86390969,
+        "mean_iou": 0.8615857477868857,
+        "minimum_iou": 0.84822775,
+        "stddev_iou": 0.005121193132617229,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 95,
+        "maximum_iou": 0.53512433,
+        "mean_iou": 0.5279421906557384,
+        "minimum_iou": 0.52192199,
+        "stddev_iou": 0.004098853115424024,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 100,
+        "maximum_iou": 0.9599815,
+        "mean_iou": 0.9535249295081959,
+        "minimum_iou": 0.92856575,
+        "stddev_iou": 0.010204392422811343,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 101,
+        "maximum_iou": 0.9503511,
+        "mean_iou": 0.9321297089344276,
+        "minimum_iou": 0.89694595,
+        "stddev_iou": 0.016593610134439586,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 155,
+        "maximum_iou": 0.97820672,
+        "mean_iou": 0.9657075947540985,
+        "minimum_iou": 0.88297429,
+        "stddev_iou": 0.018430659209382038,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 197,
+        "maximum_iou": 0.9329464,
+        "mean_iou": 0.9196140556557378,
+        "minimum_iou": 0.84050139,
+        "stddev_iou": 0.022064430249481543,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 251,
+        "maximum_iou": 0.82858629,
+        "mean_iou": 0.6951485799180331,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.25158377146789507,
+        "success_rate": 0.8934426229508197
+      },
+      {
+        "global_ordinal": 298,
+        "maximum_iou": 0.86639726,
+        "mean_iou": 0.8536553240163934,
+        "minimum_iou": 0.82893624,
+        "stddev_iou": 0.011638488013804469,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 380,
+        "maximum_iou": 0.0,
+        "mean_iou": 0.0,
+        "minimum_iou": 0.0,
+        "stddev_iou": 0.0,
+        "success_rate": 0.0
+      },
+      {
+        "global_ordinal": 381,
+        "maximum_iou": 0.52067263,
+        "mean_iou": 0.5062528241803275,
+        "minimum_iou": 0.49410603,
+        "stddev_iou": 0.008787458047127113,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 400,
+        "maximum_iou": 0.96623662,
+        "mean_iou": 0.9469261800819688,
+        "minimum_iou": 0.8967857,
+        "stddev_iou": 0.017624668455234003,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 500,
+        "maximum_iou": 0.96951552,
+        "mean_iou": 0.960527926147541,
+        "minimum_iou": 0.92749271,
+        "stddev_iou": 0.013879621828355638,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 710,
+        "maximum_iou": 0.98764504,
+        "mean_iou": 0.9741907348360657,
+        "minimum_iou": 0.96033738,
+        "stddev_iou": 0.008974273820099184,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 728,
+        "maximum_iou": 0.87809771,
+        "mean_iou": 0.8611519004098374,
+        "minimum_iou": 0.82843654,
+        "stddev_iou": 0.015430362232261402,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 821,
+        "maximum_iou": 0.94447817,
+        "mean_iou": 0.9327732936065569,
+        "minimum_iou": 0.89841161,
+        "stddev_iou": 0.015045267586643167,
+        "success_rate": 1.0
+      },
+      {
+        "global_ordinal": 920,
+        "maximum_iou": 0.98943068,
+        "mean_iou": 0.9745910732786895,
+        "minimum_iou": 0.96124441,
+        "stddev_iou": 0.008565510845637538,
+        "success_rate": 1.0
+      }
+    ],
+    "parameters": [
+      {
+        "best_values": [
+          {
+            "count": 107,
+            "mean_iou": 0.7982032729906539,
+            "value": "true"
+          },
+          {
+            "count": 15,
+            "mean_iou": 0.6892633926666666,
+            "value": "false"
+          }
+        ],
+        "classification": "Critical",
+        "eta_squared": 0.8787656937291387,
+        "evidence_source": "current run",
+        "mean_iou_range": 0.10893988032398727,
+        "near_best_value_coverage": 0.5,
+        "parameter": "merge_fragmented_contours",
+        "value_count": 2
+      },
+      {
+        "best_values": [
+          {
+            "count": 1,
+            "mean_iou": 0.80519962,
+            "value": "0.00925977"
+          },
+          {
+            "count": 1,
+            "mean_iou": 0.80519962,
+            "value": "0.0114375"
+          },
+          {
+            "count": 1,
+            "mean_iou": 0.80519962,
+            "value": "0.0122188"
+          }
+        ],
+        "classification": "Critical",
+        "eta_squared": 0.500439810724868,
+        "evidence_source": "current run",
+        "mean_iou_range": 0.07255692166666672,
+        "near_best_value_coverage": 0.7288135593220338,
+        "parameter": "close_kernel_fraction",
+        "value_count": 59
+      },
+      {
+        "best_values": [
+          {
+            "count": 1,
+            "mean_iou": 0.80519962,
+            "value": "0.00436523"
+          },
+          {
+            "count": 1,
+            "mean_iou": 0.80519962,
+            "value": "0.0046875"
+          },
+          {
+            "count": 26,
+            "mean_iou": 0.8051996199999999,
+            "value": "0.004375"
+          }
+        ],
+        "classification": "Critical",
+        "eta_squared": 0.4629944928001926,
+        "evidence_source": "current run",
+        "mean_iou_range": 0.06786523071428574,
+        "near_best_value_coverage": 0.52,
+        "parameter": "bbox_padding_fraction",
+        "value_count": 25
+      },
+      {
+        "best_values": [
+          {
+            "count": 2,
+            "mean_iou": 0.80519962,
+            "value": "0.0185312"
+          },
+          {
+            "count": 1,
+            "mean_iou": 0.80519962,
+            "value": "0.0238438"
+          },
+          {
+            "count": 1,
+            "mean_iou": 0.80519962,
+            "value": "0.0280938"
+          }
+        ],
+        "classification": "Critical",
+        "eta_squared": 0.40033445169403187,
+        "evidence_source": "current run",
+        "mean_iou_range": 0.06872904181818185,
+        "near_best_value_coverage": 0.6206896551724138,
+        "parameter": "polygon_epsilon_fraction",
+        "value_count": 29
+      },
+      {
+        "best_values": [
+          {
+            "count": 96,
+            "mean_iou": 0.7951841181249995,
+            "value": "0.4"
+          },
+          {
+            "count": 13,
+            "mean_iou": 0.7512824130769229,
+            "value": "0.25"
+          },
+          {
+            "count": 13,
+            "mean_iou": 0.7417195684615385,
+            "value": "0.1"
+          }
+        ],
+        "classification": "Critical",
+        "eta_squared": 0.2762595655432705,
+        "evidence_source": "current run",
+        "mean_iou_range": 0.053464549663460925,
+        "near_best_value_coverage": 0.3333333333333333,
+        "parameter": "rectangularity_weight",
+        "value_count": 3
+      },
+      {
+        "best_values": [
+          {
+            "count": 99,
+            "mean_iou": 0.793923025151515,
+            "value": "0.2"
+          },
+          {
+            "count": 2,
+            "mean_iou": 0.77271399,
+            "value": "0.09"
+          },
+          {
+            "count": 2,
+            "mean_iou": 0.77271399,
+            "value": "0.16"
+          }
+        ],
+        "classification": "Critical",
+        "eta_squared": 0.26677436724566916,
+        "evidence_source": "current run",
+        "mean_iou_range": 0.05843836086580079,
+        "near_best_value_coverage": 0.2,
+        "parameter": "minimum_contour_area_fraction",
+        "value_count": 5
+      },
+      {
+        "best_values": [
+          {
+            "count": 99,
+            "mean_iou": 0.7922110592929287,
+            "value": "0"
+          },
+          {
+            "count": 6,
+            "mean_iou": 0.7631723666666667,
+            "value": "1"
+          },
+          {
+            "count": 17,
+            "mean_iou": 0.7493395311764706,
+            "value": "2"
+          }
+        ],
+        "classification": "Critical",
+        "eta_squared": 0.16671589599092412,
+        "evidence_source": "current run",
+        "mean_iou_range": 0.04287152811645811,
+        "near_best_value_coverage": 0.3333333333333333,
+        "parameter": "close_iterations",
+        "value_count": 3
+      }
+    ],
+    "zombie_parameters": []
+  },
+  "persistence": {
+    "index": "indexes/calibration-index.json",
+    "published_at_utc": "2026-09-11T20:46:17.357766Z",
+    "raw_evidence": {
+      "encoding": "gzip",
+      "evidence": "raw/evidence.jsonl.gz",
+      "results": "raw/results.csv.gz"
+    },
+    "record_path": "source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260911-164412",
+    "store": "results-repository"
+  },
+  "recommendations": {
+    "configured_zombie_parameters": [],
+    "dormant_parameters": [],
+    "note": "Dormant and Zombie are measured effect-size classes scoped to this Golden Set/grid. Zombie parameters may be isolated from normal search only when retained audited domains support explicit revalidation.",
+    "retain_for_revalidation": false,
+    "zombie_parameters": []
+  },
+  "regression_metadata": {
+    "average_eval_rate": 2.6790847342290416,
+    "baseline_parameters": {
+      "bbox_padding_fraction": 0.0,
+      "close_iterations": 0,
+      "close_kernel_fraction": 0.0,
+      "merge_fragmented_contours": false,
+      "minimum_contour_area_fraction": 0.12,
+      "polygon_epsilon_fraction": 0.018,
+      "rectangularity_weight": 0.25
+    },
+    "canonical_search_space": {
+      "adaptive_candidate_parameter_sets": 1458,
+      "configured_zombie_parameters": [],
+      "denominator": "exhaustive-with-zombies",
+      "effective_parameter_sets": 1458,
+      "exhaustive_with_zombies_parameter_sets": 1458,
+      "live_exhaustive_parameter_sets": 1458,
+      "schema_version": "1",
+      "strategy": "adaptive"
+    },
+    "configured_threads": 8,
+    "detector_pipeline": {
+      "exact_execution_shape": true,
+      "execution_shape_source": "preferred-runtime-index-lpt-optimizer",
+      "execution_thread_budget": "384",
+      "loading_strategy": "lpt",
+      "pipeline_count": 47,
+      "pipeline_number": 43,
+      "queue_position": "45",
+      "ranked_quality": "0.77454360",
+      "runtime_estimate_seconds": "55.161",
+      "runtime_estimate_source": "runtime-index:mode+strategy+threads+dimension+golden-set+runner:score=126+scheduler-slot",
+      "stagger_minutes": 0
+    },
+    "evaluated_parameter_sets": 122,
+    "evidence_tier": "partial",
+    "execution_environment": {
+      "available_cpu_count": 192,
+      "cpu_model": "AMD EPYC 9655 96-Core Processor",
+      "execution_target": "GitHub Hosted",
+      "github_repository": "dlstupka/hth",
+      "github_run_attempt": "1",
+      "github_run_id": "34623379196",
+      "github_runner_labels": [
+        "self-hosted",
+        "192t"
+      ],
+      "logical_cpu_count": 192,
+      "machine_name": "atlhwe-lsf317",
+      "memory_bytes": 3246213582848,
+      "memory_gib": 3023.27,
+      "numpy_version": "2.4.6",
+      "opencv_version": "4.14.0",
+      "physical_core_count": 192,
+      "pipeline_commit": "a213c83aac58a66b40a49cbcbced602fcc8dee05",
+      "platform": "Linux-4.18.0-553.124.1.el8_10.x86_64-x86_64-with-glibc2.28",
+      "python_version": "3.12.0",
+      "runner_arch": "X64",
+      "runner_environment": "self-hosted",
+      "runner_name": "rh8-al317",
+      "runner_os": "Linux",
+      "smt_enabled": false
+    },
+    "failed_page_evaluations": 156,
+    "fixed_parameter_policy": "baseline",
+    "golden_set_pages": 18,
+    "live_possible_parameter_sets": 1458,
+    "page_evaluations": 2196,
+    "planned_parameter_sets": 122,
+    "possible_parameter_sets": 1458,
+    "requested_strategy": "adaptive",
+    "resolved_strategy": "adaptive",
+    "run_mode": "full",
+    "strategy_fallback_reason": null,
+    "zombie_parameter_evidence": {},
+    "zombie_parameters": [],
+    "zombie_possible_parameter_sets": 1458
+  },
+  "run_mode": "full",
+  "schema_version": "1.1",
+  "scope_note": "All conclusions are specific to the evaluated Golden Set and configured parameter grid.",
+  "search": {
+    "exhaustive_complete": false,
+    "fully_successful_parameter_sets": 0,
+    "fully_successful_rate": 0.0,
+    "parameter_sets": 122,
+    "possible_parameter_sets": 1458,
+    "strategy": "adaptive"
+  }
+}
