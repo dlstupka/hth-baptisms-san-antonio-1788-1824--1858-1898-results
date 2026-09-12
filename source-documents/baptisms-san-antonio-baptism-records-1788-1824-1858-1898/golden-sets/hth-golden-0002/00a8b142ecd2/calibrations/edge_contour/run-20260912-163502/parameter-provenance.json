@@ -1,0 +1,1770 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "edge_contour",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "958a995e6b36cf6431e45752f2997f42d4312be8c9546b66cef8c00397b51ca9",
+    "parameter_order": [
+      "minimum_contour_area_fraction",
+      "epsilon_max_fraction",
+      "minimum_rectangularity",
+      "lsd_refine_mode",
+      "lsd_scale",
+      "minimum_segment_length_fraction",
+      "edge_support_dilation_fraction",
+      "minimum_edge_support",
+      "edge_support_weight"
+    ],
+    "values": {
+      "minimum_contour_area_fraction": [
+        0.08,
+        0.12,
+        0.18
+      ],
+      "epsilon_max_fraction": [
+        0.03,
+        0.04,
+        0.06
+      ],
+      "minimum_rectangularity": [
+        0.45,
+        0.55,
+        0.7
+      ],
+      "lsd_refine_mode": [
+        "none",
+        "std"
+      ],
+      "lsd_scale": [
+        0.6,
+        0.8,
+        1.0
+      ],
+      "minimum_segment_length_fraction": [
+        0.03,
+        0.06,
+        0.1
+      ],
+      "edge_support_dilation_fraction": [
+        0.003,
+        0.006,
+        0.01
+      ],
+      "minimum_edge_support": [
+        0.05,
+        0.12,
+        0.2
+      ],
+      "edge_support_weight": [
+        0.2,
+        0.3,
+        0.4
+      ]
+    },
+    "cartesian_count": 13122,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "adaptive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 194,
+    "evaluated_grid_parameter_sets": 84,
+    "explicit_non_grid_parameter_sets": 110
+  },
+  "profiles": {
+    "baseline": {
+      "minimum_contour_area_fraction": 0.12,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "epsilon_min_fraction": 0.008,
+      "epsilon_max_fraction": 0.04,
+      "epsilon_steps": 9,
+      "minimum_rectangularity": 0.55,
+      "lsd_refine_mode": "std",
+      "lsd_scale": 0.8,
+      "minimum_segment_length_fraction": 0.06,
+      "edge_support_dilation_fraction": 0.006,
+      "minimum_edge_support": 0.12,
+      "area_weight": 0.25,
+      "rectangularity_weight": 0.25,
+      "angle_weight": 0.2,
+      "edge_support_weight": 0.3,
+      "merge_fragmented_contours": true
+    }
+  },
+  "explicit_parameter_sets": {
+    "3417b0b5c8055ba0803ed2c73adafa944d25d96d541e7f977e12e893c051042b": {
+      "sha256": "3417b0b5c8055ba0803ed2c73adafa944d25d96d541e7f977e12e893c051042b",
+      "legacy_parameter_set_id": "c2abdc49ff43",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.0521875,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "8587eaca45bc18e04a3204e8f95b84c1d6c2f30a2ea84f5efe72fa894624d4b9": {
+      "sha256": "8587eaca45bc18e04a3204e8f95b84c1d6c2f30a2ea84f5efe72fa894624d4b9",
+      "legacy_parameter_set_id": "05459875812b",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05109375,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "e676729ca08efde50587eb966ddbe1f90e3edd505f8ce6bd7c63dfd646424860": {
+      "sha256": "e676729ca08efde50587eb966ddbe1f90e3edd505f8ce6bd7c63dfd646424860",
+      "legacy_parameter_set_id": "945d884b6368",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05328125,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "20613642a0a6784ebd0c607c639cfc6fd0329b08f61162ce8ffa33a69819161a": {
+      "sha256": "20613642a0a6784ebd0c607c639cfc6fd0329b08f61162ce8ffa33a69819161a",
+      "legacy_parameter_set_id": "ce0863d3d2e6",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050546875,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "4d2c90a5f641a859e2fb5b70a7ce69a616ad826b0df4fed930f8b40491ad6c3c": {
+      "sha256": "4d2c90a5f641a859e2fb5b70a7ce69a616ad826b0df4fed930f8b40491ad6c3c",
+      "legacy_parameter_set_id": "3d502feb8ab7",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051640625,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "a28de8ba73b33bfe69cc2e74b64e79b5fb8f996d8fdd18bf1838fbd891ef954e": {
+      "sha256": "a28de8ba73b33bfe69cc2e74b64e79b5fb8f996d8fdd18bf1838fbd891ef954e",
+      "legacy_parameter_set_id": "5cbba3aa4b52",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.0502734375,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "9b207b2c88c288b193d44a0eb66c09c4ef903bfeeef87b2f0371c0beeebfeff0": {
+      "sha256": "9b207b2c88c288b193d44a0eb66c09c4ef903bfeeef87b2f0371c0beeebfeff0",
+      "legacy_parameter_set_id": "361d362b096e",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.0508203125,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "7f8022f011470cbae4bd2f1aa4e1c9d663d3277e0649eed1de53881aeda82fe8": {
+      "sha256": "7f8022f011470cbae4bd2f1aa4e1c9d663d3277e0649eed1de53881aeda82fe8",
+      "legacy_parameter_set_id": "cda640c2e4f9",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05013671875,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "64c3a856c496f6e1ca6a276612cc57d5d798c0c67287a3ec50446948e70591da": {
+      "sha256": "64c3a856c496f6e1ca6a276612cc57d5d798c0c67287a3ec50446948e70591da",
+      "legacy_parameter_set_id": "2c87e156f27e",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05095703125,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "02c9b8eeff45bb18bbbf8fd1c3ffb368e2448ce17b503ab77c0d25388a43e766": {
+      "sha256": "02c9b8eeff45bb18bbbf8fd1c3ffb368e2448ce17b503ab77c0d25388a43e766",
+      "legacy_parameter_set_id": "5fb3f4bb6d26",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050068359375,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "206581ae8a328797bab22449ac0c3a9cd194268be88aa3dab91986f6bd227e79": {
+      "sha256": "206581ae8a328797bab22449ac0c3a9cd194268be88aa3dab91986f6bd227e79",
+      "legacy_parameter_set_id": "ee9bb0c60884",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051025390625,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "f2396822f0d98d6a5d986c71508cd454f44a944fe70433d7e7ccc6d36ea17514": {
+      "sha256": "f2396822f0d98d6a5d986c71508cd454f44a944fe70433d7e7ccc6d36ea17514",
+      "legacy_parameter_set_id": "f0b39fbc012c",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050034179687,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "45c748f0ace998671db2091f37af3f4161251d0c398c258cdaf264ea17e9bd93": {
+      "sha256": "45c748f0ace998671db2091f37af3f4161251d0c398c258cdaf264ea17e9bd93",
+      "legacy_parameter_set_id": "346d7ec2e4d4",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051059570312,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "5c7eeea64de368afecddaef2f978a1102e8805cce0abef0c886fa50addf1c073": {
+      "sha256": "5c7eeea64de368afecddaef2f978a1102e8805cce0abef0c886fa50addf1c073",
+      "legacy_parameter_set_id": "e34fcabc454a",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050017089843,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "0e6e3eceb4226595678f0eeb8068ec84596704d1ab3f0a3b65dcc29e779e6f5c": {
+      "sha256": "0e6e3eceb4226595678f0eeb8068ec84596704d1ab3f0a3b65dcc29e779e6f5c",
+      "legacy_parameter_set_id": "be81dcaa263e",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051076660156,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "3cf0b4a7991400c0b65f4f9128f7792da1228cb3a8dfce792fe18de271d3d7b0": {
+      "sha256": "3cf0b4a7991400c0b65f4f9128f7792da1228cb3a8dfce792fe18de271d3d7b0",
+      "legacy_parameter_set_id": "42ca167e3d49",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050008544922,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "914c7721a3327dcfb710fc8deead69df43ab4ed0b658120db1d017fe966e9a52": {
+      "sha256": "914c7721a3327dcfb710fc8deead69df43ab4ed0b658120db1d017fe966e9a52",
+      "legacy_parameter_set_id": "4f2357b3e3ba",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051085205078,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "56334cd07ba3fd8f15d707160984c59675b6dcfe46c9cbce55bc3253de4ac08b": {
+      "sha256": "56334cd07ba3fd8f15d707160984c59675b6dcfe46c9cbce55bc3253de4ac08b",
+      "legacy_parameter_set_id": "474ae3513bbe",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050004272461,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "47820ea400f4e9851a3ce8a0809c6f90826f76a29804aa7031e5ed52a45d8447": {
+      "sha256": "47820ea400f4e9851a3ce8a0809c6f90826f76a29804aa7031e5ed52a45d8447",
+      "legacy_parameter_set_id": "18b42256e0e8",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051089477539,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "efe1190f405cc0c4f6eae7949a14fe38e0977ca3917c17245c2db2e0cc7fc063": {
+      "sha256": "efe1190f405cc0c4f6eae7949a14fe38e0977ca3917c17245c2db2e0cc7fc063",
+      "legacy_parameter_set_id": "3f3eb079f5ba",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05000213623,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "77d23c213d0a29ea05cc61a5cce0c547c3645b2c653ddcf4045c530921347caa": {
+      "sha256": "77d23c213d0a29ea05cc61a5cce0c547c3645b2c653ddcf4045c530921347caa",
+      "legacy_parameter_set_id": "d23d7e8659ac",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051091613769,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "a229d84ba299894573c468f50e501b9e8fede18891b1c888c381e325a79a730f": {
+      "sha256": "a229d84ba299894573c468f50e501b9e8fede18891b1c888c381e325a79a730f",
+      "legacy_parameter_set_id": "adf688745897",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050001068115,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "dd9187d70dbc8f8e386e51badc8f0424430c58c93c1e8931b34cdfb758277460": {
+      "sha256": "dd9187d70dbc8f8e386e51badc8f0424430c58c93c1e8931b34cdfb758277460",
+      "legacy_parameter_set_id": "b375a83be63e",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051092681885,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "fbab3c11c1e4a7cc4dba82ffaa19e5dc3a2b2a2ee9ce9b21bff0906b99d671cd": {
+      "sha256": "fbab3c11c1e4a7cc4dba82ffaa19e5dc3a2b2a2ee9ce9b21bff0906b99d671cd",
+      "legacy_parameter_set_id": "716142b7f615",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000534058,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "a18e980ed82e64316f174deeea849df0e62e7a349cce09cc7baa304dba7fd70b": {
+      "sha256": "a18e980ed82e64316f174deeea849df0e62e7a349cce09cc7baa304dba7fd70b",
+      "legacy_parameter_set_id": "3442bbb48194",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093215942,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "48c32d890f4fc1ec62008c02353c79dfe040dc2d8baaf20c8ba0e8166aeb0caa": {
+      "sha256": "48c32d890f4fc1ec62008c02353c79dfe040dc2d8baaf20c8ba0e8166aeb0caa",
+      "legacy_parameter_set_id": "d72f529ce795",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000267029,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "a5a33a50bc88f35dfb7a09f772763de713a7b0c39adb1770d97360d0cb9bb358": {
+      "sha256": "a5a33a50bc88f35dfb7a09f772763de713a7b0c39adb1770d97360d0cb9bb358",
+      "legacy_parameter_set_id": "efc90977b6b5",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093482971,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "7e92bc35152b90a85353fdf2791590b81bfc585e54c2e9cd84089671b345c902": {
+      "sha256": "7e92bc35152b90a85353fdf2791590b81bfc585e54c2e9cd84089671b345c902",
+      "legacy_parameter_set_id": "b569fe09a69a",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000133515,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "1d9a38d01126ea2ed7fddc66e0222affad2821db6ab9be80c5a05c6ee1d6f8da": {
+      "sha256": "1d9a38d01126ea2ed7fddc66e0222affad2821db6ab9be80c5a05c6ee1d6f8da",
+      "legacy_parameter_set_id": "0820d1071065",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093616485,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "483beee44ac0fd26de3b22771b693c56a01ebf9daf249042b1b880ef3f3158d5": {
+      "sha256": "483beee44ac0fd26de3b22771b693c56a01ebf9daf249042b1b880ef3f3158d5",
+      "legacy_parameter_set_id": "c67d806beb56",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000066758,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "157841c2e33752877b58f9723814cc2437506e47b4048df5d632ac5b5563d736": {
+      "sha256": "157841c2e33752877b58f9723814cc2437506e47b4048df5d632ac5b5563d736",
+      "legacy_parameter_set_id": "fe3fadc4d850",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093683243,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "cca931ce14c6c44cc270f10562646c57c5e2535b8f69146b520e33593b2a060e": {
+      "sha256": "cca931ce14c6c44cc270f10562646c57c5e2535b8f69146b520e33593b2a060e",
+      "legacy_parameter_set_id": "073bdc30132f",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000033379,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "2473370ff356329ae8a651dfd28660352bb969211ed4ff9241473d26ebd2050b": {
+      "sha256": "2473370ff356329ae8a651dfd28660352bb969211ed4ff9241473d26ebd2050b",
+      "legacy_parameter_set_id": "eb57e6ac805b",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093716622,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "5f464d455a07b18b49b48b288e3cf0030ee18b62032c7a1b4d22ddc275be9b36": {
+      "sha256": "5f464d455a07b18b49b48b288e3cf0030ee18b62032c7a1b4d22ddc275be9b36",
+      "legacy_parameter_set_id": "eeab38e6f445",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05000001669,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "338d43ae1002a31fbee44cb22342f1aca5d90a0f92a4e0d81b6e64f1f43c7044": {
+      "sha256": "338d43ae1002a31fbee44cb22342f1aca5d90a0f92a4e0d81b6e64f1f43c7044",
+      "legacy_parameter_set_id": "ddb0dbf9c40b",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093733311,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "3d40f49ccbf47025e0f278e42e6a4eb35cda380c908d2a1ae06bbab7c8412911": {
+      "sha256": "3d40f49ccbf47025e0f278e42e6a4eb35cda380c908d2a1ae06bbab7c8412911",
+      "legacy_parameter_set_id": "1c0675aa81e3",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000008345,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "699f552d2682a5d195fac31368110b2980dfc8860cb300f003e87d9e71fe579a": {
+      "sha256": "699f552d2682a5d195fac31368110b2980dfc8860cb300f003e87d9e71fe579a",
+      "legacy_parameter_set_id": "3449e41d3835",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093741655,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "d592821c181e1a3b9db4a437ff0c839d374a15a96381006895d908747725f236": {
+      "sha256": "d592821c181e1a3b9db4a437ff0c839d374a15a96381006895d908747725f236",
+      "legacy_parameter_set_id": "6e337ed6d6af",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000004173,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "2d4ac8504423af511ff65c2fb3ab235729f57151ac5847b4af65fc81bf550abb": {
+      "sha256": "2d4ac8504423af511ff65c2fb3ab235729f57151ac5847b4af65fc81bf550abb",
+      "legacy_parameter_set_id": "a1ef037a10f9",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093745827,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "3e574067adcc0c0bf45aa2a0029ee961163cd97c0dc8d633cde0b1952fcecac1": {
+      "sha256": "3e574067adcc0c0bf45aa2a0029ee961163cd97c0dc8d633cde0b1952fcecac1",
+      "legacy_parameter_set_id": "0f4f21247050",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000002087,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "e1be9ecef56938042a98119877c2706f3961f0fa12e52adcf172853f13b52d60": {
+      "sha256": "e1be9ecef56938042a98119877c2706f3961f0fa12e52adcf172853f13b52d60",
+      "legacy_parameter_set_id": "13920088df19",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093747913,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "917a6f683a7ff546194372c7a2343a9f171922b0d7a6998f37d93a835efbfec1": {
+      "sha256": "917a6f683a7ff546194372c7a2343a9f171922b0d7a6998f37d93a835efbfec1",
+      "legacy_parameter_set_id": "b94009184c2f",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000001043,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "03944d2167d616652de7089533c489df393a0b9a1e7e4b29d9e3abaf7a61b091": {
+      "sha256": "03944d2167d616652de7089533c489df393a0b9a1e7e4b29d9e3abaf7a61b091",
+      "legacy_parameter_set_id": "a71f87de055c",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093748956,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "bb282e50251c1c46d04824c6e301bc6f8f5a5c86dbe1146da76a499d2b6be3f4": {
+      "sha256": "bb282e50251c1c46d04824c6e301bc6f8f5a5c86dbe1146da76a499d2b6be3f4",
+      "legacy_parameter_set_id": "650513c73f07",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000521,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "a4124396ce006d652e31858583afd448982241dad000185e088d75c59af7a94e": {
+      "sha256": "a4124396ce006d652e31858583afd448982241dad000185e088d75c59af7a94e",
+      "legacy_parameter_set_id": "2fb2a0e026d2",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749478,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "763a8046464cfb7b8ef6dbd5eeac9628cb9563355cc5cd8d503e0a4705e65527": {
+      "sha256": "763a8046464cfb7b8ef6dbd5eeac9628cb9563355cc5cd8d503e0a4705e65527",
+      "legacy_parameter_set_id": "e94289eab346",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05000000026,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "8a3e7885d4780fd438c54bc6f5d887206742720c1bafc73447ba9d880c4bd193": {
+      "sha256": "8a3e7885d4780fd438c54bc6f5d887206742720c1bafc73447ba9d880c4bd193",
+      "legacy_parameter_set_id": "ca17d58c9734",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749739,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "5c657235d0a12e544c6e3ed011bbfd5609e1cf9d0438b53bf31504193001b8cc": {
+      "sha256": "5c657235d0a12e544c6e3ed011bbfd5609e1cf9d0438b53bf31504193001b8cc",
+      "legacy_parameter_set_id": "2f74d5c03a0a",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05000000013,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "28e3a4f9fdf3adde0a46a235c9cd5924bc462d0007b86c1e8d9c36d693c7fe24": {
+      "sha256": "28e3a4f9fdf3adde0a46a235c9cd5924bc462d0007b86c1e8d9c36d693c7fe24",
+      "legacy_parameter_set_id": "4ace88441553",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05109374987,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "7fe2b52e516b7292ee132e7e88bc7ca29691ab114fd2df47a07a328d708ba588": {
+      "sha256": "7fe2b52e516b7292ee132e7e88bc7ca29691ab114fd2df47a07a328d708ba588",
+      "legacy_parameter_set_id": "8a69412553e0",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000065,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "251c72f48c1caad4ce25ef94f8315906e2f1b725f8f58a2d6abe50e4e0ab14c3": {
+      "sha256": "251c72f48c1caad4ce25ef94f8315906e2f1b725f8f58a2d6abe50e4e0ab14c3",
+      "legacy_parameter_set_id": "8d7523534cd7",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749935,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "16b4255d318c22798bc2c28e8a12a539eafdbb280528eb51d4a71802176f2d3c": {
+      "sha256": "16b4255d318c22798bc2c28e8a12a539eafdbb280528eb51d4a71802176f2d3c",
+      "legacy_parameter_set_id": "67ec7ca49d3b",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000033,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "0f34a0c082408f572fda7e6374e0a2429104c39a42e44b6eac3714248e26ad2a": {
+      "sha256": "0f34a0c082408f572fda7e6374e0a2429104c39a42e44b6eac3714248e26ad2a",
+      "legacy_parameter_set_id": "741fc84e889a",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749968,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "5e58367e6490a08de7960d7af065ae05eff3f12ee1aacdef026c354da5a5c0f8": {
+      "sha256": "5e58367e6490a08de7960d7af065ae05eff3f12ee1aacdef026c354da5a5c0f8",
+      "legacy_parameter_set_id": "0da95636246b",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000016,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "d77e5082e9f49ec404bb1380df292bb72a8c0636924e8b3f3786440ab6e06ec0": {
+      "sha256": "d77e5082e9f49ec404bb1380df292bb72a8c0636924e8b3f3786440ab6e06ec0",
+      "legacy_parameter_set_id": "100a61992b1c",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749984,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "081002a098c6aa4c19c530f571833ff13d6b93161feb27eb823242da0311d3bf": {
+      "sha256": "081002a098c6aa4c19c530f571833ff13d6b93161feb27eb823242da0311d3bf",
+      "legacy_parameter_set_id": "b329e5cee9c9",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000008,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "df64b177df8dcd03f59c1e52f0d55a9ad8692d1036b65aca4abd28ef943ecdd6": {
+      "sha256": "df64b177df8dcd03f59c1e52f0d55a9ad8692d1036b65aca4abd28ef943ecdd6",
+      "legacy_parameter_set_id": "63efc58965ee",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749992,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "66d46a4d4e2b57a5abc1282af8b1c2c6abb0ebc84c1e54d3ee52dd0b8d472184": {
+      "sha256": "66d46a4d4e2b57a5abc1282af8b1c2c6abb0ebc84c1e54d3ee52dd0b8d472184",
+      "legacy_parameter_set_id": "46527a0d4b50",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000004,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "29074b6e2913d7bc9013f47584d59028437f90ec329ba1e1644372093d69ae2c": {
+      "sha256": "29074b6e2913d7bc9013f47584d59028437f90ec329ba1e1644372093d69ae2c",
+      "legacy_parameter_set_id": "767e409c893f",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749996,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "4e44c7967242b9a3d820a227b783e77f73d5571f098bc7ad48639cbdfec168bb": {
+      "sha256": "4e44c7967242b9a3d820a227b783e77f73d5571f098bc7ad48639cbdfec168bb",
+      "legacy_parameter_set_id": "0b9c4a5a0ba4",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000002,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "5df60469adc003fe48d69e51acd2806fc0b000100ce7ea6b49953582d3fe5131": {
+      "sha256": "5df60469adc003fe48d69e51acd2806fc0b000100ce7ea6b49953582d3fe5131",
+      "legacy_parameter_set_id": "a1016a96860c",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749998,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "c4fd581eed161de6bbca34b1abb5fed56d428e25774d8ff6c8bc4055e3c3b1ac": {
+      "sha256": "c4fd581eed161de6bbca34b1abb5fed56d428e25774d8ff6c8bc4055e3c3b1ac",
+      "legacy_parameter_set_id": "1989a0af7764",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000000001,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "e4fe2f09f687478165481d07112030a37d8bd13fd1fe8389e2d651cfae536dc5": {
+      "sha256": "e4fe2f09f687478165481d07112030a37d8bd13fd1fe8389e2d651cfae536dc5",
+      "legacy_parameter_set_id": "272c7383f8dc",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093749999,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "966622905b67a74c54956cc1fdd4d8815657504e906b52180088e9ce76b55eba": {
+      "sha256": "966622905b67a74c54956cc1fdd4d8815657504e906b52180088e9ce76b55eba",
+      "legacy_parameter_set_id": "1b1036e2df28",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093750001,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "d1b352ec81c07c171783f18cacf0f5eea893d908dc96ff1f426037b711515088": {
+      "sha256": "d1b352ec81c07c171783f18cacf0f5eea893d908dc96ff1f426037b711515088",
+      "legacy_parameter_set_id": "5897c0c4d292",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093750002,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "baa1a1531b647dd54896c155a7693b62f3c656b9cd3ed21b6b3ead9836e72dc0": {
+      "sha256": "baa1a1531b647dd54896c155a7693b62f3c656b9cd3ed21b6b3ead9836e72dc0",
+      "legacy_parameter_set_id": "db8d8d8d653b",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093750004,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "3bbcb1934d2c04e7b980a7fc60d180b2f88b07002785d665eec706d8f41086bf": {
+      "sha256": "3bbcb1934d2c04e7b980a7fc60d180b2f88b07002785d665eec706d8f41086bf",
+      "legacy_parameter_set_id": "e24435bb49a2",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093750008,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "43c24c3313d72960c0ab038dc1b903fd35eb1c0be3706182fd414068ebfe8f70": {
+      "sha256": "43c24c3313d72960c0ab038dc1b903fd35eb1c0be3706182fd414068ebfe8f70",
+      "legacy_parameter_set_id": "fb318916ce20",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093750016,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "ecd6514a5e5036e4fcfe9485136354a0ad1462b75b3803c2bb87c870853dd141": {
+      "sha256": "ecd6514a5e5036e4fcfe9485136354a0ad1462b75b3803c2bb87c870853dd141",
+      "legacy_parameter_set_id": "1f0ae6f0f64f",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.051093750032,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "ffeb84d81465d0a0f842944b25d458cde26485aeec8b17ce636beb16aadcaf2b": {
+      "sha256": "ffeb84d81465d0a0f842944b25d458cde26485aeec8b17ce636beb16aadcaf2b",
+      "legacy_parameter_set_id": "91d6602326bd",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05875,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "236af0424fc08e7eef85a81f71d53588034c0f58923566235b1f43efe080a3cf": {
+      "sha256": "236af0424fc08e7eef85a81f71d53588034c0f58923566235b1f43efe080a3cf",
+      "legacy_parameter_set_id": "7c904db77506",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.054375,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "139fc19efc65dab1890a6eb0d999979048ba4f8f8e3d2ddc6b5709f3d99792f3": {
+      "sha256": "139fc19efc65dab1890a6eb0d999979048ba4f8f8e3d2ddc6b5709f3d99792f3",
+      "legacy_parameter_set_id": "6a91de38ec15",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.65,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.030000228882
+      }
+    },
+    "2e1c9ddf4eb90bb7a3789294bc1175ee57eac1fe193d75b4e146f3ae01631faa": {
+      "sha256": "2e1c9ddf4eb90bb7a3789294bc1175ee57eac1fe193d75b4e146f3ae01631faa",
+      "legacy_parameter_set_id": "2e0b7b995c28",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.65,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000534058,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "590812206c93829a5e947ef7642357eff139ae5af8e044d3285f796b8c1c4c96": {
+      "sha256": "590812206c93829a5e947ef7642357eff139ae5af8e044d3285f796b8c1c4c96",
+      "legacy_parameter_set_id": "3c19eae09129",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.95,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.030000114441
+      }
+    },
+    "fc51d2b47876b70f1d52b33620e8707e6c5173bd21a624e876db09ddb5ec2828": {
+      "sha256": "fc51d2b47876b70f1d52b33620e8707e6c5173bd21a624e876db09ddb5ec2828",
+      "legacy_parameter_set_id": "9f9696afba05",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.95,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.050000267029,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "2aa405db3465ec7c892369cbd3f9c11fe44491e6e7bbcdb1baf685a8985a6681": {
+      "sha256": "2aa405db3465ec7c892369cbd3f9c11fe44491e6e7bbcdb1baf685a8985a6681",
+      "legacy_parameter_set_id": "6b6edea5e5fe",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.0085,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.0301171875
+      }
+    },
+    "6882fe62fa3162f66a9195b86668e11a2dc485970b3de7cd506cf9f0382b7384": {
+      "sha256": "6882fe62fa3162f66a9195b86668e11a2dc485970b3de7cd506cf9f0382b7384",
+      "legacy_parameter_set_id": "3f72adc3300b",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.0675,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "4427e2bbeefa081ba4817e561126ab43bb7506e608f54263ffd534c9fccddfa7": {
+      "sha256": "4427e2bbeefa081ba4817e561126ab43bb7506e608f54263ffd534c9fccddfa7",
+      "legacy_parameter_set_id": "69677d25e317",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.063125,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "400d4d443cb393a5a57a1f124897b3430d30114118a29b1b4d3738d8b7a2c880": {
+      "sha256": "400d4d443cb393a5a57a1f124897b3430d30114118a29b1b4d3738d8b7a2c880",
+      "legacy_parameter_set_id": "9ac03abafc5a",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.725,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.039375
+      }
+    },
+    "538edf7edc116f394412d55b23e34c86bf6ce920c5bfbe43f65bdf69ffb16cf3": {
+      "sha256": "538edf7edc116f394412d55b23e34c86bf6ce920c5bfbe43f65bdf69ffb16cf3",
+      "legacy_parameter_set_id": "f00ccfb1c869",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.725,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05109375,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.039375
+      }
+    },
+    "2ef1ba237c8aff5df6f7da712a88bd129416cb877d69002e87997095b2d8a0f0": {
+      "sha256": "2ef1ba237c8aff5df6f7da712a88bd129416cb877d69002e87997095b2d8a0f0",
+      "legacy_parameter_set_id": "4e1f79fc313a",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8001953125,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.043125
+      }
+    },
+    "333782e034b0a57317978aa12baa7c1c59e97ce1aaa862900090538f508f3b5b": {
+      "sha256": "333782e034b0a57317978aa12baa7c1c59e97ce1aaa862900090538f508f3b5b",
+      "legacy_parameter_set_id": "91a2dfc6c947",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.7998046875,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.043125
+      }
+    },
+    "7f37f129c01b99a7bdbcb0e9ec7dab2c33a339cf0bf61783679db97acecc2a74": {
+      "sha256": "7f37f129c01b99a7bdbcb0e9ec7dab2c33a339cf0bf61783679db97acecc2a74",
+      "legacy_parameter_set_id": "fd200c5d5244",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.0309375,
+        "edge_support_dilation_fraction": 0.00375,
+        "minimum_edge_support": 0.05,
+        "edge_support_weight": 0.2
+      }
+    },
+    "9896557f54ad480590a4d46979b16970d64d13078d60b44fb0f0b8eb578786c3": {
+      "sha256": "9896557f54ad480590a4d46979b16970d64d13078d60b44fb0f0b8eb578786c3",
+      "legacy_parameter_set_id": "52f7184d4c53",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.18,
+        "epsilon_max_fraction": 0.06,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.09,
+        "edge_support_dilation_fraction": 0.007,
+        "minimum_edge_support": 0.05,
+        "edge_support_weight": 0.4
+      }
+    },
+    "5e52b75979358c5d810b7840eca3c05c2c130b47797d317bb035c56e7b6244c0": {
+      "sha256": "5e52b75979358c5d810b7840eca3c05c2c130b47797d317bb035c56e7b6244c0",
+      "legacy_parameter_set_id": "b3af979cbed0",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.18,
+        "epsilon_max_fraction": 0.06,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.09,
+        "edge_support_dilation_fraction": 0.0095,
+        "minimum_edge_support": 0.05,
+        "edge_support_weight": 0.4
+      }
+    },
+    "522b3ca7147ce6200b14a55b527c59ef23dc49937a696f95dcba9fec1c0eacb6": {
+      "sha256": "522b3ca7147ce6200b14a55b527c59ef23dc49937a696f95dcba9fec1c0eacb6",
+      "legacy_parameter_set_id": "c32620751d5b",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.095,
+        "edge_support_dilation_fraction": 0.0099375,
+        "minimum_edge_support": 0.05,
+        "edge_support_weight": 0.2
+      }
+    },
+    "6940d05b7a43f8c3f3989e306a9db2a24d7c74ede57fdbb29714a80ccf443641": {
+      "sha256": "6940d05b7a43f8c3f3989e306a9db2a24d7c74ede57fdbb29714a80ccf443641",
+      "legacy_parameter_set_id": "aaf9858488cc",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.004125,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.030014648437
+      }
+    },
+    "42e3af957dd5a8a697d0c79f148d1f925de9886d31bf1768a675b13995e704ed": {
+      "sha256": "42e3af957dd5a8a697d0c79f148d1f925de9886d31bf1768a675b13995e704ed",
+      "legacy_parameter_set_id": "0e36623421ce",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.085,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "575b1a16a9b1c9ee63318f1c9d5d02a3e9a0a2a02f6ec93078c56e49c89a82d8": {
+      "sha256": "575b1a16a9b1c9ee63318f1c9d5d02a3e9a0a2a02f6ec93078c56e49c89a82d8",
+      "legacy_parameter_set_id": "2ccf1a68e0ce",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.16,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "99877a3a9cdaa390de5cbeb280ad5d9e3eb40fddf12e9e9ac772921d102a5ef6": {
+      "sha256": "99877a3a9cdaa390de5cbeb280ad5d9e3eb40fddf12e9e9ac772921d102a5ef6",
+      "legacy_parameter_set_id": "377fafd7f7b0",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.008,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.045
+      }
+    },
+    "d1f422f23f751ff1d21258452c10f53d18a5771370aeab24dc6d9a7c1223f1b5": {
+      "sha256": "d1f422f23f751ff1d21258452c10f53d18a5771370aeab24dc6d9a7c1223f1b5",
+      "legacy_parameter_set_id": "805c98c11b2d",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.085,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.045
+      }
+    },
+    "0a36e3481b35279db6316688e05ccd4cbd773c9e34e674a1b55d1fbcf534eff4": {
+      "sha256": "0a36e3481b35279db6316688e05ccd4cbd773c9e34e674a1b55d1fbcf534eff4",
+      "legacy_parameter_set_id": "0eb161ac77d9",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.14,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "fa4faae246b29bc7219095079b99dd9124fc4eb75c4a538849e0ad1b9abffb5b": {
+      "sha256": "fa4faae246b29bc7219095079b99dd9124fc4eb75c4a538849e0ad1b9abffb5b",
+      "legacy_parameter_set_id": "a18bd402ee02",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.18,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "2bcec4b7edeae651b0030a46e7360c4b9529fe67b06cdb9bf5d3deea9ee0aaed": {
+      "sha256": "2bcec4b7edeae651b0030a46e7360c4b9529fe67b06cdb9bf5d3deea9ee0aaed",
+      "legacy_parameter_set_id": "b1d26004c819",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.1025,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "8b34b6098166347b38d7284d155a6656ccb788ff67f360a4110e3aab6d121f59": {
+      "sha256": "8b34b6098166347b38d7284d155a6656ccb788ff67f360a4110e3aab6d121f59",
+      "legacy_parameter_set_id": "0f43bdce825e",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.0502734375,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.085
+      }
+    },
+    "dcdff5dd08905c0a1804cc78c184479f299e1802ab7e9c18f21800209f950c9a": {
+      "sha256": "dcdff5dd08905c0a1804cc78c184479f299e1802ab7e9c18f21800209f950c9a",
+      "legacy_parameter_set_id": "254f5a221336",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.165,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.0825
+      }
+    },
+    "2c8848785b34b3ef2a1d1640914a478e490f4a2fcd311d83ff9a44f6923b3d03": {
+      "sha256": "2c8848785b34b3ef2a1d1640914a478e490f4a2fcd311d83ff9a44f6923b3d03",
+      "legacy_parameter_set_id": "4b0b80d118b0",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.03046875,
+        "edge_support_dilation_fraction": 0.01,
+        "minimum_edge_support": 0.19,
+        "edge_support_weight": 0.2
+      }
+    },
+    "ebba3225c49efd22165303f1a4b19c24ca5d9d41bade81bd1f8d90d2825ea73f": {
+      "sha256": "ebba3225c49efd22165303f1a4b19c24ca5d9d41bade81bd1f8d90d2825ea73f",
+      "legacy_parameter_set_id": "633ec7994dee",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.875,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.046875
+      }
+    },
+    "e93fe71e655c527330ec2bb7f365ad16f17117951a2caf7d9723b248c5ecc674": {
+      "sha256": "e93fe71e655c527330ec2bb7f365ad16f17117951a2caf7d9723b248c5ecc674",
+      "legacy_parameter_set_id": "b8b25389b6e6",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.6125,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.115625,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "5c0a2a7939764ebed23c45c165421d0bdb4f78583a65853dc5ab75e85429d49e": {
+      "sha256": "5c0a2a7939764ebed23c45c165421d0bdb4f78583a65853dc5ab75e85429d49e",
+      "legacy_parameter_set_id": "67572b3f636a",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.6375,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.058125
+      }
+    },
+    "1dbcfe525728887026899fd66db20da0d3be5f72641de0c9b11a78c8ffb025e0": {
+      "sha256": "1dbcfe525728887026899fd66db20da0d3be5f72641de0c9b11a78c8ffb025e0",
+      "legacy_parameter_set_id": "68aa494c9644",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.6375,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.05109375,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.058125
+      }
+    },
+    "22e5e5266baa6b8f8363d9a2c8a91f03e46643fa956203a16f4c8e96c8a11904": {
+      "sha256": "22e5e5266baa6b8f8363d9a2c8a91f03e46643fa956203a16f4c8e96c8a11904",
+      "legacy_parameter_set_id": "fb5698aa9005",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.01,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.925,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.098125,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "e153739e8a7ee060bae57d0f940f635dd8f1a80c2b0f883017634a424b8850f3": {
+      "sha256": "e153739e8a7ee060bae57d0f940f635dd8f1a80c2b0f883017634a424b8850f3",
+      "legacy_parameter_set_id": "1ebc7bf115d3",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.18,
+        "epsilon_max_fraction": 0.06,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.03,
+        "edge_support_dilation_fraction": 0.00525,
+        "minimum_edge_support": 0.1025,
+        "edge_support_weight": 0.4
+      }
+    },
+    "7ecb807198ae0285d5982902d9209ac02e71c4caaef0152ab1cca3f6fd59f54b": {
+      "sha256": "7ecb807198ae0285d5982902d9209ac02e71c4caaef0152ab1cca3f6fd59f54b",
+      "legacy_parameter_set_id": "9dd4edcb9df7",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.095,
+        "edge_support_dilation_fraction": 0.0065,
+        "minimum_edge_support": 0.05,
+        "edge_support_weight": 0.2
+      }
+    },
+    "67d706139fb9e382403fe7307db253dfdafa62154b24e689c69468d089cbe18e": {
+      "sha256": "67d706139fb9e382403fe7307db253dfdafa62154b24e689c69468d089cbe18e",
+      "legacy_parameter_set_id": "f3ecc5d73a60",
+      "parameters": {
+        "edge_support_dilation_fraction": 0.003375,
+        "edge_support_weight": 0.2,
+        "epsilon_max_fraction": 0.06,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 0.8,
+        "minimum_contour_area_fraction": 0.18,
+        "minimum_edge_support": 0.11125,
+        "minimum_rectangularity": 0.45,
+        "minimum_segment_length_fraction": 0.03
+      }
+    },
+    "48552e927ee50f1a7b8c590802290fcba29e8c9deda5bd840b3823357e7e319b": {
+      "sha256": "48552e927ee50f1a7b8c590802290fcba29e8c9deda5bd840b3823357e7e319b",
+      "legacy_parameter_set_id": "cc91b22426bb",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.12,
+        "close_kernel_fraction": 0.008,
+        "close_iterations": 1,
+        "epsilon_min_fraction": 0.008,
+        "epsilon_max_fraction": 0.04,
+        "epsilon_steps": 9,
+        "minimum_rectangularity": 0.55,
+        "lsd_refine_mode": "std",
+        "lsd_scale": 0.8,
+        "minimum_segment_length_fraction": 0.06,
+        "edge_support_dilation_fraction": 0.006,
+        "minimum_edge_support": 0.12,
+        "area_weight": 0.25,
+        "rectangularity_weight": 0.25,
+        "angle_weight": 0.2,
+        "edge_support_weight": 0.3,
+        "merge_fragmented_contours": true
+      }
+    },
+    "5ee7c14647ec986f771676af88ee51db159644b5a244fe8bbff61a0e4eeecf28": {
+      "sha256": "5ee7c14647ec986f771676af88ee51db159644b5a244fe8bbff61a0e4eeecf28",
+      "legacy_parameter_set_id": "cab23ed02de9",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.06,
+        "minimum_rectangularity": 0.45,
+        "lsd_refine_mode": "std",
+        "lsd_scale": 0.8,
+        "minimum_segment_length_fraction": 0.03,
+        "edge_support_dilation_fraction": 0.0045,
+        "minimum_edge_support": 0.14,
+        "edge_support_weight": 0.4
+      }
+    },
+    "de1eba95c60ea3f9496360110175f30b37e46dde68de056dc5caf8bd1ee54c6f": {
+      "sha256": "de1eba95c60ea3f9496360110175f30b37e46dde68de056dc5caf8bd1ee54c6f",
+      "legacy_parameter_set_id": "077c778c05df",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.18,
+        "epsilon_max_fraction": 0.06,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.07,
+        "edge_support_dilation_fraction": 0.01,
+        "minimum_edge_support": 0.14,
+        "edge_support_weight": 0.4
+      }
+    },
+    "c03797b81dd285dcb7329e317e15f5037f0aa379fa9d715c7184d7c15218f701": {
+      "sha256": "c03797b81dd285dcb7329e317e15f5037f0aa379fa9d715c7184d7c15218f701",
+      "legacy_parameter_set_id": "ace334a0dc43",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.7,
+        "lsd_refine_mode": "none",
+        "lsd_scale": 1.0,
+        "minimum_segment_length_fraction": 0.03,
+        "edge_support_dilation_fraction": 0.00375,
+        "minimum_edge_support": 0.13,
+        "edge_support_weight": 0.2
+      }
+    },
+    "0daf823340a0f8a609a76543928de79f72c53c772012f1d4da0fa1a7f976b4aa": {
+      "sha256": "0daf823340a0f8a609a76543928de79f72c53c772012f1d4da0fa1a7f976b4aa",
+      "legacy_parameter_set_id": "d0be7f8fcd85",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.08,
+        "epsilon_max_fraction": 0.06,
+        "minimum_rectangularity": 0.45,
+        "lsd_refine_mode": "std",
+        "lsd_scale": 0.8,
+        "minimum_segment_length_fraction": 0.08,
+        "edge_support_dilation_fraction": 0.01,
+        "minimum_edge_support": 0.16,
+        "edge_support_weight": 0.4
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
