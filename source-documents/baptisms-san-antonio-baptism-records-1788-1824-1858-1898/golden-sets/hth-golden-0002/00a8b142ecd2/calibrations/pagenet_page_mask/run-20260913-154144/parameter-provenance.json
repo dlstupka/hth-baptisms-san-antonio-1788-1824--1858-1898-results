@@ -1,0 +1,962 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "pagenet_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [
+      "minimum_mask_area_fraction"
+    ],
+    "equivalence_family_size": 2
+  },
+  "grid": {
+    "sha256": "9e7e4888a60bdeed277056143cce9c3019a615481efddef6f13540808898ae6f",
+    "parameter_order": [
+      "mask_threshold",
+      "close_kernel_fraction",
+      "polygon_epsilon_fraction",
+      "bbox_padding_fraction",
+      "minimum_mask_area_fraction"
+    ],
+    "values": {
+      "mask_threshold": [
+        0.222,
+        0.224,
+        0.226,
+        0.228,
+        0.23
+      ],
+      "close_kernel_fraction": [
+        0.0,
+        0.006
+      ],
+      "polygon_epsilon_fraction": [
+        0.0195,
+        0.02,
+        0.0205,
+        0.021,
+        0.0215
+      ],
+      "bbox_padding_fraction": [
+        0.027,
+        0.028,
+        0.029,
+        0.03,
+        0.031
+      ],
+      "minimum_mask_area_fraction": [
+        0.04
+      ]
+    },
+    "cartesian_count": 250,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "adaptive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 98,
+    "evaluated_grid_parameter_sets": 18,
+    "explicit_non_grid_parameter_sets": 80
+  },
+  "profiles": {
+    "baseline": {
+      "mask_threshold": 0.5,
+      "minimum_mask_area_fraction": 0.04,
+      "close_kernel_fraction": 0.006,
+      "polygon_epsilon_fraction": 0.012,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "2d3feaae3016398497d5ab3c0e74146564a0b899abce57b21dceb2a75c4d48f0": {
+      "sha256": "2d3feaae3016398497d5ab3c0e74146564a0b899abce57b21dceb2a75c4d48f0",
+      "legacy_parameter_set_id": "c8baea6bad9b",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "96fbfbb7c13f144499f49ddb7f2583365c2a17d5542e572de45e9d6f0bbddb0d": {
+      "sha256": "96fbfbb7c13f144499f49ddb7f2583365c2a17d5542e572de45e9d6f0bbddb0d",
+      "legacy_parameter_set_id": "2d3085526ca6",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "e70bd19425d6bd4ce61d0bbfd30f124d12a6786baeccebef66f780fea07e1768": {
+      "sha256": "e70bd19425d6bd4ce61d0bbfd30f124d12a6786baeccebef66f780fea07e1768",
+      "legacy_parameter_set_id": "a7549bc1c66c",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874023438,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "604a119dfea7dbe02d9438b249ff24a3706d38cf76bacc98399bd18a6c91e118": {
+      "sha256": "604a119dfea7dbe02d9438b249ff24a3706d38cf76bacc98399bd18a6c91e118",
+      "legacy_parameter_set_id": "f503f4a2a4d5",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875976562,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "ddd575897bb67524ce3dae46ba924aac55d9c671c060cb23a22fa14b914a80e4": {
+      "sha256": "ddd575897bb67524ce3dae46ba924aac55d9c671c060cb23a22fa14b914a80e4",
+      "legacy_parameter_set_id": "1adc0859d144",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875488281,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "12597cb21cf605200e520f4c49cf0c172c73bf0042adfacb22e4a8f904435123": {
+      "sha256": "12597cb21cf605200e520f4c49cf0c172c73bf0042adfacb22e4a8f904435123",
+      "legacy_parameter_set_id": "d3a2581d49d5",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874511719,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "05a2741daf991178ba971180c0dfc5b442d4482950687f19b7ad99f79d21c8a2": {
+      "sha256": "05a2741daf991178ba971180c0dfc5b442d4482950687f19b7ad99f79d21c8a2",
+      "legacy_parameter_set_id": "9f4ad99996dc",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875244141,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "c4db5debbc4455d8a1c95378b017674e08a2bd11e1f4da4ac0bcd102304e1555": {
+      "sha256": "c4db5debbc4455d8a1c95378b017674e08a2bd11e1f4da4ac0bcd102304e1555",
+      "legacy_parameter_set_id": "d0d692301807",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874755859,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "d63fdc6414da06ed317673a9a58f70366951522cb87c4e53cb742043872701a2": {
+      "sha256": "d63fdc6414da06ed317673a9a58f70366951522cb87c4e53cb742043872701a2",
+      "legacy_parameter_set_id": "d3afe08d4e50",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.03087512207,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "ec9c4acb20acfd1b7cb39c793afaa5efa0e62c59cc306bc44620bf6112ae2d47": {
+      "sha256": "ec9c4acb20acfd1b7cb39c793afaa5efa0e62c59cc306bc44620bf6112ae2d47",
+      "legacy_parameter_set_id": "00f794959422",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874877929,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "0ddeecb0741b5c1c516e01486dc0ee94914e62011d2d4afa59aa241fb0ac3df1": {
+      "sha256": "0ddeecb0741b5c1c516e01486dc0ee94914e62011d2d4afa59aa241fb0ac3df1",
+      "legacy_parameter_set_id": "33845aedb9fe",
+      "parameters": {
+        "mask_threshold": 0.223,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.02075,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "2041ce4780fbfe29e29ddabf4da61bda2740676aa700d006867de64c9a1f5eb9": {
+      "sha256": "2041ce4780fbfe29e29ddabf4da61bda2740676aa700d006867de64c9a1f5eb9",
+      "legacy_parameter_set_id": "df54af803899",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875061035,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "499ded28074a49565a76b1e728f78ccad0023e861ce6bd84d936b77b57cece33": {
+      "sha256": "499ded28074a49565a76b1e728f78ccad0023e861ce6bd84d936b77b57cece33",
+      "legacy_parameter_set_id": "5812c2e13183",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874938964,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "8b5ff239ff431548d34312b24984929439a795a923485ed6c2e77b9585334429": {
+      "sha256": "8b5ff239ff431548d34312b24984929439a795a923485ed6c2e77b9585334429",
+      "legacy_parameter_set_id": "9c3be25140fc",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875030517,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "6deec5c7a3b0c58cd0e3cb78ef725b6593d28b43e321c629fdea999a68bf8120": {
+      "sha256": "6deec5c7a3b0c58cd0e3cb78ef725b6593d28b43e321c629fdea999a68bf8120",
+      "legacy_parameter_set_id": "57cefe42b6d2",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874969482,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "66e02b25d100ef67751e0103d635686c7958089b1e3aa4283655ad8f97c39a35": {
+      "sha256": "66e02b25d100ef67751e0103d635686c7958089b1e3aa4283655ad8f97c39a35",
+      "legacy_parameter_set_id": "ebd5f75333c9",
+      "parameters": {
+        "mask_threshold": 0.223125,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0210625,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "127e5fd24ad274f79966a9ba7b2d36894fd8703270bacdbb0fb6c1204793c33c": {
+      "sha256": "127e5fd24ad274f79966a9ba7b2d36894fd8703270bacdbb0fb6c1204793c33c",
+      "legacy_parameter_set_id": "2105b2636d9c",
+      "parameters": {
+        "mask_threshold": 0.223125,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0210625,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "cf48f577ffbe669c8164ef1b4be125a27e6a12eed676b9ef960f37499f251925": {
+      "sha256": "cf48f577ffbe669c8164ef1b4be125a27e6a12eed676b9ef960f37499f251925",
+      "legacy_parameter_set_id": "cdb5ce4be400",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875015258,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "5e775fd3a68c561a50d382116abda1428147160ff846856e8bcfd89ab71f04ac": {
+      "sha256": "5e775fd3a68c561a50d382116abda1428147160ff846856e8bcfd89ab71f04ac",
+      "legacy_parameter_set_id": "de40b69a33e3",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874984741,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "b55ea7bf69a1e2f0c987d64e40b8f6b1548f0924fceaaa7a784fb145f00c709e": {
+      "sha256": "b55ea7bf69a1e2f0c987d64e40b8f6b1548f0924fceaaa7a784fb145f00c709e",
+      "legacy_parameter_set_id": "0232b4ee6bd4",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875007629,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "fe2ea2aba2a4fc0fe4f711ab97a03ac5d5d82a5e9c70e47ba2b4c52891efc078": {
+      "sha256": "fe2ea2aba2a4fc0fe4f711ab97a03ac5d5d82a5e9c70e47ba2b4c52891efc078",
+      "legacy_parameter_set_id": "0d1b500aa3ed",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.03087499237,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "61cdb19e626af74e3bc652b0e10290481eb959c6aed23d77259e968ed46c5c79": {
+      "sha256": "61cdb19e626af74e3bc652b0e10290481eb959c6aed23d77259e968ed46c5c79",
+      "legacy_parameter_set_id": "b2ce1e9bc897",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874996185,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "06118182ff514482fa9a55f8c93d1ac634c13de50fd6c4f902f37bee45382968": {
+      "sha256": "06118182ff514482fa9a55f8c93d1ac634c13de50fd6c4f902f37bee45382968",
+      "legacy_parameter_set_id": "58bbbe81c73d",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875003815,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "45c84ede95af12dac3b0b99e2ee265b92a56f17ef67cd9e9219b48989f36d590": {
+      "sha256": "45c84ede95af12dac3b0b99e2ee265b92a56f17ef67cd9e9219b48989f36d590",
+      "legacy_parameter_set_id": "11fdbba2da62",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02112487793,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "f0a315eb90bf73f3a7e0c3ee329337dbd436cbba516ea12cde0509f8a6322c6d": {
+      "sha256": "f0a315eb90bf73f3a7e0c3ee329337dbd436cbba516ea12cde0509f8a6322c6d",
+      "legacy_parameter_set_id": "d4da42a4bd04",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125122071,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "b57e5cd2facae00844e92316e0d2c8cf4aaddef2b9c1dcc2f6ceef67d2098d34": {
+      "sha256": "b57e5cd2facae00844e92316e0d2c8cf4aaddef2b9c1dcc2f6ceef67d2098d34",
+      "legacy_parameter_set_id": "afd3403492d6",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030875000954,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "36617f6e2486650011ec6ac0aa2cebca181b95e1acc4f5334a7e9acbcae9b4f1": {
+      "sha256": "36617f6e2486650011ec6ac0aa2cebca181b95e1acc4f5334a7e9acbcae9b4f1",
+      "legacy_parameter_set_id": "82e0ca9feedb",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874999046,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "36979ac675a9ed9615dd8dbda5f335b390231acbc55bc85e562a1a2a197a62ca": {
+      "sha256": "36979ac675a9ed9615dd8dbda5f335b390231acbc55bc85e562a1a2a197a62ca",
+      "legacy_parameter_set_id": "87c0b0b2f2bc",
+      "parameters": {
+        "mask_threshold": 0.22325012207,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0208125,
+        "bbox_padding_fraction": 0.030874023438,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "d91a0255eb8ece1419034b65b325aafcf4915f752cf64c5d56f82d8588bc1761": {
+      "sha256": "d91a0255eb8ece1419034b65b325aafcf4915f752cf64c5d56f82d8588bc1761",
+      "legacy_parameter_set_id": "fa202e164dab",
+      "parameters": {
+        "mask_threshold": 0.223,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.021,
+        "bbox_padding_fraction": 0.0305,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "4bf99645ff32cf36ab4d8fa510005a0eb68317b6360938e3ee864afa0183edc5": {
+      "sha256": "4bf99645ff32cf36ab4d8fa510005a0eb68317b6360938e3ee864afa0183edc5",
+      "legacy_parameter_set_id": "23d6a2f32a19",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "c6cce916b8522e67196d043be9818c6259d0789d28232e540eaee16a68740926": {
+      "sha256": "c6cce916b8522e67196d043be9818c6259d0789d28232e540eaee16a68740926",
+      "legacy_parameter_set_id": "878f86fd338d",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0309375,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "9f73e0d34a2c253c87d5aeb58f8899b7f2361579bd891b3751ce020b5162e03e": {
+      "sha256": "9f73e0d34a2c253c87d5aeb58f8899b7f2361579bd891b3751ce020b5162e03e",
+      "legacy_parameter_set_id": "039dfa5b3a91",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0308125,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "b96b2793abb731433e6d743e5eebf944c5c152ad4eee135e0fa1df25419a5b89": {
+      "sha256": "b96b2793abb731433e6d743e5eebf944c5c152ad4eee135e0fa1df25419a5b89",
+      "legacy_parameter_set_id": "df02fc4b4a52",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.03096875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "f217ae8b8ee4e2d0b6c075cf68e94ee04b8255602c1434783334683a8a11c9c3": {
+      "sha256": "f217ae8b8ee4e2d0b6c075cf68e94ee04b8255602c1434783334683a8a11c9c3",
+      "legacy_parameter_set_id": "1e8f64b03daf",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.03090625,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "adb3014906f6519aca459cf5ec226ff863a937d5a412769f5521c0006a176c04": {
+      "sha256": "adb3014906f6519aca459cf5ec226ff863a937d5a412769f5521c0006a176c04",
+      "legacy_parameter_set_id": "71aa2c4189de",
+      "parameters": {
+        "mask_threshold": 0.22225,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0214375,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "8ce1e29eee7df5b68971204eb776434c284d9197dcdf4ce69f1c0f6650ae6e77": {
+      "sha256": "8ce1e29eee7df5b68971204eb776434c284d9197dcdf4ce69f1c0f6650ae6e77",
+      "legacy_parameter_set_id": "5f96b2717478",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.030984375,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "962a8a8c4a2ba7a2e764d3cc3474072a7f70e8e60bbebbdb35613836ec72f306": {
+      "sha256": "962a8a8c4a2ba7a2e764d3cc3474072a7f70e8e60bbebbdb35613836ec72f306",
+      "legacy_parameter_set_id": "fcad7e097b33",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.030953125,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "a9b46fbed30b53b2773af76461c9a4a8add7e09e3b095a896bf888d6406f2627": {
+      "sha256": "a9b46fbed30b53b2773af76461c9a4a8add7e09e3b095a896bf888d6406f2627",
+      "legacy_parameter_set_id": "59e3f0422134",
+      "parameters": {
+        "mask_threshold": 0.222125,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02146875,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "9f87001b213008defd72635841edcef605ca168176955cd3ac365875c7abaf3c": {
+      "sha256": "9f87001b213008defd72635841edcef605ca168176955cd3ac365875c7abaf3c",
+      "legacy_parameter_set_id": "a2002c15ad67",
+      "parameters": {
+        "mask_threshold": 0.222125,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02146875,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "fd041801d451fe4587e6d7ebe6853623c24ca7bf8c1c49c09e1e8128c38293c9": {
+      "sha256": "fd041801d451fe4587e6d7ebe6853623c24ca7bf8c1c49c09e1e8128c38293c9",
+      "legacy_parameter_set_id": "d25d068f9232",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0309921875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "ff3d1bff9dbc649a745e0dab0bbee3481c954efe3b904e5efcfcdd2213cecd05": {
+      "sha256": "ff3d1bff9dbc649a745e0dab0bbee3481c954efe3b904e5efcfcdd2213cecd05",
+      "legacy_parameter_set_id": "1498be334ba6",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0309453125,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "94f114aefd5dfac06cc7949ff328d67526b6b32e0bc802fbe5d0cb93e2f08d78": {
+      "sha256": "94f114aefd5dfac06cc7949ff328d67526b6b32e0bc802fbe5d0cb93e2f08d78",
+      "legacy_parameter_set_id": "8ebc27b43fe8",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.03099609375,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "e8d0e3f7f1bb0d54ff6ce1296132377423b840b6452f2101605e9f9cbfef0390": {
+      "sha256": "e8d0e3f7f1bb0d54ff6ce1296132377423b840b6452f2101605e9f9cbfef0390",
+      "legacy_parameter_set_id": "3305540b4329",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.03094140625,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "da3818763bb487fe8e260123b5840124a60ce822d0d148c36b7c0734161ad2f5": {
+      "sha256": "da3818763bb487fe8e260123b5840124a60ce822d0d148c36b7c0734161ad2f5",
+      "legacy_parameter_set_id": "dbb20b3fdd7a",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.020875,
+        "bbox_padding_fraction": 0.03099609375,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "cde87e4f8331b548c2bfdff904a2a367e15ed29a38b65a89edeb7789ca11ed31": {
+      "sha256": "cde87e4f8331b548c2bfdff904a2a367e15ed29a38b65a89edeb7789ca11ed31",
+      "legacy_parameter_set_id": "00f63ea49e56",
+      "parameters": {
+        "mask_threshold": 0.2220078125,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.020875,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "0e1383d4e08da5beb8bcddd7c38863dd7fd01e600995780c564df01b1b2d08bf": {
+      "sha256": "0e1383d4e08da5beb8bcddd7c38863dd7fd01e600995780c564df01b1b2d08bf",
+      "legacy_parameter_set_id": "d7739e106611",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.030998046875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "ac047da1277b33624d4a84047cf0573a644c6f58d742f79d5cbc135cfd7ab2d8": {
+      "sha256": "ac047da1277b33624d4a84047cf0573a644c6f58d742f79d5cbc135cfd7ab2d8",
+      "legacy_parameter_set_id": "0f14a1854cb6",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.030939453125,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "5396b6ee0c97aa082b748345544ce021f6fbfda54b4a41323c16ef85750c261c": {
+      "sha256": "5396b6ee0c97aa082b748345544ce021f6fbfda54b4a41323c16ef85750c261c",
+      "legacy_parameter_set_id": "d8d21baa2854",
+      "parameters": {
+        "mask_threshold": 0.222001953125,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0211875,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "bbf491112b7a347af94e13025b2d399154df6a9480ca3e6f6a213e94d0b03518": {
+      "sha256": "bbf491112b7a347af94e13025b2d399154df6a9480ca3e6f6a213e94d0b03518",
+      "legacy_parameter_set_id": "4d79c6040457",
+      "parameters": {
+        "mask_threshold": 0.222001953125,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0211875,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "e362bb5c6d548617510eb5094126efc65e3881bafe53a06ff1b3ce9d72c12db5": {
+      "sha256": "e362bb5c6d548617510eb5094126efc65e3881bafe53a06ff1b3ce9d72c12db5",
+      "legacy_parameter_set_id": "b42988cb8432",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0305,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "e97b32bfa4d4fcbd6d307e86a709565fe4417a57bad711588c1b26142ad2051e": {
+      "sha256": "e97b32bfa4d4fcbd6d307e86a709565fe4417a57bad711588c1b26142ad2051e",
+      "legacy_parameter_set_id": "774949d6a433",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.03075,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "90159426e57d41863608b28ffc0a36bb70a9dab09bd41e6580800b179d8c08aa": {
+      "sha256": "90159426e57d41863608b28ffc0a36bb70a9dab09bd41e6580800b179d8c08aa",
+      "legacy_parameter_set_id": "c4da3ce5df98",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.030625,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "c7107cdcfb27ee075bc70dc46bac26f7e4f216f298b8ef389f59cb5abf38afcd": {
+      "sha256": "c7107cdcfb27ee075bc70dc46bac26f7e4f216f298b8ef389f59cb5abf38afcd",
+      "legacy_parameter_set_id": "ef528f2a82d8",
+      "parameters": {
+        "mask_threshold": 0.22225,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0214375,
+        "bbox_padding_fraction": 0.03075,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "7587897e5c9a16db7dd21eaa87639342b006137670361f84637c2b19350dffb3": {
+      "sha256": "7587897e5c9a16db7dd21eaa87639342b006137670361f84637c2b19350dffb3",
+      "legacy_parameter_set_id": "2e9ccb8581a5",
+      "parameters": {
+        "mask_threshold": 0.225,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02075,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "bc138a5b615a803244cbd9bd4e0f7f9e608eb8da76769400bc6d58f9563021b7": {
+      "sha256": "bc138a5b615a803244cbd9bd4e0f7f9e608eb8da76769400bc6d58f9563021b7",
+      "legacy_parameter_set_id": "aec3fe29800f",
+      "parameters": {
+        "mask_threshold": 0.22425,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02115625,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "a31116d05ade56b9a96cad0cb540a8a3dfc5f12ecc97e6200cba2344e8cd45bf": {
+      "sha256": "a31116d05ade56b9a96cad0cb540a8a3dfc5f12ecc97e6200cba2344e8cd45bf",
+      "legacy_parameter_set_id": "ef9ae520cbe8",
+      "parameters": {
+        "mask_threshold": 0.22425,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02109375,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "cc2e64ada30f7e8b96e054e7407da168f01ca1b7100e8598d3ba7eb5eb62679d": {
+      "sha256": "cc2e64ada30f7e8b96e054e7407da168f01ca1b7100e8598d3ba7eb5eb62679d",
+      "legacy_parameter_set_id": "45904fd41e57",
+      "parameters": {
+        "mask_threshold": 0.22575,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030873962403,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "492c4679bc034cb64cfaa316862e829b270bf38ff7afff204b21fb8831ef9261": {
+      "sha256": "492c4679bc034cb64cfaa316862e829b270bf38ff7afff204b21fb8831ef9261",
+      "legacy_parameter_set_id": "f951a626a512",
+      "parameters": {
+        "mask_threshold": 0.22575,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.030874084473,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "13c82f633e020f72b2d7b05f0d10b77e0519f97297604065178860b95093a903": {
+      "sha256": "13c82f633e020f72b2d7b05f0d10b77e0519f97297604065178860b95093a903",
+      "legacy_parameter_set_id": "b5b4f520a074",
+      "parameters": {
+        "mask_threshold": 0.22375,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021499511719,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "a65aba5f08cd603648244faba9de915cbe94516ace2e65e97be869a268587f17": {
+      "sha256": "a65aba5f08cd603648244faba9de915cbe94516ace2e65e97be869a268587f17",
+      "legacy_parameter_set_id": "7305acddbb1e",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.03025,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "bbc07aa89c97efb366f53a7e7fa8479b064fec9db67ec99ace21dc1165d7d566": {
+      "sha256": "bbc07aa89c97efb366f53a7e7fa8479b064fec9db67ec99ace21dc1165d7d566",
+      "legacy_parameter_set_id": "3cdcc23fb6ff",
+      "parameters": {
+        "mask_threshold": 0.227,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.021375,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "0e35250e48fdc2b7feccea80af07495e0f0bc693dbe2fbced7a6eef2c6799b25": {
+      "sha256": "0e35250e48fdc2b7feccea80af07495e0f0bc693dbe2fbced7a6eef2c6799b25",
+      "legacy_parameter_set_id": "5ba832cf0545",
+      "parameters": {
+        "mask_threshold": 0.2255,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.030375,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "60b754d153e180f19de667c3c6335651429f4376eaa34250ae78e104375b36ed": {
+      "sha256": "60b754d153e180f19de667c3c6335651429f4376eaa34250ae78e104375b36ed",
+      "legacy_parameter_set_id": "fd0d369fcae3",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02112487793,
+        "bbox_padding_fraction": 0.029625,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "6096032a0252ca7e7e4836783ebe3250d61057f6302d69a6cf3e8ca86889b285": {
+      "sha256": "6096032a0252ca7e7e4836783ebe3250d61057f6302d69a6cf3e8ca86889b285",
+      "legacy_parameter_set_id": "58d7b6698417",
+      "parameters": {
+        "mask_threshold": 0.223250244141,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.021125,
+        "bbox_padding_fraction": 0.029625,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "deba4710a9af35025b031525ec3baa95c3a650adc49c08c1ad3270502b00e77b": {
+      "sha256": "deba4710a9af35025b031525ec3baa95c3a650adc49c08c1ad3270502b00e77b",
+      "legacy_parameter_set_id": "087eeec9b231",
+      "parameters": {
+        "mask_threshold": 0.227,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.03025,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "17d352de91cab86c59200d4c53d3b23e0f5262b281f739346082bd29b321db4f": {
+      "sha256": "17d352de91cab86c59200d4c53d3b23e0f5262b281f739346082bd29b321db4f",
+      "legacy_parameter_set_id": "6d31dc180dcc",
+      "parameters": {
+        "mask_threshold": 0.2255,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0295,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "b780ba69e0c9d2fc8e0a94f5db3a3b0c873f22d504d90d386dc16b481b91a922": {
+      "sha256": "b780ba69e0c9d2fc8e0a94f5db3a3b0c873f22d504d90d386dc16b481b91a922",
+      "legacy_parameter_set_id": "febe82bafeef",
+      "parameters": {
+        "mask_threshold": 0.2245,
+        "close_kernel_fraction": 0.0,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0285,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "186485a1d90f1aadcd4094d67ed4fe7d5445e1df56d50a8681cc297327919f3a": {
+      "sha256": "186485a1d90f1aadcd4094d67ed4fe7d5445e1df56d50a8681cc297327919f3a",
+      "legacy_parameter_set_id": "9a07c223044a",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.020625,
+        "bbox_padding_fraction": 0.02875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "ab950e0227cac6bc5a7efe9be19020e2d47933ef180894c879c0721f2c1976ac": {
+      "sha256": "ab950e0227cac6bc5a7efe9be19020e2d47933ef180894c879c0721f2c1976ac",
+      "legacy_parameter_set_id": "3ba0efc93753",
+      "parameters": {
+        "mask_threshold": 0.222015625,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.02875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "2f9be239512bcd4dba58a2087aad16859e5734373aac67c999e50b9dc3dd4e72": {
+      "sha256": "2f9be239512bcd4dba58a2087aad16859e5734373aac67c999e50b9dc3dd4e72",
+      "legacy_parameter_set_id": "a5a5eeffb0b1",
+      "parameters": {
+        "mask_threshold": 0.229,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02125,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "75b2c92c754092acc4994d4594eb9aa89c015e6430661fcb697781cd24ce0187": {
+      "sha256": "75b2c92c754092acc4994d4594eb9aa89c015e6430661fcb697781cd24ce0187",
+      "legacy_parameter_set_id": "577776a59989",
+      "parameters": {
+        "mask_threshold": 0.223375,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0195625,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "80dbb54af11c19571a780918b636e2e52419aa0a4c106c58229fa63522af4d07": {
+      "sha256": "80dbb54af11c19571a780918b636e2e52419aa0a4c106c58229fa63522af4d07",
+      "legacy_parameter_set_id": "5a4033eea897",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0195625,
+        "bbox_padding_fraction": 0.030999023438,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "51654818e2616db3a9a30a5ca2cbc6e010f4960a6fcb8a5628b914d3a19526c5": {
+      "sha256": "51654818e2616db3a9a30a5ca2cbc6e010f4960a6fcb8a5628b914d3a19526c5",
+      "legacy_parameter_set_id": "12356e0fd62a",
+      "parameters": {
+        "mask_threshold": 0.223250488282,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0205625,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "d356df9acfa1a269d1f3b171926a7adf76b77e5105bd9faa8f291783e5c6919f": {
+      "sha256": "d356df9acfa1a269d1f3b171926a7adf76b77e5105bd9faa8f291783e5c6919f",
+      "legacy_parameter_set_id": "d4351c7c5d4a",
+      "parameters": {
+        "mask_threshold": 0.22325,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0205625,
+        "bbox_padding_fraction": 0.030999996185,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "ae8249d4fe3910e6dbb943008d9b396819fe05dca0b5780235e216384caa9a12": {
+      "sha256": "ae8249d4fe3910e6dbb943008d9b396819fe05dca0b5780235e216384caa9a12",
+      "legacy_parameter_set_id": "ae029e81721d",
+      "parameters": {
+        "mask_threshold": 0.2225,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.02025,
+        "bbox_padding_fraction": 0.0305,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "454e1549b04cca7ad4ae9957a9bb6b9fc66baaa3504c005ee6eab150be30d97b": {
+      "sha256": "454e1549b04cca7ad4ae9957a9bb6b9fc66baaa3504c005ee6eab150be30d97b",
+      "legacy_parameter_set_id": "ad0ac1976f1c",
+      "parameters": {
+        "mask_threshold": 0.2265,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.019875,
+        "bbox_padding_fraction": 0.0305,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "2736f1bc3b81071efc7903e668c35302416d7e182849db0aef401a8656e3ba96": {
+      "sha256": "2736f1bc3b81071efc7903e668c35302416d7e182849db0aef401a8656e3ba96",
+      "legacy_parameter_set_id": "713c5fc58cf3",
+      "parameters": {
+        "mask_threshold": 0.22725,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0204375,
+        "bbox_padding_fraction": 0.031,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "e0d9c20cb07a252ecaee7b1f27f76a53d380fd6017dcac1b5804e25cab1f9cf1": {
+      "sha256": "e0d9c20cb07a252ecaee7b1f27f76a53d380fd6017dcac1b5804e25cab1f9cf1",
+      "legacy_parameter_set_id": "799c52fadb64",
+      "parameters": {
+        "mask_threshold": 0.22725,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0204375,
+        "bbox_padding_fraction": 0.030875,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "371c40e9a1cecf51bfa3bb4fe081115a6b77d81c1576a4698f2fd7ca05b0b295": {
+      "sha256": "371c40e9a1cecf51bfa3bb4fe081115a6b77d81c1576a4698f2fd7ca05b0b295",
+      "legacy_parameter_set_id": "84175b541991",
+      "parameters": {
+        "mask_threshold": 0.222,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.0215,
+        "bbox_padding_fraction": 0.0275,
+        "minimum_mask_area_fraction": 0.04
+      }
+    },
+    "5b5375338476307c38e0e2e9e810a85906f51d08a4beb5dcd8cb14f612568ab0": {
+      "sha256": "5b5375338476307c38e0e2e9e810a85906f51d08a4beb5dcd8cb14f612568ab0",
+      "legacy_parameter_set_id": "49fac5bed131",
+      "parameters": {
+        "mask_threshold": 0.5,
+        "minimum_mask_area_fraction": 0.04,
+        "close_kernel_fraction": 0.006,
+        "polygon_epsilon_fraction": 0.012,
+        "bbox_padding_fraction": 0.0
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
