@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "joint_rectangle_vote",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "fa4da63ad8842e4c2753300cf49f64f852d1783ea39dcd6c941b844251d294ce",
+    "parameter_order": [
+      "canny_low",
+      "canny_high",
+      "hough_threshold",
+      "axis_tolerance_degrees",
+      "minimum_side_support",
+      "minimum_area_fraction",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "canny_low": [
+        30.0,
+        50.0,
+        80.0
+      ],
+      "canny_high": [
+        100.0,
+        150.0,
+        220.0
+      ],
+      "hough_threshold": [
+        50,
+        80,
+        120
+      ],
+      "axis_tolerance_degrees": [
+        6.0,
+        12.0,
+        18.0
+      ],
+      "minimum_side_support": [
+        0.1,
+        0.18,
+        0.3
+      ],
+      "minimum_area_fraction": [
+        0.1,
+        0.16,
+        0.24
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.008,
+        0.016
+      ]
+    },
+    "cartesian_count": 2187,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "canny_low": 50.0,
+      "canny_high": 150.0,
+      "hough_threshold": 80,
+      "axis_tolerance_degrees": 12.0,
+      "minimum_side_support": 0.18,
+      "minimum_area_fraction": 0.16,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
