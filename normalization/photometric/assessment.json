@@ -34,7 +34,9 @@
       "preserve_maximum_highlight_clipping_fraction": 0.02,
       "candidate_minimum_highlight_clipping_fraction": 0.08,
       "preserve_maximum_background_chroma_variation": 8.0,
-      "candidate_minimum_background_chroma_variation": 16.0
+      "candidate_minimum_background_chroma_variation": 16.0,
+      "dark_frame_minimum_shadow_fraction": 0.75,
+      "mixed_polarity_minimum_shadow_fraction": 0.25
     },
     "recommendation": {
       "policy_id": "photometric-preservation-assessment-v1",
@@ -44,87 +46,107 @@
     }
   },
   "aggregate": {
-    "preserve_pages": 24,
-    "correction_candidate_pages": 7,
-    "review_pages": 48,
-    "inconclusive_pages": 0
+    "preserve_pages": 28,
+    "correction_candidate_pages": 2,
+    "review_pages": 49,
+    "inconclusive_pages": 0,
+    "dark_polarity_frame_pages": 4,
+    "mixed_polarity_pages": 1
   },
   "priority_review_pages": [
     {
       "global_ordinal": 1,
-      "decision": "correction-candidate",
+      "archetype": "dark-polarity-frame",
+      "decision": "preserve",
       "background_span": 0.730196,
       "tonal_span": 0.721569,
       "reasons": [
-        "uneven-background"
+        "intentional-dark-polarity"
       ]
     },
     {
       "global_ordinal": 2,
-      "decision": "correction-candidate",
+      "archetype": "dark-polarity-frame",
+      "decision": "preserve",
       "background_span": 0.776471,
       "tonal_span": 0.772549,
       "reasons": [
-        "uneven-background"
+        "intentional-dark-polarity"
       ]
     },
     {
       "global_ordinal": 929,
-      "decision": "correction-candidate",
+      "archetype": "dark-polarity-frame",
+      "decision": "preserve",
       "background_span": 0.768627,
       "tonal_span": 0.772549,
       "reasons": [
-        "uneven-background"
+        "intentional-dark-polarity"
       ]
     },
     {
       "global_ordinal": 4,
-      "decision": "correction-candidate",
+      "archetype": "dark-polarity-frame",
+      "decision": "preserve",
       "background_span": 0.704706,
       "tonal_span": 0.705882,
       "reasons": [
-        "uneven-background"
+        "intentional-dark-polarity"
       ]
     },
     {
       "global_ordinal": 381,
-      "decision": "correction-candidate",
+      "archetype": "mixed-polarity-page",
+      "decision": "review",
       "background_span": 0.772549,
       "tonal_span": 0.772549,
       "reasons": [
-        "uneven-background"
+        "mixed-polarity-content"
       ]
     },
     {
       "global_ordinal": 676,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.039216,
       "tonal_span": 0.772549,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 64,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.081176,
       "tonal_span": 0.835294,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 65,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.08,
       "tonal_span": 0.831373,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 3,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.022353,
       "tonal_span": 0.776471,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 95,
+      "archetype": "paper-page",
       "decision": "correction-candidate",
       "background_span": 0.40549,
       "tonal_span": 0.815686,
@@ -134,6 +156,7 @@
     },
     {
       "global_ordinal": 380,
+      "archetype": "paper-page",
       "decision": "correction-candidate",
       "background_span": 0.248627,
       "tonal_span": 0.45098,
@@ -143,66 +166,93 @@
     },
     {
       "global_ordinal": 912,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.048627,
       "tonal_span": 0.776471,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 342,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.066667,
       "tonal_span": 0.835294,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 245,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.061569,
       "tonal_span": 0.776471,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 551,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.066667,
       "tonal_span": 0.694118,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 26,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.074902,
       "tonal_span": 0.717647,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 101,
+      "archetype": "paper-page",
       "decision": "preserve",
       "background_span": 0.099608,
       "tonal_span": 0.631373,
-      "reasons": []
+      "reasons": [
+        "photometric-gates-passed"
+      ]
     },
     {
       "global_ordinal": 218,
+      "archetype": "paper-page",
       "decision": "review",
       "background_span": 0.053725,
       "tonal_span": 0.788235,
-      "reasons": []
+      "reasons": [
+        "threshold-review"
+      ]
     },
     {
       "global_ordinal": 100,
+      "archetype": "paper-page",
       "decision": "preserve",
       "background_span": 0.08902,
       "tonal_span": 0.643137,
-      "reasons": []
+      "reasons": [
+        "photometric-gates-passed"
+      ]
     },
     {
       "global_ordinal": 126,
+      "archetype": "paper-page",
       "decision": "preserve",
       "background_span": 0.085098,
       "tonal_span": 0.654902,
-      "reasons": []
+      "reasons": [
+        "photometric-gates-passed"
+      ]
     }
   ],
   "pages": [
@@ -216,9 +266,11 @@
       "source_sha256": "1d3e70267e43463301fd3b98354ae7782a79bc0715fe442d24c06e919f4441ab",
       "source_pixel_sha256": "d864c7f8557bbd506b313cda20d875a4d34cad029fe4a7d361ffdeb543949f2a",
       "estimate": {
-        "decision": "correction-candidate",
-        "candidate_reasons": [
-          "uneven-background"
+        "decision": "preserve",
+        "archetype": "dark-polarity-frame",
+        "candidate_reasons": [],
+        "decision_reasons": [
+          "intentional-dark-polarity"
         ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.730196,
@@ -316,9 +368,11 @@
       "source_sha256": "9853430e18be7b2660914f4ffcc2b3decba2119e7249f43bb2b37f27666cc93c",
       "source_pixel_sha256": "0e5e343b59d0545dba9a174e71e74f511d42189d4366be0dffd9dea1fad4c0fe",
       "estimate": {
-        "decision": "correction-candidate",
-        "candidate_reasons": [
-          "uneven-background"
+        "decision": "preserve",
+        "archetype": "dark-polarity-frame",
+        "candidate_reasons": [],
+        "decision_reasons": [
+          "intentional-dark-polarity"
         ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.776471,
@@ -416,7 +470,11 @@
       "source_pixel_sha256": "90b3d7b44c50b7bb066139ddb43e09d4211e86d5ddb7a0c4b89920b78405b047",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.022353,
         "tonal_span": 0.776471,
@@ -512,9 +570,11 @@
       "source_sha256": "86242c45b4a5e92b19e80db65bd12229acbf370e2a950b968feb1daa3462292f",
       "source_pixel_sha256": "bf2de747649c294ec02ebd6b339c4d49f7f12cda0f40943bcccd533a1abeaf80",
       "estimate": {
-        "decision": "correction-candidate",
-        "candidate_reasons": [
-          "uneven-background"
+        "decision": "preserve",
+        "archetype": "dark-polarity-frame",
+        "candidate_reasons": [],
+        "decision_reasons": [
+          "intentional-dark-polarity"
         ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.704706,
@@ -612,7 +672,11 @@
       "source_pixel_sha256": "5e7cee7f2eb7c4a2ef991060bec2cf258010448262427490bd660543675943c8",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.073333,
         "tonal_span": 0.643137,
@@ -709,7 +773,11 @@
       "source_pixel_sha256": "d952b32b3dcc4a9e8de3c839022208caa7c9077a51486ab4a4d222b9e828c9bc",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.074902,
         "tonal_span": 0.717647,
@@ -806,7 +874,11 @@
       "source_pixel_sha256": "08cf94b18e5a58984fe72f8e28663590dbf33cd844a59d2f7ccdfc034c286e63",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.069412,
         "tonal_span": 0.690196,
@@ -904,7 +976,11 @@
       "source_pixel_sha256": "b4bde7b7d47a4f5d3b59ffb59ebe7ad23530945308a038fbd8d2b2bc4486b457",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.081176,
         "tonal_span": 0.835294,
@@ -1001,7 +1077,11 @@
       "source_pixel_sha256": "38339a3e7b81cacd085caf31da25f0c23bcb6fd8403487b8820fdea0402ac336",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.08,
         "tonal_span": 0.831373,
@@ -1098,7 +1178,11 @@
       "source_pixel_sha256": "65c93a891e28e7d824e99165e81f47844f1b3920d0d3eab6f2d89169015b5858",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.072157,
         "tonal_span": 0.796078,
@@ -1196,7 +1280,11 @@
       "source_pixel_sha256": "ce317e4de89a24f78cf625ee7bb2195ced8199566f50e18e555d07fadb1d808d",
       "estimate": {
         "decision": "correction-candidate",
+        "archetype": "paper-page",
         "candidate_reasons": [
+          "uneven-background"
+        ],
+        "decision_reasons": [
           "uneven-background"
         ],
         "valid_tile_count": 64,
@@ -1295,7 +1383,11 @@
       "source_pixel_sha256": "50b6c48b83b463617a4e71d1673b1473fd531e87d29610420c5bb21a2b882cac",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.08902,
         "tonal_span": 0.643137,
@@ -1393,7 +1485,11 @@
       "source_pixel_sha256": "b91993c150da6e5b14ffac14ad2f629245dfe07d6fa81974b97fbe3f1bfc2310",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.099608,
         "tonal_span": 0.631373,
@@ -1490,7 +1586,11 @@
       "source_pixel_sha256": "7d96844af74e2105577b91bc0339ad615d21542c61e99402044f463d25cc9e1c",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.085098,
         "tonal_span": 0.654902,
@@ -1587,7 +1687,11 @@
       "source_pixel_sha256": "c5651546b029397674b233938fba6b0bb8521172b7a93de8d3db6eecf4f6df67",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.069412,
         "tonal_span": 0.764706,
@@ -1684,7 +1788,11 @@
       "source_pixel_sha256": "80f5b7ad96bb84898bb5f5036da02f9c6c99d7d7ac131daed7c111cab5ad5178",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.077255,
         "tonal_span": 0.694118,
@@ -1781,7 +1889,11 @@
       "source_pixel_sha256": "5c4ef162b189df14e1c13b82315038fef5936b48de94070f3d70a5ab2a4bf8ca",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.073333,
         "tonal_span": 0.721569,
@@ -1878,7 +1990,11 @@
       "source_pixel_sha256": "513f6e78cbf8fa179a92d735c914541cc3cb7edcd8078ccc5898a44fb1b4ce17",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.057647,
         "tonal_span": 0.780392,
@@ -1975,7 +2091,11 @@
       "source_pixel_sha256": "1028fd58599dd3a572b6701387227503f376db2039d588fa127162ecd62310a2",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.057647,
         "tonal_span": 0.803922,
@@ -2072,7 +2192,11 @@
       "source_pixel_sha256": "c6e6f63c25987830cf85f69a1aad3064040ee5a809c61eae594ea7f7a3345fb7",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.058824,
         "tonal_span": 0.803922,
@@ -2169,7 +2293,11 @@
       "source_pixel_sha256": "a5804071cda1a7febfb612761c48a41520331af17e46818773a73145daaa3f64",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.057647,
         "tonal_span": 0.709804,
@@ -2266,7 +2394,11 @@
       "source_pixel_sha256": "471e9c5ff154e76e673637eb60df8e5d9f9496388fc819e417691438164a57d6",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.076078,
         "tonal_span": 0.784314,
@@ -2363,7 +2495,11 @@
       "source_pixel_sha256": "c8fb38f16a5d7010db30d9eafce46ad87cec37ed37263577cef3c3b9878871a1",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.061569,
         "tonal_span": 0.8,
@@ -2460,7 +2596,11 @@
       "source_pixel_sha256": "077c97e5eaeeed76ce155bc83f6f0dc5773fd07318ce37ae6bd9177d6db070dd",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.061569,
         "tonal_span": 0.721569,
@@ -2557,7 +2697,11 @@
       "source_pixel_sha256": "d00b3ced899fcd2724c078d5daed4830d4b28042b755a3c1f043825af9c908ef",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.053725,
         "tonal_span": 0.788235,
@@ -2654,7 +2798,11 @@
       "source_pixel_sha256": "b16870f5d435f90b708537c6101b75d90178896e70dd1455e09a9c57f919c50b",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.060392,
         "tonal_span": 0.752941,
@@ -2751,7 +2899,11 @@
       "source_pixel_sha256": "158b49c6bcf49b0c9f2cbf10b3626a1f2b00637babbdf9e3943dba2babaeba3c",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.061569,
         "tonal_span": 0.776471,
@@ -2849,7 +3001,11 @@
       "source_pixel_sha256": "1eb89d2ca4933867392a33cbcf80d756b13bdf11b27cad2deee499a09122d692",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.053725,
         "tonal_span": 0.694118,
@@ -2946,7 +3102,11 @@
       "source_pixel_sha256": "8988e722193e1985c983c68e34fd901f876aa2e25d5a3b43c605122fd888e086",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.05098,
         "tonal_span": 0.694118,
@@ -3043,7 +3203,11 @@
       "source_pixel_sha256": "6071f60f3553ed273b827451a0234c227c9d79935eed1a67f3567bb15b123266",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.069412,
         "tonal_span": 0.733333,
@@ -3140,7 +3304,11 @@
       "source_pixel_sha256": "a01db4f2ca15c43e2d154adab6d1f7d7cec255545f70dfdc4c1b01a86f0a5f24",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.08,
         "tonal_span": 0.796078,
@@ -3237,7 +3405,11 @@
       "source_pixel_sha256": "2b683b2bb4ffc6d9ac45eb6f44c53d298211e7f4403309ba2ef7d7206b2f63e0",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.073333,
         "tonal_span": 0.737255,
@@ -3334,7 +3506,11 @@
       "source_pixel_sha256": "b168ebf110950a24b70f1646e8930249c1eac47079ee68f66bf7d7d6f1c9cb03",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.070588,
         "tonal_span": 0.764706,
@@ -3431,7 +3607,11 @@
       "source_pixel_sha256": "f606bc202cb85b183e710e9dddab08405a4a91fcda3ef58d4e891d2fdef6ac1b",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.066667,
         "tonal_span": 0.835294,
@@ -3528,7 +3708,11 @@
       "source_pixel_sha256": "5f4b7759af980b724f933571a819b5c944c5ba26572546d8d605ac977cebb6bc",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.061569,
         "tonal_span": 0.819608,
@@ -3625,7 +3809,11 @@
       "source_pixel_sha256": "7a5b6c9f7d3dcd7e57b922337eaafb0bcc10568c886d106655fb36b8bebee9b0",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.069412,
         "tonal_span": 0.764706,
@@ -3722,7 +3910,11 @@
       "source_pixel_sha256": "a98f9aa9f997691583c44214658e2b8214c57443832ba756c9fb1f6fb2561a85",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.053725,
         "tonal_span": 0.741176,
@@ -3819,7 +4011,11 @@
       "source_pixel_sha256": "be519622ab3407f637dcef4e697bbcce33993aeb8f3779c14aa1dea8fe5ade38",
       "estimate": {
         "decision": "correction-candidate",
+        "archetype": "paper-page",
         "candidate_reasons": [
+          "uneven-background"
+        ],
+        "decision_reasons": [
           "uneven-background"
         ],
         "valid_tile_count": 64,
@@ -3918,9 +4114,11 @@
       "source_sha256": "9ffe2cbadf553d0bc4033cb41711f4d7ba6f66550a0008cb537315e351ff0989",
       "source_pixel_sha256": "861943a0d6a30d414040b2439432d4106d974c1744952d6cb3536ef51bc44d37",
       "estimate": {
-        "decision": "correction-candidate",
-        "candidate_reasons": [
-          "uneven-background"
+        "decision": "review",
+        "archetype": "mixed-polarity-page",
+        "candidate_reasons": [],
+        "decision_reasons": [
+          "mixed-polarity-content"
         ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.772549,
@@ -4018,7 +4216,11 @@
       "source_pixel_sha256": "f9dd246dfbd371d26fd7c73db2de10c09c1f201db996b36cf5b50ba22efffc19",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.061961,
         "tonal_span": 0.568627,
@@ -4115,7 +4317,11 @@
       "source_pixel_sha256": "e0e519c0771d728946eb41a068e864f69ad876d89d8b847913febc7110e4ef0e",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.064314,
         "tonal_span": 0.698039,
@@ -4212,7 +4418,11 @@
       "source_pixel_sha256": "51798c11ba4cb64920e1251b478e19ddb8a16f501c1b5dbf8ea29d5239b3c792",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.056471,
         "tonal_span": 0.47451,
@@ -4309,7 +4519,11 @@
       "source_pixel_sha256": "c1fd25470245519132a1aa01c67a09149f500a90f8ff60853d2f101b11f05d86",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.069412,
         "tonal_span": 0.666667,
@@ -4406,7 +4620,11 @@
       "source_pixel_sha256": "2ba421ee554f667a34739a4309826b9eb2c4fa29295861d40fb6b4ad399b7c9a",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.052549,
         "tonal_span": 0.568627,
@@ -4504,7 +4722,11 @@
       "source_pixel_sha256": "e04b1a65aea133c74f5c897a0e9f49fbcfe9d14400cd6c4074d6e30c3f79d1c0",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.076471,
         "tonal_span": 0.596078,
@@ -4601,7 +4823,11 @@
       "source_pixel_sha256": "9068b3cbaa1bf011f9f0786928af206217f51edea68838d51b1b234a3e3a335b",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.063137,
         "tonal_span": 0.552941,
@@ -4698,7 +4924,11 @@
       "source_pixel_sha256": "919cc027f8e2d8122d3e717baa21016888558b02f960c214cab824991f8bee07",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.054902,
         "tonal_span": 0.560784,
@@ -4795,7 +5025,11 @@
       "source_pixel_sha256": "ef9c32bcfae7909a7ff81ab3b6232cc6c71a3acd52ee0c70cec43f4c591ef2fc",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.082353,
         "tonal_span": 0.584314,
@@ -4892,7 +5126,11 @@
       "source_pixel_sha256": "159c6b8193e0ca308efbf2082c127aff4b8f315ca82a811b7853dfbdbf5be409",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.066667,
         "tonal_span": 0.694118,
@@ -4989,7 +5227,11 @@
       "source_pixel_sha256": "b321de95019a3b0df494a434e947a88d6c2073af8fdfebcabdb4b50c2af49ff8",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.062745,
         "tonal_span": 0.509804,
@@ -5086,7 +5328,11 @@
       "source_pixel_sha256": "ce73acc1df876e1e88c6f819d6f6a817c7704c7f8ba2110f5a5721d03fa2eaf5",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.059216,
         "tonal_span": 0.447059,
@@ -5183,7 +5429,11 @@
       "source_pixel_sha256": "e3f96cc1f44f38f6831b1f2e22652230383bd9f89cf766501f839ae005076b41",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.056471,
         "tonal_span": 0.643137,
@@ -5280,7 +5530,11 @@
       "source_pixel_sha256": "d01e942ba008ee7813c4ada614f9a2c07d1399c37134b612b262ad2617e1a3bd",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.052549,
         "tonal_span": 0.454902,
@@ -5377,7 +5631,11 @@
       "source_pixel_sha256": "c7f0e42953dd6057e753d16c0d81a041691bee2401acfb78e5b7660b486c4a47",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.068235,
         "tonal_span": 0.560784,
@@ -5474,7 +5732,11 @@
       "source_pixel_sha256": "27ed53950c213f9531b3b6f9b33e496ff7ffad129f3c9852475f5a933f4b6db1",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.062745,
         "tonal_span": 0.729412,
@@ -5572,7 +5834,11 @@
       "source_pixel_sha256": "96651bc2da7ed06ee9d61ce1c973f1db97a3781dfa3bb421878b8cf804ad1d1d",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.039216,
         "tonal_span": 0.772549,
@@ -5669,7 +5935,11 @@
       "source_pixel_sha256": "54d348d3049449e1911a70fe87da92d354c2f5410292b06b7cce0a492e0fa417",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.05098,
         "tonal_span": 0.635294,
@@ -5766,7 +6036,11 @@
       "source_pixel_sha256": "f55718f10bc2b2271d9e3f265c6826fb75e813ec512cf69572c2cdb1ee6e05a5",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.035294,
         "tonal_span": 0.631373,
@@ -5863,7 +6137,11 @@
       "source_pixel_sha256": "968138f21a1c1b58bcf0624f787ea7ec95bf82b67ce5f0a14a5484764403ad6f",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.043137,
         "tonal_span": 0.654902,
@@ -5960,7 +6238,11 @@
       "source_pixel_sha256": "9a32f8450f01c64f14e4a6b1c1e5f77f63798c08e360330394b843ee8f6f1b09",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.069412,
         "tonal_span": 0.588235,
@@ -6057,7 +6339,11 @@
       "source_pixel_sha256": "d6ebfe941f573d61df954f34fcc50dd791e58b353fff89fcdc8bc4ea8a11ee5a",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.049804,
         "tonal_span": 0.603922,
@@ -6154,7 +6440,11 @@
       "source_pixel_sha256": "94a4d8dc01e54a5605d1c1bff50a260d677f1cdc612e4a229fb9a36a0a3c5c7e",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.043137,
         "tonal_span": 0.596078,
@@ -6251,7 +6541,11 @@
       "source_pixel_sha256": "e50513e03f331de84a1bf676fb81bed3f70dbea1bad893342c9118fa15bccb23",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.053725,
         "tonal_span": 0.647059,
@@ -6348,7 +6642,11 @@
       "source_pixel_sha256": "e57e5d0b078a6349371fbb4a1507c826961881c7ba2d13629bfce0cb5f3f4910",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.047059,
         "tonal_span": 0.647059,
@@ -6445,7 +6743,11 @@
       "source_pixel_sha256": "53260a4462bb5b21a429a7b1ad6d4efbb4d3112bc7b3ee5822fefaaee5ea1b0e",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.05098,
         "tonal_span": 0.698039,
@@ -6542,7 +6844,11 @@
       "source_pixel_sha256": "d053e0ae25d6acdb83db030bc00fd7b100f2bc70d2a42e827d285994a2424b0c",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.049804,
         "tonal_span": 0.611765,
@@ -6639,7 +6945,11 @@
       "source_pixel_sha256": "2492feb6e2f420d370acef722a1961e8528afa074a39923bb3c7909437634f71",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.05098,
         "tonal_span": 0.611765,
@@ -6736,7 +7046,11 @@
       "source_pixel_sha256": "0f7339b4546a785c4b746357fdaaba74402b78c8cde899ab46b150cbfe03c98d",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.053725,
         "tonal_span": 0.572549,
@@ -6833,7 +7147,11 @@
       "source_pixel_sha256": "7621735e06ef467353aec154aec0196c2369c6974e6b841395472555896a7ff6",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.057647,
         "tonal_span": 0.666667,
@@ -6930,7 +7248,11 @@
       "source_pixel_sha256": "8573fb9a05b455f4750d2af04abce25389ff98bdf84e6540ce3e760293c3935e",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.045882,
         "tonal_span": 0.627451,
@@ -7027,7 +7349,11 @@
       "source_pixel_sha256": "60d2cc4e06208bf26ff4300487db0ee00033ad11cd02ff7f1f4c52ff3693d4a6",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.052549,
         "tonal_span": 0.556863,
@@ -7124,7 +7450,11 @@
       "source_pixel_sha256": "484b1c1fe80726909a838c7007f2cbc11f1b400cd4eea1b88fb610ef3762ef13",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.040784,
         "tonal_span": 0.423529,
@@ -7221,7 +7551,11 @@
       "source_pixel_sha256": "e22e45cc4303c05aedb20b94db9c886f6cf64db5ce9b33d0527aa49fb08e6c17",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.035294,
         "tonal_span": 0.486275,
@@ -7318,7 +7652,11 @@
       "source_pixel_sha256": "b5eb63dbca83b4cbd6e0d64ab2f89cffef57001710a66399f7284ae996db9be2",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.035294,
         "tonal_span": 0.529412,
@@ -7415,7 +7753,11 @@
       "source_pixel_sha256": "20bbd76cf34af5f75dc9c7ef103c47241f8c7f7e08f49f593e56dcc3768286bf",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.048627,
         "tonal_span": 0.776471,
@@ -7512,7 +7854,11 @@
       "source_pixel_sha256": "8100329e83c78bc8e7c835d96214e9b427aa0e0f7fdc8d64586813c0ccc70a27",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.044706,
         "tonal_span": 0.72549,
@@ -7609,7 +7955,11 @@
       "source_pixel_sha256": "0242d3af6b1c0dece6a11d23eca4e3026a112bed6077fbfd04cf6c282515aaa4",
       "estimate": {
         "decision": "preserve",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "photometric-gates-passed"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.061569,
         "tonal_span": 0.54902,
@@ -7706,7 +8056,11 @@
       "source_pixel_sha256": "f6b04aba9f31a4727f37b326f8ee29d48130567060d2d910fe433aa6bdd9a6d2",
       "estimate": {
         "decision": "review",
+        "archetype": "paper-page",
         "candidate_reasons": [],
+        "decision_reasons": [
+          "threshold-review"
+        ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.054902,
         "tonal_span": 0.678431,
@@ -7803,9 +8157,11 @@
       "source_sha256": "03859f9f841133938fe56821aff569d2d27d5f7fb723b064f8740308d78d5b19",
       "source_pixel_sha256": "6c09261a9f9c09d412eddbde45adc8ae32f355097516cf5805df49a83ae10d73",
       "estimate": {
-        "decision": "correction-candidate",
-        "candidate_reasons": [
-          "uneven-background"
+        "decision": "preserve",
+        "archetype": "dark-polarity-frame",
+        "candidate_reasons": [],
+        "decision_reasons": [
+          "intentional-dark-polarity"
         ],
         "valid_tile_count": 64,
         "background_luminance_span": 0.768627,
@@ -7895,5 +8251,5 @@
       }
     }
   ],
-  "assessment_identity": "9332299b9a0212ca1bb68af08151c35dd74a151b324363494b036120ffbd36af"
+  "assessment_identity": "2c19afa0bb92420b21116115fba309e200ac37669f90fa3c1a4e3dcb1207125e"
 }
