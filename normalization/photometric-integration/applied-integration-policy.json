@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "policy_type": "photometric-method-integration",
+  "policy_id": "selective-luminance-background-field-correction-v1",
+  "status": "integration-candidate",
+  "action": "prepare-integration",
+  "method": {
+    "id": "background-division-50",
+    "mode": "divide",
+    "strength": 0.5
+  },
+  "compatibility": {
+    "canonical_normalization_result_identity": "d0fb2998d1cfcef91f6c6469ff9223184243aedebb85bf1746ab13b8c1d26e80",
+    "photometric_assessment_identity": "62bf9dd8c1a5f1835a961b7bcfb9d327b2bddcde1869740c01d2be8722b52dee",
+    "method_assessment_identity": "32f43540f1bf54e318963ab6c4af0aec7923272505a1c0e6d23def7c2a56734b",
+    "method_policy_identity": "5255c1aac95d8ef6360a3d51324ff2c130c6a79cc399ff6e60950540172ea2f1"
+  },
+  "evidence": {
+    "validation_identity": "5f9013a2d00d671fdbe24444272a3e9438e49b8cc6862d1116e786fc11bf96ca",
+    "gates": {
+      "held_out_population_coverage": true,
+      "held_out_candidate_count": true,
+      "every_candidate_safe": true,
+      "candidate_background_improvement": true,
+      "every_protected_control_preserved": true
+    },
+    "aggregate": {
+      "validation_pages": 921,
+      "held_out_population_page_count": 921,
+      "held_out_population_fraction": 1.0,
+      "held_out_correction_candidates": 79,
+      "safe_correction_candidates": 79,
+      "mean_candidate_background_reduction_fraction": 0.489258,
+      "routed_preserve_pages": 842,
+      "protected_control_pages": 5,
+      "protected_controls_preserved": 5
+    }
+  },
+  "policy_identity": "a485dd92959c6290e792214fcbd062b79132e668678fccd980b7d0a15e04d2ab"
+}
