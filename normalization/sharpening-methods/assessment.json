@@ -1,0 +1,49 @@
+{
+  "assessment_identity": "3c115f68806d2c5dfaf445fcf3563902ca4f4eb00531f9ba2fe34f8d73f819b1",
+  "assessment_type": "sharpening-method-comparison",
+  "candidate_count": 0,
+  "config": {
+    "assessment_type": "sharpening-method-comparison",
+    "domain": "sharpening",
+    "methods": [
+      {
+        "id": "unsharp-25",
+        "mode": "unsharp-mask",
+        "radius": 1.0,
+        "strength": 0.25
+      },
+      {
+        "id": "unsharp-50",
+        "mode": "unsharp-mask",
+        "radius": 1.0,
+        "strength": 0.5
+      },
+      {
+        "id": "unsharp-75",
+        "mode": "unsharp-mask",
+        "radius": 1.0,
+        "strength": 0.75
+      }
+    ],
+    "recommendation": {
+      "policy_id": "bounded-sharpening-v1",
+      "selection_rule": "minimum-strength-safe-for-every-development-candidate"
+    },
+    "safety_gates": {
+      "maximum_absolute_median_luminance_shift": 0.01,
+      "maximum_detail_gain_fraction": 0.4,
+      "maximum_new_clipping_fraction": 0.002,
+      "maximum_noise_amplification_fraction": 0.2,
+      "minimum_detail_correlation": 0.98,
+      "minimum_detail_gain_fraction": 0.03
+    },
+    "schema_version": "1.0"
+  },
+  "domain": "sharpening",
+  "globally_safe_methods": [],
+  "method_assessment_identity": "799a37d331ca09f643954f76bbe2361cc0b6f991cb4762e70c9ff522048fa24b",
+  "pages": [],
+  "recommended_method_id": null,
+  "schema_version": "1.0",
+  "upstream_result_identity": "8204a7112e3eaf50cefc978aed0fbf54595571a246eb7d1734cf3e9f97176fd7"
+}
