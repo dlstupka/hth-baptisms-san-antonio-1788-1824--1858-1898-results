@@ -4,7 +4,7 @@
 
 - Suggested policy: `hough-lines-conservative-v1`
 - Gross page orientation: preserve as-is
-- Expected sample impact: `9` of `79` sampled pages
+- Expected sample impact: `8` of `79` sampled pages
 - Activation: a researcher must explicitly choose the recommended policy when starting normalization
 
 ### Automated evidence checks
