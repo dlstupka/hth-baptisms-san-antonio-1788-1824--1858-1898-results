@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "segment_supported_polar_vote",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "9c9c92887045507ae0c4f30c19ddc0cef86f57aa19472da884f468240df2bf82",
+    "parameter_order": [
+      "ray_count",
+      "inner_radius_fraction",
+      "outer_radius_fraction",
+      "gradient_percentile",
+      "minimum_support_fraction",
+      "segment_distance_fraction",
+      "minimum_segment_length_fraction",
+      "minimum_segment_support_fraction",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "ray_count": [
+        48,
+        60,
+        72,
+        84,
+        120,
+        180
+      ],
+      "inner_radius_fraction": [
+        0.08,
+        0.1,
+        0.12,
+        0.14,
+        0.16,
+        0.18
+      ],
+      "outer_radius_fraction": [
+        0.66,
+        0.7,
+        0.72,
+        0.76,
+        0.82,
+        0.9
+      ],
+      "gradient_percentile": [
+        78.0,
+        82.0,
+        83.0,
+        84.0,
+        86.0,
+        90.0,
+        92.0
+      ],
+      "minimum_support_fraction": [
+        0.2
+      ],
+      "segment_distance_fraction": [
+        0.0025,
+        0.0035,
+        0.005,
+        0.0065,
+        0.01,
+        0.018
+      ],
+      "minimum_segment_length_fraction": [
+        0.015,
+        0.0225,
+        0.03,
+        0.045,
+        0.1
+      ],
+      "minimum_segment_support_fraction": [
+        0.1
+      ],
+      "bbox_padding_fraction": [
+        0.0
+      ]
+    },
+    "cartesian_count": 45360,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 8,
+    "explicit_non_grid_parameter_sets": 2
+  },
+  "profiles": {
+    "baseline": {
+      "ray_count": 180,
+      "inner_radius_fraction": 0.12,
+      "outer_radius_fraction": 0.7,
+      "gradient_percentile": 82.0,
+      "minimum_support_fraction": 0.35,
+      "segment_distance_fraction": 0.018,
+      "minimum_segment_length_fraction": 0.1,
+      "minimum_segment_support_fraction": 0.3,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {
+    "a2e0461565db2bd12a9d15f397a53d241e4232a391a0ec6348aca3ffa6415be6": {
+      "sha256": "a2e0461565db2bd12a9d15f397a53d241e4232a391a0ec6348aca3ffa6415be6",
+      "legacy_parameter_set_id": "4546643c94a4",
+      "parameters": {
+        "bbox_padding_fraction": 0.0,
+        "gradient_percentile": 92.0,
+        "inner_radius_fraction": 0.1,
+        "minimum_segment_length_fraction": 0.03,
+        "minimum_segment_support_fraction": 0.1,
+        "minimum_support_fraction": 0.2,
+        "outer_radius_fraction": 0.68,
+        "ray_count": 48,
+        "segment_distance_fraction": 0.0025
+      }
+    },
+    "11a710d51d708e7089485361b5df4898a5439d6bfb09d71e56e2477a525e4391": {
+      "sha256": "11a710d51d708e7089485361b5df4898a5439d6bfb09d71e56e2477a525e4391",
+      "legacy_parameter_set_id": "92e0158634c3",
+      "parameters": {
+        "ray_count": 180,
+        "inner_radius_fraction": 0.12,
+        "outer_radius_fraction": 0.7,
+        "gradient_percentile": 82.0,
+        "minimum_support_fraction": 0.35,
+        "segment_distance_fraction": 0.018,
+        "minimum_segment_length_fraction": 0.1,
+        "minimum_segment_support_fraction": 0.3,
+        "bbox_padding_fraction": 0.0
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
