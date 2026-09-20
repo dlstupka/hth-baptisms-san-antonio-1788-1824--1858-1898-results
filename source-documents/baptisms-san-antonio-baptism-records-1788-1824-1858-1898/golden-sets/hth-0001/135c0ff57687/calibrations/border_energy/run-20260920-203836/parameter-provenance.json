@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "border_energy",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "797c456dbd7dd781f46faafccb9d6bd73218053ac4b40b4bd76da5350c296dd9",
+    "parameter_order": [
+      "minimum_contour_area_fraction",
+      "epsilon_max_fraction",
+      "minimum_rectangularity",
+      "gaussian_sigma",
+      "band_fraction",
+      "minimum_border_energy",
+      "minimum_side_consistency",
+      "energy_weight"
+    ],
+    "values": {
+      "minimum_contour_area_fraction": [
+        0.08,
+        0.12,
+        0.2
+      ],
+      "epsilon_max_fraction": [
+        0.03,
+        0.04,
+        0.06
+      ],
+      "minimum_rectangularity": [
+        0.45,
+        0.55,
+        0.7
+      ],
+      "gaussian_sigma": [
+        0.8,
+        1.2,
+        1.8
+      ],
+      "band_fraction": [
+        0.004,
+        0.008,
+        0.015
+      ],
+      "minimum_border_energy": [
+        0.05,
+        0.1,
+        0.18
+      ],
+      "minimum_side_consistency": [
+        0.3,
+        0.45,
+        0.6
+      ],
+      "energy_weight": [
+        0.3,
+        0.4,
+        0.5
+      ]
+    },
+    "cartesian_count": 6561,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 9,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "minimum_contour_area_fraction": 0.12,
+      "epsilon_max_fraction": 0.04,
+      "minimum_rectangularity": 0.55,
+      "gaussian_sigma": 1.2,
+      "band_fraction": 0.008,
+      "minimum_border_energy": 0.1,
+      "minimum_side_consistency": 0.45,
+      "contour_weight": 0.45,
+      "energy_weight": 0.4,
+      "consistency_weight": 0.15
+    }
+  },
+  "explicit_parameter_sets": {
+    "5a653e08329e34a02cefa8fa7c92f99af81bee09e0603436dd6b694d96e9faa6": {
+      "sha256": "5a653e08329e34a02cefa8fa7c92f99af81bee09e0603436dd6b694d96e9faa6",
+      "legacy_parameter_set_id": "e38a975d1436",
+      "parameters": {
+        "minimum_contour_area_fraction": 0.12,
+        "epsilon_max_fraction": 0.04,
+        "minimum_rectangularity": 0.55,
+        "gaussian_sigma": 1.2,
+        "band_fraction": 0.008,
+        "minimum_border_energy": 0.1,
+        "minimum_side_consistency": 0.45,
+        "contour_weight": 0.45,
+        "energy_weight": 0.4,
+        "consistency_weight": 0.15
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
