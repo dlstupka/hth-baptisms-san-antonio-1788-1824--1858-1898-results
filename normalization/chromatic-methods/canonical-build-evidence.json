@@ -1,7 +1,138 @@
 {
-  "authoritative_identity": "c38c2b31269d82693819e2635d262008634bac36e63ad87d958b2b937f64037f",
+  "authoritative_identity": "909b4f79d4af81c94da0ff8e4833b87ead5d1d88705166eb5ae2e80336a5a804",
   "evidence_type": "canonical-build-evidence-store",
   "records": {
+    "909b4f79d4af81c94da0ff8e4833b87ead5d1d88705166eb5ae2e80336a5a804": {
+      "canonical_result": {
+        "artifacts": [
+          {
+            "canonical_sha256": "08c01e43db768fe2c1fee6508b7cd9b3b0d76892f62ee4f6a83efffdeb3db686",
+            "format": "json",
+            "logical_name": "chromatic-method-assessment",
+            "published_path": "normalization/chromatic-methods/assessment.json"
+          }
+        ],
+        "identity": "1b6787121996d643819eddd28a747f945ea6207962bec345668f2323cac33c60",
+        "pages": []
+      },
+      "effective_build_identity": "909b4f79d4af81c94da0ff8e4833b87ead5d1d88705166eb5ae2e80336a5a804",
+      "effective_inputs": {
+        "configuration": [
+          {
+            "bytes": 841,
+            "path": "config/chromatic-method-assessment.json",
+            "sha256": "ae1a3e6d7d45a5a516023837fc669ee21b65a445662982290399a30f0fbe4666"
+          }
+        ],
+        "contract": {
+          "image_limit": 0,
+          "mode": "diagnostic-evidence",
+          "name": "hth-chromatic-method-assessment",
+          "operations": [
+            "chromatic-compare-evidence"
+          ],
+          "resource_provenance_version": "1",
+          "version": "1"
+        },
+        "detector_selection": null,
+        "implementation": [
+          {
+            "bytes": 20239,
+            "path": "hth/normalize_chromatic.py",
+            "sha256": "ecb462afc575b2489adb4e66a0c9831022a4591df6f62a36f5c6d235ec9910e1"
+          }
+        ],
+        "runtime": {
+          "declared_components": {},
+          "packages": {
+            "numpy": "2.4.6",
+            "opencv-python-headless": "4.14.0.94"
+          },
+          "python_cache_tag": "cpython-312",
+          "python_implementation": "CPython",
+          "python_version": "3.12.0"
+        },
+        "runtime_contract": [
+          {
+            "bytes": 6626,
+            "path": ".github/actions/setup-hth-python/action.yml",
+            "sha256": "12a891d05208f91f87cb4ae6156bbf6048c34dc7455f431516bdc80b41caf950"
+          },
+          {
+            "bytes": 70,
+            "path": "requirements.txt",
+            "sha256": "d98d5ea73e5da16547c31e4cce101f0fd8fe59b94adb78a8b5d739ea1bdc79a1"
+          }
+        ],
+        "selected_detector_implementation": [],
+        "source": {
+          "commit": "ee25322d85649442f0346f75fbe4c4944925a4eaa23bf1d64838e158d1dba13d",
+          "files": [
+            {
+              "bytes": 539819,
+              "path": "assessment.json",
+              "sha256": "9ecf9e52baafa15d6fa08374b0d390a8c740dd35093ab362a0faa98fd0d28d71"
+            },
+            {
+              "bytes": 450,
+              "path": "release.json",
+              "sha256": "78ffdc4e5d1495ba2dd9d80f2038b6a9b771fed0894d0dd83f06954b2ebbc495"
+            },
+            {
+              "bytes": 469414,
+              "path": "tonal-normalization-manifest.json",
+              "sha256": "b698be80dad712fc47c497e577dbb2186a8ad88de8b5a79bd687821ff69f9856"
+            }
+          ],
+          "release": "HTH-TONAL-ee25322d85649442f0346f75fbe4c4944925a4eaa23bf1d64838e158d1dba13d",
+          "release_manifest_sha256": "46b6c132d62ab8d7bed20d4e07912b4087dd4f6e36a0802677850c017a5fea87",
+          "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results"
+        }
+      },
+      "evidence_type": "canonical-build-evidence",
+      "execution": {
+        "activity": "EXECUTED",
+        "completed_at_utc": "2026-09-20T05:41:20Z",
+        "domain_result": "APPLY",
+        "elapsed_seconds": 67,
+        "evaluated_at_utc": "2026-09-20T05:40:13Z",
+        "pipeline_commit": "33cd79618a94561ee36644cab5b3b728a75934ed",
+        "pipeline_repository": "dlstupka/hth",
+        "policy": "auto",
+        "runner": {
+          "runner_arch": "X64",
+          "runner_environment": "self-hosted",
+          "runner_name": "rh8-al319",
+          "runner_os": "Linux"
+        },
+        "verified_against_incumbent": false,
+        "workflow_run_id": "35491747887"
+      },
+      "resource_utilization": {
+        "canonical_evidence_cache": {
+          "action": "populated",
+          "canonical_result_identity": null,
+          "lookup": "miss",
+          "lookup_identity": "909b4f79d4af81c94da0ff8e4833b87ead5d1d88705166eb5ae2e80336a5a804",
+          "path": "normalization/chromatic-methods/canonical-build-evidence.json",
+          "scope": "hth-chromatic-method-assessment"
+        },
+        "immutable_releases": [
+          {
+            "commit": "ee25322d85649442f0346f75fbe4c4944925a4eaa23bf1d64838e158d1dba13d",
+            "release": "HTH-TONAL-ee25322d85649442f0346f75fbe4c4944925a4eaa23bf1d64838e158d1dba13d",
+            "release_manifest_sha256": "46b6c132d62ab8d7bed20d4e07912b4087dd4f6e36a0802677850c017a5fea87",
+            "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+            "role": "source",
+            "utilization": "consumed"
+          }
+        ],
+        "schema_version": "1"
+      },
+      "schema_version": "1.0",
+      "scope": "hth-chromatic-method-assessment",
+      "status": "complete"
+    },
     "c38c2b31269d82693819e2635d262008634bac36e63ad87d958b2b937f64037f": {
       "canonical_result": {
         "artifacts": [
