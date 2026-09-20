@@ -1,0 +1,836 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "doc_ufcn_page_mask",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "85fa16f9a9085f2d9f1abcf26ea66ce563a0fe1e6fa70cbb849de75d9be25105",
+    "parameter_order": [
+      "minimum_confidence",
+      "minimum_component_area_fraction",
+      "minimum_page_area_fraction",
+      "page_padding_fraction"
+    ],
+    "values": {
+      "minimum_confidence": [
+        0.0,
+        0.25,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9
+      ],
+      "minimum_component_area_fraction": [
+        0.0,
+        0.0001,
+        0.0005,
+        0.001,
+        0.002
+      ],
+      "minimum_page_area_fraction": [
+        0.08,
+        0.12,
+        0.16,
+        0.2,
+        0.25
+      ],
+      "page_padding_fraction": [
+        0.0,
+        0.01,
+        0.02,
+        0.03,
+        0.04,
+        0.05,
+        0.06,
+        0.08,
+        0.1,
+        0.12
+      ]
+    },
+    "cartesian_count": 2000,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "adaptive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 98,
+    "evaluated_grid_parameter_sets": 23,
+    "explicit_non_grid_parameter_sets": 75
+  },
+  "profiles": {
+    "baseline": {
+      "minimum_confidence": 0.5,
+      "minimum_component_area_fraction": 0.0005,
+      "minimum_page_area_fraction": 0.12,
+      "page_padding_fraction": 0.05
+    }
+  },
+  "explicit_parameter_sets": {
+    "be9c55d017313c9b43fadb8b672d56fdfd29bfbc850f834935479392629cfd85": {
+      "sha256": "be9c55d017313c9b43fadb8b672d56fdfd29bfbc850f834935479392629cfd85",
+      "legacy_parameter_set_id": "97a2ae7f3db4",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "1b08727b58e333c7c1bd36840e65e4e7feaf4c37450d2cd4541adf5c0910b28b": {
+      "sha256": "1b08727b58e333c7c1bd36840e65e4e7feaf4c37450d2cd4541adf5c0910b28b",
+      "legacy_parameter_set_id": "cda53eaf5b1c",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00096875,
+        "minimum_confidence": 0.390625,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "3a8227e05df5b17fd2f91071b2220c214c013ef8a23531acc1866020edc88540": {
+      "sha256": "3a8227e05df5b17fd2f91071b2220c214c013ef8a23531acc1866020edc88540",
+      "legacy_parameter_set_id": "d52e763997ad",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009140625,
+        "minimum_confidence": 0.75,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "4fd605daade6e0edd22ba47ccc7099e7d3facdac254d5b3f15e99bdda53fbf4d": {
+      "sha256": "4fd605daade6e0edd22ba47ccc7099e7d3facdac254d5b3f15e99bdda53fbf4d",
+      "legacy_parameter_set_id": "58b956b0f3c5",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0062890625
+      }
+    },
+    "548bb812e8cd1ddaf1e77839063bc7742a3216066424361478a19ce555bc02c7": {
+      "sha256": "548bb812e8cd1ddaf1e77839063bc7742a3216066424361478a19ce555bc02c7",
+      "legacy_parameter_set_id": "43860360b5b2",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00626953125
+      }
+    },
+    "bf42b77ab65fdcd6ee874b388e6a031810793947e0d625c8eef70ca7f273e608": {
+      "sha256": "bf42b77ab65fdcd6ee874b388e6a031810793947e0d625c8eef70ca7f273e608",
+      "legacy_parameter_set_id": "7f6ef4df4d40",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000828125,
+        "minimum_confidence": 0.0625,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "7849069c04e9d0b27d745bb147f6f85da33762638b562d3968e16dd0ec6fdc26": {
+      "sha256": "7849069c04e9d0b27d745bb147f6f85da33762638b562d3968e16dd0ec6fdc26",
+      "legacy_parameter_set_id": "a84ad29b26cf",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006259765625
+      }
+    },
+    "ae6eb608e91ec83173eae7918cd120065381d096f992fbd3221d6d64f930ea0c": {
+      "sha256": "ae6eb608e91ec83173eae7918cd120065381d096f992fbd3221d6d64f930ea0c",
+      "legacy_parameter_set_id": "52689498bb81",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006240234375
+      }
+    },
+    "795e7cc488ebbced052e5071ac95690d268b623c4ceaaaa54fa1e297b98ef6ad": {
+      "sha256": "795e7cc488ebbced052e5071ac95690d268b623c4ceaaaa54fa1e297b98ef6ad",
+      "legacy_parameter_set_id": "6ee12acfc19f",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006254882813
+      }
+    },
+    "84efda83402e9e348bd9f24bd596c75c9f3f2fd23db2bfe867f424da5a7692a6": {
+      "sha256": "84efda83402e9e348bd9f24bd596c75c9f3f2fd23db2bfe867f424da5a7692a6",
+      "legacy_parameter_set_id": "b8285ac84c32",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006245117187
+      }
+    },
+    "5f5c830352789a27b372f54f5ee229667df71b6906b0201a181c4dd8027a9a12": {
+      "sha256": "5f5c830352789a27b372f54f5ee229667df71b6906b0201a181c4dd8027a9a12",
+      "legacy_parameter_set_id": "768df370ead1",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006252441406
+      }
+    },
+    "b90ff69322a442121d130f18bbbd6ed01cf7a6c6b5c583a75d9fbab7f55b6cfe": {
+      "sha256": "b90ff69322a442121d130f18bbbd6ed01cf7a6c6b5c583a75d9fbab7f55b6cfe",
+      "legacy_parameter_set_id": "1990480f8fe2",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006247558594
+      }
+    },
+    "cc59d1435d7ac550385d1a4b680d1466f8512e33c68a578718037a6c72722e8d": {
+      "sha256": "cc59d1435d7ac550385d1a4b680d1466f8512e33c68a578718037a6c72722e8d",
+      "legacy_parameter_set_id": "556b6cda3f4c",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0004,
+        "minimum_confidence": 0.7515625,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "d804bcd6866e7e2d02ffcbf7eed05c41a3ce4362e22ce17be8924b5561607ab9": {
+      "sha256": "d804bcd6866e7e2d02ffcbf7eed05c41a3ce4362e22ce17be8924b5561607ab9",
+      "legacy_parameter_set_id": "a4c93841fcea",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0004,
+        "minimum_confidence": 0.7484375,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "0f9c06796747003a449dd82370a4fbbb64d6eb3cf038eca332faa7db93cb9e05": {
+      "sha256": "0f9c06796747003a449dd82370a4fbbb64d6eb3cf038eca332faa7db93cb9e05",
+      "legacy_parameter_set_id": "64bbd8229d35",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006248779297
+      }
+    },
+    "4c1ddf4264564a6922d62289c57d7a1c736784ee7838345fc71d428f32db21a2": {
+      "sha256": "4c1ddf4264564a6922d62289c57d7a1c736784ee7838345fc71d428f32db21a2",
+      "legacy_parameter_set_id": "d02ae3763133",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006251220703
+      }
+    },
+    "0d90c1718356aee1aae2da407e21aa37f9e2f515aeaff622b4b451d8f5d53ecf": {
+      "sha256": "0d90c1718356aee1aae2da407e21aa37f9e2f515aeaff622b4b451d8f5d53ecf",
+      "legacy_parameter_set_id": "7b94447190bf",
+      "parameters": {
+        "minimum_component_area_fraction": 0.001375,
+        "minimum_confidence": 0.775,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "82589879561c43c09ddb9ba297b58f65b77a73e2cd7ccba54efbd78184016234": {
+      "sha256": "82589879561c43c09ddb9ba297b58f65b77a73e2cd7ccba54efbd78184016234",
+      "legacy_parameter_set_id": "3238a8867848",
+      "parameters": {
+        "minimum_component_area_fraction": 0.001375,
+        "minimum_confidence": 0.725,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "f5e439ad90d375cbfc5fd271e69967911075f602fbb791c6e6a386c91de27a0e": {
+      "sha256": "f5e439ad90d375cbfc5fd271e69967911075f602fbb791c6e6a386c91de27a0e",
+      "legacy_parameter_set_id": "8649201a6a3e",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249389649
+      }
+    },
+    "d1b64613ce8a3c1c8a9767f87e6be38f586c4726867c8542d1443c34ee02af04": {
+      "sha256": "d1b64613ce8a3c1c8a9767f87e6be38f586c4726867c8542d1443c34ee02af04",
+      "legacy_parameter_set_id": "aca69f870818",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250610352
+      }
+    },
+    "77c61142c650c399a29d99961ef609ac4b01ab6db11451495af722fd2127e7a0": {
+      "sha256": "77c61142c650c399a29d99961ef609ac4b01ab6db11451495af722fd2127e7a0",
+      "legacy_parameter_set_id": "d61b2a9a594e",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250305176
+      }
+    },
+    "083842d0e75738bbc31a47edd09ea0c80e65b34a6343a2f05c99e69cfc475917": {
+      "sha256": "083842d0e75738bbc31a47edd09ea0c80e65b34a6343a2f05c99e69cfc475917",
+      "legacy_parameter_set_id": "5ed713c1f1a5",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249694824
+      }
+    },
+    "3b53f50b5efbb3ebeb6fc7f67def18457ea30360838c43802aaccbe068bd86eb": {
+      "sha256": "3b53f50b5efbb3ebeb6fc7f67def18457ea30360838c43802aaccbe068bd86eb",
+      "legacy_parameter_set_id": "6f55ad4fa0f4",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0014375,
+        "minimum_confidence": 0.15625,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "394fad8341be4c149efa737546c42c4fdfb83344408472276bca8e361619ecad": {
+      "sha256": "394fad8341be4c149efa737546c42c4fdfb83344408472276bca8e361619ecad",
+      "legacy_parameter_set_id": "325813a10726",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000908203125,
+        "minimum_confidence": 0.55,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "a6907dfd815d1117b49799c4952246172486868a657a222b143b06d247720b74": {
+      "sha256": "a6907dfd815d1117b49799c4952246172486868a657a222b143b06d247720b74",
+      "legacy_parameter_set_id": "69305ba059dd",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249847412
+      }
+    },
+    "c025321bd5f9f0df67b416d0fed2f2e60d31440cf76ed1e56ef30456f90aa829": {
+      "sha256": "c025321bd5f9f0df67b416d0fed2f2e60d31440cf76ed1e56ef30456f90aa829",
+      "legacy_parameter_set_id": "cae0b5880612",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250152588
+      }
+    },
+    "505c90282e120bf00f37bb7f85d669c1c67974aca4c848a80f56f4f71267c62b": {
+      "sha256": "505c90282e120bf00f37bb7f85d669c1c67974aca4c848a80f56f4f71267c62b",
+      "legacy_parameter_set_id": "d14ddca9c45e",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000968742371,
+        "minimum_confidence": 0.21875,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "79069424888895263b541e2fd581db61c2b2e7329b3fa539e43a346aa801e6db": {
+      "sha256": "79069424888895263b541e2fd581db61c2b2e7329b3fa539e43a346aa801e6db",
+      "legacy_parameter_set_id": "b94209610aed",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00096875,
+        "minimum_confidence": 0.21875,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250152588
+      }
+    },
+    "016955cb7a2edcaa4bad38a0102a860c8a7d68d262b6acbfd8dcd0fd78b82360": {
+      "sha256": "016955cb7a2edcaa4bad38a0102a860c8a7d68d262b6acbfd8dcd0fd78b82360",
+      "legacy_parameter_set_id": "280251129d67",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250076294
+      }
+    },
+    "32ae6b803c45b40b1726595a93f49692cefa7c57a032010e24caf39e3012e76a": {
+      "sha256": "32ae6b803c45b40b1726595a93f49692cefa7c57a032010e24caf39e3012e76a",
+      "legacy_parameter_set_id": "959d0c8a0ef3",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249923706
+      }
+    },
+    "648537fc461c3c0049c41daf9b1a02797dc21c3233a705bf7e0801a635e12ef4": {
+      "sha256": "648537fc461c3c0049c41daf9b1a02797dc21c3233a705bf7e0801a635e12ef4",
+      "legacy_parameter_set_id": "8da4bcb7ee48",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000609375,
+        "minimum_confidence": 0.390698242187,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "3ba44b174693b5df32b165b5483c3759f87b3640a9f725b38a52c03a0557f094": {
+      "sha256": "3ba44b174693b5df32b165b5483c3759f87b3640a9f725b38a52c03a0557f094",
+      "legacy_parameter_set_id": "a26abfe53137",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000609375,
+        "minimum_confidence": 0.390551757813,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "cce0b6e1183060568e2c7fbd966b540edc5d3aa1b6d358e8bfedf7993daa3d6f": {
+      "sha256": "cce0b6e1183060568e2c7fbd966b540edc5d3aa1b6d358e8bfedf7993daa3d6f",
+      "legacy_parameter_set_id": "92206aaea9ba",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250038147
+      }
+    },
+    "8ca4f968837a5f3466fda5fabdbb49fb7f1c5f67c75160822b16ba746c4e827a": {
+      "sha256": "8ca4f968837a5f3466fda5fabdbb49fb7f1c5f67c75160822b16ba746c4e827a",
+      "legacy_parameter_set_id": "8cf9e040733f",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249961853
+      }
+    },
+    "f91709e87480d2a856f2eaefedb54aeb805765bc8e827b068e891d35eefc8b36": {
+      "sha256": "f91709e87480d2a856f2eaefedb54aeb805765bc8e827b068e891d35eefc8b36",
+      "legacy_parameter_set_id": "26f2c12810fb",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249980927
+      }
+    },
+    "d4578d84caa384651100fdc79cdfdcb774d571605d381004a40c2ed9c4de68ce": {
+      "sha256": "d4578d84caa384651100fdc79cdfdcb774d571605d381004a40c2ed9c4de68ce",
+      "legacy_parameter_set_id": "fcbc7118d8a4",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250019074
+      }
+    },
+    "cd41fb1144248ad491eabe83b279891c2ff3f0d2521c62b02d1f6139bb2bd0c9": {
+      "sha256": "cd41fb1144248ad491eabe83b279891c2ff3f0d2521c62b02d1f6139bb2bd0c9",
+      "legacy_parameter_set_id": "44f1785001e2",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0013125,
+        "minimum_confidence": 0.381248283386,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "c7f9c5e701a65f39b11ebb32dcf2b85fb89f84e48225dd060937fe80ef8caf5f": {
+      "sha256": "c7f9c5e701a65f39b11ebb32dcf2b85fb89f84e48225dd060937fe80ef8caf5f",
+      "legacy_parameter_set_id": "6706bfefeee3",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0013125,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250019074
+      }
+    },
+    "ac41df230681c1056cbc15cbd0f8e0d24ab6419bbcec439da14b7ffff2ddda45": {
+      "sha256": "ac41df230681c1056cbc15cbd0f8e0d24ab6419bbcec439da14b7ffff2ddda45",
+      "legacy_parameter_set_id": "06da57c71a7c",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249990464
+      }
+    },
+    "0144af3a90e4109610a50aabcb6b71b76a1133255101c61a12fd0e44c2ff945b": {
+      "sha256": "0144af3a90e4109610a50aabcb6b71b76a1133255101c61a12fd0e44c2ff945b",
+      "legacy_parameter_set_id": "518ba6ef66bb",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250009537
+      }
+    },
+    "765e33648efd3a86bd41f8f63dedddb6f390514e107bd0b4a2bf2208e27c5b6b": {
+      "sha256": "765e33648efd3a86bd41f8f63dedddb6f390514e107bd0b4a2bf2208e27c5b6b",
+      "legacy_parameter_set_id": "45c41f6f481c",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000968750953,
+        "minimum_confidence": 0.875,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "ae330cafce43a2fe0073c5146e60b15cb5b042f79ed8407083f43de773a41b86": {
+      "sha256": "ae330cafce43a2fe0073c5146e60b15cb5b042f79ed8407083f43de773a41b86",
+      "legacy_parameter_set_id": "e6c66d489f40",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000968749047,
+        "minimum_confidence": 0.875,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "1fb4baf5fce06837c82fe6bf00aa054732b39532a75efe6b400ed6751f9e311a": {
+      "sha256": "1fb4baf5fce06837c82fe6bf00aa054732b39532a75efe6b400ed6751f9e311a",
+      "legacy_parameter_set_id": "cd5781b29966",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249995232
+      }
+    },
+    "8ca0dd451e4b2e8f421c11c32f96e1a8d278516916d0914a7812aafd08f0a58f": {
+      "sha256": "8ca0dd451e4b2e8f421c11c32f96e1a8d278516916d0914a7812aafd08f0a58f",
+      "legacy_parameter_set_id": "da8b34053163",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250004768
+      }
+    },
+    "5d64ff573edc8d98e2dc8674f3339fc3defa8ed4d54b740933009943a2475dc8": {
+      "sha256": "5d64ff573edc8d98e2dc8674f3339fc3defa8ed4d54b740933009943a2475dc8",
+      "legacy_parameter_set_id": "3576c9095d35",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250002384
+      }
+    },
+    "aeb117eb05fca79ac5952ee51d74eb90e4550d40af23fc551e0c599a6d7901ec": {
+      "sha256": "aeb117eb05fca79ac5952ee51d74eb90e4550d40af23fc551e0c599a6d7901ec",
+      "legacy_parameter_set_id": "9ab13d70b5ad",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249997616
+      }
+    },
+    "83f767bbcc7163d36d5579e321e98fc24b0432393148cbea9767fb67f8c70263": {
+      "sha256": "83f767bbcc7163d36d5579e321e98fc24b0432393148cbea9767fb67f8c70263",
+      "legacy_parameter_set_id": "7630a5fa53d4",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0005546875,
+        "minimum_confidence": 0.575,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "7daf478c867080cb43f2b9e09dcf589bf84f0e2dd440a9c6600a1b3c2db0b0e9": {
+      "sha256": "7daf478c867080cb43f2b9e09dcf589bf84f0e2dd440a9c6600a1b3c2db0b0e9",
+      "legacy_parameter_set_id": "1b8684243387",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006250001192
+      }
+    },
+    "aebf0d9c1ffa215716f036c5d34271370fa04768cec06c0633d6edf59e854265": {
+      "sha256": "aebf0d9c1ffa215716f036c5d34271370fa04768cec06c0633d6edf59e854265",
+      "legacy_parameter_set_id": "74c1b6d6962a",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006249998808
+      }
+    },
+    "91696d27ea2477a6ceaa7d748ff1b1591e19255cafe15f40c9524bc27d8f83a4": {
+      "sha256": "91696d27ea2477a6ceaa7d748ff1b1591e19255cafe15f40c9524bc27d8f83a4",
+      "legacy_parameter_set_id": "833cbe35c752",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0006640625,
+        "minimum_confidence": 0.75000076294,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00625
+      }
+    },
+    "b7ab3b51b3b012516037dfa15f12f5e33d2b086dec43979a6b6347334b78cf65": {
+      "sha256": "b7ab3b51b3b012516037dfa15f12f5e33d2b086dec43979a6b6347334b78cf65",
+      "legacy_parameter_set_id": "ee91dfe5b6c2",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0062109375
+      }
+    },
+    "43b7521514307c2eaf4b2614c6cb45a8b6c16c087f021ffc454a9f551976fe45": {
+      "sha256": "43b7521514307c2eaf4b2614c6cb45a8b6c16c087f021ffc454a9f551976fe45",
+      "legacy_parameter_set_id": "33f2a0814e90",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00623046875
+      }
+    },
+    "281761bc339feeee57d6a0bd965cd8260efdfe2b1fb495f7f5fe6441c07113eb": {
+      "sha256": "281761bc339feeee57d6a0bd965cd8260efdfe2b1fb495f7f5fe6441c07113eb",
+      "legacy_parameter_set_id": "a470ca5694b4",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006171875
+      }
+    },
+    "141c0311d49efadb8fd1f61660a4aee2afc5297eba146671adfa47b82e3df624": {
+      "sha256": "141c0311d49efadb8fd1f61660a4aee2afc5297eba146671adfa47b82e3df624",
+      "legacy_parameter_set_id": "3af71280abd1",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.006328125
+      }
+    },
+    "acdbaaeb641b03302e66223024170621a20b7061a112a67f3d01c59e0094f799": {
+      "sha256": "acdbaaeb641b03302e66223024170621a20b7061a112a67f3d01c59e0094f799",
+      "legacy_parameter_set_id": "49793ee989d4",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00640625
+      }
+    },
+    "c674773e6c33e3ac0ecf707ed92f1d84fb7f440d855342f7c5b23daa2aa5065f": {
+      "sha256": "c674773e6c33e3ac0ecf707ed92f1d84fb7f440d855342f7c5b23daa2aa5065f",
+      "legacy_parameter_set_id": "a5bfe9bbab29",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009140625,
+        "minimum_confidence": 0.75,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00640625
+      }
+    },
+    "6ccc26c5422e5bd967fd42e6c1861f2d9e265a4fd9b565e20cee6cf5ad719f52": {
+      "sha256": "6ccc26c5422e5bd967fd42e6c1861f2d9e265a4fd9b565e20cee6cf5ad719f52",
+      "legacy_parameter_set_id": "287b4e33ecfc",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.00609375
+      }
+    },
+    "ead5adb1ea87ec0cb60cb00358943cec960a297c6e5a24f7d6cf5bdd58862e53": {
+      "sha256": "ead5adb1ea87ec0cb60cb00358943cec960a297c6e5a24f7d6cf5bdd58862e53",
+      "legacy_parameter_set_id": "1c87ef1e5075",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.005625
+      }
+    },
+    "d4ecc667b142053d264de35694d579b9a1d70b46a21314142d8a08f227be0731": {
+      "sha256": "d4ecc667b142053d264de35694d579b9a1d70b46a21314142d8a08f227be0731",
+      "legacy_parameter_set_id": "6c59585f54b4",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0065625
+      }
+    },
+    "175d048afbad3c1214f94f6fb97322d6e33c0e9c43709ca124d76fd1c45a3038": {
+      "sha256": "175d048afbad3c1214f94f6fb97322d6e33c0e9c43709ca124d76fd1c45a3038",
+      "legacy_parameter_set_id": "8288285c3e3d",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00175,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0053125
+      }
+    },
+    "152052c3a68046727ee7f8890a23e663204a88094874e71ef54d3e939e43e8da": {
+      "sha256": "152052c3a68046727ee7f8890a23e663204a88094874e71ef54d3e939e43e8da",
+      "legacy_parameter_set_id": "94dfc04b870d",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00175,
+        "minimum_confidence": 0.390625,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0053125
+      }
+    },
+    "cfc3ec8cee0a32bdf67f8980865cc7853152b0088181938d3eead84a237ffc39": {
+      "sha256": "cfc3ec8cee0a32bdf67f8980865cc7853152b0088181938d3eead84a237ffc39",
+      "legacy_parameter_set_id": "e225520d93d9",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.005
+      }
+    },
+    "c1a76a417ce21201517460dcba57083dcbe7b607f4d80e6563affa6ef1353194": {
+      "sha256": "c1a76a417ce21201517460dcba57083dcbe7b607f4d80e6563affa6ef1353194",
+      "legacy_parameter_set_id": "d3bbda8111ec",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00096875,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.005
+      }
+    },
+    "1d69fcdf6c3451733ee227ae65c45a27bc244cdf3cc40600f2a922fe9eebd8c2": {
+      "sha256": "1d69fcdf6c3451733ee227ae65c45a27bc244cdf3cc40600f2a922fe9eebd8c2",
+      "legacy_parameter_set_id": "4f613ad679ac",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.008125
+      }
+    },
+    "33f09c202f97efc1b8c2b60202a9827000b0452d738c1357592936565778a851": {
+      "sha256": "33f09c202f97efc1b8c2b60202a9827000b0452d738c1357592936565778a851",
+      "legacy_parameter_set_id": "fb7edb5ae2d1",
+      "parameters": {
+        "minimum_component_area_fraction": 5e-05,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.003125
+      }
+    },
+    "ef66a6781573d818271a1f3b6e1952a0d8f418447e07d2bd764184cd8dcadeae": {
+      "sha256": "ef66a6781573d818271a1f3b6e1952a0d8f418447e07d2bd764184cd8dcadeae",
+      "legacy_parameter_set_id": "71c6cba3a18c",
+      "parameters": {
+        "minimum_component_area_fraction": 0.00096875,
+        "minimum_confidence": 0.85,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.025
+      }
+    },
+    "28cf64f75d0791dde4cd04c428b9326ccfc8c8e124ff9a5b065f782cbee5c832": {
+      "sha256": "28cf64f75d0791dde4cd04c428b9326ccfc8c8e124ff9a5b065f782cbee5c832",
+      "legacy_parameter_set_id": "36cc972be50f",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.85,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.025
+      }
+    },
+    "aaf51e0044458f215ca48e2706f26f914d0d8518745e1dc16acc9bad7c0bc806": {
+      "sha256": "aaf51e0044458f215ca48e2706f26f914d0d8518745e1dc16acc9bad7c0bc806",
+      "legacy_parameter_set_id": "f91e651a00ec",
+      "parameters": {
+        "minimum_component_area_fraction": 0.001625,
+        "minimum_confidence": 0.75,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.035
+      }
+    },
+    "bed7534073aabb0f20a8bc4ad770fcce524b663f05532213374075b000384d98": {
+      "sha256": "bed7534073aabb0f20a8bc4ad770fcce524b663f05532213374075b000384d98",
+      "legacy_parameter_set_id": "287ab1248a8a",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009140625,
+        "minimum_confidence": 0.65,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.045
+      }
+    },
+    "c0697da6e17e96dbe244a9ece2f88390b3260e280738f8f5cbbd4cfbf33c6f37": {
+      "sha256": "c0697da6e17e96dbe244a9ece2f88390b3260e280738f8f5cbbd4cfbf33c6f37",
+      "legacy_parameter_set_id": "6fd326d0358e",
+      "parameters": {
+        "minimum_component_area_fraction": 0.000911132813,
+        "minimum_confidence": 0.75,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.045
+      }
+    },
+    "f666b80f50b58ee41cb16a9ea7574f520a764dd470a3ee551eaf18d20d86636e": {
+      "sha256": "f666b80f50b58ee41cb16a9ea7574f520a764dd470a3ee551eaf18d20d86636e",
+      "legacy_parameter_set_id": "1f4e8c1d6b9d",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0002,
+        "minimum_confidence": 0.75,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.075
+      }
+    },
+    "cce15ab1838dede01ce604db85a8b882f41aafe95858c494b3b5e8b3ea40beb0": {
+      "sha256": "cce15ab1838dede01ce604db85a8b882f41aafe95858c494b3b5e8b3ea40beb0",
+      "legacy_parameter_set_id": "2515b6090e09",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0018125,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0775
+      }
+    },
+    "527173cd3af2b8b88a4dd522eed7171ef0e42b9924ed1994701cd8e979527561": {
+      "sha256": "527173cd3af2b8b88a4dd522eed7171ef0e42b9924ed1994701cd8e979527561",
+      "legacy_parameter_set_id": "bce580d02345",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0018125,
+        "minimum_confidence": 0.390625,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.0775
+      }
+    },
+    "acd4942887bcfc5c459cfac8b2ce44b9ef73a90f66f90465731c27bb61ce0be3": {
+      "sha256": "acd4942887bcfc5c459cfac8b2ce44b9ef73a90f66f90465731c27bb61ce0be3",
+      "legacy_parameter_set_id": "8bd37c10ff0b",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009375,
+        "minimum_confidence": 0.38359375,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.11
+      }
+    },
+    "160a3dcbca323a50dba59d2efebb711112cd429309f810ca2b4f01000e3d6708": {
+      "sha256": "160a3dcbca323a50dba59d2efebb711112cd429309f810ca2b4f01000e3d6708",
+      "legacy_parameter_set_id": "bdab5f4a48b9",
+      "parameters": {
+        "minimum_component_area_fraction": 0.0009453125,
+        "minimum_confidence": 0.38125,
+        "minimum_page_area_fraction": 0.08,
+        "page_padding_fraction": 0.11
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
