@@ -1,0 +1,2128 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "grabcut_contour",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "22f4aa58310d079c7f92395261d8891ef8cd13346470c080af1540870ee9ca46",
+    "parameter_order": [
+      "grabcut_border_fraction",
+      "grabcut_erosion_kernel_fraction",
+      "grabcut_iterations",
+      "grabcut_close_kernel_fraction",
+      "grabcut_minimum_contour_area_fraction",
+      "grabcut_polygon_epsilon_fraction",
+      "contour_minimum_area_fraction",
+      "contour_minimum_rectangularity",
+      "minimum_agreement_iou",
+      "grabcut_weight",
+      "agreement_weight",
+      "require_contour"
+    ],
+    "values": {
+      "grabcut_border_fraction": [
+        0.02,
+        0.03
+      ],
+      "grabcut_erosion_kernel_fraction": [
+        0.015,
+        0.025
+      ],
+      "grabcut_iterations": [
+        3,
+        5
+      ],
+      "grabcut_close_kernel_fraction": [
+        0.02,
+        0.03
+      ],
+      "grabcut_minimum_contour_area_fraction": [
+        0.04,
+        0.08
+      ],
+      "grabcut_polygon_epsilon_fraction": [
+        0.01,
+        0.018,
+        0.03
+      ],
+      "contour_minimum_area_fraction": [
+        0.08,
+        0.12,
+        0.18
+      ],
+      "contour_minimum_rectangularity": [
+        0.45,
+        0.55,
+        0.7
+      ],
+      "minimum_agreement_iou": [
+        0.05,
+        0.15,
+        0.3
+      ],
+      "grabcut_weight": [
+        0.45,
+        0.55,
+        0.65
+      ],
+      "agreement_weight": [
+        0.15,
+        0.25,
+        0.35
+      ],
+      "require_contour": [
+        false,
+        true
+      ]
+    },
+    "cartesian_count": 46656,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "adaptive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 242,
+    "evaluated_grid_parameter_sets": 131,
+    "explicit_non_grid_parameter_sets": 111
+  },
+  "profiles": {
+    "baseline": {
+      "grabcut_border_fraction": 0.02,
+      "grabcut_erosion_kernel_fraction": 0.015,
+      "grabcut_erosion_iterations": 1,
+      "grabcut_iterations": 3,
+      "grabcut_close_kernel_fraction": 0.02,
+      "grabcut_close_iterations": 1,
+      "grabcut_minimum_bbox_area_fraction": 0.1,
+      "grabcut_minimum_contour_area_fraction": 0.04,
+      "grabcut_polygon_epsilon_fraction": 0.018,
+      "contour_minimum_area_fraction": 0.12,
+      "contour_epsilon_max_fraction": 0.04,
+      "contour_minimum_rectangularity": 0.55,
+      "minimum_agreement_iou": 0.15,
+      "grabcut_weight": 0.55,
+      "contour_weight": 0.2,
+      "agreement_weight": 0.25,
+      "require_contour": false
+    }
+  },
+  "explicit_parameter_sets": {
+    "7535da334047e2f5739d101552fa418507667ff4f94589ef0cbb6e2e3f66f810": {
+      "sha256": "7535da334047e2f5739d101552fa418507667ff4f94589ef0cbb6e2e3f66f810",
+      "legacy_parameter_set_id": "6fe14a6a90c9",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "11a5466b14545c5fe73f2bc0620ac6b3e9c82892f60a974c0f1baec497b0f1fd": {
+      "sha256": "11a5466b14545c5fe73f2bc0620ac6b3e9c82892f60a974c0f1baec497b0f1fd",
+      "legacy_parameter_set_id": "79d124983f77",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.15,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "c10fe5980555e8a4a0a021317548e8147cd86b706ef08c2a67b08f823f20bf13": {
+      "sha256": "c10fe5980555e8a4a0a021317548e8147cd86b706ef08c2a67b08f823f20bf13",
+      "legacy_parameter_set_id": "e6f64c8c003b",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "faa0a5213833fe1134ea5e0438297cab844325809967b7ec0fc9e4f4b6828876": {
+      "sha256": "faa0a5213833fe1134ea5e0438297cab844325809967b7ec0fc9e4f4b6828876",
+      "legacy_parameter_set_id": "2ab4b0e42fdb",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.135,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "0d216c1f9a07e22d8d9622732c7a3b8deeea7dadff73b1f391e4003e0b5e3dd6": {
+      "sha256": "0d216c1f9a07e22d8d9622732c7a3b8deeea7dadff73b1f391e4003e0b5e3dd6",
+      "legacy_parameter_set_id": "63336e3bb196",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.115,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "a3a250a3819f0573339264532f472f60dad364a7c0d1ec7be40e17f0fa47c65f": {
+      "sha256": "a3a250a3819f0573339264532f472f60dad364a7c0d1ec7be40e17f0fa47c65f",
+      "legacy_parameter_set_id": "7bb367c71bdd",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1275,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "7d117ea9f371c23408d6eef7f6f8c2278cb2694d5cfacedbd1e56f2595babb3b": {
+      "sha256": "7d117ea9f371c23408d6eef7f6f8c2278cb2694d5cfacedbd1e56f2595babb3b",
+      "legacy_parameter_set_id": "83ced341b25a",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1175,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "5b4f62088553fb6570384664dd0e3d45317a1b28cf4cbe0e24172438956e833e": {
+      "sha256": "5b4f62088553fb6570384664dd0e3d45317a1b28cf4cbe0e24172438956e833e",
+      "legacy_parameter_set_id": "c42a611d5055",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.12375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "b74b3f9aa85eab5c458396b8ce6098b3739e8cf84b3dc06290435163f1e9fedc": {
+      "sha256": "b74b3f9aa85eab5c458396b8ce6098b3739e8cf84b3dc06290435163f1e9fedc",
+      "legacy_parameter_set_id": "1daec4d1ed2b",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "060bf5ca7cf0a448cb6716e8ef47ce09f7ddfc2b62dc61a9cecdce941965308a": {
+      "sha256": "060bf5ca7cf0a448cb6716e8ef47ce09f7ddfc2b62dc61a9cecdce941965308a",
+      "legacy_parameter_set_id": "b8cc01265d66",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.121875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "b97a11effa15dcf37b84677dc119e576edf77e62376d26a7b6a7ebd12ea1b355": {
+      "sha256": "b97a11effa15dcf37b84677dc119e576edf77e62376d26a7b6a7ebd12ea1b355",
+      "legacy_parameter_set_id": "82a5839d04a8",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "8ca0366242a5d8c4a2e7e6dee1f1ab1cbb296edf6023c0b321c11aa8e8d9ef4a": {
+      "sha256": "8ca0366242a5d8c4a2e7e6dee1f1ab1cbb296edf6023c0b321c11aa8e8d9ef4a",
+      "legacy_parameter_set_id": "f73742e2c34b",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1209375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "e02a18f9c2d822ce4d29d185579b70259f842c7f757859db1e6674cc2e92d6ef": {
+      "sha256": "e02a18f9c2d822ce4d29d185579b70259f842c7f757859db1e6674cc2e92d6ef",
+      "legacy_parameter_set_id": "84c23dc0c04f",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1196875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "fa95d7769d0e94e97eec3a1fd185adeace97256276ade9f74d8cf6e6c2a445cc": {
+      "sha256": "fa95d7769d0e94e97eec3a1fd185adeace97256276ade9f74d8cf6e6c2a445cc",
+      "legacy_parameter_set_id": "b9c06cc2f6b8",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.12046875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "a0196d67aad86e17092da12a60821587c3d8410e53f31d2691fb5f61ae114ab1": {
+      "sha256": "a0196d67aad86e17092da12a60821587c3d8410e53f31d2691fb5f61ae114ab1",
+      "legacy_parameter_set_id": "f3ae0d34acc3",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11984375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "10ebcbc39dd133637cfbe8f9c6531f4debc586df524df640a429225a58d99061": {
+      "sha256": "10ebcbc39dd133637cfbe8f9c6531f4debc586df524df640a429225a58d99061",
+      "legacy_parameter_set_id": "17eb24fb7215",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120234375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "fe5afe55c3eb6639d41b431fc0bf831acd00711f7c67f411de8209e7c0ccd93f": {
+      "sha256": "fe5afe55c3eb6639d41b431fc0bf831acd00711f7c67f411de8209e7c0ccd93f",
+      "legacy_parameter_set_id": "f39ad81e6a58",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119921875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "fa5130107b9722390689f5bd46fee3bcb7c94350a76c52f3660071aef8a627b8": {
+      "sha256": "fa5130107b9722390689f5bd46fee3bcb7c94350a76c52f3660071aef8a627b8",
+      "legacy_parameter_set_id": "2366585b98d7",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1201171875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "839bbad14f396e93c5a94fcedde4742a665a07d84a6ab844e7e71af37c4825fe": {
+      "sha256": "839bbad14f396e93c5a94fcedde4742a665a07d84a6ab844e7e71af37c4825fe",
+      "legacy_parameter_set_id": "e38dd89b4d14",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1199609375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "14d0e9b0d0b07403430c2f500a36f48cf94447f75daaeaedaca9adda9c7cbae1": {
+      "sha256": "14d0e9b0d0b07403430c2f500a36f48cf94447f75daaeaedaca9adda9c7cbae1",
+      "legacy_parameter_set_id": "74c86f9859ef",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.12005859375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "4e7cc2190ff56640eafb551efe5cbb66e6c78c6456d7fe7631c8a1bf4e974881": {
+      "sha256": "4e7cc2190ff56640eafb551efe5cbb66e6c78c6456d7fe7631c8a1bf4e974881",
+      "legacy_parameter_set_id": "d8f644d06291",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11998046875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "170af281343669f5043fb1b70077fa5c0b4e89fd31657d95d8ba76fe5a4b9709": {
+      "sha256": "170af281343669f5043fb1b70077fa5c0b4e89fd31657d95d8ba76fe5a4b9709",
+      "legacy_parameter_set_id": "5d1bb4824649",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120029296875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "65388374ba64916f1ceac317b3d0c858c146237eeeaa903d2989f02bdab29683": {
+      "sha256": "65388374ba64916f1ceac317b3d0c858c146237eeeaa903d2989f02bdab29683",
+      "legacy_parameter_set_id": "9229c0b68a32",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119990234375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "0e25b361ac23bd2069455d7a5c871e3c6937b6eaaa267db4713c427939ef42e8": {
+      "sha256": "0e25b361ac23bd2069455d7a5c871e3c6937b6eaaa267db4713c427939ef42e8",
+      "legacy_parameter_set_id": "0aab4f218b1d",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120014648437,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "96d85374c8a0536b37889dfd8e8d46a8776dbce19f2cf93dcc2211ed0134a255": {
+      "sha256": "96d85374c8a0536b37889dfd8e8d46a8776dbce19f2cf93dcc2211ed0134a255",
+      "legacy_parameter_set_id": "8e8ec10361d8",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119995117188,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ee6f33ac532d274ad6846e741faab0bdcec529ff081f9d3ba604e133d15e3a61": {
+      "sha256": "ee6f33ac532d274ad6846e741faab0bdcec529ff081f9d3ba604e133d15e3a61",
+      "legacy_parameter_set_id": "168c16fe3b00",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120007324218,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "f2b4d375c36d9a193d2c86d1fe84d2e8a6fc2b62e879a19ed19b3611158784ce": {
+      "sha256": "f2b4d375c36d9a193d2c86d1fe84d2e8a6fc2b62e879a19ed19b3611158784ce",
+      "legacy_parameter_set_id": "5e2fc492225a",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119997558594,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "371d2f5742a45979388cd7457e1a19b0365f22f2b1d1cbc5a3ee463192d4f82f": {
+      "sha256": "371d2f5742a45979388cd7457e1a19b0365f22f2b1d1cbc5a3ee463192d4f82f",
+      "legacy_parameter_set_id": "4505f651a626",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120003662109,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "f531b6ea4aff2adc956c47653423c8a35177ff593504d721ef93a49b97cc5195": {
+      "sha256": "f531b6ea4aff2adc956c47653423c8a35177ff593504d721ef93a49b97cc5195",
+      "legacy_parameter_set_id": "79aa65e17bd4",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119998779297,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "49df553f786228b6074df072084c446cf67636096d24679d7ef2ff17defb72e5": {
+      "sha256": "49df553f786228b6074df072084c446cf67636096d24679d7ef2ff17defb72e5",
+      "legacy_parameter_set_id": "92d916c29ef7",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120001831054,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ec32ac1eb10917df26e855c5e7cbd2869060f070ff4d64ae2cb519cadb64a3c0": {
+      "sha256": "ec32ac1eb10917df26e855c5e7cbd2869060f070ff4d64ae2cb519cadb64a3c0",
+      "legacy_parameter_set_id": "8a36ec71c982",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999389648,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "2e3bfd2cd165e715b511e4da250bb39cec99d405b71d761be6d6d9a1943abc7f": {
+      "sha256": "2e3bfd2cd165e715b511e4da250bb39cec99d405b71d761be6d6d9a1943abc7f",
+      "legacy_parameter_set_id": "d9d1f8bb9fef",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000915527,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "1d6b570786c951daa73f01c675f3126acebc41b7f29f7f1a00ffc824885adab4": {
+      "sha256": "1d6b570786c951daa73f01c675f3126acebc41b7f29f7f1a00ffc824885adab4",
+      "legacy_parameter_set_id": "1b99a6f83f51",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999694824,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "b14807115de1cf184012a5082b646a19ecd65acb6407bd993767c74898f71e67": {
+      "sha256": "b14807115de1cf184012a5082b646a19ecd65acb6407bd993767c74898f71e67",
+      "legacy_parameter_set_id": "de78e1dd770f",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000457763,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "d6672a0515dbd75acd257e3f60d22850081fce97176d4de4e10d2c4ade55988b": {
+      "sha256": "d6672a0515dbd75acd257e3f60d22850081fce97176d4de4e10d2c4ade55988b",
+      "legacy_parameter_set_id": "6bda2da6318b",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999847412,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "dfe1ba5e17233ea4bfdda5f9fc4b257f173f18c15eba42b7eb36e35b6e2310a7": {
+      "sha256": "dfe1ba5e17233ea4bfdda5f9fc4b257f173f18c15eba42b7eb36e35b6e2310a7",
+      "legacy_parameter_set_id": "8558d029e113",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000228881,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "53196d025670e53c231d144cda099d6283d5ccf3ef609e2f06a87ef6ec8be6a5": {
+      "sha256": "53196d025670e53c231d144cda099d6283d5ccf3ef609e2f06a87ef6ec8be6a5",
+      "legacy_parameter_set_id": "2de964fc07a7",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999923706,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "b1a064cd85da05c05781a6295223b3ad06881d1a7fb01b73aac3cf1a47c41040": {
+      "sha256": "b1a064cd85da05c05781a6295223b3ad06881d1a7fb01b73aac3cf1a47c41040",
+      "legacy_parameter_set_id": "f22300941930",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.12000011444,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "eac048d6294a1715d26ba06c9dee169e334e74664e5b12874d16d3951c6c4d87": {
+      "sha256": "eac048d6294a1715d26ba06c9dee169e334e74664e5b12874d16d3951c6c4d87",
+      "legacy_parameter_set_id": "a6513f1bc261",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999961853,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "dc58f7503d7e264048691e1f4782438d4a922098ed93d7e9b31d5a1402550d48": {
+      "sha256": "dc58f7503d7e264048691e1f4782438d4a922098ed93d7e9b31d5a1402550d48",
+      "legacy_parameter_set_id": "aa9275cbe243",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.12000005722,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "792be7fad0a7e17b8ec5b4afff5d3194dd783791dc770d1a6784eceaee95af21": {
+      "sha256": "792be7fad0a7e17b8ec5b4afff5d3194dd783791dc770d1a6784eceaee95af21",
+      "legacy_parameter_set_id": "4c83fe82d2ee",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999980926,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "0a8152c4454865d9729e93f856510babbdaddb153e0779a34956bbf521fe09bf": {
+      "sha256": "0a8152c4454865d9729e93f856510babbdaddb153e0779a34956bbf521fe09bf",
+      "legacy_parameter_set_id": "7fd633ba4513",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.12000002861,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "b4f021a38b215901b0eb44444566f4dad9bc1c4b76d6f241d559b98cc2f680bf": {
+      "sha256": "b4f021a38b215901b0eb44444566f4dad9bc1c4b76d6f241d559b98cc2f680bf",
+      "legacy_parameter_set_id": "155e97a1f7d0",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999990463,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ae56a6c829c0898267c19d2880fc73ac5e9b848fd3c8183c27ab9887896450cd": {
+      "sha256": "ae56a6c829c0898267c19d2880fc73ac5e9b848fd3c8183c27ab9887896450cd",
+      "legacy_parameter_set_id": "af0033030bfc",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000014305,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "e3ae9d564ecaa58df137c645a02a1eda3b7a7c587b09ba1db2855a7d0add1de1": {
+      "sha256": "e3ae9d564ecaa58df137c645a02a1eda3b7a7c587b09ba1db2855a7d0add1de1",
+      "legacy_parameter_set_id": "6ef7d2cade0b",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999995231,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "5b415c5fa41e3454c301f092bc26491678509d1e94da55abcd8f7ba9e7ff195a": {
+      "sha256": "5b415c5fa41e3454c301f092bc26491678509d1e94da55abcd8f7ba9e7ff195a",
+      "legacy_parameter_set_id": "1451da5b0589",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000007153,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "87886bb0bcc8a5ab4fb2c3e562ad1aee67a5e699f83886b091b66490b35bd1e4": {
+      "sha256": "87886bb0bcc8a5ab4fb2c3e562ad1aee67a5e699f83886b091b66490b35bd1e4",
+      "legacy_parameter_set_id": "caeeff67302c",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999997615,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "bc55ea172f5c2addc4c104941c1ffa762491baa7658b48f0f0f2dba8d5f67c8b": {
+      "sha256": "bc55ea172f5c2addc4c104941c1ffa762491baa7658b48f0f0f2dba8d5f67c8b",
+      "legacy_parameter_set_id": "b7f97c820bd4",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000003576,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "eb6045119cb304a577c3b9f9cbcae627a448a4ea89cf9c84b0501165fe8188a5": {
+      "sha256": "eb6045119cb304a577c3b9f9cbcae627a448a4ea89cf9c84b0501165fe8188a5",
+      "legacy_parameter_set_id": "7739e365e460",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999998808,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "a3f0f5eecbd5e4df54bfd5b61f93a564e8ef9a414c5696405c496e65a28d91ee": {
+      "sha256": "a3f0f5eecbd5e4df54bfd5b61f93a564e8ef9a414c5696405c496e65a28d91ee",
+      "legacy_parameter_set_id": "0acd3ad13302",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000001788,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "4c36e7dc160a1289c9c572ca9e6df9cee06812271588060fd82b876c6f0dc7d4": {
+      "sha256": "4c36e7dc160a1289c9c572ca9e6df9cee06812271588060fd82b876c6f0dc7d4",
+      "legacy_parameter_set_id": "473b37b60717",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999404,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "12c6954352629fd1cdb4d303ab8929585626e4ff3223680d7aadd42f2a8da860": {
+      "sha256": "12c6954352629fd1cdb4d303ab8929585626e4ff3223680d7aadd42f2a8da860",
+      "legacy_parameter_set_id": "08aa571604cb",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000894,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "d826a68db4f2cb38078d4b3ab573dd95c3f39d3c4d7656c150df6e2911df730b": {
+      "sha256": "d826a68db4f2cb38078d4b3ab573dd95c3f39d3c4d7656c150df6e2911df730b",
+      "legacy_parameter_set_id": "f7e0262063cb",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999702,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "aaf65b9a6b34cca02efabc1adfe315ce091af2ed223921ad54a4e7a06486d3dd": {
+      "sha256": "aaf65b9a6b34cca02efabc1adfe315ce091af2ed223921ad54a4e7a06486d3dd",
+      "legacy_parameter_set_id": "ebebf1288ad9",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000447,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "e2379358c0351f7b64c658d5969590097e31d45452e73dd33bdad3b92b6b3a51": {
+      "sha256": "e2379358c0351f7b64c658d5969590097e31d45452e73dd33bdad3b92b6b3a51",
+      "legacy_parameter_set_id": "cf8f09cfb7f1",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999851,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "f820cef9dd087f4fdff02f1644470c42e02760a78a8ce6e9b869bdb4f498d4e0": {
+      "sha256": "f820cef9dd087f4fdff02f1644470c42e02760a78a8ce6e9b869bdb4f498d4e0",
+      "legacy_parameter_set_id": "09c7696e59e3",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000223,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "94a01d3a9817deb8a1d9b6a993cc0fccaa33825b5ad1763fe1166dcb1f850bf2": {
+      "sha256": "94a01d3a9817deb8a1d9b6a993cc0fccaa33825b5ad1763fe1166dcb1f850bf2",
+      "legacy_parameter_set_id": "69ed6c3b3147",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999926,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "015987c20a09a0f854e8e08452fd1962a06ef41161873c6eefad92c0ead1d2c5": {
+      "sha256": "015987c20a09a0f854e8e08452fd1962a06ef41161873c6eefad92c0ead1d2c5",
+      "legacy_parameter_set_id": "898b3b86b6df",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000111,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ef1f9cec0f32fdeaf5c65e89275e9afce584f4ac5a964d69f685c473eec49410": {
+      "sha256": "ef1f9cec0f32fdeaf5c65e89275e9afce584f4ac5a964d69f685c473eec49410",
+      "legacy_parameter_set_id": "69b28e2694da",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999963,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "d6e709cc06b5db96d0105181a455c788fe1f32c4e3ea9782c76061cb9d9b50ab": {
+      "sha256": "d6e709cc06b5db96d0105181a455c788fe1f32c4e3ea9782c76061cb9d9b50ab",
+      "legacy_parameter_set_id": "0d993a2a7fe6",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000055,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "63118b106e8a6fd77826fd61bed332aa8ede70f4d6bfd1dc5ec8f6b2e5843f5b": {
+      "sha256": "63118b106e8a6fd77826fd61bed332aa8ede70f4d6bfd1dc5ec8f6b2e5843f5b",
+      "legacy_parameter_set_id": "59c62933cc30",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999981,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ea0badadf74cab7564c861b6a0c3077d69e6dee4261023214d13cc6662aa79a6": {
+      "sha256": "ea0badadf74cab7564c861b6a0c3077d69e6dee4261023214d13cc6662aa79a6",
+      "legacy_parameter_set_id": "715eabfc0135",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000027,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ac2ae03c5b2c587a65763ce25bfebcc4fc3210246ba05deb46f1cf2d7fea9e76": {
+      "sha256": "ac2ae03c5b2c587a65763ce25bfebcc4fc3210246ba05deb46f1cf2d7fea9e76",
+      "legacy_parameter_set_id": "5b8e88d70f77",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11999999999,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "8e661eeecec372b3c6928a27fc96464a7bdbf18a59aa67f7ea39eb5d92dc6c1c": {
+      "sha256": "8e661eeecec372b3c6928a27fc96464a7bdbf18a59aa67f7ea39eb5d92dc6c1c",
+      "legacy_parameter_set_id": "66dfc629ad85",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000014,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "001b4d7d906e329ab5caca057853cbe8f2fdde2b94086f84c42a1dfd9f76cdad": {
+      "sha256": "001b4d7d906e329ab5caca057853cbe8f2fdde2b94086f84c42a1dfd9f76cdad",
+      "legacy_parameter_set_id": "ced6b4d341c9",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999995,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ac204b6d272816b6338b32441899ab7ceac1b7a8b42bd1f2b93e2b4ad03ba5f2": {
+      "sha256": "ac204b6d272816b6338b32441899ab7ceac1b7a8b42bd1f2b93e2b4ad03ba5f2",
+      "legacy_parameter_set_id": "43ce31a4c098",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000007,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "71d6fdae1f733bcc2578c10ad15a1767208a79de99939bd502dcb1dc7be1b5a2": {
+      "sha256": "71d6fdae1f733bcc2578c10ad15a1767208a79de99939bd502dcb1dc7be1b5a2",
+      "legacy_parameter_set_id": "15c323f873d5",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999997,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "1e7d7442b4c5cba2aad9f8edd85cad52b95b7157481ce073dcb9ead0a1ab022d": {
+      "sha256": "1e7d7442b4c5cba2aad9f8edd85cad52b95b7157481ce073dcb9ead0a1ab022d",
+      "legacy_parameter_set_id": "5a04e239d9cf",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000004,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "eae5f0ba377b58d0b0b08697f92a8dc1e61f7634e333c9d23d2e4757d0ecccf7": {
+      "sha256": "eae5f0ba377b58d0b0b08697f92a8dc1e61f7634e333c9d23d2e4757d0ecccf7",
+      "legacy_parameter_set_id": "9721ca05cbb4",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.119999999999,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "7bf9cb7a8d532897a463cd47f0592ba8dcaff48ad5ea90b5a5fb37bac96a4274": {
+      "sha256": "7bf9cb7a8d532897a463cd47f0592ba8dcaff48ad5ea90b5a5fb37bac96a4274",
+      "legacy_parameter_set_id": "6776d72337fb",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000002,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "8843288650f38ab96b03d20661b0cad922e2923c6618b6f04db5062ecd2f70b5": {
+      "sha256": "8843288650f38ab96b03d20661b0cad922e2923c6618b6f04db5062ecd2f70b5",
+      "legacy_parameter_set_id": "198a033e50f7",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.120000000001,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "caead3256baae33ae3de67ba363436c27ebd6073bd2395f0b9a7dd8625db8524": {
+      "sha256": "caead3256baae33ae3de67ba363436c27ebd6073bd2395f0b9a7dd8625db8524",
+      "legacy_parameter_set_id": "3ce7934e9d57",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.125625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "598b3ea91615110f1ecfd34323ffb7db561d111fdbb795b634bf905a4eb87cab": {
+      "sha256": "598b3ea91615110f1ecfd34323ffb7db561d111fdbb795b634bf905a4eb87cab",
+      "legacy_parameter_set_id": "6370b2095c8f",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ada630f6259e76a2d517d4802d55275074c21db75526b53e66f67dc3d3a4ff38": {
+      "sha256": "ada630f6259e76a2d517d4802d55275074c21db75526b53e66f67dc3d3a4ff38",
+      "legacy_parameter_set_id": "2c5a5d6a306d",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.129375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "de3eb40145c58f07e4070c802a2ac54322213452f12484bdf02460aa3f9b2d6c": {
+      "sha256": "de3eb40145c58f07e4070c802a2ac54322213452f12484bdf02460aa3f9b2d6c",
+      "legacy_parameter_set_id": "ae08ed0f90d8",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "b31f50095e21ca296c743c1e3355ff87b6176d2b67c472aeb4e51ac70b42cc48": {
+      "sha256": "b31f50095e21ca296c743c1e3355ff87b6176d2b67c472aeb4e51ac70b42cc48",
+      "legacy_parameter_set_id": "f2f1f19106f8",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.10875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "6684d5afde6285e90daa901d0e8e61a4c1832de5d1bf9d6bda7b6599867d3519": {
+      "sha256": "6684d5afde6285e90daa901d0e8e61a4c1832de5d1bf9d6bda7b6599867d3519",
+      "legacy_parameter_set_id": "fe27ae5e7b2f",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "5e283d4adeaa8547141fe704454002c31e1d1367eb9a3e5ad8f55e68ec813159": {
+      "sha256": "5e283d4adeaa8547141fe704454002c31e1d1367eb9a3e5ad8f55e68ec813159",
+      "legacy_parameter_set_id": "96f670621352",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.13125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "17b7c2cd3a7ca030575985646f6064ea9df7d33afc7cbfdfa5122811ef9f6dfe": {
+      "sha256": "17b7c2cd3a7ca030575985646f6064ea9df7d33afc7cbfdfa5122811ef9f6dfe",
+      "legacy_parameter_set_id": "bb8b31cd6a09",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1075,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "7fdd70c77365bbbdd2eb07291306059071aba83504d2821371261e61b5d99c2c": {
+      "sha256": "7fdd70c77365bbbdd2eb07291306059071aba83504d2821371261e61b5d99c2c",
+      "legacy_parameter_set_id": "3e112345ece3",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.133125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "c1cbf5425420d9fef27d83fd73e48e6b4accf644e28eac9787e9e01de6d7871b": {
+      "sha256": "c1cbf5425420d9fef27d83fd73e48e6b4accf644e28eac9787e9e01de6d7871b",
+      "legacy_parameter_set_id": "52c8db28e978",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.11625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "d987a12fb5d6433fbfcc002b01662bcc011d18c30e748106b7fcca082d566229": {
+      "sha256": "d987a12fb5d6433fbfcc002b01662bcc011d18c30e748106b7fcca082d566229",
+      "legacy_parameter_set_id": "eaf6f08d91d6",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.10625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "e7e257f1a2d3d8b9b2b819dc6365cd5f2ed84117b99fd92d9ece8ce1fad84593": {
+      "sha256": "e7e257f1a2d3d8b9b2b819dc6365cd5f2ed84117b99fd92d9ece8ce1fad84593",
+      "legacy_parameter_set_id": "a8ea5ec2be7a",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1265625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "fa47bde89feedfe300d463b657d59c45d5dd983d84fa4b5b9be7744dee9600a4": {
+      "sha256": "fa47bde89feedfe300d463b657d59c45d5dd983d84fa4b5b9be7744dee9600a4",
+      "legacy_parameter_set_id": "04af272b853d",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.105,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "9a97d4bb989438543977942c28ef378e2784ccd992113588f0596a7724acc747": {
+      "sha256": "9a97d4bb989438543977942c28ef378e2784ccd992113588f0596a7724acc747",
+      "legacy_parameter_set_id": "41797a6d9595",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1303125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "390f896ea748cc34c62f72549cb9d2ee8f8ef8f15fa3a46416448d8d71ddffa1": {
+      "sha256": "390f896ea748cc34c62f72549cb9d2ee8f8ef8f15fa3a46416448d8d71ddffa1",
+      "legacy_parameter_set_id": "f39514bfd2ae",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.10375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "f51bfba0e2c6075dfb0a8bf2268c94e11bb68ccadb0be14f890b11c3fd463f71": {
+      "sha256": "f51bfba0e2c6075dfb0a8bf2268c94e11bb68ccadb0be14f890b11c3fd463f71",
+      "legacy_parameter_set_id": "c910212a9358",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1340625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "89f3c5b31a33e85ac0004b57bdb869ba89f6ccc1a21555240b5c29be135e324c": {
+      "sha256": "89f3c5b31a33e85ac0004b57bdb869ba89f6ccc1a21555240b5c29be135e324c",
+      "legacy_parameter_set_id": "a10e23c7bfc0",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.136875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "4b809211ebb3e378efa991234e85bdf4f6008a863806f1b08f31cb9389911fcc": {
+      "sha256": "4b809211ebb3e378efa991234e85bdf4f6008a863806f1b08f31cb9389911fcc",
+      "legacy_parameter_set_id": "90aeade324d4",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1025,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "5f89a12134778392c378fa9dd1bbe90b8bce9bb126c64e171056d9268532386d": {
+      "sha256": "5f89a12134778392c378fa9dd1bbe90b8bce9bb126c64e171056d9268532386d",
+      "legacy_parameter_set_id": "1dd89352d9fa",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1378125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "1568f282d70c1f3c2fae4e2545ad921de660c52d0ff2086185375d4ebd4ecb5d": {
+      "sha256": "1568f282d70c1f3c2fae4e2545ad921de660c52d0ff2086185375d4ebd4ecb5d",
+      "legacy_parameter_set_id": "ce51a8f24658",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.10125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "184bcc30dd3310ebbd445437940c5e1051916f1e16341d8e33140b801fdc210f": {
+      "sha256": "184bcc30dd3310ebbd445437940c5e1051916f1e16341d8e33140b801fdc210f",
+      "legacy_parameter_set_id": "913e7e18dbf1",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.13875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "d739eb6ff481a1c05a7c5dd4436b1af40733f57bfcff0e69c25ab4b43e6628aa": {
+      "sha256": "d739eb6ff481a1c05a7c5dd4436b1af40733f57bfcff0e69c25ab4b43e6628aa",
+      "legacy_parameter_set_id": "2a7c0c809960",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.100625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "c3e10a1501a5eab05d14766be2d5592f2fb01efe090806a9c3e581bcbe2d1cca": {
+      "sha256": "c3e10a1501a5eab05d14766be2d5592f2fb01efe090806a9c3e581bcbe2d1cca",
+      "legacy_parameter_set_id": "5a69275b3b02",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.1003125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "131f1fc2ab4e3eeabc66b07b2d1155dd76dcfe9d7a216ad692648c8d4d5476cd": {
+      "sha256": "131f1fc2ab4e3eeabc66b07b2d1155dd76dcfe9d7a216ad692648c8d4d5476cd",
+      "legacy_parameter_set_id": "8f3ea291a7fb",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.10015625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "50ec892af0a12f29f3586871cad1b935a0758b7f98d40639ae9b5305ac527fcc": {
+      "sha256": "50ec892af0a12f29f3586871cad1b935a0758b7f98d40639ae9b5305ac527fcc",
+      "legacy_parameter_set_id": "f78fb658c40f",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.100078125,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "83617c538c22e8a93e6304cc450d203c15d850c6ebea5058e9add39f7324c062": {
+      "sha256": "83617c538c22e8a93e6304cc450d203c15d850c6ebea5058e9add39f7324c062",
+      "legacy_parameter_set_id": "8f72e58db353",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.15,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.225,
+        "require_contour": false
+      }
+    },
+    "76e1bfd4d79a5bb1925ffa2c1d6f03ee1cdb5dd8625502f04d5a13585f046f46": {
+      "sha256": "76e1bfd4d79a5bb1925ffa2c1d6f03ee1cdb5dd8625502f04d5a13585f046f46",
+      "legacy_parameter_set_id": "1f1c7b4b37d1",
+      "parameters": {
+        "agreement_weight": 0.3125,
+        "contour_minimum_area_fraction": 0.1,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.20625,
+        "require_contour": false
+      }
+    },
+    "52fae17c22044f3e24fa17c665ea3cc377f0a0e0beafc726ea1520e98b0f0467": {
+      "sha256": "52fae17c22044f3e24fa17c665ea3cc377f0a0e0beafc726ea1520e98b0f0467",
+      "legacy_parameter_set_id": "44297bc1aa69",
+      "parameters": {
+        "agreement_weight": 0.34375,
+        "contour_minimum_area_fraction": 0.166875,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ff01a6b7bb0e31296c1b360d7a1f75df54e455260ebb5ae4a7919fa82ac1c85d": {
+      "sha256": "ff01a6b7bb0e31296c1b360d7a1f75df54e455260ebb5ae4a7919fa82ac1c85d",
+      "legacy_parameter_set_id": "5afa43d5bbcb",
+      "parameters": {
+        "agreement_weight": 0.153125,
+        "contour_minimum_area_fraction": 0.150000000028,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "5de61514c580fde0b09eedb706ae7eed76c80faff6ef8970b82af056b0124722": {
+      "sha256": "5de61514c580fde0b09eedb706ae7eed76c80faff6ef8970b82af056b0124722",
+      "legacy_parameter_set_id": "357ce82ff2a4",
+      "parameters": {
+        "agreement_weight": 0.334375,
+        "contour_minimum_area_fraction": 0.08375,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "5d163349fb118dceb1f667330fb28971eda56313895f477580303056c0d2a3f7": {
+      "sha256": "5d163349fb118dceb1f667330fb28971eda56313895f477580303056c0d2a3f7",
+      "legacy_parameter_set_id": "c06818c793fc",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.08625,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.0225,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "040c3d6d7ecb18fe3cb42bffe325722eb62b3d393b64969674ad1bff3e4647c5": {
+      "sha256": "040c3d6d7ecb18fe3cb42bffe325722eb62b3d393b64969674ad1bff3e4647c5",
+      "legacy_parameter_set_id": "0e3c8261ca38",
+      "parameters": {
+        "agreement_weight": 0.15625,
+        "contour_minimum_area_fraction": 0.0825,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "ead09f99ae115578b27648ce16407bdbc1bdc9463f1a94152403d4587dbf8c19": {
+      "sha256": "ead09f99ae115578b27648ce16407bdbc1bdc9463f1a94152403d4587dbf8c19",
+      "legacy_parameter_set_id": "29d11b8ca18e",
+      "parameters": {
+        "agreement_weight": 0.25,
+        "contour_minimum_area_fraction": 0.15,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.1,
+        "require_contour": false
+      }
+    },
+    "d0b32b78b76b808e8e4b5d6f76066e52250e6a06b54a012cc7d12317399701fd": {
+      "sha256": "d0b32b78b76b808e8e4b5d6f76066e52250e6a06b54a012cc7d12317399701fd",
+      "legacy_parameter_set_id": "b04dca684401",
+      "parameters": {
+        "agreement_weight": 0.1625,
+        "contour_minimum_area_fraction": 0.1,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.24375,
+        "require_contour": false
+      }
+    },
+    "8da50cb556e6ba840e496fa52655aa36408d9842637de3a46783abfda499c360": {
+      "sha256": "8da50cb556e6ba840e496fa52655aa36408d9842637de3a46783abfda499c360",
+      "legacy_parameter_set_id": "f1dd2472d673",
+      "parameters": {
+        "agreement_weight": 0.153125,
+        "contour_minimum_area_fraction": 0.149999999972,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "20a4e1de816ee876b99eda54975a083900c984c3a6947399a2ed08b942e30b0d": {
+      "sha256": "20a4e1de816ee876b99eda54975a083900c984c3a6947399a2ed08b942e30b0d",
+      "legacy_parameter_set_id": "5058cddccbc8",
+      "parameters": {
+        "agreement_weight": 0.221875,
+        "contour_minimum_area_fraction": 0.15,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.0225,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "d6e5496c068cfd11cdba52f29101685f09e2d90b1ce855c836ff1154c54633a4": {
+      "sha256": "d6e5496c068cfd11cdba52f29101685f09e2d90b1ce855c836ff1154c54633a4",
+      "legacy_parameter_set_id": "ece4eba91421",
+      "parameters": {
+        "agreement_weight": 0.159375,
+        "contour_minimum_area_fraction": 0.15,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.0275,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "2958b31725db84b8a25983218d2dff16c7aa154a4bba864f1532b6ddb9d4a232": {
+      "sha256": "2958b31725db84b8a25983218d2dff16c7aa154a4bba864f1532b6ddb9d4a232",
+      "legacy_parameter_set_id": "854a0b9cc833",
+      "parameters": {
+        "agreement_weight": 0.265625,
+        "contour_minimum_area_fraction": 0.1,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.026875,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    },
+    "671ab801486c406e1b071ccf546f4b3ef13728b5c894bcef0800250720e7c9b2": {
+      "sha256": "671ab801486c406e1b071ccf546f4b3ef13728b5c894bcef0800250720e7c9b2",
+      "legacy_parameter_set_id": "3817f226228a",
+      "parameters": {
+        "grabcut_border_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_erosion_iterations": 1,
+        "grabcut_iterations": 3,
+        "grabcut_close_kernel_fraction": 0.02,
+        "grabcut_close_iterations": 1,
+        "grabcut_minimum_bbox_area_fraction": 0.1,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.018,
+        "contour_minimum_area_fraction": 0.12,
+        "contour_epsilon_max_fraction": 0.04,
+        "contour_minimum_rectangularity": 0.55,
+        "minimum_agreement_iou": 0.15,
+        "grabcut_weight": 0.55,
+        "contour_weight": 0.2,
+        "agreement_weight": 0.25,
+        "require_contour": false
+      }
+    },
+    "b7c5d97652d7b745523427e3389ba405a3add16a7d2fb607e78bed6b455af2f9": {
+      "sha256": "b7c5d97652d7b745523427e3389ba405a3add16a7d2fb607e78bed6b455af2f9",
+      "legacy_parameter_set_id": "d85cec8bcd98",
+      "parameters": {
+        "agreement_weight": 0.159375,
+        "contour_minimum_area_fraction": 0.12,
+        "contour_minimum_rectangularity": 0.7,
+        "grabcut_border_fraction": 0.03,
+        "grabcut_close_kernel_fraction": 0.0275,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 5,
+        "grabcut_minimum_contour_area_fraction": 0.04,
+        "grabcut_polygon_epsilon_fraction": 0.01,
+        "grabcut_weight": 0.65,
+        "minimum_agreement_iou": 0.05,
+        "require_contour": false
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
