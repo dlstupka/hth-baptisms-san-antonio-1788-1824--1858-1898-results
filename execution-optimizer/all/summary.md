@@ -722,7 +722,7 @@ Compatible completed measurements are plotted by detector; thread count is annot
 [↑ Back to Navigation](#table-of-contents)
 
 <a id="detector-pipeline-thread-shape-optimization-data"></a>
-<details>
+<details open>
 <summary><strong>3. Detector Pipeline-Thread Shape Optimization Data</strong></summary>
 
 Coalesced compatible shape measurements from completed optimizer runs are shown below.
