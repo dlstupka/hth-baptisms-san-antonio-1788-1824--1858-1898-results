@@ -1505,7 +1505,7 @@
       "scope": "hth-orientation-deskew-assessment"
     },
     {
-      "authoritative": true,
+      "authoritative": false,
       "canonical_result_identity": "f9b2ff5b8bc73a3a6550fb7d0d555638b5c4a9ff21bc8ad229bad203a2affdf1",
       "effective_build_identity": "5073dc42c13514f47bf857118019b4bb856439e2bb2c38a4727dd6c5c75d7fe2",
       "evidence_path": "normalization/orientation-deskew/canonical-build-evidence.json",
@@ -1523,6 +1523,34 @@
             "commit": "63d2935ba9023d0f25853a6c7ea1057f9ce4003c797cfa0f1e88cf3518065ce1",
             "release": "8ae5f9d7568daeb5ea04d5d6cfce0112512a6b542163b96af734668227ea25df",
             "release_manifest_sha256": "63d2935ba9023d0f25853a6c7ea1057f9ce4003c797cfa0f1e88cf3518065ce1",
+            "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+            "role": "source",
+            "utilization": "consumed"
+          }
+        ],
+        "schema_version": "1"
+      },
+      "scope": "hth-orientation-deskew-assessment"
+    },
+    {
+      "authoritative": true,
+      "canonical_result_identity": "fa1d029e150422b8cbf5d444f7ae8dab233c1623f7361ddd17db224742e145a9",
+      "effective_build_identity": "577d08ee807bfdd58ae6cb5ff9702f35e216286a73d3de76412b3f42ba42c586",
+      "evidence_path": "normalization/orientation-deskew/canonical-build-evidence.json",
+      "resource_utilization": {
+        "canonical_evidence_cache": {
+          "action": "populated",
+          "canonical_result_identity": null,
+          "lookup": "miss",
+          "lookup_identity": "577d08ee807bfdd58ae6cb5ff9702f35e216286a73d3de76412b3f42ba42c586",
+          "path": "normalization/orientation-deskew/canonical-build-evidence.json",
+          "scope": "hth-orientation-deskew-assessment"
+        },
+        "immutable_releases": [
+          {
+            "commit": "110330a1f15d5c447e98bfc8355504052ca40bcbf09dbd1cee352946eab3510b",
+            "release": "4d7d2198ea127d986dae18017258e1147269711c19a2eb07a6344b25ccf8bc69",
+            "release_manifest_sha256": "110330a1f15d5c447e98bfc8355504052ca40bcbf09dbd1cee352946eab3510b",
             "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
             "role": "source",
             "utilization": "consumed"
@@ -4293,9 +4321,26 @@
     {
       "canonical_result_identity": "f9b2ff5b8bc73a3a6550fb7d0d555638b5c4a9ff21bc8ad229bad203a2affdf1",
       "cleanup_eligible": false,
+      "cleanup_reason": "historical-audit-provenance-retained",
+      "dirty": true,
+      "identity": "5073dc42c13514f47bf857118019b4bb856439e2bb2c38a4727dd6c5c75d7fe2",
+      "integrity": "good",
+      "kind": "canonical-build-evidence-cache",
+      "labels": [
+        "good",
+        "previous",
+        "dirty"
+      ],
+      "lineage": "previous",
+      "path": "normalization/orientation-deskew/canonical-build-evidence.json",
+      "scope": "hth-orientation-deskew-assessment"
+    },
+    {
+      "canonical_result_identity": "fa1d029e150422b8cbf5d444f7ae8dab233c1623f7361ddd17db224742e145a9",
+      "cleanup_eligible": false,
       "cleanup_reason": "authoritative-build-evidence",
       "dirty": false,
-      "identity": "5073dc42c13514f47bf857118019b4bb856439e2bb2c38a4727dd6c5c75d7fe2",
+      "identity": "577d08ee807bfdd58ae6cb5ff9702f35e216286a73d3de76412b3f42ba42c586",
       "integrity": "good",
       "kind": "canonical-build-evidence-cache",
       "labels": [
@@ -6125,6 +6170,10 @@
     {
       "active_consumers": [
         {
+          "effective_build_identity": "577d08ee807bfdd58ae6cb5ff9702f35e216286a73d3de76412b3f42ba42c586",
+          "scope": "hth-orientation-deskew-assessment"
+        },
+        {
           "effective_build_identity": "38a885be849fb99bba57a2c60e7d345082c46a2a401b459d056f94722331545a",
           "scope": "hth-perspective-assessment"
         },
@@ -6260,19 +6309,18 @@
       "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results"
     },
     {
-      "active_consumers": [
-        {
-          "effective_build_identity": "5073dc42c13514f47bf857118019b4bb856439e2bb2c38a4727dd6c5c75d7fe2",
-          "scope": "hth-orientation-deskew-assessment"
-        }
-      ],
+      "active_consumers": [],
       "authoritative_producers": [],
       "cleanup_authority": true,
       "cleanup_eligible": false,
-      "cleanup_reason": "referenced-by-authoritative-build",
+      "cleanup_reason": "historical-audit-provenance-reference",
       "declared_by_current_code": false,
-      "dirty": false,
+      "dirty": true,
       "historical_consumers": [
+        {
+          "effective_build_identity": "5073dc42c13514f47bf857118019b4bb856439e2bb2c38a4727dd6c5c75d7fe2",
+          "scope": "hth-orientation-deskew-assessment"
+        },
         {
           "effective_build_identity": "7209bb69989b45707bf42490ab537f517c3957e26f7b0e8b5d056d8b4a7b7af3",
           "scope": "hth-perspective-assessment"
@@ -6287,11 +6335,11 @@
       "kind": "immutable-release",
       "labels": [
         "good",
-        "current",
+        "previous",
         "not-latest",
-        "clean"
+        "dirty"
       ],
-      "lineage": "current",
+      "lineage": "previous",
       "publication": "not-latest",
       "release": "8ae5f9d7568daeb5ea04d5d6cfce0112512a6b542163b96af734668227ea25df",
       "release_kind": "regular",
@@ -7505,15 +7553,15 @@
     }
   ],
   "report_type": "canonical-resource-lifecycle",
-  "resource_state_identity": "15e41040c375359c8f06733aababcea5d765d312c6fcfacb7d298d65625e94d9",
+  "resource_state_identity": "7e02535c1537c3d2d451e6cdf134b6bd12a4f8f58429c392e66c1ad26ab50602",
   "schema_version": "1.0",
   "summary": {
-    "build_records": 139,
-    "cache_elements": 139,
+    "build_records": 140,
+    "cache_elements": 140,
     "cleanup_eligible_cache_elements": 0,
     "cleanup_eligible_release_elements": 3,
-    "dirty_cache_elements": 110,
-    "dirty_release_elements": 41,
+    "dirty_cache_elements": 111,
+    "dirty_release_elements": 42,
     "release_elements": 55
   }
 }
