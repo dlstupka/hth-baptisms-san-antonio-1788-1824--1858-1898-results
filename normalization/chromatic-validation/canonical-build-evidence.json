@@ -1,5 +1,5 @@
 {
-  "authoritative_identity": "fff04bcd05154493dff074da34cc3781f569ec32a5d0fd5a325d61e6baadaf88",
+  "authoritative_identity": "e231addda6d04334e5c0aa0bd6d960db20c59aa4353763879b4b87d451d83128",
   "evidence_type": "canonical-build-evidence-store",
   "records": {
     "263714899100c05195d404e06f3e5db3f75bbe9de6ce17ca1f66a23b5d766507": {
@@ -247,6 +247,142 @@
         },
         "verified_against_incumbent": false,
         "workflow_run_id": "35402270699"
+      },
+      "schema_version": "1.0",
+      "scope": "hth-chromatic-validation",
+      "status": "complete"
+    },
+    "e231addda6d04334e5c0aa0bd6d960db20c59aa4353763879b4b87d451d83128": {
+      "canonical_result": {
+        "artifacts": [
+          {
+            "canonical_sha256": "9b3c404cafe96ef59dfa65076fc9a3bbcb25bbf4ec0b502d96cbda822b7462f6",
+            "format": "json",
+            "logical_name": "chromatic-validation",
+            "published_path": "normalization/chromatic-validation/validation.json"
+          }
+        ],
+        "identity": "a4ae7938b12b3bd572a843a4f30857870b34c558bdc420a8ad8657985dda3348",
+        "pages": []
+      },
+      "effective_build_identity": "e231addda6d04334e5c0aa0bd6d960db20c59aa4353763879b4b87d451d83128",
+      "effective_inputs": {
+        "configuration": [
+          {
+            "bytes": 395,
+            "path": "config/chromatic-method-validation.json",
+            "sha256": "66d32020fa7977459ce4d2501ea9e4ce1eb9c7ee353c100b8c5865c94ef3cc76"
+          }
+        ],
+        "contract": {
+          "image_limit": 0,
+          "mode": "diagnostic-evidence",
+          "name": "hth-chromatic-validation",
+          "operations": [
+            "chromatic-validate-evidence"
+          ],
+          "resource_provenance_version": "1",
+          "version": "1"
+        },
+        "detector_selection": null,
+        "implementation": [
+          {
+            "bytes": 20239,
+            "path": "hth/normalize_chromatic.py",
+            "sha256": "ecb462afc575b2489adb4e66a0c9831022a4591df6f62a36f5c6d235ec9910e1"
+          }
+        ],
+        "runtime": {
+          "declared_components": {},
+          "packages": {
+            "numpy": "2.4.6",
+            "opencv-python-headless": "4.14.0.94"
+          },
+          "python_cache_tag": "cpython-312",
+          "python_implementation": "CPython",
+          "python_version": "3.12.0"
+        },
+        "runtime_contract": [
+          {
+            "bytes": 7038,
+            "path": ".github/actions/setup-hth-python/action.yml",
+            "sha256": "6f0440797054829c93a06353073ab2f3a28c4a1709beed4c439f3fcaa82fd0b3"
+          },
+          {
+            "bytes": 70,
+            "path": "requirements.txt",
+            "sha256": "d98d5ea73e5da16547c31e4cce101f0fd8fe59b94adb78a8b5d739ea1bdc79a1"
+          }
+        ],
+        "selected_detector_implementation": [],
+        "source": {
+          "commit": "c2f5ae76936d37fa42496bc25e8ee6ed65ed6631de78f4a4700d717399aa9138",
+          "files": [
+            {
+              "bytes": 539819,
+              "path": "chromatic-assessment.json",
+              "sha256": "bc68160c0e9370b4086902c3ea1b17a462770ebad71afa6a581e76e86e8c4507"
+            },
+            {
+              "bytes": 1490,
+              "path": "chromatic-method-assessment.json",
+              "sha256": "6ff60007d0b18f22cb367ef90d55d53a43243c410cdeea5e11c0d7c064d624cb"
+            },
+            {
+              "bytes": 450,
+              "path": "release.json",
+              "sha256": "01803b37530c543deea2557ea1209da89b5ab7bcf7f4b103bb20929b080fdab4"
+            },
+            {
+              "bytes": 469414,
+              "path": "tonal-normalization-manifest.json",
+              "sha256": "a09a2182f889f6bcda859b066e42a63db1264afc9ec66ef3662965ff18b11c28"
+            }
+          ],
+          "release": "HTH-TONAL-c2f5ae76936d37fa42496bc25e8ee6ed65ed6631de78f4a4700d717399aa9138",
+          "release_manifest_sha256": "27bbe32d4fd3104b9bcb3fc4bf809cb94daacd7d325f2f4607e48fd00234abc9",
+          "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results"
+        }
+      },
+      "evidence_type": "canonical-build-evidence",
+      "execution": {
+        "activity": "EXECUTED",
+        "completed_at_utc": "2026-09-23T02:48:30Z",
+        "domain_result": "APPLY",
+        "elapsed_seconds": 75,
+        "evaluated_at_utc": "2026-09-23T02:47:15Z",
+        "pipeline_commit": "c42bfa1c684d0b1b08306654c754de4c726c11de",
+        "pipeline_repository": "dlstupka/hth",
+        "policy": "auto",
+        "runner": {
+          "runner_arch": "X64",
+          "runner_environment": "self-hosted",
+          "runner_name": "rh8-al321",
+          "runner_os": "Linux"
+        },
+        "verified_against_incumbent": false,
+        "workflow_run_id": "35806954384"
+      },
+      "resource_utilization": {
+        "canonical_evidence_cache": {
+          "action": "populated",
+          "canonical_result_identity": null,
+          "lookup": "miss",
+          "lookup_identity": "e231addda6d04334e5c0aa0bd6d960db20c59aa4353763879b4b87d451d83128",
+          "path": "normalization/chromatic-validation/canonical-build-evidence.json",
+          "scope": "hth-chromatic-validation"
+        },
+        "immutable_releases": [
+          {
+            "commit": "c2f5ae76936d37fa42496bc25e8ee6ed65ed6631de78f4a4700d717399aa9138",
+            "release": "HTH-TONAL-c2f5ae76936d37fa42496bc25e8ee6ed65ed6631de78f4a4700d717399aa9138",
+            "release_manifest_sha256": "27bbe32d4fd3104b9bcb3fc4bf809cb94daacd7d325f2f4607e48fd00234abc9",
+            "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+            "role": "source",
+            "utilization": "consumed"
+          }
+        ],
+        "schema_version": "1"
       },
       "schema_version": "1.0",
       "scope": "hth-chromatic-validation",
