@@ -303,7 +303,7 @@ This table prefers compatible full calibrations when available and falls back to
 - **Calibration Evidence:** deterministic evidence score for how completely this run characterizes the evaluated Golden Set and parameter grid. Score 2 points for complete exhaustive coverage, 1 point when at least 90% of parameter sets succeed on every page, and 1 point when at least 1% of tested sets are within 0.001 Avg IoU of the winner. **Low** = 0–1 points, **Medium** = 2–3 points, and **High** = 4 points. This is not confidence that the detector generalizes beyond this Golden Set and grid.
 - **Approval Level:** automatic Golden Set-scoped engineering status derived from Search Type and Calibration Evidence. **Provisional** = smoke or unavailable evidence; **Candidate** = any reduced search or exhaustive search with Low evidence; **Recommended** = exhaustive search with Medium evidence; **Approved** = exhaustive search with High evidence. A different Golden Set requires its own calibration and approval.
 - **Evidence tables:** identify what each detector actually observes and whether that evidence generates, validates, filters, or scores a page hypothesis.
-- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260914-033735/calibration-intelligence.json).
+- **Build*:** `#run` links open GitHub Actions logs and artifacts and expire according to repository retention; the calibration data persists in [calibration-intelligence.json](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260914-033735/calibration-intelligence.json).
 - **Est. Serial Runtime\*\*:** Estimated single-detector serial runtime derived from recorded regression evidence; actual wall time varies with parallelism and scheduling.
 
 [↑ Back to Navigation](#table-of-contents)
@@ -5838,9 +5838,9 @@ Report Writer shows a stable GitHub-hosted smoke-test reference schedule rather 
 | Scheduling intelligence | `github-hosted-workflow + static-lpt` |
 | Smoke evidence | No matching persisted GitHub-hosted smoke observation; runtime estimates used. |
 | Pipeline start stagger | 0m |
-| Runtime intelligence | [`runtime-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/runtime-index.json) |
-| Parallelism intelligence | [`parallelism-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/parallelism-index.json) |
-| Calibration intelligence | [`calibration-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/calibration-index.json) |
+| Runtime intelligence | [`runtime-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/runtime-index.json) |
+| Parallelism intelligence | [`parallelism-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/parallelism-index.json) |
+| Calibration intelligence | [`calibration-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/calibration-index.json) |
 
 | Pipeline | Smoke-test schedule | Est Work | Threads |
 |---:|---|---:|---:|
@@ -5884,13 +5884,13 @@ The reports below preserve the complete manifest, winner, baseline, calibration 
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816)
 - Detector: [`adaptive_multi_scale_radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-adaptive-multi-scale-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/adaptive_multi_scale_radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/adaptive_multi_scale_radial_edge.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.874437+00:00`
@@ -5916,15 +5916,15 @@ The reports below preserve the complete manifest, winner, baseline, calibration 
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -5973,7 +5973,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `efb17e84d90b` | `efb17e84d90b` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `efb17e84d90b` | `efb17e84d90b` | current run |
 | [#1157](https://github.com/dlstupka/hth/actions/runs/34879638802) | 2026-09-14 | `efb17e84d90b` | `efb17e84d90b` | authoritative |
 
 ### Detector Evidence
@@ -6099,7 +6099,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`adaptive_multi_scale_radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-adaptive-multi-scale-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/adaptive_multi_scale_radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/adaptive_multi_scale_radial_edge.json)
@@ -6117,8 +6117,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`efb17e84d90b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`efb17e84d90b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`efb17e84d90b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`efb17e84d90b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_multi_scale_radial_edge/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.9293`
 - Avg IoU Success: `0.9293`
 - Worst Golden Set page (Min IoU): `0.8605`
@@ -6267,13 +6267,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819)
 - Detector: [`adaptive_radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-adaptive-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/adaptive_radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/adaptive_radial_edge.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.405008+00:00`
@@ -6299,15 +6299,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -6359,7 +6359,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `7e886015ea3b` | `7e886015ea3b` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `7e886015ea3b` | `7e886015ea3b` | current run |
 | [#1142](https://github.com/dlstupka/hth/actions/runs/34796744261) | 2026-09-14 | `7e886015ea3b` | `7e886015ea3b` | authoritative |
 
 ### Detector Evidence
@@ -6483,7 +6483,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`adaptive_radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-adaptive-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/adaptive_radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/adaptive_radial_edge.json)
@@ -6501,8 +6501,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`7e886015ea3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`7e886015ea3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`7e886015ea3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`7e886015ea3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/adaptive_radial_edge/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.9448`
 - Avg IoU Success: `0.9448`
 - Worst Golden Set page (Min IoU): `0.8905`
@@ -6637,13 +6637,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819)
 - Detector: [`amsre_bfq_spbv_pbg`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-amsre-bfq-spbv-pbg.md)
 - Detector configuration: [`hth-pipeline/config/detectors/amsre_bfq_spbv_pbg.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/amsre_bfq_spbv_pbg.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.815641+00:00`
@@ -6669,15 +6669,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -6723,7 +6723,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `ed77648f37ea` | `ed77648f37ea` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `ed77648f37ea` | `ed77648f37ea` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `ed77648f37ea` | `ed77648f37ea` | partial |
 
 ### Detector Evidence
@@ -6841,7 +6841,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`amsre_bfq_spbv_pbg`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-amsre-bfq-spbv-pbg.md)
 - Detector configuration: [`hth-pipeline/config/detectors/amsre_bfq_spbv_pbg.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/amsre_bfq_spbv_pbg.json)
@@ -6859,8 +6859,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`ed77648f37ea`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`ed77648f37ea`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`ed77648f37ea`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`ed77648f37ea`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_bfq_spbv_pbg/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.9301`
 - Avg IoU Success: `0.9301`
 - Worst Golden Set page (Min IoU): `0.8487`
@@ -6987,13 +6987,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818)
 - Detector: [`amsre_doc_ufcn_fusion`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-amsre-doc-ufcn-fusion.md)
 - Detector configuration: [`hth-pipeline/config/detectors/amsre_doc_ufcn_fusion.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/amsre_doc_ufcn_fusion.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.461060+00:00`
@@ -7019,15 +7019,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -7075,7 +7075,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `aad7322834d1` | `aad7322834d1` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `aad7322834d1` | `aad7322834d1` | current run |
 | [#978](https://github.com/dlstupka/hth/actions/runs/33973417155) | 2026-09-05 | `aad7322834d1` | `aad7322834d1` | authoritative |
 
 ### Detector Evidence
@@ -7193,7 +7193,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`amsre_doc_ufcn_fusion`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-amsre-doc-ufcn-fusion.md)
 - Detector configuration: [`hth-pipeline/config/detectors/amsre_doc_ufcn_fusion.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/amsre_doc_ufcn_fusion.json)
@@ -7211,8 +7211,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`aad7322834d1`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`aad7322834d1`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`aad7322834d1`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`aad7322834d1`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/amsre_doc_ufcn_fusion/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.9700`
 - Avg IoU Success: `0.9700`
 - Worst Golden Set page (Min IoU): `0.8583`
@@ -7347,13 +7347,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818)
 - Detector: [`border_energy`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-border-energy.md)
 - Detector configuration: [`hth-pipeline/config/detectors/border_energy.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/border_energy.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.467579+00:00`
@@ -7379,15 +7379,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -7439,7 +7439,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `137c8e9c24d4` | `137c8e9c24d4` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `137c8e9c24d4` | `137c8e9c24d4` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `137c8e9c24d4` | `137c8e9c24d4` | partial |
 
 ### Detector Evidence
@@ -7562,7 +7562,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`border_energy`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-border-energy.md)
 - Detector configuration: [`hth-pipeline/config/detectors/border_energy.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/border_energy.json)
@@ -7580,8 +7580,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`137c8e9c24d4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`137c8e9c24d4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`137c8e9c24d4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`137c8e9c24d4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_energy/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.7566`
 - Avg IoU Success: `0.8512`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -7723,13 +7723,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817)
 - Detector: [`border_fusion_quad`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-border-fusion-quad.md)
 - Detector configuration: [`hth-pipeline/config/detectors/border_fusion_quad.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/border_fusion_quad.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.972192+00:00`
@@ -7755,15 +7755,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -7813,7 +7813,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `0e58c2e806eb` | `0e58c2e806eb` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `0e58c2e806eb` | `0e58c2e806eb` | current run |
 | [#1141](https://github.com/dlstupka/hth/actions/runs/34796428533) | 2026-09-14 | `0e58c2e806eb` | `0e58c2e806eb` | authoritative |
 
 ### Detector Evidence
@@ -7931,7 +7931,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`border_fusion_quad`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-border-fusion-quad.md)
 - Detector configuration: [`hth-pipeline/config/detectors/border_fusion_quad.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/border_fusion_quad.json)
@@ -7949,8 +7949,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`0e58c2e806eb`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`0e58c2e806eb`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`0e58c2e806eb`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`0e58c2e806eb`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/border_fusion_quad/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.9515`
 - Avg IoU Success: `0.9515`
 - Worst Golden Set page (Min IoU): `0.8622`
@@ -8093,13 +8093,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816)
 - Detector: [`components`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-components.md)
 - Detector configuration: [`hth-pipeline/config/detectors/components.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/components.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.990756+00:00`
@@ -8125,15 +8125,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -8186,7 +8186,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `28d3c5534d52` | `28d3c5534d52` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `28d3c5534d52` | `28d3c5534d52` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `28d3c5534d52` | `28d3c5534d52` | partial |
 
 ### Detector Evidence
@@ -8313,7 +8313,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`components`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-components.md)
 - Detector configuration: [`hth-pipeline/config/detectors/components.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/components.json)
@@ -8331,8 +8331,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`28d3c5534d52`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`28d3c5534d52`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`28d3c5534d52`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`28d3c5534d52`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/components/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.7598`
 - Avg IoU Success: `0.8547`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -8471,13 +8471,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817)
 - Detector: [`consensus_quad`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-consensus-quad.md)
 - Detector configuration: [`hth-pipeline/config/detectors/consensus_quad.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/consensus_quad.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.460784+00:00`
@@ -8503,15 +8503,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -8560,7 +8560,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `b3af73fc6871` | `b3af73fc6871` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `b3af73fc6871` | `b3af73fc6871` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `b3af73fc6871` | `b3af73fc6871` | partial |
 
 ### Detector Evidence
@@ -8690,7 +8690,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`consensus_quad`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-consensus-quad.md)
 - Detector configuration: [`hth-pipeline/config/detectors/consensus_quad.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/consensus_quad.json)
@@ -8708,8 +8708,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`b3af73fc6871`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`b3af73fc6871`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`b3af73fc6871`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`b3af73fc6871`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/consensus_quad/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.4125`
 - Avg IoU Success: `0.9282`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -8841,13 +8841,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819)
 - Detector: [`contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.245746+00:00`
@@ -8873,15 +8873,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -8932,7 +8932,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `e3aa692ad143` | `e3aa692ad143` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `e3aa692ad143` | `e3aa692ad143` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `e3aa692ad143` | `e3aa692ad143` | partial |
 
 ### Detector Evidence
@@ -9057,7 +9057,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour.json)
@@ -9075,8 +9075,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`e3aa692ad143`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`e3aa692ad143`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`e3aa692ad143`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`e3aa692ad143`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.8052`
 - Avg IoU Success: `0.8526`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -9214,13 +9214,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817)
 - Detector: [`contour_components`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-components.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_components.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_components.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.989049+00:00`
@@ -9246,15 +9246,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -9320,7 +9320,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `14818b491952` | `14818b491952` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `14818b491952` | `14818b491952` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `14818b491952` | `14818b491952` | partial |
 
 ### Detector Evidence
@@ -9442,7 +9442,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`contour_components`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-components.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_components.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_components.json)
@@ -9460,8 +9460,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`14818b491952`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`baseline`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`14818b491952`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`baseline`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_components/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.7824`
 - Avg IoU Success: `0.8285`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -9602,13 +9602,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818)
 - Detector: [`contour_grabcut`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-grabcut.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_grabcut.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_grabcut.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.760530+00:00`
@@ -9634,15 +9634,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -9697,7 +9697,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `3eec8a03f1de` | `3eec8a03f1de` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `3eec8a03f1de` | `3eec8a03f1de` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `3eec8a03f1de` | `3eec8a03f1de` | partial |
 
 ### Detector Evidence
@@ -9818,7 +9818,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`contour_grabcut`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-grabcut.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_grabcut.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_grabcut.json)
@@ -9836,8 +9836,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`3eec8a03f1de`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`baseline`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`3eec8a03f1de`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`baseline`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_grabcut/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.8085`
 - Avg IoU Success: `0.8560`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -9967,13 +9967,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817)
 - Detector: [`contour_projection`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-projection.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_projection.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_projection.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.696331+00:00`
@@ -9999,15 +9999,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -10059,7 +10059,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `9139dc2b3c84` | `9139dc2b3c84` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `9139dc2b3c84` | `9139dc2b3c84` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `9139dc2b3c84` | `9139dc2b3c84` | partial |
 
 ### Detector Evidence
@@ -10181,7 +10181,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`contour_projection`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-projection.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_projection.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_projection.json)
@@ -10199,8 +10199,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`9139dc2b3c84`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`9139dc2b3c84`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`9139dc2b3c84`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`9139dc2b3c84`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_projection/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.8076`
 - Avg IoU Success: `0.8551`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -10335,13 +10335,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818)
 - Detector: [`contour_quad`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-quad.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_quad.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_quad.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.727803+00:00`
@@ -10367,15 +10367,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -10432,7 +10432,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `e819a9d87885` | `e819a9d87885` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `e819a9d87885` | `e819a9d87885` | current run |
 | [#1019](https://github.com/dlstupka/hth/actions/runs/34246772308) | 2026-09-08 | `e819a9d87885` | `e819a9d87885` | authoritative |
 
 ### Detector Evidence
@@ -10555,7 +10555,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`contour_quad`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-contour-quad.md)
 - Detector configuration: [`hth-pipeline/config/detectors/contour_quad.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/contour_quad.json)
@@ -10573,8 +10573,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`e819a9d87885`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`e819a9d87885`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`e819a9d87885`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`e819a9d87885`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/contour_quad/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.8085`
 - Avg IoU Success: `0.8560`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -10719,13 +10719,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820)
+- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820)
 - Detector: [`convex_hull`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-convex-hull.md)
 - Detector configuration: [`hth-pipeline/config/detectors/convex_hull.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/convex_hull.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:20.565481+00:00`
@@ -10751,15 +10751,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -10810,7 +10810,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `b1fec617283c` | `b1fec617283c` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `b1fec617283c` | `b1fec617283c` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `b1fec617283c` | `b1fec617283c` | partial |
 
 ### Detector Evidence
@@ -10939,7 +10939,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820)
+- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820)
 - Calibration schema: `1.1`
 - Detector: [`convex_hull`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-convex-hull.md)
 - Detector configuration: [`hth-pipeline/config/detectors/convex_hull.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/convex_hull.json)
@@ -10957,8 +10957,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`b1fec617283c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameter-provenance.json)
-- Recommended parameter short name: [`b1fec617283c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter set: [`b1fec617283c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter short name: [`b1fec617283c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/convex_hull/run-20260920-203820/parameter-provenance.json)
 - Best observed Avg IoU: `0.7865`
 - Avg IoU Success: `0.8848`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -11096,13 +11096,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817)
 - Detector: [`cross_edge_contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-cross-edge-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/cross_edge_contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/cross_edge_contour.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.446365+00:00`
@@ -11128,15 +11128,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -11188,7 +11188,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `311c6d1f3142` | `311c6d1f3142` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `311c6d1f3142` | `311c6d1f3142` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `311c6d1f3142` | `311c6d1f3142` | partial |
 
 ### Detector Evidence
@@ -11310,7 +11310,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`cross_edge_contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-cross-edge-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/cross_edge_contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/cross_edge_contour.json)
@@ -11328,8 +11328,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`311c6d1f3142`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`311c6d1f3142`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`311c6d1f3142`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`311c6d1f3142`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/cross_edge_contour/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.8085`
 - Avg IoU Success: `0.8560`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -11470,13 +11470,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820)
+- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820)
 - Detector: [`dhsegment_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-dhsegment-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/dhsegment_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/dhsegment_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:20.097779+00:00`
@@ -11502,15 +11502,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -11560,7 +11560,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `2bdb25bed645` | `2bdb25bed645` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `2bdb25bed645` | `2bdb25bed645` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `2bdb25bed645` | `2bdb25bed645` | partial |
 
 ### Detector Evidence
@@ -11686,7 +11686,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820)
+- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820)
 - Calibration schema: `1.1`
 - Detector: [`dhsegment_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-dhsegment-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/dhsegment_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/dhsegment_page_mask.json)
@@ -11704,8 +11704,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`2bdb25bed645`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameter-provenance.json)
-- Recommended parameter short name: [`2bdb25bed645`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter set: [`2bdb25bed645`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter short name: [`2bdb25bed645`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/dhsegment_page_mask/run-20260920-203820/parameter-provenance.json)
 - Best observed Avg IoU: `0.9309`
 - Avg IoU Success: `0.9309`
 - Worst Golden Set page (Min IoU): `0.5042`
@@ -11841,13 +11841,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816)
 - Detector: [`distance_transform`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-distance-transform.md)
 - Detector configuration: [`hth-pipeline/config/detectors/distance_transform.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/distance_transform.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.640762+00:00`
@@ -11873,15 +11873,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -11932,7 +11932,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `de1de3ffd845` | `de1de3ffd845` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `de1de3ffd845` | `de1de3ffd845` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `de1de3ffd845` | `de1de3ffd845` | partial |
 
 ### Detector Evidence
@@ -12060,7 +12060,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`distance_transform`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-distance-transform.md)
 - Detector configuration: [`hth-pipeline/config/detectors/distance_transform.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/distance_transform.json)
@@ -12078,8 +12078,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`de1de3ffd845`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`de1de3ffd845`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`de1de3ffd845`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`de1de3ffd845`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.7925`
 - Avg IoU Success: `0.8391`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -12217,13 +12217,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820)
+- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820)
 - Detector: [`distance_transform_rect`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-distance-transform-rect.md)
 - Detector configuration: [`hth-pipeline/config/detectors/distance_transform_rect.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/distance_transform_rect.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:20.086119+00:00`
@@ -12249,15 +12249,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -12307,7 +12307,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `3c8a46703812` | `3c8a46703812` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `3c8a46703812` | `3c8a46703812` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `3c8a46703812` | `3c8a46703812` | partial |
 
 ### Detector Evidence
@@ -12433,7 +12433,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820)
+- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820)
 - Calibration schema: `1.1`
 - Detector: [`distance_transform_rect`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-distance-transform-rect.md)
 - Detector configuration: [`hth-pipeline/config/detectors/distance_transform_rect.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/distance_transform_rect.json)
@@ -12451,8 +12451,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`3c8a46703812`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameter-provenance.json)
-- Recommended parameter short name: [`3c8a46703812`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter set: [`3c8a46703812`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter short name: [`3c8a46703812`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/distance_transform_rect/run-20260920-203820/parameter-provenance.json)
 - Best observed Avg IoU: `0.7737`
 - Avg IoU Success: `0.8704`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -12589,13 +12589,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817)
 - Detector: [`doc_ufcn_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-doc-ufcn-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/doc_ufcn_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/doc_ufcn_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.729372+00:00`
@@ -12621,15 +12621,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -12677,7 +12677,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `97a2ae7f3db4` | `97a2ae7f3db4` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `97a2ae7f3db4` | `97a2ae7f3db4` | current run |
 | [#1149](https://github.com/dlstupka/hth/actions/runs/34803009596) | 2026-09-14 | `97a2ae7f3db4` | `97a2ae7f3db4` | authoritative |
 
 ### Detector Evidence
@@ -12796,7 +12796,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`doc_ufcn_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-doc-ufcn-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/doc_ufcn_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/doc_ufcn_page_mask.json)
@@ -12814,8 +12814,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`97a2ae7f3db4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`97a2ae7f3db4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`97a2ae7f3db4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`97a2ae7f3db4`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/doc_ufcn_page_mask/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.9737`
 - Avg IoU Success: `0.9737`
 - Worst Golden Set page (Min IoU): `0.8544`
@@ -12938,13 +12938,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818)
 - Detector: [`docextractor_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-docextractor-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/docextractor_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/docextractor_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.671767+00:00`
@@ -12970,15 +12970,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -13026,7 +13026,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `8181984c092c` | `8181984c092c` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `8181984c092c` | `8181984c092c` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `8181984c092c` | `8181984c092c` | partial |
 
 ### Detector Evidence
@@ -13156,7 +13156,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`docextractor_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-docextractor-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/docextractor_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/docextractor_page_mask.json)
@@ -13174,8 +13174,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`8181984c092c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`8181984c092c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`8181984c092c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`8181984c092c`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/docextractor_page_mask/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.8220`
 - Avg IoU Success: `0.8220`
 - Worst Golden Set page (Min IoU): `0.1357`
@@ -13298,13 +13298,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820)
+- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820)
 - Detector: [`edge_contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-edge-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/edge_contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/edge_contour.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:20.761434+00:00`
@@ -13330,15 +13330,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -13391,7 +13391,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `c4a5a75080d3` | `c4a5a75080d3` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `c4a5a75080d3` | `c4a5a75080d3` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `c4a5a75080d3` | `c4a5a75080d3` | partial |
 
 ### Detector Evidence
@@ -13517,7 +13517,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820)
+- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820)
 - Calibration schema: `1.1`
 - Detector: [`edge_contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-edge-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/edge_contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/edge_contour.json)
@@ -13535,8 +13535,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`c4a5a75080d3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameter-provenance.json)
-- Recommended parameter short name: [`c4a5a75080d3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter set: [`c4a5a75080d3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter short name: [`c4a5a75080d3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/edge_contour/run-20260920-203820/parameter-provenance.json)
 - Best observed Avg IoU: `0.7055`
 - Avg IoU Success: `0.8466`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -13684,13 +13684,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819)
 - Detector: [`eynollah_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-eynollah-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/eynollah_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/eynollah_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.226774+00:00`
@@ -13716,15 +13716,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -13772,7 +13772,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `61b94eaccbc1` | `f417ecab981d` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `61b94eaccbc1` | `f417ecab981d` | current run |
 
 ### Detector Evidence
 
@@ -13897,7 +13897,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`eynollah_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-eynollah-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/eynollah_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/eynollah_page_mask.json)
@@ -13915,8 +13915,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`f417ecab981d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`f417ecab981d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`f417ecab981d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`f417ecab981d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/eynollah_page_mask/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.9627`
 - Avg IoU Success: `0.9627`
 - Worst Golden Set page (Min IoU): `0.8521`
@@ -14042,13 +14042,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817)
 - Detector: [`grabcut`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-grabcut.md)
 - Detector configuration: [`hth-pipeline/config/detectors/grabcut.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/grabcut.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.702275+00:00`
@@ -14074,15 +14074,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -14135,7 +14135,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `d71649e62f31` | `d71649e62f31` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `d71649e62f31` | `d71649e62f31` | current run |
 | [#1122](https://github.com/dlstupka/hth/actions/runs/34766164495) | 2026-09-13 | `d71649e62f31` | `d71649e62f31` | partial |
 
 ### Detector Evidence
@@ -14262,7 +14262,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`grabcut`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-grabcut.md)
 - Detector configuration: [`hth-pipeline/config/detectors/grabcut.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/grabcut.json)
@@ -14280,8 +14280,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`d71649e62f31`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`d71649e62f31`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`d71649e62f31`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`d71649e62f31`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.7875`
 - Avg IoU Success: `0.8860`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -14409,13 +14409,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819)
 - Detector: [`grabcut_contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-grabcut-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/grabcut_contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/grabcut_contour.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.867850+00:00`
@@ -14441,15 +14441,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -14505,7 +14505,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `7a88a28b2c25` | `7a88a28b2c25` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `7a88a28b2c25` | `7a88a28b2c25` | current run |
 
 ### Detector Evidence
 
@@ -14631,7 +14631,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`grabcut_contour`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-grabcut-contour.md)
 - Detector configuration: [`hth-pipeline/config/detectors/grabcut_contour.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/grabcut_contour.json)
@@ -14649,8 +14649,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`7a88a28b2c25`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`7a88a28b2c25`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`7a88a28b2c25`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`7a88a28b2c25`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/grabcut_contour/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.8132`
 - Avg IoU Success: `0.8610`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -14797,13 +14797,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818)
 - Detector: [`gradient_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-gradient-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/gradient_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/gradient_vote.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.680942+00:00`
@@ -14829,15 +14829,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -14882,7 +14882,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `14d0982ad40f` | `14d0982ad40f` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `14d0982ad40f` | `14d0982ad40f` | current run |
 | [#1177](https://github.com/dlstupka/hth/actions/runs/35014079680) | 2026-09-15 | `14d0982ad40f` | `14d0982ad40f` | authoritative |
 
 ### Detector Evidence
@@ -14995,7 +14995,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`gradient_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-gradient-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/gradient_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/gradient_vote.json)
@@ -15013,8 +15013,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`14d0982ad40f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`14d0982ad40f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`14d0982ad40f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`14d0982ad40f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/gradient_vote/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.9403`
 - Avg IoU Success: `0.9403`
 - Worst Golden Set page (Min IoU): `0.8411`
@@ -15145,13 +15145,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816)
 - Detector: [`hough`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-hough.md)
 - Detector configuration: [`hth-pipeline/config/detectors/hough.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/hough.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.212952+00:00`
@@ -15177,15 +15177,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -15236,7 +15236,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `df0a149d1e3b` | `df0a149d1e3b` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `df0a149d1e3b` | `df0a149d1e3b` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `df0a149d1e3b` | `df0a149d1e3b` | partial |
 
 ### Detector Evidence
@@ -15361,7 +15361,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`hough`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-hough.md)
 - Detector configuration: [`hth-pipeline/config/detectors/hough.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/hough.json)
@@ -15379,8 +15379,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`df0a149d1e3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`df0a149d1e3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`df0a149d1e3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`df0a149d1e3b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/hough/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.6130`
 - Avg IoU Success: `0.7356`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -15527,13 +15527,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817)
 - Detector: [`joint_rectangle_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-joint-rectangle-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/joint_rectangle_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/joint_rectangle_vote.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.559173+00:00`
@@ -15559,15 +15559,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -15618,7 +15618,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `697c22dd549f` | `697c22dd549f` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `697c22dd549f` | `697c22dd549f` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `697c22dd549f` | `697c22dd549f` | partial |
 
 ### Detector Evidence
@@ -15750,7 +15750,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`joint_rectangle_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-joint-rectangle-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/joint_rectangle_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/joint_rectangle_vote.json)
@@ -15768,8 +15768,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`697c22dd549f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`baseline`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`697c22dd549f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`baseline`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/joint_rectangle_vote/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.0446`
 - Avg IoU Success: `0.8023`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -15895,13 +15895,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816)
 - Detector: [`kraken_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-kraken-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/kraken_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/kraken_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.078339+00:00`
@@ -15927,15 +15927,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -15985,7 +15985,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `7ad40d0def41` | `7ad40d0def41` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `7ad40d0def41` | `7ad40d0def41` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `7ad40d0def41` | `7ad40d0def41` | partial |
 
 ### Detector Evidence
@@ -16110,7 +16110,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`kraken_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-kraken-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/kraken_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/kraken_page_mask.json)
@@ -16128,8 +16128,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`7ad40d0def41`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`7ad40d0def41`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`7ad40d0def41`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`7ad40d0def41`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/kraken_page_mask/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.8302`
 - Avg IoU Success: `0.8790`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -16266,13 +16266,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817)
 - Detector: [`learned_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-learned-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/learned_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/learned_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.121670+00:00`
@@ -16298,15 +16298,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -16355,7 +16355,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `e264965bcbd3` | `e264965bcbd3` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `e264965bcbd3` | `e264965bcbd3` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `e264965bcbd3` | `e264965bcbd3` | partial |
 
 ### Detector Evidence
@@ -16473,7 +16473,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`learned_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-learned-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/learned_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/learned_page_mask.json)
@@ -16491,8 +16491,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`e264965bcbd3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`e264965bcbd3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`e264965bcbd3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`e264965bcbd3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/learned_page_mask/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.8519`
 - Avg IoU Success: `0.8519`
 - Worst Golden Set page (Min IoU): `0.7813`
@@ -16625,13 +16625,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817)
 - Detector: [`lsd`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-lsd.md)
 - Detector configuration: [`hth-pipeline/config/detectors/lsd.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/lsd.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.088433+00:00`
@@ -16657,15 +16657,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -16716,7 +16716,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `c141412227a3` | `c141412227a3` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `c141412227a3` | `c141412227a3` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `c141412227a3` | `c141412227a3` | partial |
 
 ### Detector Evidence
@@ -16847,7 +16847,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`lsd`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-lsd.md)
 - Detector configuration: [`hth-pipeline/config/detectors/lsd.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/lsd.json)
@@ -16865,8 +16865,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`c141412227a3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`c141412227a3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`c141412227a3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`c141412227a3`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/lsd/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.8631`
 - Avg IoU Success: `0.9138`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -17004,7 +17004,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818)
 - Detector: [`mask_rcnn_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-mask-rcnn-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/mask_rcnn_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/mask_rcnn_page_mask.json)
 - Model variant: `rcnn_hjdataset_current`
@@ -17012,7 +17012,7 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.200428+00:00`
@@ -17038,15 +17038,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -17094,7 +17094,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `ff8b6769c770` | `ff8b6769c770` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `ff8b6769c770` | `ff8b6769c770` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `ff8b6769c770` | `ff8b6769c770` | partial |
 
 ### Detector Evidence
@@ -17222,7 +17222,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`mask_rcnn_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-mask-rcnn-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/mask_rcnn_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/mask_rcnn_page_mask.json)
@@ -17240,8 +17240,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`ff8b6769c770`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`ff8b6769c770`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`ff8b6769c770`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`ff8b6769c770`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/mask_rcnn_page_mask/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.7733`
 - Avg IoU Success: `0.8700`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -17374,13 +17374,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815)
+- Run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815)
 - Detector: [`msre_bfq_spbv_pbg`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-msre-bfq-spbv-pbg.md)
 - Detector configuration: [`hth-pipeline/config/detectors/msre_bfq_spbv_pbg.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/msre_bfq_spbv_pbg.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:15.343910+00:00`
@@ -17406,15 +17406,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -17465,7 +17465,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `99cf4ee44357` | `99cf4ee44357` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `99cf4ee44357` | `99cf4ee44357` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `99cf4ee44357` | `99cf4ee44357` | partial |
 
 ### Detector Evidence
@@ -17583,7 +17583,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815)
+- Calibration run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815)
 - Calibration schema: `1.1`
 - Detector: [`msre_bfq_spbv_pbg`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-msre-bfq-spbv-pbg.md)
 - Detector configuration: [`hth-pipeline/config/detectors/msre_bfq_spbv_pbg.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/msre_bfq_spbv_pbg.json)
@@ -17601,8 +17601,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`99cf4ee44357`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameter-provenance.json)
-- Recommended parameter short name: [`99cf4ee44357`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameter-provenance.json)
+- Recommended parameter set: [`99cf4ee44357`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameter-provenance.json)
+- Recommended parameter short name: [`99cf4ee44357`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/msre_bfq_spbv_pbg/run-20260920-203815/parameter-provenance.json)
 - Best observed Avg IoU: `0.9356`
 - Avg IoU Success: `0.9356`
 - Worst Golden Set page (Min IoU): `0.8494`
@@ -17727,13 +17727,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817)
 - Detector: [`multi_scale_radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-multi-scale-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/multi_scale_radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/multi_scale_radial_edge.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.108471+00:00`
@@ -17759,15 +17759,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -17816,7 +17816,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `1b6367970a76` | `1b6367970a76` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `1b6367970a76` | `1b6367970a76` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `1b6367970a76` | `1b6367970a76` | partial |
 
 ### Detector Evidence
@@ -17938,7 +17938,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`multi_scale_radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-multi-scale-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/multi_scale_radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/multi_scale_radial_edge.json)
@@ -17956,8 +17956,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`1b6367970a76`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`1b6367970a76`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`1b6367970a76`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`1b6367970a76`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/multi_scale_radial_edge/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.9378`
 - Avg IoU Success: `0.9378`
 - Worst Golden Set page (Min IoU): `0.8596`
@@ -18098,13 +18098,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816)
 - Detector: [`orli_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-orli-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/orli_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/orli_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.494227+00:00`
@@ -18130,15 +18130,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -18188,7 +18188,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `5d42612f92d0` | `3de35746527f` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `5d42612f92d0` | `3de35746527f` | current run |
 
 ### Detector Evidence
 
@@ -18307,7 +18307,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`orli_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-orli-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/orli_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/orli_page_mask.json)
@@ -18325,8 +18325,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`3de35746527f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`3de35746527f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`3de35746527f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`3de35746527f`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/orli_page_mask/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.8990`
 - Avg IoU Success: `0.8990`
 - Worst Golden Set page (Min IoU): `0.6919`
@@ -18454,13 +18454,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820)
+- Run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820)
 - Detector: [`page_background`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-page-background.md)
 - Detector configuration: [`hth-pipeline/config/detectors/page_background.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/page_background.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:20.395182+00:00`
@@ -18486,15 +18486,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -18545,7 +18545,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `47c4fbb15806` | `47c4fbb15806` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `47c4fbb15806` | `47c4fbb15806` | current run |
 | [#1017](https://github.com/dlstupka/hth/actions/runs/34244892412) | 2026-09-08 | `47c4fbb15806` | `47c4fbb15806` | authoritative |
 
 ### Detector Evidence
@@ -18667,7 +18667,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820)
+- Calibration run ID: [`run-20260920-203820`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820)
 - Calibration schema: `1.1`
 - Detector: [`page_background`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-page-background.md)
 - Detector configuration: [`hth-pipeline/config/detectors/page_background.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/page_background.json)
@@ -18685,8 +18685,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`47c4fbb15806`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameter-provenance.json)
-- Recommended parameter short name: [`47c4fbb15806`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter set: [`47c4fbb15806`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameter-provenance.json)
+- Recommended parameter short name: [`47c4fbb15806`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/page_background/run-20260920-203820/parameter-provenance.json)
 - Best observed Avg IoU: `0.9317`
 - Avg IoU Success: `0.9317`
 - Worst Golden Set page (Min IoU): `0.6002`
@@ -18814,13 +18814,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816)
 - Detector: [`pagenet_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-pagenet-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/pagenet_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/pagenet_page_mask.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.920865+00:00`
@@ -18846,15 +18846,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -18903,7 +18903,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `b40301c3c948` | `2a25dae5b947` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `b40301c3c948` | `2a25dae5b947` | current run |
 
 ### Detector Evidence
 
@@ -19024,7 +19024,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`pagenet_page_mask`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-pagenet-page-mask.md)
 - Detector configuration: [`hth-pipeline/config/detectors/pagenet_page_mask.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/pagenet_page_mask.json)
@@ -19042,8 +19042,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`2a25dae5b947`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`2a25dae5b947`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`2a25dae5b947`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`2a25dae5b947`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/pagenet_page_mask/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.8405`
 - Avg IoU Success: `0.8405`
 - Worst Golden Set page (Min IoU): `0.7797`
@@ -19169,13 +19169,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819)
 - Detector: [`polar_boundary_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-polar-boundary-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/polar_boundary_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/polar_boundary_vote.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.003369+00:00`
@@ -19201,15 +19201,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -19257,7 +19257,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `99239ac53e0b` | `99239ac53e0b` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `99239ac53e0b` | `99239ac53e0b` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `99239ac53e0b` | `99239ac53e0b` | partial |
 
 ### Detector Evidence
@@ -19382,7 +19382,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`polar_boundary_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-polar-boundary-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/polar_boundary_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/polar_boundary_vote.json)
@@ -19400,8 +19400,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`99239ac53e0b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`99239ac53e0b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`99239ac53e0b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`99239ac53e0b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/polar_boundary_vote/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.9241`
 - Avg IoU Success: `0.9241`
 - Worst Golden Set page (Min IoU): `0.8472`
@@ -19536,13 +19536,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817)
 - Detector: [`projective_gradient_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-projective-gradient-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/projective_gradient_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/projective_gradient_vote.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.785891+00:00`
@@ -19568,15 +19568,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -19626,7 +19626,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `a93e5bff2ad5` | `a93e5bff2ad5` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `a93e5bff2ad5` | `a93e5bff2ad5` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `a93e5bff2ad5` | `a93e5bff2ad5` | partial |
 
 ### Detector Evidence
@@ -19756,7 +19756,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`projective_gradient_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-projective-gradient-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/projective_gradient_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/projective_gradient_vote.json)
@@ -19774,8 +19774,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`a93e5bff2ad5`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`a93e5bff2ad5`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`a93e5bff2ad5`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`a93e5bff2ad5`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/projective_gradient_vote/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.7560`
 - Avg IoU Success: `0.9073`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -19908,13 +19908,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818)
 - Detector: [`radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/radial_edge.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.775490+00:00`
@@ -19940,15 +19940,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -20000,7 +20000,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `f3ff4f26e682` | `f3ff4f26e682` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `f3ff4f26e682` | `f3ff4f26e682` | current run |
 | [#994](https://github.com/dlstupka/hth/actions/runs/34051129882) | 2026-09-06 | `f3ff4f26e682` | `f3ff4f26e682` | authoritative |
 
 ### Detector Evidence
@@ -20125,7 +20125,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`radial_edge`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-radial-edge.md)
 - Detector configuration: [`hth-pipeline/config/detectors/radial_edge.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/radial_edge.json)
@@ -20143,8 +20143,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`f3ff4f26e682`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`f3ff4f26e682`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`f3ff4f26e682`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`f3ff4f26e682`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radial_edge/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.9334`
 - Avg IoU Success: `0.9334`
 - Worst Golden Set page (Min IoU): `0.7551`
@@ -20291,13 +20291,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819)
 - Detector: [`radon_boundary`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-radon-boundary.md)
 - Detector configuration: [`hth-pipeline/config/detectors/radon_boundary.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/radon_boundary.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.007795+00:00`
@@ -20323,15 +20323,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -20381,7 +20381,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `0ca55a3330d7` | `0ca55a3330d7` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `0ca55a3330d7` | `0ca55a3330d7` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `0ca55a3330d7` | `0ca55a3330d7` | partial |
 
 ### Detector Evidence
@@ -20511,7 +20511,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`radon_boundary`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-radon-boundary.md)
 - Detector configuration: [`hth-pipeline/config/detectors/radon_boundary.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/radon_boundary.json)
@@ -20529,8 +20529,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`0ca55a3330d7`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`0ca55a3330d7`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`0ca55a3330d7`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`0ca55a3330d7`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/radon_boundary/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.5546`
 - Avg IoU Success: `0.5546`
 - Worst Golden Set page (Min IoU): `0.1235`
@@ -20666,13 +20666,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819)
+- Run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819)
 - Detector: [`ransac`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-ransac.md)
 - Detector configuration: [`hth-pipeline/config/detectors/ransac.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/ransac.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:19.708933+00:00`
@@ -20698,15 +20698,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -20757,7 +20757,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `4633d55ca039` | `4633d55ca039` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `4633d55ca039` | `4633d55ca039` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `4633d55ca039` | `4633d55ca039` | partial |
 
 ### Detector Evidence
@@ -20883,7 +20883,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819)
+- Calibration run ID: [`run-20260920-203819`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819)
 - Calibration schema: `1.1`
 - Detector: [`ransac`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-ransac.md)
 - Detector configuration: [`hth-pipeline/config/detectors/ransac.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/ransac.json)
@@ -20901,8 +20901,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`4633d55ca039`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameter-provenance.json)
-- Recommended parameter short name: [`4633d55ca039`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter set: [`4633d55ca039`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameter-provenance.json)
+- Recommended parameter short name: [`4633d55ca039`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/ransac/run-20260920-203819/parameter-provenance.json)
 - Best observed Avg IoU: `0.7446`
 - Avg IoU Success: `0.7884`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -21040,13 +21040,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815)
+- Run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815)
 - Detector: [`scantailor_page_frame`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-scantailor-page-frame.md)
 - Detector configuration: [`hth-pipeline/config/detectors/scantailor_page_frame.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/scantailor_page_frame.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:15.961105+00:00`
@@ -21072,15 +21072,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -21130,7 +21130,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `e43961d39e1a` | `e43961d39e1a` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `e43961d39e1a` | `e43961d39e1a` | current run |
 | [#1148](https://github.com/dlstupka/hth/actions/runs/34802485757) | 2026-09-14 | `e43961d39e1a` | `e43961d39e1a` | authoritative |
 
 ### Detector Evidence
@@ -21255,7 +21255,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815)
+- Calibration run ID: [`run-20260920-203815`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815)
 - Calibration schema: `1.1`
 - Detector: [`scantailor_page_frame`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-scantailor-page-frame.md)
 - Detector configuration: [`hth-pipeline/config/detectors/scantailor_page_frame.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/scantailor_page_frame.json)
@@ -21273,8 +21273,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`e43961d39e1a`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameter-provenance.json)
-- Recommended parameter short name: [`e43961d39e1a`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameter-provenance.json)
+- Recommended parameter set: [`e43961d39e1a`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameter-provenance.json)
+- Recommended parameter short name: [`e43961d39e1a`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/scantailor_page_frame/run-20260920-203815/parameter-provenance.json)
 - Best observed Avg IoU: `0.9408`
 - Avg IoU Success: `0.9408`
 - Worst Golden Set page (Min IoU): `0.8631`
@@ -21400,13 +21400,13 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818)
 - Detector: [`segment_supported_polar_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-segment-supported-polar-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/segment_supported_polar_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/segment_supported_polar_vote.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.483209+00:00`
@@ -21432,15 +21432,15 @@ Influence uses one-way η² over Avg IoU. It measures association within this co
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -21493,7 +21493,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `9d4127775c2b` | `9d4127775c2b` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `9d4127775c2b` | `9d4127775c2b` | current run |
 
 ### Detector Evidence
 
@@ -21614,7 +21614,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`segment_supported_polar_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-segment-supported-polar-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/segment_supported_polar_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/segment_supported_polar_vote.json)
@@ -21632,8 +21632,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`9d4127775c2b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`9d4127775c2b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`9d4127775c2b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`9d4127775c2b`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/segment_supported_polar_vote/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.9049`
 - Avg IoU Success: `0.9049`
 - Worst Golden Set page (Min IoU): `0.8444`
@@ -21773,13 +21773,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817)
+- Run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817)
 - Detector: [`signed_polar_boundary_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-signed-polar-boundary-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/signed_polar_boundary_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/signed_polar_boundary_vote.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:17.848112+00:00`
@@ -21805,15 +21805,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -21864,7 +21864,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `43feea2f2875` | `43feea2f2875` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `43feea2f2875` | `43feea2f2875` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `43feea2f2875` | `43feea2f2875` | partial |
 
 ### Detector Evidence
@@ -21986,7 +21986,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817)
+- Calibration run ID: [`run-20260920-203817`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817)
 - Calibration schema: `1.1`
 - Detector: [`signed_polar_boundary_vote`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-signed-polar-boundary-vote.md)
 - Detector configuration: [`hth-pipeline/config/detectors/signed_polar_boundary_vote.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/signed_polar_boundary_vote.json)
@@ -22004,8 +22004,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`43feea2f2875`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameter-provenance.json)
-- Recommended parameter short name: [`43feea2f2875`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter set: [`43feea2f2875`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameter-provenance.json)
+- Recommended parameter short name: [`43feea2f2875`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/signed_polar_boundary_vote/run-20260920-203817/parameter-provenance.json)
 - Best observed Avg IoU: `0.9096`
 - Avg IoU Success: `0.9096`
 - Worst Golden Set page (Min IoU): `0.8490`
@@ -22143,13 +22143,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816)
+- Run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816)
 - Detector: [`star_convex`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-star-convex.md)
 - Detector configuration: [`hth-pipeline/config/detectors/star_convex.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/star_convex.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:16.854648+00:00`
@@ -22175,15 +22175,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -22233,7 +22233,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `fb607b1a24b9` | `fb607b1a24b9` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `fb607b1a24b9` | `fb607b1a24b9` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `fb607b1a24b9` | `fb607b1a24b9` | partial |
 
 ### Detector Evidence
@@ -22364,7 +22364,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816)
+- Calibration run ID: [`run-20260920-203816`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816)
 - Calibration schema: `1.1`
 - Detector: [`star_convex`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-star-convex.md)
 - Detector configuration: [`hth-pipeline/config/detectors/star_convex.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/star_convex.json)
@@ -22382,8 +22382,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`fb607b1a24b9`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameter-provenance.json)
-- Recommended parameter short name: [`fb607b1a24b9`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter set: [`fb607b1a24b9`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameter-provenance.json)
+- Recommended parameter short name: [`fb607b1a24b9`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/star_convex/run-20260920-203816/parameter-provenance.json)
 - Best observed Avg IoU: `0.7846`
 - Avg IoU Success: `0.8827`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -22520,13 +22520,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818)
 - Detector: [`text_flow`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-text-flow.md)
 - Detector configuration: [`hth-pipeline/config/detectors/text_flow.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/text_flow.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.179993+00:00`
@@ -22552,15 +22552,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -22610,7 +22610,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `2cf4beb0912d` | `2cf4beb0912d` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `2cf4beb0912d` | `2cf4beb0912d` | current run |
 | [#1242](https://github.com/dlstupka/hth/actions/runs/35551507327) | 2026-09-21 | `2cf4beb0912d` | `2cf4beb0912d` | partial |
 
 ### Detector Evidence
@@ -22746,7 +22746,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`text_flow`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-text-flow.md)
 - Detector configuration: [`hth-pipeline/config/detectors/text_flow.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/text_flow.json)
@@ -22764,8 +22764,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`2cf4beb0912d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`2cf4beb0912d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`2cf4beb0912d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`2cf4beb0912d`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/text_flow/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.0865`
 - Avg IoU Success: `0.7782`
 - Worst Golden Set page (Min IoU): `0.0000`
@@ -22902,13 +22902,13 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Build Provenance
 
-- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818)
+- Run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818)
 - Detector: [`whitespace_frame`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-whitespace-frame.md)
 - Detector configuration: [`hth-pipeline/config/detectors/whitespace_frame.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/whitespace_frame.json)
 - Strategy: `exhaustive`
 - Pipeline commit: [`3dd892ff85ff`](https://github.com/dlstupka/hth/commit/3dd892ff85ff61ded41b0dd6864b6b25a833fdec)
 - Source commit: `ecce582b7cac`
-- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818)
+- Persisted calibration record: [`source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818)
 - Python: `3.12.0`
 - OpenCV: `4.14.0`
 - Started: `2026-09-20T20:38:18.263410+00:00`
@@ -22934,15 +22934,15 @@ Pairwise interaction importance is exploratory and estimated from a deterministi
 
 ### Outputs
 
-- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/manifest.json) — present
-- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/RUN-INFO.json) — present
-- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameters.json) — present
-- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameter-provenance.json) — missing
-- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/raw/results.csv.gz) — missing
-- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/raw/evidence.jsonl.gz) — missing
-- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/summary.json) — present
-- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/winner-pages.json) — present
-- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/calibration-intelligence.json) — present
+- [`manifest.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/manifest.json) — present
+- [`RUN-INFO.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/RUN-INFO.json) — present
+- [`parameters.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameters.json) — present
+- [`parameter-provenance.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameter-provenance.json) — missing
+- [`raw/results.csv`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/raw/results.csv.gz) — missing
+- [`raw/evidence.jsonl`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/raw/evidence.jsonl.gz) — missing
+- [`reports/summary.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/summary.json) — present
+- [`reports/winner-pages.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/winner-pages.json) — present
+- [`reports/calibration-intelligence.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/calibration-intelligence.json) — present
 - `reports/rankings.csv` — missing
 - `reports/top20.csv` — missing
 - `logs/runner-performance.jsonl` — missing
@@ -22992,7 +22992,7 @@ Builds known at the time this report was generated; matching is by Parameter Set
 
 | Build | Date | Family ID | Parameter Set ID | Evidence |
 |---|---|---|---|---|
-| [current run](https://github.com/dlstupka/hth/actions/runs/35797147608) | 2026-09-20 | `13d1104f1234` | `13d1104f1234` | current run |
+| [current run](https://github.com/dlstupka/hth/actions/runs/35807125627) | 2026-09-20 | `13d1104f1234` | `13d1104f1234` | current run |
 | [#989](https://github.com/dlstupka/hth/actions/runs/33985566821) | 2026-09-05 | `13d1104f1234` | `13d1104f1234` | authoritative |
 
 ### Detector Evidence
@@ -23109,7 +23109,7 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Calibration Identity
 
-- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818)
+- Calibration run ID: [`run-20260920-203818`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/tree/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818)
 - Calibration schema: `1.1`
 - Detector: [`whitespace_frame`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/docs/detector-whitespace-frame.md)
 - Detector configuration: [`hth-pipeline/config/detectors/whitespace_frame.json`](https://github.com/dlstupka/hth/blob/3dd892ff85ff61ded41b0dd6864b6b25a833fdec/config/detectors/whitespace_frame.json)
@@ -23127,8 +23127,8 @@ This run generated the same machine-readable calibration intelligence used by th
 
 ### Detector-Selection Intelligence
 
-- Recommended parameter set: [`13d1104f1234`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameter-provenance.json)
-- Recommended parameter short name: [`13d1104f1234`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter set: [`13d1104f1234`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameter-provenance.json)
+- Recommended parameter short name: [`13d1104f1234`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/source-documents/baptisms-san-antonio-baptism-records-1788-1824-1858-1898/golden-sets/hth-golden-0002/00a8b142ecd2/calibrations/whitespace_frame/run-20260920-203818/parameter-provenance.json)
 - Best observed Avg IoU: `0.8884`
 - Avg IoU Success: `0.8884`
 - Worst Golden Set page (Min IoU): `0.8277`
@@ -23269,11 +23269,11 @@ Every completed regression contributes reusable quality and runtime evidence so 
 <a id="calibration-intelligence-persistence"></a>
 ### Calibration Intelligence Persistence
 
-- [`calibration-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/calibration-index.json) retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata (full-index download).
-- [`parameter-provenance-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/parameter-provenance-index.json) retains the durable reverse index for exact parameter identities (full-index download).
+- [`calibration-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/calibration-index.json) retains detector quality, winner, parameter influence, domain-space, page-sensitivity, and calibration-evidence metadata (full-index download).
+- [`parameter-provenance-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/parameter-provenance-index.json) retains the durable reverse index for exact parameter identities (full-index download).
 - Compatible authoritative calibrations remain preferred over provisional smoke observations.
-- Results commit: [`0904b3e4dc21dd0427220d38176ae0a16d9ebf78`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/0904b3e4dc21dd0427220d38176ae0a16d9ebf78).
-- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/35797147608).
+- Results commit: [`543127aa7dfe90a28c419488aec87dacdecc4c56`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/commit/543127aa7dfe90a28c419488aec87dacdecc4c56).
+- Workflow run: [Open workflow run](https://github.com/dlstupka/hth/actions/runs/35807125627).
 - Pipeline repository: [dlstupka/hth](https://github.com/dlstupka/hth).
 - Results repository: [dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results).
 - Smoke records are provisional; complete exhaustive full regressions are authoritative.
@@ -23283,11 +23283,11 @@ Every completed regression contributes reusable quality and runtime evidence so 
 <a id="runtime-intelligence-persistence"></a>
 ### Runtime Intelligence Persistence
 
-- [`runtime-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/runtime-index.json) retains detector wall-clock time, workload size, threads, pipeline placement, loading strategy, runner characteristics, and scheduler estimates (full-index download).
-- [`parallelism-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/parallelism-index.json) retains measured shard, pipeline, and thread execution shapes so equivalent workloads can be compared by wall-clock time and effective acceleration (full-index download).
-- [`multidetector-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/multidetector-index.json) retains completed multi-detector execution observations used for scheduling feedback (full-index download).
-- [`optimizer-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/optimizer-index.json) retains derived optimizer planning state (full-index download).
-- [`optimizer-predictions.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/0904b3e4dc21dd0427220d38176ae0a16d9ebf78/indexes/optimizer-predictions.json) is the compact, directly viewable optimizer prediction index.
+- [`runtime-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/runtime-index.json) retains detector wall-clock time, workload size, threads, pipeline placement, loading strategy, runner characteristics, and scheduler estimates (full-index download).
+- [`parallelism-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/parallelism-index.json) retains measured shard, pipeline, and thread execution shapes so equivalent workloads can be compared by wall-clock time and effective acceleration (full-index download).
+- [`multidetector-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/multidetector-index.json) retains completed multi-detector execution observations used for scheduling feedback (full-index download).
+- [`optimizer-index.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/raw/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/optimizer-index.json) retains derived optimizer planning state (full-index download).
+- [`optimizer-predictions.json`](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/blob/543127aa7dfe90a28c419488aec87dacdecc4c56/indexes/optimizer-predictions.json) is the compact, directly viewable optimizer prediction index.
 - Runtime history supports LPT queueing, regression-duration estimates, and future evidence-based thread recommendations.
 
 [↑ Back to Navigation](#table-of-contents)
