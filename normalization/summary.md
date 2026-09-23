@@ -8,9 +8,9 @@
 - Policy: `axis-aligned-detector-envelope-v1+hough-lines-conservative-v1`
 - Pages normalized: `929`
 - Detector evidence: `doc_ufcn_page_mask` / `97a2ae7f3db4`
-- Canonical preprocess build: `01a148471774734ca79bc0ac092cad7e61fbfbc171b5cc58e6339ad3b499dd3b`
-- Canonical preprocess result: `c5bd4f57701089a25cff34f40edf3afad1c39291556e7afed3ab459e501233c5`
-- Normalization identity: `f1b1551311c4db89a3ece91fd9f53a09bc1862304e80310534b87c438a37cd78`
+- Canonical preprocess build: `555e935db9df90c0ea451622dee8f597a11e6ffc190cf34d73a06ea547b379b5`
+- Canonical preprocess result: `ecf8f0d3a4746c7c83adc9bd786aca10740a4478114271f706402c24a7539c4f`
+- Normalization identity: `7b955c1d7582c4db2a2d613d9100579c2f7851cd817331a35dab209122830ef9`
 - Canonical normalization result: `d0fb2998d1cfcef91f6c6469ff9223184243aedebb85bf1746ab13b8c1d26e80`
 - Pages conservatively deskewed: `12`
 - Pages preserved without resampling: `917`
