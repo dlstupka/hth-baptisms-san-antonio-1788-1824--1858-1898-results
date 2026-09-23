@@ -1,5 +1,5 @@
 {
-  "authoritative_identity": "b680f800ee194f8824613a474138f32ed8be1a876c463ad276476b02ab8476cf",
+  "authoritative_identity": "cf070cddbff62b344521eae508a04c9d4bef05a85dac7aecd360189a08fdd9db",
   "evidence_type": "canonical-build-evidence-store",
   "records": {
     "3d84cf2e7dc82d42e98813d9e84e3ce9229eb814447338f3acd2ef7212d27e3c": {
@@ -390,6 +390,151 @@
             "commit": "cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
             "release": "HTH-DENOISING-cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
             "release_manifest_sha256": "1d9a2ae2527ada84b7b6a2db8e0a324bd8b924de7212b8d844da89fc770322b5",
+            "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+            "role": "source",
+            "utilization": "consumed"
+          }
+        ],
+        "schema_version": "1"
+      },
+      "schema_version": "1.0",
+      "scope": "hth-sharpening-validation",
+      "status": "complete"
+    },
+    "cf070cddbff62b344521eae508a04c9d4bef05a85dac7aecd360189a08fdd9db": {
+      "canonical_result": {
+        "artifacts": [
+          {
+            "canonical_sha256": "d9fa99dab7e52b33aac674bad97e0869691e9735c6fdb302a2839e4e4bb12e38",
+            "format": "json",
+            "logical_name": "sharpening-validation",
+            "published_path": "normalization/sharpening-validation/validation.json"
+          }
+        ],
+        "identity": "f75cb213f63553248cbddad94de5738bedfea1cdb88edc6377f8bafef35c91ee",
+        "pages": [
+          {
+            "activity": "EXECUTED",
+            "canonical_page_result_sha256": "f4c42170a9bf4944030c65ca82c59c53f73473392c54a8f7006e734f531f04b0",
+            "domain_result": "APPLY",
+            "evidence_record_sha256": "2a5fb97459d86c9e82f6b51ef390e296c5a5a9e09e6172dc134083b0d64b4eda",
+            "global_ordinal": 929,
+            "operation_identity": "3416109a9ca64f48dd22ae4be544113776e4263158836b3f1cc10e15d380ffb1"
+          }
+        ]
+      },
+      "effective_build_identity": "cf070cddbff62b344521eae508a04c9d4bef05a85dac7aecd360189a08fdd9db",
+      "effective_inputs": {
+        "configuration": [
+          {
+            "bytes": 317,
+            "path": "config/sharpening-method-validation.json",
+            "sha256": "f9b5724be5e32997f1d021f412f26480deff25787a5846b62da560998f08b991"
+          }
+        ],
+        "contract": {
+          "image_limit": 0,
+          "mode": "diagnostic-evidence",
+          "name": "hth-sharpening-validation",
+          "operations": [
+            "sharpening-validate-evidence"
+          ],
+          "resource_provenance_version": "1",
+          "version": "1"
+        },
+        "detector_selection": null,
+        "implementation": [
+          {
+            "bytes": 26226,
+            "path": "hth/normalize_restoration.py",
+            "sha256": "d65dd6e3731209e5491b10d1509012e7498dab8525264274937fdf5f318d8807"
+          }
+        ],
+        "runtime": {
+          "declared_components": {},
+          "packages": {
+            "numpy": "2.4.6",
+            "opencv-python-headless": "4.14.0.94"
+          },
+          "python_cache_tag": "cpython-312",
+          "python_implementation": "CPython",
+          "python_version": "3.12.0"
+        },
+        "runtime_contract": [
+          {
+            "bytes": 7038,
+            "path": ".github/actions/setup-hth-python/action.yml",
+            "sha256": "6f0440797054829c93a06353073ab2f3a28c4a1709beed4c439f3fcaa82fd0b3"
+          },
+          {
+            "bytes": 70,
+            "path": "requirements.txt",
+            "sha256": "d98d5ea73e5da16547c31e4cce101f0fd8fe59b94adb78a8b5d739ea1bdc79a1"
+          }
+        ],
+        "selected_detector_implementation": [],
+        "source": {
+          "commit": "094ac70718c060d065e001a2df43fd064d22f5529c88502256d07cdd1b2a73dc",
+          "files": [
+            {
+              "bytes": 791040,
+              "path": "assessment.json",
+              "sha256": "7b4e88b3e25024cba78d8b86ab35e33fbf495b8542a7d169ad3b28e95f0056c7"
+            },
+            {
+              "bytes": 472538,
+              "path": "denoising-normalization-manifest.json",
+              "sha256": "44e8df8ec5a1d890bbac6d4b770c94dbf18c22a441b857e762ccc10f29972f9f"
+            },
+            {
+              "bytes": 4065,
+              "path": "method-assessment.json",
+              "sha256": "659a1f47d29306c08cdc21e8260600be1aec98b719ad574594cadd663976d339"
+            },
+            {
+              "bytes": 466,
+              "path": "release.json",
+              "sha256": "44771e368907c3ef9342ccaf31403f2cc8f3f3d701b62dc26f76406c453d4ae7"
+            }
+          ],
+          "release": "HTH-DENOISING-094ac70718c060d065e001a2df43fd064d22f5529c88502256d07cdd1b2a73dc",
+          "release_manifest_sha256": "5c87b1aef6619694e54c244ffb569b0febb02858071492d4c3e9aa83d850be48",
+          "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results"
+        }
+      },
+      "evidence_type": "canonical-build-evidence",
+      "execution": {
+        "activity": "EXECUTED",
+        "completed_at_utc": "2026-09-23T03:17:09Z",
+        "domain_result": "APPLY",
+        "elapsed_seconds": 62,
+        "evaluated_at_utc": "2026-09-23T03:16:07Z",
+        "pipeline_commit": "c42bfa1c684d0b1b08306654c754de4c726c11de",
+        "pipeline_repository": "dlstupka/hth",
+        "policy": "auto",
+        "runner": {
+          "runner_arch": "X64",
+          "runner_environment": "self-hosted",
+          "runner_name": "rh8-al322",
+          "runner_os": "Linux"
+        },
+        "verified_against_incumbent": false,
+        "workflow_run_id": "35806954384"
+      },
+      "resource_utilization": {
+        "canonical_evidence_cache": {
+          "action": "populated",
+          "canonical_result_identity": null,
+          "lookup": "miss",
+          "lookup_identity": "cf070cddbff62b344521eae508a04c9d4bef05a85dac7aecd360189a08fdd9db",
+          "path": "normalization/sharpening-validation/canonical-build-evidence.json",
+          "scope": "hth-sharpening-validation"
+        },
+        "immutable_releases": [
+          {
+            "commit": "094ac70718c060d065e001a2df43fd064d22f5529c88502256d07cdd1b2a73dc",
+            "release": "HTH-DENOISING-094ac70718c060d065e001a2df43fd064d22f5529c88502256d07cdd1b2a73dc",
+            "release_manifest_sha256": "5c87b1aef6619694e54c244ffb569b0febb02858071492d4c3e9aa83d850be48",
             "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
             "role": "source",
             "utilization": "consumed"
