@@ -1,7 +1,147 @@
 {
-  "authoritative_identity": "4608d5cf9072c675dcced19424e3e1cb7c513fc00dcaae8feb33690649c93b7b",
+  "authoritative_identity": "36fdf9f95a45fdce2ea5ad5c978a337b44ba145ea064cdebbe5d985ecd988238",
   "evidence_type": "canonical-build-evidence-store",
   "records": {
+    "36fdf9f95a45fdce2ea5ad5c978a337b44ba145ea064cdebbe5d985ecd988238": {
+      "canonical_result": {
+        "artifacts": [
+          {
+            "canonical_sha256": "eb69024346c264e05170957aa82de1adafa084c2cc1254725c50d992d37bd2d7",
+            "format": "json",
+            "logical_name": "sharpening-method-assessment",
+            "published_path": "normalization/sharpening-methods/assessment.json"
+          }
+        ],
+        "identity": "9bb6bb8efc833d527274f13e31180173b58f20e7a959e2ed261f573fee46dbe4",
+        "pages": [
+          {
+            "activity": "EXECUTED",
+            "canonical_page_result_sha256": "b6bd7244115d1b155c03b2c3251d86bba17f8c9e8fc291d5eac62264d067c8ab",
+            "domain_result": "APPLY",
+            "evidence_record_sha256": "5086717d0da995518a456b6d81f83a46303834e3fdc92e76f3248499ecc3cc60",
+            "global_ordinal": 381,
+            "operation_identity": "c2c812c77c76152c759b30445cb4572fdf9554804cd0a7135d5ff9464f04c614"
+          }
+        ]
+      },
+      "effective_build_identity": "36fdf9f95a45fdce2ea5ad5c978a337b44ba145ea064cdebbe5d985ecd988238",
+      "effective_inputs": {
+        "configuration": [
+          {
+            "bytes": 775,
+            "path": "config/sharpening-method-assessment.json",
+            "sha256": "9750cd7491ed46cd68dd0328d43f3459c2f48afe1a789a8d58569e94d850e66b"
+          }
+        ],
+        "contract": {
+          "image_limit": 0,
+          "mode": "diagnostic-evidence",
+          "name": "hth-sharpening-method-assessment",
+          "operations": [
+            "sharpening-compare-evidence"
+          ],
+          "resource_provenance_version": "1",
+          "version": "1"
+        },
+        "detector_selection": null,
+        "implementation": [
+          {
+            "bytes": 26226,
+            "path": "hth/normalize_restoration.py",
+            "sha256": "d65dd6e3731209e5491b10d1509012e7498dab8525264274937fdf5f318d8807"
+          }
+        ],
+        "runtime": {
+          "declared_components": {},
+          "packages": {
+            "numpy": "2.4.6",
+            "opencv-python-headless": "4.14.0.94"
+          },
+          "python_cache_tag": "cpython-312",
+          "python_implementation": "CPython",
+          "python_version": "3.12.0"
+        },
+        "runtime_contract": [
+          {
+            "bytes": 7038,
+            "path": ".github/actions/setup-hth-python/action.yml",
+            "sha256": "6f0440797054829c93a06353073ab2f3a28c4a1709beed4c439f3fcaa82fd0b3"
+          },
+          {
+            "bytes": 70,
+            "path": "requirements.txt",
+            "sha256": "d98d5ea73e5da16547c31e4cce101f0fd8fe59b94adb78a8b5d739ea1bdc79a1"
+          }
+        ],
+        "selected_detector_implementation": [],
+        "source": {
+          "commit": "cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
+          "files": [
+            {
+              "bytes": 791040,
+              "path": "assessment.json",
+              "sha256": "b59a62eed8cce6ad2d373ce5f1ec2d47a781649cf3f617798f38bb5fab0acb45"
+            },
+            {
+              "bytes": 472538,
+              "path": "denoising-normalization-manifest.json",
+              "sha256": "f27a09deb9e39d51b632d5ff4ca4f456068f4171631a27e49bbc76f73594a60b"
+            },
+            {
+              "bytes": 466,
+              "path": "release.json",
+              "sha256": "a5bdda0df45ed27de07350660302474802cb8c77d354450363c34ebd3334d795"
+            }
+          ],
+          "release": "HTH-DENOISING-cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
+          "release_manifest_sha256": "1d9a2ae2527ada84b7b6a2db8e0a324bd8b924de7212b8d844da89fc770322b5",
+          "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results"
+        }
+      },
+      "evidence_type": "canonical-build-evidence",
+      "execution": {
+        "activity": "EXECUTED",
+        "completed_at_utc": "2026-09-23T18:04:56Z",
+        "domain_result": "APPLY",
+        "elapsed_seconds": 76,
+        "evaluated_at_utc": "2026-09-23T18:03:40Z",
+        "pipeline_commit": "d842603e97d0fcc2079ab64332377d72a4171f98",
+        "pipeline_repository": "dlstupka/hth",
+        "policy": "auto",
+        "runner": {
+          "runner_arch": "X64",
+          "runner_environment": "self-hosted",
+          "runner_name": "rh8-al320",
+          "runner_os": "Linux"
+        },
+        "verified_against_incumbent": false,
+        "workflow_run_id": "35890244293"
+      },
+      "resource_utilization": {
+        "canonical_evidence_cache": {
+          "action": "populated",
+          "canonical_result_identity": null,
+          "lookup": "miss",
+          "lookup_identity": "36fdf9f95a45fdce2ea5ad5c978a337b44ba145ea064cdebbe5d985ecd988238",
+          "path": "normalization/sharpening-methods/canonical-build-evidence.json",
+          "scope": "hth-sharpening-method-assessment"
+        },
+        "immutable_releases": [
+          {
+            "commit": "cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
+            "release": "HTH-DENOISING-cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
+            "release_manifest_sha256": "1d9a2ae2527ada84b7b6a2db8e0a324bd8b924de7212b8d844da89fc770322b5",
+            "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+            "role": "source",
+            "utilization": "consumed"
+          }
+        ],
+        "schema_version": "1"
+      },
+      "schema_version": "1.0",
+      "scope": "hth-sharpening-method-assessment",
+      "status": "complete"
+    },
     "4608d5cf9072c675dcced19424e3e1cb7c513fc00dcaae8feb33690649c93b7b": {
       "canonical_result": {
         "artifacts": [
