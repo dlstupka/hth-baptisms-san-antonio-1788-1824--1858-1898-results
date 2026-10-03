@@ -6,20 +6,26 @@ As of **2026-10-03** (America/Chicago).
 
 | Measure | Estimate / observed count |
 |---|---:|
-| Dan Stupka / human effort | 426.2–646.0 h |
-| ChatGPT active time | 65.1–323.6 h |
-| Codex active time | 140.3–634.0 h |
-| Compute | 19,505.0–48,515.3 core-h |
-| ChatGPT API-equivalent cost scenario | 0.2–970.8 USD |
-| Codex API-equivalent cost scenario | 0.5–1,902.0 USD |
-| GPT API-equivalent cost scenario | 0.7–2,872.8 USD |
-| Git commits | 735 |
-| GitHub workflow runs captured | 1,000 |
-| Succeeded / failed workflow runs | 852 / 89 |
-| Workflow wall-time proxy | 518.2 h |
+| Dan Stupka / human effort | 427.0–650.0 h |
+| ChatGPT active time | 65.2–326.0 h |
+| Codex active time | 140.5–640.0 h |
+| Compute | 19,506.1–48,726.4 core-h |
+| ChatGPT API-equivalent cost scenario | 0.2–978.0 USD |
+| Codex API-equivalent cost scenario | 0.5–1,920.0 USD |
+| GPT API-equivalent cost scenario | 0.7–2,898.0 USD |
+| Git commits | 737 |
+| GitHub workflow runs captured | 1,006 |
+| Succeeded / failed workflow runs | 856 / 90 |
+| Workflow wall-time proxy | 519.3 h |
 | GitHub releases captured | 24 |
 | CBE build records (current lifecycle ledger) | 140 |
 | CBE cache elements / release elements | 140 / 55 |
+
+## Annual
+
+| Year | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Commits | Runs | Releases |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 2026 YTD | 427.0–650.0 h | 65.2–326.0 h | 140.5–640.0 h | 19,506.1–48,726.4 core-h | 0.7–2,898.0 USD | 737 | 1006 | 24 |
 
 ## Monthly
 
@@ -29,7 +35,7 @@ As of **2026-10-03** (America/Chicago).
 | 2026-07 | 90.0–140.0 h | 15.0–70.0 h | 30.0–140.0 h | 500.0–1,500.0 core-h | 0.1–630.0 USD | 177 | 0 | 3 |
 | 2026-08 | 160.0–230.0 h | 25.0–115.0 h | 60.0–230.0 h | 15,000.0–35,000.0 core-h | 0.3–1,035.0 USD | 322 | 326 | 2 |
 | 2026-09 | 140.0–210.0 h | 20.0–105.0 h | 50.0–210.0 h | 4,000.0–12,000.0 core-h | 0.2–945.0 USD | 233 | 670 | 19 |
-| 2026-10 | 1.2–6.0 h | 0.1–3.6 h | 0.3–9.0 h | 0.0–0.3 core-h | 0.0–37.8 USD | 3 | 4 | 0 |
+| 2026-10 | 2.0–10.0 h | 0.2–6.0 h | 0.5–15.0 h | 1.1–211.4 core-h | 0.0–63.0 USD | 5 | 10 | 0 |
 
 ## Daily
 
@@ -37,7 +43,7 @@ The durable JSON files in `reports/hth-work-summary/days/` contain each day's ho
 
 | Day | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Commits | Runs |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-10-03 | 0.4–2.0 h | 0.0–1.2 h | 0.1–3.0 h | 0.0–0.3 core-h | 0.0–12.6 USD | 1 | 4 |
+| 2026-10-03 | 1.2–6.0 h | 0.1–3.6 h | 0.3–9.0 h | 1.1–211.4 core-h | 0.0–37.8 USD | 3 | 10 |
 | 2026-10-02 | unknown | unknown | unknown | unknown | unknown | 0 | 0 |
 | 2026-10-01 | 0.8–4.0 h | 0.1–2.4 h | 0.2–6.0 h | unknown | 0.0–25.2 USD | 2 | 0 |
 | 2026-09-30 | 2.4–3.6 h | 0.3–1.8 h | 0.9–3.6 h | 68.7–206.0 core-h | 0.0–16.2 USD | 4 | 0 |
@@ -73,8 +79,8 @@ The durable JSON files in `reports/hth-work-summary/days/` contain each day's ho
 
 | Workflow | Runs |
 |---|---:|
-| Smoke test detectors against Golden Set | 388 |
-| HTH preprocess test | 222 |
+| Smoke test detectors against Golden Set | 390 |
+| HTH preprocess test | 224 |
 | Regress detectors against Golden Set | 131 |
 | Generate execution-optimizer report on github-hosted | 47 |
 | Normalize complete collection with canonical preprocess evidence | 41 |
@@ -96,6 +102,7 @@ The durable JSON files in `reports/hth-work-summary/days/` contain each day's ho
 | Optimize doc_ufcn_page_mask execution on self-hosted-e9k | 4 |
 | Compare bounded photometric methods for canonical HTH-0001 candidates | 3 |
 | Generate detector-calibration-manifest report for HTH-GOLDEN-0002 on 192t | 3 |
+| Generate hth-work-summary report for HTH-GOLDEN-0002 on 192vcpu | 3 |
 | Optimize dhsegment_page_mask execution on self-hosted-e9k | 3 |
 | Optimize signed_polar_boundary_vote execution on self-hosted-e9k | 3 |
 | Smoke test layout against HTH-GOLDEN-0002 | 3 |
@@ -114,7 +121,6 @@ The durable JSON files in `reports/hth-work-summary/days/` contain each day's ho
 | Compare layout on source and normalized GS0002 pages | 1 |
 | Generate detector-calibration-manifest report for HTH-GOLDEN-0002 on self-hosted-e9k | 1 |
 | Generate execution-optimizer report on self-hosted-e9k | 1 |
-| Generate hth-work-summary report for HTH-GOLDEN-0002 on 192vcpu | 1 |
 | Generate hth-work-summary report for HTH-GOLDEN-0002 on github-hosted | 1 |
 | Normalize HTH-GOLDEN-0002 with canonical preprocess evidence | 1 |
 | Optimize docextractor_page_mask execution on self-hosted-e9k | 1 |
@@ -137,9 +143,11 @@ Confirmed human contributors (project ledger):
 
 Git authorship counts (including any automation accounts) are separate from confirmed people:
 
-- Dan Stupka: 735 commits
+- Dan Stupka: 737 commits
 
 ### 2026-10
+- Work summary fix ([53b77ab9](https://github.com/dlstupka/hth/commit/53b77ab9ad4a8d8bf3d92f0a26c7cc6c21bf4e60))
+- Added an Annual section to HTH Work Summary ([e7d1235a](https://github.com/dlstupka/hth/commit/e7d1235a3ea276657a5401bc3bde0893d43df1da))
 - Implemented HTH Work Summary as a Report Writer option ([077ed8de](https://github.com/dlstupka/hth/commit/077ed8de080d2c18397e4b4ab1f12038d1752c3b))
 - Layout editor arrow key usability updates ([03fce8e7](https://github.com/dlstupka/hth/commit/03fce8e724ecedc055e2dd610e9792c9d416aa92))
 - Layout editor edge/vertex selection usability update ([22414b0b](https://github.com/dlstupka/hth/commit/22414b0b16223d7900e289b2012b2faf36d3fc0f))
@@ -184,4 +192,4 @@ Git authorship counts (including any automation accounts) are separate from conf
 - GPT scenario assumptions: {'enabled': True, 'input_tokens_per_assistant_hour': [5000, 100000], 'output_tokens_per_assistant_hour': [1000, 20000], 'input_usd_per_million_tokens': [0.25, 10], 'output_usd_per_million_tokens': [2, 100], 'note': 'Illustrative model/rate envelope only; not measured tokens, credits, subscription allocation, or billed spend.'}. These are user-editable bounds, not a model-specific published price quote.
 - Workflow-run counts are GitHub Actions records, not necessarily successful builds. Compute core-hours are historical estimates unless explicit daily evidence is supplied. CBE build records are the current lifecycle count, not a lifetime execution count.
 - New-day Git commit counts and Actions wall time feed broad proxy ranges until actual human/assistant/CPU telemetry is supplied in the daily ledger. Workflow wall time is not CPU time; runner core allocation and utilization are unknown.
-- Cache: 0 closed days reused; 125 days built; 0 closed months reused; 5 months built.
+- Cache: 124 closed days reused; 1 days built; 4 closed months reused; 1 months built; 0 closed years reused; 1 years built.
