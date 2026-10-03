@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "contour_grabcut",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "717943d85883a7f143d1154c18bf09c3cc8a53a5a42f414d6d9a2e41157b61a7",
+    "parameter_order": [
+      "contour_minimum_area_fraction",
+      "contour_epsilon_max_fraction",
+      "contour_minimum_rectangularity",
+      "grabcut_border_fraction",
+      "grabcut_iterations",
+      "minimum_agreement_iou",
+      "grabcut_weight",
+      "agreement_weight"
+    ],
+    "values": {
+      "contour_minimum_area_fraction": [
+        0.08,
+        0.12,
+        0.18
+      ],
+      "contour_epsilon_max_fraction": [
+        0.03,
+        0.04,
+        0.06
+      ],
+      "contour_minimum_rectangularity": [
+        0.45,
+        0.55,
+        0.7
+      ],
+      "grabcut_border_fraction": [
+        0.01,
+        0.02,
+        0.03
+      ],
+      "grabcut_iterations": [
+        1,
+        3,
+        5
+      ],
+      "minimum_agreement_iou": [
+        0.15,
+        0.3,
+        0.5
+      ],
+      "grabcut_weight": [
+        0.15,
+        0.25,
+        0.35
+      ],
+      "agreement_weight": [
+        0.2,
+        0.3,
+        0.4
+      ]
+    },
+    "cartesian_count": 6561,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 9,
+    "explicit_non_grid_parameter_sets": 1
+  },
+  "profiles": {
+    "baseline": {
+      "contour_minimum_area_fraction": 0.12,
+      "contour_epsilon_max_fraction": 0.04,
+      "contour_minimum_rectangularity": 0.55,
+      "grabcut_border_fraction": 0.02,
+      "grabcut_erosion_kernel_fraction": 0.015,
+      "grabcut_iterations": 3,
+      "minimum_agreement_iou": 0.3,
+      "contour_weight": 0.45,
+      "grabcut_weight": 0.25,
+      "agreement_weight": 0.3,
+      "require_grabcut": false
+    }
+  },
+  "explicit_parameter_sets": {
+    "c409c128cf7a1ce1b8299a1ac42eddfa3e916b43dd748a8c10345420038a72e8": {
+      "sha256": "c409c128cf7a1ce1b8299a1ac42eddfa3e916b43dd748a8c10345420038a72e8",
+      "legacy_parameter_set_id": "3eec8a03f1de",
+      "parameters": {
+        "contour_minimum_area_fraction": 0.12,
+        "contour_epsilon_max_fraction": 0.04,
+        "contour_minimum_rectangularity": 0.55,
+        "grabcut_border_fraction": 0.02,
+        "grabcut_erosion_kernel_fraction": 0.015,
+        "grabcut_iterations": 3,
+        "minimum_agreement_iou": 0.3,
+        "contour_weight": 0.45,
+        "grabcut_weight": 0.25,
+        "agreement_weight": 0.3,
+        "require_grabcut": false
+      }
+    }
+  },
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
