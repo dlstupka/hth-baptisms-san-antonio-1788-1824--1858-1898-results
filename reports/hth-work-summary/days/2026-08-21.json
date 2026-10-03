@@ -1,0 +1,117 @@
+{
+  "closed": true,
+  "commits": [
+    {
+      "author": "Dan Stupka",
+      "sha": "8596a6426b159be036bc795a159a8b55803d020b",
+      "subject": "Add Fusion Gen3 as a deliberately small AMSRE + Doc-UFCN arbitration layer: it pins the authoritative AMSRE (21ea516c3c5a) and Doc-UFCN (595002645fcc) winners, keeps AMSRE primary, and allows Doc-UFCN only as a confidence-gated rescue when AMSRE score is weak and the geometries materially disagree. Gen3 reuses the Doc-UFCN lifecycle and precomputed evidence, exposes only 210 arbitration combinations, and is wired into the registry, regression/optimizer dropdowns, reporting characterization, and debug output."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "34cd4c43dbb0a151c5bb06c9a629fcf2ed083c13",
+      "subject": "Refined `scantailor_page_frame` to a focused 54-point two-dimensional calibration around the current 0.075 boundary-margin / 0.003 projection-smoothing winner. The four characterized low/zombie dimensions are pinned to the winning values while the detector's true baseline remains preserved as the mandatory reference; tests now lock the 0.065\u20130.085 margin sweep, 0.002\u20130.0045 smoothing sweep, and frozen values. Targeted ScanTailor and regression-space tests pass."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "5de7cca96a426be2394757e7349f060c4699973b",
+      "subject": "Make optimizer results checkout shallow, sparse, and quiet."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "1d20a17287287f2c6b640dc395de8c0885fa8a8c",
+      "subject": "Remove optimizer shard-index lock contention at extreme pipeline counts."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "79824767c43b76b31244330b87e72c12a92f5d34",
+      "subject": "Target ScanTailor refinement at the dominant boundary/smoothing interaction."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "0b7a86bb9b439ecf2b59f7f7233fd00b9453eb41",
+      "subject": "Bound GitHub Actions report summaries without trimming the canonical manifest."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "99f3ca9b2a9250e4f2e26652ed6c5dfb7139f58f",
+      "subject": "Force non-exhaustive regressions to one shard and expand ScanTailor characterization."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "6b58eaed7aaffbce503b0cf2f0284ff574d6b4cb",
+      "subject": "Expose ScanTailor in manual regression and optimizer workflows."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "81968a0b9eeafda99626817298f93bfbbef189cd",
+      "subject": "Add ScanTailor-style historical page-frame detection."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "a41cd5187cfda0ac7ff610631572c931427f014d",
+      "subject": "Fix initial LPT claim-batch table rendering."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "dc6be89ecd129d6d535043c9ec774b5124029bd5",
+      "subject": "Harden neural model caches against corrupt partial artifacts."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "bfd3372999de6244e20e9ac8002d7db7d247b458",
+      "subject": "Contract PageNet to a sane routine regression grid while preserving the characterized winner."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "ddec701161477c98956d4b814342a4fd062ebcae",
+      "subject": "Fix single-detector optimizer profile plots to use the current run."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "121e55a6e7c614758a85015a07b58f142bae7557",
+      "subject": "Refine docExtractor critical interaction basin."
+    }
+  ],
+  "date": "2026-08-21",
+  "estimate_basis": "monthly historical range allocated by commit count",
+  "estimate_ranges": {
+    "chatgpt_cost_usd": [
+      0.004,
+      15.0
+    ],
+    "chatgpt_hours": [
+      1.087,
+      5.0
+    ],
+    "codex_cost_usd": [
+      0.008,
+      30.0
+    ],
+    "codex_hours": [
+      2.609,
+      10.0
+    ],
+    "compute_core_hours": [
+      652.174,
+      1521.739
+    ],
+    "gpt_cost_usd": [
+      0.012,
+      45.0
+    ],
+    "human_hours": [
+      6.957,
+      10.0
+    ]
+  },
+  "releases": [],
+  "schema": "hth-work-summary-v1",
+  "sources": {
+    "git": true,
+    "github_snapshot": true,
+    "monthly_reconstruction": true
+  },
+  "timezone": "America/Chicago",
+  "workflow_runs": [],
+  "workflow_wall_hours_proxy": 0
+}

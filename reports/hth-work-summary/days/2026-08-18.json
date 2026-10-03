@@ -1,0 +1,92 @@
+{
+  "closed": true,
+  "commits": [
+    {
+      "author": "Dan Stupka",
+      "sha": "7ca80ffad6aab84115db157ee2b8830f005e0f04",
+      "subject": "Canonicalize every contracted calibration search around the detector baseline: any parameter excluded by exhaustive, non-dormant/Low+, Moderate+, Important+, or Critical scope is now fixed to its baseline value rather than a historic winner, making complete parameter dictionaries and Parameter Set IDs invariant across builds. Domain-space intelligence and reports carry the same baseline-pin contract and explicitly note that Non-dormant and Low+ currently resolve to the same Low-or-higher domain while both names remain available. Refine Orli envelope arbitration so materially larger learned horizontal or vertical document extent can beat a wider/fatter but truncated morphology contour even when the contour has greater total area; verbose diagnostics now record directional bounds, span ratios, extensions, and the arbitration reason. Documentation and regression coverage are updated, the framework liveness audit remains clean, and all 492 unittest tests pass."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "49d41bcadb6b5d9971101c2cbdc3397f114cc45e",
+      "subject": "Remove the now-redundant Canonical Search-Space Accounting report block and keep canonical search-space counts represented by the Parameter Set Domain Space Reduction table. Move the HTH \u03b7\u00b2 classification criteria out of Parameter Influence into a dedicated peer-level `Parameter Classification` section immediately beneath the influence table, preserving retained dormant/zombie evidence and its footnote. Add report-layout regression coverage; all 487 unittest tests pass."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "67b57a364981ed34557ba460c4871c5e4ffcdba5",
+      "subject": "Refine Orli page-mask reconstruction to use the full learned layout geometry instead of letting connected-component morphology collapse dense historical baselines onto a single text block or column. The detector now builds a parameter-free consensus envelope directly from Orli regions, line polygons, and baselines, conservatively rejects only tiny baseline fragments, compares that global learned envelope with the existing morphology-derived envelope, and uses the larger document extent before applying the already-calibrated padding and area gate. This keeps the fixed Orli model, persisted deterministic evidence, and 1,000-set live / 10,000-set zombie-inclusive calibration spaces unchanged while adding diagnostics that expose which envelope path won and why. Documentation describes the new reconstruction contract, and focused geometry tests cover disconnected columns, tiny-fragment rejection, and whole-page envelope preservation. Validation passes all 487 unittest tests."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "f29292a7766b30abb2925b355230d10c422333f7",
+      "subject": "Make the HTH parameter-influence scale canonical: Zombie is \u03b7\u00b2 < 0.0005 with Avg-IoU range < 0.0005; Dormant is the remaining \u03b7\u00b2 < 0.005 band; Low, Moderate, Important, and Critical begin at 0.005, 0.02, 0.06, and 0.14 respectively. Reports now include a compact classification table and keep all parameters visible: parameters varied in the current run show current measurements, while isolated zombies show their last retained audited measurements with explicit provenance and a footnote making clear that retained evidence does not participate in current search-space counts, interactions, or winner selection. Orli carries its HTH-0001 zombie measurements as retained evidence, and the documentation records \u03b7\u00b2 as canonical for the current document/baptismal collection while leaving an \u03b7\u00b2-versus-\u03c9\u00b2 comparison as a future investigation. The framework-wide liveness audit remains clean, and all 484 unittest tests pass."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "f33a26aa91c6e989cfd827b1f7f88c074fba6a8d",
+      "subject": "Canonicalize calibration search-space accounting so execution, shard merge, calibration intelligence, and report rendering use one declared-space contract. Baseline/historic-best references are now explicitly marked as search-space members or external references; out-of-space references remain visible but cannot add parameter values, inflate exhaustive/effect-size counts, or contaminate influence statistics. Multi-shard merge now preserves the resolved strategy (including exhaustive-with-zombies) and carries live/zombie/effective counts canonically, and reports surface an authoritative Search-Space Accounting section before reduction analysis."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "b8cde09e85d9b8812fd29414390a610951a4025d",
+      "subject": "Correct the calibration domain-space reduction table so `Exhaustive-with-zombies` is always the top comparison row and the widest retained revalidation universe is used consistently for parameter counts, percentages, time estimates, and reduction factors. Ordinary `Exhaustive` now always represents the current live Cartesian space, even when the run itself used `exhaustive-with-zombies`; detectors without zombies naturally show identical exhaustive rows, while Orli correctly shows 10,000 zombie-inclusive sets versus 1,000 live sets and no longer produces impossible \u201creduction\u201d counts larger than exhaustive. The regression context now records both live and zombie-inclusive Cartesian counts so calibration intelligence can reconstruct both spaces deterministically, with tests covering zombie and non-zombie detectors and report rendering."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "2c61f533c10508f0dcf1b80248a80a086d71c117",
+      "subject": "Add a framework-wide `exhaustive-with-zombies` regression strategy while keeping ordinary `exhaustive` focused on the current live parameter space. The parameter-space engine now supports explicitly audited `zombie_parameters`: normal exhaustive runs pin them at their retained baseline value, while the opt-in zombie strategy restores their archived value domains for deliberate revalidation in both detector regression and execution-optimizer workflows. Orli's completed 10,000-set calibration is the first promotion under this policy: `close_kernel_fraction` and `fill_holes` are isolated from the default search, reducing its live Cartesian grid to 1,000 sets while preserving the original 10,000-set search under `exhaustive-with-zombies`."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "a8b42ae7b163d65797bf68737c2ad49bf41ccd58",
+      "subject": "Fix preferred execution-shape replay so optimizer-selected pipelines and threads remain an atomic contract through single-detector regression: exact shapes now create one shard per requested pipeline, refuse silent pipeline collapse, and preserve the optimizer's measured Np/Mt shape. Increase automatic/manual smoke timeout from 30 to 60 minutes and make report-generation results checkout shallow at main depth 1 while retaining current publish-refresh behavior."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "a6d481e8d45353d75e15e542a26be736b2eb0f8a",
+      "subject": "Persist deterministic Orli learned evidence across builds"
+    }
+  ],
+  "date": "2026-08-18",
+  "estimate_basis": "monthly historical range allocated by commit count",
+  "estimate_ranges": {
+    "chatgpt_cost_usd": [
+      0.002,
+      9.642
+    ],
+    "chatgpt_hours": [
+      0.699,
+      3.214
+    ],
+    "codex_cost_usd": [
+      0.005,
+      19.287
+    ],
+    "codex_hours": [
+      1.677,
+      6.429
+    ],
+    "compute_core_hours": [
+      419.255,
+      978.261
+    ],
+    "gpt_cost_usd": [
+      0.007,
+      28.929
+    ],
+    "human_hours": [
+      4.472,
+      6.429
+    ]
+  },
+  "releases": [],
+  "schema": "hth-work-summary-v1",
+  "sources": {
+    "git": true,
+    "github_snapshot": true,
+    "monthly_reconstruction": true
+  },
+  "timezone": "America/Chicago",
+  "workflow_runs": [],
+  "workflow_wall_hours_proxy": 0
+}

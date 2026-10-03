@@ -1,0 +1,532 @@
+{
+  "closed": true,
+  "commits": [
+    {
+      "author": "Dan Stupka",
+      "sha": "16b41f44d33203f19d2ee4af97958d85c80cd0d9",
+      "subject": "Fixed Report Writer workspace reuse issues"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "0cb4ebbcc92acb9a9648854b003c9093a3950380",
+      "subject": "Fixed the Report Writer artifact issue"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "4f41393f4aa27842c3021750993e29dbab7f57a4",
+      "subject": "Implemented and canonicalized shared renderer with minimal refactoring"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "7a9da6aa0acfd1d7dcc2ff0407e17f1bfa8f95fd",
+      "subject": "The normalization itself completed successfully; only the final lifecycle/report publication failed because its sparse checkout excluded the files it attempted to commit"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "1066a3a754c3385460398ffa1e4e3b99d0f5efe0",
+      "subject": "Updated normalization labels"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "a3633509eeae5fabad6d8269082676eb3cd8e115",
+      "subject": "Implemented normalization report"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "b9324426bedd3a5d489e6e83e16728a37fecde52",
+      "subject": "Fixed the startup-validation error. runner.temp was invalid in job-level environment evaluation for the reusable workflow."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "d8e77ddb8c0bf5965111629ee6081e2c0ca55d70",
+      "subject": "Run #26 failed because a persistent runner retained the prior orientation-deskew-assessment directory"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "381b687d4761696901999474dd1079f436858e69",
+      "subject": "Run #25 exposed a crop CBE adapter bug: each page has multiple algorithm-variant rows, which were incorrectly interpreted as duplicate pages"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "1e65c69c47d48fccb18d648ea474db8e8ccbaa67",
+      "subject": "The lifecycle model now distinguishes:"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "e61715afc33884ee5469d3fccb6bf78837d62127",
+      "subject": "Binarization is added as the final four-stage normalization family"
+    }
+  ],
+  "date": "2026-09-19",
+  "estimate_basis": "monthly historical range allocated by commit count",
+  "estimate_ranges": {
+    "chatgpt_cost_usd": [
+      0.003,
+      14.871
+    ],
+    "chatgpt_hours": [
+      0.944,
+      4.957
+    ],
+    "codex_cost_usd": [
+      0.008,
+      29.742
+    ],
+    "codex_hours": [
+      2.361,
+      9.914
+    ],
+    "compute_core_hours": [
+      188.841,
+      566.524
+    ],
+    "gpt_cost_usd": [
+      0.011,
+      44.613
+    ],
+    "human_hours": [
+      6.609,
+      9.914
+    ]
+  },
+  "releases": [
+    {
+      "html_url": "https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/releases/tag/HTH-SHARPENING-f2c905dca167dab495a86eb873dc078bbe1dc8a0431d26365510ec290e8ddea5",
+      "name": "HTH sharpening normalized collection f2c905dca167dab495a86eb873dc078bbe1dc8a0431d26365510ec290e8ddea5",
+      "published_at": "2026-09-19T22:11:03Z",
+      "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+      "tag": "HTH-SHARPENING-f2c905dca167dab495a86eb873dc078bbe1dc8a0431d26365510ec290e8ddea5"
+    },
+    {
+      "html_url": "https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/releases/tag/HTH-DENOISING-cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
+      "name": "HTH denoising normalized collection cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587",
+      "published_at": "2026-09-19T21:57:06Z",
+      "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+      "tag": "HTH-DENOISING-cb8d44356a75cb14eab58782cc33258773ff3a3ff4e0767eea55ea93f82fd587"
+    },
+    {
+      "html_url": "https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/releases/tag/HTH-BINARIZATION-c8c610d97552426def0769e4af9ef8e4b1f528419e161d179e665aac2e877e02",
+      "name": "HTH binarization normalized collection c8c610d97552426def0769e4af9ef8e4b1f528419e161d179e665aac2e877e02",
+      "published_at": "2026-09-19T14:34:44Z",
+      "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+      "tag": "HTH-BINARIZATION-c8c610d97552426def0769e4af9ef8e4b1f528419e161d179e665aac2e877e02"
+    },
+    {
+      "html_url": "https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results/releases/tag/HTH-BINARIZATION-46d335fccbc91a8b268f118a4b83424617612ee648d899138c5c840d58056866",
+      "name": "HTH binarization normalized collection 46d335fccbc91a8b268f118a4b83424617612ee648d899138c5c840d58056866",
+      "published_at": "2026-09-19T22:26:28Z",
+      "repository": "dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898-results",
+      "tag": "HTH-BINARIZATION-46d335fccbc91a8b268f118a4b83424617612ee648d899138c5c840d58056866"
+    }
+  ],
+  "schema": "hth-work-summary-v1",
+  "sources": {
+    "git": true,
+    "github_snapshot": true,
+    "monthly_reconstruction": true
+  },
+  "timezone": "America/Chicago",
+  "workflow_runs": [
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:53:58Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479969816",
+      "id": 35479969816,
+      "name": "Generate full-normalization-summary report for HTH-GOLDEN-0002 on 192t",
+      "run_started_at": "2026-09-20T00:53:58Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T00:55:07Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:53:43Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479958411",
+      "id": 35479958411,
+      "name": "Generate execution-optimizer report for HTH-GOLDEN-0002 on 192t",
+      "run_started_at": "2026-09-20T00:53:43Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T00:55:04Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:53:27Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479949399",
+      "id": 35479949399,
+      "name": "Generate detector-calibration-manifest report for HTH-GOLDEN-0002 on 192t",
+      "run_started_at": "2026-09-20T00:53:27Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T00:58:55Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:53:00Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479929457",
+      "id": 35479929457,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-09-20T00:53:00Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T02:07:31Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:53:00Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479929734",
+      "id": 35479929734,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-20T00:53:00Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T01:01:01Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:35:45Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479185506",
+      "id": 35479185506,
+      "name": "Generate full-normalization-summary report for HTH-GOLDEN-0002 on 192t",
+      "run_started_at": "2026-09-20T00:35:45Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T00:36:24Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-09-20T00:35:23Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479169099",
+      "id": 35479169099,
+      "name": "Generate execution-optimizer report for HTH-GOLDEN-0002 on 192t",
+      "run_started_at": "2026-09-20T00:35:23Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T00:39:31Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-09-20T00:35:02Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479152667",
+      "id": 35479152667,
+      "name": "Generate detector-calibration-manifest report for HTH-GOLDEN-0002 on 192t",
+      "run_started_at": "2026-09-20T00:35:02Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T00:38:38Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:34:41Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479138282",
+      "id": 35479138282,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-09-20T00:34:41Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T01:23:51Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-20T00:34:41Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35479138418",
+      "id": 35479138418,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-20T00:34:41Z",
+      "status": "completed",
+      "updated_at": "2026-09-20T00:42:46Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T23:15:04Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35475589959",
+      "id": 35475589959,
+      "name": "Generate full-normalization-summary report for HTH-GOLDEN-0002 on github-hosted",
+      "run_started_at": "2026-09-19T23:15:04Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T23:24:55Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T22:59:59Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35474869821",
+      "id": 35474869821,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T22:59:59Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T23:11:10Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T22:59:48Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35474863480",
+      "id": 35474863480,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T22:59:48Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T23:07:34Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T22:59:48Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35474863315",
+      "id": 35474863315,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-09-19T22:59:48Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T23:47:41Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T22:41:16Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35474040299",
+      "id": 35474040299,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T22:41:16Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T22:42:08Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T22:40:43Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35474013557",
+      "id": 35474013557,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T22:40:43Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T22:49:46Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T21:11:41Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35469668395",
+      "id": 35469668395,
+      "name": "Generate execution-optimizer report for HTH-GOLDEN-0002 on github-hosted",
+      "run_started_at": "2026-09-19T21:11:41Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T21:21:25Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T21:11:14Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35469646288",
+      "id": 35469646288,
+      "name": "Generate detector-calibration-manifest report for HTH-GOLDEN-0002 on github-hosted",
+      "run_started_at": "2026-09-19T21:11:14Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T21:29:49Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T21:01:05Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35469137238",
+      "id": 35469137238,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T21:01:05Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T21:11:55Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T20:55:30Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35468867168",
+      "id": 35468867168,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-09-19T20:55:30Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T22:00:09Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T20:55:30Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35468867335",
+      "id": 35468867335,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T20:55:30Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T21:03:26Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-09-19T20:30:11Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35467573677",
+      "id": 35467573677,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T20:30:11Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T22:27:48Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T20:30:04Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35467565994",
+      "id": 35467565994,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T20:30:04Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:40:36Z"
+    },
+    {
+      "conclusion": "startup_failure",
+      "created_at": "2026-09-19T20:25:46Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35467354375",
+      "id": 35467354375,
+      "name": ".github/workflows/normalize.yml",
+      "run_started_at": "2026-09-19T20:25:46Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:25:47Z"
+    },
+    {
+      "conclusion": "startup_failure",
+      "created_at": "2026-09-19T20:25:07Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35467320814",
+      "id": 35467320814,
+      "name": ".github/workflows/normalize.yml",
+      "run_started_at": "2026-09-19T20:25:07Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:25:08Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T20:24:54Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35467310530",
+      "id": 35467310530,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T20:24:54Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:32:48Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-09-19T20:24:53Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35467309758",
+      "id": 35467309758,
+      "name": ".github/workflows/assess-orientation-deskew.yml",
+      "run_started_at": "2026-09-19T20:24:53Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:24:53Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-09-19T20:17:03Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35466908590",
+      "id": 35466908590,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T20:17:03Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:19:24Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T20:16:52Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35466900374",
+      "id": 35466900374,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T20:16:52Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:24:12Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T20:16:52Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35466900195",
+      "id": 35466900195,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-09-19T20:16:52Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T21:10:40Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-09-19T20:09:50Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35466537983",
+      "id": 35466537983,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T20:09:50Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:10:44Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T19:55:21Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35465812658",
+      "id": 35465812658,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T19:55:21Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:09:10Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T19:55:01Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35465795130",
+      "id": 35465795130,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T19:55:01Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:02:56Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T19:55:01Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35465794925",
+      "id": 35465794925,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-09-19T19:55:01Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T20:38:22Z"
+    },
+    {
+      "conclusion": "cancelled",
+      "created_at": "2026-09-19T14:41:09Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35449494574",
+      "id": 35449494574,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T14:41:09Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T14:57:34Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T14:38:10Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35449342214",
+      "id": 35449342214,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T14:38:10Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T14:39:20Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T14:20:32Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35448437826",
+      "id": 35448437826,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T14:20:32Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T14:35:37Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T14:18:52Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35448352448",
+      "id": 35448352448,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-09-19T14:18:52Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T14:26:35Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T14:18:51Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35448352276",
+      "id": 35448352276,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-09-19T14:18:51Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T15:05:50Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-09-19T13:55:49Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/35447197177",
+      "id": 35447197177,
+      "name": "Normalize complete collection with canonical preprocess evidence",
+      "run_started_at": "2026-09-19T13:55:49Z",
+      "status": "completed",
+      "updated_at": "2026-09-19T13:57:51Z"
+    }
+  ],
+  "workflow_wall_hours_proxy": 11.8236
+}

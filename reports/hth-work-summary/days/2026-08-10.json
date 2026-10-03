@@ -1,0 +1,127 @@
+{
+  "closed": true,
+  "commits": [
+    {
+      "author": "Dan Stupka",
+      "sha": "43266550e3ee6a1ddea3c54eb02dabc9091f26ad",
+      "subject": "Fix custom job bug"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "4c08605d8de0bf1a9e787b10627e18b5e47848d0",
+      "subject": "Add historical regression reranking maintenance job."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "326c9727db8226b244fa3a851502c4daf5c0f706",
+      "subject": "Make calibration provenance selection authoritative."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "6d781d53e3995fb245164310fe370bd3ffa552b5",
+      "subject": "Centralize Golden Set result metrics."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "2efb2f411a3d8b83542eb2d2568db12daa47a705",
+      "subject": "Repair legacy Avg IoU values during report regeneration."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "d68f62f649f7679ee4b559f262345b3104a14ac4",
+      "subject": "Fix Golden Set Avg IoU aggregation."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "9d1ea15025c12e64648a2b8d479acfc9c7a71ea5",
+      "subject": "Fix regression preferred-shape resolution for existing optimizer data."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "fb95d748227f4151fef0c6ef47b3b07de8ead5d1",
+      "subject": "This fixes the report-writer shell syntax error introduced when the post-publish summary step was split out from report generation."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "b093d8fdf28325482647c4dcb08cfcf8af94a1a6",
+      "subject": "This makes report regeneration safe while calibration jobs are publishing concurrently and improves individual detector manifests so the detector and execution shape are obvious without returning to Build Provenance."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "0ccc635b9a943e9d1b51eebf1d64706001971da3",
+      "subject": "This fixes batch workflow dispatch accepting only HTTP 204 even though GitHub can return another successful 2xx response."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "650cc24923691a3423eba18e11808024c21bddf3",
+      "subject": "This fixes first-run publication when the new optimizer prediction store does not exist yet."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "b06d87e32f78f0365fbc084037b5d3c5bcab9e06",
+      "subject": "This adds detector-specific predicted execution shapes as the fallback between measured optimizer preferences and the generic regression planner, and persists prediction history so future optimizer runs can verify and improve those guesses."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "a84f096003a1a1a34c105e5ac44c6d16acf01932",
+      "subject": "This makes the two \"fill the gaps\" batch targets the first/default detector choices and adds an equivalent missing-exhaustive dispatcher to normal detector regression."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "41e339f2314496eb6ae4af5769cc17be50c51646",
+      "subject": "This integrates execution-optimizer preferences into normal detector regression and lets an all-detector self-hosted regression consume every matching runner in parallel."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "ec497495af92014e8d78386b7d549a0082f51253",
+      "subject": "This adds batch detector targeting to the execution optimizer, makes adaptive search the default, restores the simpler plot labels, and documents the optimizer search methods in the preferred-configuration report."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "33034b1e0b990cabc8f17285e618c07e760401c3",
+      "subject": "This adds batch detector targeting to the execution optimizer, makes adaptive search the default, restores the simpler plot labels, and documents the optimizer search methods in the preferred-configuration report."
+    }
+  ],
+  "date": "2026-08-10",
+  "estimate_basis": "monthly historical range allocated by commit count",
+  "estimate_ranges": {
+    "chatgpt_cost_usd": [
+      0.004,
+      17.142
+    ],
+    "chatgpt_hours": [
+      1.242,
+      5.714
+    ],
+    "codex_cost_usd": [
+      0.01,
+      34.287
+    ],
+    "codex_hours": [
+      2.981,
+      11.429
+    ],
+    "compute_core_hours": [
+      745.342,
+      1739.13
+    ],
+    "gpt_cost_usd": [
+      0.014,
+      51.429
+    ],
+    "human_hours": [
+      7.95,
+      11.429
+    ]
+  },
+  "releases": [],
+  "schema": "hth-work-summary-v1",
+  "sources": {
+    "git": true,
+    "github_snapshot": true,
+    "monthly_reconstruction": true
+  },
+  "timezone": "America/Chicago",
+  "workflow_runs": [],
+  "workflow_wall_hours_proxy": 0
+}

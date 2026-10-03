@@ -1,0 +1,403 @@
+{
+  "closed": true,
+  "commits": [
+    {
+      "author": "Dan Stupka",
+      "sha": "c7f332e472271884f7bd3409dcb0a4547543e004",
+      "subject": "Improve adaptive optimizer search"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "e5b16eaa7893426f8d6661340eff56a979ce328a",
+      "subject": "Recover legacy optimizer shapes for preferred runs"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "42330b7f7c0065ad61988ac68ddb19286ce23083",
+      "subject": "Unify optimizer evidence strategy compatibility"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "5401e44e772234817ad583e1d32d4cd2e55cc0ac",
+      "subject": "Standardize Orli model fallback downloads"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "2590a1f88ab5a5176e92b15845ac38a810b6dfec",
+      "subject": "Add a shared optimizer-intelligence layer as the single interpretation path for compatible execution-shape evidence. Regression dispatch and in-job shape resolution now use the same measured-first, predicted-second policy: compatible measured evidence on the requested runner wins, otherwise cross-vCPU prediction scales pipelines linearly as `pl_current / vcpu_current * vcpu_new`, bounded by `max pipelines = vCPU` and `max threads = vCPU * 2`. This makes ARE's persisted 22p/2t shape on 32 vCPU resolve to a predicted 132p/2t on a 192-vCPU runner instead of falling back to 1p/384t. Predicted dispatch keeps the requested runner pool and is re-resolved on the concrete runner so prediction provenance is recorded normally rather than being mistaken for measured evidence. Shape prediction now imports the canonical preference selector directly from the execution-shape domain, and new contract tests cover linear scaling, measured-over-predicted precedence, pre-dispatch prediction, and concrete-runner re-resolution. All 662 tests pass."
+    }
+  ],
+  "date": "2026-08-26",
+  "estimate_basis": "monthly historical range allocated by commit count",
+  "estimate_ranges": {
+    "chatgpt_cost_usd": [
+      0.001,
+      5.358
+    ],
+    "chatgpt_hours": [
+      0.388,
+      1.786
+    ],
+    "codex_cost_usd": [
+      0.003,
+      10.713
+    ],
+    "codex_hours": [
+      0.932,
+      3.571
+    ],
+    "compute_core_hours": [
+      232.919,
+      543.478
+    ],
+    "gpt_cost_usd": [
+      0.004,
+      16.071
+    ],
+    "human_hours": [
+      2.484,
+      3.571
+    ]
+  },
+  "releases": [],
+  "schema": "hth-work-summary-v1",
+  "sources": {
+    "git": true,
+    "github_snapshot": true,
+    "monthly_reconstruction": true
+  },
+  "timezone": "America/Chicago",
+  "workflow_runs": [
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:15:25Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33014497790",
+      "id": 33014497790,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T21:15:25Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:35:39Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:14:55Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33014454742",
+      "id": 33014454742,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T21:14:55Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:21:32Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:13:51Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33014366532",
+      "id": 33014366532,
+      "name": "Optimize doc_ufcn_page_mask execution on self-hosted-e9k",
+      "run_started_at": "2026-08-26T21:13:51Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:17:10Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:06:53Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33013797311",
+      "id": 33013797311,
+      "name": "Optimize adaptive_multi_scale_radial_edge execution on self-hosted-e9k",
+      "run_started_at": "2026-08-26T21:06:53Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:09:58Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:03:05Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33013480994",
+      "id": 33013480994,
+      "name": "Optimize adaptive_radial_edge execution on self-hosted-e9k",
+      "run_started_at": "2026-08-26T21:03:05Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:04:43Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:02:12Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33013406578",
+      "id": 33013406578,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T21:02:12Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:26:23Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:01:22Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33013339955",
+      "id": 33013339955,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-08-26T21:01:22Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:04:51Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T21:01:22Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33013339662",
+      "id": 33013339662,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T21:01:22Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T21:32:17Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T19:56:04Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33007779343",
+      "id": 33007779343,
+      "name": "Optimize adaptive_radial_edge execution on self-hosted-e9k",
+      "run_started_at": "2026-08-26T19:56:04Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T20:00:09Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T19:52:22Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33007454286",
+      "id": 33007454286,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T19:52:22Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T20:11:59Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T19:51:55Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33007413792",
+      "id": 33007413792,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T19:51:55Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T19:57:59Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T19:50:47Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33007311371",
+      "id": 33007311371,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T19:50:47Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T20:11:23Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T19:49:45Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33007225228",
+      "id": 33007225228,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-08-26T19:49:45Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T19:53:25Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-08-26T19:49:45Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/33007225063",
+      "id": 33007225063,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T19:49:45Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T19:53:53Z"
+    },
+    {
+      "conclusion": "cancelled",
+      "created_at": "2026-08-26T17:43:42Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32995828414",
+      "id": 32995828414,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:43:42Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T19:50:27Z"
+    },
+    {
+      "conclusion": "cancelled",
+      "created_at": "2026-08-26T17:43:15Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32995789719",
+      "id": 32995789719,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:43:15Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T19:50:50Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:41:53Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32995676203",
+      "id": 32995676203,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:41:53Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:54:00Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:41:04Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32995608607",
+      "id": 32995608607,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-08-26T17:41:04Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:44:02Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:41:04Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32995608339",
+      "id": 32995608339,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:41:04Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T18:01:54Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:28:03Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32994305020",
+      "id": 32994305020,
+      "name": "Generate execution-optimizer report on github-hosted",
+      "run_started_at": "2026-08-26T17:28:03Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:30:34Z"
+    },
+    {
+      "conclusion": "cancelled",
+      "created_at": "2026-08-26T17:13:18Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32992836290",
+      "id": 32992836290,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:13:18Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:43:17Z"
+    },
+    {
+      "conclusion": "cancelled",
+      "created_at": "2026-08-26T17:12:42Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32992778762",
+      "id": 32992778762,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:12:42Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:42:51Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:04:20Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32992022693",
+      "id": 32992022693,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:04:20Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:28:25Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:04:20Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32992023065",
+      "id": 32992023065,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-08-26T17:04:20Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:07:30Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:01:25Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32991774137",
+      "id": 32991774137,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:01:25Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:14:33Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T17:00:52Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32991726047",
+      "id": 32991726047,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T17:00:52Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:39:31Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T16:59:57Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32991639747",
+      "id": 32991639747,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-08-26T16:59:57Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T17:03:42Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T16:48:30Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32990504107",
+      "id": 32990504107,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-08-26T16:48:30Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T16:51:33Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-08-26T16:48:30Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32990504017",
+      "id": 32990504017,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T16:48:30Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T16:54:23Z"
+    },
+    {
+      "conclusion": "cancelled",
+      "created_at": "2026-08-26T16:45:40Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32990228925",
+      "id": 32990228925,
+      "name": "Regress detectors against Golden Set",
+      "run_started_at": "2026-08-26T16:45:40Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T16:45:44Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T16:43:46Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32990039496",
+      "id": 32990039496,
+      "name": "Optimize doc_ufcn_page_mask execution on self-hosted-e9k",
+      "run_started_at": "2026-08-26T16:43:46Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T16:47:08Z"
+    },
+    {
+      "conclusion": "failure",
+      "created_at": "2026-08-26T16:41:14Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32989794928",
+      "id": 32989794928,
+      "name": "Smoke test detectors against Golden Set",
+      "run_started_at": "2026-08-26T16:41:14Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T16:45:37Z"
+    },
+    {
+      "conclusion": "success",
+      "created_at": "2026-08-26T16:40:44Z",
+      "html_url": "https://github.com/dlstupka/hth/actions/runs/32989745951",
+      "id": 32989745951,
+      "name": "HTH preprocess test",
+      "run_started_at": "2026-08-26T16:40:44Z",
+      "status": "completed",
+      "updated_at": "2026-08-26T16:43:49Z"
+    }
+  ],
+  "workflow_wall_hours_proxy": 10.1192
+}

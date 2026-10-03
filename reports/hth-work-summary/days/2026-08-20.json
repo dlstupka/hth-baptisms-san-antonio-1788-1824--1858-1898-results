@@ -1,0 +1,127 @@
+{
+  "closed": true,
+  "commits": [
+    {
+      "author": "Dan Stupka",
+      "sha": "2e0542d4fea1dce0881eb855e03421b3d873ed7e",
+      "subject": "Refine docExtractor closing/threshold basin and clarify new-parameter build provenance."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "bf8b22e2903d775c64b177b6a01931dd9b994582",
+      "subject": "Refine Eynollah interaction basin and fix docExtractor targeted-grid provenance/reporting."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "c71f94f69aac585176841ee7fdedefa2bc7eb33d",
+      "subject": "Target docExtractor and Eynollah refinement at their measured active basins. docExtractor now searches only probability threshold and close-kernel fraction\u2014the two Critical parameters with the strongest measured interaction\u2014around the 0.9281 winner, while pinning low-effect minimum-area rejection and Dormant padding at the winning values. Eynollah gets a final 81-set micro-refinement around its 0.9632 winner on probability threshold and page padding, preserving the previously audited zombie parameters. Updated unittest coverage locks both refinement spaces and their pinned controls."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "1446ee45ee1539f47284ace0d9b7ff254d345508",
+      "subject": "Fix docExtractor's managed runtime by adding and verifying its missing upstream `toolz` dependency so shared learned-evidence inference can get past the ResUNet import path. Refine Eynollah from the completed 2,000-set exhaustive characterization to a 99-set surgical probability-threshold \u00d7 page-padding search around the measured winning basin, while enrolling its morphology and minimum-area controls as audited zombies pinned to the prior winner. Also preserve PageNet's completed 50,000-set characterization by enrolling its empirically inert minimum-mask-area dimension as an audited zombie, cutting normal future exhaustive work in half without discarding the original domain from `exhaustive-with-zombies`. Add focused regression coverage for all three changes; the full 554-test unittest suite passes."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "a240c35aac1cfca8eec39ea8116be3e0670ff394",
+      "subject": "Integrate Eynollah, PageNet, and docExtractor historical page-mask detectors"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "95a5c39c4253086e8f2314dc5bdade9593420b2d",
+      "subject": "Add ordered learned-model download fallbacks with explicit source logging. Mask R-CNN HJDataset variants now register up to three artifact locations for both model and config, trying them in order while logging the source site/reference for every attempt and the exception for any failed source before continuing. Successful provenance records the source actually used plus the complete registered fallback list, and the fallback mechanism lives in the reusable model-variant layer so future neural-detector model alternatives can use the same contract without detector-specific downloader logic. Preserve atomic downloads and SHA verification, document the behavior, and add focused unittest coverage for failover and all-sources-failed reporting. All 546 unittest tests pass."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "1b305d844cd5aa65a378d0ae1445656218ab657a",
+      "subject": "Add a reusable manual model-variant registry for learned-detector research. The detector regression workflow now exposes a Model variant selector whose default resolves each detector's current registered model; Mask R-CNN provides `rcnn_hjdataset_current` and `rcnn_hjdataset_older`, while detectors without registered alternatives remain unaffected. Model choice stays detector configuration/provenance rather than becoming a calibration parameter, and the selected variant, model ID, artifact hashes, and provenance are carried into preflight and regression reporting."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "7a8e440913d79096eb75441eda15d607430e6898",
+      "subject": "Focus Mask R-CNN calibration on the only region the exhaustive evidence still leaves unresolved: densely sample minimum confidence from 0.0 through 0.25 and page padding from 0.0 through 0.04, while pinning the two measured-Zombie area thresholds to the prior winner. This contracts the declared Cartesian search from 2,000 sets to a 90-set surgical grid while retaining the current best point, Baseline, and Historic Best as references, so the next full run measures the low-confidence/padding neighborhood instead of re-spending work on already-characterized inactive dimensions."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "e65427427e8199b0aa04a6bd3d8a80040579906b",
+      "subject": "Preserve exact manual execution shapes when a parameter-set limit is present"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "c510f2125a70c3971cb92c8cbc9842878457d9e5",
+      "subject": "Refine Mask R-CNN page reconstruction around the learned primary instance instead of treating the largest instance as the final page whenever it clears the minimum-area threshold. Substantial neighboring learned instances are now admitted only through a spatially coherent cluster with overlap/proximity and compactness guards, allowing two-leaf historical spreads such as page 5 to expand to their learned outer envelope without letting detached fragments explode the page geometry. Preserve the existing fixed learned evidence and calibration parameters, add diagnostics for envelope selection, update the detector description, and add focused tests for both coherent spread recovery and detached-fragment rejection."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "73f9bdc155a1c82d534e813dadf29eacfb0ed9c0",
+      "subject": "Fix Mask R-CNN regression debug output by implementing the detector\u2019s standard `debug_images()` contract instead of changing or suppressing the regression debug path. The hook renders cached Mask R-CNN instance polygons plus the selected candidate geometry, so debug-enabled smoke and full regressions can complete while continuing to reuse the already-precomputed learned evidence rather than rerunning inference. Adds a unittest covering the debug hook from cached evidence; the full 537-test unittest suite passes."
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "fd43706b81088acdf9feda07bed8527a756816ae",
+      "subject": "Fix Mask R-CNN managed-runtime dependency contract"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "fd6725670a2206dc7aeb01cbd8633c6dc79247ca",
+      "subject": "Add HJDataset Mask R-CNN historical page-mask detector"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "75a680f4e019601746425d15d4df25b2c621c046",
+      "subject": "Keep smoke at a 10-evaluation budget including Baseline and Best"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "9b6bbaaf1a471a0a2e0395dbaab3c683903f83b7",
+      "subject": "Honor Baseline and Historic Best in smoke rankings"
+    },
+    {
+      "author": "Dan Stupka",
+      "sha": "f540f4dd97a3ab461ec6ded8f96654b650e05b8c",
+      "subject": "Separate smoke search observations and reconstruct historical Family IDs"
+    }
+  ],
+  "date": "2026-08-20",
+  "estimate_basis": "monthly historical range allocated by commit count",
+  "estimate_ranges": {
+    "chatgpt_cost_usd": [
+      0.004,
+      17.142
+    ],
+    "chatgpt_hours": [
+      1.242,
+      5.714
+    ],
+    "codex_cost_usd": [
+      0.01,
+      34.287
+    ],
+    "codex_hours": [
+      2.981,
+      11.429
+    ],
+    "compute_core_hours": [
+      745.342,
+      1739.13
+    ],
+    "gpt_cost_usd": [
+      0.014,
+      51.429
+    ],
+    "human_hours": [
+      7.95,
+      11.429
+    ]
+  },
+  "releases": [],
+  "schema": "hth-work-summary-v1",
+  "sources": {
+    "git": true,
+    "github_snapshot": true,
+    "monthly_reconstruction": true
+  },
+  "timezone": "America/Chicago",
+  "workflow_runs": [],
+  "workflow_wall_hours_proxy": 0
+}
