@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "identity": {
+    "identity_schema_version": "1",
+    "detector": "convex_hull",
+    "parameter_schema_version": "1",
+    "authoritative_key": "parameter_identity_sha256",
+    "legacy_alias": "parameter_set_id",
+    "legacy_alias_algorithm": "sha256(canonical-parameters)[:12]",
+    "equivalence_family_algorithm": "sha256(canonical-parameters-with-enrolled-dimensions-normalized)[:12]",
+    "equivalence_family_sentinel": "__HTH_EQUIVALENCE_FAMILY_ID__",
+    "equivalence_parameters": [],
+    "equivalence_family_size": 1
+  },
+  "grid": {
+    "sha256": "7e63509aa30d47a3dc13493d26242ba3716352258cf69db2e6e4fdf8fb95ff8e",
+    "parameter_order": [
+      "minimum_fragment_area_fraction",
+      "close_kernel_fraction",
+      "close_iterations",
+      "minimum_hull_area_fraction",
+      "minimum_solidity",
+      "polygon_epsilon_fraction",
+      "bbox_padding_fraction"
+    ],
+    "values": {
+      "minimum_fragment_area_fraction": [
+        0.0002,
+        0.0005,
+        0.0015
+      ],
+      "close_kernel_fraction": [
+        0.0,
+        0.008,
+        0.016
+      ],
+      "close_iterations": [
+        0,
+        1,
+        2
+      ],
+      "minimum_hull_area_fraction": [
+        0.1,
+        0.16,
+        0.24
+      ],
+      "minimum_solidity": [
+        0.35,
+        0.55,
+        0.75
+      ],
+      "polygon_epsilon_fraction": [
+        0.012,
+        0.025,
+        0.05
+      ],
+      "bbox_padding_fraction": [
+        0.0,
+        0.008,
+        0.016
+      ]
+    },
+    "cartesian_count": 2187,
+    "ordinal_base": 0,
+    "ordering": "itertools.product-rightmost-fastest"
+  },
+  "coverage": {
+    "strategy": "exhaustive",
+    "complete_cartesian": false,
+    "evaluated_parameter_sets": 10,
+    "evaluated_grid_parameter_sets": 10,
+    "explicit_non_grid_parameter_sets": 0
+  },
+  "profiles": {
+    "baseline": {
+      "minimum_fragment_area_fraction": 0.0005,
+      "close_kernel_fraction": 0.008,
+      "close_iterations": 1,
+      "minimum_hull_area_fraction": 0.16,
+      "minimum_solidity": 0.55,
+      "polygon_epsilon_fraction": 0.025,
+      "bbox_padding_fraction": 0.0
+    }
+  },
+  "explicit_parameter_sets": {},
+  "resolution": {
+    "grid_members": "reconstruct from grid ordinal or scan deterministic grid by legacy/full id",
+    "non_grid_members": "lookup explicit_parameter_sets"
+  }
+}
