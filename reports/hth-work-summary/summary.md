@@ -1,86 +1,87 @@
 # HTH Work Summary
 
-As of **2026-10-03** (America/Chicago).
+As of **2026-10-04** (America/Chicago).
 
 ## Lifetime
 
-| Measure | Estimate / observed count |
-|---|---:|
-| Dan Stupka / human effort | 427.0–650.0 h |
-| ChatGPT active time | 65.2–326.0 h |
-| Codex active time | 140.5–640.0 h |
-| Compute | 19,506.1–48,726.4 core-h |
-| ChatGPT API-equivalent cost scenario | 0.2–978.0 USD |
-| Codex API-equivalent cost scenario | 0.5–1,920.0 USD |
-| GPT API-equivalent cost scenario | 0.7–2,898.0 USD |
-| Git commits | 737 |
-| GitHub workflow runs captured | 1,006 |
-| Succeeded / failed workflow runs | 856 / 90 |
-| Workflow wall-time proxy | 519.3 h |
-| GitHub releases captured | 24 |
-| CBE build records (current lifecycle ledger) | 140 |
-| CBE cache elements / release elements | 140 / 55 |
+| Measure | Estimate / observed count | Effort |
+|---|---:|---:|
+| Dan Stupka / human effort | 427.4–652.0 h | 539.7 h |
+| ChatGPT active time | 65.2–327.2 h | 196.2 h |
+| Codex active time | 140.6–643.0 h | 391.8 h |
+| Compute | 19,508.6–49,203.2 core-h | 34,355.9 core-h |
+| Combined activity | 20,141.8–50,825.4 activity-h | 35,483.6 activity-h |
+| ChatGPT API-equivalent cost scenario | 0.2–981.6 USD | — |
+| Codex API-equivalent cost scenario | 0.5–1,929.0 USD | — |
+| GPT API-equivalent cost scenario | 0.7–2,910.6 USD | — |
+| Git commits | 738 | — |
+| GitHub workflow runs captured | 1,009 | — |
+| Succeeded / failed workflow runs | 860 / 90 | — |
+| Workflow wall-time proxy | 521.8 h | — |
+| GitHub releases captured | 24 | — |
+| CBE build records (current lifecycle ledger) | 140 | — |
+| CBE cache elements / release elements | 140 / 55 | — |
 
 ## Annual
 
-| Year | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Commits | Runs | Releases |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2026 YTD | 427.0–650.0 h | 65.2–326.0 h | 140.5–640.0 h | 19,506.1–48,726.4 core-h | 0.7–2,898.0 USD | 737 | 1006 | 24 |
+| Year | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Effort | Commits | Runs | Releases |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 2026 YTD | 427.4–652.0 h | 65.2–327.2 h | 140.6–643.0 h | 19,508.6–49,203.2 core-h | 0.7–2,910.6 USD | 35,483.6 activity-h | 738 | 1009 | 24 |
 
 ## Monthly
 
-| Month | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Commits | Runs | Releases |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2026-06 | 35.0–60.0 h | 5.0–30.0 h | 0.0–45.0 h | 5.0–15.0 core-h | 0.0–225.0 USD | 0 | 0 | 0 |
-| 2026-07 | 90.0–140.0 h | 15.0–70.0 h | 30.0–140.0 h | 500.0–1,500.0 core-h | 0.1–630.0 USD | 177 | 0 | 3 |
-| 2026-08 | 160.0–230.0 h | 25.0–115.0 h | 60.0–230.0 h | 15,000.0–35,000.0 core-h | 0.3–1,035.0 USD | 322 | 326 | 2 |
-| 2026-09 | 140.0–210.0 h | 20.0–105.0 h | 50.0–210.0 h | 4,000.0–12,000.0 core-h | 0.2–945.0 USD | 233 | 670 | 19 |
-| 2026-10 | 2.0–10.0 h | 0.2–6.0 h | 0.5–15.0 h | 1.1–211.4 core-h | 0.0–63.0 USD | 5 | 10 | 0 |
+| Month | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Effort | Commits | Runs | Releases |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 2026-06 | 35.0–60.0 h | 5.0–30.0 h | 0.0–45.0 h | 5.0–15.0 core-h | 0.0–225.0 USD | 97.5 activity-h | 0 | 0 | 0 |
+| 2026-07 | 90.0–140.0 h | 15.0–70.0 h | 30.0–140.0 h | 500.0–1,500.0 core-h | 0.1–630.0 USD | 1,242.5 activity-h | 177 | 0 | 3 |
+| 2026-08 | 160.0–230.0 h | 25.0–115.0 h | 60.0–230.0 h | 15,000.0–35,000.0 core-h | 0.3–1,035.0 USD | 25,410.0 activity-h | 322 | 326 | 2 |
+| 2026-09 | 140.0–210.0 h | 20.0–105.0 h | 50.0–210.0 h | 4,000.0–12,000.0 core-h | 0.2–945.0 USD | 8,367.5 activity-h | 233 | 670 | 19 |
+| 2026-10 | 2.4–12.0 h | 0.2–7.2 h | 0.6–18.0 h | 3.6–688.2 core-h | 0.0–75.6 USD | 366.1 activity-h | 6 | 13 | 0 |
 
 ## Daily
 
 The durable JSON files in `reports/hth-work-summary/days/` contain each day's hours, source links and activity. Closed days are reused; only an explicit refresh recalculates them.
 
-| Day | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Commits | Runs |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| 2026-10-03 | 1.2–6.0 h | 0.1–3.6 h | 0.3–9.0 h | 1.1–211.4 core-h | 0.0–37.8 USD | 3 | 10 |
-| 2026-10-02 | unknown | unknown | unknown | unknown | unknown | 0 | 0 |
-| 2026-10-01 | 0.8–4.0 h | 0.1–2.4 h | 0.2–6.0 h | unknown | 0.0–25.2 USD | 2 | 0 |
-| 2026-09-30 | 2.4–3.6 h | 0.3–1.8 h | 0.9–3.6 h | 68.7–206.0 core-h | 0.0–16.2 USD | 4 | 0 |
-| 2026-09-29 | 3.0–4.5 h | 0.4–2.3 h | 1.1–4.5 h | 85.8–257.5 core-h | 0.0–20.3 USD | 5 | 0 |
-| 2026-09-28 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 6 | 0 |
-| 2026-09-27 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 6 | 0 |
-| 2026-09-26 | 4.2–6.3 h | 0.6–3.2 h | 1.5–6.3 h | 120.2–360.5 core-h | 0.0–28.4 USD | 7 | 2 |
-| 2026-09-25 | 7.2–10.8 h | 1.0–5.4 h | 2.6–10.8 h | 206.0–618.0 core-h | 0.0–48.7 USD | 12 | 0 |
-| 2026-09-24 | 6.0–9.0 h | 0.9–4.5 h | 2.1–9.0 h | 171.7–515.0 core-h | 0.0–40.6 USD | 10 | 6 |
-| 2026-09-23 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 6 | 34 |
-| 2026-09-22 | 1.8–2.7 h | 0.3–1.4 h | 0.6–2.7 h | 51.5–154.5 core-h | 0.0–12.2 USD | 3 | 30 |
-| 2026-09-21 | 1.2–1.8 h | 0.2–0.9 h | 0.4–1.8 h | 34.3–103.0 core-h | 0.0–8.1 USD | 2 | 1 |
-| 2026-09-20 | 4.2–6.3 h | 0.6–3.2 h | 1.5–6.3 h | 120.2–360.5 core-h | 0.0–28.4 USD | 7 | 40 |
-| 2026-09-19 | 6.6–9.9 h | 0.9–5.0 h | 2.4–9.9 h | 188.8–566.5 core-h | 0.0–44.6 USD | 11 | 40 |
-| 2026-09-18 | 11.4–17.1 h | 1.6–8.6 h | 4.1–17.1 h | 326.2–978.5 core-h | 0.0–77.1 USD | 19 | 49 |
-| 2026-09-17 | 4.8–7.2 h | 0.7–3.6 h | 1.7–7.2 h | 137.3–412.0 core-h | 0.0–32.4 USD | 8 | 21 |
-| 2026-09-16 | 8.4–12.6 h | 1.2–6.3 h | 3.0–12.6 h | 240.3–721.0 core-h | 0.0–56.8 USD | 14 | 40 |
-| 2026-09-15 | 6.6–9.9 h | 0.9–5.0 h | 2.4–9.9 h | 188.8–566.5 core-h | 0.0–44.6 USD | 11 | 41 |
-| 2026-09-14 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 6 | 23 |
-| 2026-09-13 | 4.8–7.2 h | 0.7–3.6 h | 1.7–7.2 h | 137.3–412.0 core-h | 0.0–32.4 USD | 8 | 44 |
-| 2026-09-12 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 6 | 20 |
-| 2026-09-11 | 1.8–2.7 h | 0.3–1.4 h | 0.6–2.7 h | 51.5–154.5 core-h | 0.0–12.2 USD | 3 | 15 |
-| 2026-09-10 | 1.8–2.7 h | 0.3–1.4 h | 0.6–2.7 h | 51.5–154.5 core-h | 0.0–12.2 USD | 3 | 18 |
-| 2026-09-09 | 5.4–8.1 h | 0.8–4.1 h | 1.9–8.1 h | 154.5–463.5 core-h | 0.0–36.5 USD | 9 | 37 |
-| 2026-09-08 | 7.8–11.7 h | 1.1–5.9 h | 2.8–11.7 h | 223.2–669.5 core-h | 0.0–52.7 USD | 13 | 54 |
-| 2026-09-07 | unknown | unknown | unknown | unknown | unknown | 0 | 0 |
-| 2026-09-06 | unknown | unknown | unknown | unknown | unknown | 0 | 9 |
-| 2026-09-05 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 6 | 33 |
-| 2026-09-04 | 7.8–11.7 h | 1.1–5.9 h | 2.8–11.7 h | 223.2–669.5 core-h | 0.0–52.7 USD | 13 | 6 |
-| 2026-09-03 | 10.8–16.2 h | 1.5–8.1 h | 3.9–16.2 h | 309.0–927.0 core-h | 0.0–73.0 USD | 18 | 37 |
+| Day | Human h | ChatGPT h | Codex h | Compute core-h | GPT cost scenario | Effort | Commits | Runs |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 2026-10-04 | 0.4–2.0 h | 0.0–1.2 h | 0.1–3.0 h | unknown | 0.0–12.6 USD | - | 1 | 3 |
+| 2026-10-03 | 1.2–6.0 h | 0.1–3.6 h | 0.3–9.0 h | 3.6–688.2 core-h | 0.0–37.8 USD | 356.0 activity-h | 3 | 10 |
+| 2026-10-02 | unknown | unknown | unknown | unknown | unknown | - | 0 | 0 |
+| 2026-10-01 | 0.8–4.0 h | 0.1–2.4 h | 0.2–6.0 h | unknown | 0.0–25.2 USD | - | 2 | 0 |
+| 2026-09-30 | 2.4–3.6 h | 0.3–1.8 h | 0.9–3.6 h | 68.7–206.0 core-h | 0.0–16.2 USD | 143.6 activity-h | 4 | 0 |
+| 2026-09-29 | 3.0–4.5 h | 0.4–2.3 h | 1.1–4.5 h | 85.8–257.5 core-h | 0.0–20.3 USD | 179.6 activity-h | 5 | 0 |
+| 2026-09-28 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 215.5 activity-h | 6 | 0 |
+| 2026-09-27 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 215.5 activity-h | 6 | 0 |
+| 2026-09-26 | 4.2–6.3 h | 0.6–3.2 h | 1.5–6.3 h | 120.2–360.5 core-h | 0.0–28.4 USD | 251.4 activity-h | 7 | 2 |
+| 2026-09-25 | 7.2–10.8 h | 1.0–5.4 h | 2.6–10.8 h | 206.0–618.0 core-h | 0.0–48.7 USD | 430.9 activity-h | 12 | 0 |
+| 2026-09-24 | 6.0–9.0 h | 0.9–4.5 h | 2.1–9.0 h | 171.7–515.0 core-h | 0.0–40.6 USD | 359.1 activity-h | 10 | 6 |
+| 2026-09-23 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 215.5 activity-h | 6 | 34 |
+| 2026-09-22 | 1.8–2.7 h | 0.3–1.4 h | 0.6–2.7 h | 51.5–154.5 core-h | 0.0–12.2 USD | 107.7 activity-h | 3 | 30 |
+| 2026-09-21 | 1.2–1.8 h | 0.2–0.9 h | 0.4–1.8 h | 34.3–103.0 core-h | 0.0–8.1 USD | 71.8 activity-h | 2 | 1 |
+| 2026-09-20 | 4.2–6.3 h | 0.6–3.2 h | 1.5–6.3 h | 120.2–360.5 core-h | 0.0–28.4 USD | 251.4 activity-h | 7 | 40 |
+| 2026-09-19 | 6.6–9.9 h | 0.9–5.0 h | 2.4–9.9 h | 188.8–566.5 core-h | 0.0–44.6 USD | 395.0 activity-h | 11 | 40 |
+| 2026-09-18 | 11.4–17.1 h | 1.6–8.6 h | 4.1–17.1 h | 326.2–978.5 core-h | 0.0–77.1 USD | 682.3 activity-h | 19 | 49 |
+| 2026-09-17 | 4.8–7.2 h | 0.7–3.6 h | 1.7–7.2 h | 137.3–412.0 core-h | 0.0–32.4 USD | 287.3 activity-h | 8 | 21 |
+| 2026-09-16 | 8.4–12.6 h | 1.2–6.3 h | 3.0–12.6 h | 240.3–721.0 core-h | 0.0–56.8 USD | 502.8 activity-h | 14 | 40 |
+| 2026-09-15 | 6.6–9.9 h | 0.9–5.0 h | 2.4–9.9 h | 188.8–566.5 core-h | 0.0–44.6 USD | 395.0 activity-h | 11 | 41 |
+| 2026-09-14 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 215.5 activity-h | 6 | 23 |
+| 2026-09-13 | 4.8–7.2 h | 0.7–3.6 h | 1.7–7.2 h | 137.3–412.0 core-h | 0.0–32.4 USD | 287.3 activity-h | 8 | 44 |
+| 2026-09-12 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 215.5 activity-h | 6 | 20 |
+| 2026-09-11 | 1.8–2.7 h | 0.3–1.4 h | 0.6–2.7 h | 51.5–154.5 core-h | 0.0–12.2 USD | 107.7 activity-h | 3 | 15 |
+| 2026-09-10 | 1.8–2.7 h | 0.3–1.4 h | 0.6–2.7 h | 51.5–154.5 core-h | 0.0–12.2 USD | 107.7 activity-h | 3 | 18 |
+| 2026-09-09 | 5.4–8.1 h | 0.8–4.1 h | 1.9–8.1 h | 154.5–463.5 core-h | 0.0–36.5 USD | 323.2 activity-h | 9 | 37 |
+| 2026-09-08 | 7.8–11.7 h | 1.1–5.9 h | 2.8–11.7 h | 223.2–669.5 core-h | 0.0–52.7 USD | 466.9 activity-h | 13 | 54 |
+| 2026-09-07 | unknown | unknown | unknown | unknown | unknown | - | 0 | 0 |
+| 2026-09-06 | unknown | unknown | unknown | unknown | unknown | - | 0 | 9 |
+| 2026-09-05 | 3.6–5.4 h | 0.5–2.7 h | 1.3–5.4 h | 103.0–309.0 core-h | 0.0–24.3 USD | 215.5 activity-h | 6 | 33 |
+| 2026-09-04 | 7.8–11.7 h | 1.1–5.9 h | 2.8–11.7 h | 223.2–669.5 core-h | 0.0–52.7 USD | 466.9 activity-h | 13 | 6 |
 
 ## Build activity by workflow
 
 | Workflow | Runs |
 |---|---:|
-| Smoke test detectors against Golden Set | 390 |
-| HTH preprocess test | 224 |
+| Smoke test detectors against Golden Set | 391 |
+| HTH preprocess test | 225 |
 | Regress detectors against Golden Set | 131 |
 | Generate execution-optimizer report on github-hosted | 47 |
 | Normalize complete collection with canonical preprocess evidence | 41 |
@@ -96,13 +97,13 @@ The durable JSON files in `reports/hth-work-summary/days/` contain each day's ho
 | Optimize scantailor_page_frame execution on self-hosted-e9k | 5 |
 | Build the validated photometric collection for downstream HTR | 4 |
 | Generate full-normalization-summary report for HTH-GOLDEN-0002 on 192vcpu | 4 |
+| Generate hth-work-summary report for HTH-GOLDEN-0002 on 192vcpu | 4 |
 | HTH Golden Set freeze guard | 4 |
 | HTH golden set freeze guard | 4 |
 | Optimize adaptive_multi_scale_radial_edge execution on self-hosted-e9k | 4 |
 | Optimize doc_ufcn_page_mask execution on self-hosted-e9k | 4 |
 | Compare bounded photometric methods for canonical HTH-0001 candidates | 3 |
 | Generate detector-calibration-manifest report for HTH-GOLDEN-0002 on 192t | 3 |
-| Generate hth-work-summary report for HTH-GOLDEN-0002 on 192vcpu | 3 |
 | Optimize dhsegment_page_mask execution on self-hosted-e9k | 3 |
 | Optimize signed_polar_boundary_vote execution on self-hosted-e9k | 3 |
 | Smoke test layout against HTH-GOLDEN-0002 | 3 |
@@ -143,14 +144,14 @@ Confirmed human contributors (project ledger):
 
 Git authorship counts (including any automation accounts) are separate from confirmed people:
 
-- Dan Stupka: 737 commits
+- Dan Stupka: 738 commits
 
 ### 2026-10
+- Work effort summary updates ([e686a3ab](https://github.com/dlstupka/hth/commit/e686a3abfba6d8f0280616b35f38551f594e5e58))
 - Work summary fix ([53b77ab9](https://github.com/dlstupka/hth/commit/53b77ab9ad4a8d8bf3d92f0a26c7cc6c21bf4e60))
 - Added an Annual section to HTH Work Summary ([e7d1235a](https://github.com/dlstupka/hth/commit/e7d1235a3ea276657a5401bc3bde0893d43df1da))
 - Implemented HTH Work Summary as a Report Writer option ([077ed8de](https://github.com/dlstupka/hth/commit/077ed8de080d2c18397e4b4ab1f12038d1752c3b))
 - Layout editor arrow key usability updates ([03fce8e7](https://github.com/dlstupka/hth/commit/03fce8e724ecedc055e2dd610e9792c9d416aa92))
-- Layout editor edge/vertex selection usability update ([22414b0b](https://github.com/dlstupka/hth/commit/22414b0b16223d7900e289b2012b2faf36d3fc0f))
 
 ### 2026-09
 - Release: [HTH-SOURCE-0002](https://github.com/dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898/releases/tag/HTH-SOURCE-0002) (dlstupka/hth-baptisms-san-antonio-1788-1824--1858-1898)
@@ -185,6 +186,7 @@ Git authorship counts (including any automation accounts) are separate from conf
 
 ## Evidence and caveats
 
+- Effort is the midpoint of the summed low/high ranges for human, ChatGPT, Codex, and compute hours. It is a mixed activity-hour indicator, **not** person-hours, elapsed time, billable labor, or a cost. A period's Effort shows `-` if any component is unknown; the component ranges remain the primary evidence.
 - Historical June–September 2026 human and compute ranges come from [Project Juana CRT/DRT-9](https://chatgpt.com/g/g-p-6a63ee2e04d48191be3ce725a52442c6-hth/c/6a959774-fbf4-83ea-90b4-82e312789313); they are reconstructions, not time sheets or CPU counters.
 - Historical monthly ranges are allocated across Git-active days in proportion to commit count solely to create daily estimates. A missing day is not proof of no work. June predates this repository's Git history and remains unallocated by day.
 - ChatGPT/Codex active-time ranges are planning assumptions in the versioned estimate ledger, not observed session durations. Overlapping human and assistant hours must not be added into a single labor total.
@@ -192,4 +194,4 @@ Git authorship counts (including any automation accounts) are separate from conf
 - GPT scenario assumptions: {'enabled': True, 'input_tokens_per_assistant_hour': [5000, 100000], 'output_tokens_per_assistant_hour': [1000, 20000], 'input_usd_per_million_tokens': [0.25, 10], 'output_usd_per_million_tokens': [2, 100], 'note': 'Illustrative model/rate envelope only; not measured tokens, credits, subscription allocation, or billed spend.'}. These are user-editable bounds, not a model-specific published price quote.
 - Workflow-run counts are GitHub Actions records, not necessarily successful builds. Compute core-hours are historical estimates unless explicit daily evidence is supplied. CBE build records are the current lifecycle count, not a lifetime execution count.
 - New-day Git commit counts and Actions wall time feed broad proxy ranges until actual human/assistant/CPU telemetry is supplied in the daily ledger. Workflow wall time is not CPU time; runner core allocation and utilization are unknown.
-- Cache: 124 closed days reused; 1 days built; 4 closed months reused; 1 months built; 0 closed years reused; 1 years built.
+- Cache: 124 closed days reused; 2 days built; 4 closed months reused; 1 months built; 0 closed years reused; 1 years built.
